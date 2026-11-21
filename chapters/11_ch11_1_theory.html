@@ -1,0 +1,1049 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 11: Coordinate Geometry, Straight Lines &amp; Triangle Centers">
+
+    <!-- ==================== CHAPTER HERO ==================== -->
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 2: Mathematics (Paper 1) &bull; Chapter 11 &bull; Part 1: Theory &amp; Worked
+            Examples</div>
+        <h1>Coordinate Geometry, Straight Lines &amp; Triangle Centers</h1>
+        <p>
+            Class 10 NCERT covers only Distance, Internal Section, and Triangle Area—barely 35% of what <strong>BEST
+                (BASE–Resonance)</strong> tests. Real scholarship questions bridge directly into Class 11 Straight Lines
+            (slopes, angles, perpendicular distances, mirror reflections), Shoelace polygon areas, external section
+            ratios via $ax + by + c = 0$, and the exact coordinate geometry of all four triangle centers locked together
+            by the <strong>Euler Line ($H = 3G - 2O$)</strong>.
+        </p>
+        <div class="tag-row">
+            <span class="meta-pill">Target Study Time: 6 Hours</span>
+            <span class="meta-pill">Weightage: Very High (Paper 1 Core + Bridge)</span>
+            <span class="meta-pill">Difficulty: NTSE Stage 2 / IOQM-Lite / Class 11 Foundation</span>
+            <span class="meta-pill">Part 1 of 3: Theory &amp; 9 Worked Examples</span>
+        </div>
+    </header>
+
+    <!-- ==================== SECTION 1: CARTESIAN PLANE & DISTANCE ==================== -->
+    <h2 class="section-heading">1. Cartesian Plane, Distance Formula, Classification &amp; Collinearity</h2>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Foundation</span>
+        <p>
+            In the rectangular Cartesian plane, every point $P(x, y)$ is located uniquely by its signed perpendicular
+            distance $x$ (<strong>abscissa</strong>) from the $y$-axis and signed perpendicular distance $y$
+            (<strong>ordinate</strong>) from the $x$-axis.
+        </p>
+        <p>
+            <strong>Distance Formula (Pythagorean Derivation):</strong> Given $A(x_1, y_1)$ and $B(x_2, y_2)$, dropping
+            perpendiculars to the axes forms a right triangle with horizontal leg $|x_2 - x_1|$ and vertical leg $|y_2 -
+            y_1|$:
+        </p>
+        $$AB = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}, \qquad \text{Distance from Origin } O(0, 0): OP = \sqrt{x^2 +
+        y^2}.$$
+        <p>
+            <strong>Triangle Classification via Squared Side Lengths:</strong> Let the three squared side lengths be
+            $a^2 \le b^2 \le c^2$ (always compare <em>squares</em> to avoid radical arithmetic):
+        </p>
+        <ul>
+            <li><strong>Right-angled:</strong> $a^2 + b^2 = c^2$ (right angle is strictly opposite the longest side
+                $c$).</li>
+            <li><strong>Acute-angled:</strong> $a^2 + b^2 \gt c^2$. &emsp; <strong>Obtuse-angled:</strong> $a^2 + b^2
+                \lt c^2$.</li>
+            <li><strong>Equilateral / Isosceles:</strong> $a^2 = b^2 = c^2$ / any two equal. (Note: an equilateral
+                triangle can <em>never</em> have all three vertices at integer lattice points in $\mathbb{R}^2$, because
+                its area $\frac{\sqrt{3}}{4}a^2$ is irrational while the Shoelace formula gives a rational
+                half-integer!)</li>
+        </ul>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Quadrilateral Classification Matrix (Cyclic Vertices $A, B, C, D$)</span>
+        <p>
+            Always verify vertex order around the perimeter before classifying $ABCD$. Compute the <strong>four
+                sides</strong> ($AB, BC, CD, DA$) and the <strong>two diagonals</strong> ($AC, BD$):
+        </p>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Quadrilateral</th>
+                    <th>Side Condition</th>
+                    <th>Diagonal Condition</th>
+                    <th>Critical Exam Trap</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Parallelogram</strong></td>
+                    <td>$AB = CD$ and $BC = DA$</td>
+                    <td>Diagonals bisect each other: $\dfrac{A + C}{2} = \dfrac{B + D}{2}$</td>
+                    <td>Fastest 4th vertex formula: $D = A + C - B$</td>
+                </tr>
+                <tr>
+                    <td><strong>Rectangle</strong></td>
+                    <td>$AB = CD$ and $BC = DA$</td>
+                    <td>Diagonals bisect each other <strong>AND</strong> $AC = BD$</td>
+                    <td>Opposite sides equal is NOT enough; must check $AC = BD$</td>
+                </tr>
+                <tr>
+                    <td><strong>Rhombus</strong></td>
+                    <td>$AB = BC = CD = DA$</td>
+                    <td>Diagonals bisect at $90^\circ$ ($AC \neq BD$)</td>
+                    <td>4 equal sides proves Rhombus, <strong>NEVER Square</strong> alone!</td>
+                </tr>
+                <tr>
+                    <td><strong>Square</strong></td>
+                    <td>$AB = BC = CD = DA$</td>
+                    <td>$AC = BD$ (equal &amp; perpendicular bisectors)</td>
+                    <td>Must check BOTH 4 equal sides AND equal diagonals</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Three Independent Collinearity Tests for $A(x_1, y_1)$, $B(x_2, y_2)$, $C(x_3,
+            y_3)$</span>
+        <ol>
+            <li><strong>Distance Test:</strong> Sum of the two shorter distances equals the longest distance (e.g., $AB
+                + BC = AC$). <em>Slowest when radicals appear.</em></li>
+            <li><strong>Slope Test (Fastest for Concrete Numbers):</strong> $m_{AB} = m_{BC} \iff \dfrac{y_2 - y_1}{x_2
+                - x_1} = \dfrac{y_3 - y_2}{x_3 - x_2}$. <em>Watch for the vertical-line case $x_1 = x_2 = x_3$ where
+                    slopes are undefined yet points are collinear!</em></li>
+            <li><strong>Zero-Area Determinant Test (Safest for Algebraic Parameters):</strong>
+                $$x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2) = 0.$$
+                Works unconditionally—even for vertical lines—without dividing by zero.
+            </li>
+        </ol>
+    </div>
+
+    <!-- ==================== SECTION 2: SECTION FORMULA ==================== -->
+    <h2 class="section-heading">2. Section Formula: Internal, External &amp; Arbitrary-Line Division</h2>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Derivation (Internal &amp; External Division)</span>
+        <p>
+            <strong>1. Internal Division ($m : n$):</strong> Let $P(x, y)$ lie strictly between $A(x_1, y_1)$ and
+            $B(x_2, y_2)$ such that $\dfrac{AP}{PB} = \dfrac{m}{n}$ ($m, n \gt 0$). Drawing horizontal and vertical legs
+            yields two similar right triangles with side ratio $m : n$:
+        </p>
+        $$\frac{x - x_1}{x_2 - x} = \frac{m}{n} \implies n(x - x_1) = m(x_2 - x) \implies x = \frac{mx_2 + nx_1}{m +
+        n}.$$
+        <p>Applying the identical argument to $y$-coordinates gives:</p>
+        $$P_{\text{int}} = \left(\frac{mx_2 + nx_1}{m + n},\; \frac{my_2 + ny_1}{m + n}\right), \qquad \text{Midpoint }
+        (m = n = 1): M = \left(\frac{x_1 + x_2}{2},\; \frac{y_1 + y_2}{2}\right).$$
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: External Division &amp; Arbitrary Line Ratio Formula</span>
+        <p>
+            <strong>2. External Division ($m : n$, $m \neq n$):</strong> Let $Q(x, y)$ lie on the line $AB$
+            <em>outside</em> segment $AB$ such that $\dfrac{QA}{QB} = \dfrac{m}{n}$. If $m \gt n$, $Q$ lies beyond $B$,
+            so $B$ divides $AQ$ internally in the ratio $(m - n) : n$. Applying the internal formula to $B$:
+        </p>
+        $$x_2 = \frac{(m - n)x + n x_1}{m} \implies (m - n)x = mx_2 - nx_1 \implies x = \frac{mx_2 - nx_1}{m - n}.$$
+        <p>The identical result holds when $m \lt n$ ($Q$ lies beyond $A$). Thus for <em>any</em> $m \neq n$:</p>
+        $$Q_{\text{ext}} = \left(\frac{mx_2 - nx_1}{m - n},\; \frac{my_2 - ny_1}{m - n}\right).$$
+        <p>
+            <strong>Memory Lock:</strong> External division is literally internal division with <strong>$n$ replaced by
+                $-n$</strong>!
+        </p>
+        <p>
+            <strong>3. Ratio $k : 1$ in Which an Arbitrary Line $L: ax + by + c = 0$ Divides Segment $AB$:</strong>
+            Assume $L$ intersects the line $AB$ at $P = \left(\dfrac{kx_2 + x_1}{k + 1},\; \dfrac{ky_2 + y_1}{k +
+            1}\right)$. Since $P$ lies on $L$, substitute its coordinates into $ax + by + c = 0$ and multiply through by
+            $(k + 1)$:
+        </p>
+        $$a(kx_2 + x_1) + b(ky_2 + y_1) + c(k + 1) = 0 \implies k(ax_2 + by_2 + c) + (ax_1 + by_1 + c) = 0.$$
+        <p>Solving for $k$ yields the <strong>Master Line-Division Formula</strong>:</p>
+        $$\text{Ratio } (k : 1) = -\frac{ax_1 + by_1 + c}{ax_2 + by_2 + c} = -\frac{L(A)}{L(B)}.$$
+        <ul>
+            <li><strong>Sign Rule (Half-Plane Test):</strong>
+                If $k \gt 0$ ($L(A)$ and $L(B)$ have <em>opposite signs</em>), $A$ and $B$ lie on opposite sides of $L
+                \implies$ <strong>Internal Division</strong>.
+                If $k \lt 0$ ($L(A)$ and $L(B)$ have the <em>same sign</em>), $A$ and $B$ lie on the same side of $L
+                \implies$ <strong>External Division</strong> in ratio $|k| : 1$.
+            </li>
+            <li><strong>Instant Axis Corollaries:</strong>
+                $x$-axis ($y = 0$) divides $AB$ in ratio $-\dfrac{y_1}{y_2}$; $\;y$-axis ($x = 0$) divides $AB$ in ratio
+                $-\dfrac{x_1}{x_2}$.
+            </li>
+        </ul>
+    </div>
+
+    <!-- SVG DIAGRAM 1: SECTION DIVISION & LINE RATIO -->
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 285" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Internal division, external division, and line ax plus by plus c equals 0 dividing segment AB">
+            <rect x="8" y="8" width="664" height="269" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+
+            <!-- Coordinate grid & axes (origin at 72, 236) -->
+            <g stroke="#e2e8f0" stroke-width="1">
+                <line x1="72" y1="36" x2="72" y2="255" />
+                <line x1="132" y1="36" x2="132" y2="255" />
+                <line x1="192" y1="36" x2="192" y2="255" />
+                <line x1="252" y1="36" x2="252" y2="255" />
+                <line x1="312" y1="36" x2="312" y2="255" />
+                <line x1="372" y1="36" x2="372" y2="255" />
+                <line x1="432" y1="36" x2="432" y2="255" />
+                <line x1="48" y1="196" x2="452" y2="196" />
+                <line x1="48" y1="156" x2="452" y2="156" />
+                <line x1="48" y1="116" x2="452" y2="116" />
+                <line x1="48" y1="76" x2="452" y2="76" />
+            </g>
+            <!-- Axes -->
+            <line x1="42" y1="236" x2="458" y2="236" stroke="#334155" stroke-width="1.8" />
+            <polygon points="458,232 468,236 458,240" fill="#334155" />
+            <text x="466" y="252" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#334155">x</text>
+
+            <line x1="72" y1="258" x2="72" y2="34" stroke="#334155" stroke-width="1.8" />
+            <polygon points="68,34 72,24 76,34" fill="#334155" />
+            <text x="58" y="34" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#334155">y</text>
+
+            <!-- Line L: ax + by + c = 0 cutting through P(222, 146) -->
+            <!-- Let A=(114, 198), B=(294, 112), vector AB = (180, -86).
+           P = 3/5 along AB -> A + 0.6*(180, -86) = (222, 146.4) -> internal ratio 3:2.
+           Q = external beyond B with QA:QB = 3:1 -> A + 1.5*(180, -86) = (384, 69). -->
+            <!-- Shaded half-plane hint near L -->
+            <line x1="176" y1="42" x2="268" y2="250" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="6,4" />
+            <text x="275" y="246" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#dc2626">L: ax + by + c = 0</text>
+            <text x="128" y="64" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#b91c1c">L(A) &lt; 0</text>
+            <text x="234" y="64" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#0f766e">L(B) &gt; 0</text>
+
+            <!-- Segment AB (solid blue) and extension BQ (amber dashed) -->
+            <line x1="114" y1="198" x2="294" y2="112" stroke="#1e3a8a" stroke-width="3" />
+            <line x1="294" y1="112" x2="384" y2="69" stroke="#d97706" stroke-width="2.6" stroke-dasharray="5,3" />
+
+            <!-- Ratio callouts along segments -->
+            <text x="160" y="164" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#1e3a8a">m</text>
+            <text x="255" y="120" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#1e3a8a">n</text>
+
+            <!-- External bracket arrow Q to B -->
+            <path d="M 298 122 Q 345 112 382 82" fill="none" stroke="#b45309" stroke-width="1.6" />
+            <text x="358" y="118" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#b45309">External (m &gt; n)</text>
+
+            <!-- Points A, P, B, Q -->
+            <circle cx="114" cy="198" r="5" fill="#1e3a8a" />
+            <circle cx="222" cy="146.4" r="5.5" fill="#dc2626" />
+            <circle cx="294" cy="112" r="5" fill="#1e3a8a" />
+            <circle cx="384" cy="69" r="5.5" fill="#d97706" />
+
+            <!-- Point Labels -->
+            <text x="104" y="218" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#0f172a">A(x&#8321;, y&#8321;)</text>
+            <text x="215" y="170" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#dc2626">P (Internal)</text>
+            <text x="292" y="100" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#0f172a">B(x&#8322;, y&#8322;)</text>
+            <text x="392" y="64" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#b45309">Q
+                (External)</text>
+
+            <!-- Right Reference Card -->
+            <rect x="480" y="28" width="178" height="228" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="569" y="52" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a"
+                text-anchor="middle">Section Rules</text>
+            <line x1="494" y1="62" x2="644" y2="62" stroke="#e2e8f0" stroke-width="1.2" />
+
+            <text x="494" y="84" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#1e3a8a">Internal (AP : PB = m : n)</text>
+            <text x="494" y="101" font-family="system-ui, sans-serif" font-size="11" fill="#334155">x = (mx&#8322; +
+                nx&#8321;) / (m + n)</text>
+
+            <text x="494" y="128" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#b45309">External (QA : QB = m : n)</text>
+            <text x="494" y="145" font-family="system-ui, sans-serif" font-size="11" fill="#334155">x = (mx&#8322;
+                &#8722; nx&#8321;) / (m &#8722; n)</text>
+
+            <rect x="492" y="164" width="154" height="78" rx="6" fill="#0f172a" />
+            <text x="569" y="184" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#fca5a5"
+                text-anchor="middle">Line Cut Ratio (k : 1)</text>
+            <text x="569" y="206" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff"
+                text-anchor="middle">k = &#8722; L(A) / L(B)</text>
+            <text x="569" y="228" font-family="system-ui, sans-serif" font-size="10.5" fill="#fde68a"
+                text-anchor="middle">k &gt; 0: Internal | k &lt; 0: External</text>
+        </svg>
+        <p class="diagram-caption">Figure 11.1: Internal point $P$ lies between $A$ and $B$ ($L(A)$ and $L(B)$ carry
+            opposite signs, giving $k \gt 0$); external point $Q$ lies outside segment $AB$ beyond $B$ when $m \gt n$.
+        </p>
+    </div>
+
+    <!-- ==================== SECTION 3: AREA & SHOELACE FORMULA ==================== -->
+    <h2 class="section-heading">3. Area of Triangles &amp; Arbitrary Polygons: The Shoelace Engine</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Triangle Area &amp; Origin-Shift Speedup</span>
+        <p>
+            For $\triangle ABC$ with vertices $A(x_1, y_1)$, $B(x_2, y_2)$, $C(x_3, y_3)$, dropping perpendiculars to
+            the $x$-axis decomposes the triangle into three trapezoids, yielding:
+        </p>
+        $$\Delta = \frac{1}{2}\Bigl|x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)\Bigr|.$$
+        <p>
+            <strong>Origin-Shift Shortcut (Zero-Error Exam Trick):</strong> Translation preserves area! Subtract one
+            vertex (say $A$) from all three vertices so $A$ moves to $(0, 0)$, $B \to (X_1, Y_1) = (x_2 - x_1, y_2 -
+            y_1)$, and $C \to (X_2, Y_2) = (x_3 - x_1, y_3 - y_1)$. Then the formula collapses to a single $2 \times 2$
+            cross-product:
+        </p>
+        $$\Delta = \frac{1}{2}\bigl|X_1 Y_2 - X_2 Y_1\bigr|.$$
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: The Shoelace (Staircase) Formula for $n$-Gons</span>
+        <p>
+            For <em>any</em> non-self-intersecting $n$-sided polygon with vertices $(x_1, y_1), (x_2, y_2), \dots, (x_n,
+            y_n)$ listed strictly in <strong>cyclic order</strong> (all clockwise or all counter-clockwise), list the
+            vertices vertically and repeat the first vertex at the bottom:
+        </p>
+        $$\text{Area} = \frac{1}{2}\left|\sum_{i=1}^{n} (x_i y_{i+1} - y_i x_{i+1})\right|, \qquad \text{where }
+        (x_{n+1}, y_{n+1}) = (x_1, y_1).$$
+        <p>
+            <strong>Why It Works (Signed Triangle Fan Proof):</strong> Every pair $(x_i, y_i) \to (x_{i+1}, y_{i+1})$
+            contributes $\frac{1}{2}(x_i y_{i+1} - y_i x_{i+1})$, the <em>signed</em> area of $\triangle O P_i P_{i+1}$
+            from the origin $O(0, 0)$. Summing around the closed boundary cancels all exterior overlap regions, leaving
+            $+(\text{Area})$ for counter-clockwise order and $-(\text{Area})$ for clockwise order.
+        </p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Critical Exam Trap: Cyclic Vertex Order in Polygons ($n \ge 4$)</span>
+        <p>
+            For a triangle ($n = 3$), any permutation of vertices is automatically cyclic (clockwise or
+            counter-clockwise). For a quadrilateral or higher polygon ($n \ge 4$), <strong>putting vertices out of
+                cyclic order traces a self-intersecting "bow-tie"</strong> where opposite lobes have opposite signed
+            areas and partially cancel out—giving a completely wrong answer! Always sketch a rough 2-second quadrant
+            plot before running Shoelace on $n \ge 4$ points.
+        </p>
+    </div>
+
+    <!-- ==================== SECTION 4: STRAIGHT LINES BRIDGE ==================== -->
+    <h2 class="section-heading">4. Straight Lines (Out-of-Portion Bridge): Slopes, Angles, Distance &amp; Reflection
+    </h2>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Slopes, Standard Forms &amp; Angle Between Lines</span>
+        <p>
+            <strong>1. Inclination &amp; Slope:</strong> If a line makes an angle $\theta \in [0^\circ, 180^\circ)$
+            counter-clockwise with the positive $x$-axis, its <strong>slope (gradient)</strong> is:
+        </p>
+        $$m = \tan\theta = \frac{y_2 - y_1}{x_2 - x_1} \qquad (x_1 \neq x_2).$$
+        <ul>
+            <li>Horizontal line ($\theta = 0^\circ$): $m = 0$ ($y = k$). &emsp; Vertical line ($\theta = 90^\circ$): $m$
+                is undefined ($x = k$).</li>
+            <li><strong>Parallel lines:</strong> $m_1 = m_2$ (or both vertical). &emsp; <strong>Perpendicular
+                    lines:</strong> $m_1 m_2 = -1$ (or one horizontal, one vertical).</li>
+        </ul>
+
+        <p><strong>2. Five Essential Forms of a Straight Line:</strong></p>
+        <ul>
+            <li><strong>Slope-Intercept Form:</strong> $y = mx + c$ (slope $m$, $y$-intercept $c$).</li>
+            <li><strong>Point-Slope Form:</strong> $y - y_1 = m(x - x_1)$.</li>
+            <li><strong>Two-Point Form:</strong> $y - y_1 = \dfrac{y_2 - y_1}{x_2 - x_1}(x - x_1)$.</li>
+            <li><strong>Intercept Form:</strong> $\dfrac{x}{a} + \dfrac{y}{b} = 1$ ($x$-intercept $a \neq 0$,
+                $y$-intercept $b \neq 0$; area with axes $= \dfrac{1}{2}|ab|$).</li>
+            <li><strong>General Form:</strong> $ax + by + c = 0 \implies \text{slope } m = -\dfrac{a}{b}$.
+                <br><em>Instant Family Rules:</em> Any line <strong>parallel</strong> to $ax + by + c = 0$ is $ax + by +
+                \lambda = 0$; any line <strong>perpendicular</strong> to it is $bx - ay + \mu = 0$ (swap coefficients
+                and flip one sign!).
+            </li>
+        </ul>
+
+        <p>
+            <strong>3. Acute Angle $\theta$ Between Two Non-Vertical Lines ($m_1, m_2$):</strong> If $\theta_1,
+            \theta_2$ are their inclinations, then $\theta = |\theta_1 - \theta_2|$ (or its supplement), and
+            $\tan(\theta_1 - \theta_2) = \dfrac{\tan\theta_1 - \tan\theta_2}{1 + \tan\theta_1 \tan\theta_2}$ gives:
+        </p>
+        $$\tan\theta = \left|\frac{m_1 - m_2}{1 + m_1 m_2}\right| \qquad (m_1 m_2 \neq -1).$$
+        <p>If $1 + m_1 m_2 = 0$, the lines are perpendicular ($\theta = 90^\circ$). If one line is vertical ($x = k$)
+            and the other has slope $m$, the acute angle satisfies $\tan\theta = \dfrac{1}{|m|}$.</p>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Perpendicular Distance, Foot &amp; Mirror Image</span>
+        <p>
+            Let $P(x_1, y_1)$ be a point and $L: ax + by + c = 0$ ($a^2 + b^2 \gt 0$) be a straight line. Let $M(h, k)$
+            be the <strong>foot of the perpendicular</strong> from $P$ to $L$, and $P'(\alpha, \beta)$ be the
+            <strong>mirror image (reflection)</strong> of $P$ across $L$.
+        </p>
+        <p>
+            <strong>First-Principles Derivation:</strong> The line $L$ has direction vector $(-b, a)$, so the
+            perpendicular segment $PM$ is parallel to the normal vector $(a, b)$. Therefore, for some scalar $t \in
+            \mathbb{R}$:
+        </p>
+        $$h - x_1 = at, \qquad k - y_1 = bt \quad \implies \quad h = x_1 + at,\quad k = y_1 + bt.$$
+        <p>Because $M(h, k)$ lies on $L$, substitute into $ah + bk + c = 0$:</p>
+        $$a(x_1 + at) + b(y_1 + bt) + c = 0 \implies (a^2 + b^2)t = -(ax_1 + by_1 + c) \implies t = -\frac{ax_1 + by_1 +
+        c}{a^2 + b^2}.$$
+        <p>This single scalar $t$ immediately unlocks <strong>all three master formulas</strong>:</p>
+        <ol>
+            <li><strong>Foot of Perpendicular $M(h, k)$:</strong>
+                $$\frac{h - x_1}{a} = \frac{k - y_1}{b} = -\frac{ax_1 + by_1 + c}{a^2 + b^2}.$$
+            </li>
+            <li><strong>Mirror Image $P'(\alpha, \beta)$:</strong> Since $M$ is the midpoint of $PP'$, $\vec{PP'} =
+                2\vec{PM}$, so we simply double $t$:
+                $$\frac{\alpha - x_1}{a} = \frac{\beta - y_1}{b} = -\frac{2(ax_1 + by_1 + c)}{a^2 + b^2}.$$
+            </li>
+            <li><strong>Perpendicular Distance $d = PM$:</strong>
+                $$d = \sqrt{(h - x_1)^2 + (k - y_1)^2} = \sqrt{(at)^2 + (bt)^2} = |t|\sqrt{a^2 + b^2} = \frac{|ax_1 +
+                by_1 + c|}{\sqrt{a^2 + b^2}}.$$
+            </li>
+            <li><strong>Distance Between Two Parallel Lines $ax + by + c_1 = 0$ and $ax + by + c_2 = 0$:</strong> Pick
+                any point $(x_1, y_1)$ on the first line (so $ax_1 + by_1 = -c_1$) and plug into the distance formula
+                for the second line:
+                $$d_{\parallel} = \frac{|c_1 - c_2|}{\sqrt{a^2 + b^2}} \qquad \textbf{(MATCH } a, b \textbf{
+                COEFFICIENTS FIRST!)}$$
+            </li>
+        </ol>
+    </div>
+
+    <!-- SVG DIAGRAM 2: PERPENDICULAR DISTANCE, FOOT & MIRROR IMAGE -->
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 280" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Perpendicular distance, foot of perpendicular M, and mirror image P prime across line L">
+            <rect x="8" y="8" width="664" height="264" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+
+            <!-- Left geometric scene:
+           Line L passes through (70, 210) and (410, 70):
+           dx = 340, dy = -140 -> unit along L: u = (0.9247, -0.3808)
+           Normal unit vector pointing up-left: n = (-0.3808, -0.9247)
+           Choose M(240, 140) on L (midpoint of endpoints).
+           Let d = 82 px.
+           P  = M + 82*n = (240 - 31.2, 140 - 75.8) = (208.8, 64.2)
+           P' = M - 82*n = (240 + 31.2, 140 + 75.8) = (271.2, 215.8) -->
+
+            <!-- Subtle mirror glow along line L -->
+            <line x1="65" y1="212" x2="415" y2="68" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round"
+                opacity="0.45" />
+            <line x1="65" y1="212" x2="415" y2="68" stroke="#1e3a8a" stroke-width="2.6" />
+            <text x="86" y="230" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1e3a8a">Mirror Line L: ax + by + c = 0</text>
+
+            <!-- Perpendicular line PP' -->
+            <line x1="208.8" y1="64.2" x2="240" y2="140" stroke="#0f766e" stroke-width="2.6" />
+            <line x1="240" y1="140" x2="271.2" y2="215.8" stroke="#d97706" stroke-width="2.6" stroke-dasharray="6,3" />
+
+            <!-- Right angle box at M(240,140): size 13 along u and n -->
+            <!-- M + 13u = (252.0, 135.0), M + 13n = (235.0, 128.0), corner = (247.0, 123.0) -->
+            <polyline points="252,135 247,123 235,128" fill="none" stroke="#0f766e" stroke-width="1.8" />
+
+            <!-- Equal-distance tick marks on PM and MP' -->
+            <!-- Midpoint of PM = (224.4, 102.1); tick perpendicular to n (along u) -->
+            <line x1="218" y1="104.8" x2="230.8" y2="99.4" stroke="#0f766e" stroke-width="2" />
+            <!-- Midpoint of MP' = (255.6, 177.9) -->
+            <line x1="249.2" y1="180.6" x2="262" y2="175.2" stroke="#d97706" stroke-width="2" />
+
+            <!-- Distance labels d -->
+            <text x="196" y="109" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700"
+                fill="#0f766e">d</text>
+            <text x="274" y="182" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700"
+                fill="#b45309">d</text>
+
+            <!-- Normal vector indicator -->
+            <line x1="335" y1="101" x2="316" y2="55" stroke="#64748b" stroke-width="1.8" />
+            <polygon points="312,57 314,48 320,54" fill="#64748b" />
+            <text x="334" y="56" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#475569">Normal (a, b)</text>
+
+            <!-- Key points -->
+            <circle cx="208.8" cy="64.2" r="5.5" fill="#0f766e" />
+            <circle cx="240" cy="140" r="5" fill="#1e3a8a" />
+            <circle cx="271.2" cy="215.8" r="5.5" fill="#d97706" />
+
+            <!-- Point labels -->
+            <text x="198" y="49" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#0f766e"
+                text-anchor="middle">P(x&#8321;, y&#8321;)</text>
+            <text x="266" y="144" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1e3a8a">M(h, k) — Foot</text>
+            <text x="282" y="232" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700"
+                fill="#b45309">P&#8242;(&#945;, &#946;) — Image</text>
+
+            <!-- Right Formula Card -->
+            <rect x="444" y="26" width="214" height="228" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="551" y="50" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f172a"
+                text-anchor="middle">Single-Step Vector Formulas</text>
+            <line x1="458" y1="60" x2="644" y2="60" stroke="#e2e8f0" stroke-width="1.2" />
+
+            <text x="458" y="82" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0f766e">1.
+                Shortest Distance (d = PM):</text>
+            <text x="458" y="100" font-family="system-ui, sans-serif" font-size="11.5" fill="#334155">d = |ax&#8321; +
+                by&#8321; + c| / &#8730;(a&#178; + b&#178;)</text>
+
+            <text x="458" y="128" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1e3a8a">2.
+                Foot of Perpendicular M(h, k):</text>
+            <text x="458" y="146" font-family="system-ui, sans-serif" font-size="11" fill="#334155">(h&#8722;x&#8321;)/a
+                = (k&#8722;y&#8321;)/b = &#8722;L(P)/(a&#178;+b&#178;)</text>
+
+            <text x="458" y="174" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#b45309">3.
+                Mirror Image P&#8242;(&#945;, &#946;):</text>
+            <text x="458" y="192" font-family="system-ui, sans-serif" font-size="11"
+                fill="#334155">(&#945;&#8722;x&#8321;)/a = (&#946;&#8722;y&#8321;)/b =
+                &#8722;2L(P)/(a&#178;+b&#178;)</text>
+
+            <rect x="456" y="208" width="190" height="34" rx="6" fill="#0f172a" />
+            <text x="551" y="229" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#fde68a"
+                text-anchor="middle">M is always midpoint of PP&#8242;!</text>
+        </svg>
+        <p class="diagram-caption">Figure 11.2: Geometry of orthogonal projection and reflection. Moving along normal
+            $(a, b)$ by factor $t = -L(P)/(a^2 + b^2)$ lands at foot $M$; moving by $2t$ lands at exact mirror image
+            $P'$.</p>
+    </div>
+
+    <!-- ==================== SECTION 5: TRIANGLE CENTERS & EULER LINE ==================== -->
+    <h2 class="section-heading">5. Triangle Centers in Coordinates &amp; The Euler Line Theorem</h2>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Exact Coordinate Formulas for $G, I, O, H$</span>
+        <p>Consider $\triangle ABC$ with vertices $A(x_1, y_1)$, $B(x_2, y_2)$, $C(x_3, y_3)$ and opposite side lengths
+            $a = BC$, $b = CA$, $c = AB$:</p>
+
+        <p><strong>1. Centroid $G$ (Intersection of Medians):</strong></p>
+        <p>
+            The midpoint of $BC$ is $D\left(\frac{x_2+x_3}{2}, \frac{y_2+y_3}{2}\right)$. Since $G$ divides median $AD$
+            internally in the ratio $2 : 1$:
+        </p>
+        $$G = \left(\frac{2\left(\frac{x_2 + x_3}{2}\right) + 1 \cdot x_1}{2 + 1},\; \frac{2\left(\frac{y_2 +
+        y_3}{2}\right) + 1 \cdot y_1}{2 + 1}\right) = \left(\frac{x_1 + x_2 + x_3}{3},\; \frac{y_1 + y_2 +
+        y_3}{3}\right).$$
+
+        <p><strong>2. Incenter $I$ (Intersection of Internal Angle Bisectors):</strong></p>
+        <p>
+            Let the angle bisector of $\angle A$ meet $BC$ at $E$. By the <strong>Angle Bisector Theorem</strong>,
+            $\dfrac{BE}{EC} = \dfrac{AB}{AC} = \dfrac{c}{b}$, so $E = \left(\dfrac{cx_3 + bx_2}{b + c},\; \dfrac{cy_3 +
+            by_2}{b + c}\right)$ and $BE = \dfrac{ac}{b + c}$. Next, in $\triangle ABE$, the bisector $BI$ divides $AE$
+            in the ratio $\dfrac{AI}{IE} = \dfrac{AB}{BE} = \dfrac{c}{ac/(b+c)} = \dfrac{b + c}{a}$. Applying internal
+            section division to $AE$ yields:
+        </p>
+        $$I = \left(\frac{ax_1 + bx_2 + cx_3}{a + b + c},\; \frac{ay_1 + by_2 + cy_3}{a + b + c}\right).$$
+        <p><em>Warning:</em> Each vertex $(x_1, y_1)$ is weighted by its <strong>OPPOSITE</strong> side length ($a =
+            BC$), never an adjacent side!</p>
+
+        <p><strong>3. Circumcenter $O$ (Intersection of Perpendicular Bisectors):</strong></p>
+        <ul>
+            <li><strong>General method:</strong> Solve the two linear equations $OA^2 = OB^2$ and $OB^2 = OC^2$ (note
+                that $x^2 + y^2$ cancels out identically!).</li>
+            <li><strong>Right-Triangle Shortcut:</strong> If $\triangle ABC$ is right-angled at $A$, then $O$ is simply
+                the <strong>midpoint of the hypotenuse $BC$</strong>: $O = \left(\dfrac{x_2 + x_3}{2}, \dfrac{y_2 +
+                y_3}{2}\right)$, and circumradius $R = \dfrac{BC}{2}$.</li>
+        </ul>
+
+        <p><strong>4. Orthocenter $H$ (Intersection of Altitudes):</strong></p>
+        <ul>
+            <li><strong>General method:</strong> Intersect any two altitudes (line through $A$ with slope $-1/m_{BC}$
+                and line through $B$ with slope $-1/m_{CA}$).</li>
+            <li><strong>Right-Triangle Shortcut:</strong> If $\triangle ABC$ is right-angled at $A$, the two legs $AB$
+                and $AC$ <em>are</em> the altitudes, so <strong>$H = A$ (the right-angled vertex itself!)</strong>.</li>
+        </ul>
+
+        <p><strong>5. The Euler Line Theorem (The Ultimate Coordinate Shortcut):</strong></p>
+        <p>
+            In <em>every</em> non-equilateral triangle, the Circumcenter $O$, Centroid $G$, and Orthocenter $H$ are
+            strictly <strong>collinear</strong> (lying on the <em>Euler Line</em>), and <strong>$G$ divides segment $OH$
+                internally in the exact ratio $1 : 2$</strong> ($OG : GH = 1 : 2$). By the section formula:
+        </p>
+        $$G = \frac{2O + 1 \cdot H}{3} \quad \iff \quad \mathbf{H = 3G - 2O}, \qquad O = \frac{3G - H}{2}.$$
+        <p>
+            <em>Special Case:</em> In an equilateral triangle, all four centers collapse to one point ($O = G = H = I$).
+            Note that the Incenter $I$ does <em>not</em> lie on the Euler Line unless the triangle is isosceles!
+        </p>
+    </div>
+
+    <!-- SVG DIAGRAM 3: EULER LINE CONNECTING O, G, H -->
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 295" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Euler line connecting Circumcenter O, Centroid G, and Orthocenter H with exact 1 to 2 ratio">
+            <rect x="8" y="8" width="664" height="279" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+
+            <!-- Exact geometrically accurate acute triangle:
+           A(0,6) -> (130, 53), B(-2,0) -> (58, 245), C(8,0) -> (418, 245)
+           Midpoint of BC: M(3,0) -> (238, 245)
+           O(3, 5/3) -> (238, 191.67)
+           G(2, 2) -> (202, 181)
+           H(0, 8/3) -> (130, 159.67)
+           Foot of altitude from B to AC: F(1.6, 4.8) -> (187.6, 91.4) -->
+
+            <!-- Triangle fill -->
+            <polygon points="130,53 58,245 418,245" fill="#eff6ff" stroke="#0f172a" stroke-width="2.2" />
+
+            <!-- Altitudes (dashed red) -->
+            <line x1="130" y1="53" x2="130" y2="245" stroke="#dc2626" stroke-width="1.4" stroke-dasharray="5,3" />
+            <line x1="58" y1="245" x2="187.6" y2="91.4" stroke="#dc2626" stroke-width="1.4" stroke-dasharray="5,3" />
+            <!-- Right angle mark at foot of altitude from A -->
+            <polyline points="130,234 141,234 141,245" fill="none" stroke="#dc2626" stroke-width="1.3" />
+
+            <!-- Median AM (dashed green) -->
+            <line x1="130" y1="53" x2="238" y2="245" stroke="#0f766e" stroke-width="1.5" stroke-dasharray="4,3" />
+
+            <!-- Perpendicular bisector of BC through O (dashed blue) -->
+            <line x1="238" y1="245" x2="238" y2="148" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3" />
+            <!-- Right angle mark at M -->
+            <polyline points="238,234 249,234 249,245" fill="none" stroke="#2563eb" stroke-width="1.3" />
+
+            <!-- THE EULER LINE extending slightly past H and O -->
+            <line x1="100" y1="150.8" x2="274" y2="202.3" stroke="#7c3aed" stroke-width="3.2" />
+
+            <!-- Vertices -->
+            <circle cx="130" cy="53" r="4" fill="#0f172a" />
+            <circle cx="58" cy="245" r="4" fill="#0f172a" />
+            <circle cx="418" cy="245" r="4" fill="#0f172a" />
+            <circle cx="238" cy="245" r="3.5" fill="#0f766e" />
+
+            <!-- Vertex labels -->
+            <text x="130" y="42" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a"
+                text-anchor="middle">A</text>
+            <text x="48" y="262" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a"
+                text-anchor="middle">B</text>
+            <text x="424" y="262" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a"
+                text-anchor="middle">C</text>
+            <text x="238" y="262" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0f766e"
+                text-anchor="middle">M (Midpoint of BC)</text>
+
+            <!-- Centers H, G, O -->
+            <circle cx="130" cy="159.7" r="5.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5" />
+            <circle cx="202" cy="181" r="5.5" fill="#0f766e" stroke="#ffffff" stroke-width="1.5" />
+            <circle cx="238" cy="191.7" r="5.5" fill="#2563eb" stroke="#ffffff" stroke-width="1.5" />
+
+            <!-- Center labels -->
+            <text x="116" y="148" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#dc2626"
+                text-anchor="end">H</text>
+            <text x="206" y="169" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#0f766e"
+                text-anchor="middle">G</text>
+            <text x="252" y="187" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700"
+                fill="#2563eb">O</text>
+
+            <!-- Ratio callouts along Euler Line -->
+            <text x="163" y="186" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#7c3aed"
+                text-anchor="middle">2k</text>
+            <text x="219" y="203" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#7c3aed"
+                text-anchor="middle">1k</text>
+            <text x="310" y="216" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#7c3aed">Euler Line</text>
+
+            <!-- Right Legend Panel -->
+            <rect x="448" y="28" width="210" height="238" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="553" y="52" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f172a"
+                text-anchor="middle">The Euler Line Law</text>
+            <line x1="462" y1="62" x2="644" y2="62" stroke="#e2e8f0" stroke-width="1.2" />
+
+            <circle cx="468" cy="84" r="4.5" fill="#2563eb" />
+            <text x="480" y="88" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#2563eb">O
+                — Circumcenter</text>
+            <text x="480" y="102" font-family="system-ui, sans-serif" font-size="10.5" fill="#475569">Perp. bisectors
+                (OA = OB = OC)</text>
+
+            <circle cx="468" cy="124" r="4.5" fill="#0f766e" />
+            <text x="480" y="128" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#0f766e">G — Centroid</text>
+            <text x="480" y="142" font-family="system-ui, sans-serif" font-size="10.5" fill="#475569">Medians (average
+                of A, B, C)</text>
+
+            <circle cx="468" cy="164" r="4.5" fill="#dc2626" />
+            <text x="480" y="168" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#dc2626">H — Orthocenter</text>
+            <text x="480" y="182" font-family="system-ui, sans-serif" font-size="10.5" fill="#475569">Altitudes (perp.
+                to opposite sides)</text>
+
+            <rect x="462" y="198" width="182" height="54" rx="6" fill="#0f172a" />
+            <text x="553" y="218" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#c4b5fd"
+                text-anchor="middle">OG : GH = 1 : 2 Always</text>
+            <text x="553" y="239" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff"
+                text-anchor="middle">H = 3G &#8722; 2O</text>
+        </svg>
+        <p class="diagram-caption">Figure 11.3: Exact scaled geometry of the Euler Line. Knowing any two of $O, G, H$
+            immediately determines the third via $H = 3G - 2O$ without solving a second pair of simultaneous equations.
+        </p>
+    </div>
+
+    <!-- ==================== FORMULA VAULT ==================== -->
+    <h2 class="section-heading">6. Master Formula Vault — Chapter 11</h2>
+
+    <div class="formula-vault">
+        <span class="box-label">Master Formula Vault — Coordinate Geometry, Lines &amp; Centers</span>
+        <ul>
+            <li><strong>Distance &amp; Midpoint:</strong> $AB = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$; $\;M =
+                \left(\dfrac{x_1+x_2}{2}, \dfrac{y_1+y_2}{2}\right)$; Parallelogram 4th vertex: $D = A + C - B$.</li>
+            <li><strong>Section Formulas:</strong> Internal ($m:n$): $\left(\dfrac{mx_2+nx_1}{m+n},
+                \dfrac{my_2+ny_1}{m+n}\right)$; External ($m:n$): $\left(\dfrac{mx_2-nx_1}{m-n},
+                \dfrac{my_2-ny_1}{m-n}\right)$; Line $L(x,y) = ax+by+c=0$ cuts $AB$ in ratio $k:1 =
+                -\dfrac{L(A)}{L(B)}$.</li>
+            <li><strong>Area &amp; Shoelace:</strong> Triangle (origin-shifted): $\Delta = \dfrac{1}{2}|X_1 Y_2 - X_2
+                Y_1|$; Cyclic $n$-gon: $\text{Area} = \dfrac{1}{2}\left|\displaystyle\sum_{i=1}^{n}(x_i y_{i+1} - y_i
+                x_{i+1})\right|$.</li>
+            <li><strong>Straight Lines:</strong> $m = \tan\theta = \dfrac{y_2-y_1}{x_2-x_1}$; Parallel $\iff m_1 = m_2$;
+                Perpendicular $\iff m_1 m_2 = -1$; Acute angle: $\tan\theta = \left|\dfrac{m_1-m_2}{1+m_1 m_2}\right|$;
+                Intercept form: $\dfrac{x}{a} + \dfrac{y}{b} = 1$.</li>
+            <li><strong>Distance, Foot &amp; Image ($L: ax+by+c=0$):</strong> $d =
+                \dfrac{|ax_1+by_1+c|}{\sqrt{a^2+b^2}}$; Parallel lines: $d_\parallel =
+                \dfrac{|c_1-c_2|}{\sqrt{a^2+b^2}}$; Foot $M(h,k)$: $\dfrac{h-x_1}{a} = \dfrac{k-y_1}{b} =
+                -\dfrac{L(P)}{a^2+b^2}$; Image $P'(\alpha,\beta)$: $\dfrac{\alpha-x_1}{a} = \dfrac{\beta-y_1}{b} =
+                -\dfrac{2L(P)}{a^2+b^2}$.</li>
+            <li><strong>Triangle Centers &amp; Euler Line:</strong> $G = \left(\dfrac{\sum x_i}{3}, \dfrac{\sum
+                y_i}{3}\right)$; $\;I = \left(\dfrac{ax_1+bx_2+cx_3}{a+b+c}, \dfrac{ay_1+by_2+cy_3}{a+b+c}\right)$;
+                Right $\triangle$ at $A$: $H = A,\; O = \text{midpoint}(BC)$; Euler Line: $\mathbf{H = 3G - 2O}$.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== WORKED EXAMPLES ==================== -->
+    <h2 class="section-heading">7. Escalating Worked Examples (Level 1 &rarr; Level 2 &rarr; Level 3)</h2>
+
+    <!-- LEVEL 1 BANNER -->
+    <div class="level-banner l1">Level 1: Warmup &amp; Structural Calibration (Worked Examples 1–3)</div>
+
+    <!-- WE 1 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Distance &bull; Quadrilateral Classification</span>
+            <strong>Worked Example 1: Rhombus vs. Square Trap &amp; Parallelogram 4th Vertex</strong>
+        </div>
+        <div class="ex-problem">
+            (a) Four points $A(1, 2)$, $B(4, 6)$, $C(9, 6)$, and $D(6, 2)$ are given in cyclic order. Determine the
+            exact type of quadrilateral $ABCD$ (parallelogram, rectangle, rhombus, or square).
+            <br>(b) Three vertices of a parallelogram $PQRS$ taken in order are $P(2, -1)$, $Q(5, 3)$, and $R(1, 6)$.
+            Find the coordinates of the fourth vertex $S$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Compute all four squared side lengths first:</strong></p>
+            $$
+            \begin{aligned}
+            AB^2 &= (4 - 1)^2 + (6 - 2)^2 = 3^2 + 4^2 = 25 \implies AB = 5, \\
+            BC^2 &= (9 - 4)^2 + (6 - 6)^2 = 5^2 + 0^2 = 25 \implies BC = 5, \\
+            CD^2 &= (6 - 9)^2 + (2 - 6)^2 = (-3)^2 + (-4)^2 = 25 \implies CD = 5, \\
+            DA^2 &= (1 - 6)^2 + (2 - 2)^2 = (-5)^2 + 0^2 = 25 \implies DA = 5.
+            \end{aligned}
+            $$
+            <p>Since all four sides are equal ($5$ units), $ABCD$ is either a rhombus or a square. <strong>Never stop
+                    here—test the diagonals!</strong></p>
+            $$AC^2 = (9 - 1)^2 + (6 - 2)^2 = 64 + 16 = 80 \implies AC = 4\sqrt{5},$$
+            $$BD^2 = (6 - 4)^2 + (2 - 6)^2 = 4 + 16 = 20 \implies BD = 2\sqrt{5}.$$
+            <p>Because $AB = BC = CD = DA$ while $AC \neq BD$, quadrilateral $ABCD$ is strictly a <strong>rhombus (and
+                    NOT a square)</strong>.</p>
+
+            <p><strong>Part (b) — Use the Diagonal Midpoint Property:</strong></p>
+            <p>In parallelogram $PQRS$, diagonals $PR$ and $QS$ share the exact same midpoint:</p>
+            $$\left(\frac{x_P + x_R}{2},\; \frac{y_P + y_R}{2}\right) = \left(\frac{x_Q + x_S}{2},\; \frac{y_Q +
+            y_S}{2}\right) \implies S = P + R - Q.$$
+            $$x_S = 2 + 1 - 5 = -2, \qquad y_S = (-1) + 6 - 3 = 2 \implies \mathbf{S = (-2, 2)}.$$
+        </div>
+    </div>
+
+    <!-- WE 2 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Section Formula &bull; Internal &amp; External</span>
+            <strong>Worked Example 2: Comparing Internal and External Division on the Same Segment</strong>
+        </div>
+        <div class="ex-problem">
+            Given $A(-2, 5)$ and $B(4, -7)$, find the coordinates of:
+            <br>(a) point $P$ that divides segment $AB$ internally in the ratio $2 : 1$;
+            <br>(b) point $Q$ that divides segment $AB$ externally in the ratio $5 : 2$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Internal Division ($m = 2,\; n = 1$):</strong></p>
+            $$x_P = \frac{2(4) + 1(-2)}{2 + 1} = \frac{8 - 2}{3} = 2, \qquad y_P = \frac{2(-7) + 1(5)}{2 + 1} =
+            \frac{-14 + 5}{3} = -3.$$
+            <p>Hence $\mathbf{P = (2, -3)}$.</p>
+
+            <p><strong>Part (b) — External Division ($m = 5,\; n = 2$):</strong></p>
+            <p>Apply $Q = \left(\dfrac{mx_2 - nx_1}{m - n},\; \dfrac{my_2 - ny_1}{m - n}\right)$ with $(x_1, y_1) = (-2,
+                5)$ and $(x_2, y_2) = (4, -7)$:</p>
+            $$x_Q = \frac{5(4) - 2(-2)}{5 - 2} = \frac{20 + 4}{3} = 8, \qquad y_Q = \frac{5(-7) - 2(5)}{5 - 2} =
+            \frac{-35 - 10}{3} = -15.$$
+            <p>Hence $\mathbf{Q = (8, -15)}$.</p>
+            <p><em>Sanity Check:</em> $QA = \sqrt{(8 - (-2))^2 + (-15 - 5)^2} = \sqrt{500} = 10\sqrt{5}$ and $QB =
+                \sqrt{(8 - 4)^2 + (-15 - (-7))^2} = \sqrt{80} = 4\sqrt{5}$, confirming $QA : QB = 10\sqrt{5} : 4\sqrt{5}
+                = 5 : 2$.</p>
+        </div>
+    </div>
+
+    <!-- WE 3 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Straight Lines &bull; Forms &amp; Perpendicularity</span>
+            <strong>Worked Example 3: Perpendicular Construction &amp; Intercept-Form Lines</strong>
+        </div>
+        <div class="ex-problem">
+            (a) Find the equation of the straight line passing through $(3, -4)$ and perpendicular to the line $2x - 5y
+            + 7 = 0$.
+            <br>(b) Find the equations of all straight lines passing through $(2, 2)$ whose $x$- and $y$-intercepts sum
+            to $9$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Perpendicular Line through $(3, -4)$:</strong></p>
+            <p>Rewrite $2x - 5y + 7 = 0$ as $y = \dfrac{2}{5}x + \dfrac{7}{5}$, giving slope $m_1 = \dfrac{2}{5}$. For
+                perpendicularity ($m_1 m_2 = -1$):</p>
+            $$m_2 = -\frac{5}{2}.$$
+            <p>Using Point-Slope Form through $(3, -4)$:</p>
+            $$y - (-4) = -\frac{5}{2}(x - 3) \implies 2y + 8 = -5x + 15 \implies \mathbf{5x + 2y - 7 = 0}.$$
+            <p><em>Family Check:</em> Swap coefficients and flip one sign: $5x + 2y + \mu = 0$; substituting $(3, -4)$
+                gives $15 - 8 + \mu = 0 \implies \mu = -7$.</p>
+
+            <p><strong>Part (b) — Intercept Form with $a + b = 9$:</strong></p>
+            <p>Let the $x$-intercept be $a$ and $y$-intercept be $b = 9 - a$ ($a \neq 0, 9$). The line is $\dfrac{x}{a}
+                + \dfrac{y}{9 - a} = 1$. Since it passes through $(2, 2)$:</p>
+            $$\frac{2}{a} + \frac{2}{9 - a} = 1 \implies 2(9 - a) + 2a = a(9 - a) \implies 18 = 9a - a^2 \implies a^2 -
+            9a + 18 = 0.$$
+            <p>Factor: $(a - 3)(a - 6) = 0 \implies a = 3$ or $a = 6$.</p>
+            <ul>
+                <li>If $a = 3$, then $b = 6$: $\dfrac{x}{3} + \dfrac{y}{6} = 1 \implies \mathbf{2x + y - 6 = 0}$.</li>
+                <li>If $a = 6$, then $b = 3$: $\dfrac{x}{6} + \dfrac{y}{3} = 1 \implies \mathbf{x + 2y - 6 = 0}$.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- LEVEL 2 BANNER -->
+    <div class="level-banner l2">Level 2: Exam-Real BEST / NTSE Stage 2 Standard (Worked Examples 4–6)</div>
+
+    <!-- WE 4 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Section Bridge &bull; Line Division Ratio</span>
+            <strong>Worked Example 4: Ratio in Which an Arbitrary Line Cuts Segment $AB$</strong>
+        </div>
+        <div class="ex-problem">
+            Find the ratio in which the line $3x + y - 9 = 0$ divides the line segment joining $A(1, 3)$ and $B(2, 7)$.
+            State whether the division is internal or external, and find the exact coordinates of the point of
+            intersection $P$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — First-Principles Derivation Using $k : 1$:</strong></p>
+            <p>Let $P$ divide $AB$ in the ratio $k : 1$. By the section formula:</p>
+            $$P = \left(\frac{2k + 1}{k + 1},\; \frac{7k + 3}{k + 1}\right).$$
+            <p>Since $P$ lies on $3x + y - 9 = 0$, substitute $x$ and $y$ and multiply through by $(k + 1)$:</p>
+            $$3(2k + 1) + (7k + 3) - 9(k + 1) = 0 \implies (6k + 7k - 9k) + (3 + 3 - 9) = 0 \implies 4k - 3 = 0 \implies
+            k = \frac{3}{4}.$$
+            <p><strong>Step 2 — Cross-Check with the Instant Line-Ratio Formula:</strong></p>
+            <p>Set $L(x, y) = 3x + y - 9$. Evaluate at $A(1, 3)$ and $B(2, 7)$:</p>
+            $$L(A) = 3(1) + 3 - 9 = -3, \qquad L(B) = 3(2) + 7 - 9 = +4 \implies k = -\frac{L(A)}{L(B)} = -\frac{-3}{4}
+            = \frac{3}{4}.$$
+            <p>Since $k = \dfrac{3}{4} \gt 0$ (opposite signs at $A$ and $B$), the line divides $AB$ <strong>internally
+                    in the ratio $3 : 4$</strong>.</p>
+            <p><strong>Step 3 — Find the Intersection Point $P$:</strong></p>
+            $$x_P = \frac{3(2) + 4(1)}{3 + 4} = \frac{10}{7}, \qquad y_P = \frac{3(7) + 4(3)}{3 + 4} = \frac{33}{7}
+            \implies \mathbf{P = \left(\frac{10}{7},\; \frac{33}{7}\right)}.$$
+            <p><em>Verification:</em> $3\left(\frac{10}{7}\right) + \frac{33}{7} - 9 = \frac{63}{7} - 9 = 0$.</p>
+        </div>
+    </div>
+
+    <!-- WE 5 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Shoelace Formula &bull; Cyclic Order Audit</span>
+            <strong>Worked Example 5: Polygon Area via Shoelace &amp; Why Swapping Vertices Breaks It</strong>
+        </div>
+        <div class="ex-problem">
+            Find the area of the quadrilateral whose vertices are $A(-3, 2)$, $B(5, 4)$, $C(7, -6)$, and $D(-5, -4)$.
+            Also demonstrate what error occurs if you run the Shoelace Formula in the non-cyclic order $A \to C \to B
+            \to D$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Verify Cyclic Order by Quadrant Audit:</strong></p>
+            <p>$A(-3, 2)$ lies in Q2, $B(5, 4)$ in Q1, $C(7, -6)$ in Q4, and $D(-5, -4)$ in Q3. Moving $A \to B \to C
+                \to D$ traces a clean <strong>clockwise</strong> boundary with no self-intersections.</p>
+            <p><strong>Step 2 — Run the Shoelace (Staircase) Formula on $A \to B \to C \to D \to A$:</strong></p>
+            <ul>
+                <li><strong>Downward products ($\sum x_i y_{i+1}$):</strong>
+                    $$(-3)(4) + (5)(-6) + (7)(-4) + (-5)(2) = -12 - 30 - 28 - 10 = -80.$$
+                </li>
+                <li><strong>Upward products ($\sum y_i x_{i+1}$):</strong>
+                    $$(2)(5) + (4)(7) + (-6)(-5) + (-4)(-3) = 10 + 28 + 30 + 12 = +80.$$
+                </li>
+            </ul>
+            $$\text{Area} = \frac{1}{2}\bigl|(-80) - (80)\bigr| = \frac{1}{2}\bigl|-160\bigr| = \mathbf{80\text{ sq.
+            units}}.$$
+            <p><strong>Step 3 — Why Non-Cyclic Order $A \to C \to B \to D \to A$ Fails:</strong></p>
+            <p>Swapping $B$ and $C$ produces a self-intersecting bow-tie:</p>
+            $$\sum x_i y_{i+1} = (-3)(-6) + (7)(4) + (5)(-4) + (-5)(2) = 18 + 28 - 20 - 10 = 16,$$
+            $$\sum y_i x_{i+1} = (2)(7) + (-6)(5) + (4)(-5) + (-4)(-3) = 14 - 30 - 20 + 12 = -24.$$
+            <p>This falsely yields $\frac{1}{2}|16 - (-24)| = 20$ instead of $80$, because the two crossed triangles
+                have opposite orientations and subtract from each other!</p>
+        </div>
+    </div>
+
+    <!-- WE 6 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Straight Lines &bull; Angle &amp; Parallel Distance</span>
+            <strong>Worked Example 6: Acute Angle Between Lines &amp; Parallel-Line Normalization Trap</strong>
+        </div>
+        <div class="ex-problem">
+            (a) Find the acute angle between the lines $y - \sqrt{3}x - 5 = 0$ and $\sqrt{3}y - x + 6 = 0$.
+            <br>(b) Find the perpendicular distance between the parallel lines $3x - 4y + 9 = 0$ and $6x - 8y - 17 = 0$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Angle Formula:</strong></p>
+            <p>Extract both slopes cleanly:</p>
+            $$L_1: y = \sqrt{3}x + 5 \implies m_1 = \sqrt{3}; \qquad L_2: y = \frac{1}{\sqrt{3}}x - 2\sqrt{3} \implies
+            m_2 = \frac{1}{\sqrt{3}}.$$
+            <p>Apply $\tan\theta = \left|\dfrac{m_1 - m_2}{1 + m_1 m_2}\right|$:</p>
+            $$\tan\theta = \left|\frac{\sqrt{3} - \frac{1}{\sqrt{3}}}{1 + \sqrt{3} \cdot \frac{1}{\sqrt{3}}}\right| =
+            \left|\frac{\frac{3 - 1}{\sqrt{3}}}{1 + 1}\right| = \frac{2/\sqrt{3}}{2} = \frac{1}{\sqrt{3}} \implies
+            \mathbf{\theta = 30^\circ}.$$
+
+            <p><strong>Part (b) — Match Coefficients Before Applying $d_{\parallel} = \dfrac{|c_1 - c_2|}{\sqrt{a^2 +
+                    b^2}}$:</strong></p>
+            <p>
+                Notice that $3x - 4y + 9 = 0$ and $6x - 8y - 17 = 0$ do NOT yet have identical $(a, b)$ coefficients!
+                Multiply the first equation by $2$ so both lines share $(a, b) = (6, -8)$:
+            </p>
+            $$L_1: 6x - 8y + 18 = 0 \quad (c_1 = 18), \qquad L_2: 6x - 8y - 17 = 0 \quad (c_2 = -17).$$
+            <p>Now apply the parallel-line distance formula:</p>
+            $$d_{\parallel} = \frac{|c_1 - c_2|}{\sqrt{a^2 + b^2}} = \frac{|18 - (-17)|}{\sqrt{6^2 + (-8)^2}} =
+            \frac{35}{\sqrt{36 + 64}} = \frac{35}{10} = \mathbf{\frac{7}{2}\text{ units}}.$$
+        </div>
+    </div>
+
+    <!-- LEVEL 3 BANNER -->
+    <div class="level-banner l3">Level 3: Rank-Booster / IOQM-Lite &amp; Resonance Olympiad Tier (Worked Examples 7–9)
+    </div>
+
+    <!-- WE 7 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Straight Lines &bull; Foot &amp; Mirror Reflection</span>
+            <strong>Worked Example 7: Foot of Perpendicular, Mirror Image &amp; Shortest Distance</strong>
+        </div>
+        <div class="ex-problem">
+            For the point $P(3, 8)$ and the straight line $L: x + 3y - 7 = 0$, find:
+            <br>(a) the shortest distance from $P$ to $L$;
+            <br>(b) the foot of the perpendicular $M(h, k)$ dropped from $P$ onto $L$;
+            <br>(c) the mirror image $P'(\alpha, \beta)$ of $P$ with respect to $L$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation (Simultaneous Lines + Midpoint):</strong></p>
+            <p><strong>Step 1 — Shortest distance from $P(3, 8)$ to $L: 1\cdot x + 3\cdot y - 7 = 0$:</strong></p>
+            $$d = \frac{|1(3) + 3(8) - 7|}{\sqrt{1^2 + 3^2}} = \frac{|3 + 24 - 7|}{\sqrt{10}} = \frac{20}{\sqrt{10}} =
+            \mathbf{2\sqrt{10}\text{ units}}.$$
+            <p><strong>Step 2 — Equation of the perpendicular line $PM$:</strong></p>
+            <p>Slope of $L$ is $m_L = -\dfrac{1}{3}$, so slope of $PM$ is $m_{PM} = 3$. Passing through $P(3, 8)$:</p>
+            $$y - 8 = 3(x - 3) \implies 3x - y - 1 = 0 \implies y = 3x - 1.$$
+            <p><strong>Step 3 — Solve $L$ and $PM$ simultaneously for $M(h, k)$:</strong></p>
+            $$x + 3(3x - 1) - 7 = 0 \implies 10x - 10 = 0 \implies x = 1, \quad y = 3(1) - 1 = 2.$$
+            <p>Thus the foot of the perpendicular is $\mathbf{M = (1, 2)}$.</p>
+            <p><strong>Step 4 — Use $M$ as the midpoint of $PP'$ to find mirror image $P'(\alpha, \beta)$:</strong></p>
+            $$\frac{3 + \alpha}{2} = 1 \implies \alpha = -1, \qquad \frac{8 + \beta}{2} = 2 \implies \beta = -4 \implies
+            \mathbf{P' = (-1, -4)}.$$
+
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Exam Trick (Vector Ratio Formula)</span>
+                <p>
+                    Skip writing the perpendicular line completely! Compute one single number $t = -\dfrac{L(P)}{a^2 +
+                    b^2} = -\dfrac{3 + 24 - 7}{1^2 + 3^2} = -\dfrac{20}{10} = -2$.
+                    <br>&bull; <strong>Foot $M$:</strong> $(x_1 + at,\; y_1 + bt) = (3 + 1(-2),\; 8 + 3(-2)) =
+                    \mathbf{(1, 2)}$.
+                    <br>&bull; <strong>Image $P'$:</strong> $(x_1 + 2at,\; y_1 + 2bt) = (3 + 1(-4),\; 8 + 3(-4)) =
+                    \mathbf{(-1, -4)}$.
+                    <br>&bull; <strong>Distance $d$:</strong> $|t|\sqrt{a^2 + b^2} = 2\sqrt{10}$. Three answers in 15
+                    seconds flat!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WE 8 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Triangle Centers &bull; Right-Triangle Mastery</span>
+            <strong>Worked Example 8: Computing All Four Centers ($G, I, O, H$) &amp; Verifying Euler's Law</strong>
+        </div>
+        <div class="ex-problem">
+            Find the Centroid $G$, Incenter $I$, Circumcenter $O$, and Orthocenter $H$ of $\triangle ABC$ with vertices
+            $A(0, 0)$, $B(8, 0)$, and $C(0, 6)$, and verify that $H = 3G - 2O$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Compute side lengths opposite $A, B, C$:</strong></p>
+            $$c = AB = 8, \qquad b = CA = 6, \qquad a = BC = \sqrt{(8 - 0)^2 + (0 - 6)^2} = \sqrt{64 + 36} = 10.$$
+            <p>Notice $6^2 + 8^2 = 10^2 \implies \triangle ABC$ is right-angled at $A(0, 0)$.</p>
+            <p><strong>Step 2 — Centroid $G$:</strong></p>
+            $$G = \left(\frac{0 + 8 + 0}{3},\; \frac{0 + 0 + 6}{3}\right) = \mathbf{\left(\frac{8}{3},\; 2\right)}.$$
+            <p><strong>Step 3 — Incenter $I$ (weighting each vertex by its opposite side):</strong></p>
+            $$x_I = \frac{a x_A + b x_B + c x_C}{a + b + c} = \frac{10(0) + 6(8) + 8(0)}{10 + 6 + 8} = \frac{48}{24} =
+            2,$$
+            $$y_I = \frac{a y_A + b y_B + c y_C}{a + b + c} = \frac{10(0) + 6(0) + 8(6)}{10 + 6 + 8} = \frac{48}{24} = 2
+            \implies \mathbf{I = (2, 2)}.$$
+            <p><strong>Step 4 — Circumcenter $O$ &amp; Orthocenter $H$ from First Principles:</strong></p>
+            <ul>
+                <li><strong>Circumcenter $O$:</strong> Perpendicular bisector of $AB$ is $x = 4$; perpendicular bisector
+                    of $AC$ is $y = 3$. They intersect at $\mathbf{O = (4, 3)}$.</li>
+                <li><strong>Orthocenter $H$:</strong> Altitude from $B(8, 0)$ to $AC$ ($x = 0$) is $y = 0$; altitude
+                    from $C(0, 6)$ to $AB$ ($y = 0$) is $x = 0$. They intersect at $\mathbf{H = (0, 0)}$.</li>
+            </ul>
+            <p><strong>Step 5 — Verify Euler Line Formula $H = 3G - 2O$:</strong></p>
+            $$3G - 2O = 3\left(\frac{8}{3},\; 2\right) - 2(4, 3) = (8, 6) - (8, 6) = (0, 0) = H \quad \checkmark$$
+
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Exam Trick (Right-Triangle Center Suite)</span>
+                <p>
+                    Whenever you spot a right triangle at vertex $A$ (especially axes-aligned $A(0,0), B(c,0), C(0,b)$):
+                    <br>1. <strong>Orthocenter $H$</strong> $= $ right-angled vertex $A = (0, 0)$ instantly.
+                    <br>2. <strong>Circumcenter $O$</strong> $= $ midpoint of hypotenuse $BC = (c/2, b/2) = (4, 3)$
+                    instantly.
+                    <br>3. <strong>Incenter $I$</strong> (in Q1) $= (r, r)$ where $r = \dfrac{b + c - a}{2} = \dfrac{6 +
+                    8 - 10}{2} = 2 \implies I = (2, 2)$ without writing the weighted fraction!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WE 9 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Olympiad Bridge &bull; Euler Line Acceleration</span>
+            <strong>Worked Example 9: Circumcenter &amp; Orthocenter of a General Triangle via $H = 3G - 2O$</strong>
+        </div>
+        <div class="ex-problem">
+            Find the Circumcenter $O$, Centroid $G$, and Orthocenter $H$ of the triangle with vertices $A(-2, 3)$, $B(2,
+            -1)$, and $C(4, 0)$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Centroid $G$:</strong></p>
+            $$G = \left(\frac{-2 + 2 + 4}{3},\; \frac{3 + (-1) + 0}{3}\right) = \mathbf{\left(\frac{4}{3},\;
+            \frac{2}{3}\right)}.$$
+            <p><strong>Step 2 — Circumcenter $O(x, y)$ from $OA^2 = OB^2 = OC^2$:</strong></p>
+            <p>First equate $OA^2 = OB^2$:</p>
+            $$(x + 2)^2 + (y - 3)^2 = (x - 2)^2 + (y + 1)^2 \implies 4x + 4 - 6y + 9 = -4x + 4 + 2y + 1 \implies 8x - 8y
+            = -8 \implies y = x + 1.$$
+            <p>Next equate $OB^2 = OC^2$:</p>
+            $$(x - 2)^2 + (y + 1)^2 = (x - 4)^2 + y^2 \implies -4x + 4 + 2y + 1 = -8x + 16 \implies 4x + 2y = 11.$$
+            <p>Substitute $y = x + 1$ into $4x + 2y = 11$:</p>
+            $$4x + 2(x + 1) = 11 \implies 6x = 9 \implies x = \frac{3}{2}, \qquad y = \frac{3}{2} + 1 = \frac{5}{2}
+            \implies \mathbf{O = \left(\frac{3}{2},\; \frac{5}{2}\right)}.$$
+            <p><strong>Step 3 — Orthocenter $H$ (Full Altitude Intersection Derivation):</strong></p>
+            <ul>
+                <li>Slope of $BC = \dfrac{0 - (-1)}{4 - 2} = \dfrac{1}{2} \implies$ altitude through $A(-2, 3)$ has
+                    slope $-2$:
+                    $$y - 3 = -2(x + 2) \implies 2x + y = -1.$$
+                </li>
+                <li>Slope of $AC = \dfrac{0 - 3}{4 - (-2)} = -\dfrac{1}{2} \implies$ altitude through $B(2, -1)$ has
+                    slope $+2$:
+                    $$y - (-1) = 2(x - 2) \implies 2x - y = 5.$$
+                </li>
+            </ul>
+            <p>Add both altitude equations: $4x = 4 \implies x = 1$; then $y = -1 - 2(1) = -3$. Hence $\mathbf{H = (1,
+                -3)}$.</p>
+
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Exam Trick (Euler Line Skip)</span>
+                <p>
+                    Once you have $G = \left(\dfrac{4}{3}, \dfrac{2}{3}\right)$ and $O = \left(\dfrac{3}{2},
+                    \dfrac{5}{2}\right)$, <strong>never touch altitude equations!</strong> Apply $H = 3G - 2O$ directly:
+                    $$H = 3\left(\frac{4}{3},\; \frac{2}{3}\right) - 2\left(\frac{3}{2},\; \frac{5}{2}\right) = (4, 2) -
+                    (3, 5) = \mathbf{(1, -3)}.$$
+                    Conversely, if altitudes are simpler to solve than $OA^2 = OB^2 = OC^2$, find $H$ first and recover
+                    $O = \dfrac{3G - H}{2}$ in 5 seconds!
+                </p>
+            </div>
+        </div>
+    </div>
+
+</article>

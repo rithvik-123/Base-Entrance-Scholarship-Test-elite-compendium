@@ -1,0 +1,671 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 7: Polynomials, Vieta's Formulas & Symmetric Roots — Solutions & Error Forensics">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">VOLUME 2: MATHEMATICS (PAPER 1) &bull; PART 3: FULL STEP-BY-STEP SOLUTIONS &amp; ERROR
+            FORENSICS</div>
+        <h1>Chapter 7 Solutions &amp; Error Forensics: Polynomials, Vieta&rsquo;s Formulas &amp; Symmetric Roots</h1>
+        <p>Zero-skip, first-principles derivations for all 28 Practice Arena problems (Q1&ndash;Q28), followed by five
+            dedicated Trap &amp; Error Forensics post-mortems engineered to seal every Paper 1 algebra leak.</p>
+        <div class="tag-row">
+            <span class="meta-pill">28 Verified Solutions</span>
+            <span class="meta-pill">Zero Skipped Steps</span>
+            <span class="meta-pill">100% Answer Key Match</span>
+            <span class="meta-pill">5 Trap &amp; Error Forensics Cards</span>
+        </div>
+    </header>
+
+    <!-- ==================== LEVEL 1 SOLUTIONS ==================== -->
+    <div class="level-banner l1">LEVEL 1 SOLUTIONS &bull; WARMUP &amp; CONCEPT CONSOLIDATION (Q1 &ndash; Q8)</div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q1</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Classify Each Real Zero by Multiplicity:</strong> From $P(x) = -2(x + 4)^1(x - 1)^2(x
+            - 3)^3$:</p>
+        <ul>
+            <li>At $x = -4$: multiplicity $m = 1$ (odd) $\implies$ graph <strong>crosses</strong> the $x$-axis cleanly.
+            </li>
+            <li>At $x = 1$: multiplicity $m = 2$ (even) $\implies$ graph <strong>touches and bounces</strong> without
+                crossing.</li>
+            <li>At $x = 3$: multiplicity $m = 3$ (odd) $\implies$ graph <strong>crosses</strong> the $x$-axis
+                (flattening at an inflection point).</li>
+        </ul>
+        <p><strong>Step 2 &mdash; Determine Degree and End Behavior:</strong> Total degree is $n = 1 + 2 + 3 = 6$
+            (even), and the leading term is $-2x^6$ (leading coefficient $a_6 = -2 \lt 0$). Because an even-degree
+            polynomial with a negative leading coefficient falls on both ends, $P(x) \to -\infty$ as $x \to +\infty$ and
+            as $x \to -\infty$. <strong>Correct Option: (B).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q2</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Apply the Factor Theorem:</strong> Setting the linear factor $2x - 3 = 0$ gives $x =
+            \dfrac{3}{2}$. Because $(2x - 3)$ divides $P(x) = 4x^3 - 8x^2 + kx - 9$, we must have
+            $P\!\left(\dfrac{3}{2}\right) = 0$:</p>
+        $$4\left(\frac{3}{2}\right)^3 - 8\left(\frac{3}{2}\right)^2 + k\left(\frac{3}{2}\right) - 9 = 0$$
+        <p><strong>Step 2 &mdash; Simplify Fractions Carefully:</strong></p>
+        $$4\left(\frac{27}{8}\right) - 8\left(\frac{9}{4}\right) + \frac{3k}{2} - 9 = 0 \implies \frac{27}{2} - 18 +
+        \frac{3k}{2} - 9 = 0$$
+        $$\frac{27}{2} - 27 + \frac{3k}{2} = 0 \implies -\frac{27}{2} + \frac{3k}{2} = 0 \implies 3k = 27 \implies k =
+        \mathbf{9}$$
+        <p><strong>Correct Option: (C).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q3</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Extract Vieta&rsquo;s Sums:</strong> For $3x^2 - 8x + 2 = 0$ ($a = 3, b = -8, c = 2$):
+        </p>
+        $$\alpha + \beta = -\frac{-8}{3} = \frac{8}{3}, \qquad \alpha\beta = \frac{2}{3}$$
+        <p><strong>Step 2 &mdash; Rewrite the Symmetric Expression:</strong> Combine over the common denominator
+            $\alpha\beta$:</p>
+        $$\frac{\alpha}{\beta} + \frac{\beta}{\alpha} = \frac{\alpha^2 + \beta^2}{\alpha\beta} = \frac{(\alpha +
+        \beta)^2 - 2\alpha\beta}{\alpha\beta} = \frac{(\alpha + \beta)^2}{\alpha\beta} - 2$$
+        <p>Substitute $\alpha + \beta = \dfrac{8}{3}$ and $\alpha\beta = \dfrac{2}{3}$:</p>
+        $$\frac{(8/3)^2}{2/3} - 2 = \frac{64}{9} \cdot \frac{3}{2} - 2 = \frac{32}{3} - 2 = \frac{32 - 6}{3} =
+        \mathbf{\frac{26}{3}}$$
+        <p><strong>Correct Option: (A).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q4</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Insert the Missing $x^2$ Term Explicitly:</strong> Rewrite $2x^3 - 7x + 6 = 0$ as
+            $2x^3 + 0\cdot x^2 - 7x + 6 = 0$, so $a = 2, b = 0, c = -7, d = 6$.</p>
+        <p><strong>Step 2 &mdash; Apply Cubic Vieta&rsquo;s Formulas with Alternating Signs $(-, +, -)$:</strong></p>
+        $$e_1 = \sum \alpha = -\frac{0}{2} = 0, \qquad e_2 = \sum \alpha\beta = +\frac{-7}{2} = -\frac{7}{2}, \qquad e_3
+        = \alpha\beta\gamma = -\frac{6}{2} = -3$$
+        <p><strong>Step 3 &mdash; Compute the Sum of Reciprocals:</strong></p>
+        $$\frac{1}{\alpha} + \frac{1}{\beta} + \frac{1}{\gamma} = \frac{\beta\gamma + \gamma\alpha +
+        \alpha\beta}{\alpha\beta\gamma} = \frac{e_2}{e_3} = \frac{-7/2}{-3} = \mathbf{\frac{7}{6}}$$
+        <p><em>10-Second Verification (Reciprocal Transformation):</em> Reversing coefficients gives $6y^3 - 7y^2 + 0y +
+            2 = 0$, whose sum of roots is $-\dfrac{-7}{6} = \dfrac{7}{6}$. <strong>Correct Option: (B).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q5</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Set Up the Scaling Substitution:</strong> We want new roots $y = 2x$, which inverts to
+            $x = \dfrac{y}{2}$.</p>
+        <p><strong>Step 2 &mdash; Substitute $x = y/2$ into $x^3 + 3x^2 - 5x + 2 = 0$:</strong></p>
+        $$\left(\frac{y}{2}\right)^3 + 3\left(\frac{y}{2}\right)^2 - 5\left(\frac{y}{2}\right) + 2 = 0 \implies
+        \frac{y^3}{8} + \frac{3y^2}{4} - \frac{5y}{2} + 2 = 0$$
+        <p><strong>Step 3 &mdash; Clear Denominators by Multiplying Through by $8$:</strong></p>
+        $$y^3 + 6y^2 - 20y + 16 = 0$$
+        <p>(This directly matches the coefficient-scaling rule: multiply $a_{3-r}$ by $2^r$, giving $1\cdot y^3 +
+            (2^1\cdot 3)y^2 - (2^2\cdot 5)y + (2^3\cdot 2) = 0$.) <strong>Correct Option: (D).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q6</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Verified Answer: 89</span>
+        </div>
+        <p><strong>Step 1 &mdash; Apply the Remainder Theorem at $x = 1$ and $x = -1$:</strong> For $P(x) = x^4 - 2x^3 +
+            ax^2 + bx + 3$:</p>
+        <ul>
+            <li>$P(1) = 15 \implies 1^4 - 2(1)^3 + a(1)^2 + b(1) + 3 = 15 \implies a + b + 2 = 15 \implies a + b = 13$
+                &nbsp;&hellip;(1)</li>
+            <li>$P(-1) = 9 \implies (-1)^4 - 2(-1)^3 + a(-1)^2 + b(-1) + 3 = 9 \implies 1 + 2 + a - b + 3 = 9 \implies a
+                - b = 3$ &nbsp;&hellip;(2)</li>
+        </ul>
+        <p><strong>Step 2 &mdash; Solve for $a$ and $b$:</strong></p>
+        <ul>
+            <li>Adding (1) and (2): $2a = 16 \implies a = 8$.</li>
+            <li>Subtracting (2) from (1): $2b = 10 \implies b = 5$.</li>
+        </ul>
+        <p><strong>Step 3 &mdash; Evaluate $a^2 + b^2$:</strong> $a^2 + b^2 = 8^2 + 5^2 = 64 + 25 = \mathbf{89}$.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q7</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Verified Answer: 144</span>
+        </div>
+        <p><strong>Step 1 &mdash; Extract Vieta&rsquo;s Sums:</strong> From $x^2 - 6x + 4 = 0$, we have $s = \alpha +
+            \beta = 6$ and $p = \alpha\beta = 4$.</p>
+        <p><strong>Step 2 &mdash; Apply the Sum-of-Cubes Identity:</strong></p>
+        $$\alpha^3 + \beta^3 = (\alpha + \beta)^3 - 3\alpha\beta(\alpha + \beta) = 6^3 - 3(4)(6) = 216 - 72 =
+        \mathbf{144}$$
+        <p><em>Newton&rsquo;s Sums Cross-Check:</em> $S_0 = 2,\; S_1 = 6,\; S_2 = 6(6) - 4(2) = 28,\; S_3 = 6(28) - 4(6)
+            = 168 - 24 = 144$.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q8</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Verified Answer: 64</span>
+        </div>
+        <p><strong>Step 1 &mdash; Build the Minimum-Degree Factored Form:</strong> Clean crossings at $x = -2$ and $x =
+            1$ give multiplicity $1$ factors $(x + 2)$ and $(x - 1)$; touching without crossing at $x = 3$ gives minimum
+            even multiplicity $2$, i.e., $(x - 3)^2$. Include the unknown leading coefficient $A$:</p>
+        $$P(x) = A(x + 2)(x - 1)(x - 3)^2$$
+        <p><strong>Step 2 &mdash; Pin Down $A$ via $P(0) = 36$:</strong></p>
+        $$P(0) = A(0 + 2)(0 - 1)(0 - 3)^2 = A(2)(-1)(9) = -18A = 36 \implies A = -2$$
+        <p><strong>Step 3 &mdash; Evaluate $P(-1)$:</strong></p>
+        $$P(-1) = -2(-1 + 2)(-1 - 1)(-1 - 3)^2 = -2(1)(-2)(-4)^2 = (-2)(1)(-2)(16) = 4 \times 16 = \mathbf{64}$$
+    </div>
+
+    <!-- ==================== LEVEL 2 SOLUTIONS ==================== -->
+    <div class="level-banner l2">LEVEL 2 SOLUTIONS &bull; BEST EXAM-REAL BENCHMARK (Q9 &ndash; Q19)</div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q9</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Factor the Quadratic Divisor and Set Remainder $R(x) = ax + b$:</strong> Note $x^2 - x
+            - 6 = (x - 3)(x + 2)$. By the Division Algorithm:</p>
+        $$P(x) = (x - 3)(x + 2)Q(x) + (ax + b)$$
+        <p><strong>Step 2 &mdash; Substitute the Roots of the Divisor:</strong></p>
+        <ul>
+            <li>$P(3) = 11 \implies 3a + b = 11$ &nbsp;&hellip;(1)</li>
+            <li>$P(-2) = -4 \implies -2a + b = -4$ &nbsp;&hellip;(2)</li>
+        </ul>
+        <p><strong>Step 3 &mdash; Solve the Linear System:</strong> Subtracting (2) from (1) gives $5a = 15 \implies a =
+            3$. Substituting $a = 3$ into (1) gives $3(3) + b = 11 \implies b = 2$. Hence the exact remainder is
+            $\mathbf{3x + 2}$. <strong>Correct Option: (C).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q10</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Use Polynomial Congruence Modulo $x^2 + x + 1$:</strong> Since $(x - 1)(x^2 + x + 1) =
+            x^3 - 1$, dividing $x^3 - 1$ by $x^2 + x + 1$ leaves remainder $0$. Thus, modulo $x^2 + x + 1$, we can
+            freely replace every $x^3$ by $1$, and every $x^2$ by $-x - 1$.</p>
+        <p><strong>Step 2 &mdash; Reduce the Giant Powers $x^{2026}$ and $x^{2025}$:</strong> Check divisibility by $3$
+            (sum of digits of $2025$ is $2 + 0 + 2 + 5 = 9$, so $2025 = 3 \times 675$):</p>
+        $$x^{2025} = (x^3)^{675} \equiv 1^{675} = 1, \qquad x^{2026} = x \cdot x^{2025} \equiv x \cdot 1 = x$$
+        <p><strong>Step 3 &mdash; Collapse $P(x)$ to Degree $\le 1$:</strong></p>
+        $$P(x) = x^{2026} + x^{2025} + 3x^2 - 2x + 5 \equiv x + 1 + 3(-x - 1) - 2x + 5$$
+        $$\equiv x + 1 - 3x - 3 - 2x + 5 = \mathbf{-4x + 3}$$
+        <p>Since $\deg(-4x + 3) = 1 \lt \deg(x^2 + x + 1) = 2$, the exact remainder is $-4x + 3$. <strong>Correct
+                Option: (A).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q11</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Isolate Odd and Even Powers Before Squaring:</strong> Rearrange $x^3 - 3x^2 + 2x - 4 =
+            0$ so that odd powers sit on the left and even powers sit on the right:</p>
+        $$x^3 + 2x = 3x^2 + 4 \implies x(x^2 + 2) = 3x^2 + 4$$
+        <p><strong>Step 2 &mdash; Square Both Sides and Substitute $y = x^2$:</strong></p>
+        $$x^2(x^2 + 2)^2 = (3x^2 + 4)^2 \implies y(y + 2)^2 = (3y + 4)^2$$
+        <p><strong>Step 3 &mdash; Expand and Collect Like Terms:</strong></p>
+        $$y(y^2 + 4y + 4) = 9y^2 + 24y + 16 \implies y^3 + 4y^2 + 4y - 9y^2 - 24y - 16 = 0$$
+        $$\mathbf{y^3 - 5y^2 - 20y - 16 = 0}$$
+        <p><em>Vieta Cross-Check:</em> From $e_1 = 3, e_2 = 2, e_3 = 4$: $\sum \alpha^2 = 3^2 - 2(2) = 5$ (coeff $-5$),
+            $\sum \alpha^2\beta^2 = 2^2 - 2(3)(4) = -20$ (coeff $-20$), and $\alpha^2\beta^2\gamma^2 = 4^2 = 16$
+            (constant $-16$). Confirmed! <strong>Correct Option: (D).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q12</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Run Instant $x = \pm 1$ Rational Root Tests:</strong> For $P(x) = 3x^3 - 7x^2 - 7x +
+            3$:</p>
+        <ul>
+            <li>Check $x = 1$: $3 - 7 - 7 + 3 = -8 \neq 0$.</li>
+            <li>Check $x = -1$: Even-power sum $= -7 + 3 = -4$; odd-power sum $= 3 - 7 = -4$. They match! Explicitly,
+                $P(-1) = 3(-1) - 7(1) - 7(-1) + 3 = -3 - 7 + 7 + 3 = 0$.</li>
+        </ul>
+        <p>Thus $(x + 1)$ is an exact factor.</p>
+        <p><strong>Step 2 &mdash; Divide Out $(x + 1)$ and Factor the Resulting Quadratic:</strong></p>
+        $$3x^3 - 7x^2 - 7x + 3 = (x + 1)(3x^2 - 10x + 3)$$
+        <p>Split the middle term $-10x = -9x - x$:</p>
+        $$3x^2 - 10x + 3 = 3x(x - 3) - 1(x - 3) = (3x - 1)(x - 3)$$
+        <p>Setting $(x + 1)(3x - 1)(x - 3) = 0$ yields the complete root set $\mathbf{\left\{-1,\, \dfrac{1}{3},\,
+            3\right\}}$. <strong>Correct Option: (B).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q13</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Read Quartic Vieta&rsquo;s Sums ($-, +, -, +$):</strong> For $x^4 - 5x^3 + 7x^2 - 6x +
+            2 = 0$ ($a = 1, b = -5, c = 7, d = -6, e = 2$):</p>
+        $$e_1 = \sum \alpha = 5, \qquad e_2 = \sum \alpha\beta = 7, \qquad e_3 = \sum \alpha\beta\gamma = 6, \qquad e_4
+        = \alpha\beta\gamma\delta = 2$$
+        <p><strong>Step 2 &mdash; Evaluate Both Symmetric Expressions:</strong></p>
+        <ul>
+            <li>Sum of reciprocals: $\dfrac{1}{\alpha} + \dfrac{1}{\beta} + \dfrac{1}{\gamma} + \dfrac{1}{\delta} =
+                \dfrac{\beta\gamma\delta + \alpha\gamma\delta + \alpha\beta\delta +
+                \alpha\beta\gamma}{\alpha\beta\gamma\delta} = \dfrac{e_3}{e_4} = \dfrac{6}{2} = 3$.</li>
+            <li>Sum of squares: $\alpha^2 + \beta^2 + \gamma^2 + \delta^2 = e_1^2 - 2e_2 = 5^2 - 2(7) = 25 - 14 = 11$.
+            </li>
+        </ul>
+        <p><strong>Step 3 &mdash; Add Both Parts:</strong> $3 + 11 = \mathbf{14}$. <strong>Correct Option: (C).</strong>
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q14</span>
+            <span class="badge badge-l2">Level 2 &bull; Passage I</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p><strong>Method 1 &mdash; Direct Factor-Theorem Identity (5-Second Route):</strong> Because $P(x) = x^3 - 5x^2
+            + 9x - 3$ is monic with roots $\alpha, \beta, \gamma$, it factors identically as:</p>
+        $$P(x) = (x - \alpha)(x - \beta)(x - \gamma)$$
+        <p>Evaluate both sides at $x = 2$ and pull out three factors of $(-1)$:</p>
+        $$P(2) = (2 - \alpha)(2 - \beta)(2 - \gamma) = (-1)^3(\alpha - 2)(\beta - 2)(\gamma - 2) = -(\alpha - 2)(\beta -
+        2)(\gamma - 2)$$
+        <p>Compute $P(2)$ directly:</p>
+        $$P(2) = 2^3 - 5(2)^2 + 9(2) - 3 = 8 - 20 + 18 - 3 = 3$$
+        <p>Therefore, $(\alpha - 2)(\beta - 2)(\gamma - 2) = -P(2) = \mathbf{-3}$.</p>
+        <p><strong>Method 2 &mdash; Shifted Equation (Also Solves Q15 Immediately):</strong> Set $y = x - 2 \implies x =
+            y + 2$:</p>
+        $$Q(y) = (y + 2)^3 - 5(y + 2)^2 + 9(y + 2) - 3 = (y^3 + 6y^2 + 12y + 8) - 5(y^2 + 4y + 4) + (9y + 18) - 3$$
+        $$Q(y) = y^3 + y^2 + y + 3 = 0$$
+        <p>By cubic Vieta&rsquo;s formula on $Q(y)$, the product of its roots $y_1 y_2 y_3 = -\dfrac{3}{1} =
+            \mathbf{-3}$. <strong>Correct Option: (D).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q15</span>
+            <span class="badge badge-l2">Level 2 &bull; Passage I</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Reuse the Shifted Cubic $Q(y)$ from Q14:</strong> The numbers $y_1 = \alpha - 2$, $y_2
+            = \beta - 2$, and $y_3 = \gamma - 2$ are the exact roots of:</p>
+        $$Q(y) = y^3 + y^2 + y + 3 = 0$$
+        <p><strong>Step 2 &mdash; Apply Vieta&rsquo;s Formulas to $Q(y)$:</strong> Here $a = 1, b = 1, c = 1, d = 3$,
+            so:</p>
+        $$y_1 y_2 + y_2 y_3 + y_3 y_1 = +\frac{1}{1} = 1, \qquad y_1 y_2 y_3 = -\frac{3}{1} = -3$$
+        <p><strong>Step 3 &mdash; Compute the Shifted Reciprocal Sum:</strong></p>
+        $$\frac{1}{\alpha - 2} + \frac{1}{\beta - 2} + \frac{1}{\gamma - 2} = \frac{1}{y_1} + \frac{1}{y_2} +
+        \frac{1}{y_3} = \frac{y_1 y_2 + y_2 y_3 + y_3 y_1}{y_1 y_2 y_3} = \frac{1}{-3} = \mathbf{-\frac{1}{3}}$$
+        <p><strong>Correct Option: (A).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q16</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Verified Answer: 47</span>
+        </div>
+        <p><strong>Step 1 &mdash; Extract Vieta&rsquo;s Sums:</strong> From $x^3 - 5x^2 + 6x - 4 = 0$, we have $e_1 =
+            5$, $e_2 = 6$, and $e_3 = 4$.</p>
+        <p><strong>Step 2 &mdash; Compute $S_2$ and Use Newton&rsquo;s Cubic Recurrence:</strong></p>
+        $$S_0 = 3, \qquad S_1 = e_1 = 5, \qquad S_2 = e_1^2 - 2e_2 = 5^2 - 2(6) = 25 - 12 = 13$$
+        <p>Since every root satisfies $x^3 = 5x^2 - 6x + 4$, summing over $\alpha, \beta, \gamma$ gives:</p>
+        $$S_3 = 5S_2 - 6S_1 + 4S_0 = 5(13) - 6(5) + 4(3) = 65 - 30 + 12 = \mathbf{47}$$
+        <p><em>Identity Cross-Check:</em> $e_1^3 - 3e_1 e_2 + 3e_3 = 125 - 3(5)(6) + 3(4) = 125 - 90 + 12 = 47$.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q17</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Verified Answer: 136</span>
+        </div>
+        <p><strong>Step 1 &mdash; Extract Vieta&rsquo;s Sums:</strong> From $x^2 - 4x + 2 = 0$, we have $s = \alpha +
+            \beta = 4$ and $p = \alpha\beta = 2$.</p>
+        <p><strong>Step 2 &mdash; Apply Two Successive Doubling Steps ($S_1 \to S_2 \to S_4$):</strong></p>
+        $$S_2 = \alpha^2 + \beta^2 = s^2 - 2p = 4^2 - 2(2) = 16 - 4 = 12$$
+        $$S_4 = \alpha^4 + \beta^4 = (\alpha^2 + \beta^2)^2 - 2(\alpha\beta)^2 = S_2^2 - 2p^2 = 12^2 - 2(2^2) = 144 - 8
+        = \mathbf{136}$$
+        <p><em>Newton&rsquo;s Recurrence Cross-Check ($S_n = 4S_{n-1} - 2S_{n-2}$):</em> $S_0 = 2,\; S_1 = 4,\; S_2 =
+            12,\; S_3 = 4(12) - 2(4) = 40,\; S_4 = 4(40) - 2(12) = 160 - 24 = 136$.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q18</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Verified Answer: 97</span>
+        </div>
+        <p><strong>Step 1 &mdash; Construct the Auxiliary Difference Polynomial:</strong> Define $Q(x) = P(x) - 7$.
+            Because $P(x)$ is a monic cubic, $Q(x)$ is also a monic cubic, and $Q(1) = Q(2) = Q(4) = 0$.</p>
+        <p><strong>Step 2 &mdash; Apply the Factor Theorem:</strong></p>
+        $$Q(x) = (x - 1)(x - 2)(x - 4) \implies P(x) = (x - 1)(x - 2)(x - 4) + 7$$
+        <p><strong>Step 3 &mdash; Evaluate at $x = 7$:</strong></p>
+        $$P(7) = (7 - 1)(7 - 2)(7 - 4) + 7 = (6)(5)(3) + 7 = 90 + 7 = \mathbf{97}$$
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q19</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Verified Answer: 245</span>
+        </div>
+        <p><strong>Step 1 &mdash; Set Up $R(x)$ in Staged Newton Form:</strong> Since the divisor $(x - 1)(x - 2)(x -
+            3)$ has degree $3$, the remainder $R(x)$ has degree at most $2$. Write:</p>
+        $$R(x) = c_0 + c_1(x - 1) + c_2(x - 1)(x - 2)$$
+        <p>From the Division Algorithm $P(x) = (x - 1)(x - 2)(x - 3)Q(x) + R(x)$, we know $R(1) = P(1) = 2$, $R(2) =
+            P(2) = 5$, and $R(3) = P(3) = 14$.</p>
+        <p><strong>Step 2 &mdash; Peel Off $c_0, c_1, c_2$ One by One:</strong></p>
+        <ul>
+            <li>Plug $x = 1$: $R(1) = c_0 = 2 \implies c_0 = 2$.</li>
+            <li>Plug $x = 2$: $R(2) = 2 + c_1(2 - 1) = 5 \implies c_1 = 3$.</li>
+            <li>Plug $x = 3$: $R(3) = 2 + 3(3 - 1) + c_2(3 - 1)(3 - 2) = 14 \implies 2 + 6 + 2c_2 = 14 \implies 2c_2 = 6
+                \implies c_2 = 3$.</li>
+        </ul>
+        <p>Thus $R(x) = 2 + 3(x - 1) + 3(x - 1)(x - 2)$ (or expanded: $3x^2 - 6x + 5$).</p>
+        <p><strong>Step 3 &mdash; Evaluate $R(10)$:</strong></p>
+        $$R(10) = 2 + 3(9) + 3(9)(8) = 2 + 27 + 216 = \mathbf{245}$$
+    </div>
+
+    <!-- ==================== LEVEL 3 SOLUTIONS ==================== -->
+    <div class="level-banner l3">LEVEL 3 SOLUTIONS &bull; RANK-BOOSTER &amp; OLYMPIAD BRIDGE (Q20 &ndash; Q28)</div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q20</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Spot the Quadratic Pattern $R(x) = x^2$:</strong> For $k \in \{1, 2, 3, 4\}$, we are
+            given $P(k) = k^2$. Define $Q(x) = P(x) - x^2$.</p>
+        <p><strong>Step 2 &mdash; Apply the Factor Theorem:</strong> Since $P(x)$ is monic of degree $4$ and $\deg(x^2)
+            = 2 \lt 4$, $Q(x)$ is also monic of degree $4$ with exact roots $1, 2, 3, 4$:</p>
+        $$P(x) = (x - 1)(x - 2)(x - 3)(x - 4) + x^2$$
+        <p><strong>Step 3 &mdash; Evaluate $P(6)$ and $P(-1)$ (Watch the Symmetry!):</strong></p>
+        $$P(6) = (6 - 1)(6 - 2)(6 - 3)(6 - 4) + 6^2 = (5)(4)(3)(2) + 36 = 120 + 36 = 156$$
+        $$P(-1) = (-1 - 1)(-1 - 2)(-1 - 3)(-1 - 4) + (-1)^2 = (-2)(-3)(-4)(-5) + 1 = 120 + 1 = 121$$
+        <p>Notice how both quartic product terms equal $+120$ and cancel cleanly upon subtraction:</p>
+        $$P(6) - P(-1) = 156 - 121 = \mathbf{35}$$
+        <p><strong>Correct Option: (A).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q21</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Clear the Non-Polynomial Denominator $(x + 1)$:</strong> Since $P(k) = \dfrac{k}{k +
+            1} \iff (k + 1)P(k) - k = 0$, define the auxiliary polynomial:</p>
+        $$H(x) = (x + 1)P(x) - x$$
+        <p>Because $\deg P(x) = 4$, multiplying by $(x + 1)$ gives $\deg H(x) = 5$. Moreover, $H(x)$ vanishes at the
+            five distinct integers $x = 0, 1, 2, 3, 4$.</p>
+        <p><strong>Step 2 &mdash; Factor $H(x)$ with Unknown Leading Constant $C$:</strong></p>
+        $$(x + 1)P(x) - x = C\, x(x - 1)(x - 2)(x - 3)(x - 4)$$
+        <p><strong>Step 3 &mdash; Pin Down $C$ by Substituting the Denominator Root $x = -1$:</strong></p>
+        $$(-1 + 1)P(-1) - (-1) = C(-1)(-2)(-3)(-4)(-5) \implies 1 = -120C \implies C = -\frac{1}{120}$$
+        <p><strong>Step 4 &mdash; Evaluate at $x = 5$:</strong></p>
+        $$(5 + 1)P(5) - 5 = -\frac{1}{120}(5)(4)(3)(2)(1) = -\frac{120}{120} = -1$$
+        $$6P(5) = 5 - 1 = 4 \implies P(5) = \frac{4}{6} = \mathbf{\frac{2}{3}}$$
+        <p><strong>Correct Option: (B).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q22</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Method 1 &mdash; Purely Algebraic Shift $t = x - 1$ (No Calculus Needed):</strong> Set $t = x - 1$,
+            so $x = 1 + t$. Dividing $P(x)$ by $(x - 1)^2$ is identical to keeping only the constant and $t^1$ terms
+            modulo $t^2$. By the Binomial Theorem, $(1 + t)^n = 1 + nt + \binom{n}{2}t^2 + \dots \equiv 1 + nt
+            \pmod{t^2}$. Apply this to every term of $P(x) = x^{20} - 3x^{10} + 5x + 2$:</p>
+        <ul>
+            <li>$x^{20} = (1 + t)^{20} \equiv 1 + 20t \pmod{t^2}$</li>
+            <li>$-3x^{10} = -3(1 + t)^{10} \equiv -3(1 + 10t) = -3 - 30t \pmod{t^2}$</li>
+            <li>$5x + 2 = 5(1 + t) + 2 = 7 + 5t$</li>
+        </ul>
+        <p>Summing all three parts modulo $t^2$:</p>
+        $$P(1 + t) \equiv (1 - 3 + 7) + (20 - 30 + 5)t = 5 - 5t \pmod{t^2}$$
+        <p>Substitute back $t = x - 1$ to obtain the exact remainder:</p>
+        $$R(x) = 5 - 5(x - 1) = 5 - 5x + 5 = \mathbf{-5x + 10}$$
+        <p><strong>Method 2 &mdash; Derivative Verification (Class 11 Bridge):</strong> Writing $P(x) = (x - 1)^2 Q(x) +
+            ax + b$, we get $a + b = P(1) = 1 - 3 + 5 + 2 = 5$ and $a = P'(1) = 20(1)^{19} - 30(1)^9 + 5 = -5 \implies b
+            = 10 \implies R(x) = -5x + 10$. <strong>Correct Option: (C).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q23</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p><strong>Method 1 &mdash; Split &amp; Shift Transformation (Fastest Route):</strong> First check $x = 1$ is
+            not a root: $1 + 2 - 4 + 5 = 4 \neq 0$. Rewrite each fraction using algebraic division:</p>
+        $$\frac{x + 1}{x - 1} = \frac{(x - 1) + 2}{x - 1} = 1 + \frac{2}{x - 1}$$
+        <p>Summing over all three roots $\alpha, \beta, \gamma$ simplifies the target expression immediately:</p>
+        $$\sum \frac{\alpha + 1}{\alpha - 1} = (1 + 1 + 1) + 2\left(\frac{1}{\alpha - 1} + \frac{1}{\beta - 1} +
+        \frac{1}{\gamma - 1}\right) = 3 + 2\sum \frac{1}{\alpha - 1}$$
+        <p>Now find the shifted cubic with roots $u = x - 1$ (so $x = u + 1$):</p>
+        $$(u + 1)^3 + 2(u + 1)^2 - 4(u + 1) + 5 = 0$$
+        $$(u^3 + 3u^2 + 3u + 1) + (2u^2 + 4u + 2) + (-4u - 4) + 5 = 0 \implies u^3 + 5u^2 + 3u + 4 = 0$$
+        <p>By Vieta&rsquo;s formulas on $u^3 + 5u^2 + 3u + 4 = 0$, we have $\sum u_1 u_2 = 3$ and $u_1 u_2 u_3 = -4$,
+            so:</p>
+        $$\sum \frac{1}{u_i} = \frac{3}{-4} = -\frac{3}{4} \implies \sum \frac{\alpha + 1}{\alpha - 1} = 3 +
+        2\left(-\frac{3}{4}\right) = 3 - \frac{3}{2} = \mathbf{\frac{3}{2}}$$
+        <p><strong>Method 2 &mdash; Direct Fractional-Linear Substitution ($y = \frac{x+1}{x-1} \iff x =
+                \frac{y+1}{y-1}$):</strong> Clearing denominators yields $(y+1)^3 + 2(y+1)^2(y-1) - 4(y+1)(y-1)^2 +
+            5(y-1)^3 = 0$. Collecting only the $y^3$ and $y^2$ coefficients gives $(1 + 2 - 4 + 5)y^3 + (3 + 2 + 4 -
+            15)y^2 + \dots = 4y^3 - 6y^2 + \dots = 0$, so $\sum y_i = -\dfrac{-6}{4} = \dfrac{3}{2}$. <strong>Correct
+                Option: (D).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q24</span>
+            <span class="badge badge-l3">Level 3 &bull; Passage II</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Derive the Cubic Newton Recurrence:</strong> Rewrite $x^3 - 3x - 1 = 0$ as $x^3 = 3x +
+            1$ (note $a = 1, b = 0, c = -3, d = -1$). Multiplying by $x^{n-3}$ and summing over $\alpha, \beta, \gamma$
+            gives:</p>
+        $$S_n = 3S_{n-2} + S_{n-3}$$
+        <p><strong>Step 2 &mdash; Establish the Three Seed Values:</strong> From Vieta&rsquo;s formulas, $e_1 = 0$, $e_2
+            = -3$, $e_3 = 1$:</p>
+        <ul>
+            <li>$S_0 = \alpha^0 + \beta^0 + \gamma^0 = 3$</li>
+            <li>$S_1 = e_1 = 0$</li>
+            <li>$S_2 = e_1^2 - 2e_2 = 0^2 - 2(-3) = 6$</li>
+        </ul>
+        <p><strong>Step 3 &mdash; Climb the Recurrence to $S_5$:</strong></p>
+        $$S_3 = 3S_1 + S_0 = 3(0) + 3 = 3$$
+        $$S_4 = 3S_2 + S_1 = 3(6) + 0 = 18$$
+        $$S_5 = 3S_3 + S_2 = 3(3) + 6 = 9 + 6 = \mathbf{15}$$
+        <p><strong>Correct Option: (A).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q25</span>
+            <span class="badge badge-l3">Level 3 &bull; Passage II</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Compute $S_6$ Using the Recurrence from Q24:</strong></p>
+        $$S_6 = 3S_4 + S_3 = 3(18) + 3 = 54 + 3 = 57$$
+        <p><strong>Step 2 &mdash; Compute $S_{-2} = \dfrac{1}{\alpha^2} + \dfrac{1}{\beta^2} +
+                \dfrac{1}{\gamma^2}$:</strong> Form the reciprocal cubic equation by reversing the coefficients of
+            $1\cdot x^3 + 0\cdot x^2 - 3x - 1 = 0$:</p>
+        $$-y^3 - 3y^2 + 0\cdot y + 1 = 0 \implies y^3 + 3y^2 - 1 = 0$$
+        <p>The roots of this equation are $y_1 = 1/\alpha$, $y_2 = 1/\beta$, $y_3 = 1/\gamma$, with Vieta sums $e_1(y) =
+            -3$ and $e_2(y) = 0$. Therefore:</p>
+        $$\frac{1}{\alpha^2} + \frac{1}{\beta^2} + \frac{1}{\gamma^2} = y_1^2 + y_2^2 + y_3^2 = \big(e_1(y)\big)^2 -
+        2e_2(y) = (-3)^2 - 2(0) = 9$$
+        <p><em>Alternative Check (Backward Newton Recurrence $S_{n-3} = S_n - 3S_{n-2}$):</em> $S_{-1} = S_2 - 3S_0 = 6
+            - 9 = -3$, then $S_{-2} = S_1 - 3S_{-1} = 0 - 3(-3) = 9$.</p>
+        <p><strong>Step 3 &mdash; Sum Both Parts:</strong> $S_{-2} + S_6 = 9 + 57 = \mathbf{66}$. <strong>Correct
+                Option: (C).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q26</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Verified Answer: 157</span>
+        </div>
+        <p><strong>Step 1 &mdash; Parametrize AP Roots Symmetrically:</strong> Let the three roots in AP be $m - d,\;
+            m,\; m + d$. By Vieta&rsquo;s sum of roots on $x^3 - 15x^2 + kx - 90 = 0$:</p>
+        $$(m - d) + m + (m + d) = 15 \implies 3m = 15 \implies m = 5$$
+        <p><strong>Step 2 &mdash; Pin Down $k$ Directly (Since $x = m = 5$ Is a Root!):</strong> Substitute $x = 5$ into
+            the cubic equation:</p>
+        $$5^3 - 15(5)^2 + 5k - 90 = 0 \implies 125 - 375 + 5k - 90 = 0 \implies 5k = 340 \implies k = 68$$
+        <p><em>Check that all three roots are real:</em> Product of roots $= 5(25 - d^2) = 90 \implies 25 - d^2 = 18
+            \implies d^2 = 7 \gt 0$, so $d = \sqrt{7}$ gives three genuine real roots $5 - \sqrt{7}, 5, 5 + \sqrt{7}$.
+        </p>
+        <p><strong>Step 3 &mdash; Compute $\alpha^2 + \beta^2 + \gamma^2$ and the Final Sum:</strong> Using $e_1 = 15$
+            and $e_2 = k = 68$:</p>
+        $$\alpha^2 + \beta^2 + \gamma^2 = e_1^2 - 2e_2 = 15^2 - 2(68) = 225 - 136 = 89$$
+        $$k + \alpha^2 + \beta^2 + \gamma^2 = 68 + 89 = \mathbf{157}$$
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q27</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Verified Answer: 393</span>
+        </div>
+        <p><strong>Step 1 &mdash; Set Up Newton&rsquo;s Quadratic Recurrence:</strong> From $x^2 - 3x - 1 = 0$, we have
+            $x^2 = 3x + 1$, giving the exact recurrence:</p>
+        $$S_n = 3S_{n-1} + S_{n-2}$$
+        <p>with seed values $S_0 = \alpha^0 + \beta^0 = 2$ and $S_1 = \alpha + \beta = 3$.</p>
+        <p><strong>Step 2 &mdash; Compute $S_2, S_3, S_4, S_5$:</strong></p>
+        $$S_2 = 3S_1 + S_0 = 3(3) + 2 = 11$$
+        $$S_3 = 3S_2 + S_1 = 3(11) + 3 = 36$$
+        $$S_4 = 3S_3 + S_2 = 3(36) + 11 = 108 + 11 = 119$$
+        $$S_5 = 3S_4 + S_3 = 3(119) + 36 = 357 + 36 = \mathbf{393}$$
+        <p><em>Product-Identity Cross-Check:</em> $S_2 S_3 = (\alpha^2 + \beta^2)(\alpha^3 + \beta^3) = S_5 +
+            (\alpha\beta)^2 S_1 \implies S_5 = (11)(36) - (-1)^2(3) = 396 - 3 = 393$.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q28</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Verified Answer: 290</span>
+        </div>
+        <p><strong>Step 1 &mdash; Recognize the Pattern on the First Three Points:</strong> Inspect $(1, 2), (2, 5), (3,
+            10)$:</p>
+        $$P(1) = 1^2 + 1 = 2, \qquad P(2) = 2^2 + 1 = 5, \qquad P(3) = 3^2 + 1 = 10$$
+        <p>Hence $P(x)$ agrees with the quadratic pattern $R(x) = x^2 + 1$ at $x = 1, 2, 3$.</p>
+        <p><strong>Step 2 &mdash; Construct $P(x)$ WITH an Unknown Leading Coefficient $k$:</strong> Notice the problem
+            says "$P(x)$ is a polynomial of degree $3$"—it does <strong>NOT</strong> say monic! Define $Q(x) = P(x) -
+            (x^2 + 1)$. Since $\deg Q = 3$ and $Q(1) = Q(2) = Q(3) = 0$:</p>
+        $$P(x) = k(x - 1)(x - 2)(x - 3) + (x^2 + 1)$$
+        <p><strong>Step 3 &mdash; Pin Down $k$ Using the Fourth Condition $P(4) = 29$:</strong></p>
+        $$29 = k(4 - 1)(4 - 2)(4 - 3) + (4^2 + 1) = 6k + 17 \implies 6k = 12 \implies k = 2$$
+        <p><strong>Step 4 &mdash; Evaluate $P(7)$:</strong></p>
+        $$P(7) = 2(7 - 1)(7 - 2)(7 - 3) + (7^2 + 1) = 2(6)(5)(4) + 50 = 240 + 50 = \mathbf{290}$$
+    </div>
+
+    <!-- ==================== TRAP & ERROR FORENSICS ==================== -->
+    <h2 class="section-heading">Chapter 7 Trap &amp; Error Forensics</h2>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 1 &bull; Sign-Alternation &amp; Missing-Term Errors in Cubic/Quartic
+            Vieta&rsquo;s Formulas (Q4, Q13, Q24)</span>
+        <p><strong>The Fatal Mistake:</strong> Two errors dominate cubic and quartic Vieta problems: (1) Carrying over
+            the quadratic habit "$c/a$ is the product of roots" and writing $\alpha\beta\gamma = +d/a$ instead of
+            <strong>$-d/a$</strong>—which flips the sign of Q4 from $\frac{7}{6}$ to distractor (A) $-\frac{7}{6}$; and
+            (2) Reading coefficients blindly from a depressed cubic like $2x^3 - 7x + 6 = 0$ or $x^3 - 3x - 1 = 0$
+            without inserting $0\cdot x^2$, accidentally assigning $b = -7$ or $b = -3$.
+        </p>
+        <p><strong>Why It Happens:</strong> Under exam speed, the eye grabs the first visible numbers in order without
+            mapping each coefficient to its exact degree slot ($x^3, x^2, x^1, x^0$). Meanwhile, because $(-1)^2 = +1$
+            for quadratics, students forget that $(-1)^3 = -1$ flips the product sign for every odd-degree polynomial.
+        </p>
+        <p><strong>Zero-Leak Fix:</strong> Before writing a single Vieta equation on any degree $n \ge 3$ polynomial,
+            write out the full slot header with explicit zeros (e.g., $2x^3 + \mathbf{0}x^2 - 7x + 6 = 0$) and
+            physically write the alternating sign template <strong>$(-,\, +,\, -,\, +)$</strong> above the coefficients
+            $a_{n-1}, a_{n-2}, a_{n-3}, a_{n-4}$.</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 2 &bull; Forgetting the Leading Coefficient $k$ in Polynomial
+            Construction (Q8, Q21, Q28)</span>
+        <p><strong>The Fatal Mistake:</strong> Automatically writing $P(x) = (x - 1)(x - 2)(x - 3) + (x^2 + 1)$ in Q28
+            (missing the factor $k = 2$, which produces $170$ instead of $290$), or writing $P(x) = (x + 2)(x - 1)(x -
+            3)^2$ in Q8 without the multiplier $A$, or dropping $C = -\frac{1}{120}$ in Q21.</p>
+        <p><strong>Why It Happens:</strong> Many introductory textbook exercises specify a "monic polynomial" ($a_n =
+            1$), training students to omit the leading coefficient $k$ when applying the Factor Theorem. In BEST Level 3
+            and IOQM, the word <em>monic</em> is deliberately removed and replaced by one extra data point (like $P(4) =
+            29$ or $P(0) = 36$) whose sole purpose is to pin down $k$.</p>
+        <p><strong>Zero-Leak Fix:</strong> Highlight or underline the word <strong>monic</strong> whenever you see it.
+            If the word <em>monic</em> does NOT appear in the prompt, your Factor-Theorem line MUST ALWAYS start with a
+            bold placeholder constant $k$: $Q(x) = \mathbf{k}(x - a_1)(x - a_2)\cdots(x - a_n)$—and you must count one
+            extra condition in the problem to solve for $k$.</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 3 &bull; Degree-of-Remainder &amp; Repeated-Root Divisor Mistakes (Q9,
+            Q19, Q22)</span>
+        <p><strong>The Fatal Mistake:</strong> (1) Writing a constant remainder $r$ when dividing by a quadratic divisor
+            $x^2 - x - 6$ (Q9) or a linear remainder $ax + b$ when dividing by a cubic divisor $(x - 1)(x - 2)(x - 3)$
+            (Q19). (2) In repeated-root division like Q22 (dividing by $(x - 1)^2$), plugging $x = 1$ gives only
+            <em>one</em> equation ($a + b = 5$) and leaves students stuck—or tempts them to guess $R(x) = 5$ (forgetting
+            that the remainder can have degree $1$, i.e., $ax + b$).
+        </p>
+        <p><strong>Why It Happens:</strong> Students over-generalize the linear Remainder Theorem ($R = P(\alpha)$) to
+            composite divisors instead of returning to the fundamental Division Algorithm bound $\deg R(x) \lt \deg
+            D(x)$.</p>
+        <p><strong>Zero-Leak Fix:</strong> Lock in the exact degree rule: a divisor of degree $d$ ALWAYS requires a
+            remainder template with $d$ unknown constants ($\deg R \le d - 1$): linear divisor $\to r$; quadratic
+            divisor $\to ax + b$; cubic divisor $\to c_0 + c_1(x-\alpha) + c_2(x-\alpha)(x-\beta)$. And whenever a
+            divisor has a repeated root $(x - \alpha)^2$, immediately substitute $t = x - \alpha$ (so $x = \alpha + t$)
+            and expand modulo $t^2$ using $(1 + t)^n \equiv 1 + nt$.</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 4 &bull; Transformation Direction &amp; Sign-Flip Errors (Q5, Q11,
+            Q14)</span>
+        <p><strong>The Fatal Mistake:</strong> (1) In Q5 (new roots $2\alpha, 2\beta, 2\gamma$), substituting $x = 2y$
+            instead of $x = y/2$—producing distractor (C) $8y^3 + 12y^2 - 10y + 2 = 0$, which actually has roots
+            $\alpha/2$! (2) In Q11 (new roots $\alpha^2, \beta^2, \gamma^2$), naively squaring each coefficient of $x^3
+            - 3x^2 + 2x - 4 = 0$ to pick distractor (B) $y^3 - 9y^2 + 4y - 16 = 0$. (3) In Q14, forgetting that $P(2) =
+            (2-\alpha)(2-\beta)(2-\gamma) = \mathbf{-}(\alpha-2)(\beta-2)(\gamma-2)$ (three sign flips, so $(-1)^3 =
+            -1$!), picking distractor (A) $+3$ instead of $-3$.</p>
+        <p><strong>Why It Happens:</strong> Confusing the forward map $y = g(x)$ with the inverse substitution $x =
+            g^{-1}(y)$ happens whenever students skip writing the single line "$y = \text{new root} \implies x = \dots$"
+            on paper.</p>
+        <p><strong>Zero-Leak Fix:</strong> Never perform a root transformation in your head. Spend 3 seconds writing the
+            explicit 2-line chain: <strong>Line 1:</strong> $y = g(x)$ &rarr; <strong>Line 2:</strong> solve for $x =
+            g^{-1}(y)$ &rarr; <strong>Line 3:</strong> substitute into $P(x) = 0$. For $y = x^2$, always separate odd
+            powers and even powers on opposite sides BEFORE squaring, then run a 2-second Vieta check on $\sum \alpha^2
+            = e_1^2 - 2e_2$.</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 5 &bull; The $S_0 = \text{Degree}$ Seed Trap in Newton&rsquo;s Sums (Q16,
+            Q24, Q27)</span>
+        <p><strong>The Fatal Mistake:</strong> Setting $S_0 = 1$ (instead of $S_0 = 2$ for quadratics or $S_0 = 3$ for
+            cubics) when launching Newton&rsquo;s Sums recurrence $aS_n + bS_{n-1} + \dots = 0$. For example, in Q24
+            ($x^3 - 3x - 1 = 0$), writing $S_0 = 1$ gives $S_3 = 1$ instead of $3$, which cascades into $S_5 = 9$
+            (distractor D) instead of the true $S_5 = 15$!</p>
+        <p><strong>Why It Happens:</strong> Students confuse $x^0 = 1$ (a single term) with the <em>sum</em> of $0$-th
+            powers across all $n$ roots: $\alpha_1^0 + \alpha_2^0 + \dots + \alpha_n^0 = \underbrace{1 + 1 + \dots +
+            1}_{n \text{ times}} = n$.</p>
+        <p><strong>Zero-Leak Fix:</strong> Write out the literal sum every time you seed Newton&rsquo;s Sums: $S_0 =
+            \alpha^0 + \beta^0 = \mathbf{2}$ (quadratic), $S_0 = \alpha^0 + \beta^0 + \gamma^0 = \mathbf{3}$ (cubic),
+            and always cross-check $S_2$ independently via $e_1^2 - 2e_2$ before climbing to $S_4, S_5,$ or $S_6$.</p>
+    </div>
+
+</article>

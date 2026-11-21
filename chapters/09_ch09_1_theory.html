@@ -1,0 +1,1167 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 9: Quadratic Equations, Discriminant & Location of Roots">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 2: Mathematics (Paper 1) &bull; Part 1: Theory &amp; Worked Examples &bull;
+            Target Study Time: 7 Hours</div>
+        <h1>Chapter 9: Quadratic Equations, Discriminant &amp; Location of Roots</h1>
+        <p>Master the engine of competitive algebra: from the $a = 0$ degeneracy trap, rational/integer root theorems,
+            and reducible equations to parabola sign geometry, common root criteria, Olympiad Location of Roots, and the
+            Wavy Curve inequality method.</p>
+        <div class="tag-row">
+            <span class="meta-pill">Discriminant &amp; Integer Roots</span>
+            <span class="meta-pill">6 Parabola Sign Cases</span>
+            <span class="meta-pill">Common Root Conditions</span>
+            <span class="meta-pill">Location of Roots Bridge</span>
+            <span class="meta-pill">Wavy Curve Inequalities</span>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 1: STANDARD FORM, a=0 TRAP & SRIDHARACHARYA FORMULA           -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">1. Standard Form, Solving Methods &amp; The $a = 0$ Degeneracy Trap</h2>
+
+    <p>A <strong>quadratic equation</strong> in the variable $x$ over $\mathbb{R}$ (or $\mathbb{C}$) has the canonical
+        form:</p>
+    $$ax^2 + bx + c = 0, \qquad a \neq 0$$
+    <p>Here $a$ is the <em>leading coefficient</em>, $b$ is the linear coefficient, and $c$ is the constant term. By the
+        Fundamental Theorem of Algebra, every genuine quadratic ($a \neq 0$) has <strong>exactly two roots</strong> in
+        $\mathbb{C}$ (counted with multiplicity).</p>
+
+    <div class="concept-box">
+        <span class="box-label">Critical Warning &mdash; The $a = 0$ Linear / Identity Degeneracy Trap</span>
+        <p>Whenever a problem asks about an <strong>equation</strong> $f(x) = a(k)x^2 + b(k)x + c(k) = 0$ (without
+            explicitly calling it a <em>quadratic</em> equation), you MUST check the boundary parameter values where
+            $a(k) = 0$ separately:</p>
+        <ul>
+            <li><strong>Case $a = 0,\ b \neq 0$:</strong> The equation degenerates to a <strong>linear equation</strong>
+                $bx + c = 0$, having <strong>exactly one</strong> real root $x = -c/b$.</li>
+            <li><strong>Case $a = 0,\ b = 0,\ c \neq 0$:</strong> Contradiction $c = 0 \implies$ <strong>no
+                    solution</strong> (0 roots).</li>
+            <li><strong>Case $a = 0,\ b = 0,\ c = 0$:</strong> The equation becomes the <strong>identity</strong> $0 =
+                0$, satisfied by <strong>infinitely many</strong> (all real) values of $x$!</li>
+        </ul>
+        <p><strong>Identity Theorem Corollary:</strong> If a quadratic expression $ax^2 + bx + c = 0$ is satisfied by
+            <strong>more than two distinct values</strong> of $x$, it CANNOT be a quadratic&mdash;it MUST be the zero
+            identity $a = b = c = 0$.
+        </p>
+    </div>
+
+    <h3>1.1 Completing the Square &amp; Sridharacharya&rsquo;s Formula (First-Principles Derivation)</h3>
+    <p>Assuming $a \neq 0$, divide $ax^2 + bx + c = 0$ by $a$ and isolate the constant term:</p>
+    $$x^2 + \frac{b}{a}x = -\frac{c}{a}$$
+    <p>Add $\left(\dfrac{b}{2a}\right)^2 = \dfrac{b^2}{4a^2}$ to both sides to form a perfect square on the left:</p>
+    $$\left(x + \frac{b}{2a}\right)^2 = \frac{b^2 - 4ac}{4a^2}$$
+    <p>Define the <strong>Discriminant</strong> $D = b^2 - 4ac$. Taking square roots of both sides gives
+        <strong>Sridharacharya&rsquo;s Quadratic Formula</strong>:
+    </p>
+    $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} = \frac{-b \pm \sqrt{D}}{2a}$$
+    <p><strong>Three Solving Tiers in Practice:</strong></p>
+    <ol>
+        <li><strong>Splitting the Middle Term / Factoring:</strong> Fastest when $ac$ has an obvious factor pair summing
+            to $b$.</li>
+        <li><strong>Completing the Square:</strong> Optimal for finding vertex/extreme values ($a(x - h)^2 + k$) or
+            symmetric parametric equations like $x^2 - 2ax + (a^2 + a - 3) = 0$.</li>
+        <li><strong>Sridharacharya Formula:</strong> Universal solver; also yields the exact root gap immediately:
+            $|\alpha - \beta| = \dfrac{\sqrt{D}}{|a|}$ (for $D \ge 0$).</li>
+    </ol>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 2: NATURE OF ROOTS, RATIONAL & INTEGER ROOT THEOREMS          -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">2. Deep Nature of Roots, Conjugate Pairs &amp; Rational/Integer Root Theorems</h2>
+
+    <p>The nature of the roots $\alpha, \beta$ depends jointly on the <strong>sign and arithmetic structure of $D = b^2
+            - 4ac$</strong> AND the <strong>number field of the coefficients</strong> ($a, b, c \in \mathbb{R}$,
+        $\mathbb{Q}$, or $\mathbb{Z}$).</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Coefficient Field</th>
+                <th>Discriminant Condition</th>
+                <th>Exact Nature of Roots $\alpha, \beta$</th>
+                <th>Pairing / Symmetry Property</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$a, b, c \in \mathbb{R}$</td>
+                <td>$D > 0$</td>
+                <td>Real and distinct</td>
+                <td>$|\alpha - \beta| = \dfrac{\sqrt{D}}{|a|} > 0$</td>
+            </tr>
+            <tr>
+                <td>$a, b, c \in \mathbb{R}$</td>
+                <td>$D = 0$</td>
+                <td>Real and equal (repeated)</td>
+                <td>$\alpha = \beta = -\dfrac{b}{2a}$</td>
+            </tr>
+            <tr>
+                <td>$a, b, c \in \mathbb{R}$</td>
+                <td>$D < 0$</td>
+                <td>Non-real (complex)</td>
+                <td><strong>Complex conjugate pair:</strong> $p \pm iq$ ($p, q \in \mathbb{R},\ q \neq 0$)</td>
+            </tr>
+            <tr>
+                <td>$a, b, c \in \mathbb{Q}$</td>
+                <td>$D > 0$ and $D = r^2$ ($r \in \mathbb{Q}$)</td>
+                <td>Rational and distinct</td>
+                <td>Both $\alpha, \beta \in \mathbb{Q}$</td>
+            </tr>
+            <tr>
+                <td>$a, b, c \in \mathbb{Q}$</td>
+                <td>$D > 0$, NOT a rational square</td>
+                <td>Irrational and distinct</td>
+                <td><strong>Irrational conjugate pair:</strong> $p \pm \sqrt{q}$ ($p, q \in \mathbb{Q},\ \sqrt{q} \notin
+                    \mathbb{Q}$)</td>
+            </tr>
+            <tr>
+                <td>$a = 1,\; b, c \in \mathbb{Z}$</td>
+                <td>$D = m^2$ ($m \in \mathbb{Z}_{\ge 0}$)</td>
+                <td><strong>Integer roots</strong> ($\alpha, \beta \in \mathbb{Z}$)</td>
+                <td>$m$ automatically has the same parity as $b$ since $m^2 = b^2 - 4c \equiv b^2 \pmod{2}$</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &mdash; Two Classic Conjugate &amp; Integer-Root
+            Traps</span>
+        <p><strong>Trap 1 (Irrational Coefficients Break Conjugate Pairing):</strong> The rule &ldquo;if $2 + \sqrt{3}$
+            is a root, then $2 - \sqrt{3}$ must be the other root&rdquo; holds <strong>ONLY when $a, b, c \in
+                \mathbb{Q}$</strong>! For example, $(x - 2 - \sqrt{3})(x - 1) = x^2 - (3 + \sqrt{3})x + (2 + \sqrt{3}) =
+            0$ has $2 + \sqrt{3}$ as a root, yet its second root is $1$, NOT $2 - \sqrt{3}$. Similarly, complex
+            conjugate pairing $p \pm iq$ requires <strong>$a, b, c \in \mathbb{R}$</strong>.</p>
+        <p><strong>Trap 2 (Odd-Coefficient Integer-Root Impossibility Theorem):</strong> If $a, b, c$ are ALL
+            <strong>odd integers</strong>, then $ax^2 + bx + c = 0$ can <strong>NEVER have a rational root</strong>!
+        </p>
+        <p><em>3-Line Olympiad Proof:</em> Suppose $D = b^2 - 4ac$ is the square of an integer $k$. Since $b$ is odd,
+            $b^2 \equiv 1 \pmod{8}$, while $a, c$ odd implies $4ac \equiv 4 \pmod{8}$. Therefore $D = b^2 - 4ac \equiv 1
+            - 4 \equiv 5 \pmod{8}$. However, every odd square satisfies $k^2 \equiv 1 \pmod{8}$ (never $5 \pmod{8}$)!
+            Contradiction&mdash;hence $\sqrt{D}$ is always irrational.</p>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 3: EQUATIONS REDUCIBLE TO QUADRATICS                          -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">3. Equations Reducible to Quadratics &amp; Extraneous-Root Filtering</h2>
+
+    <p>Higher-degree polynomials, exponentials, and radical equations regularly disguise a quadratic core. Every
+        substitution carries a mandatory <strong>range constraint</strong> that filters out fake roots:</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Equation Archetype</th>
+                <th>Canonical Substitution</th>
+                <th>Range / Domain Filter (Mandatory!)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Symmetric Reciprocal Quartic</strong><br>$ax^4 + bx^3 + cx^2 + bx + a = 0$</td>
+                <td>Divide by $x^2$ ($x \neq 0$), set $t = x + \dfrac{1}{x}$, so $x^2 + \dfrac{1}{x^2} = t^2 - 2$.</td>
+                <td>For real $x$, $|t| = \left|x + \dfrac{1}{x}\right| \ge 2$ (by AM-GM). Reject any $|t| < 2$!</td>
+            </tr>
+            <tr>
+                <td><strong>Anti-Symmetric Reciprocal</strong><br>$ax^4 + bx^3 + cx^2 - bx + a = 0$</td>
+                <td>Divide by $x^2$, set $t = x - \dfrac{1}{x}$, so $x^2 + \dfrac{1}{x^2} = t^2 + 2$.</td>
+                <td>Every $t \in \mathbb{R}$ gives real roots (since $x^2 - tx - 1 = 0$ has $D = t^2 + 4 > 0$).</td>
+            </tr>
+            <tr>
+                <td><strong>Exponential Quadratic</strong><br>$A(b^x)^2 + B(b^x) + C = 0$ ($b > 0, b \neq 1$)</td>
+                <td>Set $u = b^x$, yielding $Au^2 + Bu + C = 0$.</td>
+                <td><strong>Strictly $u > 0$!</strong> Reject $u \le 0$ immediately before taking logarithms.</td>
+            </tr>
+            <tr>
+                <td><strong>Radical / Surd Equation</strong><br>$\sqrt{P(x)} = Q(x)$</td>
+                <td>Square both sides: $P(x) = [Q(x)]^2$.</td>
+                <td><strong>Require $Q(x) \ge 0$</strong> (since principal $\sqrt{\cdot} \ge 0$). Squaring destroys
+                    signs and creates <em>extraneous roots</em>!</td>
+            </tr>
+            <tr>
+                <td><strong>Paired Product Quartic</strong><br>$(x+a)(x+b)(x+c)(x+d) = k$</td>
+                <td>Pair factors with equal sum $a+b = c+d$ (or equal product $ab = cd$).</td>
+                <td>Set $t = x^2 + (a+b)x$ (or divide by $x^2$ for equal products). Check real $x$ via $D \ge 0$.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <span class="box-label">Mini-Blueprint &mdash; Exponential Quadratic Filter</span>
+        <p>Consider $9^x - 2 \cdot 3^{x+1} - 27 = 0$. Rewrite $9^x = (3^x)^2$ and $3^{x+1} = 3 \cdot 3^x$, then let $u =
+            3^x > 0$:</p>
+        $$u^2 - 6u - 27 = 0 \implies (u - 9)(u + 3) = 0 \implies u = 9 \quad \text{or} \quad u = -3$$
+        <p>Since $3^x > 0$ for every $x \in \mathbb{R}$, we immediately <strong>reject $u = -3$</strong>. Only $3^x = 9
+            = 3^2$ survives, giving the unique real root $x = 2$.</p>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 4: QUADRATIC GRAPH, 6 CASES & EXTREME VALUES                  -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">4. Quadratic Graph, All 6 Parabola Cases &amp; Extreme Values</h2>
+
+    <p>Consider the quadratic function $y = f(x) = ax^2 + bx + c$ ($a \neq 0$). Completing the square exposes its exact
+        geometry:</p>
+    $$y = a\left(x + \frac{b}{2a}\right)^2 - \frac{D}{4a}, \qquad \text{where } D = b^2 - 4ac$$
+    <p>The graph is a vertical <strong>parabola</strong> symmetric about the vertical axis $x = -\dfrac{b}{2a}$, with
+        <strong>Vertex</strong> $V = \left(-\dfrac{b}{2a},\; -\dfrac{D}{4a}\right)$ and $y$-intercept $(0, c)$:
+    </p>
+    <ul>
+        <li><strong>If $a > 0$ (opens upward &cup;):</strong> Since $a\left(x + \frac{b}{2a}\right)^2 \ge 0$, $f(x)$
+            attains its <strong>global minimum</strong> value $y_{\min} = -\dfrac{D}{4a}$ at $x = -\dfrac{b}{2a}$, and
+            has no maximum (Range $= \left[-\dfrac{D}{4a},\ \infty\right)$).</li>
+        <li><strong>If $a < 0$ (opens downward &cap;):</strong> Since $a\left(x + \frac{b}{2a}\right)^2 \le 0$, $f(x)$
+                    attains its <strong>global maximum</strong> value $y_{\max} = -\dfrac{D}{4a}$ at $x =
+                    -\dfrac{b}{2a}$, and has no minimum (Range $= \left(-\infty,\ -\dfrac{D}{4a}\right]$).</li>
+    </ul>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 780 390" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Six parabola sign configurations for f(x) = ax^2 + bx + c combining a greater or less than 0 with D greater than, equal to, or less than 0">
+            <defs>
+                <marker id="ax9" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+                </marker>
+            </defs>
+
+            <!-- ROW 1: a > 0 -->
+            <!-- Case 1: a > 0, D > 0 -->
+            <rect x="10" y="10" width="244" height="175" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="132" y="28" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">1. a &gt; 0, D
+                &gt; 0 (2 Real Roots)</text>
+            <line x1="26" y1="115" x2="238" y2="115" stroke="#475569" stroke-width="1.2" marker-end="url(#ax9)" />
+            <text x="234" y="108" font-size="9.5" fill="#475569">x</text>
+            <path d="M 55 45 Q 132 230 209 45" fill="none" stroke="#2563eb" stroke-width="2.3" />
+            <circle cx="94" cy="115" r="3.8" fill="#0f172a" />
+            <circle cx="170" cy="115" r="3.8" fill="#0f172a" />
+            <circle cx="132" cy="138" r="3.2" fill="#dc2626" />
+            <text x="86" y="108" font-size="10.5" font-weight="700" fill="#0f172a">&alpha;</text>
+            <text x="174" y="108" font-size="10.5" font-weight="700" fill="#0f172a">&beta;</text>
+            <text x="64" y="92" font-size="11" font-weight="700" fill="#15803d">+</text>
+            <text x="195" y="92" font-size="11" font-weight="700" fill="#15803d">+</text>
+            <text x="132" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#dc2626">&minus;</text>
+            <text x="132" y="174" text-anchor="middle" font-size="10" fill="#334155">f(x) &lt; 0 strictly for x &isin;
+                (&alpha;, &beta;)</text>
+
+            <!-- Case 2: a > 0, D = 0 -->
+            <rect x="268" y="10" width="244" height="175" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="390" y="28" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">2. a &gt; 0, D =
+                0 (Tangent)</text>
+            <line x1="284" y1="115" x2="496" y2="115" stroke="#475569" stroke-width="1.2" marker-end="url(#ax9)" />
+            <text x="492" y="108" font-size="9.5" fill="#475569">x</text>
+            <path d="M 313 45 Q 390 185 467 45" fill="none" stroke="#2563eb" stroke-width="2.3" />
+            <circle cx="390" cy="115" r="4" fill="#dc2626" />
+            <text x="390" y="132" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">&alpha; = &beta;
+                = &minus;b/2a</text>
+            <text x="342" y="88" font-size="11" font-weight="700" fill="#15803d">+</text>
+            <text x="434" y="88" font-size="11" font-weight="700" fill="#15803d">+</text>
+            <text x="390" y="174" text-anchor="middle" font-size="10" font-weight="600" fill="#15803d">f(x) &ge; 0 for
+                all x &isin; &Ropf;</text>
+
+            <!-- Case 3: a > 0, D < 0 -->
+            <rect x="526" y="10" width="244" height="175" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.4" />
+            <text x="648" y="28" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14532d">3. a &gt; 0, D
+                &lt; 0 (Always +)</text>
+            <line x1="542" y1="125" x2="754" y2="125" stroke="#475569" stroke-width="1.2" marker-end="url(#ax9)" />
+            <text x="750" y="118" font-size="9.5" fill="#475569">x</text>
+            <path d="M 571 38 Q 648 150 725 38" fill="none" stroke="#15803d" stroke-width="2.4" />
+            <circle cx="648" cy="94" r="3.5" fill="#dc2626" />
+            <text x="648" y="110" text-anchor="middle" font-size="9.5" font-weight="600" fill="#334155">V(&minus;b/2a,
+                &minus;D/4a)</text>
+            <text x="648" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#15803d">+ + +</text>
+            <text x="648" y="174" text-anchor="middle" font-size="10.5" font-weight="700" fill="#15803d">f(x) &gt; 0 for
+                ALL x &isin; &Ropf;</text>
+
+            <!-- ROW 2: a < 0 -->
+            <!-- Case 4: a < 0, D > 0 -->
+            <rect x="10" y="200" width="244" height="175" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="132" y="218" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">4. a &lt; 0, D
+                &gt; 0 (2 Real Roots)</text>
+            <line x1="26" y1="275" x2="238" y2="275" stroke="#475569" stroke-width="1.2" marker-end="url(#ax9)" />
+            <text x="234" y="268" font-size="9.5" fill="#475569">x</text>
+            <path d="M 55 345 Q 132 160 209 345" fill="none" stroke="#dc2626" stroke-width="2.3" />
+            <circle cx="94" cy="275" r="3.8" fill="#0f172a" />
+            <circle cx="170" cy="275" r="3.8" fill="#0f172a" />
+            <circle cx="132" cy="252" r="3.2" fill="#2563eb" />
+            <text x="85" y="290" font-size="10.5" font-weight="700" fill="#0f172a">&alpha;</text>
+            <text x="174" y="290" font-size="10.5" font-weight="700" fill="#0f172a">&beta;</text>
+            <text x="132" y="267" text-anchor="middle" font-size="11" font-weight="700" fill="#15803d">+</text>
+            <text x="64" y="308" font-size="12" font-weight="700" fill="#dc2626">&minus;</text>
+            <text x="195" y="308" font-size="12" font-weight="700" fill="#dc2626">&minus;</text>
+            <text x="132" y="364" text-anchor="middle" font-size="10" fill="#334155">f(x) &gt; 0 strictly for x &isin;
+                (&alpha;, &beta;)</text>
+
+            <!-- Case 5: a < 0, D = 0 -->
+            <rect x="268" y="200" width="244" height="175" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="390" y="218" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">5. a &lt; 0, D
+                = 0 (Tangent)</text>
+            <line x1="284" y1="275" x2="496" y2="275" stroke="#475569" stroke-width="1.2" marker-end="url(#ax9)" />
+            <text x="492" y="268" font-size="9.5" fill="#475569">x</text>
+            <path d="M 313 345 Q 390 205 467 345" fill="none" stroke="#dc2626" stroke-width="2.3" />
+            <circle cx="390" cy="275" r="4" fill="#2563eb" />
+            <text x="390" y="262" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">&alpha; = &beta;
+                = &minus;b/2a</text>
+            <text x="342" y="314" font-size="12" font-weight="700" fill="#dc2626">&minus;</text>
+            <text x="434" y="314" font-size="12" font-weight="700" fill="#dc2626">&minus;</text>
+            <text x="390" y="364" text-anchor="middle" font-size="10" font-weight="600" fill="#b91c1c">f(x) &le; 0 for
+                all x &isin; &Ropf;</text>
+
+            <!-- Case 6: a < 0, D < 0 -->
+            <rect x="526" y="200" width="244" height="175" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.4" />
+            <text x="648" y="218" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7f1d1d">6. a &lt; 0, D
+                &lt; 0 (Always &minus;)</text>
+            <line x1="542" y1="265" x2="754" y2="265" stroke="#475569" stroke-width="1.2" marker-end="url(#ax9)" />
+            <text x="750" y="258" font-size="9.5" fill="#475569">x</text>
+            <path d="M 571 352 Q 648 240 725 352" fill="none" stroke="#b91c1c" stroke-width="2.4" />
+            <circle cx="648" cy="296" r="3.5" fill="#2563eb" />
+            <text x="648" y="286" text-anchor="middle" font-size="9.5" font-weight="600" fill="#334155">V(&minus;b/2a,
+                &minus;D/4a)</text>
+            <text x="648" y="330" text-anchor="middle" font-size="12" font-weight="700" fill="#b91c1c">&minus; &minus;
+                &minus;</text>
+            <text x="648" y="364" text-anchor="middle" font-size="10.5" font-weight="700" fill="#b91c1c">f(x) &lt; 0 for
+                ALL x &isin; &Ropf;</text>
+        </svg>
+        <div class="diagram-caption">Figure 9.1: All six geometric states of $f(x) = ax^2 + bx + c$. Notice the
+            universal sign law: between real roots $(\alpha, \beta)$, $f(x)$ has the <em>opposite</em> sign of $a$;
+            outside $[\alpha, \beta]$, $f(x)$ has the <em>same</em> sign as $a$.</div>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Positive-Definite &amp; Negative-Definite Criteria (High-Yield BEST Rule)</span>
+        <ul>
+            <li>$ax^2 + bx + c > 0$ for all $x \in \mathbb{R} \iff \mathbf{a > 0 \text{ AND } D < 0}$ (plus check
+                    degenerate case $a=b=0,\ c> 0$!).</li>
+            <li>$ax^2 + bx + c \ge 0$ for all $x \in \mathbb{R} \iff \mathbf{a > 0 \text{ AND } D \le 0}$ (plus $a = b =
+                0,\ c \ge 0$).</li>
+            <li>$ax^2 + bx + c < 0$ for all $x \in \mathbb{R} \iff \mathbf{a < 0 \text{ AND } D < 0}$ (plus $a=b=0,\ c <
+                    0$).</li>
+            <li>$ax^2 + bx + c \le 0$ for all $x \in \mathbb{R} \iff \mathbf{a < 0 \text{ AND } D \le 0}$ (plus $a=b=0,\
+                    c \le 0$).</li>
+        </ul>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 5: COMMON ROOT CONDITIONS                                     -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">5. Common Root Conditions (Both Roots vs. Exactly One Common Root)</h2>
+
+    <p>Consider two quadratic equations with $a_1, a_2 \neq 0$:</p>
+    $$a_1 x^2 + b_1 x + c_1 = 0 \qquad \text{(1)}$$
+    $$a_2 x^2 + b_2 x + c_2 = 0 \qquad \text{(2)}$$
+
+    <h3>5.1 Condition for Both Roots Common</h3>
+    <p>Two quadratics share the exact same pair of roots $(\alpha, \beta)$ if and only if one polynomial is a non-zero
+        scalar multiple of the other, i.e., $a_1 : b_1 : c_1 = a_2 : b_2 : c_2$:</p>
+    $$\frac{a_1}{a_2} = \frac{b_1}{b_2} = \frac{c_1}{c_2} \qquad (\text{when } a_2, b_2, c_2 \neq 0)$$
+    <p>In general (handling possible zero coefficients safely), both roots are common $\iff a_1 b_2 - a_2 b_1 = 0$, $b_1
+        c_2 - b_2 c_1 = 0$, and $c_1 a_2 - c_2 a_1 = 0$.</p>
+
+    <h3>5.2 Condition for Exactly One Common Root (First-Principles Derivation)</h3>
+    <p>Suppose $\alpha$ is a common root, so both $a_1 \alpha^2 + b_1 \alpha + c_1 = 0$ and $a_2 \alpha^2 + b_2 \alpha +
+        c_2 = 0$ hold simultaneously. Treat $\alpha^2$ and $\alpha$ as two linear unknowns and apply $2 \times 2$
+        cross-multiplication (Cramer&rsquo;s Rule from Chapter 8!):</p>
+    $$\frac{\alpha^2}{b_1 c_2 - b_2 c_1} = \frac{\alpha}{c_1 a_2 - c_2 a_1} = \frac{1}{a_1 b_2 - a_2 b_1}$$
+    <p>Assuming $a_1 b_2 - a_2 b_1 \neq 0$ (otherwise $\alpha^2$ and $\alpha$ ratios collapse to the identical-equation
+        check), this immediately gives TWO expressions for $\alpha$ and $\alpha^2$:</p>
+    $$\alpha = \frac{c_1 a_2 - c_2 a_1}{a_1 b_2 - a_2 b_1}, \qquad \alpha^2 = \frac{b_1 c_2 - b_2 c_1}{a_1 b_2 - a_2
+    b_1}$$
+    <p>Eliminating $\alpha$ via $(\alpha)^2 = \alpha^2$ produces the exact <strong>Sylvester Resultant
+            Condition</strong> for a common root:</p>
+    $$(c_1 a_2 - c_2 a_1)^2 = (a_1 b_2 - a_2 b_1)(b_1 c_2 - b_2 c_1)$$
+    <p><strong>Operational Shortcut:</strong> In exams, rather than memorizing the raw formula blindly, simply
+        <strong>eliminate $x^2$</strong> by taking $a_2 \cdot (\text{Eq 1}) - a_1 \cdot (\text{Eq 2})$ to find the
+        linear formula for $\alpha = -\dfrac{a_2 c_1 - a_1 c_2}{a_2 b_1 - a_1 b_2}$, and plug $\alpha$ back into either
+        quadratic!
+    </p>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &mdash; Two Lethal Common-Root Traps</span>
+        <p><strong>Trap 1 (Both Roots Disguised as One):</strong> Suppose $x^2 + kx + 1 = 0$ and $x^2 + x + k = 0$ have
+            <em>exactly one</em> common root. Subtracting gives $(k - 1)x + (1 - k) = 0 \implies (k - 1)(x - 1) = 0$. Do
+            NOT blindly accept $k = 1$! At $k = 1$, BOTH equations become $x^2 + x + 1 = 0$, so they share
+            <strong>both</strong> roots (which are also non-real!). For <em>exactly one</em> common root, $k \neq 1
+            \implies x = 1 \implies 1 + k + 1 = 0 \implies k = -2$ only.
+        </p>
+        <p><strong>Trap 2 (Non-Real Common Root Forces BOTH Roots Common!):</strong> If two quadratics with <strong>real
+                coefficients</strong> share a single <em>non-real</em> root $p + iq$ ($q \neq 0$), then by the Complex
+            Conjugate Theorem both equations MUST also share $p - iq$&mdash;so they automatically share <strong>both
+                roots</strong> ($\frac{a_1}{a_2} = \frac{b_1}{b_2} = \frac{c_1}{c_2}$)! The exact same law applies if
+            two quadratics with <strong>rational coefficients</strong> share an irrational root $p + \sqrt{q}$!</p>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 6: LOCATION OF ROOTS (RESONANCE / OLYMPIAD BRIDGE)            -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">6. Location of Roots (Resonance / Olympiad Bridge)</h2>
+
+    <p><strong>Location of Roots</strong> translates inequalities on the roots $\alpha \le \beta$ of $f(x) = ax^2 + bx +
+        c = 0$ ($a, b, c \in \mathbb{R},\ a \neq 0$) into elementary algebraic conditions on just three quantities: the
+        <strong>Discriminant $D$</strong>, the <strong>signed endpoint value $a \cdot f(k)$</strong>, and the
+        <strong>vertex $x$-coordinate $x_v = -\dfrac{b}{2a}$</strong>.
+    </p>
+    <p><em>Why multiply by $a$?</em> Notice that $a \cdot f(x) = a^2 x^2 + abx + ac$ ALWAYS opens upward! Thus writing
+        $a \cdot f(k) > 0$ or $a \cdot f(k) < 0$ makes every condition <strong>automatically valid for both $a > 0$ and
+            $a < 0$</strong> without having to memorize separate cases!</p>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 780 390" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Four canonical Location of Roots parabola diagrams for a greater than 0: both roots greater than k, both roots less than k, k between roots, and both roots inside open interval k1 to k2">
+            <defs>
+                <marker id="axLoc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+                </marker>
+            </defs>
+
+            <!-- Panel 1: Both roots > k -->
+            <rect x="10" y="10" width="375" height="175" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="197" y="28" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Case (i): Both
+                Roots &gt; k (shown for a &gt; 0)</text>
+            <line x1="30" y1="110" x2="368" y2="110" stroke="#475569" stroke-width="1.3" marker-end="url(#axLoc)" />
+            <!-- Vertical line x = k -->
+            <line x1="115" y1="36" x2="115" y2="145" stroke="#dc2626" stroke-width="1.3" stroke-dasharray="4,3" />
+            <!-- Vertex line x = -b/2a -->
+            <line x1="240" y1="110" x2="240" y2="146" stroke="#0f766e" stroke-width="1.3" stroke-dasharray="3,3" />
+            <!-- Parabola -->
+            <path d="M 110 39 Q 240 225 370 39" fill="none" stroke="#2563eb" stroke-width="2.4" />
+            <circle cx="115" cy="46" r="4.2" fill="#15803d" />
+            <text x="123" y="48" font-size="10.5" font-weight="700" fill="#15803d">a&middot;f(k) &gt; 0</text>
+            <circle cx="177" cy="110" r="3.8" fill="#0f172a" />
+            <circle cx="303" cy="110" r="3.8" fill="#0f172a" />
+            <circle cx="240" cy="132" r="3.2" fill="#0f766e" />
+            <text x="115" y="124" text-anchor="middle" font-size="11" font-weight="700" fill="#dc2626">k</text>
+            <text x="172" y="103" font-size="10.5" font-weight="700" fill="#0f172a">&alpha;</text>
+            <text x="307" y="103" font-size="10.5" font-weight="700" fill="#0f172a">&beta;</text>
+            <text x="240" y="158" text-anchor="middle" font-size="10" font-weight="700" fill="#0f766e">&minus;b/2a &gt;
+                k</text>
+            <text x="197" y="176" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">Conditions: D
+                &ge; 0, a&middot;f(k) &gt; 0, &minus;b/2a &gt; k</text>
+
+            <!-- Panel 2: Both roots < k -->
+            <rect x="395" y="10" width="375" height="175" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="582" y="28" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Case (ii): Both
+                Roots &lt; k (shown for a &gt; 0)</text>
+            <line x1="415" y1="110" x2="753" y2="110" stroke="#475569" stroke-width="1.3" marker-end="url(#axLoc)" />
+            <!-- Vertical line x = k -->
+            <line x1="650" y1="36" x2="650" y2="145" stroke="#dc2626" stroke-width="1.3" stroke-dasharray="4,3" />
+            <!-- Vertex line -->
+            <line x1="535" y1="110" x2="535" y2="146" stroke="#0f766e" stroke-width="1.3" stroke-dasharray="3,3" />
+            <!-- Parabola -->
+            <path d="M 410 46 Q 535 218 660 46" fill="none" stroke="#2563eb" stroke-width="2.4" />
+            <circle cx="650" cy="59" r="4.2" fill="#15803d" />
+            <text x="658" y="61" font-size="10.5" font-weight="700" fill="#15803d">a&middot;f(k) &gt; 0</text>
+            <circle cx="472" cy="110" r="3.8" fill="#0f172a" />
+            <circle cx="598" cy="110" r="3.8" fill="#0f172a" />
+            <circle cx="535" cy="132" r="3.2" fill="#0f766e" />
+            <text x="650" y="124" text-anchor="middle" font-size="11" font-weight="700" fill="#dc2626">k</text>
+            <text x="467" y="103" font-size="10.5" font-weight="700" fill="#0f172a">&alpha;</text>
+            <text x="602" y="103" font-size="10.5" font-weight="700" fill="#0f172a">&beta;</text>
+            <text x="535" y="158" text-anchor="middle" font-size="10" font-weight="700" fill="#0f766e">&minus;b/2a &lt;
+                k</text>
+            <text x="582" y="176" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">Conditions: D
+                &ge; 0, a&middot;f(k) &gt; 0, &minus;b/2a &lt; k</text>
+
+            <!-- Panel 3: k strictly between roots -->
+            <rect x="10" y="200" width="375" height="175" rx="8" fill="#fefce8" stroke="#fde047" stroke-width="1.3" />
+            <text x="197" y="218" text-anchor="middle" font-size="12" font-weight="700" fill="#713f12">Case (iii): k
+                Strictly Between Roots (&alpha; &lt; k &lt; &beta;)</text>
+            <line x1="30" y1="295" x2="368" y2="295" stroke="#475569" stroke-width="1.3" marker-end="url(#axLoc)" />
+            <!-- Vertical line x = k -->
+            <line x1="220" y1="276" x2="220" y2="338" stroke="#dc2626" stroke-width="1.4" stroke-dasharray="4,3" />
+            <!-- Parabola -->
+            <path d="M 75 225 Q 197 415 319 225" fill="none" stroke="#2563eb" stroke-width="2.4" />
+            <circle cx="134" cy="295" r="3.8" fill="#0f172a" />
+            <circle cx="260" cy="295" r="3.8" fill="#0f172a" />
+            <circle cx="220" cy="317" r="4.5" fill="#dc2626" />
+            <text x="128" y="288" font-size="10.5" font-weight="700" fill="#0f172a">&alpha;</text>
+            <text x="264" y="288" font-size="10.5" font-weight="700" fill="#0f172a">&beta;</text>
+            <text x="220" y="288" text-anchor="middle" font-size="11" font-weight="700" fill="#dc2626">k</text>
+            <text x="229" y="330" font-size="10.5" font-weight="700" fill="#b91c1c">a&middot;f(k) &lt; 0</text>
+            <text x="197" y="366" text-anchor="middle" font-size="10.5" font-weight="700" fill="#92400e">ONLY ONE
+                Condition Needed: a&middot;f(k) &lt; 0 (auto-implies D &gt; 0!)</text>
+
+            <!-- Panel 4: Both roots in (k1, k2) -->
+            <rect x="395" y="200" width="375" height="175" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="582" y="218" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Case (iv): Both
+                Roots Strictly in (k&#x2081;, k&#x2082;)</text>
+            <line x1="415" y1="305" x2="753" y2="305" stroke="#475569" stroke-width="1.3" marker-end="url(#axLoc)" />
+            <!-- Vertical lines x = k1 and x = k2 -->
+            <line x1="480" y1="242" x2="480" y2="328" stroke="#dc2626" stroke-width="1.3" stroke-dasharray="4,3" />
+            <line x1="684" y1="242" x2="684" y2="328" stroke="#dc2626" stroke-width="1.3" stroke-dasharray="4,3" />
+            <!-- Vertex line -->
+            <line x1="582" y1="305" x2="582" y2="338" stroke="#0f766e" stroke-width="1.3" stroke-dasharray="3,3" />
+            <!-- Parabola -->
+            <path d="M 455 225 Q 582 425 709 225" fill="none" stroke="#2563eb" stroke-width="2.4" />
+            <circle cx="480" cy="261" r="4" fill="#15803d" />
+            <circle cx="684" cy="261" r="4" fill="#15803d" />
+            <text x="430" y="256" font-size="9.5" font-weight="700" fill="#15803d">a&middot;f(k&#x2081;)&gt;0</text>
+            <text x="690" y="256" font-size="9.5" font-weight="700" fill="#15803d">a&middot;f(k&#x2082;)&gt;0</text>
+            <circle cx="525" cy="305" r="3.8" fill="#0f172a" />
+            <circle cx="639" cy="305" r="3.8" fill="#0f172a" />
+            <circle cx="582" cy="325" r="3.2" fill="#0f766e" />
+            <text x="480" y="320" text-anchor="middle" font-size="10.5" font-weight="700"
+                fill="#dc2626">k&#x2081;</text>
+            <text x="684" y="320" text-anchor="middle" font-size="10.5" font-weight="700"
+                fill="#dc2626">k&#x2082;</text>
+            <text x="520" y="298" font-size="10" font-weight="700" fill="#0f172a">&alpha;</text>
+            <text x="642" y="298" font-size="10" font-weight="700" fill="#0f172a">&beta;</text>
+            <text x="582" y="348" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0f766e">k&#x2081; &lt;
+                &minus;b/2a &lt; k&#x2082;</text>
+            <text x="582" y="366" text-anchor="middle" font-size="9.5" font-weight="600" fill="#334155">D &ge; 0,
+                a&middot;f(k&#x2081;) &gt; 0, a&middot;f(k&#x2082;) &gt; 0, k&#x2081; &lt; &minus;b/2a &lt;
+                k&#x2082;</text>
+        </svg>
+        <div class="diagram-caption">Figure 9.2: Complete geometric summary of the four core Location of Roots
+            configurations. Multiplying endpoint values by $a$ makes every condition invariant under sign flips of $a$.
+        </div>
+    </div>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Desired Root Configuration ($\alpha \le \beta$)</th>
+                <th>Exact Necessary &amp; Sufficient Conditions</th>
+                <th>Why Each Condition Is Indispensable</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>(i) Both roots $> k$</strong></td>
+                <td>$D \ge 0$, $\; a \cdot f(k) > 0$, $\; -\dfrac{b}{2a} > k$</td>
+                <td>$D \ge 0$ forces real roots; $a f(k) > 0$ puts $k$ outside $[\alpha, \beta]$; vertex $> k$ rules out
+                    both roots being $< k$.</td>
+            </tr>
+            <tr>
+                <td><strong>(ii) Both roots $< k$</strong>
+                </td>
+                <td>$D \ge 0$, $\; a \cdot f(k) > 0$, $\; -\dfrac{b}{2a} < k$</td>
+                <td>Mirror image of Case (i): vertex $< k$ forces both roots to the left of $k$.</td>
+            </tr>
+            <tr>
+                <td><strong>(iii) $k$ strictly between roots ($\alpha < k < \beta$)</strong>
+                </td>
+                <td><strong>$a \cdot f(k) < 0$ ONLY!</strong>
+                </td>
+                <td>If an upward parabola $a f(x)$ dips below the $x$-axis at $k$, it MUST cross the $x$-axis once to
+                    the left and once to the right ($D > 0$ is automatic!).</td>
+            </tr>
+            <tr>
+                <td><strong>(iv) Both roots in $(k_1, k_2)$</strong> ($k_1 < k_2$)</td>
+                <td>$D \ge 0$, $\; a \cdot f(k_1) > 0$, $\; a \cdot f(k_2) > 0$, $\; k_1 < -\dfrac{b}{2a} < k_2$</td>
+                <td>Without the vertex constraint, both roots could sit to the left of $k_1$ or to the right of $k_2$
+                    while still keeping $a f(k_1) > 0$ and $a f(k_2) > 0$!</td>
+            </tr>
+            <tr>
+                <td><strong>(v) Interval $(k_1, k_2)$ lies strictly between roots</strong> ($\alpha < k_1 < k_2 <
+                        \beta$)</td>
+                <td>$a \cdot f(k_1) < 0$ AND $a \cdot f(k_2) < 0$</td>
+                <td>Both $k_1$ and $k_2$ lie in the negative trough of $a f(x)$, forcing $\alpha < k_1 < k_2 < \beta$
+                        automatically.</td>
+            </tr>
+            <tr>
+                <td><strong>(vi) Exactly one root in $(k_1, k_2)$</strong></td>
+                <td>$f(k_1) \cdot f(k_2) < 0$ (plus check boundary cases $f(k_1)=0$ or $f(k_2)=0$ separately!)</td>
+                <td>Intermediate Value Theorem guarantees one crossing inside $(k_1, k_2)$ when signs differ; boundary
+                    zeros can still put the <em>other</em> root inside $(k_1, k_2)$!</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &mdash; Strict vs. Non-Strict Inequality Check</span>
+        <p>Always notice whether the problem says <strong>&ldquo;both roots are distinct and $> k$&rdquo;</strong> (use
+            $D > 0$) versus <strong>&ldquo;both roots are $> k$&rdquo;</strong> (use $D \ge 0$, because equal roots
+            $\alpha = \beta > k$ are still both $> k$!). Similarly, if $k = 0$ (both roots positive), the three
+            conditions simplify to Vieta&rsquo;s familiar triple: $D \ge 0$, product $c/a > 0$, and sum $-b/a > 0$.</p>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 7: QUADRATIC & RATIONAL INEQUALITIES (WAVY CURVE)             -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">7. Quadratic &amp; Rational Inequalities (Wavy Curve / Sign-Scheme Method)</h2>
+
+    <p>To solve any polynomial or rational inequality of the form</p>
+    $$R(x) = \frac{(x - a_1)^{m_1}(x - a_2)^{m_2} \cdots}{(x - b_1)^{n_1}(x - b_2)^{n_2} \cdots} \lesseqgtr 0$$
+    <p><strong>NEVER cross-multiply by an expression containing $x$</strong> (you do not know whether it is positive or
+        negative, so you do not know whether the inequality sign reverses!). Instead, execute the 5-step <strong>Wavy
+            Curve Algorithm</strong>:</p>
+
+    <ol>
+        <li><strong>Bring Everything to LHS:</strong> Move all terms to one side so the RHS is strictly $0$, and combine
+            into a single factored fraction $R(x) = \frac{N(x)}{D(x)}$.</li>
+        <li><strong>Normalize Leading Coefficients:</strong> Make the coefficient of $x$ in <em>every</em> linear factor
+            strictly <strong>positive</strong>! (For example, replace $(3 - x)$ by $-(x - 3)$ and multiply both sides by
+            $-1$, flipping the inequality sign. Discard any irreducible positive-definite quadratics like $x^2 + x + 1 >
+            0$ cleanly.)</li>
+        <li><strong>Plot All Critical Points:</strong> Mark every numerator zero $a_i$ and every denominator pole $b_j$
+            in ascending order on the real number line.
+            <ul>
+                <li><strong>Denominator poles ($b_j$):</strong> ALWAYS marked with a <strong>hollow circle
+                        ($\circ$)</strong>&mdash;STRICTLY EXCLUDED even for $\le$ or $\ge$!</li>
+                <li><strong>Numerator zeros ($a_i$):</strong> Marked with a <strong>solid dot ($\bullet$)</strong> for
+                    $\le, \ge$ (included), or a <strong>hollow circle ($\circ$)</strong> for $<,>$ (excluded).</li>
+            </ul>
+        </li>
+        <li><strong>Sweep Signs Right-to-Left (Odd/Even Multiplicity Law):</strong> Because all leading coefficients are
+            $+1$, the rightmost open interval is ALWAYS <strong>positive ($+$)</strong>. Moving leftward across each
+            critical point $c$ with total exponent $p$:
+            <ul>
+                <li><strong>If $p$ is ODD:</strong> The sign <strong>flips</strong> ($+ \leftrightarrow -$). The curve
+                    <em>crosses</em> the axis.
+                </li>
+                <li><strong>If $p$ is EVEN:</strong> The sign <strong>stays the same</strong> ($+ \to +$ or $- \to -$).
+                    The curve <em>bounces</em> off the axis!</li>
+            </ul>
+        </li>
+        <li><strong>Collect Solution Set &amp; Check Isolated Points:</strong> Union the intervals matching your target
+            sign, double-checking every solid dot $\bullet$ (an even-multiplicity numerator root surrounded by two
+            wrong-sign intervals becomes an <strong>isolated single-point solution $\{a_i\}$</strong> under $\le$ or
+            $\ge$!).</li>
+    </ol>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 760 225" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Wavy curve sign scheme for (x-1)^2 (x+2) / ((x-4)(x+1)^3) less than or equal to 0 showing sign bounce at even root x=1 and excluded poles at -1 and 4">
+            <defs>
+                <marker id="numArr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+                </marker>
+            </defs>
+
+            <rect x="10" y="10" width="740" height="205" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="380" y="32" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Wavy Curve Sign
+                Scheme: (x &minus; 1)&sup2;(x + 2) / [ (x &minus; 4)(x + 1)&sup3; ] &le; 0</text>
+
+            <!-- Solution shaded intervals on number line -->
+            <line x1="48" y1="125" x2="180" y2="125" stroke="#0d9488" stroke-width="6" stroke-opacity="0.45" />
+            <line x1="320" y1="125" x2="600" y2="125" stroke="#0d9488" stroke-width="6" stroke-opacity="0.45" />
+
+            <!-- Main Number Line -->
+            <line x1="40" y1="125" x2="720" y2="125" stroke="#334155" stroke-width="1.6" marker-start="url(#numArr)"
+                marker-end="url(#numArr)" />
+            <text x="52" y="114" font-size="11" font-weight="700" fill="#475569">&minus;&infin;</text>
+            <text x="706" y="114" font-size="11" font-weight="700" fill="#475569">+&infin;</text>
+
+            <!-- Smooth Wavy Curve -->
+            <path
+                d="M 695 62 C 648 62, 622 95, 600 125 C 578 155, 555 176, 530 176 C 505 176, 485 125, 460 125 C 435 125, 415 176, 390 176 C 365 176, 342 155, 320 125 C 298 95, 275 68, 250 68 C 225 68, 202 95, 180 125 C 158 155, 130 176, 75 176"
+                fill="none" stroke="#2563eb" stroke-width="2.5" />
+
+            <!-- Sign Badges in 5 Regions -->
+            <circle cx="115" cy="155" r="11" fill="#fee2e2" stroke="#dc2626" stroke-width="1" />
+            <text x="115" y="159" text-anchor="middle" font-size="13" font-weight="700" fill="#b91c1c">&minus;</text>
+
+            <circle cx="250" cy="95" r="11" fill="#dcfce7" stroke="#16a34a" stroke-width="1" />
+            <text x="250" y="99" text-anchor="middle" font-size="13" font-weight="700" fill="#15803d">+</text>
+
+            <circle cx="390" cy="155" r="11" fill="#fee2e2" stroke="#dc2626" stroke-width="1" />
+            <text x="390" y="159" text-anchor="middle" font-size="13" font-weight="700" fill="#b91c1c">&minus;</text>
+
+            <circle cx="530" cy="155" r="11" fill="#fee2e2" stroke="#dc2626" stroke-width="1" />
+            <text x="530" y="159" text-anchor="middle" font-size="13" font-weight="700" fill="#b91c1c">&minus;</text>
+
+            <circle cx="662" cy="95" r="11" fill="#dcfce7" stroke="#16a34a" stroke-width="1" />
+            <text x="662" y="99" text-anchor="middle" font-size="13" font-weight="700" fill="#15803d">+</text>
+
+            <!-- Critical Points -->
+            <!-- x = -2 (filled, odd) -->
+            <circle cx="180" cy="125" r="5.5" fill="#0f766e" stroke="#ffffff" stroke-width="1.5" />
+            <text x="180" y="146" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">&minus;2</text>
+            <text x="180" y="108" text-anchor="middle" font-size="9" fill="#475569">odd (1)</text>
+
+            <!-- x = -1 (hollow pole, odd) -->
+            <circle cx="320" cy="125" r="5.5" fill="#ffffff" stroke="#dc2626" stroke-width="2.2" />
+            <text x="320" y="146" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b91c1c">&minus;1</text>
+            <text x="320" y="108" text-anchor="middle" font-size="9" fill="#b91c1c">pole (3)</text>
+
+            <!-- x = 1 (filled, even bounce) -->
+            <circle cx="460" cy="125" r="5.5" fill="#0f766e" stroke="#ffffff" stroke-width="1.5" />
+            <text x="460" y="146" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">1</text>
+            <text x="460" y="104" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1d4ed8">EVEN (2):
+                BOUNCE!</text>
+
+            <!-- x = 4 (hollow pole, odd) -->
+            <circle cx="600" cy="125" r="5.5" fill="#ffffff" stroke="#dc2626" stroke-width="2.2" />
+            <text x="600" y="146" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b91c1c">4</text>
+            <text x="600" y="108" text-anchor="middle" font-size="9" fill="#b91c1c">pole (1)</text>
+
+            <!-- Footer Solution Callout -->
+            <text x="380" y="203" text-anchor="middle" font-size="11" font-weight="700" fill="#0f766e">Solution Set for
+                &le; 0: x &isin; (&minus;&infin;, &minus;2] &cup; (&minus;1, 4) [Solid &bull; = included zero; Hollow
+                &cir; = excluded pole]</text>
+        </svg>
+        <div class="diagram-caption">Figure 9.3: Wavy Curve sign-scheme diagram for Worked Example 6. Note how the curve
+            bounces cleanly off the even-multiplicity root $x = 1$ without changing sign, while poles $x = -1, 4$ remain
+            strictly hollow.</div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- FORMULA VAULT                                                         -->
+    <!-- ===================================================================== -->
+    <div class="formula-vault">
+        <span class="box-label">Chapter 9 Formula Vault &mdash; High-Density Rapid Revision</span>
+        <ul>
+            <li><strong>Sridharacharya &amp; Root Gap:</strong> $x = \dfrac{-b \pm \sqrt{D}}{2a}$ ($D = b^2 - 4ac$); $\;
+                |\alpha - \beta| = \dfrac{\sqrt{D}}{|a|}$ (for $D \ge 0$).</li>
+            <li><strong>Identity Theorem:</strong> $ax^2 + bx + c = 0$ has more than $2$ distinct roots $\iff a = b = c
+                = 0$.</li>
+            <li><strong>Conjugate &amp; Integer Rules:</strong> $a, b, c \in \mathbb{R} \implies$ complex roots pair as
+                $p \pm iq$. $a, b, c \in \mathbb{Q} \implies$ irrational roots pair as $p \pm \sqrt{q}$, and rational
+                roots $\iff D = r^2$ ($r \in \mathbb{Q}$). All odd $a, b, c \in \mathbb{Z} \implies$ NO rational roots!
+            </li>
+            <li><strong>Vertex &amp; Extremum of $f(x) = ax^2 + bx + c$:</strong> $V = \left(-\dfrac{b}{2a},\;
+                -\dfrac{D}{4a}\right)$. Global min $= -\dfrac{D}{4a}$ if $a > 0$; global max $= -\dfrac{D}{4a}$ if $a <
+                    0$.</li>
+            <li><strong>Always Positive / Negative:</strong> $f(x) > 0\ \forall x \in \mathbb{R} \iff a > 0,\ D < 0$
+                    (plus $a=b=0,\ c> 0$). $f(x) < 0\ \forall x \in \mathbb{R} \iff a < 0,\ D < 0$ (plus $a=b=0,\ c <
+                        0$).</li>
+            <li><strong>Common Roots of $a_1 x^2 + b_1 x + c_1 = 0$ and $a_2 x^2 + b_2 x + c_2 = 0$:</strong> Both
+                common $\iff \dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} = \dfrac{c_1}{c_2}$. One common root $\alpha =
+                \dfrac{c_1 a_2 - c_2 a_1}{a_1 b_2 - a_2 b_1}$ satisfying $(c_1 a_2 - c_2 a_1)^2 = (a_1 b_2 - a_2
+                b_1)(b_1 c_2 - b_2 c_1)$.</li>
+            <li><strong>Location of Roots:</strong>
+                (i) Both $> k$: $D \ge 0,\ a f(k) > 0,\ -\frac{b}{2a} > k$.
+                (ii) Both $< k$: $D \ge 0,\ a f(k)> 0,\ -\frac{b}{2a} < k$. (iii) $\alpha < k < \beta$: $a f(k) < 0$
+                        alone. (iv) Both in $(k_1, k_2)$: $D \ge 0,\ a f(k_1)> 0,\ a f(k_2) > 0,\ k_1 < -\frac{b}{2a} <
+                            k_2$.</li>
+            <li><strong>Wavy Curve Golden Rule:</strong> Positive leading $x$-coefficients $\implies$ rightmost is $+$;
+                flip on odd multiplicity, bounce on even multiplicity; poles ALWAYS open $(\ )$, isolated even numerator
+                zeros INCLUDED for $\le, \ge$.</li>
+        </ul>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- WORKED EXAMPLES: LEVEL 1 (WARMUP)                                     -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">8. Graded Worked Examples (Level 1 &rarr; Level 2 &rarr; Level 3)</h2>
+
+    <div class="level-banner l1">LEVEL 1: WARMUP &mdash; Discriminant Mechanics, Conjugates &amp; Extremum Foundations
+    </div>
+
+    <!-- Worked Example 1 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Discriminant &amp; $a=0$ Trap</span>
+            <strong>Worked Example 1: Nature of Roots with a Vanishing Leading Coefficient</strong>
+        </div>
+        <div class="ex-problem">
+            Consider the equation $(k - 1)x^2 + 2kx + (k + 3) = 0$ where $k \in \mathbb{R}$. Find the complete set of
+            values of $k$ for which this equation has:
+            <br>(a) two equal real roots,
+            <br>(b) two distinct real roots,
+            <br>(c) at least one real root.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; Inspect the Degenerate Boundary $a = 0$ First:</strong></p>
+            <p>The leading coefficient is $a = k - 1$, which vanishes at $k = 1$. Substituting $k = 1$ directly into the
+                equation gives:</p>
+            $$0 \cdot x^2 + 2(1)x + (1 + 3) = 0 \implies 2x + 4 = 0 \implies x = -2$$
+            <p>Thus at $k = 1$, the equation is <em>linear</em> and possesses <strong>exactly one real root</strong> ($x
+                = -2$). It does NOT have two roots (neither distinct nor repeated quadratic roots), yet it DOES have a
+                real root!</p>
+
+            <p><strong>Step 2 &mdash; Analyze the Quadratic Regime ($k \neq 1$):</strong></p>
+            <p>For $k \neq 1$, compute the discriminant $D = b^2 - 4ac$:</p>
+            $$D = (2k)^2 - 4(k - 1)(k + 3) = 4k^2 - 4(k^2 + 2k - 3) = 4(3 - 2k)$$
+            <ul>
+                <li><strong>Part (a) &mdash; Two equal real roots:</strong> Require $k \neq 1$ and $D = 0 \implies 3 -
+                    2k = 0 \implies k = \dfrac{3}{2}$. (Verification: $\frac{1}{2}x^2 + 3x + \frac{9}{2} = 0 \iff (x +
+                    3)^2 = 0$, giving repeated root $x = -3$.)</li>
+                <li><strong>Part (b) &mdash; Two distinct real roots:</strong> Require $k \neq 1$ and $D > 0 \implies 3
+                    - 2k > 0 \implies k < \dfrac{3}{2}$ with $k \neq 1$, i.e., $k \in \left(-\infty,\
+                        \dfrac{3}{2}\right) \setminus \{1\}$.</li>
+                <li><strong>Part (c) &mdash; At least one real root:</strong> Combine the quadratic real-root region $k
+                    \in \left(-\infty,\ \frac{3}{2}\right] \setminus \{1\}$ WITH the linear real-root value $k = 1$ from
+                    Step 1! This seals the hole at $k = 1$, giving $k \in \left(-\infty,\ \dfrac{3}{2}\right]$.</li>
+            </ul>
+            <p><strong>Final Answer:</strong> (a) $k = \dfrac{3}{2}$; (b) $k \in \left(-\infty, \dfrac{3}{2}\right)
+                \setminus \{1\}$; (c) $k \in \left(-\infty, \dfrac{3}{2}\right]$.</p>
+        </div>
+    </div>
+
+    <!-- Worked Example 2 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Conjugates &amp; Integer Roots</span>
+            <strong>Worked Example 2: Irrational Conjugate Reconstruction &amp; Integer-Root Enumeration</strong>
+        </div>
+        <div class="ex-problem">
+            (a) If $a, b \in \mathbb{Q}$ and one root of $x^2 + ax + b = 0$ is $2 - \sqrt{3}$, find $a$ and $b$.
+            <br>(b) Find all integer values of $p$ for which $x^2 + px + 12 = 0$ has both roots as integers.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) &mdash; Irrational Conjugate Theorem:</strong></p>
+            <p>Because all coefficients $1, a, b$ are <strong>rational</strong> and $2 - \sqrt{3}$ is an irrational
+                quadratic surd, the second root MUST be its conjugate $2 + \sqrt{3}$. By Vieta&rsquo;s relations:</p>
+            $$-a = (2 - \sqrt{3}) + (2 + \sqrt{3}) = 4 \implies a = -4$$
+            $$b = (2 - \sqrt{3})(2 + \sqrt{3}) = 2^2 - (\sqrt{3})^2 = 4 - 3 = 1$$
+            <p><em>Check:</em> $x^2 - 4x + 1 = 0$ has $D = 16 - 4 = 12$ and roots $\frac{4 \pm 2\sqrt{3}}{2} = 2 \pm
+                \sqrt{3}$.</p>
+
+            <p><strong>Part (b) &mdash; Integer Roots via Discriminant Perfect-Square Factorization:</strong></p>
+            <p>For a monic integer quadratic $x^2 + px + 12 = 0$, the roots are integers $\iff D = p^2 - 48$ is the
+                square of a non-negative integer $m \ge 0$:</p>
+            $$p^2 - 48 = m^2 \implies (|p| - m)(|p| + m) = 48$$
+            <p>Since $|p| - m$ and $|p| + m$ have the same parity and their product $48$ is even, both factors must be
+                <strong>even</strong> positive integers with $|p| - m \le |p| + m$:
+            </p>
+            <ul>
+                <li>$|p| - m = 2,\; |p| + m = 24 \implies |p| = 13,\; m = 11 \implies p = \pm 13$.</li>
+                <li>$|p| - m = 4,\; |p| + m = 12 \implies |p| = 8,\; m = 4 \implies p = \pm 8$.</li>
+                <li>$|p| - m = 6,\; |p| + m = 8 \implies |p| = 7,\; m = 1 \implies p = \pm 7$.</li>
+            </ul>
+            <p><em>Vieta Verification:</em> Integer factor pairs of $12$ are $\pm(1, 12)$, $\pm(2, 6)$, and $\pm(3, 4)$,
+                whose negated sums are precisely $\mp 13$, $\mp 8$, and $\mp 7$.</p>
+            <p><strong>Final Answer:</strong> (a) $a = -4,\ b = 1$; (b) $p \in \{-13, -8, -7, 7, 8, 13\}$ ($6$ values).
+            </p>
+        </div>
+    </div>
+
+    <!-- Worked Example 3 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Vertex &amp; Always Positive</span>
+            <strong>Worked Example 3: Global Minimum &amp; Positive-Definite Condition (with $a=0$ Check)</strong>
+        </div>
+        <div class="ex-problem">
+            (a) Find the minimum value of $f(x) = 2x^2 - 12x + 25$ over $x \in \mathbb{R}$ and the value of $x$ at which
+            it occurs.
+            <br>(b) Find all real values of $m$ such that $g(x) = (m - 1)x^2 + 2(m - 1)x + 3 > 0$ for
+            <strong>all</strong> real $x$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) &mdash; Vertex Formula &amp; Completing the Square:</strong></p>
+            <p>Here $a = 2 > 0$, $b = -12$, $c = 25$. Since $a > 0$, the parabola opens upward and attains its global
+                minimum at the vertex:</p>
+            $$x_v = -\frac{b}{2a} = -\frac{-12}{2(2)} = 3, \qquad D = (-12)^2 - 4(2)(25) = 144 - 200 = -56$$
+            $$y_{\min} = -\frac{D}{4a} = -\frac{-56}{4(2)} = 7$$
+            <p><em>Check by completing the square:</em> $f(x) = 2(x^2 - 6x + 9) + 7 = 2(x - 3)^2 + 7 \ge 7$, with
+                equality strictly at $x = 3$.</p>
+
+            <p><strong>Part (b) &mdash; Always-Positive Criterion ($a = 0$ Check + $a > 0, D < 0$):</strong>
+            </p>
+            <ul>
+                <li><strong>Case 1 ($a = 0 \implies m = 1$):</strong> Substituting $m = 1$ gives $g(x) = 0x^2 + 0x + 3 =
+                    3 > 0$ for ALL $x \in \mathbb{R}$! Hence <strong>$m = 1$ is VALID</strong>.</li>
+                <li><strong>Case 2 ($a \neq 0 \implies m \neq 1$):</strong> A genuine parabola stays strictly above the
+                    $x$-axis iff $a > 0$ AND $D < 0$: <br>1. Leading coefficient positive: $m - 1 > 0 \implies m > 1$.
+                        <br>2. Negative discriminant:
+                        $$D = \bigl[2(m - 1)\bigr]^2 - 4(m - 1)(3) = 4(m - 1)\bigl[(m - 1) - 3\bigr] = 4(m - 1)(m - 4) <
+                            0$$ Since $4> 0$, $(m - 1)(m - 4) < 0 \implies 1 < m < 4$. </li>
+            </ul>
+            <p>Combining Case 1 ($m = 1$) and Case 2 ($1 < m < 4$) gives the half-closed interval $m \in [1, 4)$.</p>
+                    <p><strong>Final Answer:</strong> (a) Minimum value $= 7$ at $x = 3$; (b) $m \in [1, 4)$.</p>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- WORKED EXAMPLES: LEVEL 2 (EXAM-REAL)                                  -->
+    <!-- ===================================================================== -->
+    <div class="level-banner l2">LEVEL 2: EXAM-REAL &mdash; Reducible Equations, Common Roots &amp; Wavy Curve</div>
+
+    <!-- Worked Example 4 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Reducible Quadratics</span>
+            <strong>Worked Example 4: Symmetric Reciprocal Quartic &amp; Radical Extraneous-Root Filter</strong>
+        </div>
+        <div class="ex-problem">
+            Find all real solutions of:
+            <br>(a) $2x^4 - 9x^3 + 14x^2 - 9x + 2 = 0$,
+            <br>(b) $\sqrt{2x + 7} = x + 2$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) &mdash; Symmetric Reciprocal Reduction:</strong></p>
+            <p>Clearly $x = 0$ is not a root (since $2 \neq 0$). Divide through by $x^2$ and pair symmetric terms:</p>
+            $$2\left(x^2 + \frac{1}{x^2}\right) - 9\left(x + \frac{1}{x}\right) + 14 = 0$$
+            <p>Let $t = x + \dfrac{1}{x}$. Then $x^2 + \dfrac{1}{x^2} = t^2 - 2$, transforming the quartic into a
+                quadratic in $t$:</p>
+            $$2(t^2 - 2) - 9t + 14 = 0 \implies 2t^2 - 9t + 10 = 0 \implies (2t - 5)(t - 2) = 0$$
+            <p>Hence $t = \dfrac{5}{2}$ or $t = 2$. Both satisfy the real-root range condition $|t| \ge 2$:</p>
+            <ul>
+                <li>For $t = \dfrac{5}{2}$: $x + \dfrac{1}{x} = \dfrac{5}{2} \implies 2x^2 - 5x + 2 = 0 \implies (2x -
+                    1)(x - 2) = 0 \implies x = \dfrac{1}{2},\ 2$.</li>
+                <li>For $t = 2$: $x + \dfrac{1}{x} = 2 \implies x^2 - 2x + 1 = 0 \implies (x - 1)^2 = 0 \implies x = 1$
+                    (double root).</li>
+            </ul>
+            <p>Thus the real roots are $x \in \left\{\dfrac{1}{2},\ 1,\ 2\right\}$ (with $1$ having multiplicity $2$).
+            </p>
+
+            <p><strong>Part (b) &mdash; Radical Equation with Domain &amp; Non-Negativity Check:</strong></p>
+            <p>Before squaring, impose the non-negativity of the principal square root: $\sqrt{2x + 7} \ge 0 \implies x
+                + 2 \ge 0 \implies x \ge -2$ (which also guarantees $2x + 7 \ge 3 > 0$). Now square both sides:</p>
+            $$2x + 7 = (x + 2)^2 = x^2 + 4x + 4 \implies x^2 + 2x - 3 = 0 \implies (x + 3)(x - 1) = 0$$
+            <p>Candidate roots are $x = -3$ and $x = 1$:</p>
+            <ul>
+                <li><strong>Check $x = -3$:</strong> Fails $x \ge -2$! Explicitly, $\text{LHS} = \sqrt{2(-3) + 7} =
+                    \sqrt{1} = +1 \neq -1 = \text{RHS}$. <strong>EXTRANEOUS &mdash; REJECT!</strong></li>
+                <li><strong>Check $x = 1$:</strong> $\text{LHS} = \sqrt{9} = 3 = 1 + 2 = \text{RHS}$.
+                    <strong>VALID!</strong>
+                </li>
+            </ul>
+            <p><strong>Final Answer:</strong> (a) $x \in \left\{\dfrac{1}{2}, 1, 2\right\}$; (b) $x = 1$ only.</p>
+        </div>
+    </div>
+
+    <!-- Worked Example 5 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Common Root</span>
+            <strong>Worked Example 5: Finding Parameters for a Common Root via Elimination &amp; Verification</strong>
+        </div>
+        <div class="ex-problem">
+            Find all real values of $k$ for which the quadratic equations
+            $$x^2 - 5x + k = 0 \qquad \text{and} \qquad x^2 - 7x + 2k = 0$$
+            have a common root, and verify whether they share one or both roots for each valid $k$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; Check Whether Both Roots Can Be Common:</strong></p>
+            <p>For both roots to be common, we need $\dfrac{1}{1} = \dfrac{-5}{-7} = \dfrac{k}{2k}$, which is impossible
+                since $1 \neq \frac{5}{7}$. Hence any common root must be unique (exactly one common root).</p>
+
+            <p><strong>Step 2 &mdash; Eliminate $\alpha^2$ Directly:</strong></p>
+            <p>Let $\alpha$ be the common root. Then:</p>
+            $$\alpha^2 - 5\alpha + k = 0 \qquad \text{(1)}$$
+            $$\alpha^2 - 7\alpha + 2k = 0 \qquad \text{(2)}$$
+            <p>Subtracting Eq (2) from Eq (1) eliminates $\alpha^2$ cleanly:</p>
+            $$(-5\alpha + 7\alpha) + (k - 2k) = 0 \implies 2\alpha - k = 0 \implies \alpha = \frac{k}{2}$$
+
+            <p><strong>Step 3 &mdash; Substitute $\alpha = \dfrac{k}{2}$ Back into Eq (1):</strong></p>
+            $$\left(\frac{k}{2}\right)^2 - 5\left(\frac{k}{2}\right) + k = 0 \implies \frac{k^2}{4} - \frac{3k}{2} = 0
+            \implies k^2 - 6k = 0 \implies k(k - 6) = 0$$
+            <p>Thus $k = 0$ or $k = 6$.</p>
+
+            <p><strong>Step 4 &mdash; Verify Both Parameter Values Explicitly:</strong></p>
+            <ul>
+                <li><strong>$k = 0$:</strong> Equations become $x(x - 5) = 0$ (roots $0, 5$) and $x(x - 7) = 0$ (roots
+                    $0, 7$). Exactly one common root: $\alpha = 0$.</li>
+                <li><strong>$k = 6$:</strong> Equations become $(x - 2)(x - 3) = 0$ (roots $2, 3$) and $(x - 3)(x - 4) =
+                    0$ (roots $3, 4$). Exactly one common root: $\alpha = 3$.</li>
+            </ul>
+            <p><em>Resultant Formula Cross-Check:</em> $(c_1 a_2 - c_2 a_1)^2 = (a_1 b_2 - a_2 b_1)(b_1 c_2 - b_2 c_1)
+                \implies (k - 2k)^2 = (-7 + 5)(-10k + 7k) \implies k^2 = (-2)(-3k) = 6k \implies k = 0, 6$. Exact match!
+            </p>
+            <p><strong>Final Answer:</strong> $k = 0$ (common root $0$) and $k = 6$ (common root $3$).</p>
+        </div>
+    </div>
+
+    <!-- Worked Example 6 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Wavy Curve Inequality</span>
+            <strong>Worked Example 6: Rational Inequality with Even Multiplicity &amp; Excluded Poles</strong>
+        </div>
+        <div class="ex-problem">
+            Solve the rational inequality over $\mathbb{R}$:
+            $$\frac{(x - 1)^2 (x + 2)}{(x - 4)(x + 1)^3} \le 0$$
+            Also state how the answer changes if $\le 0$ is replaced by $\ge 0$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; Check Normalization &amp; Classify Critical Points (see Figure 9.3):</strong></p>
+            <p>Every linear factor already has leading coefficient $+1$, and the RHS is $0$. Identify all critical
+                points with their multiplicities and inclusion status:</p>
+            <ul>
+                <li>$x = -2$: Numerator zero, multiplicity $1$ (<strong>odd</strong>) $\implies$ <strong>included
+                        ($\bullet$)</strong>.</li>
+                <li>$x = -1$: Denominator pole, multiplicity $3$ (<strong>odd</strong>) $\implies$ <strong>EXCLUDED
+                        ($\circ$)</strong>.</li>
+                <li>$x = 1$: Numerator zero, multiplicity $2$ (<strong>even</strong>) $\implies$ <strong>included
+                        ($\bullet$)</strong>.</li>
+                <li>$x = 4$: Denominator pole, multiplicity $1$ (<strong>odd</strong>) $\implies$ <strong>EXCLUDED
+                        ($\circ$)</strong>.</li>
+            </ul>
+
+            <p><strong>Step 2 &mdash; Apply Right-to-Left Wavy Curve Sign Sweep:</strong></p>
+            <ol>
+                <li>$(4, \infty)$: <strong>$+$</strong> (rightmost interval is always positive).</li>
+                <li>Cross $x = 4$ (odd mult $1$): flip to <strong>$-$</strong> on $(1, 4)$.</li>
+                <li>Cross $x = 1$ (even mult $2$): <strong>BOUNCE</strong> &mdash; stays <strong>$-$</strong> on $(-1,
+                    1)$.</li>
+                <li>Cross $x = -1$ (odd mult $3$): flip to <strong>$+$</strong> on $(-2, -1)$.</li>
+                <li>Cross $x = -2$ (odd mult $1$): flip to <strong>$-$</strong> on $(-\infty, -2)$.</li>
+            </ol>
+
+            <p><strong>Step 3 &mdash; Assemble the Solution Set for $\le 0$:</strong></p>
+            <p>Collect all negative intervals plus all included numerator zeros: $(-\infty, -2) \cup \{-2\} \cup (-1, 1)
+                \cup \{1\} \cup (1, 4)$. Since $x = 1$ bridges $(-1, 1)$ and $(1, 4)$, the union simplifies cleanly to:
+            </p>
+            $$x \in (-\infty, -2] \cup (-1, 4)$$
+
+            <p><strong>Step 4 &mdash; Bonus Check (If Inequality Were $\ge 0$):</strong></p>
+            <p>Taking positive intervals gives $(-2, -1) \cup (4, \infty)$. Adding the included numerator zeros $\{-2,
+                1\}$ closes $-2$ AND adds the <strong>isolated single point $\{1\}$</strong> (where the expression
+                equals $0$ even though both neighboring intervals are negative!): $[-2, -1) \cup \{1\} \cup (4,
+                \infty)$.</p>
+            <p><strong>Final Answer:</strong> For $\le 0$: $x \in (-\infty, -2] \cup (-1, 4)$; for $\ge 0$: $x \in [-2,
+                -1) \cup \{1\} \cup (4, \infty)$.</p>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- WORKED EXAMPLES: LEVEL 3 (RANK-BOOSTER)                               -->
+    <!-- ===================================================================== -->
+    <div class="level-banner l3">LEVEL 3: RANK-BOOSTER &mdash; Olympiad Location of Roots &amp; Range Synthesis (with
+        30-Second Tricks)</div>
+
+    <!-- Worked Example 7 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Location of Roots (Case ii)</span>
+            <strong>Worked Example 7: Both Roots Strictly Less Than a Threshold $k$</strong>
+        </div>
+        <div class="ex-problem">
+            Find all real values of $a$ for which both roots of the quadratic equation
+            $$x^2 - 2ax + (a^2 + a - 3) = 0$$
+            are real and strictly less than $3$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation (Location of Roots Case ii):</strong></p>
+            <p>Let $f(x) = x^2 - 2ax + (a^2 + a - 3)$, which has leading coefficient $A = 1 > 0$. For both roots to be
+                real and strictly less than $k = 3$, impose all three Location-of-Roots conditions simultaneously:</p>
+            <ol>
+                <li><strong>Real Roots ($D \ge 0$):</strong>
+                    $$D = (-2a)^2 - 4(1)(a^2 + a - 3) = 4a^2 - 4a^2 - 4a + 12 = 4(3 - a) \ge 0 \implies a \le 3$$
+                </li>
+                <li><strong>Endpoint Sign ($A \cdot f(3) > 0$):</strong>
+                    $$f(3) = 3^2 - 2a(3) + a^2 + a - 3 = a^2 - 5a + 6 = (a - 2)(a - 3) > 0$$
+                    By Wavy Curve, $(a - 2)(a - 3) > 0 \implies a \in (-\infty, 2) \cup (3, \infty)$.
+                </li>
+                <li><strong>Vertex Position ($x_v < 3$):</strong>
+                            $$x_v = -\frac{-2a}{2(1)} = a < 3$$ </li>
+            </ol>
+            <p><strong>Take the Intersection of (1), (2), and (3):</strong></p>
+            $$(-\infty, 3] \;\cap\; \bigl((-\infty, 2) \cup (3, \infty)\bigr) \;\cap\; (-\infty, 3) = (-\infty, 2)$$
+            <p><em>Boundary Sanity Check:</em> At $a = 2$, $x^2 - 4x + 3 = (x - 1)(x - 3) = 0$ has a root equal to $3$
+                (not strictly less). At $a = 1$, $x = 1 \pm \sqrt{2} \approx -0.41, 2.41$, both strictly less than $3$.
+            </p>
+
+            <div class="shortcut-box">
+                <strong>30-Second Exam Trick (Perfect-Square Collapse):</strong>
+                <p>Spot $x^2 - 2ax + a^2 = (x - a)^2$ instantly! Rewrite the equation as $(x - a)^2 = 3 - a$. Real roots
+                    require $3 - a \ge 0$, and the larger root is $x_{\max} = a + \sqrt{3 - a}$. Requiring $x_{\max} <
+                        3$ gives:</p>
+                        $$\sqrt{3 - a} < 3 - a$$ <p>Setting $u = \sqrt{3 - a} \ge 0$, we need $u < u^2 \iff u> 1 \iff 3
+                                - a > 1 \iff a < 2$ in 15 seconds!</p>
+            </div>
+            <p><strong>Final Answer:</strong> $a \in (-\infty, 2)$.</p>
+        </div>
+    </div>
+
+    <!-- Worked Example 8 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Location of Roots (Case iv)</span>
+            <strong>Worked Example 8: Both Roots Confined Strictly Inside an Open Interval $(k_1, k_2)$</strong>
+        </div>
+        <div class="ex-problem">
+            Find the complete set of real values of $m$ such that both roots of the quadratic equation
+            $$x^2 - 2mx + m^2 - 1 = 0$$
+            lie strictly inside the open interval $(-2, 4)$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation (Location of Roots Case iv):</strong></p>
+            <p>Let $f(x) = x^2 - 2mx + (m^2 - 1)$, with leading coefficient $A = 1 > 0$, $k_1 = -2$, and $k_2 = 4$.
+                Apply all four necessary and sufficient conditions:</p>
+            <ol>
+                <li><strong>Real Roots ($D \ge 0$):</strong>
+                    $$D = (-2m)^2 - 4(1)(m^2 - 1) = 4m^2 - 4m^2 + 4 = 4 > 0 \quad (\text{holds for all } m \in
+                    \mathbb{R})$$
+                </li>
+                <li><strong>Left Endpoint ($A \cdot f(-2) > 0$):</strong>
+                    $$f(-2) = (-2)^2 - 2m(-2) + m^2 - 1 = m^2 + 4m + 3 = (m + 1)(m + 3) > 0$$
+                    $$\implies m \in (-\infty, -3) \cup (-1, \infty)$$
+                </li>
+                <li><strong>Right Endpoint ($A \cdot f(4) > 0$):</strong>
+                    $$f(4) = 4^2 - 2m(4) + m^2 - 1 = m^2 - 8m + 15 = (m - 3)(m - 5) > 0$$
+                    $$\implies m \in (-\infty, 3) \cup (5, \infty)$$
+                </li>
+                <li><strong>Vertex Inside Interval ($-2 < -\dfrac{b}{2A} < 4$):</strong>
+                            $$-2 < m < 4$$ </li>
+            </ol>
+            <p><strong>Intersection of All 4 Conditions:</strong></p>
+            <p>Notice how Condition 4 eliminates both outer branches $(-\infty, -3)$ and $(5, \infty)$! Intersecting
+                $(-2, 4)$ with $(-1, \infty)$ gives $(-1, 4)$; intersecting that with $(-\infty, 3)$ yields $m \in (-1,
+                3)$.</p>
+
+            <div class="shortcut-box">
+                <strong>30-Second Exam Trick (Direct Difference-of-Squares Factorization):</strong>
+                <p>Always check if a parametric quadratic factors cleanly before grinding out 4 inequalities! Here:</p>
+                $$x^2 - 2mx + m^2 - 1 = (x - m)^2 - 1^2 = \bigl(x - (m - 1)\bigr)\bigl(x - (m + 1)\bigr) = 0$$
+                <p>The two roots are explicitly $m - 1$ and $m + 1$. Both lie strictly inside $(-2, 4) \iff m - 1 > -2$
+                    AND $m + 1 < 4 \iff -1 < m < 3$ in 10 seconds!</p>
+            </div>
+            <p><strong>Final Answer:</strong> $m \in (-1, 3)$.</p>
+        </div>
+    </div>
+
+    <!-- Worked Example 9 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Rational Quadratic Range</span>
+            <strong>Worked Example 9: Exact Range of a Rational Quadratic Expression via $D \ge 0$ &amp; Wavy
+                Curve</strong>
+        </div>
+        <div class="ex-problem">
+            Find the exact minimum and maximum values (i.e., complete range) of the rational function
+            $$y = \frac{x^2 - 3x + 4}{x^2 + 3x + 4}$$
+            for all real values of $x$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation (Discriminant + $a = 0$ Check + Wavy Curve):</strong></p>
+            <p><strong>Step 1 &mdash; Verify Denominator Has No Real Poles:</strong></p>
+            <p>For $x^2 + 3x + 4$, $a = 1 > 0$ and $D = 3^2 - 4(1)(4) = -7 < 0$. By Section 4, $x^2 + 3x + 4> 0$ for ALL
+                    $x \in \mathbb{R}$, so $y$ is defined everywhere and we may legally cross-multiply without losing
+                    poles.</p>
+
+            <p><strong>Step 2 &mdash; Form a Quadratic in $x$ with Parameter $y$:</strong></p>
+            $$y(x^2 + 3x + 4) = x^2 - 3x + 4 \implies (y - 1)x^2 + 3(y + 1)x + 4(y - 1) = 0$$
+
+            <p><strong>Step 3 &mdash; Check the Degenerate Case $a = 0$ ($y = 1$):</strong></p>
+            <p>When $y = 1$, the equation becomes $0 \cdot x^2 + 3(2)x + 0 = 0 \implies 6x = 0 \implies x = 0 \in
+                \mathbb{R}$. Hence $y = 1$ IS achieved (at $x = 0$).</p>
+
+            <p><strong>Step 4 &mdash; Impose $D_x \ge 0$ for Real $x$ ($y \neq 1$):</strong></p>
+            $$D_x = \bigl[3(y + 1)\bigr]^2 - 4(y - 1)\bigl[4(y - 1)\bigr] = 9(y + 1)^2 - 16(y - 1)^2 \ge 0$$
+            <p>Factor cleanly using $P^2 - Q^2 = (P - Q)(P + Q)$:</p>
+            $$\bigl[3(y + 1) - 4(y - 1)\bigr]\bigl[3(y + 1) + 4(y - 1)\bigr] \ge 0$$
+            $$(7 - y)(7y - 1) \ge 0$$
+            <p>Normalize the leading coefficient of $(7 - y)$ by multiplying both sides by $-1$ (flipping $\ge$ to
+                $\le$):</p>
+            $$(y - 7)(7y - 1) \le 0$$
+            <p>By Wavy Curve (roots $\frac{1}{7}$ and $7$, both odd multiplicity), this holds for $y \in
+                \left[\dfrac{1}{7},\ 7\right]$. Since $y = 1$ already lies inside this interval, the exact range is
+                $\left[\dfrac{1}{7},\ 7\right]$.</p>
+            <p><em>Attainment Check:</em> At $x = 2$, $y = \frac{4 - 6 + 4}{4 + 6 + 4} = \frac{2}{14} = \frac{1}{7}$
+                (minimum); at $x = -2$, $y = \frac{4 + 6 + 4}{4 - 6 + 4} = \frac{14}{2} = 7$ (maximum).</p>
+
+            <div class="shortcut-box">
+                <strong>30-Second Exam Trick (Divide by $x$ + AM-GM Reciprocal Bound):</strong>
+                <p>First note $x = 0 \implies y = 1$. For $x \neq 0$, divide top and bottom by $x$ and set $t = x +
+                    \dfrac{4}{x}$:</p>
+                $$y = \frac{\left(x + \frac{4}{x}\right) - 3}{\left(x + \frac{4}{x}\right) + 3} = \frac{t - 3}{t + 3} =
+                1 - \frac{6}{t + 3}$$
+                <p>By AM-GM, $t \ge 2\sqrt{4} = 4$ for $x > 0$ (giving $y_{\min} = \frac{4 - 3}{4 + 3} = \frac{1}{7}$ at
+                    $t = 4$) and $t \le -4$ for $x < 0$ (giving $y_{\max}=\frac{-4 - 3}{-4 + 3}=7$ at $t=-4$). Since $y$
+                        sweeps monotonically over $[\frac{1}{7}, 1)$ and $(1, 7]$, adding $y(0)=1$ gives Range
+                        $=\left[\dfrac{1}{7},\ 7\right]$ in 15 seconds!</p>
+            </div>
+            <p><strong>Final Answer:</strong> Minimum value $= \dfrac{1}{7}$, Maximum value $= 7$; Range $=
+                \left[\dfrac{1}{7},\ 7\right]$.</p>
+        </div>
+    </div>
+
+</article>

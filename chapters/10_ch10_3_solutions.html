@@ -1,0 +1,724 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 10: Progressions (AP, GP, AGP, Telescopic Series, AM-GM) &amp; 3-Variable Identities — Solutions &amp; Error Forensics">
+
+    <!-- ==================== CHAPTER HERO ==================== -->
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 2: Mathematics (Paper 1) &bull; Chapter 10 &bull; Part 3: Step-by-Step
+            Solutions &amp; Error Forensics</div>
+        <h1>Complete Verified Solutions &amp; Trap Forensics: Chapter 10</h1>
+        <p>
+            Zero-skip algebraic derivations for all <strong>28 problems</strong> from the Chapter 10 Practice Arena,
+            verified line-by-line against the official Answer Key. Study the five <strong>Trap &amp; Error
+                Forensics</strong> cards at the end to immunize yourself against the most lethal Paper 1 point-drains.
+        </p>
+        <div class="tag-row">
+            <span class="meta-pill">28 Zero-Skip Solutions</span>
+            <span class="meta-pill">100% Answer Key Verified</span>
+            <span class="meta-pill">5 Olympiad Trap Forensics Cards</span>
+            <span class="meta-pill">Part 3 of 3</span>
+        </div>
+    </header>
+
+    <!-- ==================== LEVEL 1 SOLUTIONS ==================== -->
+    <div class="level-banner l1">Level 1 Solutions: Warmup &amp; Structural Calibration (Q1–Q8)</div>
+
+    <!-- S1 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l1">Q1 &bull; Level 1</span>
+            <span class="badge badge-type">AP &bull; $S_n$ Constant Trap</span>
+            <strong>Correct Answer: (B) $79$</strong>
+        </p>
+        <p>
+            We are given $S_n = 4n^2 - 3n + 5$ for all positive integers $n$. Because the constant term $C = 5 \neq 0$,
+            we must compute $T_1$ directly from $S_1$ and apply $T_n = S_n - S_{n-1}$ strictly for $n \ge 2$.
+        </p>
+        <p><strong>Step 1 — Compute $T_1$:</strong></p>
+        $$T_1 = S_1 = 4(1)^2 - 3(1) + 5 = 4 - 3 + 5 = 6.$$
+        <p><strong>Step 2 — Compute $T_{10}$ via $S_{10} - S_9$ (and verify via general $T_n$):</strong></p>
+        $$S_{10} = 4(10)^2 - 3(10) + 5 = 400 - 30 + 5 = 375,$$
+        $$S_9 = 4(9)^2 - 3(9) + 5 = 324 - 27 + 5 = 302.$$
+        $$T_{10} = S_{10} - S_9 = 375 - 302 = 73.$$
+        <p>
+            <em>General formula check ($n \ge 2$):</em> $T_n = (4n^2 - 3n + 5) - [4(n-1)^2 - 3(n-1) + 5] = 4(2n - 1) - 3
+            = 8n - 7 \implies T_{10} = 8(10) - 7 = 73$.
+        </p>
+        <p><strong>Step 3 — Add $T_1$ and $T_{10}$:</strong></p>
+        $$T_1 + T_{10} = 6 + 73 = \mathbf{79}.$$
+        <p><em>Trap Note:</em> Plugging $n = 1$ blindly into $8n - 7$ would give $T_1 = 1$ and the wrong distractor $1 +
+            73 = 74$ (Option A).</p>
+    </div>
+
+    <!-- S2 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l1">Q2 &bull; Level 1</span>
+            <span class="badge badge-type">AP &bull; Symmetric Selection</span>
+            <strong>Correct Answer: (C) $504$</strong>
+        </p>
+        <p>Let the three numbers in AP be $a - d,\; a,\; a + d$.</p>
+        <p><strong>Step 1 — Use the sum condition:</strong></p>
+        $$(a - d) + a + (a + d) = 27 \implies 3a = 27 \implies a = 9.$$
+        <p><strong>Step 2 — Use the sum of squares condition:</strong></p>
+        $$(9 - d)^2 + 9^2 + (9 + d)^2 = 293.$$
+        <p>Expand using $(x - y)^2 + (x + y)^2 = 2(x^2 + y^2)$:</p>
+        $$2(81 + d^2) + 81 = 293 \implies 243 + 2d^2 = 293 \implies 2d^2 = 50 \implies d^2 = 25 \implies d = \pm 5.$$
+        <p><strong>Step 3 — Compute the product:</strong></p>
+        <p>Whether $d = 5$ or $d = -5$, the unordered triplet of numbers is $\{4, 9, 14\}$. Therefore:</p>
+        $$\text{Product} = 4 \times 9 \times 14 = 36 \times 14 = \mathbf{504}.$$
+    </div>
+
+    <!-- S3 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l1">Q3 &bull; Level 1</span>
+            <span class="badge badge-type">Infinite GP &bull; Recurring Decimal</span>
+            <strong>Correct Answer: (A) $19$</strong>
+        </p>
+        <p>Split $0.1\overline{36}$ into its terminating prefix and an infinite convergent GP:</p>
+        $$0.1\overline{36} = 0.1 + 0.036 + 0.00036 + 0.0000036 + \dots = \frac{1}{10} + \frac{36}{1000}\left(1 +
+        \frac{1}{100} + \frac{1}{100^2} + \dots\right).$$
+        <p>Since the common ratio $r = \dfrac{1}{100}$ satisfies $|r| \lt 1$, apply $S_\infty = \dfrac{a}{1 - r}$:</p>
+        $$0.1\overline{36} = \frac{1}{10} + \frac{36/1000}{1 - 1/100} = \frac{1}{10} + \frac{36/1000}{99/100} =
+        \frac{1}{10} + \frac{36}{990} = \frac{99 + 36}{990} = \frac{135}{990}.$$
+        <p>Reduce to lowest terms by dividing numerator and denominator by $\gcd(135, 990) = 45$:</p>
+        $$\frac{p}{q} = \frac{135 \div 45}{990 \div 45} = \frac{3}{22}.$$
+        <p>Since $\gcd(3, 22) = 1$, we have $p = 3$ and $q = 22$, giving:</p>
+        $$q - p = 22 - 3 = \mathbf{19}.$$
+    </div>
+
+    <!-- S4 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l1">Q4 &bull; Level 1</span>
+            <span class="badge badge-type">GP &bull; Equidistant Product Property</span>
+            <strong>Correct Answer: (D) $512$</strong>
+        </p>
+        <p>Let the $9$ terms of the GP be $T_1, T_2, \dots, T_9$ with first term $a$ and common ratio $r$. Then the
+            middle term is $T_5 = ar^4 = 2$.</p>
+        <p>Pair equidistant terms from both ends:</p>
+        $$T_1 T_9 = (a)(ar^8) = (ar^4)^2 = T_5^2, \quad T_2 T_8 = T_5^2, \quad T_3 T_7 = T_5^2, \quad T_4 T_6 = T_5^2.$$
+        <p>Multiply all $9$ terms together:</p>
+        $$P_9 = (T_1 T_9)(T_2 T_8)(T_3 T_7)(T_4 T_6) \cdot T_5 = (T_5^2)^4 \cdot T_5 = T_5^9 = 2^9 = \mathbf{512}.$$
+    </div>
+
+    <!-- S5 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l1">Q5 &bull; Level 1</span>
+            <span class="badge badge-type">3-Variable Identities</span>
+            <strong>Correct Answer: (B) $19$</strong>
+        </p>
+        <p>Apply the sum-of-squares identity $a^2 + b^2 + c^2 - ab - bc - ca = \dfrac{1}{2}\bigl[(a - b)^2 + (b - c)^2 +
+            (c - a)^2\bigr]$.</p>
+        <p>Compute the three pairwise differences for $a = 997,\; b = 999,\; c = 1002$:</p>
+        $$a - b = -2, \qquad b - c = -3, \qquad c - a = 5.$$
+        <p>Substitute directly:</p>
+        $$a^2 + b^2 + c^2 - ab - bc - ca = \frac{1}{2}\Bigl[(-2)^2 + (-3)^2 + 5^2\Bigr] = \frac{4 + 9 + 25}{2} =
+        \frac{38}{2} = \mathbf{19}.$$
+    </div>
+
+    <!-- S6 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l1">Q6 &bull; Level 1</span>
+            <span class="badge badge-type">NAT &bull; Alternating Squares</span>
+            <strong>Correct Answer: 300</strong>
+        </p>
+        <p>Group consecutive terms into $12$ pairs and factor each pair via $x^2 - y^2 = (x - y)(x + y)$:</p>
+        $$
+        \begin{aligned}
+        S &= (24^2 - 23^2) + (22^2 - 21^2) + \dots + (2^2 - 1^2) \\
+        &= (24 - 23)(24 + 23) + (22 - 21)(22 + 21) + \dots + (2 - 1)(2 + 1) \\
+        &= (24 + 23) + (22 + 21) + \dots + (2 + 1) = \sum_{k=1}^{24} k.
+        \end{aligned}
+        $$
+        <p>Apply the triangular sum formula $\sum_{k=1}^{n} k = \dfrac{n(n + 1)}{2}$ at $n = 24$:</p>
+        $$S = \frac{24 \times 25}{2} = 12 \times 25 = \mathbf{300}.$$
+    </div>
+
+    <!-- S7 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l1">Q7 &bull; Level 1</span>
+            <span class="badge badge-type">NAT &bull; Inserting Arithmetic Means</span>
+            <strong>Correct Answer: 600</strong>
+        </p>
+        <p>
+            The full sequence $7, A_1, A_2, \dots, A_{25}, 41$ is an AP of $27$ terms. By the equidistant pairing
+            property of an AP, $A_1 + A_{25} = 7 + 41 = 48$.
+        </p>
+        <p>Using the AP sum formula for the $25$ inserted means:</p>
+        $$\sum_{m=1}^{25} A_m = \frac{25}{2}(A_1 + A_{25}) = 25 \times \left(\frac{7 + 41}{2}\right) = 25 \times 24 =
+        \mathbf{600}.$$
+    </div>
+
+    <!-- S8 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l1">Q8 &bull; Level 1</span>
+            <span class="badge badge-type">NAT &bull; AM–GM Optimization</span>
+            <strong>Correct Answer: 031</strong>
+        </p>
+        <p>Since $x \gt 0$, both $4x$ and $\dfrac{25}{x}$ are strictly positive. Apply the 2-term AM–GM inequality:</p>
+        $$\frac{4x + \frac{25}{x}}{2} \ge \sqrt{4x \cdot \frac{25}{x}} = \sqrt{100} = 10 \implies 4x + \frac{25}{x} \ge
+        20.$$
+        <p><strong>Verify attainability of equality:</strong> Equality holds iff $4x = \dfrac{25}{x} \implies x^2 =
+            \dfrac{25}{4} \implies x = \dfrac{5}{2} \gt 0$, which lies strictly in the allowed domain.</p>
+        <p>Adding the constant $+11$ to both sides:</p>
+        $$f(x) = 4x + \frac{25}{x} + 11 \ge 20 + 11 = \mathbf{31} \quad (\text{NAT code: } \mathbf{031}).$$
+    </div>
+
+    <!-- ==================== LEVEL 2 SOLUTIONS ==================== -->
+    <div class="level-banner l2">Level 2 Solutions: Exam-Real BEST / NTSE Stage 2 Standard (Q9–Q19)</div>
+
+    <!-- S9 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q9 &bull; Level 2</span>
+            <span class="badge badge-type">AP &bull; Ratio of Sums to Terms</span>
+            <strong>Correct Answer: (B) $7 : 16$</strong>
+        </p>
+        <p>Let the two APs have first terms $a_1, a_2$ and common differences $d_1, d_2$. For any positive integer $k$:
+        </p>
+        $$\frac{S_k}{S'_k} = \frac{\frac{k}{2}[2a_1 + (k - 1)d_1]}{\frac{k}{2}[2a_2 + (k - 1)d_2]} = \frac{a_1 +
+        \left(\frac{k - 1}{2}\right)d_1}{a_2 + \left(\frac{k - 1}{2}\right)d_2} = \frac{3k + 8}{7k + 15}.$$
+        <p>To match the ratio of the $12^{\text{th}}$ terms $\dfrac{T_{12}}{T'_{12}} = \dfrac{a_1 + 11d_1}{a_2 +
+            11d_2}$, set:</p>
+        $$\frac{k - 1}{2} = 11 \implies k = 2(12) - 1 = 23.$$
+        <p>Substitute $k = 23$ into the given ratio:</p>
+        $$\frac{T_{12}}{T'_{12}} = \frac{3(23) + 8}{7(23) + 15} = \frac{69 + 8}{161 + 15} = \frac{77}{176} = \frac{7
+        \times 11}{16 \times 11} = \mathbf{7 : 16}.$$
+    </div>
+
+    <!-- S10 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q10 &bull; Level 2</span>
+            <span class="badge badge-type">Infinite GP &bull; Nested Figures</span>
+            <strong>Correct Answer: (C) $\dfrac{\pi}{2}$</strong>
+        </p>
+        <p>Track the radius $R_k$ of circle $C_k$ and side length $s_k$ of square $S_k$:</p>
+        <ul>
+            <li>Circle $C_1$ has radius $R_1 = R$ and area $\text{Area}(C_1) = \pi R^2$.</li>
+            <li>Square $S_1$ is inscribed inside $C_1$, so its diagonal equals the diameter $2R$. Hence $s_1\sqrt{2} =
+                2R \implies s_1 = R\sqrt{2}$ and $\text{Area}(S_1) = s_1^2 = 2R^2$.</li>
+            <li>Circle $C_2$ is inscribed inside $S_1$, so its diameter equals the side $s_1 = R\sqrt{2}$. Hence $R_2 =
+                \dfrac{R}{\sqrt{2}}$ and $\text{Area}(C_2) = \pi R_2^2 = \dfrac{1}{2}\pi R^2$.</li>
+            <li>Square $S_2$ is inscribed inside $C_2$, so $\text{Area}(S_2) = 2R_2^2 = R^2 =
+                \dfrac{1}{2}\text{Area}(S_1)$.</li>
+        </ul>
+        <p>Both area sequences are infinite GPs with common ratio $r = \dfrac{1}{2}$ (strictly convergent since $|r| =
+            \dfrac{1}{2} \lt 1$):</p>
+        $$\sum_{k=1}^{\infty} \text{Area}(C_k) = \frac{\pi R^2}{1 - \frac{1}{2}} = 2\pi R^2, \qquad \sum_{k=1}^{\infty}
+        \text{Area}(S_k) = \frac{2R^2}{1 - \frac{1}{2}} = 4R^2.$$
+        <p>Take their ratio:</p>
+        $$\frac{\sum \text{Area}(C_k)}{\sum \text{Area}(S_k)} = \frac{2\pi R^2}{4R^2} = \mathbf{\frac{\pi}{2}}.$$
+    </div>
+
+    <!-- S11 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q11 &bull; Level 2</span>
+            <span class="badge badge-type">Olympiad Bridge &bull; Infinite AGP</span>
+            <strong>Correct Answer: (A) $4$</strong>
+        </p>
+        <p>
+            The numerators $2, 5, 8, 11, 14, \dots$ form an AP ($a = 2,\; d = 3$), and the denominators $1, 4, 4^2, 4^3,
+            \dots$ give a GP ratio $r = \dfrac{1}{4}$. Since $|r| = \dfrac{1}{4} \lt 1$, the infinite AGP converges.
+        </p>
+        <p><strong>Shift-and-Subtract Derivation:</strong></p>
+        $$
+        \begin{aligned}
+        S &= 2 + \frac{5}{4} + \frac{8}{16} + \frac{11}{64} + \frac{14}{256} + \dots \\
+        \frac{1}{4}S &= \phantom{2 +\;} \frac{2}{4} + \frac{5}{16} + \frac{8}{64} + \frac{11}{256} + \dots \\
+        \hline
+        \frac{3}{4}S &= 2 + \frac{3}{4} + \frac{3}{16} + \frac{3}{64} + \frac{3}{256} + \dots
+        \end{aligned}
+        $$
+        <p>Sum the pure infinite GP starting at $\dfrac{3}{4}$ with ratio $r = \dfrac{1}{4}$:</p>
+        $$\frac{3}{4}S = 2 + \frac{3/4}{1 - 1/4} = 2 + \frac{3/4}{3/4} = 2 + 1 = 3 \implies S = 3 \times \frac{4}{3} =
+        \mathbf{4}.$$
+    </div>
+
+    <!-- S12 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q12 &bull; Level 2</span>
+            <span class="badge badge-type">Telescopic Series &bull; Radical Conjugates</span>
+            <strong>Correct Answer: (D) $\dfrac{7}{2}$</strong>
+        </p>
+        <p>
+            The numbers under the square roots form the AP $1, 5, 9, \dots, 225$ with constant step $d = 4$. Rationalize
+            the general term for $m \in \{1, 5, 9, \dots, 221\}$:
+        </p>
+        $$\frac{1}{\sqrt{m} + \sqrt{m + 4}} = \frac{\sqrt{m + 4} - \sqrt{m}}{(m + 4) - m} = \frac{1}{4}\bigl(\sqrt{m +
+        4} - \sqrt{m}\bigr).$$
+        <p>Sum across all terms—every intermediate radical cancels cleanly:</p>
+        $$S = \frac{1}{4}\Bigl[(\sqrt{5} - \sqrt{1}) + (\sqrt{9} - \sqrt{5}) + (\sqrt{13} - \sqrt{9}) + \dots +
+        (\sqrt{225} - \sqrt{221})\Bigr] = \frac{\sqrt{225} - \sqrt{1}}{4} = \frac{15 - 1}{4} = \frac{14}{4} =
+        \mathbf{\frac{7}{2}}.$$
+    </div>
+
+    <!-- S13 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q13 &bull; Level 2</span>
+            <span class="badge badge-type">3-Variable Identities</span>
+            <strong>Correct Answer: (D) $18$</strong>
+        </p>
+        <p><strong>Step 1 — Extract $xy + yz + zx$ from $(x + y + z)^2$:</strong></p>
+        $$(x + y + z)^2 = x^2 + y^2 + z^2 + 2(xy + yz + zx) \implies 6^2 = 14 + 2(xy + yz + zx).$$
+        $$2(xy + yz + zx) = 36 - 14 = 22 \implies xy + yz + zx = 11.$$
+        <p><strong>Step 2 — Substitute into the 3-variable cubic identity:</strong></p>
+        $$x^3 + y^3 + z^3 - 3xyz = (x + y + z)(x^2 + y^2 + z^2 - xy - yz - zx) = 6(14 - 11) = 6 \times 3 =
+        \mathbf{18}.$$
+    </div>
+
+    <!-- S14 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q14 &bull; Level 2</span>
+            <span class="badge badge-type">NAT &bull; Step-3 Telescoping</span>
+            <strong>Correct Answer: 036</strong>
+        </p>
+        <p>Every denominator is a product of consecutive terms from the AP $2, 5, 8, \dots, 62$ with step $d = 3$. Split
+            each fraction:</p>
+        $$\frac{1}{a_k \cdot a_{k+1}} = \frac{1}{3}\left(\frac{1}{a_k} - \frac{1}{a_{k+1}}\right).$$
+        <p>Sum from the first term $\frac{1}{2 \cdot 5}$ to the last term $\frac{1}{59 \cdot 62}$:</p>
+        $$S = \frac{1}{3}\left[\left(\frac{1}{2} - \frac{1}{5}\right) + \left(\frac{1}{5} - \frac{1}{8}\right) + \dots +
+        \left(\frac{1}{59} - \frac{1}{62}\right)\right] = \frac{1}{3}\left(\frac{1}{2} - \frac{1}{62}\right) =
+        \frac{1}{3}\left(\frac{31 - 1}{62}\right) = \frac{1}{3} \cdot \frac{30}{62} = \frac{10}{62} = \frac{5}{31}.$$
+        <p>Since $5$ and $31$ are distinct primes, $\gcd(5, 31) = 1$, so $p = 5$ and $q = 31$:</p>
+        $$p + q = 5 + 31 = \mathbf{36} \quad (\text{NAT code: } \mathbf{036}).$$
+    </div>
+
+    <!-- S15 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q15 &bull; Level 2</span>
+            <span class="badge badge-type">NAT &bull; Special Power Sums</span>
+            <strong>Correct Answer: 495</strong>
+        </p>
+        <p>Expand the general term $k(k + 2) = k^2 + 2k$ and split the summation:</p>
+        $$\sum_{k=1}^{10} k(k + 2) = \sum_{k=1}^{10} k^2 + 2\sum_{k=1}^{10} k.$$
+        <p>Apply the standard formulas $\sum_{k=1}^{n} k^2 = \dfrac{n(n+1)(2n+1)}{6}$ and $\sum_{k=1}^{n} k =
+            \dfrac{n(n+1)}{2}$ at $n = 10$:</p>
+        $$\sum_{k=1}^{10} k^2 = \frac{10 \times 11 \times 21}{6} = 5 \times 11 \times 7 = 385, \qquad 2\sum_{k=1}^{10} k
+        = 2 \times \frac{10 \times 11}{2} = 110.$$
+        <p>Add both totals:</p>
+        $$385 + 110 = \mathbf{495}.$$
+    </div>
+
+    <!-- S16 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q16 &bull; Level 2</span>
+            <span class="badge badge-type">NAT &bull; Inserting Geometric Means</span>
+            <strong>Correct Answer: 124</strong>
+        </p>
+        <p>
+            Inserting $5$ positive geometric means $G_1, G_2, G_3, G_4, G_5$ between $2$ and $128$ creates a GP of $7$
+            terms with $T_1 = 2$ and $T_7 = 128$:
+        </p>
+        $$T_7 = 2r^6 = 128 \implies r^6 = 64 = 2^6.$$
+        <p>Since all geometric means are strictly positive, we must take the positive real root $r = 2$ (rejecting $r =
+            -2$, which would make $G_1, G_3, G_5$ negative).</p>
+        <p>List and sum the $5$ geometric means (a GP starting at $G_1 = 4$ with ratio $r = 2$):</p>
+        $$G_1 + G_2 + G_3 + G_4 + G_5 = 4 + 8 + 16 + 32 + 64 = \frac{4(2^5 - 1)}{2 - 1} = 4 \times 31 = \mathbf{124}.$$
+    </div>
+
+    <!-- S17 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q17 &bull; Level 2</span>
+            <span class="badge badge-type">NAT &bull; Multiplicative AM–GM</span>
+            <strong>Correct Answer: 064</strong>
+        </p>
+        <p>Because $a, b, c \gt 0$, apply 2-term AM–GM independently to each positive factor:</p>
+        $$a + 2 \ge 2\sqrt{2a}, \qquad b + 2 \ge 2\sqrt{2b}, \qquad c + 2 \ge 2\sqrt{2c}.$$
+        <p>Since all left- and right-hand sides are strictly positive, multiply all three inequalities together:</p>
+        $$(a + 2)(b + 2)(c + 2) \ge (2\sqrt{2a})(2\sqrt{2b})(2\sqrt{2c}) = 8\sqrt{8abc}.$$
+        <p>Substitute the given constraint $abc = 8$:</p>
+        $$(a + 2)(b + 2)(c + 2) \ge 8\sqrt{8 \times 8} = 8 \times 8 = 64.$$
+        <p><strong>Verify attainability of equality:</strong> All three AM–GM inequalities become equalities
+            simultaneously iff $a = 2,\; b = 2,\; c = 2$. Check the constraint: $abc = 2 \cdot 2 \cdot 2 = 8$, which
+            holds! Hence the exact minimum is $\mathbf{64}$ (NAT code: $\mathbf{064}$).</p>
+    </div>
+
+    <!-- S18 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q18 &bull; Level 2</span>
+            <span class="badge badge-type">Passage 1 &bull; Infinite GP Dynamics</span>
+            <strong>Correct Answer: (C) $720\text{ m}$</strong>
+        </p>
+        <p>
+            Here $H = 180\text{ m}$ and rebound ratio $r = \dfrac{3}{5}$. The initial drop of $H$ occurs
+            <strong>once</strong>, while every subsequent rebound height ($Hr, Hr^2, Hr^3, \dots$) is traversed
+            <strong>twice</strong> (once going up, once coming back down):
+        </p>
+        $$D_{\text{total}} = H + 2\bigl(Hr + Hr^2 + Hr^3 + \dots\bigr).$$
+        <p>Since $|r| = \dfrac{3}{5} \lt 1$, sum the infinite GP:</p>
+        $$D_{\text{total}} = H + 2\left(\frac{Hr}{1 - r}\right) = H\left(\frac{1 + r}{1 - r}\right) = 180\left(\frac{1 +
+        \frac{3}{5}}{1 - \frac{3}{5}}\right) = 180\left(\frac{8/5}{2/5}\right) = 180 \times 4 = \mathbf{720\text{ m}}.$$
+    </div>
+
+    <!-- S19 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q19 &bull; Level 2</span>
+            <span class="badge badge-type">Passage 1 &bull; Tail of Infinite GP</span>
+            <strong>Correct Answer: (B) $324\text{ m}$</strong>
+        </p>
+        <p>Trace the exact distance traveled <em>up to</em> the $2^{\text{nd}}$ impact with the floor:</p>
+        <ul>
+            <li>Drop to $1^{\text{st}}$ impact: $H = 180\text{ m}$.</li>
+            <li>Rebound up and fall down to $2^{\text{nd}}$ impact: $2Hr = 2 \times 180 \times \dfrac{3}{5} = 216\text{
+                m}$.</li>
+        </ul>
+        <p>Distance traveled strictly <em>after</em> the $2^{\text{nd}}$ impact:</p>
+        $$D_{\text{after }2^{\text{nd}}} = D_{\text{total}} - (180 + 216) = 720 - 396 = \mathbf{324\text{ m}}.$$
+        <p>
+            <em>Direct GP Tail Check:</em> $2(Hr^2 + Hr^3 + \dots) = \dfrac{2Hr^2}{1 - r} = \dfrac{2 \times 180 \times
+            \frac{9}{25}}{\frac{2}{5}} = 180 \times \dfrac{9}{5} = 36 \times 9 = 324\text{ m}$.
+        </p>
+    </div>
+
+    <!-- ==================== LEVEL 3 SOLUTIONS ==================== -->
+    <div class="level-banner l3">Level 3 Solutions: Rank-Booster / IOQM-Lite &amp; Resonance Olympiad Tier (Q20–Q28)
+    </div>
+
+    <!-- S20 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q20 &bull; Level 3</span>
+            <span class="badge badge-type">Double Shift-and-Subtract</span>
+            <strong>Correct Answer: (C) $6$</strong>
+        </p>
+        <p>
+            Here the numerators $k^2$ are quadratic in $k$, while the GP ratio is $r = \dfrac{1}{2}$ ($|r| \lt 1$).
+            Apply shift-and-subtract <strong>twice</strong>.
+        </p>
+        <p><strong>First Shift-and-Subtract (Quadratic &rarr; Linear AGP):</strong></p>
+        $$
+        \begin{aligned}
+        S &= \frac{1}{2} + \frac{4}{4} + \frac{9}{8} + \frac{16}{16} + \frac{25}{32} + \dots \\
+        \frac{1}{2}S &= \phantom{\frac{1}{2} +\;} \frac{1}{4} + \frac{4}{8} + \frac{9}{16} + \frac{16}{32} + \dots \\
+        \hline
+        \frac{1}{2}S &= \frac{1}{2} + \frac{3}{4} + \frac{5}{8} + \frac{7}{16} + \frac{9}{32} + \dots
+        \end{aligned}
+        $$
+        <p>Let $T = \dfrac{1}{2}S = \dfrac{1}{2} + \dfrac{3}{4} + \dfrac{5}{8} + \dfrac{7}{16} + \dots$ (a standard
+            infinite AGP with $a = \frac{1}{2},\; d = 1$ in terms of $r = \frac{1}{2}$, or numerators $1, 3, 5, 7,
+            \dots$ with difference $2$).</p>
+        <p><strong>Second Shift-and-Subtract (Linear AGP &rarr; Pure GP):</strong></p>
+        $$
+        \begin{aligned}
+        T &= \frac{1}{2} + \frac{3}{4} + \frac{5}{8} + \frac{7}{16} + \dots \\
+        \frac{1}{2}T &= \phantom{\frac{1}{2} +\;} \frac{1}{4} + \frac{3}{8} + \frac{5}{16} + \dots \\
+        \hline
+        \frac{1}{2}T &= \frac{1}{2} + \frac{2}{4} + \frac{2}{8} + \frac{2}{16} + \dots
+        \end{aligned}
+        $$
+        <p>Evaluate the pure infinite GP:</p>
+        $$\frac{1}{2}T = \frac{1}{2} + \frac{2/4}{1 - 1/2} = \frac{1}{2} + 1 = \frac{3}{2} \implies T = 3.$$
+        <p>Recover $S$ from $\dfrac{1}{2}S = T = 3$:</p>
+        $$S = 2T = \mathbf{6}.$$
+    </div>
+
+    <!-- S21 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q21 &bull; Level 3</span>
+            <span class="badge badge-type">AM–GM &bull; Unattainable Equality Trap</span>
+            <strong>Correct Answer: (B) $\dfrac{25}{4}$</strong>
+        </p>
+        <p>Rewrite $f(x)$ by splitting $x^2 + 25 = (x^2 + 16) + 9$:</p>
+        $$f(x) = \frac{(x^2 + 16) + 9}{\sqrt{x^2 + 16}} = \sqrt{x^2 + 16} + \frac{9}{\sqrt{x^2 + 16}}.$$
+        <p>Set $t = \sqrt{x^2 + 16}$. Because $x^2 \ge 0$ for all $x \in \mathbb{R}$, the exact attainable range of $t$
+            is <strong>$t \ge 4$</strong>.</p>
+        <p>
+            <strong>Check Naive AM–GM First:</strong> $t + \dfrac{9}{t} \ge 2\sqrt{9} = 6$, with equality iff $t = 3$.
+            Since $t \ge 4$, $t = 3$ is <em>impossible</em>! Option (A) $6$ is the classic distractor trap.
+        </p>
+        <p><strong>Exact Minimum via Monotonicity Comparison at Boundary $t = 4$:</strong> Let $h(t) = t +
+            \dfrac{9}{t}$. Compare $h(t)$ against $h(4) = 4 + \dfrac{9}{4} = \dfrac{25}{4}$:</p>
+        $$h(t) - h(4) = (t - 4) + \left(\frac{9}{t} - \frac{9}{4}\right) = (t - 4) - \frac{9(t - 4)}{4t} = (t -
+        4)\left(\frac{4t - 9}{4t}\right).$$
+        <p>
+            For every $t \ge 4$, we have $t - 4 \ge 0$, $4t - 9 \ge 7 \gt 0$, and $4t \gt 0$. Thus $h(t) \ge
+            \dfrac{25}{4}$ for all $t \ge 4$, with equality at $t = 4 \iff x = 0$. Therefore, the exact minimum is
+            $\mathbf{\dfrac{25}{4}}$.
+        </p>
+    </div>
+
+    <!-- S22 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q22 &bull; Level 3</span>
+            <span class="badge badge-type">Weighted AM–GM Term Splitting</span>
+            <strong>Correct Answer: (D) $20$</strong>
+        </p>
+        <p>
+            We must minimize $3x + 4y$ subject to $x^3 y^2 = 256$ ($x, y \gt 0$). To force the product inside AM–GM to
+            contain the exact monomial $x^3 y^2$, split $3x$ into <strong>$3$ equal copies</strong> of $x$ and $4y$ into
+            <strong>$2$ equal copies</strong> of $2y$:
+        </p>
+        $$3x + 4y = x + x + x + 2y + 2y.$$
+        <p>Since $x, y \gt 0$, all $5$ terms are strictly positive. Apply the 5-term AM–GM inequality:</p>
+        $$\frac{x + x + x + 2y + 2y}{5} \ge \bigl(x \cdot x \cdot x \cdot 2y \cdot 2y\bigr)^{1/5} = \bigl(4x^3
+        y^2\bigr)^{1/5}.$$
+        <p>Substitute $x^3 y^2 = 256$:</p>
+        $$\frac{3x + 4y}{5} \ge (4 \times 256)^{1/5} = (1024)^{1/5} = (4^5)^{1/5} = 4 \implies 3x + 4y \ge 20.$$
+        <p><strong>Verify attainability of equality:</strong> All $5$ split terms are equal iff $x = 2y$. Plugging into
+            $x^3 y^2 = 256$:</p>
+        $$(2y)^3 y^2 = 256 \implies 8y^5 = 256 \implies y^5 = 32 \implies y = 2,\quad x = 4.$$
+        <p>Both $x = 4 \gt 0$ and $y = 2 \gt 0$ are valid, and $3(4) + 4(2) = 12 + 8 = 20$. Hence the exact minimum is
+            $\mathbf{20}$.</p>
+    </div>
+
+    <!-- S23 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q23 &bull; Level 3</span>
+            <span class="badge badge-type">3-Variable Identities &bull; Zero-Sum Lock</span>
+            <strong>Correct Answer: (A) $50$</strong>
+        </p>
+        <p>
+            Notice we are given only two equations for three unknowns ($a + b + c = 15$ and $ab + bc + ca = 75$), which
+            tempts students to pick Option (D) "Cannot be determined uniquely." Always check the non-negative sum of
+            squares first!
+        </p>
+        <p><strong>Step 1 — Compute $a^2 + b^2 + c^2$:</strong></p>
+        $$a^2 + b^2 + c^2 = (a + b + c)^2 - 2(ab + bc + ca) = 15^2 - 2(75) = 225 - 150 = 75.$$
+        <p><strong>Step 2 — Form $a^2 + b^2 + c^2 - ab - bc - ca$:</strong></p>
+        $$a^2 + b^2 + c^2 - ab - bc - ca = 75 - 75 = 0.$$
+        <p>Rewrite using the sum-of-squares identity:</p>
+        $$\frac{1}{2}\Bigl[(a - b)^2 + (b - c)^2 + (c - a)^2\Bigr] = 0.$$
+        <p>
+            Because $a, b, c \in \mathbb{R}$, every squared term is non-negative, forcing $a - b = b - c = c - a = 0
+            \implies a = b = c$. Combined with $a + b + c = 15$, all three variables lock uniquely to $a = b = c = 5$!
+        </p>
+        <p><strong>Step 3 — Evaluate the target expression:</strong></p>
+        $$\frac{a^3 + b^3 + c^3 + 3abc}{a + b + c} = \frac{5^3 + 5^3 + 5^3 + 3(5^3)}{15} = \frac{6 \times 125}{15} =
+        \frac{750}{15} = \mathbf{50}.$$
+    </div>
+
+    <!-- S24 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q24 &bull; Level 3</span>
+            <span class="badge badge-type">NAT &bull; Sophie Germain Telescoping</span>
+            <strong>Correct Answer: 961</strong>
+        </p>
+        <p><strong>Step 1 — Factor $4k^4 + 1$ using the Sophie Germain Identity:</strong></p>
+        <p>Add and subtract $4k^2$ to form a difference of squares:</p>
+        $$4k^4 + 1 = (4k^4 + 4k^2 + 1) - 4k^2 = (2k^2 + 1)^2 - (2k)^2 = (2k^2 - 2k + 1)(2k^2 + 2k + 1).$$
+        <p><strong>Step 2 — Split into consecutive telescopic terms:</strong></p>
+        <p>Observe that $(2k^2 + 2k + 1) - (2k^2 - 2k + 1) = 4k$, which matches the numerator identically:</p>
+        $$\frac{4k}{4k^4 + 1} = \frac{(2k^2 + 2k + 1) - (2k^2 - 2k + 1)}{(2k^2 - 2k + 1)(2k^2 + 2k + 1)} = \frac{1}{2k^2
+        - 2k + 1} - \frac{1}{2k^2 + 2k + 1}.$$
+        <p>Define $f(k) = 2k^2 - 2k + 1$. Verify $f(k + 1)$:</p>
+        $$f(k + 1) = 2(k + 1)^2 - 2(k + 1) + 1 = 2k^2 + 4k + 2 - 2k - 2 + 1 = 2k^2 + 2k + 1.$$
+        <p><strong>Step 3 — Collapse from $k = 1$ to $k = 15$:</strong></p>
+        $$S = \sum_{k=1}^{15} \left(\frac{1}{f(k)} - \frac{1}{f(k + 1)}\right) = \frac{1}{f(1)} - \frac{1}{f(16)}.$$
+        <p>Compute $f(1) = 2(1) - 2(1) + 1 = 1$ and $f(16) = 2(256) - 32 + 1 = 512 - 31 = 481$:</p>
+        $$S = 1 - \frac{1}{481} = \frac{480}{481}.$$
+        <p>Since consecutive integers are always coprime, $\gcd(480, 481) = 1$, giving $p = 480$ and $q = 481$:</p>
+        $$p + q = 480 + 481 = \mathbf{961}.$$
+    </div>
+
+    <!-- S25 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q25 &bull; Level 3</span>
+            <span class="badge badge-type">NAT &bull; Offset-2 Telescoping</span>
+            <strong>Correct Answer: 307</strong>
+        </p>
+        <p>Split the general term cleanly:</p>
+        $$\frac{2}{k(k + 2)} = \frac{(k + 2) - k}{k(k + 2)} = \frac{1}{k} - \frac{1}{k + 2}.$$
+        <p>
+            <strong>Watch the Step Offset ($m = 2$):</strong> Because the subtracted term is shifted by $2$ indices
+            instead of $1$, <strong>two</strong> terms survive at the front and <strong>two</strong> survive at the
+            back. Write out the first three and last two rows to see cancellation explicitly:
+        </p>
+        $$
+        \begin{aligned}
+        S &= \left(\frac{1}{1} - \frac{1}{3}\right) + \left(\frac{1}{2} - \frac{1}{4}\right) + \left(\frac{1}{3} -
+        \frac{1}{5}\right) + \dots + \left(\frac{1}{9} - \frac{1}{11}\right) + \left(\frac{1}{10} - \frac{1}{12}\right)
+        \\
+        &= \left(1 + \frac{1}{2}\right) - \left(\frac{1}{11} + \frac{1}{12}\right) = \frac{3}{2} - \frac{23}{132} =
+        \frac{198 - 23}{132} = \frac{175}{132}.
+        \end{aligned}
+        $$
+        <p>Check coprimality: $175 = 5^2 \cdot 7$ and $132 = 2^2 \cdot 3 \cdot 11$ share no prime factors, so $\gcd(175,
+            132) = 1$. Therefore $p = 175,\; q = 132$, and:</p>
+        $$p + q = 175 + 132 = \mathbf{307}.$$
+    </div>
+
+    <!-- S26 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q26 &bull; Level 3</span>
+            <span class="badge badge-type">NAT &bull; AM–GM–HM Identity</span>
+            <strong>Correct Answer: 272</strong>
+        </p>
+        <p>Let $A, G, H$ denote the AM, GM, and HM of the two positive numbers $x$ and $y$. From the given conditions:
+        </p>
+        $$A = G + 2, \qquad H = G - \frac{8}{5}.$$
+        <p><strong>Step 1 — Use the exact 2-variable mean identity $A \cdot H = G^2$:</strong></p>
+        $$(G + 2)\left(G - \frac{8}{5}\right) = G^2 \implies G^2 + \left(2 - \frac{8}{5}\right)G - \frac{16}{5} = G^2.$$
+        $$\frac{2}{5}G = \frac{16}{5} \implies G = 8.$$
+        <p><strong>Step 2 — Recover $x + y$ and $xy$:</strong></p>
+        $$A = G + 2 = 10 \implies \frac{x + y}{2} = 10 \implies x + y = 20,$$
+        $$G = \sqrt{xy} = 8 \implies xy = 64.$$
+        <p><em>Existence check:</em> The quadratic $t^2 - 20t + 64 = (t - 16)(t - 4) = 0$ yields two strictly positive
+            real numbers $\{x, y\} = \{16, 4\}$.</p>
+        <p><strong>Step 3 — Compute $x^2 + y^2$:</strong></p>
+        $$x^2 + y^2 = (x + y)^2 - 2xy = 20^2 - 2(64) = 400 - 128 = \mathbf{272}.$$
+    </div>
+
+    <!-- S27 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q27 &bull; Level 3</span>
+            <span class="badge badge-type">Passage 2 &bull; Recurrence Telescoping</span>
+            <strong>Correct Answer: (A) $\dfrac{4}{25}$</strong>
+        </p>
+        <p><strong>Step 1 — Linearize the recurrence by taking reciprocals:</strong></p>
+        <p>Since $a_1 = \dfrac{1}{2} \gt 0$ and the recurrence preserves positivity, $a_n \gt 0$ for all $n$. Invert
+            both sides of $a_{n+1} = \dfrac{a_n}{1 + 3a_n}$:</p>
+        $$\frac{1}{a_{n+1}} = \frac{1 + 3a_n}{a_n} = \frac{1}{a_n} + 3.$$
+        <p>
+            Thus the reciprocal sequence $b_n = \dfrac{1}{a_n}$ is an AP with $b_1 = \dfrac{1}{a_1} = 2$ and common
+            difference $d = 3$:
+        </p>
+        $$\frac{1}{a_n} = 2 + (n - 1)(3) = 3n - 1 \implies a_n = \frac{1}{3n - 1}.$$
+        <p><strong>Step 2 — Expose the instant telescopic identity directly from the recurrence:</strong></p>
+        <p>Cross-multiplying $a_{n+1}(1 + 3a_n) = a_n$ gives $3a_n a_{n+1} = a_n - a_{n+1}$, so:</p>
+        $$a_k a_{k+1} = \frac{1}{3}(a_k - a_{k+1}).$$
+        <p><strong>Step 3 — Sum from $k = 1$ to $16$:</strong></p>
+        $$\sum_{k=1}^{16} a_k a_{k+1} = \frac{1}{3}(a_1 - a_{17}) = \frac{1}{3}\left(\frac{1}{2} - \frac{1}{3(17) -
+        1}\right) = \frac{1}{3}\left(\frac{1}{2} - \frac{1}{50}\right) = \frac{1}{3}\left(\frac{24}{50}\right) =
+        \frac{8}{50} = \mathbf{\frac{4}{25}}.$$
+    </div>
+
+    <!-- S28 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q28 &bull; Level 3</span>
+            <span class="badge badge-type">Passage 2 &bull; Hidden Infinite AGP</span>
+            <strong>Correct Answer: (C) $10$</strong>
+        </p>
+        <p>From Q27, we proved $\dfrac{1}{a_k} = 3k - 1$ for every $k \ge 1$. Substitute this into the infinite series:
+        </p>
+        $$S = \sum_{k=1}^{\infty} \frac{3k - 1}{2^{k-1}} = 2 + \frac{5}{2} + \frac{8}{4} + \frac{11}{8} + \frac{14}{16}
+        + \dots$$
+        <p>This is a strictly convergent infinite AGP with $a = 2$, $d = 3$, and $r = \dfrac{1}{2}$ ($|r| \lt 1$). Apply
+            shift-and-subtract:</p>
+        $$
+        \begin{aligned}
+        S &= 2 + \frac{5}{2} + \frac{8}{4} + \frac{11}{8} + \dots \\
+        \frac{1}{2}S &= \phantom{2 +\;} \frac{2}{2} + \frac{5}{4} + \frac{8}{8} + \dots \\
+        \hline
+        \frac{1}{2}S &= 2 + \frac{3}{2} + \frac{3}{4} + \frac{3}{8} + \dots
+        \end{aligned}
+        $$
+        <p>Sum the pure infinite GP:</p>
+        $$\frac{1}{2}S = 2 + \frac{3/2}{1 - 1/2} = 2 + 3 = 5 \implies S = \mathbf{10}.$$
+        <div class="shortcut-box">
+            <span class="box-label">Direct Formula Cross-Check</span>
+            <p>$S_\infty = \dfrac{a}{1 - r} + \dfrac{dr}{(1 - r)^2} = \dfrac{2}{1/2} + \dfrac{3(1/2)}{(1/2)^2} = 4 + 6 =
+                10$.</p>
+        </div>
+    </div>
+
+    <!-- ==================== TRAP & ERROR FORENSICS ==================== -->
+    <h2 class="section-heading">Trap &amp; Error Forensics — Five High-Frequency BEST Point-Drains</h2>
+
+    <!-- TRAP 1 -->
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 1 &bull; The $S_n = An^2 + Bn + C$ ($C \neq 0$) Non-AP Constant Trap (See
+            Q1)</span>
+        <p><strong>The Fatal Mistake:</strong> Seeing a quadratic sum $S_n = 4n^2 - 3n + 5$ and blindly writing $T_n =
+            S_n - S_{n-1} = 8n - 7$ for <em>all</em> $n \ge 1$, or claiming the entire sequence is an AP with $a = 1$
+            and $d = 8$.</p>
+        <p><strong>Why It Breaks:</strong> The algebraic identity $T_n = S_n - S_{n-1}$ uses $S_0$ when you plug in $n =
+            1$. In reality, the sum of zero terms is always $0$, NOT $C = 5$. Thus $T_1 = S_1 = A + B + C$, while $T_n =
+            2An + (B - A)$ holds <em>only for $n \ge 2$</em>.</p>
+        <p><strong>Exam Immunity Rule:</strong> Before extracting $d = 2A$, check $S_0$ (plug $n = 0$ into the formula).
+            If $S_0 = 0$, it is a true AP from $n = 1$. If $S_0 = C \neq 0$, ring the alarm bell: compute $T_1 = S_1$
+            separately, and note that the sequence is an AP <strong>strictly from $T_2$ onwards</strong>.</p>
+    </div>
+
+    <!-- TRAP 2 -->
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 2 &bull; The Infinite GP Divergence Trap: Applying $S_\infty =
+            \frac{a}{1-r}$ When $|r| \ge 1$</span>
+        <p><strong>The Fatal Mistake:</strong> Substituting $r$ blindly into $S_\infty = \dfrac{a}{1 - r}$ without first
+            verifying $-1 \lt r \lt 1$. For instance, applying it to $1 + 2 + 4 + 8 + \dots$ ($r = 2$) spits out the
+            mathematical nonsense $\dfrac{1}{1 - 2} = -1$ for a sum of positive integers!</p>
+        <p><strong>Where BEST Hides This Trap:</strong> Parametric equations such as "Find all real values of $x$ for
+            which $1 + (x - 2) + (x - 2)^2 + \dots = \dfrac{1}{3 - x}$" or trigonometric GPs with $r = \sec\theta$
+            (where $|\sec\theta| \ge 1$, so it <em>never</em> converges!) or $r = \tan\theta$ (converges only when
+            $|\tan\theta| \lt 1$).</p>
+        <p><strong>Exam Immunity Rule:</strong> Treat <strong>$|r| \lt 1$</strong> as a mandatory security gate.
+            Whenever a BEST question asks for the sum of an infinite GP/AGP or solves an equation involving $S_\infty$,
+            verify $|r| \lt 1$ on every candidate solution and discard any root violating $-1 \lt r \lt 1$.</p>
+    </div>
+
+    <!-- TRAP 3 -->
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 3 &bull; The AM–GM Dual Trap: Negative Variables &amp; Unattainable
+            Equality (See Q8, Q21)</span>
+        <p><strong>Trap 3A — Applying AM–GM to Negative Numbers:</strong> Students routinely write "By AM–GM, $x +
+            \dfrac{1}{x} \ge 2$ for all real $x \neq 0$." False! If $x = -1$, $x + \dfrac{1}{x} = -2 \not\ge 2$. AM–GM
+            requires <strong>every term to be strictly positive</strong>. When $x \lt 0$, substitute $y = -x \gt 0$ so
+            $y + \dfrac{1}{y} \ge 2 \implies x + \dfrac{1}{x} \le -2$ (giving a <em>maximum</em> of $-2$, not a
+            minimum!).</p>
+        <p><strong>Trap 3B — Claiming an Unattainable Lower Bound as the Minimum:</strong> In Q21, writing $t +
+            \dfrac{9}{t} \ge 2\sqrt{9} = 6$ is a <em>true</em> inequality, yet $6$ is <strong>NOT</strong> the minimum
+            value because equality occurs at $t = 3$, outside the true domain $t = \sqrt{x^2 + 16} \ge 4$.</p>
+        <p><strong>Exam Immunity Rule:</strong> Never stop after computing $n(\prod x_i)^{1/n}$. Always perform the
+            <strong>2-Step AM–GM Audit</strong>: (1) Are all terms strictly positive? (2) Does the equality condition
+            ($x_1 = x_2 = \dots = x_n$) have an actual solution inside the problem's domain? If (2) fails, test the
+            domain boundary via monotonicity!
+        </p>
+    </div>
+
+    <!-- TRAP 4 -->
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 4 &bull; The Missing-Branch Cubic Trap: Forgetting $a = b = c$ When $a^3
+            + b^3 + c^3 = 3abc$ (See Q23)</span>
+        <p><strong>The Fatal Mistake:</strong> Assuming that $a^3 + b^3 + c^3 = 3abc$ automatically forces $a + b + c =
+            0$, or believing that two symmetric equations like $a + b + c = 15$ and $ab + bc + ca = 75$ leave three
+            variables underdetermined.</p>
+        <p><strong>Why It Breaks:</strong> The exact factorization is $a^3 + b^3 + c^3 - 3abc = \dfrac{1}{2}(a + b +
+            c)\bigl[(a - b)^2 + (b - c)^2 + (c - a)^2\bigr] = 0$. Setting a product to zero yields <strong>two
+                independent branches</strong>: either $a + b + c = 0$ <em>OR</em> $a = b = c$.</p>
+        <p><strong>Exam Immunity Rule:</strong> Whenever you encounter $a^3 + b^3 + c^3 = 3abc$ (or $\frac{a^2}{bc} +
+            \frac{b^2}{ca} + \frac{c^2}{ab} = 3$), immediately write both branches on your rough sheet. Scan the problem
+            wording for the discriminator: "positive reals" or "$a + b + c \neq 0$" kills Branch 1 and locks $a = b =
+            c$; "distinct reals" kills Branch 2 and locks $a + b + c = 0$.</p>
+    </div>
+
+    <!-- TRAP 5 -->
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 5 &bull; The Offset-2 Telescoping Trap: Dropping the Second Boundary Pair
+            (See Q25)</span>
+        <p><strong>The Fatal Mistake:</strong> Splitting $\dfrac{2}{k(k + 2)} = \dfrac{1}{k} - \dfrac{1}{k + 2}$ and
+            mechanically writing "first minus last" $= 1 - \dfrac{1}{n + 2}$, forgetting both $+\dfrac{1}{2}$ and
+            $-\dfrac{1}{n + 1}$.</p>
+        <p><strong>Why It Breaks:</strong> "First minus last" works <em>only</em> when the index gap is $m = 1$ ($U_k -
+            U_{k+1}$). When the gap is $m = 2$ ($U_k - U_{k+2}$), the first two positive terms ($U_1, U_2$) never meet a
+            matching negative term, and the last two negative terms ($-U_{n+1}, -U_{n+2}$) never meet a matching
+            positive term.</p>
+        <p><strong>Exam Immunity Rule:</strong> Always check the index offset $m$ in $U_k - U_{k+m}$. Whatever $m$ is,
+            <strong>$m$ positive terms survive at the start and $m$ negative terms survive at the end</strong>. When in
+            doubt during the exam, spend 5 seconds writing out the first three and last two terms vertically so every
+            survivor is visibly confirmed.
+        </p>
+    </div>
+
+</article>

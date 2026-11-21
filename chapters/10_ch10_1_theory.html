@@ -1,0 +1,1360 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 10: Progressions (AP, GP, AGP, Telescopic Series, AM-GM) &amp; 3-Variable Identities">
+
+    <!-- ==================== CHAPTER HERO ==================== -->
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 2: Mathematics (Paper 1) &bull; Chapter 10 &bull; Part 1: Theory &amp; Worked
+            Examples</div>
+        <h1>Progressions (AP, GP, AGP, Telescopic Series, AM–GM) &amp; 3-Variable Identities</h1>
+        <p>
+            In Class 10 NCERT, Progressions stop at basic Arithmetic Progressions. In the actual <strong>BEST
+                (BASE–Resonance)</strong> scholarship exam, Progressions serve as the primary separator between standard
+            board scorers and top-1% IIT/Olympiad rankers—testing hidden quadratic sum traps, infinite geometric decays,
+            shift-and-subtract AGPs, telescopic cancellation chains, AM–GM optimization traps, and 3-variable cubic
+            identities.
+        </p>
+        <div class="tag-row">
+            <span class="meta-pill">Target Study Time: 7 Hours</span>
+            <span class="meta-pill">Weightage: High (Paper 1 Core)</span>
+            <span class="meta-pill">Difficulty: NTSE Stage 2 / IOQM-Lite / Class 11 Foundation</span>
+            <span class="meta-pill">Part 1 of 3: Theory &amp; 9 Worked Examples</span>
+        </div>
+    </header>
+
+    <!-- ==================== SECTION 1: ARITHMETIC PROGRESSIONS ==================== -->
+    <h2 class="section-heading">1. Arithmetic Progressions (AP): Structure, Traps &amp; Power Tools</h2>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Foundation</span>
+        <p>
+            A sequence $T_1, T_2, T_3, \dots, T_n$ is an <strong>Arithmetic Progression (AP)</strong> if the difference
+            between every pair of consecutive terms is a constant $d$ (called the <em>common difference</em>):
+        </p>
+        $$T_{k+1} - T_k = d \quad \text{for all } k \ge 1.$$
+        <p>
+            Setting $T_1 = a$, telescoping the constant step $n - 1$ times yields the <strong>general ($n$-th)
+                term</strong>:
+        </p>
+        $$T_n = a + (n - 1)d = dn + (a - d).$$
+        <p>
+            <strong>Algebraic Signature of an AP:</strong> $T_n$ is always a <strong>linear polynomial in $n$</strong>
+            (of the form $pn + q$), where the coefficient of $n$ is identically the common difference ($d = p$).
+            Conversely, any sequence whose $n$-th term is linear in $n$ is guaranteed to be an AP.
+        </p>
+        <p>
+            <strong>Derivation of the Sum $S_n$ (Gauss Pairing Method):</strong> Let $l = T_n = a + (n - 1)d$ denote the
+            last term. Write $S_n$ forward and backward and add column-by-column:
+        </p>
+        $$
+        \begin{aligned}
+        S_n &= a + (a + d) + (a + 2d) + \dots + (l - d) + l \\
+        S_n &= l + (l - d) + (l - 2d) + \dots + (a + d) + a \\
+        \hline
+        2S_n &= \underbrace{(a + l) + (a + l) + \dots + (a + l)}_{n \text{ identical pairs}} = n(a + l).
+        \end{aligned}
+        $$
+        <p>
+            Dividing by $2$ and substituting $l = a + (n - 1)d$ produces both standard forms:
+        </p>
+        $$S_n = \frac{n}{2}(a + l) = \frac{n}{2}\bigl[2a + (n - 1)d\bigr].$$
+    </div>
+
+    <!-- SVG DIAGRAM 1: AP STAIRCASE & PAIRING -->
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 260" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Visual staircase and Gauss pairing proof of AP sum formula">
+            <!-- Background panel -->
+            <rect x="8" y="8" width="664" height="244" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+
+            <!-- Left: Staircase S_n -->
+            <text x="145" y="34" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#0f172a"
+                text-anchor="middle">1. AP Staircase (Area = S&#8345;)</text>
+            <!-- Bars of heights 40, 75, 110, 145 (a=40, d=35, n=4) -->
+            <rect x="45" y="175" width="46" height="40" fill="#0284c7" stroke="#0c4a6e" stroke-width="1.5" />
+            <rect x="91" y="140" width="46" height="75" fill="#0284c7" stroke="#0c4a6e" stroke-width="1.5" />
+            <rect x="137" y="105" width="46" height="110" fill="#0284c7" stroke="#0c4a6e" stroke-width="1.5" />
+            <rect x="183" y="70" width="46" height="145" fill="#0284c7" stroke="#0c4a6e" stroke-width="1.5" />
+            <!-- Step increment dashed indicators -->
+            <line x1="91" y1="175" x2="137" y2="175" stroke="#bae6fd" stroke-width="1.2" stroke-dasharray="3,2" />
+            <line x1="137" y1="140" x2="183" y2="140" stroke="#bae6fd" stroke-width="1.2" stroke-dasharray="3,2" />
+            <line x1="183" y1="105" x2="229" y2="105" stroke="#bae6fd" stroke-width="1.2" stroke-dasharray="3,2" />
+            <text x="68" y="200" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff"
+                text-anchor="middle">a</text>
+            <text x="114" y="185" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff"
+                text-anchor="middle">a+d</text>
+            <text x="160" y="168" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff"
+                text-anchor="middle">a+2d</text>
+            <text x="206" y="150" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff"
+                text-anchor="middle">l</text>
+            <text x="114" y="162" font-family="system-ui, sans-serif" font-size="10" fill="#e0f2fe"
+                text-anchor="middle">+d</text>
+            <text x="160" y="127" font-family="system-ui, sans-serif" font-size="10" fill="#e0f2fe"
+                text-anchor="middle">+d</text>
+            <text x="206" y="92" font-family="system-ui, sans-serif" font-size="10" fill="#e0f2fe"
+                text-anchor="middle">+d</text>
+            <!-- Width bracket -->
+            <line x1="45" y1="227" x2="229" y2="227" stroke="#334155" stroke-width="1.5" />
+            <line x1="45" y1="222" x2="45" y2="232" stroke="#334155" stroke-width="1.5" />
+            <line x1="229" y1="222" x2="229" y2="232" stroke="#334155" stroke-width="1.5" />
+            <text x="137" y="243" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#334155"
+                text-anchor="middle">n columns (width = n)</text>
+
+            <!-- Center arrow -->
+            <line x1="255" y1="142" x2="318" y2="142" stroke="#0f766e" stroke-width="2.5" />
+            <polygon points="318,136 330,142 318,148" fill="#0f766e" />
+            <text x="290" y="126" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0f766e"
+                text-anchor="middle">Clone &amp;</text>
+            <text x="290" y="160" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0f766e"
+                text-anchor="middle">Invert 180&#176;</text>
+
+            <!-- Right: Paired Rectangle 2 S_n -->
+            <text x="480" y="34" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#0f172a"
+                text-anchor="middle">2. Paired Rectangle (Area = 2S&#8345; = n(a + l))</text>
+            <!-- Total rectangle height = 40 + 145 = 185, from y=30+18=48 to y=233 -> let's use y=50 to y=215 (scale 165: a=35, d=32, l=131 -> sum=166) -->
+            <!-- Let's place bottom at y=215, top at y=50 (height = 165):
+           Col 1: blue height 33 (y=182..215), amber height 132 (y=50..182)
+           Col 2: blue height 66 (y=149..215), amber height 99 (y=50..149)
+           Col 3: blue height 99 (y=116..215), amber height 66 (y=50..116)
+           Col 4: blue height 132 (y=83..215), amber height 33 (y=50..83) -->
+            <!-- Blue original -->
+            <rect x="360" y="182" width="52" height="33" fill="#0284c7" stroke="#0c4a6e" stroke-width="1.5" />
+            <rect x="412" y="149" width="52" height="66" fill="#0284c7" stroke="#0c4a6e" stroke-width="1.5" />
+            <rect x="464" y="116" width="52" height="99" fill="#0284c7" stroke="#0c4a6e" stroke-width="1.5" />
+            <rect x="516" y="83" width="52" height="132" fill="#0284c7" stroke="#0c4a6e" stroke-width="1.5" />
+            <!-- Amber inverted -->
+            <rect x="360" y="50" width="52" height="132" fill="#f59e0b" stroke="#92400e" stroke-width="1.5" />
+            <rect x="412" y="50" width="52" height="99" fill="#f59e0b" stroke="#92400e" stroke-width="1.5" />
+            <rect x="464" y="50" width="52" height="66" fill="#f59e0b" stroke="#92400e" stroke-width="1.5" />
+            <rect x="516" y="50" width="52" height="33" fill="#f59e0b" stroke="#92400e" stroke-width="1.5" />
+
+            <!-- Labels inside paired bars -->
+            <text x="386" y="120" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff"
+                text-anchor="middle">l</text>
+            <text x="386" y="203" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff"
+                text-anchor="middle">a</text>
+            <text x="438" y="103" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff"
+                text-anchor="middle">l-d</text>
+            <text x="438" y="186" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff"
+                text-anchor="middle">a+d</text>
+            <text x="490" y="87" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff"
+                text-anchor="middle">a+d</text>
+            <text x="490" y="170" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff"
+                text-anchor="middle">l-d</text>
+            <text x="542" y="71" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff"
+                text-anchor="middle">a</text>
+            <text x="542" y="154" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff"
+                text-anchor="middle">l</text>
+
+            <!-- Right height bracket -->
+            <line x1="582" y1="50" x2="582" y2="215" stroke="#0f172a" stroke-width="1.5" />
+            <line x1="577" y1="50" x2="587" y2="50" stroke="#0f172a" stroke-width="1.5" />
+            <line x1="577" y1="215" x2="587" y2="215" stroke="#0f172a" stroke-width="1.5" />
+            <text x="626" y="128" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a"
+                text-anchor="middle">Uniform</text>
+            <text x="626" y="144" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a"
+                text-anchor="middle">Height</text>
+            <text x="626" y="160" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f766e"
+                text-anchor="middle">= a + l</text>
+
+            <!-- Bottom bracket -->
+            <line x1="360" y1="227" x2="568" y2="227" stroke="#334155" stroke-width="1.5" />
+            <line x1="360" y1="222" x2="360" y2="232" stroke="#334155" stroke-width="1.5" />
+            <line x1="568" y1="222" x2="568" y2="232" stroke="#334155" stroke-width="1.5" />
+            <text x="464" y="243" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#334155"
+                text-anchor="middle">Width = n &#8658; S&#8345; = n(a + l) / 2</text>
+        </svg>
+        <p class="diagram-caption">Figure 10.1: Visual staircase pairing. Every pair of equidistant terms $(T_k +
+            T_{n+1-k})$ locks to the exact same height $(a + l)$, collapsing the staircase into half a rectangle.</p>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Spotting an AP Instantly from $S_n$</span>
+        <p>
+            Expand the standard sum formula:
+        </p>
+        $$S_n = \frac{n}{2}\bigl[2a + (n - 1)d\bigr] = \left(\frac{d}{2}\right)n^2 + \left(a - \frac{d}{2}\right)n =
+        An^2 + Bn.$$
+        <p>
+            Matching coefficients gives an instantaneous extraction rule whenever $S_n = An^2 + Bn$ (with <strong>zero
+                constant term</strong>):
+        </p>
+        <ul>
+            <li><strong>Common difference:</strong> $d = 2A$ (twice the coefficient of $n^2$).</li>
+            <li><strong>First term:</strong> $T_1 = S_1 = A + B$.</li>
+            <li><strong>General term:</strong> $T_n = S_n - S_{n-1} = \bigl(An^2 + Bn\bigr) - \bigl(A(n-1)^2 +
+                B(n-1)\bigr) = 2An + (B - A)$.</li>
+        </ul>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Critical Exam Trap: The Non-Zero Constant $C$ in $S_n = An^2 + Bn + C$</span>
+        <p>
+            BEST examiners love giving $S_n = An^2 + Bn + C$ with $C \neq 0$ and asking whether the sequence is an AP or
+            asking for $T_1$ and $d$. <strong>Do NOT blindly apply $T_n = S_n - S_{n-1}$ for $n = 1$!</strong>
+        </p>
+        <ul>
+            <li>The identity $T_n = S_n - S_{n-1}$ is valid <strong>only for $n \ge 2$</strong> (since $S_0$ is not
+                defined as $C$; rather, $T_1$ is strictly $S_1$).</li>
+            <li>Here $T_1 = S_1 = A + B + C$, whereas for $n \ge 2$, the constant $C$ cancels out:
+                $$T_n = S_n - S_{n-1} = 2An + (B - A) \quad (n \ge 2).$$
+            </li>
+            <li>Check the first two gaps:
+                $$T_2 - T_1 = (3A + B) - (A + B + C) = 2A - C, \qquad T_3 - T_2 = (5A + B) - (3A + B) = 2A.$$
+            </li>
+            <li><strong>Verdict:</strong> If $C \neq 0$, the sequence is <strong>NOT an AP from the 1st term</strong>—it
+                becomes an AP with common difference $d = 2A$ <em>strictly from the 2nd term onwards</em> ($T_2, T_3,
+                T_4, \dots$).</li>
+        </ul>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: AP Power Techniques</span>
+        <p><strong>1. Symmetric Term Selection (Canceling $d$ on Addition):</strong> When the sum of a small number of
+            terms in an AP is given, choose terms symmetrically around the mean so $d$ vanishes immediately:</p>
+        <ul>
+            <li><strong>3 terms:</strong> $a - d,\; a,\; a + d$ (common difference $= d$; sum $= 3a$).</li>
+            <li><strong>4 terms:</strong> $a - 3d,\; a - d,\; a + d,\; a + 3d$ (common difference $= 2d$; sum $= 4a$).
+            </li>
+            <li><strong>5 terms:</strong> $a - 2d,\; a - d,\; a,\; a + d,\; a + 2d$ (common difference $= d$; sum $=
+                5a$).</li>
+        </ul>
+        <p><strong>2. Ratio of Sums $\leftrightarrow$ Ratio of $n$-th Terms (The $n \to 2n - 1$ Theorem):</strong>
+            Suppose two APs have sums $S_k$ and $S'_k$ with known ratio $\dfrac{S_k}{S'_k} = f(k)$. Divide numerator and
+            denominator by $\dfrac{k}{2}$ and then by $2$:</p>
+        $$\frac{S_k}{S'_k} = \frac{\frac{k}{2}[2a_1 + (k-1)d_1]}{\frac{k}{2}[2a_2 + (k-1)d_2]} = \frac{a_1 +
+        \left(\frac{k-1}{2}\right)d_1}{a_2 + \left(\frac{k-1}{2}\right)d_2}.$$
+        <p>
+            Compare this with $\dfrac{T_n}{T'_n} = \dfrac{a_1 + (n - 1)d_1}{a_2 + (n - 1)d_2}$. Equating coefficients of
+            $d$:
+        </p>
+        $$\frac{k - 1}{2} = n - 1 \iff k = 2n - 1.$$
+        <ul>
+            <li><strong>From $\frac{S_n}{S'_n}$ to $\frac{T_n}{T'_n}$:</strong> Replace $n$ by $2n - 1$.</li>
+            <li><strong>From $\frac{T_n}{T'_n}$ to $\frac{S_n}{S'_n}$:</strong> Replace $n$ by $\dfrac{n + 1}{2}$.</li>
+        </ul>
+        <p><strong>3. Inserting $k$ Arithmetic Means ($A_1, A_2, \dots, A_k$) between $a$ and $b$:</strong> The sequence
+            $a, A_1, A_2, \dots, A_k, b$ is an AP of $(k + 2)$ terms, where $T_{k+2} = b$:</p>
+        $$b = a + (k + 1)d \implies d = \frac{b - a}{k + 1}, \qquad A_m = a + m\left(\frac{b - a}{k + 1}\right) \quad (1
+        \le m \le k).$$
+        <p>
+            <strong>Sum of all $k$ Arithmetic Means:</strong> By equidistant pairing ($A_1 + A_k = a + b$),
+        </p>
+        $$\sum_{m=1}^{k} A_m = \frac{k}{2}(A_1 + A_k) = k\left(\frac{a + b}{2}\right) = k \times (\text{single AM
+        between } a \text{ and } b).$$
+    </div>
+
+    <!-- ==================== SECTION 2: GEOMETRIC PROGRESSIONS ==================== -->
+    <h2 class="section-heading">2. Geometric Progressions (GP): Finite Sums, Infinite Convergence &amp; Geometric Decays
+    </h2>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Foundation</span>
+        <p>
+            A non-zero sequence $T_1, T_2, T_3, \dots$ is a <strong>Geometric Progression (GP)</strong> if the ratio of
+            every consecutive pair is a fixed non-zero constant $r$ (the <em>common ratio</em>):
+        </p>
+        $$\frac{T_{k+1}}{T_k} = r \quad \implies \quad T_n = a r^{n-1} \quad (a \neq 0,\; r \neq 0).$$
+        <p>
+            <strong>Derivation of the Finite Sum $S_n$ (Shift-and-Subtract):</strong> Write $S_n$, multiply through by
+            $r$, and subtract:
+        </p>
+        $$
+        \begin{aligned}
+        S_n &= a + ar + ar^2 + \dots + ar^{n-1} \\
+        rS_n &= \phantom{a +\;} ar + ar^2 + \dots + ar^{n-1} + ar^n \\
+        \hline
+        (1 - r)S_n &= a - ar^n = a(1 - r^n).
+        \end{aligned}
+        $$
+        <p>Therefore:</p>
+        $$S_n = \begin{cases} \dfrac{a(1 - r^n)}{1 - r} = \dfrac{a(r^n - 1)}{r - 1}, & r \neq 1, \\[10pt] na, & r = 1.
+        \end{cases}$$
+        <p>
+            <strong>Infinite GP Sum ($S_\infty$):</strong> As $n \to \infty$, the term $r^n$ approaches $0$ <em>if and
+                only if</em> $|r| \lt 1$ (i.e., $-1 \lt r \lt 1$). Taking the limit of $S_n = \dfrac{a(1 - r^n)}{1 -
+            r}$:
+        </p>
+        $$S_\infty = \frac{a}{1 - r} \qquad \textbf{STRICTLY VALID ONLY FOR } |r| \lt 1.$$
+        <p>
+            If $|r| \ge 1$ and $a \neq 0$, the partial sums do not settle to a finite limit—the series
+            <strong>diverges</strong>. Never plug $r = 2$ or $r = -1$ into $\frac{a}{1-r}$!
+        </p>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">High-Yield Applications: Recurring Decimals &amp; Nested Geometric Figures</span>
+        <p>
+            <strong>1. Recurring Decimals as Infinite GPs:</strong> Any repeating decimal splits into a non-repeating
+            prefix plus a strictly convergent infinite GP. For example:
+        </p>
+        $$0.2\overline{45} = 0.2 + 0.045 + 0.00045 + 0.0000045 + \dots = \frac{2}{10} + \frac{45/1000}{1 - 1/100} =
+        \frac{1}{5} + \frac{45}{990} = \frac{1}{5} + \frac{1}{22} = \frac{27}{110}.$$
+        <p>
+            <strong>2. Nested Geometric Figures (Similarity Scaling Law):</strong> Whenever a figure $F_{k+1}$ is
+            inscribed similarly inside $F_k$ with linear scale factor $\lambda$ ($0 \lt \lambda \lt 1$):
+        </p>
+        <ul>
+            <li><strong>Perimeters (1D)</strong> form a GP with ratio $r_P = \lambda \implies P_\infty = \dfrac{P_1}{1 -
+                \lambda}$.</li>
+            <li><strong>Areas (2D)</strong> form a GP with ratio $r_A = \lambda^2 \implies A_\infty = \dfrac{A_1}{1 -
+                \lambda^2}$.</li>
+            <li><strong>Classic Midpoint Benchmark Values:</strong> Joining midpoints of a <strong>square</strong> gives
+                $\lambda = \dfrac{1}{\sqrt{2}}$, $\lambda^2 = \dfrac{1}{2}$; joining midpoints of an <strong>equilateral
+                    triangle</strong> gives $\lambda = \dfrac{1}{2}$, $\lambda^2 = \dfrac{1}{4}$.</li>
+        </ul>
+    </div>
+
+    <!-- SVG DIAGRAM 2: INFINITE GP GEOMETRIC DECAY (NESTED SQUARES) -->
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 300" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Infinite GP geometric decay illustrated with nested midpoint squares">
+            <rect x="8" y="8" width="664" height="284" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+
+            <!-- Left: Nested Squares centered at (165, 150), half-side = 110 -->
+            <!-- S1: (55,40) to (275,260), side 220 -->
+            <polygon points="55,40 275,40 275,260 55,260" fill="#dbeafe" stroke="#1e3a8a" stroke-width="2.2" />
+            <!-- S2: midpoints of S1 -> (165,40), (275,150), (165,260), (55,150) -->
+            <polygon points="165,40 275,150 165,260 55,150" fill="#99f6e4" stroke="#0f766e" stroke-width="2" />
+            <!-- S3: midpoints of S2 -> (220,95), (220,205), (110,205), (110,95) -->
+            <polygon points="220,95 220,205 110,205 110,95" fill="#fde68a" stroke="#b45309" stroke-width="1.8" />
+            <!-- S4: midpoints of S3 -> (165,95), (220,150), (165,205), (110,150) -->
+            <polygon points="165,95 220,150 165,205 110,150" fill="#fecaca" stroke="#991b1b" stroke-width="1.6" />
+            <!-- S5: midpoints of S4 -> (192.5,122.5), (192.5,177.5), (137.5,177.5), (137.5,122.5) -->
+            <polygon points="192.5,122.5 192.5,177.5 137.5,177.5 137.5,122.5" fill="#e9d5ff" stroke="#6b21a8"
+                stroke-width="1.4" />
+            <!-- Center dot -->
+            <circle cx="165" cy="150" r="3" fill="#0f172a" />
+
+            <!-- Midpoint dots on S1 -->
+            <circle cx="165" cy="40" r="3.5" fill="#0f766e" />
+            <circle cx="275" cy="150" r="3.5" fill="#0f766e" />
+            <circle cx="165" cy="260" r="3.5" fill="#0f766e" />
+            <circle cx="55" cy="150" r="3.5" fill="#0f766e" />
+
+            <!-- Labels on square -->
+            <text x="165" y="29" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1e3a8a"
+                text-anchor="middle">Side a (S&#8321;)</text>
+            <text x="80" y="65" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#1e3a8a">a/2</text>
+            <text x="64" y="102" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#1e3a8a">a/2</text>
+            <text x="122" y="108" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0f766e"
+                transform="rotate(-45 122 108)">a/&#8730;2</text>
+            <text x="255" y="60" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1e3a8a"
+                text-anchor="middle">S&#8321;</text>
+            <text x="165" y="72" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0f766e"
+                text-anchor="middle">S&#8322;</text>
+            <text x="206" y="112" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#b45309"
+                text-anchor="middle">S&#8323;</text>
+
+            <!-- Right: Quantitative Decay Panel -->
+            <text x="485" y="42" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#0f172a"
+                text-anchor="middle">Geometric Decay Ladder (|r| &lt; 1)</text>
+
+            <!-- Step cards -->
+            <rect x="330" y="58" width="315" height="36" rx="6" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1.2" />
+            <text x="342" y="81" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1e3a8a">S&#8321;: Side = a</text>
+            <text x="490" y="81" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1e3a8a">Area A&#8321; = a&#178;</text>
+
+            <rect x="330" y="102" width="315" height="36" rx="6" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.2" />
+            <text x="342" y="125" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#0f766e">S&#8322;: Side = a / &#8730;2</text>
+            <text x="490" y="125" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#0f766e">Area A&#8322; = a&#178; / 2</text>
+
+            <rect x="330" y="146" width="315" height="36" rx="6" fill="#fef3c7" stroke="#b45309" stroke-width="1.2" />
+            <text x="342" y="169" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#b45309">S&#8323;: Side = a / 2</text>
+            <text x="490" y="169" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#b45309">Area A&#8323; = a&#178; / 4</text>
+
+            <!-- Infinite Convergence Summary Box -->
+            <rect x="330" y="196" width="315" height="78" rx="8" fill="#0f172a" />
+            <text x="487" y="218" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#38bdf8"
+                text-anchor="middle">INFINITE CONVERGENT SUMS</text>
+            <text x="487" y="240" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff"
+                text-anchor="middle">Total Area = a&#178; / (1 &#8722; 1/2) = 2a&#178;</text>
+            <text x="487" y="261" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fde68a"
+                text-anchor="middle">Total Perimeter = 4a / (1 &#8722; 1/&#8730;2) = 4a(2 + &#8730;2)</text>
+        </svg>
+        <p class="diagram-caption">Figure 10.2: Midpoint-inscribed squares. Each right triangle at the corner has legs
+            $a/2$, so hypotenuse $= a/\sqrt{2}$. Linear lengths decay by $r = 1/\sqrt{2}$ while areas decay by $r^2 =
+            1/2$.</p>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: GP Structural Properties &amp; Geometric Means</span>
+        <p><strong>1. Symmetric GP Term Selection (Canceling $r$ on Multiplication):</strong> When the <em>product</em>
+            of terms is given:</p>
+        <ul>
+            <li><strong>3 terms:</strong> $\dfrac{a}{r},\; a,\; ar$ (common ratio $= r$; product $= a^3$).</li>
+            <li><strong>4 terms:</strong> $\dfrac{a}{r^3},\; \dfrac{a}{r},\; ar,\; ar^3$ (common ratio $= r^2$; product
+                $= a^4$).</li>
+            <li><strong>5 terms:</strong> $\dfrac{a}{r^2},\; \dfrac{a}{r},\; a,\; ar,\; ar^2$ (common ratio $= r$;
+                product $= a^5$).</li>
+        </ul>
+        <p><strong>2. Equidistant Product Property:</strong> In any finite GP $T_1, T_2, \dots, T_n$:</p>
+        $$T_k \cdot T_{n+1-k} = \bigl(ar^{k-1}\bigr)\bigl(ar^{n-k}\bigr) = a^2 r^{n-1} = T_1 \cdot T_n =
+        \text{constant}.$$
+        <p>
+            Consequently, the product $P_n$ of all $n$ terms satisfies $P_n^2 = (T_1 T_n)^n \implies P_n = (T_1
+            T_n)^{n/2}$. If $n$ is odd with middle term $T_m$ ($m = \frac{n+1}{2}$), then $T_1 T_n = T_m^2$, so
+            <strong>$P_n = (T_m)^n$</strong>!
+        </p>
+        <p><strong>3. Inserting $k$ Geometric Means ($G_1, G_2, \dots, G_k$) between positive $a$ and $b$:</strong> The
+            GP $a, G_1, \dots, G_k, b$ has $(k + 2)$ terms, giving $b = a r^{k+1}$:</p>
+        $$r = \left(\frac{b}{a}\right)^{\frac{1}{k+1}}, \qquad G_m = a \left(\frac{b}{a}\right)^{\frac{m}{k+1}} \quad (1
+        \le m \le k).$$
+        <p>
+            <strong>Product of all $k$ Geometric Means:</strong> Pairing $G_1 G_k = G_2 G_{k-1} = \dots = ab$:
+        </p>
+        $$\prod_{m=1}^{k} G_m = (ab)^{k/2} = \bigl(\sqrt{ab}\bigr)^k = (\text{single GM between } a \text{ and } b)^k.$$
+    </div>
+
+    <!-- ==================== SECTION 3: AGP ==================== -->
+    <h2 class="section-heading">3. Arithmetico-Geometric Progression (AGP) &amp; The Shift-and-Subtract Engine</h2>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: AGP Derivation from First Principles</span>
+        <p>
+            An <strong>Arithmetico-Geometric Progression (AGP)</strong> is formed by multiplying corresponding terms of
+            an AP $\{a + (k-1)d\}$ and a GP $\{r^{k-1}\}$:
+        </p>
+        $$S_n = a + (a + d)r + (a + 2d)r^2 + \dots + \bigl[a + (n - 1)d\bigr]r^{n-1}.$$
+        <p>
+            <strong>Rule #1 of Olympiad Algebra:</strong> <em>Do not memorize the finite AGP formula blindly—master the
+                3-line shift-and-subtract engine!</em> Multiply $S_n$ by the GP ratio $r$, shift one column right so
+            identical powers of $r$ align, and subtract:
+        </p>
+        $$
+        \begin{aligned}
+        S_n &= a + (a + d)r + (a + 2d)r^2 + \dots + \bigl[a + (n - 1)d\bigr]r^{n-1} \\
+        rS_n &= \phantom{a +\;} ar \phantom{\;+\; d} + (a + d)r^2 + \dots + \bigl[a + (n - 2)d\bigr]r^{n-1} + \bigl[a +
+        (n - 1)d\bigr]r^n \\
+        \hline
+        (1 - r)S_n &= a + \underbrace{dr + dr^2 + \dots + dr^{n-1}}_{\text{Pure GP of }(n-1)\text{ terms}} - \bigl[a +
+        (n - 1)d\bigr]r^n.
+        \end{aligned}
+        $$
+        <p>
+            Evaluating the pure GP $\sum_{k=1}^{n-1} dr^k = \dfrac{dr(1 - r^{n-1})}{1 - r}$ (for $r \neq 1$) and
+            dividing by $(1 - r)$:
+        </p>
+        $$S_n = \frac{a}{1 - r} + \frac{dr(1 - r^{n-1})}{(1 - r)^2} - \frac{\bigl[a + (n - 1)d\bigr]r^n}{1 - r} \qquad
+        (r \neq 1).$$
+        <p>
+            <strong>Infinite AGP Sum ($|r| \lt 1$):</strong> When $|r| \lt 1$, exponential decay beats linear growth, so
+            both $\lim_{n\to\infty} r^n = 0$ and $\lim_{n\to\infty} n r^n = 0$. The finite formula collapses cleanly to:
+        </p>
+        $$S_\infty = \frac{a}{1 - r} + \frac{dr}{(1 - r)^2} \qquad (|r| \lt 1).$$
+        <p>
+            <strong>Olympiad Power Upgrade:</strong> What if the coefficients are <em>quadratic</em> in $k$ (e.g.,
+            $\sum_{k=1}^\infty k^2 r^k$)? Simply apply shift-and-subtract <strong>twice</strong>: the first subtraction
+            converts quadratic coefficients into linear ones (an AGP), and the second converts the AGP into a pure GP!
+        </p>
+    </div>
+
+    <!-- ==================== SECTION 4: SPECIAL SERIES & TELESCOPING ==================== -->
+    <h2 class="section-heading">4. Special Series &amp; Telescopic Cancellation ($V_n$ Method)</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Standard Power Sums &amp; Proof Strategy</span>
+        <p>
+            The three foundational sigma identities are built from polynomial telescoping:
+        </p>
+        <ol>
+            <li><strong>Sum of first $n$ natural numbers:</strong> $\displaystyle \sum_{k=1}^{n} k = 1 + 2 + \dots + n =
+                \frac{n(n + 1)}{2}$.</li>
+            <li><strong>Sum of squares of first $n$ natural numbers:</strong> $\displaystyle \sum_{k=1}^{n} k^2 = 1^2 +
+                2^2 + \dots + n^2 = \frac{n(n + 1)(2n + 1)}{6}$.</li>
+            <li><strong>Sum of cubes of first $n$ natural numbers:</strong> $\displaystyle \sum_{k=1}^{n} k^3 = 1^3 +
+                2^3 + \dots + n^3 = \left[\frac{n(n + 1)}{2}\right]^2 = \left(\sum_{k=1}^{n} k\right)^2$.</li>
+        </ol>
+        <p>
+            <strong>First-Principles Proof of $\sum k^2$:</strong> Start from the algebraic identity $(k + 1)^3 - k^3 =
+            3k^2 + 3k + 1$. Sum from $k = 1$ to $n$:
+        </p>
+        $$(n + 1)^3 - 1^3 = 3\sum_{k=1}^{n} k^2 + 3\sum_{k=1}^{n} k + \sum_{k=1}^{n} 1.$$
+        <p>
+            Substitute $\sum k = \dfrac{n(n+1)}{2}$ and $\sum 1 = n$, then isolate $3\sum k^2$:
+        </p>
+        $$3\sum_{k=1}^{n} k^2 = (n^3 + 3n^2 + 3n) - \frac{3n(n+1)}{2} - n = \frac{2n^3 + 3n^2 + n}{2} =
+        \frac{n(n+1)(2n+1)}{2} \implies \sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}.$$
+        <p>
+            <strong>Alternating Square Differences Pattern:</strong> To evaluate $m^2 - (m-1)^2 + (m-2)^2 - (m-3)^2 +
+            \dots$, pair consecutive terms using $x^2 - y^2 = (x - y)(x + y)$ where $(x - y) = 1$:
+        </p>
+        $$50^2 - 49^2 + 48^2 - 47^2 + \dots + 2^2 - 1^2 = (50 + 49) + (48 + 47) + \dots + (2 + 1) = \sum_{k=1}^{50} k =
+        \frac{50 \times 51}{2} = 1275.$$
+        <p>
+            <em>Parity Check:</em> If the highest term is odd (e.g., $51^2 - 50^2 + \dots - 2^2 + 1^2$), the lone $+1^2$
+            remains at the end, still yielding $51 + 50 + \dots + 2 + 1 = \frac{51 \times 52}{2} = 1326$!
+        </p>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: The Telescopic ($V_n$) Difference Method</span>
+        <p>
+            Whenever a general term $T_k$ can be rewritten as the difference of two consecutive evaluations of a single
+            helper function—either $T_k = V_k - V_{k-1}$ or $T_k = U_k - U_{k+1}$—all interior terms annihilate each
+            other, leaving only the two boundary terms:
+        </p>
+        $$\sum_{k=1}^{n} (V_k - V_{k-1}) = V_n - V_0, \qquad \sum_{k=1}^{n} (U_k - U_{k+1}) = U_1 - U_{n+1}.$$
+        <p><strong>The 4 Master Telescopic Splits Tested in BEST / IOQM:</strong></p>
+        <ul>
+            <li><strong>2-Factor Partial Fractions:</strong> $\displaystyle \frac{1}{k(k + 1)} = \frac{1}{k} -
+                \frac{1}{k + 1} \implies \sum_{k=1}^{n} \frac{1}{k(k+1)} = 1 - \frac{1}{n + 1} = \frac{n}{n + 1}$.</li>
+            <li><strong>General Step-$d$ Partial Fractions:</strong> $\displaystyle \frac{1}{a_k \cdot a_{k+1}} =
+                \frac{1}{d}\left(\frac{1}{a_k} - \frac{1}{a_{k+1}}\right)$ when $\{a_k\}$ is an AP with difference $d =
+                a_{k+1} - a_k$.</li>
+            <li><strong>3-Factor Partial Fractions:</strong> Peel off the first and last factors whose difference is $(k
+                + 2) - k = 2$:
+                $$\frac{1}{k(k + 1)(k + 2)} = \frac{1}{2}\left[\frac{1}{k(k + 1)} - \frac{1}{(k + 1)(k + 2)}\right].$$
+                Summing from $k = 1$ to $n$ gives $\dfrac{1}{2}\left[\dfrac{1}{1 \cdot 2} - \dfrac{1}{(n + 1)(n +
+                2)}\right] = \dfrac{n(n + 3)}{4(n + 1)(n + 2)}$.
+            </li>
+            <li><strong>Radical Rationalization Telescoping:</strong> Multiply by the conjugate so the denominator
+                becomes a constant step $d$:
+                $$\frac{1}{\sqrt{k} + \sqrt{k + 1}} = \frac{\sqrt{k + 1} - \sqrt{k}}{(k + 1) - k} = \sqrt{k + 1} -
+                \sqrt{k} \implies \sum_{k=1}^{n} \frac{1}{\sqrt{k} + \sqrt{k + 1}} = \sqrt{n + 1} - 1.$$
+            </li>
+            <li><strong>Numerator Product Telescoping:</strong> Insert the next and previous AP factors:
+                $$k(k + 1) = \frac{1}{3}\Bigl[k(k + 1)(k + 2) - (k - 1)k(k + 1)\Bigr] \implies \sum_{k=1}^{n} k(k + 1) =
+                \frac{n(n + 1)(n + 2)}{3}.$$
+            </li>
+        </ul>
+    </div>
+
+    <!-- SVG DIAGRAM 3: TELESCOPIC CHAIN CANCELLATION -->
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 230" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Telescopic chain cancellation showing interior terms annihilating each other">
+            <rect x="8" y="8" width="664" height="214" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="340" y="34" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#0f172a"
+                text-anchor="middle">Telescopic Chain Cancellation: S&#8345; = &#931; (U&#8342; &#8722;
+                U&#8342;&#8330;&#8321;) = U&#8321; &#8722; U&#8345;&#8330;&#8321;</text>
+
+            <!-- Row of term blocks: T1, T2, T3, ..., Tn -->
+            <!-- T1 box -->
+            <rect x="28" y="64" width="124" height="58" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+            <text x="90" y="57" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#475569"
+                text-anchor="middle">T&#8321;</text>
+            <!-- U1 survivor -->
+            <rect x="35" y="74" width="48" height="38" rx="6" fill="#0f766e" />
+            <text x="59" y="98" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff"
+                text-anchor="middle">+U&#8321;</text>
+            <!-- -U2 cancelled -->
+            <rect x="96" y="74" width="48" height="38" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.3" />
+            <text x="120" y="98" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#991b1b"
+                text-anchor="middle">&#8722;U&#8322;</text>
+
+            <!-- Plus sign -->
+            <text x="163" y="99" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#334155"
+                text-anchor="middle">+</text>
+
+            <!-- T2 box -->
+            <rect x="174" y="64" width="124" height="58" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+            <text x="236" y="57" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#475569"
+                text-anchor="middle">T&#8322;</text>
+            <!-- +U2 cancelled -->
+            <rect x="181" y="74" width="48" height="38" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.3" />
+            <text x="205" y="98" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#991b1b"
+                text-anchor="middle">+U&#8322;</text>
+            <!-- -U3 cancelled -->
+            <rect x="242" y="74" width="48" height="38" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.3" />
+            <text x="266" y="98" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#991b1b"
+                text-anchor="middle">&#8722;U&#8323;</text>
+
+            <!-- Plus sign -->
+            <text x="309" y="99" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#334155"
+                text-anchor="middle">+</text>
+
+            <!-- T3 box -->
+            <rect x="320" y="64" width="124" height="58" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+            <text x="382" y="57" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#475569"
+                text-anchor="middle">T&#8323;</text>
+            <!-- +U3 cancelled -->
+            <rect x="327" y="74" width="48" height="38" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.3" />
+            <text x="351" y="98" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#991b1b"
+                text-anchor="middle">+U&#8323;</text>
+            <!-- -U4 cancelled -->
+            <rect x="388" y="74" width="48" height="38" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.3" />
+            <text x="412" y="98" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#991b1b"
+                text-anchor="middle">&#8722;U&#8324;</text>
+
+            <!-- Ellipsis -->
+            <text x="478" y="99" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#475569"
+                text-anchor="middle">+ &#8943; +</text>
+
+            <!-- Tn box -->
+            <rect x="514" y="64" width="138" height="58" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+            <text x="583" y="57" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#475569"
+                text-anchor="middle">T&#8345;</text>
+            <!-- +Un cancelled -->
+            <rect x="521" y="74" width="52" height="38" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.3" />
+            <text x="547" y="98" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#991b1b"
+                text-anchor="middle">+U&#8345;</text>
+            <!-- -U_{n+1} survivor -->
+            <rect x="583" y="74" width="62" height="38" rx="6" fill="#1e3a8a" />
+            <text x="614" y="98" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff"
+                text-anchor="middle">&#8722;U&#8345;&#8330;&#8321;</text>
+
+            <!-- Cancellation arcs underneath -->
+            <path d="M 120 112 Q 162 152 205 112" fill="none" stroke="#dc2626" stroke-width="2"
+                stroke-dasharray="4,2" />
+            <text x="162" y="148" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#dc2626"
+                text-anchor="middle">= 0</text>
+
+            <path d="M 266 112 Q 308 152 351 112" fill="none" stroke="#dc2626" stroke-width="2"
+                stroke-dasharray="4,2" />
+            <text x="308" y="148" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#dc2626"
+                text-anchor="middle">= 0</text>
+
+            <path d="M 412 112 Q 480 152 547 112" fill="none" stroke="#dc2626" stroke-width="2"
+                stroke-dasharray="4,2" />
+            <text x="480" y="148" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#dc2626"
+                text-anchor="middle">All interior pairs = 0</text>
+
+            <!-- Survivor callout arrows -->
+            <line x1="59" y1="114" x2="59" y2="176" stroke="#0f766e" stroke-width="2" />
+            <line x1="614" y1="114" x2="614" y2="176" stroke="#1e3a8a" stroke-width="2" />
+            <rect x="44" y="176" width="592" height="32" rx="6" fill="#0f172a" />
+            <text x="340" y="197" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff"
+                text-anchor="middle">ONLY BOUNDARY TERMS SURVIVE: S&#8345; = U&#8321; &#8722;
+                U&#8345;&#8330;&#8321;</text>
+        </svg>
+        <p class="diagram-caption">Figure 10.3: Telescopic cancellation. Always check the step offset—if $T_k = U_k -
+            U_{k+2}$ (a gap of 2), then TWO terms survive at the start ($U_1 + U_2$) and TWO at the end ($-U_{n+1} -
+            U_{n+2}$).</p>
+    </div>
+
+    <!-- ==================== SECTION 5: AM-GM-HM INEQUALITY ==================== -->
+    <h2 class="section-heading">5. The AM–GM–HM Inequality: Geometry, Optimization &amp; Traps</h2>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Mean Inequality Hierarchy</span>
+        <p>
+            For any $n$ <strong>strictly positive</strong> real numbers $x_1, x_2, \dots, x_n \gt 0$, define the three
+            classical means:
+        </p>
+        $$\text{AM} = \frac{x_1 + x_2 + \dots + x_n}{n}, \qquad \text{GM} = \bigl(x_1 x_2 \cdots x_n\bigr)^{1/n}, \qquad
+        \text{HM} = \frac{n}{\frac{1}{x_1} + \frac{1}{x_2} + \dots + \frac{1}{x_n}}.$$
+        <p>
+            <strong>Fundamental Theorem (AM–GM–HM Inequality):</strong>
+        </p>
+        $$\text{AM} \ge \text{GM} \ge \text{HM},$$
+        <p>
+            with <strong>equality holding if and only if $x_1 = x_2 = \dots = x_n$</strong>.
+        </p>
+        <p>
+            <strong>Algebraic Proof for $n = 2$ ($a, b \gt 0$):</strong>
+        </p>
+        $$\text{AM} - \text{GM} = \frac{a + b}{2} - \sqrt{ab} = \frac{(\sqrt{a} - \sqrt{b})^2}{2} \ge 0, \qquad
+        \text{GM} - \text{HM} = \sqrt{ab} - \frac{2ab}{a + b} = \frac{\sqrt{ab}(\sqrt{a} - \sqrt{b})^2}{a + b} \ge 0.$$
+        <p>
+            Notice also the exact geometric link for two positive numbers: $\text{AM} \cdot \text{HM} =
+            \left(\dfrac{a+b}{2}\right)\left(\dfrac{2ab}{a+b}\right) = ab = (\text{GM})^2$, meaning $\text{AM},
+            \text{GM}, \text{HM}$ themselves form a GP!
+        </p>
+        <p>
+            <strong>Core Optimization Corollary:</strong>
+        </p>
+        <ul>
+            <li>If the <strong>product</strong> $x_1 x_2 \cdots x_n = P$ (constant), then the <strong>sum</strong> $x_1
+                + \dots + x_n$ attains its minimum $n P^{1/n}$ when all $x_i$ are equal.</li>
+            <li>If the <strong>sum</strong> $x_1 + \dots + x_n = S$ (constant), then the <strong>product</strong> $x_1
+                x_2 \cdots x_n$ attains its maximum $(S/n)^n$ when all $x_i$ are equal.</li>
+            <li><strong>Reciprocal Benchmark:</strong> For every $x \gt 0$, $x + \dfrac{1}{x} \ge 2$ (equality at $x =
+                1$).</li>
+        </ul>
+    </div>
+
+    <!-- SVG DIAGRAM 4: GEOMETRIC PROOF OF AM >= GM >= HM ON A SEMICIRCLE -->
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 290" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Geometric proof of AM greater than or equal to GM greater than or equal to HM on a semicircle">
+            <rect x="8" y="8" width="664" height="274" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+
+            <!-- Semicircle centered at O(250, 230), Radius R = 190 -> A(60,230) to B(440,230)
+           Choose H(136, 230): a = AH = 76, b = HB = 304 (ratio 1:4! Exact!)
+           Check GM = sqrt(76 * 304) = sqrt(23104) = 152!
+           Check OH = 250 - 136 = 114. 114^2 + 152^2 = 12996 + 23104 = 36100 = 190^2! Exact 3-4-5!
+           P = (136, 230 - 152) = (136, 78).
+           Vector PO = (114, 152), length 190, unit = (0.6, 0.8).
+           HM = PK = 152^2 / 190 = 121.6.
+           K = (136 + 121.6*0.6, 78 + 121.6*0.8) = (208.96, 175.28). -->
+
+            <!-- Shaded semicircle -->
+            <path d="M 60 230 A 190 190 0 0 1 440 230 Z" fill="#e0f2fe" stroke="#1e3a8a" stroke-width="2.2" />
+
+            <!-- Diameter AB split into a and b -->
+            <line x1="60" y1="230" x2="136" y2="230" stroke="#0284c7" stroke-width="4" />
+            <line x1="136" y1="230" x2="440" y2="230" stroke="#0f766e" stroke-width="4" />
+
+            <!-- Chords AP and PB (Thales right triangle) -->
+            <line x1="60" y1="230" x2="136" y2="78" stroke="#64748b" stroke-width="1.6" stroke-dasharray="5,3" />
+            <line x1="136" y1="78" x2="440" y2="230" stroke="#64748b" stroke-width="1.6" stroke-dasharray="5,3" />
+
+            <!-- Radius OP (AM) -->
+            <line x1="250" y1="230" x2="136" y2="78" stroke="#1e3a8a" stroke-width="2.8" />
+
+            <!-- Segment PK (HM) highlighted on OP -->
+            <line x1="136" y1="78" x2="208.96" y2="175.28" stroke="#b45309" stroke-width="3.6" />
+
+            <!-- Altitude PH (GM) -->
+            <line x1="136" y1="78" x2="136" y2="230" stroke="#0f766e" stroke-width="2.8" />
+
+            <!-- Altitude HK perpendicular to OP -->
+            <line x1="136" y1="230" x2="208.96" y2="175.28" stroke="#b45309" stroke-width="1.8"
+                stroke-dasharray="3,2" />
+
+            <!-- Right angle marker at H -->
+            <polyline points="136,216 150,216 150,230" fill="none" stroke="#0f766e" stroke-width="1.5" />
+
+            <!-- Right angle marker at K (perpendicular to OP along HK) -->
+            <!-- Unit along KO = (0.6, 0.8), unit along KH = (-0.8, 0.6), size 10 -->
+            <polyline points="200.96,181.28 206.96,189.28 214.96,183.28" fill="none" stroke="#b45309"
+                stroke-width="1.4" />
+
+            <!-- Key points -->
+            <circle cx="60" cy="230" r="4" fill="#0f172a" />
+            <circle cx="136" cy="230" r="4" fill="#0f766e" />
+            <circle cx="250" cy="230" r="4.5" fill="#1e3a8a" />
+            <circle cx="440" cy="230" r="4" fill="#0f172a" />
+            <circle cx="136" cy="78" r="4.5" fill="#dc2626" />
+            <circle cx="208.96" cy="175.28" r="3.8" fill="#b45309" />
+
+            <!-- Point labels -->
+            <text x="52" y="248" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a"
+                text-anchor="middle">A</text>
+            <text x="136" y="248" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f766e"
+                text-anchor="middle">H</text>
+            <text x="250" y="248" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1e3a8a"
+                text-anchor="middle">O (Center)</text>
+            <text x="444" y="248" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a"
+                text-anchor="middle">B</text>
+            <text x="130" y="66" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#dc2626"
+                text-anchor="middle">P (&#8736;APB = 90&#176;)</text>
+            <text x="222" y="172" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#b45309">K</text>
+
+            <!-- Segment length labels -->
+            <text x="98" y="264" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0284c7"
+                text-anchor="middle">a</text>
+            <text x="288" y="264" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f766e"
+                text-anchor="middle">b</text>
+            <text x="122" y="160" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f766e"
+                text-anchor="end">GM</text>
+            <text x="184" y="122" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#b45309">HM
+                = PK</text>
+            <text x="242" y="203" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1e3a8a">AM
+                = OP</text>
+
+            <!-- Right-side Proof Legend -->
+            <rect x="466" y="34" width="192" height="226" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="562" y="58" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f172a"
+                text-anchor="middle">Semicircle Proof</text>
+            <line x1="482" y1="68" x2="642" y2="68" stroke="#e2e8f0" stroke-width="1.2" />
+
+            <text x="480" y="90" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#1e3a8a">1. Radius OP = AM</text>
+            <text x="488" y="106" font-family="system-ui, sans-serif" font-size="11" fill="#334155">OP = (a + b) /
+                2</text>
+
+            <text x="480" y="130" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#0f766e">2. Altitude PH = GM</text>
+            <text x="488" y="146" font-family="system-ui, sans-serif" font-size="11" fill="#334155">&#9651;AHP ~
+                &#9651;PHB &#8658; PH = &#8730;(ab)</text>
+
+            <text x="480" y="170" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#b45309">3. Projection PK = HM</text>
+            <text x="488" y="186" font-family="system-ui, sans-serif" font-size="11" fill="#334155">&#9651;PKH ~
+                &#9651;PHO &#8658; PK = PH&#178;/OP</text>
+
+            <rect x="478" y="200" width="168" height="48" rx="6" fill="#0f172a" />
+            <text x="562" y="220" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#fde68a"
+                text-anchor="middle">Hypotenuse &#8805; Leg twice:</text>
+            <text x="562" y="238" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff"
+                text-anchor="middle">OP &#8805; PH &#8805; PK</text>
+        </svg>
+        <p class="diagram-caption">Figure 10.4: Complete geometric proof of $\text{AM} \ge \text{GM} \ge \text{HM}$ on a
+            semicircle of diameter $a + b$. In right $\triangle OHP$, hypotenuse $OP \ge$ leg $PH$; in right $\triangle
+            PKH$, hypotenuse $PH \ge$ leg $PK$. Equality collapses all three segments to the vertical radius iff $H = O$
+            ($a = b$).</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Two Lethal AM–GM Traps That Destroy Unprepared Students</span>
+        <ol>
+            <li><strong>The Positivity Trap:</strong> AM–GM requires <em>every term to be strictly positive</em>. If $x
+                \lt 0$, let $y = -x \gt 0$; then $y + \frac{1}{y} \ge 2 \implies x + \frac{1}{x} \le -2$. Never claim $x
+                + \frac{1}{x} \ge 2$ for arbitrary real $x \neq 0$!</li>
+            <li><strong>The Unattainable Equality Trap:</strong> Even when every term is positive, the lower bound from
+                AM–GM is the <em>true minimum</em> <strong>only if the equality condition ($x_1 = x_2 = \dots = x_n$)
+                    has a real solution inside the allowed domain!</strong> For example, in $t + \frac{4}{t}$ where $t =
+                \sqrt{x^2 + 9} \ge 3$, AM–GM yields $\ge 4$ with equality at $t = 2$, which is impossible since $t \ge
+                3$. (See Worked Example 7(b) for the exact resolution.)</li>
+        </ol>
+    </div>
+
+    <!-- ==================== SECTION 6: 3-VARIABLE IDENTITIES ==================== -->
+    <h2 class="section-heading">6. 3-Variable Algebraic Identities &amp; The Two-Branch Cubic Theorem</h2>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: The Three Master Identities</span>
+        <p><strong>Identity 1 (Square of a Trinomial):</strong></p>
+        $$(a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca).$$
+        <p><strong>Identity 2 (The Sum-of-Squares Non-Negativity Identity):</strong> Multiply by $2$, regroup into three
+            perfect squares, and divide by $2$:</p>
+        $$a^2 + b^2 + c^2 - ab - bc - ca = \frac{1}{2}\Bigl[(a - b)^2 + (b - c)^2 + (c - a)^2\Bigr].$$
+        <p>
+            <strong>Consequences for all real numbers $a, b, c \in \mathbb{R}$:</strong>
+        </p>
+        <ul>
+            <li>$a^2 + b^2 + c^2 - ab - bc - ca \ge 0$ unconditionally, i.e., $a^2 + b^2 + c^2 \ge ab + bc + ca$.</li>
+            <li><strong>Zero-Sum Trap:</strong> Since a sum of real squares vanishes <em>if and only if</em> each
+                individual square is zero:
+                $$a^2 + b^2 + c^2 = ab + bc + ca \iff (a - b)^2 + (b - c)^2 + (c - a)^2 = 0 \iff a = b = c.$$
+            </li>
+            <li><strong>Lightning Numerical Shortcut:</strong> Whenever $a, b, c$ are large numbers that are close
+                together (e.g., $998, 999, 1001$), never square them—compute $\frac{1}{2}[(a-b)^2 + (b-c)^2 + (c-a)^2]$
+                in 5 seconds.</li>
+        </ul>
+
+        <p><strong>Identity 3 (The Master 3-Variable Cubic Factorization):</strong></p>
+        $$
+        \begin{aligned}
+        a^3 + b^3 + c^3 - 3abc &= (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca) \\
+        &= \frac{1}{2}(a + b + c)\Bigl[(a - b)^2 + (b - c)^2 + (c - a)^2\Bigr] \\
+        &= (a + b + c)\Bigl[(a + b + c)^2 - 3(ab + bc + ca)\Bigr].
+        \end{aligned}
+        $$
+        <p>
+            <strong>Proof of the 3-Variable AM–GM as an Immediate Corollary:</strong> For any positive reals $x, y, z
+            \gt 0$, substitute $a = x^{1/3},\; b = y^{1/3},\; c = z^{1/3}$. Since $a + b + c \gt 0$ and $(a-b)^2 +
+            (b-c)^2 + (c-a)^2 \ge 0$, we immediately obtain $x + y + z - 3(xyz)^{1/3} \ge 0 \iff \dfrac{x + y + z}{3}
+            \ge (xyz)^{1/3}$!
+        </p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Critical Exam Trap: Both Branches of $a^3 + b^3 + c^3 = 3abc$</span>
+        <p>
+            In Class 9/10 school exams, students memorize only one direction: "If $a + b + c = 0$, then $a^3 + b^3 + c^3
+            = 3abc$." In BEST / IOQM, problems reverse the arrow and give $a^3 + b^3 + c^3 = 3abc$. Because the
+            factorization is a product of <strong>two</strong> factors:
+        </p>
+        $$a^3 + b^3 + c^3 = 3abc \iff \underbrace{a + b + c = 0}_{\textbf{Branch 1}} \quad \mathbf{OR} \quad
+        \underbrace{a = b = c}_{\textbf{Branch 2}}.$$
+        <ul>
+            <li>If the problem states $a, b, c \gt 0$ (or $a + b + c \neq 0$), Branch 1 is eliminated and you are
+                <strong>forced into $a = b = c$</strong>.
+            </li>
+            <li>If the problem states $a, b, c$ are <em>distinct</em> (not all equal), Branch 2 is eliminated and you
+                are <strong>forced into $a + b + c = 0$</strong>.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== COMPARISON TABLE ==================== -->
+    <h2 class="section-heading">7. Pattern Recognition Matrix &amp; Formula Vault</h2>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Progression / Series Type</th>
+                <th>Signature Pattern</th>
+                <th>Primary Engine / Method</th>
+                <th>Critical Convergence or Validity Condition</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Arithmetic Progression (AP)</strong></td>
+                <td>$T_n = pn + q$; $S_n = An^2 + Bn$</td>
+                <td>Gauss pairing; $d = 2A$; $n \to 2n - 1$ ratio map</td>
+                <td>Watch for $C \neq 0$ in $S_n = An^2 + Bn + C$ (AP only for $n \ge 2$)</td>
+            </tr>
+            <tr>
+                <td><strong>Geometric Progression (GP)</strong></td>
+                <td>$T_n = ar^{n-1}$; constant ratio $r$</td>
+                <td>Shift-and-subtract; symmetric selection; $P_n = (T_1 T_n)^{n/2}$</td>
+                <td>$S_\infty = \frac{a}{1-r}$ valid <strong>strictly for $|r| \lt 1$</strong></td>
+            </tr>
+            <tr>
+                <td><strong>AGP</strong></td>
+                <td>$[a + (k-1)d]r^{k-1}$</td>
+                <td>Multiply by $r$, shift right, subtract once to get pure GP</td>
+                <td>$S_\infty = \frac{a}{1-r} + \frac{dr}{(1-r)^2}$ valid <strong>strictly for $|r| \lt 1$</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Telescopic Series</strong></td>
+                <td>Rational / radical / quartic denominators</td>
+                <td>Partial fractions or rationalization to $U_k - U_{k+1}$</td>
+                <td>Verify step offset $m$ in $U_k - U_{k+m}$ (leaves $m$ terms at each end)</td>
+            </tr>
+            <tr>
+                <td><strong>AM–GM–HM</strong></td>
+                <td>Min of sum / Max of product</td>
+                <td>Term splitting to cancel variables in product</td>
+                <td>All terms <strong>strictly positive</strong> AND equality achievable in domain</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="formula-vault">
+        <span class="box-label">Master Formula Vault — Chapter 10</span>
+        <ul>
+            <li><strong>AP Core:</strong> $T_n = a + (n-1)d$; $\;S_n = \dfrac{n}{2}(a + l) = \dfrac{n}{2}[2a + (n-1)d]$;
+                $\;S_n = An^2 + Bn \implies d = 2A,\; T_1 = A + B,\; T_n = 2An + (B - A)$.</li>
+            <li><strong>AP Ratio &amp; Means:</strong> $\dfrac{T_n}{T'_n} = \left.\dfrac{S_k}{S'_k}\right|_{k=2n-1}$;
+                $k$ AMs between $a, b$: $d = \dfrac{b-a}{k+1}$, $\displaystyle\sum_{m=1}^{k} A_m =
+                k\left(\dfrac{a+b}{2}\right)$.</li>
+            <li><strong>GP Core:</strong> $T_n = ar^{n-1}$; $\;S_n = \dfrac{a(r^n - 1)}{r - 1}$ ($r \neq 1$);
+                $\;S_\infty = \dfrac{a}{1 - r}$ ($|r| \lt 1$); $\;P_n = (T_1 T_n)^{n/2}$; $k$ GMs: $r =
+                \left(\dfrac{b}{a}\right)^{\frac{1}{k+1}}$, $\displaystyle\prod_{m=1}^{k} G_m = (\sqrt{ab})^k$.</li>
+            <li><strong>AGP Infinite ($|r| \lt 1$):</strong> $\displaystyle \sum_{k=0}^{\infty} (a + kd)r^k = \frac{a}{1
+                - r} + \frac{dr}{(1 - r)^2}$.</li>
+            <li><strong>Power Sums:</strong> $\displaystyle \sum_{k=1}^n k = \frac{n(n+1)}{2}$, $\;\displaystyle
+                \sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}$, $\;\displaystyle \sum_{k=1}^n k^3 =
+                \left[\frac{n(n+1)}{2}\right]^2$.</li>
+            <li><strong>Telescopic Benchmarks:</strong> $\displaystyle \sum_{k=1}^n \frac{1}{k(k+1)} = \frac{n}{n+1}$;
+                $\;\displaystyle \sum_{k=1}^n \frac{1}{k(k+1)(k+2)} = \frac{n(n+3)}{4(n+1)(n+2)}$; $\;\displaystyle
+                \sum_{k=1}^n \frac{k}{k^4 + k^2 + 1} = \frac{n(n+1)}{2(n^2 + n + 1)}$.</li>
+            <li><strong>Mean Inequality ($x_i \gt 0$):</strong> $\dfrac{\sum x_i}{n} \ge \left(\prod x_i\right)^{1/n}
+                \ge \dfrac{n}{\sum (1/x_i)}$, equality iff $x_1 = x_2 = \dots = x_n$.</li>
+            <li><strong>3-Variable Identities:</strong> $a^2+b^2+c^2-ab-bc-ca = \dfrac{1}{2}[(a-b)^2+(b-c)^2+(c-a)^2]$;
+                $\;a^3+b^3+c^3-3abc = (a+b+c)(a^2+b^2+c^2-ab-bc-ca)$.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== WORKED EXAMPLES ==================== -->
+    <h2 class="section-heading">8. Escalating Worked Examples (Level 1 &rarr; Level 2 &rarr; Level 3)</h2>
+
+    <!-- LEVEL 1 BANNER -->
+    <div class="level-banner l1">Level 1: Warmup &amp; Structural Calibration (Worked Examples 1–3)</div>
+
+    <!-- WE 1 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">AP &bull; $S_n$ Constant Trap</span>
+            <strong>Worked Example 1: Dissecting $S_n = 3n^2 + 5n + 2$</strong>
+        </div>
+        <div class="ex-problem">
+            For a sequence $\{a_n\}$, the sum of the first $n$ terms is given by $S_n = 3n^2 + 5n + 2$ for all positive
+            integers $n$.
+            <br>(a) Find $a_1$, $a_2$, $a_3$, and a closed-form expression for $a_n$ valid for $n \ge 2$.
+            <br>(b) State whether $\{a_n\}$ is an Arithmetic Progression from $n = 1$ or from $n = 2$, and calculate
+            $a_{20}$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Compute $a_1$ directly from $S_1$:</strong></p>
+            $$a_1 = S_1 = 3(1)^2 + 5(1) + 2 = 3 + 5 + 2 = 10.$$
+            <p><strong>Step 2 — Derive $a_n$ for $n \ge 2$ using $a_n = S_n - S_{n-1}$:</strong></p>
+            <p>First expand $S_{n-1}$ carefully:</p>
+            $$S_{n-1} = 3(n - 1)^2 + 5(n - 1) + 2 = 3(n^2 - 2n + 1) + 5n - 5 + 2 = 3n^2 - 6n + 3 + 5n - 3 = 3n^2 - n.$$
+            <p>Now subtract:</p>
+            $$a_n = S_n - S_{n-1} = (3n^2 + 5n + 2) - (3n^2 - n) = 6n + 2 \qquad (n \ge 2).$$
+            <p><strong>Step 3 — Compute $a_2, a_3$ and verify against direct partial sums:</strong></p>
+            <ul>
+                <li>$a_2 = 6(2) + 2 = 14$. (Check: $S_2 = 3(4) + 5(2) + 2 = 24 \implies S_2 - S_1 = 24 - 10 = 14$.)</li>
+                <li>$a_3 = 6(3) + 2 = 20$. (Check: $S_3 = 3(9) + 5(3) + 2 = 44 \implies S_3 - S_2 = 44 - 24 = 20$.)</li>
+            </ul>
+            <p><strong>Step 4 — Check AP status and find $a_{20}$:</strong></p>
+            <p>
+                Notice that $a_2 - a_1 = 14 - 10 = 4$, whereas for every $n \ge 3$, $a_n - a_{n-1} = (6n + 2) - [6(n-1)
+                + 2] = 6$. Because the constant term $C = 2 \neq 0$, the first gap is reduced by $C$ ($2A - C = 6 - 2 =
+                4$).
+            </p>
+            <p>
+                Therefore, $\{a_n\}$ is <strong>NOT an AP from $n = 1$</strong>, but <strong>IS an AP from $n = 2$
+                    onwards</strong> with common difference $d = 6$. Finally, since $20 \ge 2$:
+            </p>
+            $$a_{20} = 6(20) + 2 = \mathbf{122}.$$
+        </div>
+    </div>
+
+    <!-- WE 2 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Infinite GP &bull; Nested Geometry</span>
+            <strong>Worked Example 2: Infinite Sequence of Midpoint Equilateral Triangles</strong>
+        </div>
+        <div class="ex-problem">
+            An equilateral triangle $T_1$ has side length $16\text{ cm}$. A second equilateral triangle $T_2$ is formed
+            by joining the midpoints of the sides of $T_1$; $T_3$ is formed by joining the midpoints of $T_2$, and this
+            process continues indefinitely. Find:
+            <br>(a) the sum of the perimeters of all triangles $T_1, T_2, T_3, \dots$;
+            <br>(b) the sum of the areas of all triangles $T_1, T_2, T_3, \dots$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Establish the similarity scaling ratio:</strong></p>
+            <p>
+                By the Midpoint Theorem, each segment joining the midpoints of two sides of a triangle is parallel to
+                and half the length of the third side. Thus every triangle $T_k$ is equilateral with side length $s_k =
+                \dfrac{1}{2} s_{k-1}$:
+            </p>
+            $$s_1 = 16,\quad s_2 = 8,\quad s_3 = 4,\quad \dots \implies s_k = 16\left(\frac{1}{2}\right)^{k-1}.$$
+            <p><strong>Step 2 — Sum of all perimeters:</strong></p>
+            <p>
+                The perimeter of $T_1$ is $P_1 = 3 \times 16 = 48\text{ cm}$, and successive perimeters form a GP with
+                common ratio $r_P = \dfrac{1}{2}$. Since $|r_P| = \dfrac{1}{2} \lt 1$, the infinite GP converges:
+            </p>
+            $$P_\infty = \frac{P_1}{1 - r_P} = \frac{48}{1 - \frac{1}{2}} = \frac{48}{\frac{1}{2}} = \mathbf{96\text{
+            cm}}.$$
+            <p><strong>Step 3 — Sum of all areas:</strong></p>
+            <p>
+                The area of $T_1$ is $A_1 = \dfrac{\sqrt{3}}{4}s_1^2 = \dfrac{\sqrt{3}}{4}(16)^2 = 64\sqrt{3}\text{
+                cm}^2$. Since similar triangles scale in area by the square of the linear scale factor, the areas form a
+                GP with ratio $r_A = \left(\dfrac{1}{2}\right)^2 = \dfrac{1}{4}$. Since $|r_A| = \dfrac{1}{4} \lt 1$:
+            </p>
+            $$A_\infty = \frac{A_1}{1 - r_A} = \frac{64\sqrt{3}}{1 - \frac{1}{4}} = \frac{64\sqrt{3}}{\frac{3}{4}} =
+            \mathbf{\frac{256\sqrt{3}}{3}\text{ cm}^2}.$$
+        </div>
+    </div>
+
+    <!-- WE 3 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">3-Variable Identities</span>
+            <strong>Worked Example 3: Zero-Arithmetic Evaluation of Large Cubes</strong>
+        </div>
+        <div class="ex-problem">
+            Given $a = 2025$, $b = 2026$, and $c = 2028$, evaluate without direct squaring or cubing:
+            <br>(a) $a^2 + b^2 + c^2 - ab - bc - ca$
+            <br>(b) $\dfrac{a^3 + b^3 + c^3 - 3abc}{a + b + c}$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Compute the three pairwise differences:</strong></p>
+            $$a - b = 2025 - 2026 = -1, \qquad b - c = 2026 - 2028 = -2, \qquad c - a = 2028 - 2025 = 3.$$
+            <p><strong>Step 2 — Apply the Sum-of-Squares Identity for (a):</strong></p>
+            $$a^2 + b^2 + c^2 - ab - bc - ca = \frac{1}{2}\Bigl[(a - b)^2 + (b - c)^2 + (c - a)^2\Bigr] =
+            \frac{1}{2}\bigl[(-1)^2 + (-2)^2 + 3^2\bigr] = \frac{1 + 4 + 9}{2} = \mathbf{7}.$$
+            <p><strong>Step 3 — Apply the 3-Variable Cubic Factorization for (b):</strong></p>
+            <p>
+                Since $a + b + c = 2025 + 2026 + 2028 = 6079 \neq 0$, we cancel $(a + b + c)$ cleanly from the cubic
+                identity:
+            </p>
+            $$\frac{a^3 + b^3 + c^3 - 3abc}{a + b + c} = \frac{(a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)}{a + b + c} =
+            a^2 + b^2 + c^2 - ab - bc - ca = \mathbf{7}.$$
+        </div>
+    </div>
+
+    <!-- LEVEL 2 BANNER -->
+    <div class="level-banner l2">Level 2: Exam-Real BEST / NTSE Stage 2 Standard (Worked Examples 4–6)</div>
+
+    <!-- WE 4 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">AP &bull; Ratio Map &amp; Means</span>
+            <strong>Worked Example 4: Ratio of AP Sums &amp; Inserting $m$ Arithmetic Means</strong>
+        </div>
+        <div class="ex-problem">
+            (a) The ratio of the sums of the first $n$ terms of two Arithmetic Progressions is $(7n + 1) : (4n + 27)$
+            for all positive integers $n$. Find the ratio of their $11^{\text{th}}$ terms.
+            <br>(b) Between $5$ and $37$, $m$ arithmetic means are inserted such that the ratio of the $3^{\text{rd}}$
+            mean to the $(m - 1)^{\text{th}}$ mean is $1 : 3$. Find the value of $m$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — First-Principles Ratio Transformation:</strong></p>
+            <p>Let the two APs be $(a_1, d_1)$ and $(a_2, d_2)$. For any positive integer $k$:</p>
+            $$\frac{S_k}{S'_k} = \frac{\frac{k}{2}[2a_1 + (k - 1)d_1]}{\frac{k}{2}[2a_2 + (k - 1)d_2]} = \frac{a_1 +
+            \left(\frac{k - 1}{2}\right)d_1}{a_2 + \left(\frac{k - 1}{2}\right)d_2} = \frac{7k + 1}{4k + 27}.$$
+            <p>We need $\dfrac{T_{11}}{T'_{11}} = \dfrac{a_1 + 10d_1}{a_2 + 10d_2}$. Equate the coefficient of $d$:</p>
+            $$\frac{k - 1}{2} = 10 \implies k = 2(11) - 1 = 21.$$
+            <p>Substitute $k = 21$ into the given ratio:</p>
+            $$\frac{T_{11}}{T'_{11}} = \frac{7(21) + 1}{4(21) + 27} = \frac{148}{111} = \frac{4 \times 37}{3 \times 37}
+            = \mathbf{4 : 3}.$$
+
+            <p><strong>Part (b) — Inserting $m$ Arithmetic Means:</strong></p>
+            <p>
+                Inserting $m$ arithmetic means $A_1, A_2, \dots, A_m$ between $5$ and $37$ yields an AP of $(m + 2)$
+                terms with first term $a = 5$ and $(m + 2)^{\text{th}}$ term $b = 37$. Hence:
+            </p>
+            $$d = \frac{37 - 5}{m + 1} = \frac{32}{m + 1}.$$
+            <p>
+                Express the $3^{\text{rd}}$ mean $A_3$ and the $(m - 1)^{\text{th}}$ mean $A_{m-1}$ in terms of $d$
+                (note $A_k = a + kd$, and working backward from $b$, $A_{m-1} = b - 2d$):
+            </p>
+            $$A_3 = 5 + 3d, \qquad A_{m-1} = 37 - 2d.$$
+            <p>Apply the given ratio $A_3 : A_{m-1} = 1 : 3$:</p>
+            $$3(5 + 3d) = 37 - 2d \implies 15 + 9d = 37 - 2d \implies 11d = 22 \implies d = 2.$$
+            <p>Now equate $d = \dfrac{32}{m + 1} = 2$:</p>
+            $$m + 1 = 16 \implies \mathbf{m = 15}.$$
+            <p><em>Verification:</em> With $m = 15$ and $d = 2$, $A_3 = 5 + 6 = 11$ and $A_{14} = 5 + 28 = 33$, giving
+                $11 : 33 = 1 : 3$.</p>
+        </div>
+    </div>
+
+    <!-- WE 5 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Olympiad Bridge &bull; Infinite AGP</span>
+            <strong>Worked Example 5: Exact Evaluation of an Infinite AGP</strong>
+        </div>
+        <div class="ex-problem">
+            Evaluate the exact sum of the infinite series:
+            $$S = 1 + \frac{4}{3} + \frac{7}{9} + \frac{10}{27} + \frac{13}{81} + \dots$$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Identify the AP and GP components and verify convergence:</strong></p>
+            <ul>
+                <li>Numerators $1, 4, 7, 10, 13, \dots$ form an AP with $a = 1$, $d = 3$.</li>
+                <li>Denominators $1, 3, 3^2, 3^3, 3^4, \dots$ correspond to a GP with common ratio $r = \dfrac{1}{3}$.
+                </li>
+                <li>Since $|r| = \dfrac{1}{3} \lt 1$, the infinite AGP is strictly convergent.</li>
+            </ul>
+            <p><strong>Step 2 — Execute Shift-and-Subtract:</strong></p>
+            $$
+            \begin{aligned}
+            S &= 1 + \frac{4}{3} + \frac{7}{3^2} + \frac{10}{3^3} + \frac{13}{3^4} + \dots \\
+            \frac{1}{3}S &= \phantom{1 +\;} \frac{1}{3} + \frac{4}{3^2} + \frac{7}{3^3} + \frac{10}{3^4} + \dots \\
+            \hline
+            \left(1 - \frac{1}{3}\right)S &= 1 + \frac{3}{3} + \frac{3}{3^2} + \frac{3}{3^3} + \frac{3}{3^4} + \dots
+            \end{aligned}
+            $$
+            <p><strong>Step 3 — Collapse the resulting pure infinite GP:</strong></p>
+            $$\frac{2}{3}S = 1 + 3\left(\frac{1}{3} + \frac{1}{3^2} + \frac{1}{3^3} + \dots\right) = 1 +
+            3\left(\frac{\frac{1}{3}}{1 - \frac{1}{3}}\right) = 1 + 3\left(\frac{1}{2}\right) = \frac{5}{2}.$$
+            <p>Solve for $S$:</p>
+            $$S = \frac{3}{2} \times \frac{5}{2} = \mathbf{\frac{15}{4}}.$$
+            <p><em>Formula Cross-Check:</em> $S_\infty = \dfrac{a}{1-r} + \dfrac{dr}{(1-r)^2} = \dfrac{1}{2/3} +
+                \dfrac{3(1/3)}{(2/3)^2} = \dfrac{3}{2} + \dfrac{9}{4} = \dfrac{15}{4}$.</p>
+        </div>
+    </div>
+
+    <!-- WE 6 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Telescopic Series &bull; Partial Fractions &amp; Radicals</span>
+            <strong>Worked Example 6: Twin Telescoping — Triple Denominators &amp; Odd Radicals</strong>
+        </div>
+        <div class="ex-problem">
+            Compute the exact values of:
+            <br>(a) $\displaystyle A = \frac{1}{1 \cdot 2 \cdot 3} + \frac{1}{2 \cdot 3 \cdot 4} + \frac{1}{3 \cdot 4
+            \cdot 5} + \dots + \frac{1}{18 \cdot 19 \cdot 20}$
+            <br>(b) $\displaystyle B = \frac{1}{\sqrt{1} + \sqrt{3}} + \frac{1}{\sqrt{3} + \sqrt{5}} + \frac{1}{\sqrt{5}
+            + \sqrt{7}} + \dots + \frac{1}{\sqrt{79} + \sqrt{81}}$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — 3-Factor Partial Fraction Split:</strong></p>
+            <p>Write the $k$-th term $T_k = \dfrac{1}{k(k + 1)(k + 2)}$ for $k = 1, 2, \dots, 18$. Since $(k + 2) - k =
+                2$, rewrite the numerator $1$ as $\dfrac{1}{2}[(k + 2) - k]$:</p>
+            $$T_k = \frac{1}{2}\cdot\frac{(k + 2) - k}{k(k + 1)(k + 2)} = \frac{1}{2}\left[\frac{1}{k(k + 1)} -
+            \frac{1}{(k + 1)(k + 2)}\right].$$
+            <p>Set $U_k = \dfrac{1}{k(k + 1)}$; then $T_k = \dfrac{1}{2}(U_k - U_{k+1})$. Summing from $k = 1$ to $18$
+                cancels all interior terms:</p>
+            $$A = \frac{1}{2}\bigl(U_1 - U_{19}\bigr) = \frac{1}{2}\left(\frac{1}{1 \cdot 2} - \frac{1}{19 \cdot
+            20}\right) = \frac{1}{2}\left(\frac{1}{2} - \frac{1}{380}\right) = \frac{1}{2}\left(\frac{189}{380}\right) =
+            \mathbf{\frac{189}{760}}.$$
+
+            <p><strong>Part (b) — Conjugate Radical Telescoping:</strong></p>
+            <p>For each $k \in \{1, 2, \dots, 40\}$, rationalize the denominator of the $k$-th term:</p>
+            $$\frac{1}{\sqrt{2k - 1} + \sqrt{2k + 1}} = \frac{\sqrt{2k + 1} - \sqrt{2k - 1}}{(2k + 1) - (2k - 1)} =
+            \frac{1}{2}\bigl(\sqrt{2k + 1} - \sqrt{2k - 1}\bigr).$$
+            <p>Sum from $k = 1$ to $40$:</p>
+            $$B = \frac{1}{2}\Bigl[(\sqrt{3} - \sqrt{1}) + (\sqrt{5} - \sqrt{3}) + \dots + (\sqrt{81} - \sqrt{79})\Bigr]
+            = \frac{\sqrt{81} - \sqrt{1}}{2} = \frac{9 - 1}{2} = \mathbf{4}.$$
+        </div>
+    </div>
+
+    <!-- LEVEL 3 BANNER -->
+    <div class="level-banner l3">Level 3: Rank-Booster / IOQM-Lite &amp; Resonance Olympiad Tier (Worked Examples 7–9)
+    </div>
+
+    <!-- WE 7 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">AM–GM &bull; Weighted Splitting &amp; Equality Trap</span>
+            <strong>Worked Example 7: Term-Splitting Optimization &amp; Breaking the Unattainable Equality Trap</strong>
+        </div>
+        <div class="ex-problem">
+            (a) Find the exact minimum value of $f(x) = 2x^3 + \dfrac{96}{x^2}$ for $x \gt 0$, and the value of $x$ at
+            which it occurs.
+            <br>(b) Find the exact minimum value of $g(x) = \dfrac{x^2 + 13}{\sqrt{x^2 + 9}}$ for all $x \in
+            \mathbb{R}$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Full Derivation via Weighted AM–GM Splitting:</strong></p>
+            <p>
+                Applying 2-term AM–GM directly to $2x^3$ and $\dfrac{96}{x^2}$ gives $2\sqrt{192x}$, which still depends
+                on $x$ and fails to produce a constant bound. To eliminate $x$ completely in the product, the exponents
+                $+3$ and $-2$ must balance to $0$. Since $\text{lcm}(3, 2) = 6$, we split $2x^3$ into <strong>$2$ equal
+                    parts</strong> and $\dfrac{96}{x^2}$ into <strong>$3$ equal parts</strong>:
+            </p>
+            $$f(x) = \underbrace{x^3 + x^3}_{2\text{ terms}} + \underbrace{\frac{32}{x^2} + \frac{32}{x^2} +
+            \frac{32}{x^2}}_{3\text{ terms}}.$$
+            <p>Since $x \gt 0$, all $5$ terms are strictly positive. Apply the 5-term AM–GM inequality:</p>
+            $$\frac{x^3 + x^3 + \frac{32}{x^2} + \frac{32}{x^2} + \frac{32}{x^2}}{5} \ge \left(x^3 \cdot x^3 \cdot
+            \frac{32}{x^2} \cdot \frac{32}{x^2} \cdot \frac{32}{x^2}\right)^{1/5} = \bigl(32^3\bigr)^{1/5} =
+            \bigl((2^5)^3\bigr)^{1/5} = 2^3 = 8.$$
+            <p>Multiply by $5$: $f(x) \ge 40$. Now <strong>verify attainability of equality</strong> (all $5$ split
+                terms equal):</p>
+            $$x^3 = \frac{32}{x^2} \implies x^5 = 32 \implies x = 2 \gt 0.$$
+            <p>Since $x = 2$ lies inside $x \gt 0$, equality is achieved! Thus the exact minimum is $\mathbf{40}$ at
+                $\mathbf{x = 2}$.</p>
+
+            <p><strong>Part (b) — Resolving the Unattainable Equality Trap:</strong></p>
+            <p>Rewrite $g(x)$ by splitting the numerator around $(x^2 + 9)$:</p>
+            $$g(x) = \frac{(x^2 + 9) + 4}{\sqrt{x^2 + 9}} = \sqrt{x^2 + 9} + \frac{4}{\sqrt{x^2 + 9}}.$$
+            <p>Let $t = \sqrt{x^2 + 9}$. Because $x^2 \ge 0$ for all $x \in \mathbb{R}$, the exact domain of $t$ is
+                <strong>$t \ge 3$</strong>.
+            </p>
+            <p>
+                <strong>Why Naive AM–GM Fails:</strong> Applying AM–GM to $t + \dfrac{4}{t}$ yields $t + \dfrac{4}{t}
+                \ge 2\sqrt{4} = 4$, with equality at $t = \dfrac{4}{t} \implies t = 2$. Because $t \ge 3$, $t = 2$ is
+                <em>unreachable</em>, so $4$ is NOT the minimum!
+            </p>
+            <p>
+                <strong>Algebraic Monotonicity Proof (No Calculus Needed):</strong> Compare $h(t) = t + \dfrac{4}{t}$
+                against its boundary value $h(3) = 3 + \dfrac{4}{3} = \dfrac{13}{3}$ for any $t \ge 3$:
+            </p>
+            $$h(t) - h(3) = (t - 3) + \left(\frac{4}{t} - \frac{4}{3}\right) = (t - 3) - \frac{4(t - 3)}{3t} = (t -
+            3)\left(\frac{3t - 4}{3t}\right).$$
+            <p>
+                For every $t \ge 3$, we have $(t - 3) \ge 0$, $(3t - 4) \ge 5 \gt 0$, and $3t \gt 0$. Hence $h(t) \ge
+                h(3) = \dfrac{13}{3}$ for all $t \ge 3$, with equality if and only if $t = 3 \iff x = 0$.
+            </p>
+            <p>Therefore, the exact minimum value of $g(x)$ is $\mathbf{\dfrac{13}{3}}$ (attained at $x = 0$).</p>
+
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Exam Trick</span>
+                <p>
+                    <strong>For (a) [$Ax^p + Bx^{-q}$]:</strong> Skip writing out the $p + q$ copies—jump straight to
+                    the <strong>Weighted Balance Equation</strong> $p(Ax^p) = q(Bx^{-q})$ (which says the split pieces
+                    are equal!). Here $3(2x^3) = 2(96/x^2) \implies 6x^5 = 192 \implies x = 2 \implies f(2) = 16 + 24 =
+                    40$.
+                    <br><strong>For (b) [$t + k/t$ on $t \ge t_0$]:</strong> Check if $t_0 \le \sqrt{k}$. If yes,
+                    minimum is $2\sqrt{k}$. If $t_0 \gt \sqrt{k}$ (here $3 \gt 2$), the function is strictly increasing
+                    on $[t_0, \infty)$, so plug in the boundary $t = t_0$ immediately: $3 + \frac{4}{3} = \frac{13}{3}$!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WE 8 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">3-Variable Identities &bull; Two-Branch Logic</span>
+            <strong>Worked Example 8: Mastering Both Branches of $a^3 + b^3 + c^3 = 3abc$</strong>
+        </div>
+        <div class="ex-problem">
+            (a) Real numbers $a, b, c$ satisfy $a + b + c = 12$ and $a^3 + b^3 + c^3 = 3abc$. Prove that $a = b = c$ and
+            find the value of $a^2 + b^2 + c^2 + ab + bc + ca$.
+            <br>(b) Three <strong>distinct</strong> non-zero real numbers $x, y, z$ satisfy $\dfrac{x^2}{yz} +
+            \dfrac{y^2}{zx} + \dfrac{z^2}{xy} = 3$. Find the exact value of:
+            $$E = \frac{(x - y)^3 + (y - z)^3 + (z - x)^3}{(x - y)(y - z)(z - x)} - \frac{x^3 + y^3 + z^3}{(x + y)(y +
+            z)(z + x)}.$$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Triggering Branch 2 ($a = b = c$):</strong></p>
+            <p>Apply the factored form of the 3-variable cubic identity to $a^3 + b^3 + c^3 - 3abc = 0$:</p>
+            $$\frac{1}{2}(a + b + c)\Bigl[(a - b)^2 + (b - c)^2 + (c - a)^2\Bigr] = 0.$$
+            <p>
+                Substitute $a + b + c = 12 \neq 0$ and divide both sides by $6$:
+            </p>
+            $$(a - b)^2 + (b - c)^2 + (c - a)^2 = 0.$$
+            <p>
+                Since $a, b, c \in \mathbb{R}$, each square is non-negative, so all three must vanish simultaneously: $a
+                - b = b - c = c - a = 0 \implies a = b = c$. Combined with $a + b + c = 12$, we get $a = b = c = 4$.
+                Therefore:
+            </p>
+            $$a^2 + b^2 + c^2 + ab + bc + ca = 3(4^2) + 3(4^2) = 48 + 48 = \mathbf{96}.$$
+
+            <p><strong>Part (b) — Triggering Branch 1 ($x + y + z = 0$):</strong></p>
+            <p>Clear denominators in the given equation by multiplying through by $xyz \neq 0$:</p>
+            $$x^3 + y^3 + z^3 = 3xyz \implies \frac{1}{2}(x + y + z)\Bigl[(x - y)^2 + (y - z)^2 + (z - x)^2\Bigr] = 0.$$
+            <p>
+                Because $x, y, z$ are <em>distinct</em>, $(x - y)^2 + (y - z)^2 + (z - x)^2 \gt 0$. Dividing by this
+                strictly positive bracket forces:
+            </p>
+            $$x + y + z = 0.$$
+            <p>Now evaluate each fraction in $E$ separately:</p>
+            <ul>
+                <li><strong>First fraction:</strong> Let $u = x - y$, $v = y - z$, $w = z - x$. Notice $u + v + w = 0$
+                    identically, and $uvw \neq 0$ (since $x, y, z$ are distinct). By Branch 1, $u^3 + v^3 + w^3 = 3uvw$,
+                    so:
+                    $$\frac{(x - y)^3 + (y - z)^3 + (z - x)^3}{(x - y)(y - z)(z - x)} = \frac{3uvw}{uvw} = 3.$$
+                </li>
+                <li><strong>Second fraction:</strong> From $x + y + z = 0$, we have $x + y = -z$, $y + z = -x$, $z + x =
+                    -y$, and $x^3 + y^3 + z^3 = 3xyz$. Since $x, y, z \neq 0$, the denominator is $(-z)(-x)(-y) = -xyz
+                    \neq 0$, giving:
+                    $$\frac{x^3 + y^3 + z^3}{(x + y)(y + z)(z + x)} = \frac{3xyz}{-xyz} = -3.$$
+                </li>
+            </ul>
+            <p>Subtract the two values:</p>
+            $$E = 3 - (-3) = \mathbf{6}.$$
+
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Exam Trick</span>
+                <p>
+                    In MCQ/NAT questions where a symmetric expression in $x, y, z$ is guaranteed to be constant for all
+                    distinct non-zero reals with $x + y + z = 0$, plug in the simplest valid triplet <strong>$(x, y, z)
+                        = (1, 2, -3)$</strong> immediately after spotting $x + y + z = 0$:
+                    <br>First term: $\dfrac{(-1)^3 + 5^3 + (-4)^3}{(-1)(5)(-4)} = \dfrac{60}{20} = 3$; Second term:
+                    $\dfrac{1 + 8 - 27}{(3)(-1)(-2)} = \dfrac{-18}{6} = -3 \implies E = 3 - (-3) = 6$.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WE 9 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Olympiad Telescoping &bull; Hidden Quartic Factor</span>
+            <strong>Worked Example 9: The Classic Quartic Telescopic Series $\sum \dfrac{k}{k^4 + k^2 + 1}$</strong>
+        </div>
+        <div class="ex-problem">
+            Find the exact value of the sum:
+            $$S = \sum_{k=1}^{20} \frac{k}{k^4 + k^2 + 1} = \frac{1}{3} + \frac{2}{21} + \frac{3}{91} + \dots +
+            \frac{20}{160401}.$$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Factor the quartic denominator by completing the square:</strong></p>
+            <p>Add and subtract $k^2$ inside $k^4 + k^2 + 1$ to expose a difference of squares:</p>
+            $$k^4 + k^2 + 1 = (k^4 + 2k^2 + 1) - k^2 = (k^2 + 1)^2 - k^2 = (k^2 - k + 1)(k^2 + k + 1).$$
+            <p><strong>Step 2 — Split into partial fractions using the difference of the two factors:</strong></p>
+            <p>Notice that $(k^2 + k + 1) - (k^2 - k + 1) = 2k$, which is exactly twice the numerator $k$! Therefore:
+            </p>
+            $$T_k = \frac{k}{k^4 + k^2 + 1} = \frac{1}{2} \cdot \frac{(k^2 + k + 1) - (k^2 - k + 1)}{(k^2 - k + 1)(k^2 +
+            k + 1)} = \frac{1}{2}\left(\frac{1}{k^2 - k + 1} - \frac{1}{k^2 + k + 1}\right).$$
+            <p><strong>Step 3 — Verify exact consecutive telescoping:</strong></p>
+            <p>Define $f(k) = k^2 - k + 1$. Check $f(k + 1)$:</p>
+            $$f(k + 1) = (k + 1)^2 - (k + 1) + 1 = (k^2 + 2k + 1) - k - 1 + 1 = k^2 + k + 1.$$
+            <p>
+                The second denominator is identically $f(k + 1)$! Setting $U_k = \dfrac{1}{f(k)} = \dfrac{1}{k^2 - k +
+                1}$, we have $T_k = \dfrac{1}{2}(U_k - U_{k+1})$.
+            </p>
+            <p><strong>Step 4 — Sum from $k = 1$ to $n$ and evaluate at $n = 20$:</strong></p>
+            $$S_n = \frac{1}{2}\bigl(U_1 - U_{n+1}\bigr) = \frac{1}{2}\left(\frac{1}{1^2 - 1 + 1} - \frac{1}{(n + 1)^2 -
+            (n + 1) + 1}\right) = \frac{1}{2}\left(1 - \frac{1}{n^2 + n + 1}\right) = \frac{n^2 + n}{2(n^2 + n + 1)}.$$
+            <p>Substitute $n = 20$ (so $n^2 + n = 400 + 20 = 420$):</p>
+            $$S_{20} = \frac{420}{2(420 + 1)} = \frac{210}{421}.$$
+            <p>Since $421 = 2(210) + 1$, $\gcd(210, 421) = 1$, so the fraction is already in lowest terms:
+                $\mathbf{\dfrac{210}{421}}$.</p>
+
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Exam Trick</span>
+                <p>
+                    Lock two Olympiad signatures into permanent memory:
+                    <br>1. <strong>Factor trigger:</strong> $k^4 + k^2 + 1 = (k^2 - k + 1)(k^2 + k + 1)$ (also works for
+                    $4k^4 + 1 = (2k^2 - 2k + 1)(2k^2 + 2k + 1)$ via Sophie Germain!).
+                    <br>2. <strong>Closed sum:</strong> $\displaystyle \sum_{k=1}^{n} \frac{k}{k^4 + k^2 + 1} =
+                    \frac{n(n + 1)}{2(n^2 + n + 1)}$, and as $n \to \infty$, $S_\infty = \dfrac{1}{2}$. For $n = 20$:
+                    $\dfrac{20 \times 21}{2 \times 421} = \dfrac{210}{421}$ in 5 seconds flat.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</article>

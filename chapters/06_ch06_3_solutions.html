@@ -1,0 +1,696 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 6: Real Numbers, Irrationality, Surds & Logarithms Bridge — Solutions & Error Forensics">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">VOLUME 2: MATHEMATICS (PAPER 1) &bull; PART 3: FULL STEP-BY-STEP SOLUTIONS &amp; ERROR
+            FORENSICS</div>
+        <h1>Chapter 6 Solutions &amp; Error Forensics: Real Numbers, Surds &amp; Logarithms Bridge</h1>
+        <p>Zero-skip, first-principles derivations for all 28 Practice Arena problems (Q1&ndash;Q28), followed by five
+            dedicated Trap &amp; Error Forensics post-mortems engineered to eliminate negative-marking leaks on Paper 1.
+        </p>
+        <div class="tag-row">
+            <span class="meta-pill">28 Verified Solutions</span>
+            <span class="meta-pill">Zero Skipped Steps</span>
+            <span class="meta-pill">100% Answer Key Match</span>
+            <span class="meta-pill">5 Trap &amp; Error Forensics Cards</span>
+        </div>
+    </header>
+
+    <!-- ==================== LEVEL 1 SOLUTIONS ==================== -->
+    <div class="level-banner l1">LEVEL 1 SOLUTIONS &bull; WARMUP &amp; CONCEPT CONSOLIDATION (Q1 &ndash; Q8)</div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q1</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Reduce the Fraction to Lowest Terms First:</strong> Never inspect the denominator
+            before cancelling common factors! Factor both numerator and denominator:</p>
+        $$147 = 3 \times 49 = 3 \cdot 7^2, \qquad 1200 = 3 \times 400 = 3 \cdot 2^4 \cdot 5^2$$
+        <p>Cancelling the common factor of $3$ yields the reduced fraction:</p>
+        $$\frac{147}{1200} = \frac{49}{400} = \frac{49}{2^4 \cdot 5^2}$$
+        <p><strong>Step 2 &mdash; Apply the Terminating Decimal Criterion:</strong> Since $\gcd(49, 400) = 1$ and the
+            denominator contains only prime factors $2$ and $5$, the decimal terminates after exactly $\max(4, 2) = 4$
+            decimal places. Explicitly:</p>
+        $$\frac{49}{2^4 \cdot 5^2} = \frac{49 \times 5^2}{2^4 \cdot 5^4} = \frac{1225}{10^4} = 0.1225$$
+        <p>Hence the decimal terminates after <strong>$4$</strong> decimal places. <strong>Correct Option: (C).</strong>
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q2</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Translate the Divisibility Constraint:</strong> Factor $12 = 2^2 \cdot 3^1$. A
+            positive divisor $d = 2^{e_1} \cdot 3^{e_2} \cdot 5^{e_3}$ of $N = 2^4 \cdot 3^3 \cdot 5^2$ is a multiple of
+            $12$ if and only if $d$ contains at least $2^2$ and $3^1$.</p>
+        <p><strong>Step 2 &mdash; Count Allowable Exponent Choices:</strong></p>
+        <ul>
+            <li>Exponent of $2$: $e_1 \in \{2, 3, 4\} \implies 3$ choices.</li>
+            <li>Exponent of $3$: $e_2 \in \{1, 2, 3\} \implies 3$ choices.</li>
+            <li>Exponent of $5$: $e_3 \in \{0, 1, 2\} \implies 3$ choices.</li>
+        </ul>
+        <p>Equivalently, use the quotient bijection $d(N/12) = d(2^2 \cdot 3^2 \cdot 5^2) = (2+1)(2+1)(2+1) = 3 \times 3
+            \times 3 = \mathbf{27}$. <strong>Correct Option: (D).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q3</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Rationalize the Denominator:</strong> Multiply numerator and denominator by the
+            conjugate $7 - 4\sqrt{3}$:</p>
+        $$\frac{5 + 2\sqrt{3}}{7 + 4\sqrt{3}} \cdot \frac{7 - 4\sqrt{3}}{7 - 4\sqrt{3}} = \frac{5(7) - 5(4\sqrt{3}) +
+        2\sqrt{3}(7) - 2\sqrt{3}(4\sqrt{3})}{7^2 - (4\sqrt{3})^2}$$
+        <p>Evaluate the numerator and denominator carefully:</p>
+        $$\text{Denominator} = 49 - 16(3) = 49 - 48 = 1$$
+        $$\text{Numerator} = 35 - 20\sqrt{3} + 14\sqrt{3} - 8(3) = (35 - 24) + (-20 + 14)\sqrt{3} = 11 - 6\sqrt{3}$$
+        <p><strong>Step 2 &mdash; Equate Rational and Irrational Parts:</strong> Since $11 - 6\sqrt{3} = a + b\sqrt{3}$
+            with $a, b \in \mathbb{Q}$ and $\sqrt{3} \notin \mathbb{Q}$, we obtain $a = 11$ and $b = -6$. Therefore:</p>
+        $$a - b = 11 - (-6) = 11 + 6 = \mathbf{17}$$
+        <p><strong>Correct Option: (B).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q4</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Express Every Base and Argument as Prime Powers:</strong> Apply the generalized power
+            law $\log_{a^k}(a^r) = \dfrac{r}{k}$ to each term:</p>
+        <ul>
+            <li>$\log_9 27 = \log_{3^2}(3^3) = \dfrac{3}{2}\log_3 3 = \dfrac{3}{2}$</li>
+            <li>$\log_{27} 9 = \log_{3^3}(3^2) = \dfrac{2}{3}\log_3 3 = \dfrac{2}{3}$</li>
+            <li>$\log_{0.5} 8 = \log_{2^{-1}}(2^3) = \dfrac{3}{-1}\log_2 2 = -3$</li>
+        </ul>
+        <p><strong>Step 2 &mdash; Combine Over a Common Denominator ($6$):</strong></p>
+        $$\frac{3}{2} - \frac{2}{3} + (-3) = \frac{9 - 4 - 18}{6} = \mathbf{-\frac{13}{6}}$$
+        <p><strong>Correct Option: (A).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q5</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Apply the Exterior-Ray Modulus Rule:</strong> For $a \gt 0$, $|u| \ge a \iff u \le -a
+            \text{ or } u \ge a$. Setting $u = 3x - 5$ and $a = 7$:</p>
+        $$3x - 5 \le -7 \qquad \text{or} \qquad 3x - 5 \ge 7$$
+        <p><strong>Step 2 &mdash; Solve Both Linear Inequalities:</strong></p>
+        <ul>
+            <li>Left branch: $3x \le -7 + 5 = -2 \implies x \le -\dfrac{2}{3}$</li>
+            <li>Right branch: $3x \ge 7 + 5 = 12 \implies x \ge 4$</li>
+        </ul>
+        <p>Because the inequality is non-strict ($\ge$), both boundary endpoints are included (square brackets): $x \in
+            \left(-\infty,\, -\dfrac{2}{3}\right] \cup [4,\, \infty)$. <strong>Correct Option: (B).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q6</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Verified Answer: 325</span>
+        </div>
+        <p><strong>Step 1 &mdash; Prime Factorization of $360$:</strong></p>
+        $$360 = 36 \times 10 = (4 \times 9) \times (2 \times 5) = 2^3 \cdot 3^2 \cdot 5^1$$
+        <p><strong>Step 2 &mdash; Compute the Sum of Divisors $\sigma(360)$:</strong></p>
+        $$\sigma(360) = \left(\frac{2^4 - 1}{2 - 1}\right)\left(\frac{3^3 - 1}{3 - 1}\right)\left(\frac{5^2 - 1}{5 -
+        1}\right) = 15 \times \frac{26}{2} \times \frac{24}{4} = 15 \times 13 \times 6 = 1170$$
+        <p><strong>Step 3 &mdash; Apply the Reciprocal-Sum Identity:</strong> Recall $\displaystyle S = \sum_{d \mid N}
+            \frac{1}{d} = \frac{\sigma(N)}{N}$:</p>
+        $$S = \frac{1170}{360} = \frac{117}{36} = \frac{13}{4} = 3.25 \implies 100S = 100 \times 3.25 = \mathbf{325}$$
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q7</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Verified Answer: 12</span>
+        </div>
+        <p><strong>Method 1 &mdash; Denesting via $\sqrt{a \pm 2\sqrt{b}}$:</strong> Rewrite $10\sqrt{3} = 2 \cdot
+            5\sqrt{3} = 2\sqrt{25 \times 3} = 2\sqrt{75}$. Find $x, y \gt 0$ with $x + y = 28$ and $xy = 75$: clearly $x
+            = 25$ and $y = 3$. Therefore:</p>
+        $$\sqrt{28 + 10\sqrt{3}} = \sqrt{25} + \sqrt{3} = 5 + \sqrt{3}$$
+        $$\sqrt{28 - 10\sqrt{3}} = |\sqrt{25} - \sqrt{3}| = 5 - \sqrt{3} \quad (\text{since } 5 \gt \sqrt{3})$$
+        <p>Subtracting and squaring gives:</p>
+        $$M = \big[(5 + \sqrt{3}) - (5 - \sqrt{3})\big]^2 = (2\sqrt{3})^2 = 4 \times 3 = \mathbf{12}$$
+        <p><strong>Method 2 &mdash; Direct Algebraic Squaring (Cross-Check):</strong> Using $(A - B)^2 = A^2 + B^2 -
+            2AB$:</p>
+        $$M = (28 + 10\sqrt{3}) + (28 - 10\sqrt{3}) - 2\sqrt{28^2 - (10\sqrt{3})^2} = 56 - 2\sqrt{784 - 300} = 56 -
+        2\sqrt{484} = 56 - 2(22) = \mathbf{12}$$
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q8</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Verified Answer: 9</span>
+        </div>
+        <p><strong>Step 1 &mdash; Convert All Terms to Base $2$:</strong> Since $4 = 2^2$, rewrite $4^{x-5} =
+            (2^2)^{x-5} = 2^{2x - 10}$. The equation becomes:</p>
+        $$2^{2x - 10} + 2^{2x - 9} = 768$$
+        <p><strong>Step 2 &mdash; Factor Out the Smaller Power $2^{2x - 10}$:</strong> Note that $2^{2x - 9} = 2 \cdot
+            2^{2x - 10}$:</p>
+        $$2^{2x - 10}(1 + 2) = 768 \implies 3 \cdot 2^{2x - 10} = 768 \implies 2^{2x - 10} = \frac{768}{3} = 256$$
+        <p><strong>Step 3 &mdash; Equate Exponents:</strong> Since $256 = 2^8$:</p>
+        $$2^{2x - 10} = 2^8 \implies 2x - 10 = 8 \implies 2x = 18 \implies x = \mathbf{9}$$
+    </div>
+
+    <!-- ==================== LEVEL 2 SOLUTIONS ==================== -->
+    <div class="level-banner l2">LEVEL 2 SOLUTIONS &bull; BEST EXAM-REAL BENCHMARK (Q9 &ndash; Q19)</div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q9</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Convert $x = 0.2\overline{7}$ to Reduced Rational Form:</strong> Here $u = 1$
+            non-repeating digit ($2$) and $v = 1$ repeating digit ($7$):</p>
+        $$10x = 2.\overline{7}, \quad 100x = 27.\overline{7} \implies 90x = 27 - 2 = 25 \implies x = \frac{25}{90} =
+        \frac{5}{18}$$
+        <p><strong>Step 2 &mdash; Convert $y = 0.1\overline{36}$ to Reduced Rational Form:</strong> Here $u = 1$
+            non-repeating digit ($1$) and $v = 2$ repeating digits ($36$):</p>
+        $$10y = 1.\overline{36}, \quad 1000y = 136.\overline{36} \implies 990y = 136 - 1 = 135 \implies y =
+        \frac{135}{990} = \frac{3}{22}$$
+        <p>(Dividing numerator and denominator by $45$: $135/45 = 3$, $990/45 = 22$.)</p>
+        <p><strong>Step 3 &mdash; Compute the Ratio $x/y$:</strong></p>
+        $$\frac{x}{y} = \frac{5}{18} \div \frac{3}{22} = \frac{5}{18} \times \frac{22}{3} = \frac{5 \times 11}{9 \times
+        3} = \mathbf{\frac{55}{27}}$$
+        <p><strong>Correct Option: (D).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q10</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Spot the Constant Difference ($2$) and Rationalize Numerators:</strong> Notice $13 -
+            11 = 11 - 9 = 15 - 13 = 2$. Multiply each expression by its conjugate over itself:</p>
+        $$P = (\sqrt{13} - \sqrt{11}) \cdot \frac{\sqrt{13} + \sqrt{11}}{\sqrt{13} + \sqrt{11}} = \frac{2}{\sqrt{13} +
+        \sqrt{11}}$$
+        $$Q = \frac{2}{\sqrt{11} + \sqrt{9}}, \qquad R = \frac{2}{\sqrt{15} + \sqrt{13}}$$
+        <p><strong>Step 2 &mdash; Compare Positive Denominators:</strong> Because $\sqrt{x}$ is strictly increasing on
+            $(0, \infty)$:</p>
+        $$\sqrt{11} + \sqrt{9} \lt \sqrt{13} + \sqrt{11} \lt \sqrt{15} + \sqrt{13}$$
+        <p>Taking reciprocals of positive numbers reverses the inequality direction, and multiplying by $2 \gt 0$
+            preserves it:</p>
+        $$\frac{2}{\sqrt{15} + \sqrt{13}} \lt \frac{2}{\sqrt{13} + \sqrt{11}} \lt \frac{2}{\sqrt{11} + \sqrt{9}}
+        \implies \mathbf{R \lt P \lt Q}$$
+        <p><strong>Correct Option: (D).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q11</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Smart Grouping ($3 + 5 = 8$):</strong> Group the denominator as $(\sqrt{3} + \sqrt{5})
+            - \sqrt{8}$ and multiply numerator and denominator by $(\sqrt{3} + \sqrt{5}) + \sqrt{8}$:</p>
+        $$\frac{30}{(\sqrt{3} + \sqrt{5}) - \sqrt{8}} \cdot \frac{(\sqrt{3} + \sqrt{5}) + \sqrt{8}}{(\sqrt{3} +
+        \sqrt{5}) + \sqrt{8}} = \frac{30(\sqrt{3} + \sqrt{5} + \sqrt{8})}{(\sqrt{3} + \sqrt{5})^2 - (\sqrt{8})^2}$$
+        <p><strong>Step 2 &mdash; Collapse the Denominator:</strong></p>
+        $$(\sqrt{3} + \sqrt{5})^2 - 8 = (3 + 5 + 2\sqrt{15}) - 8 = 2\sqrt{15}$$
+        <p><strong>Step 3 &mdash; Simplify and Distribute $\sqrt{15}$:</strong> Rewrite $\sqrt{8} = 2\sqrt{2}$ and
+            cancel $30 / 2 = 15$:</p>
+        $$\frac{30(\sqrt{3} + \sqrt{5} + 2\sqrt{2})}{2\sqrt{15}} = \frac{15}{\sqrt{15}}(\sqrt{3} + \sqrt{5} + 2\sqrt{2})
+        = \sqrt{15}(\sqrt{3} + \sqrt{5} + 2\sqrt{2})$$
+        $$= \sqrt{45} + \sqrt{75} + 2\sqrt{30} = \mathbf{3\sqrt{5} + 5\sqrt{3} + 2\sqrt{30}}$$
+        <p><strong>Correct Option: (A).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q12</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Lock the Domain from the Original Equation:</strong> Both arguments must be strictly
+            positive:</p>
+        $$x - 1 \gt 0 \implies x \gt 1 \qquad \text{AND} \qquad x - 3 \gt 0 \implies x \gt 3$$
+        <p>The combined domain is <strong>$x \gt 3$</strong>.</p>
+        <p><strong>Step 2 &mdash; Combine Logarithms and Solve Algebraically:</strong> Using the Product Law:</p>
+        $$\log_2\!\big((x - 1)(x - 3)\big) = 3 \implies (x - 1)(x - 3) = 2^3 = 8$$
+        $$x^2 - 4x + 3 = 8 \implies x^2 - 4x - 5 = 0 \implies (x - 5)(x + 1) = 0$$
+        <p>Candidate roots: $x = 5$ and $x = -1$.</p>
+        <p><strong>Step 3 &mdash; Filter Against $x \gt 3$:</strong></p>
+        <ul>
+            <li>$x = -1$ fails $x \gt 3$ (it gives $\log_2(-2) + \log_2(-4)$, both undefined in $\mathbb{R}$).
+                <strong>Reject as extraneous!</strong>
+            </li>
+            <li>$x = 5$ satisfies $x \gt 3$: $\log_2(4) + \log_2(2) = 2 + 1 = 3$. Valid!</li>
+        </ul>
+        <p>Thus $x = 5$ is the sole valid solution, so the sum of all real solutions is <strong>$5$</strong> (not $4$
+            from Vieta's formula!). <strong>Correct Option: (B).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q13</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Compute $\log_{10}(5^{-20})$:</strong> First derive $\log_{10} 5 = \log_{10}(10/2) = 1
+            - \log_{10} 2 \approx 1 - 0.30103 = 0.69897$. Then:</p>
+        $$\log_{10}(5^{-20}) = -20 \log_{10} 5 \approx -20 \times 0.69897 = -13.9794$$
+        <p><strong>Step 2 &mdash; Extract the True Characteristic (With Non-Negative Mantissa):</strong> Never write $C
+            = -13$! Rewrite $-13.9794$ so that the fractional part $M$ satisfies $0 \le M \lt 1$:</p>
+        $$-13.9794 = -14 + (1 - 0.9794) = -14 + 0.0206$$
+        <p>Hence the characteristic is $C = -14$ (meaning $10^{-14} \le 5^{-20} \lt 10^{-13}$).</p>
+        <p><strong>Step 3 &mdash; Count Leading Zeros After the Decimal Point:</strong> By Theorem 2 (Section 6.4):</p>
+        $$\text{Leading zeros} = |C| - 1 = 14 - 1 = \mathbf{13}$$
+        <p><strong>Correct Option: (C).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q14</span>
+            <span class="badge badge-l2">Level 2 &bull; Passage I</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Identify the Anchor Points:</strong> Rewrite $D(x) = |x - (-3)| + |x - 5|$. The two
+            relay towers sit at $a = -3$ and $b = 5$, separated by distance:</p>
+        $$d = b - a = 5 - (-3) = 8$$
+        <p><strong>Step 2 &mdash; Apply the Piecewise / Triangle Inequality Theorem:</strong> By the Triangle
+            Inequality, for every $x \in \mathbb{R}$:</p>
+        $$D(x) = |x + 3| + |5 - x| \ge |(x + 3) + (5 - x)| = |8| = 8$$
+        <p>Equality ($D(x) = 8$) holds for every $x \in [-3, 5]$, so the minimum value attained by $D(x)$ is exactly
+            <strong>$8$</strong>. Consequently, $D(x) = k$ has infinitely many solutions for $k = 8$, two solutions for
+            $k \gt 8$, and <strong>no real solution strictly when $k \lt 8$</strong>. <strong>Correct Option:
+                (A).</strong>
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q15</span>
+            <span class="badge badge-l2">Level 2 &bull; Passage I</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Solve $D(x) = |x + 3| + |x - 5| \le 14$ Using Critical Points ($x = -3, 5$):</strong>
+        </p>
+        <ul>
+            <li><strong>Region 1 ($x \lt -3$):</strong> $-(x + 3) - (x - 5) \le 14 \implies 2 - 2x \le 14 \implies -2x
+                \le 12 \implies x \ge -6$. Intersecting with $x \lt -3$ gives $[-6, -3)$.</li>
+            <li><strong>Region 2 ($-3 \le x \lt 5$):</strong> $(x + 3) - (x - 5) = 8 \le 14$, always true! Keeps $[-3,
+                5)$.</li>
+            <li><strong>Region 3 ($x \ge 5$):</strong> $(x + 3) + (x - 5) \le 14 \implies 2x - 2 \le 14 \implies 2x \le
+                16 \implies x \le 8$. Intersecting with $x \ge 5$ gives $[5, 8]$.</li>
+        </ul>
+        <p><em>Geometric Check:</em> Excess above minimum is $14 - 8 = 6$, so step outward by $\Delta = 6/2 = 3$ from
+            each anchor: $-3 - 3 = -6$ and $5 + 3 = 8$.</p>
+        <p><strong>Step 2 &mdash; Count Integers in $[-6, 8]$:</strong></p>
+        $$\text{Count} = 8 - (-6) + 1 = 14 + 1 = \mathbf{15}$$
+        <p><strong>Correct Option: (C).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q16</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Verified Answer: 54</span>
+        </div>
+        <p><strong>Step 1 &mdash; Factor $12 = 2^2 \cdot 3$ and Compute $\log_{10}(12^{50})$:</strong></p>
+        $$\log_{10} 12 = 2\log_{10} 2 + \log_{10} 3 \approx 2(0.30103) + 0.47712 = 0.60206 + 0.47712 = 1.07918$$
+        $$\log_{10}(12^{50}) = 50 \times 1.07918 = \frac{100}{2} \times 1.07918 = 53.959$$
+        <p><strong>Step 2 &mdash; Apply the Digit-Counting Formula:</strong> Since $53.959$ is well below $54$ (even
+            accounting for rounding error of $\lt 50 \times 10^{-5} = 0.0005$), the exact characteristic is $C = \lfloor
+            \log_{10}(12^{50}) \rfloor = 53$. Therefore:</p>
+        $$\text{Number of digits in } 12^{50} = C + 1 = 53 + 1 = \mathbf{54}$$
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q17</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Verified Answer: 72</span>
+        </div>
+        <p><strong>Step 1 &mdash; Substitute $t = 2^x \gt 0$:</strong> Rewrite $4^x = (2^2)^x = (2^x)^2 = t^2$ and $3
+            \cdot 2^{x+2} = 3 \cdot 2^2 \cdot 2^x = 12t$. The equation becomes:</p>
+        $$t^2 - 12t - 64 = 0$$
+        <p><strong>Step 2 &mdash; Factor and Enforce Positivity ($t \gt 0$):</strong></p>
+        $$(t - 16)(t + 4) = 0 \implies t = 16 \quad \text{or} \quad t = -4$$
+        <p>Since $2^x \gt 0$ for all $x \in \mathbb{R}$, discard $t = -4$. Thus $2^x = 16 = 2^4 \implies x = 4$.</p>
+        <p><strong>Step 3 &mdash; Evaluate $x^3 + 2x$:</strong></p>
+        $$x^3 + 2x = 4^3 + 2(4) = 64 + 8 = \mathbf{72}$$
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q18</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Verified Answer: 43</span>
+        </div>
+        <p><strong>Step 1 &mdash; Telescope the Chain Product via Change of Base:</strong> Convert every factor to
+            common base $10$ (or apply the Chain Rule directly):</p>
+        $$\log_2 3 \cdot \log_3 4 \cdot \log_4 5 \cdots \log_{63} 64 = \frac{\log 3}{\log 2} \cdot \frac{\log 4}{\log 3}
+        \cdot \frac{\log 5}{\log 4} \cdots \frac{\log 64}{\log 63} = \frac{\log 64}{\log 2} = \log_2 64 = \log_2(2^6) =
+        6$$
+        <p>Squaring this result gives $6^2 = 36$.</p>
+        <p><strong>Step 2 &mdash; Simplify the Exponential-Log Term:</strong> Apply $\log_{a^k}(m^r) =
+            \dfrac{r}{k}\log_a m$ to the exponent:</p>
+        $$\log_{25} 49 = \log_{5^2}(7^2) = \frac{2}{2}\log_5 7 = \log_5 7$$
+        <p>Now apply the fundamental identity $a^{\log_a b} = b$:</p>
+        $$5^{\log_{25} 49} = 5^{\log_5 7} = 7$$
+        <p><strong>Step 3 &mdash; Add Both Terms:</strong> $W = 36 + 7 = \mathbf{43}$.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q19</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Verified Answer: 22</span>
+        </div>
+        <p><strong>Step 1 &mdash; Prime Factorization and Divisor Count of $3600$:</strong></p>
+        $$3600 = 60^2 = (2^2 \cdot 3 \cdot 5)^2 = 2^4 \cdot 3^2 \cdot 5^2$$
+        $$d(3600) = (4 + 1)(2 + 1)(2 + 1) = 5 \times 3 \times 3 = 45$$
+        <p><strong>Step 2 &mdash; Count Unordered Pairs of <em>Distinct</em> Factors:</strong> Since $3600 = 60^2$ is a
+            perfect square, one of the $45$ divisors is $60$, which pairs with itself as $\{60, 60\}$. Because the
+            question explicitly requires <strong>distinct</strong> positive integers ($a \neq b$), remove $60$ first,
+            leaving $45 - 1 = 44$ divisors that form complementary unordered pairs $\{a, 3600/a\}$:</p>
+        $$\text{Number of unordered distinct pairs} = \frac{d(3600) - 1}{2} = \frac{45 - 1}{2} = \mathbf{22}$$
+    </div>
+
+    <!-- ==================== LEVEL 3 SOLUTIONS ==================== -->
+    <div class="level-banner l3">LEVEL 3 SOLUTIONS &bull; RANK-BOOSTER &amp; OLYMPIAD BRIDGE (Q20 &ndash; Q28)</div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q20</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p>Let $u(x) = x^2 - 5x + 5$ and $v(x) = x^2 - 6x + 5$. The variable-base equation $u(x)^{v(x)} = 1$ must be
+            analyzed across <strong>all three exhaustive cases</strong>:</p>
+        <ol>
+            <li><strong>Case 1: Exponent $= 0$ and Base $\neq 0$:</strong>
+                $$v(x) = x^2 - 6x + 5 = (x - 1)(x - 5) = 0 \implies x = 1 \text{ or } x = 5$$
+                Check $u(x) \neq 0$: $u(1) = 1 - 5 + 5 = 1 \neq 0$ (gives $1^0 = 1$, valid) and $u(5) = 25 - 25 + 5 = 5
+                \neq 0$ (gives $5^0 = 1$, valid). Solutions from Case 1: $\{1, 5\}$.</li>
+            <li><strong>Case 2: Base $= 1$ (any real exponent works):</strong>
+                $$u(x) = 1 \implies x^2 - 5x + 5 = 1 \implies x^2 - 5x + 4 = (x - 1)(x - 4) = 0 \implies x = 1 \text{ or
+                } x = 4$$
+                Here $x = 1$ was already found; $x = 4$ is a new valid solution ($1^{-3} = 1$). Solutions so far: $\{1,
+                4, 5\}$.</li>
+            <li><strong>Case 3: Base $= -1$ and Exponent is an <em>Even Integer</em>:</strong>
+                $$u(x) = -1 \implies x^2 - 5x + 5 = -1 \implies x^2 - 5x + 6 = (x - 2)(x - 3) = 0 \implies x = 2 \text{
+                or } x = 3$$
+                <ul>
+                    <li>Test $x = 2$: $v(2) = 4 - 12 + 5 = -3$ (odd integer $\implies (-1)^{-3} = -1 \neq 1$).
+                        <strong>Reject $x = 2$.</strong>
+                    </li>
+                    <li>Test $x = 3$: $v(3) = 9 - 18 + 5 = -4$ (even integer $\implies (-1)^{-4} = +1$). <strong>Accept
+                            $x = 3$.</strong></li>
+                </ul>
+            </li>
+        </ol>
+        <p>Collecting all distinct real solutions gives $x \in \{1, 3, 4, 5\}$, a total of <strong>$4$</strong> distinct
+            real values. <strong>Correct Option: (C).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q21</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Enforce the Strict Logarithm Domain:</strong> The argument must be strictly positive:
+        </p>
+        $$x^2 - 5x + 6 \gt 0 \implies (x - 2)(x - 3) \gt 0 \implies x \in (-\infty,\, 2) \cup (3,\, \infty)$$
+        <p><strong>Step 2 &mdash; Solve the Inequality (Flip the Sign Because Base $0.5 \in (0, 1)$!):</strong> Since $y
+            = \log_{0.5} t$ is strictly decreasing, lifting the logarithm reverses $\ge$ to $\le$:</p>
+        $$\log_{0.5}(x^2 - 5x + 6) \ge -1 \implies x^2 - 5x + 6 \le (0.5)^{-1} = 2$$
+        $$x^2 - 5x + 4 \le 0 \implies (x - 1)(x - 4) \le 0 \implies x \in [1,\, 4]$$
+        <p><strong>Step 3 &mdash; Intersect Solution Set with Domain:</strong></p>
+        $$[1,\, 4] \cap \big((-\infty,\, 2) \cup (3,\, \infty)\big) = \mathbf{[1,\, 2) \cup (3,\, 4]}$$
+        <p>(Notice that $x = 2$ and $x = 3$ must remain excluded because they make the argument $0$.) <strong>Correct
+                Option: (B).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q22</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Convert Both Infinite Surds into Quadratics:</strong> Clearly $p \gt 0$ and $q \gt 0$.
+            Since the infinite tails repeat:</p>
+        $$p = \sqrt{7 + p} \implies p^2 - p - 7 = 0 \qquad \text{and} \qquad q = \sqrt{7 - q} \implies q^2 + q - 7 = 0$$
+        <p><strong>Step 2 &mdash; Extract $(p - q)$ and $pq$ Without Messy Radicals:</strong> Rewrite the second
+            equation as $(-q)^2 - (-q) - 7 = 0$. This shows that $p$ and $(-q)$ are the <em>two distinct roots</em> of
+            the single quadratic $t^2 - t - 7 = 0$! By Vieta's formulas:</p>
+        $$p + (-q) = 1 \implies p - q = 1, \qquad p(-q) = -7 \implies pq = 7$$
+        <p>(Direct verification using the quadratic formula: $p = \dfrac{1 + \sqrt{29}}{2}$ and $q = \dfrac{-1 +
+            \sqrt{29}}{2}$, giving $p - q = 1$ and $pq = \dfrac{29 - 1}{4} = 7$.)</p>
+        <p><strong>Step 3 &mdash; Evaluate $p^3 - q^3$:</strong> Use the identity $p^3 - q^3 = (p - q)^3 + 3pq(p - q)$:
+        </p>
+        $$p^3 - q^3 = 1^3 + 3(7)(1) = 1 + 21 = \mathbf{22}$$
+        <p><strong>Correct Option: (D).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q23</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Benchmark Every Base Against Its Nearest Power of $2$:</strong> Observe that $17, 31,
+            63$ sit right next to $16 = 2^4$, $32 = 2^5$, and $64 = 2^6$:</p>
+        <ul>
+            <li><strong>Option (A):</strong> $17 \gt 16 = 2^4 \implies 17^{14} \gt (2^4)^{14} = 2^{56}$</li>
+            <li><strong>Option (B):</strong> $31 \lt 32 = 2^5 \implies 31^{11} \lt (2^5)^{11} = 2^{55}$</li>
+            <li><strong>Option (C):</strong> $63 \lt 64 = 2^6 \implies 63^{9} \lt (2^6)^{9} = 2^{54}$</li>
+            <li><strong>Option (D):</strong> $2^{55}$ directly.</li>
+        </ul>
+        <p><strong>Step 2 &mdash; Chain the Strict Inequalities:</strong></p>
+        $$63^9 \lt 2^{54} \lt 2^{55} \quad \text{and} \quad 31^{11} \lt 2^{55} \lt 2^{56} \lt 17^{14}$$
+        <p>Because $17^{14}$ exceeds $2^{56}$ while all three competitors are at most $2^{55}$,
+            <strong>$17^{14}$</strong> is strictly the largest. <strong>Correct Option: (A).</strong>
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q24</span>
+            <span class="badge badge-l3">Level 3 &bull; Passage II</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Translate All Three Constraints into Equations in $(a, b, c)$:</strong> For $N = 2^a
+            \cdot 3^b \cdot 5^c$:</p>
+        <ol>
+            <li>Total divisors: $(a + 1)(b + 1)(c + 1) = 48$</li>
+            <li>Odd divisors (exponent of $2$ fixed at $0$): $(b + 1)(c + 1) = 12$</li>
+            <li>Divisors divisible by $3$ (exponent of $3$ ranges from $1$ to $b$, giving $b$ choices): $(a + 1) \cdot b
+                \cdot (c + 1) = 36$</li>
+        </ol>
+        <p><strong>Step 2 &mdash; Solve for $a, b, c$ Cleanly by Ratios:</strong></p>
+        <ul>
+            <li>Divide (1) by (2): $a + 1 = \dfrac{48}{12} = 4 \implies \mathbf{a = 3}$.</li>
+            <li>Divide (3) by (1): $\dfrac{b}{b + 1} = \dfrac{36}{48} = \dfrac{3}{4} \implies 4b = 3b + 3 \implies
+                \mathbf{b = 3}$.</li>
+            <li>Substitute $b = 3$ into (2): $(3 + 1)(c + 1) = 12 \implies 4(c + 1) = 12 \implies c + 1 = 3 \implies
+                \mathbf{c = 2}$.</li>
+        </ul>
+        <p><strong>Step 3 &mdash; Compute $N$ and Its Perfect-Square Divisors:</strong></p>
+        $$N = 2^3 \cdot 3^3 \cdot 5^2 = 8 \times 27 \times 25 = 200 \times 27 = \mathbf{5400}$$
+        <p>For a divisor $2^{e_1} 3^{e_2} 5^{e_3}$ to be a perfect square, each exponent must be even: $e_1 \in \{0,
+            2\}$ ($2$ choices), $e_2 \in \{0, 2\}$ ($2$ choices), $e_3 \in \{0, 2\}$ ($2$ choices). Hence there are $2
+            \times 2 \times 2 = \mathbf{8}$ perfect-square divisors. <strong>Correct Option: (B).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q25</span>
+            <span class="badge badge-l3">Level 3 &bull; Passage II</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Apply the Product-of-Divisors Theorem:</strong> From Passage II, $N = 2^3 \cdot 3^3
+            \cdot 5^2$ has $d(N) = 48$ positive divisors. Therefore:</p>
+        $$P = N^{\,d(N)/2} = N^{48/2} = N^{24}$$
+        <p><strong>Step 2 &mdash; Regroup $N$ into Base $6$ and $25$:</strong></p>
+        $$N = (2^3 \cdot 3^3) \cdot 5^2 = (2 \cdot 3)^3 \cdot 25 = 6^3 \cdot 25$$
+        <p>Raise $N$ to the $24$-th power and divide by $25^{24}$:</p>
+        $$\frac{P}{25^{24}} = \frac{(6^3 \cdot 25)^{24}}{25^{24}} = \frac{6^{72} \cdot 25^{24}}{25^{24}} = 6^{72}$$
+        <p><strong>Step 3 &mdash; Take $\log_6$:</strong></p>
+        $$\log_6\!\left(\frac{P}{25^{24}}\right) = \log_6(6^{72}) = \mathbf{72}$$
+        <p><strong>Correct Option: (C).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q26</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Verified Answer: 45</span>
+        </div>
+        <p><strong>Step 1 &mdash; Lock All Three Logarithm Domain Conditions First:</strong> For $\log_{(x - 3)}(12 -
+            x)$ to be a real number:</p>
+        <ul>
+            <li>Argument $\gt 0$: $12 - x \gt 0 \implies x \lt 12$</li>
+            <li>Base $\gt 0$: $x - 3 \gt 0 \implies x \gt 3$</li>
+            <li>Base $\neq 1$: $x - 3 \neq 1 \implies x \neq 4$ <em>(Crucial exclusion!)</em></li>
+        </ul>
+        <p>Thus the logarithm domain restricts integer candidates exclusively to $\{5, 6, 7, 8, 9, 10, 11\}$.</p>
+        <p><strong>Step 2 &mdash; Solve $f(x) = |x - 2| + |x - 6| + |x - 11| \le 13$ via Critical Points ($2, 6,
+                11$):</strong></p>
+        <ul>
+            <li><strong>$x \lt 2$:</strong> $f(x) = (2 - x) + (6 - x) + (11 - x) = 19 - 3x \le 13 \implies 3x \ge 6
+                \implies x \ge 2$ (empty in $x \lt 2$).</li>
+            <li><strong>$2 \le x \lt 6$:</strong> $f(x) = (x - 2) + (6 - x) + (11 - x) = 15 - x \le 13 \implies x \ge 2$
+                (keeps full $[2, 6)$).</li>
+            <li><strong>$6 \le x \lt 11$:</strong> $f(x) = (x - 2) + (x - 6) + (11 - x) = x + 3 \le 13 \implies x \le
+                10$ (keeps $[6, 10]$).</li>
+            <li><strong>$x \ge 11$:</strong> $f(x) = (x - 2) + (x - 6) + (x - 11) = 3x - 19 \le 13 \implies 3x \le 32
+                \implies x \le \frac{32}{3} \approx 10.67$ (empty in $x \ge 11$).</li>
+        </ul>
+        <p>Combining all intervals gives $x \in [2, 10]$.</p>
+        <p><strong>Step 3 &mdash; Intersect Both Conditions and Sum the Integers:</strong></p>
+        $$\{5, 6, 7, 8, 9, 10, 11\} \cap [2, 10] = \{5, 6, 7, 8, 9, 10\}$$
+        <p>Sum of these six integers $= 5 + 6 + 7 + 8 + 9 + 10 = \dfrac{6 \times (5 + 10)}{2} = \mathbf{45}$.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q27</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Verified Answer: 246</span>
+        </div>
+        <p><strong>Step 1 &mdash; Check Domain and Take $\log_3$ of Both Sides:</strong> Since $\log_3 x$ appears in the
+            exponent, we require $x \gt 0$, which guarantees both sides of the equation are strictly positive. Taking
+            $\log_3$ on both sides:</p>
+        $$\log_3\!\left(x^{\log_3 x}\right) = \log_3\!\left(\frac{x^6}{243}\right)$$
+        <p><strong>Step 2 &mdash; Apply Logarithm Laws ($243 = 3^5$):</strong></p>
+        $$(\log_3 x)(\log_3 x) = \log_3(x^6) - \log_3(3^5) \implies (\log_3 x)^2 = 6\log_3 x - 5$$
+        <p><strong>Step 3 &mdash; Solve the Quadratic in $u = \log_3 x$:</strong></p>
+        $$u^2 - 6u + 5 = 0 \implies (u - 1)(u - 5) = 0 \implies u = 1 \quad \text{or} \quad u = 5$$
+        <ul>
+            <li>If $\log_3 x = 1 \implies x_1 = 3^1 = 3$ (check: $3^1 = 3$ and $3^6/3^5 = 3$).</li>
+            <li>If $\log_3 x = 5 \implies x_2 = 3^5 = 243$ (check: $243^5 = 3^{25}$ and $243^6/243 = 243^5 = 3^{25}$).
+            </li>
+        </ul>
+        <p>Both positive roots are valid, so $x_1 + x_2 = 3 + 243 = \mathbf{246}$.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q28</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Verified Answer: 95</span>
+        </div>
+        <p><strong>Step 1 &mdash; Analyze the General $n$-th Term $t_n$ ($1 \le n \le 399$):</strong></p>
+        $$t_n = \frac{1}{(n + 1)\sqrt{n} + n\sqrt{n + 1}}$$
+        <p>Factor $\sqrt{n}\sqrt{n + 1}$ out of the denominator using $(n + 1) = (\sqrt{n + 1})^2$ and $n =
+            (\sqrt{n})^2$:</p>
+        $$(n + 1)\sqrt{n} + n\sqrt{n + 1} = \sqrt{n}\sqrt{n + 1}\big(\sqrt{n + 1} + \sqrt{n}\big)$$
+        <p><strong>Step 2 &mdash; Rationalize the Binomial Surd Factor:</strong> Multiply top and bottom by $(\sqrt{n +
+            1} - \sqrt{n})$:</p>
+        $$t_n = \frac{\sqrt{n + 1} - \sqrt{n}}{\sqrt{n}\sqrt{n + 1}\big[(n + 1) - n\big]} = \frac{\sqrt{n + 1} -
+        \sqrt{n}}{\sqrt{n}\sqrt{n + 1}} = \frac{1}{\sqrt{n}} - \frac{1}{\sqrt{n + 1}}$$
+        <p><strong>Step 3 &mdash; Collapse the Telescoping Sum:</strong> Summing from $n = 1$ to $n = 399$, every
+            intermediate term cancels identically:</p>
+        $$T = \left(\frac{1}{\sqrt{1}} - \frac{1}{\sqrt{2}}\right) + \left(\frac{1}{\sqrt{2}} -
+        \frac{1}{\sqrt{3}}\right) + \dots + \left(\frac{1}{\sqrt{399}} - \frac{1}{\sqrt{400}}\right) = 1 -
+        \frac{1}{\sqrt{400}} = 1 - \frac{1}{20} = \frac{19}{20} = 0.95$$
+        <p>Therefore, $100T = 100 \times 0.95 = \mathbf{95}$.</p>
+    </div>
+
+    <!-- ==================== TRAP & ERROR FORENSICS ==================== -->
+    <h2 class="section-heading">Chapter 6 Trap &amp; Error Forensics</h2>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 1 &bull; Invalid Logarithm Bases &amp; Extraneous Roots (Q12, Q26)</span>
+        <p><strong>The Fatal Mistake:</strong> In Q12 ($\log_2(x - 1) + \log_2(x - 3) = 3$), rushing directly to $x^2 -
+            4x - 5 = 0$ and applying Vieta's sum-of-roots formula gives $4$—selecting distractor (A) while silently
+            keeping the illegal root $x = -1$. In Q26 ($\log_{(x - 3)}(12 - x)$), remembering $x - 3 \gt 0$ and $12 - x
+            \gt 0$ but forgetting the third rule <strong>base $\neq 1$</strong> accidentally includes $x = 4$, inflating
+            the NAT answer from $45$ to $49$.</p>
+        <p><strong>Why It Happens:</strong> Combining $\log_a f + \log_a g \to \log_a(fg)$ enlarges the domain because
+            $(-)\times(-) = (+)$. And students mentally treat "positive" as the only base restriction, forgetting that
+            $1^y = 1$ breaks uniqueness.</p>
+        <p><strong>Zero-Leak Fix:</strong> Before manipulating a single symbol in any log problem, draw a box at the top
+            of your scratch space titled <strong>DOMAIN</strong> and explicitly write all three conditions from the
+            <em>unmodified original expression</em>: (1) Argument $\gt 0$, (2) Base $\gt 0$, (3) Base $\neq 1$. Never
+            apply Vieta's formula to a logarithmic quadratic until every root passes your DOMAIN box.
+        </p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 2 &bull; The $\sqrt{x^2} = |x|$ Sign Illusion &amp; Principal Root
+            Discipline (Q7)</span>
+        <p><strong>The Fatal Mistake:</strong> Writing $\sqrt{x^2} = x$ blindly, or writing $\sqrt{28 - 10\sqrt{3}} =
+            \sqrt{(\sqrt{3} - 5)^2} = \sqrt{3} - 5$. In a subtraction expression like Q7, flipping the order inside a
+            single radical changes $(5 + \sqrt{3}) - (5 - \sqrt{3}) = 2\sqrt{3}$ into $(5 + \sqrt{3}) - (\sqrt{3} - 5) =
+            10$, yielding the bogus answer $100$ instead of $12$.</p>
+        <p><strong>Why It Happens:</strong> Algebra textbooks frequently cancel squares and square roots casually when
+            variables are positive, building an automatic reflex that ignores sign checking. The same reflex causes
+            students to write $\log_a(x^2) = 2\log_a x$ (losing negative $x$) instead of $2\log_a |x|$.</p>
+        <p><strong>Zero-Leak Fix:</strong> Enforce the iron rule: <strong>the radical symbol $\sqrt{\phantom{x}}$ ALWAYS
+                outputs a non-negative number</strong>. Whenever you denest $\sqrt{a - 2\sqrt{b}}$ into $\sqrt{x} -
+            \sqrt{y}$, explicitly verify $x \ge y$ before dropping the square root—put the <em>larger</em> number first
+            every single time.</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 3 &bull; Nested Radical &amp; Infinite Surd Simplification Errors (Q7,
+            Q22)</span>
+        <p><strong>The Fatal Mistake:</strong> Three recurring blunders ruin surd questions: (i) trying to denest
+            $\sqrt{28 + 10\sqrt{3}}$ by looking for $x + y = 28$ and $xy = 3$ instead of first pulling the extra factor
+            of $5$ inside the inner radical ($10\sqrt{3} = 2\sqrt{75}$); (ii) inventing the illegal linearity identity
+            $\sqrt{a + b} = \sqrt{a} + \sqrt{b}$; and (iii) keeping a negative root when solving $x^2 - x - k = 0$ for
+            an infinite nested radical $x = \sqrt{k + \sqrt{k + \dots}}$.</p>
+        <p><strong>Why It Happens:</strong> The identity $(\sqrt{x} \pm \sqrt{y})^2 = (x + y) \pm \mathbf{2}\sqrt{xy}$
+            requires the coefficient outside the inner radical to be <em>exactly $2$</em>—neither $10$ nor $1$.
+            Meanwhile, squaring $x = \sqrt{k + x}$ is a non-reversible step that manufactures an extraneous negative
+            root.</p>
+        <p><strong>Zero-Leak Fix:</strong> Always isolate an exact factor of $2$ in front of the inner radical first
+            (pulling excess factors inside as squares, or multiplying by $\frac{\sqrt{2}}{\sqrt{2}}$ if no factor of $2$
+            is present). For infinite surds like Q22, immediately note $p \gt 0, q \gt 0$ and look for Vieta's trick
+            ($p$ and $-q$ sharing $t^2 - t - k = 0$) to avoid expanding messy cubes of $\frac{\pm 1 + \sqrt{1+4k}}{2}$.
+        </p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 4 &bull; Base $0 \lt a \lt 1$ Sign Flip &amp; Negative Characteristic
+            Trap (Q13, Q21)</span>
+        <p><strong>The Fatal Mistake:</strong> (1) In Q21 ($\log_{0.5}(x^2 - 5x + 6) \ge -1$), lifting the logarithm as
+            $x^2 - 5x + 6 \ge (0.5)^{-1} = 2$ without reversing the inequality gives the exact complement $(-\infty, 1]
+            \cup [4, \infty)$—distractor (C)! (2) In Q13 ($\log_{10}(5^{-20}) \approx -13.9794$), reading the integer
+            before the decimal point as $C = -13$ gives $|C| - 1 = 12$ zeros—distractor (A)—instead of the true $13$
+            zeros.</p>
+        <p><strong>Why It Happens:</strong> Visual intuition from base $10$ or base $2$ tricks the brain into assuming
+            all logarithms are increasing. Likewise, for positive decimals like $13.9794$, truncating gives the floor
+            $13$; for negative decimals like $-13.9794$, truncating moves <em>upward</em> toward zero rather than
+            <em>downward</em> to the floor $-14$.
+        </p>
+        <p><strong>Zero-Leak Fix:</strong> Circle the base of every logarithmic inequality before solving: if $0 \lt a
+            \lt 1$, draw a bold double-arrow reminding yourself to <strong>FLIP THE SIGN</strong> when exponentiating.
+            For negative common logs $-k.ddd$, immediately apply the floor rule: $C = -(k + 1)$ whenever the fractional
+            part is non-zero, so leading zeros $= (k + 1) - 1 = k$ directly (here $k = 13 \implies 13$ zeros!).</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 5 &bull; Unreduced Fractions &amp; Missing Variable-Base Edge Roots (Q1,
+            Q20)</span>
+        <p><strong>The Fatal Mistake:</strong> In Q1 ($\frac{147}{1200}$), spotting $1200 = 2^4 \cdot 3 \cdot 5^2$ and
+            instantly marking "(D) non-terminating recurring" without checking whether $3$ divides $147$ ($1 + 4 + 7 =
+            12$, divisible by $3$!). In Q20 ($(x^2 - 5x + 5)^{x^2 - 6x + 5} = 1$), checking only "exponent $= 0$" and
+            "base $= 1$" finds $\{1, 4, 5\}$ ($3$ roots—distractor B) while missing $x = 3$, where $(-1)^{-4} = +1$.</p>
+        <p><strong>Why It Happens:</strong> Both errors stem from skipping boundary/precondition verification under time
+            pressure. The terminating-decimal theorem explicitly requires <strong>$\gcd(p, q) = 1$</strong>, and the
+            equation $u^v = 1$ has <em>three</em> algebraic branches, not two.</p>
+        <p><strong>Zero-Leak Fix:</strong> Memorize two 2-second checklists: (1) For decimal termination, <em>always
+                reduce $p/q$ first</em> before factoring $q$. (2) For $u(x)^{v(x)} = 1$, write down the rigid 3-branch
+            template: <strong>(i) $v = 0, u \neq 0$; (ii) $u = 1$; (iii) $u = -1$ with $v$ an even integer</strong>—and
+            always eliminate duplicate roots across branches (like $x = 1$ appearing in both Branch 1 and Branch 2 of
+            Q20).</p>
+    </div>
+
+</article>

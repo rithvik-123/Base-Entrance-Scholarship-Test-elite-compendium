@@ -1,0 +1,789 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 9: Quadratic Equations, Discriminant & Location of Roots">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 2: Mathematics (Paper 1) &bull; Part 3: Full Step-by-Step Solutions &amp; Error
+            Forensics &bull; All 28 Problems Verified</div>
+        <h1>Chapter 9: Complete Solutions &amp; Error Forensics</h1>
+        <p>Zero-skip, fully verified derivations for every problem in the Chapter 9 Graded Practice Arena
+            (Q1&ndash;Q28), matching the exact Answer Key, followed by five dedicated Trap &amp; Error Forensics cards
+            covering the highest-frequency mark-killers in BEST Paper 1 Quadratic Equations.</p>
+        <div class="tag-row">
+            <span class="meta-pill">Level 1: Q1&ndash;Q8</span>
+            <span class="meta-pill">Level 2: Q9&ndash;Q19</span>
+            <span class="meta-pill">Level 3: Q20&ndash;Q28</span>
+            <span class="meta-pill">5 Error Forensics Cards</span>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- LEVEL 1 SOLUTIONS (Q1 - Q8)                                           -->
+    <!-- ===================================================================== -->
+    <div class="level-banner l1">LEVEL 1 SOLUTIONS &mdash; Discriminant Mechanics, Conjugates &amp; Extremum Foundations
+        (Q1&ndash;Q8)</div>
+
+    <!-- S1 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q1</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Given equation:</strong> $(k - 2)x^2 - 2(k - 2)x + 3 = 0$.</p>
+        <p><strong>Step 1 &mdash; Enforce the Quadratic Non-Degeneracy Condition ($a \neq 0$):</strong></p>
+        <p>Because the problem specifies a <strong>quadratic</strong> equation, the leading coefficient cannot vanish:
+            $k - 2 \neq 0 \implies k \neq 2$. (Indeed, at $k = 2$, the equation collapses to $0x^2 - 0x + 3 = 0 \implies
+            3 = 0$, which has zero solutions.)</p>
+        <p><strong>Step 2 &mdash; Impose $D = 0$ for Real and Equal Roots:</strong></p>
+        $$D = \bigl[-2(k - 2)\bigr]^2 - 4(k - 2)(3) = 4(k - 2)^2 - 12(k - 2) = 4(k - 2)(k - 2 - 3) = 4(k - 2)(k - 5) =
+        0$$
+        <p>This gives $k = 2$ or $k = 5$. Rejecting $k = 2$ (from Step 1) leaves $k = 5$ only. (Verification: at $k =
+            5$, $3x^2 - 6x + 3 = 3(x - 1)^2 = 0$, giving repeated root $x = 1$.) Hence <strong>(B) $k = 5$
+                only</strong>.</p>
+    </div>
+
+    <!-- S2 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q2</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Given equation:</strong> $(a^2 - 3a + 2)x^2 + (a^2 - 5a + 6)x + (a^2 - 4) = 0$.</p>
+        <p><strong>Apply the Identity Theorem:</strong> A non-zero polynomial of degree $\le 2$ can have at most two
+            distinct roots. Since this equation holds for <em>more than two</em> distinct real values of $x$, it must be
+            the zero identity $0x^2 + 0x + 0 = 0$, forcing all three coefficients to vanish simultaneously:</p>
+        <ul>
+            <li>$a^2 - 3a + 2 = (a - 1)(a - 2) = 0 \implies a \in \{1, 2\}$</li>
+            <li>$a^2 - 5a + 6 = (a - 2)(a - 3) = 0 \implies a \in \{2, 3\}$</li>
+            <li>$a^2 - 4 = (a - 2)(a + 2) = 0 \implies a \in \{-2, 2\}$</li>
+        </ul>
+        <p>The unique common intersection of all three sets is $a = 2$. Hence <strong>(C) $2$</strong>.</p>
+    </div>
+
+    <!-- S3 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q3</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Rationalize the Given Root:</strong></p>
+        $$\alpha = \frac{1}{3 - \sqrt{5}} \cdot \frac{3 + \sqrt{5}}{3 + \sqrt{5}} = \frac{3 + \sqrt{5}}{3^2 -
+        (\sqrt{5})^2} = \frac{3 + \sqrt{5}}{4}$$
+        <p><strong>Step 2 &mdash; Apply the Irrational Conjugate Theorem:</strong></p>
+        <p>Since all coefficients of $x^2 + px + q = 0$ are <strong>rational</strong> ($1, p, q \in \mathbb{Q}$), the
+            second root MUST be the conjugate surd $\beta = \dfrac{3 - \sqrt{5}}{4}$.</p>
+        <p><strong>Step 3 &mdash; Compute $p$ and $q$ via Vieta&rsquo;s Relations:</strong></p>
+        $$-p = \alpha + \beta = \frac{3 + \sqrt{5}}{4} + \frac{3 - \sqrt{5}}{4} = \frac{6}{4} = \frac{3}{2} \implies p =
+        -\frac{3}{2}$$
+        $$q = \alpha\beta = \frac{(3 + \sqrt{5})(3 - \sqrt{5})}{16} = \frac{9 - 5}{16} = \frac{4}{16} = \frac{1}{4}$$
+        <p>Therefore:</p>
+        $$p + q = -\frac{3}{2} + \frac{1}{4} = -\frac{6}{4} + \frac{1}{4} = -\frac{5}{4}$$
+        <p>Hence <strong>(A) $-\dfrac{5}{4}$</strong>.</p>
+    </div>
+
+    <!-- S4 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q4</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p><strong>Given quadratic:</strong> $f(x) = -3x^2 + 12x - 7$, where $a = -3 < 0$, $b=12$, $c=-7$.</p>
+                <p>Since $a = -3 < 0$, the parabola opens downward and achieves its global maximum at the vertex
+                        $x_v=-\dfrac{b}{2a}$:</p>
+                        $$x_v = -\frac{12}{2(-3)} = 2$$
+                        $$f_{\max} = f(2) = -3(2)^2 + 12(2) - 7 = -12 + 24 - 7 = 5$$
+                        <p><em>Formula Cross-Check:</em> $D = 12^2 - 4(-3)(-7) = 144 - 84 = 60$, so $y_{\max} =
+                            -\dfrac{D}{4a} = -\dfrac{60}{4(-3)} = 5$. Hence <strong>(D) $5$</strong>.</p>
+    </div>
+
+    <!-- S5 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q5</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Factor the quadratic:</strong> $2x^2 - 7x + 3 = 2x^2 - 6x - x + 3 = 2x(x - 3) - 1(x - 3) = (2x - 1)(x
+            - 3)$.</p>
+        <p>The roots are $x = \dfrac{1}{2}$ and $x = 3$, and the leading coefficient is $a = 2 > 0$ (upward-opening
+            parabola). Therefore, the expression is $\le 0$ on the closed interval between its two roots:</p>
+        $$x \in \left[\frac{1}{2},\ 3\right]$$
+        <p>Hence <strong>(C)</strong>.</p>
+    </div>
+
+    <!-- S6 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q6</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Answer: 17</span>
+        </div>
+        <p><strong>Step 1 &mdash; Rewrite in Terms of $u = 2^x$:</strong></p>
+        <p>Notice $2^{2x + 1} = 2 \cdot (2^x)^2$. Setting $u = 2^x$ (with mandatory exponential domain restriction $u >
+            0$) transforms the equation into:</p>
+        $$2u^2 - 33u + 16 = 0$$
+        <p><strong>Step 2 &mdash; Factor and Verify $u > 0$:</strong></p>
+        $$2u^2 - 32u - u + 16 = 0 \implies 2u(u - 16) - 1(u - 16) = 0 \implies (2u - 1)(u - 16) = 0$$
+        <p>Thus $u = \dfrac{1}{2}$ or $u = 16$. Both are strictly positive, so both yield valid real roots:</p>
+        <ul>
+            <li>$2^{x_1} = \dfrac{1}{2} = 2^{-1} \implies x_1 = -1$</li>
+            <li>$2^{x_2} = 16 = 2^4 \implies x_2 = 4$</li>
+        </ul>
+        <p><strong>Step 3 &mdash; Evaluate $x_1^2 + x_2^2$:</strong></p>
+        $$x_1^2 + x_2^2 = (-1)^2 + 4^2 = 1 + 16 = 17$$
+        <p><strong>NAT Answer: $17$</strong>.</p>
+    </div>
+
+    <!-- S7 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q7</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Answer: 6</span>
+        </div>
+        <p><strong>Step 1 &mdash; Impose Non-Negativity Before Squaring:</strong></p>
+        <p>Because $\sqrt{5x + 19}$ denotes the non-negative principal square root, the right-hand side must satisfy $x
+            + 1 \ge 0 \implies x \ge -1$ (which automatically guarantees $5x + 19 \ge 14 > 0$).</p>
+        <p><strong>Step 2 &mdash; Square Both Sides &amp; Solve:</strong></p>
+        $$5x + 19 = (x + 1)^2 = x^2 + 2x + 1 \implies x^2 - 3x - 18 = 0 \implies (x - 6)(x + 3) = 0$$
+        <p>Candidate roots are $x = 6$ and $x = -3$.</p>
+        <p><strong>Step 3 &mdash; Back-Check Both Candidates in the Original Equation:</strong></p>
+        <ul>
+            <li><strong>$x = -3$:</strong> Violates $x \ge -1$. Directly, $\text{LHS} = \sqrt{5(-3) + 19} = \sqrt{4} =
+                +2 \neq -2 = \text{RHS}$. <strong>EXTRANEOUS &mdash; REJECT!</strong></li>
+            <li><strong>$x = 6$:</strong> $\text{LHS} = \sqrt{30 + 19} = \sqrt{49} = 7 = 6 + 1 = \text{RHS}$.
+                <strong>VALID!</strong>
+            </li>
+        </ul>
+        <p>Thus $x = 6$ is the unique real solution, so the sum of all real solutions is $6$.</p>
+        <p><strong>NAT Answer: $6$</strong>.</p>
+    </div>
+
+    <!-- S8 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q8</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Answer: 45</span>
+        </div>
+        <p>For $x^2 - 14x + k = 0$, we have $a = 1$, $b = -14$, $c = k$, and $D = (-14)^2 - 4(1)(k) = 196 - 4k$.</p>
+        <p>Using the root-gap formula $|\alpha - \beta| = \dfrac{\sqrt{D}}{|a|}$:</p>
+        $$\sqrt{196 - 4k} = 4$$
+        <p>Squaring both sides gives:</p>
+        $$196 - 4k = 16 \implies 4k = 180 \implies k = 45$$
+        <p><em>Verification:</em> $x^2 - 14x + 45 = (x - 5)(x - 9) = 0$ has real roots $5$ and $9$ with $|9 - 5| = 4$.
+        </p>
+        <p><strong>NAT Answer: $45$</strong>.</p>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- LEVEL 2 SOLUTIONS (Q9 - Q19)                                          -->
+    <!-- ===================================================================== -->
+    <div class="level-banner l2">LEVEL 2 SOLUTIONS &mdash; BEST / NTSE Stage 2 Traps, Common Roots &amp; Wavy Curve
+        (Q9&ndash;Q19)</div>
+
+    <!-- S9 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q9</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Given inequality:</strong> $f(x) = (k - 3)x^2 + 2(k - 3)x + 5 > 0$ for all $x \in \mathbb{R}$.</p>
+        <p><strong>Case 1 &mdash; Degenerate Leading Coefficient ($k - 3 = 0 \implies k = 3$):</strong></p>
+        <p>Substituting $k = 3$ yields $f(x) = 0x^2 + 0x + 5 = 5$, which is strictly positive for <em>every</em> $x \in
+            \mathbb{R}$! Therefore, <strong>$k = 3$ MUST be included</strong>.</p>
+        <p><strong>Case 2 &mdash; Genuine Quadratic ($k \neq 3$):</strong></p>
+        <p>For $f(x) > 0\ \forall x \in \mathbb{R}$, we require BOTH $a > 0$ AND $D < 0$:</p>
+                <ol>
+                    <li>$a = k - 3 > 0 \implies k > 3$.</li>
+                    <li>$D = \bigl[2(k - 3)\bigr]^2 - 4(k - 3)(5) = 4(k - 3)\bigl[(k - 3) - 5\bigr] = 4(k - 3)(k - 8) <
+                            0 \implies 3 < k < 8$.</li>
+                </ol>
+                <p>Combining Case 1 ($k = 3$) and Case 2 ($3 < k < 8$) yields the complete set $k \in [3, 8)$. Hence
+                        <strong>(B) $[3, 8)$</strong>.</p>
+    </div>
+
+    <!-- S10 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q10</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Check the Discriminant of the Fixed Equation $x^2 + 3x + 5 = 0$:</strong></p>
+        $$D = 3^2 - 4(1)(5) = 9 - 20 = -11 < 0$$ <p>Therefore, both roots of $x^2 + 3x + 5 = 0$ are <strong>non-real
+                complex conjugates</strong>: $\alpha = \dfrac{-3 + i\sqrt{11}}{2}$ and $\bar{\alpha} = \dfrac{-3 -
+            i\sqrt{11}}{2}$.</p>
+            <p><strong>Step 2 &mdash; Apply the Complex Conjugate Common-Root Law:</strong></p>
+            <p>Because $ax^2 + bx + c = 0$ has <strong>real coefficients</strong> ($a, b, c \in \mathbb{R}$), if it
+                shares one non-real root $\alpha$ with $x^2 + 3x + 5 = 0$, it MUST automatically also have the complex
+                conjugate $\bar{\alpha}$ as its second root! Hence the two quadratics share <strong>both roots</strong>,
+                forcing proportional coefficients:</p>
+            $$\frac{a}{1} = \frac{b}{3} = \frac{c}{5} \implies a : b : c = 1 : 3 : 5$$
+            <p>Hence <strong>(D) $1 : 3 : 5$</strong>.</p>
+    </div>
+
+    <!-- S11 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q11</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p><strong>Proof of (A) via Modulo-8 Arithmetic:</strong></p>
+        <p>Since $a, b, c$ are odd integers, write $b = 2k + 1$, so $b^2 = 4k(k + 1) + 1 \equiv 1 \pmod{8}$ (as $k(k+1)$
+            is always even). Meanwhile, $ac$ is odd, so $4ac \equiv 4 \pmod{8}$. Consequently:</p>
+        $$D = b^2 - 4ac \equiv 1 - 4 \equiv 5 \pmod{8}$$
+        <p>However, every odd integer squared leaves remainder $1 \pmod{8}$ (never $5 \pmod{8}$), so $D$ can NEVER be a
+            perfect square of an integer. Since $a, b, c \in \mathbb{Z}$, a rational root requires $D$ to be a perfect
+            integer square. Thus $ax^2 + bx + c = 0$ can <strong>never have any rational root</strong>.</p>
+        <p><strong>Counterexamples Eliminating (B), (C), (D):</strong></p>
+        <ul>
+            <li>(B) is false: $x^2 + 3x + 1 = 0$ has $D = 5 > 0$ (two real roots).</li>
+            <li>(C) is false: $x^2 + x + 1 = 0$ has $D = -3 < 0$ (non-real roots, not irrational).</li>
+            <li>(D) is false: $D = b^2 - 4ac \equiv 1 \pmod{4}$, never divisible by $4$.</li>
+        </ul>
+        <p>Hence <strong>(A)</strong>.</p>
+    </div>
+
+    <!-- S12 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q12</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p>Let $f(x) = x^2 - (m + 1)x + (m + 3)$, with leading coefficient $a = 1 > 0$.</p>
+        <p>By <strong>Location of Roots Case (iii)</strong>, the number $k = 2$ lies strictly between the two roots
+            ($\alpha < 2 < \beta$) if and only if the single condition $a \cdot f(2) < 0$ holds (which automatically
+                forces $D> 0$):</p>
+        $$1 \cdot f(2) = 2^2 - (m + 1)(2) + (m + 3) < 0$$ $$4 - 2m - 2 + m + 3 < 0 \implies 5 - m < 0 \implies m> 5$$
+            <p>Thus $m \in (5, \infty)$. (Verification at $m = 6$: $x^2 - 7x + 9 = 0$ has roots $\frac{7 \pm
+                \sqrt{13}}{2} \approx 1.70, 5.30$, strictly straddling $2$.) Hence <strong>(C) $(5, \infty)$</strong>.
+            </p>
+    </div>
+
+    <!-- S13 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q13</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p><strong>Given inequality:</strong> $\dfrac{(x - 3)^2 (x + 1)}{(x - 5)(x + 2)^2} \ge 0$.</p>
+        <p><strong>Step 1 &mdash; Classify All Critical Points:</strong></p>
+        <ul>
+            <li>$x = -2$: Denominator pole, multiplicity $2$ (<strong>even</strong>) $\implies$ <strong>STRICTLY
+                    EXCLUDED ($\circ$)</strong>.</li>
+            <li>$x = -1$: Numerator zero, multiplicity $1$ (<strong>odd</strong>) $\implies$ <strong>included
+                    ($\bullet$)</strong>.</li>
+            <li>$x = 3$: Numerator zero, multiplicity $2$ (<strong>even</strong>) $\implies$ <strong>included
+                    ($\bullet$)</strong>.</li>
+            <li>$x = 5$: Denominator pole, multiplicity $1$ (<strong>odd</strong>) $\implies$ <strong>STRICTLY EXCLUDED
+                    ($\circ$)</strong>.</li>
+        </ul>
+        <p><strong>Step 2 &mdash; Wavy Curve Right-to-Left Sign Sweep:</strong></p>
+        <ol>
+            <li>$(5, \infty)$: <strong>$+$</strong></li>
+            <li>Cross $5$ (odd): flip to <strong>$-$</strong> on $(3, 5)$.</li>
+            <li>Cross $3$ (even): <strong>BOUNCE</strong> &mdash; stays <strong>$-$</strong> on $(-1, 3)$.</li>
+            <li>Cross $-1$ (odd): flip to <strong>$+$</strong> on $(-2, -1)$.</li>
+            <li>Cross $-2$ (even): <strong>BOUNCE</strong> &mdash; stays <strong>$+$</strong> on $(-\infty, -2)$.</li>
+        </ol>
+        <p><strong>Step 3 &mdash; Collect Positive Intervals + Included Zeros (and Punch Out Pole $-2$!):</strong></p>
+        <p>Positive intervals are $(-\infty, -2) \cup (-2, -1) \cup (5, \infty)$. Adding the solid numerator zeros
+            $\{-1, 3\}$ closes $-1$ AND appends the isolated point $\{3\}$ (where the expression equals $0$), while $x =
+            -2$ MUST stay punched out:</p>
+        $$x \in (-\infty, -2) \cup (-2, -1] \cup \{3\} \cup (5, \infty)$$
+        <p>Hence <strong>(D)</strong>.</p>
+    </div>
+
+    <!-- S14 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q14</span>
+            <span class="badge badge-l2">Level 2 &bull; Passage 1</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p>Divide $6x^4 - 35x^3 + 62x^2 - 35x + 6 = 0$ by $x^2 \neq 0$ and group symmetric terms:</p>
+        $$6\left(x^2 + \frac{1}{x^2}\right) - 35\left(x + \frac{1}{x}\right) + 62 = 0$$
+        <p>Substitute $t = x + \dfrac{1}{x}$, so $x^2 + \dfrac{1}{x^2} = t^2 - 2$:</p>
+        $$6(t^2 - 2) - 35t + 62 = 0 \implies 6t^2 - 35t + 50 = 0$$
+        <p>Split the middle term using $(-15)(-20) = 300 = 6 \times 50$:</p>
+        $$6t^2 - 15t - 20t + 50 = 0 \implies 3t(2t - 5) - 10(2t - 5) = 0 \implies (2t - 5)(3t - 10) = 0$$
+        <p>Hence $t = \dfrac{5}{2}$ and $t = \dfrac{10}{3}$ (both satisfy $|t| \ge 2$). Hence <strong>(A)</strong>.</p>
+    </div>
+
+    <!-- S15 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q15</span>
+            <span class="badge badge-l2">Level 2 &bull; Passage 1</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p>From Q14, solve $x + \dfrac{1}{x} = t$ for each valid value of $t$:</p>
+        <ul>
+            <li>For $t = \dfrac{5}{2}$: $2x^2 - 5x + 2 = 0 \implies (2x - 1)(x - 2) = 0 \implies x = \dfrac{1}{2},\ 2$.
+            </li>
+            <li>For $t = \dfrac{10}{3}$: $3x^2 - 10x + 3 = 0 \implies (3x - 1)(x - 3) = 0 \implies x = \dfrac{1}{3},\
+                3$.</li>
+        </ul>
+        <p>Arranging all four real roots in ascending order gives $r_1 = \dfrac{1}{3} < r_2=\dfrac{1}{2} < r_3=2 <
+                r_4=3$. Therefore:</p>
+                $$\frac{r_4 - r_3}{r_2 - r_1} = \frac{3 - 2}{\frac{1}{2} - \frac{1}{3}} = \frac{1}{\frac{1}{6}} = 6$$
+                <p>Hence <strong>(C) $6$</strong>.</p>
+    </div>
+
+    <!-- S16 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q16</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 24</span>
+        </div>
+        <p>Let $\alpha \neq 0$ be the common non-zero root of both equations:</p>
+        $$\alpha^2 - 11\alpha + k = 0 \qquad \text{(1)}$$
+        $$\alpha^2 - 14\alpha + 2k = 0 \qquad \text{(2)}$$
+        <p>Subtracting Eq (2) from Eq (1) eliminates $\alpha^2$:</p>
+        $$(-11\alpha + 14\alpha) + (k - 2k) = 0 \implies 3\alpha - k = 0 \implies \alpha = \frac{k}{3}$$
+        <p>Since $\alpha \neq 0$, we must have $k \neq 0$. Substitute $\alpha = \dfrac{k}{3}$ into Eq (1):</p>
+        $$\frac{k^2}{9} - \frac{11k}{3} + k = 0 \implies k^2 - 33k + 9k = 0 \implies k(k - 24) = 0$$
+        <p>Rejecting $k = 0$ (which gives the common root $\alpha = 0$), we obtain $k = 24$. (Check: $x^2 - 11x + 24 =
+            (x - 3)(x - 8) = 0$ and $x^2 - 14x + 48 = (x - 6)(x - 8) = 0$ share the unique non-zero root $\alpha = 8$.)
+        </p>
+        <p><strong>NAT Answer: $24$</strong>.</p>
+    </div>
+
+    <!-- S17 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q17</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 10</span>
+        </div>
+        <p>Let the integer roots of $x^2 + px + 36 = 0$ be $\alpha, \beta \in \mathbb{Z}$. By Vieta&rsquo;s relations,
+            $\alpha\beta = 36$ and $p = -(\alpha + \beta)$.</p>
+        <p>List every unordered pair of integers $\{\alpha, \beta\}$ whose product is $+36$ (so both have the same
+            sign):</p>
+        <ul>
+            <li><strong>Positive pairs ($\alpha, \beta > 0$):</strong> $\{1, 36\},\ \{2, 18\},\ \{3, 12\},\ \{4, 9\},\
+                \{6, 6\} \implies p \in \{-37, -20, -15, -13, -12\}$ ($5$ distinct values).</li>
+            <li><strong>Negative pairs ($\alpha, \beta < 0$):</strong> $\{-1, -36\},\ \{-2, -18\},\ \{-3, -12\},\ \{-4,
+                        -9\},\ \{-6, -6\} \implies p \in \{37, 20, 15, 13, 12\}$ ($5$ distinct values).</li>
+        </ul>
+        <p>All $10$ values of $p$ are distinct (even for equal roots $\pm 6$, $p = -12$ and $p = +12$ are two distinct
+            integers). Total count $= 10$.</p>
+        <p><strong>NAT Answer: $10$</strong>.</p>
+    </div>
+
+    <!-- S18 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q18</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 37</span>
+        </div>
+        <p><strong>Step 1 &mdash; Pair Factors with Equal Constant Sum ($1 + 4 = 2 + 3 = 5$):</strong></p>
+        $$\bigl[(x + 1)(x + 4)\bigr]\bigl[(x + 2)(x + 3)\bigr] = 120 \implies (x^2 + 5x + 4)(x^2 + 5x + 6) = 120$$
+        <p><strong>Step 2 &mdash; Centered Substitution $t = x^2 + 5x + 5$:</strong></p>
+        $$(t - 1)(t + 1) = 120 \implies t^2 - 1 = 120 \implies t^2 = 121 \implies t = 11 \quad \text{or} \quad t = -11$$
+        <p><strong>Step 3 &mdash; Solve Both Quadratics &amp; Filter for Real Roots:</strong></p>
+        <ul>
+            <li><strong>Case $t = 11$:</strong> $x^2 + 5x + 5 = 11 \implies x^2 + 5x - 6 = 0 \implies (x + 6)(x - 1) = 0
+                \implies x = -6,\ 1$ (both real!).</li>
+            <li><strong>Case $t = -11$:</strong> $x^2 + 5x + 5 = -11 \implies x^2 + 5x + 16 = 0$. Discriminant $D = 5^2
+                - 4(1)(16) = 25 - 64 = -39 < 0$ (no real roots!).</li>
+        </ul>
+        <p><strong>Step 4 &mdash; Sum of Squares of Real Roots Only:</strong></p>
+        $$(-6)^2 + 1^2 = 36 + 1 = 37$$
+        <p><strong>NAT Answer: $37$</strong>.</p>
+    </div>
+
+    <!-- S19 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q19</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 9</span>
+        </div>
+        <p>Let $f(x) = x^2 - 2kx + (k^2 + k - 14)$, with leading coefficient $a = 1 > 0$. By <strong>Location of Roots
+                Case (i)</strong>, both roots are real (not necessarily distinct) and strictly greater than $2$ iff all
+            three conditions hold:</p>
+        <ol>
+            <li><strong>Real roots ($D \ge 0$):</strong>
+                $$D = (-2k)^2 - 4(1)(k^2 + k - 14) = 4k^2 - 4k^2 - 4k + 56 = 4(14 - k) \ge 0 \implies k \le 14$$
+            </li>
+            <li><strong>Endpoint sign ($a \cdot f(2) > 0$):</strong>
+                $$f(2) = 2^2 - 2k(2) + k^2 + k - 14 = k^2 - 3k - 10 = (k - 5)(k + 2) > 0 \implies k \in (-\infty, -2)
+                \cup (5, \infty)$$
+            </li>
+            <li><strong>Vertex position ($x_v > 2$):</strong>
+                $$x_v = -\frac{-2k}{2(1)} = k > 2$$
+            </li>
+        </ol>
+        <p><strong>Intersection of (1), (2), and (3):</strong> $k \in (-\infty, 14] \cap (5, \infty) \cap (2, \infty) =
+            (5, 14]$.</p>
+        <p>The integer values of $k$ in $(5, 14]$ are $\{6, 7, 8, 9, 10, 11, 12, 13, 14\}$, giving $14 - 6 + 1 = 9$
+            values. (Note: at $k = 14$, $(x - 14)^2 = 0$ has repeated root $14 > 2$, which is valid.)</p>
+        <p><strong>NAT Answer: $9$</strong>.</p>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- LEVEL 3 SOLUTIONS (Q20 - Q28)                                         -->
+    <!-- ===================================================================== -->
+    <div class="level-banner l3">LEVEL 3 SOLUTIONS &mdash; IOQM-Lite &amp; Resonance Olympiad Bridges (Q20&ndash;Q28)
+    </div>
+
+    <!-- S20 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q20</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p>Let $\alpha$ be a common root of $x^2 + kx + 2 = 0$ (1) and $x^2 + 2x + k = 0$ (2). Subtracting (2) from (1):
+        </p>
+        $$(k - 2)\alpha + (2 - k) = 0 \implies (k - 2)(\alpha - 1) = 0$$
+        <p>This splits into two cases&mdash;and we MUST test whether the equations share <em>one</em> or <em>both</em>
+            roots:</p>
+        <ul>
+            <li><strong>Case 1 ($k = 2$):</strong> Both equations collapse to the identical equation $x^2 + 2x + 2 = 0$,
+                which shares <strong>both</strong> roots (in fact two non-real complex roots $-1 \pm i$). Violates
+                &ldquo;exactly one common root&rdquo; &mdash; <strong>REJECT $k = 2$!</strong></li>
+            <li><strong>Case 2 ($k \neq 2$):</strong> We are forced to have $\alpha = 1$. Substituting $\alpha = 1$ into
+                Eq (1) gives $1 + k + 2 = 0 \implies k = -3$.
+                <br><em>Verification at $k = -3$:</em> $x^2 - 3x + 2 = (x - 1)(x - 2) = 0$ (roots $1, 2$) and $x^2 + 2x
+                - 3 = (x - 1)(x + 3) = 0$ (roots $1, -3$). They share <strong>exactly one</strong> common root ($x =
+                1$).
+            </li>
+        </ul>
+        <p>Hence the complete set is $\{-3\}$, so <strong>(C) $\{-3\}$</strong>.</p>
+    </div>
+
+    <!-- S21 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q21</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p>Let $f(x) = (a - 5)x^2 - 2ax + (a - 4)$, with leading coefficient $A = a - 5$. To have two roots satisfying
+            $\alpha < 1 < 2 < \beta$, the equation must first be quadratic ($a \neq 5$), and by <strong>Location of
+                Roots Case (v)</strong>, both endpoints $k_1 = 1$ and $k_2 = 2$ must lie strictly inside the
+                opposite-sign trough between the roots:</p>
+        $$A \cdot f(1) < 0 \qquad \text{AND} \qquad A \cdot f(2) < 0$$ <ol>
+            <li><strong>Evaluate $f(1)$:</strong>
+                $$f(1) = (a - 5) - 2a + (a - 4) = -9$$
+                Hence $A \cdot f(1) = (a - 5)(-9) < 0 \implies a - 5> 0 \implies a > 5$.
+            </li>
+            <li><strong>Evaluate $f(2)$:</strong>
+                $$f(2) = 4(a - 5) - 4a + (a - 4) = 4a - 20 - 4a + a - 4 = a - 24$$
+                Hence $A \cdot f(2) = (a - 5)(a - 24) < 0 \implies 5 < a < 24$. </li>
+                    </ol>
+                    <p>Intersecting $a > 5$ and $5 < a < 24$ yields $a \in (5, 24)$. Hence <strong>(A) $(5,
+                            24)$</strong>.</p>
+    </div>
+
+    <!-- S22 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q22</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p>Let $f(x) = x^2 - 3mx + (2m - 1)$. First note its discriminant $D = 9m^2 - 8m + 4 = 9\left(m -
+            \frac{4}{9}\right)^2 + \frac{20}{9} > 0$ for all $m \in \mathbb{R}$, so $f(x) = 0$ ALWAYS has two distinct
+            real roots.</p>
+        <p>By <strong>Location of Roots Case (vi)</strong>, we must check BOTH the strict sign-change regime AND the two
+            boundary-zero cases:</p>
+        <ol>
+            <li><strong>Case 1 (Opposite Endpoint Signs, $f(0) \cdot f(2) < 0$):</strong>
+                        $$f(0) = 2m - 1, \qquad f(2) = 4 - 6m + 2m - 1 = 3 - 4m$$
+                        $$(2m - 1)(3 - 4m) < 0 \implies (2m - 1)(4m - 3)> 0 \implies m \in \left(-\infty,\
+                            \frac{1}{2}\right) \cup \left(\frac{3}{4},\ \infty\right)$$
+            </li>
+            <li><strong>Case 2 (Boundary Check $f(0) = 0 \implies m = \dfrac{1}{2}$):</strong>
+                <p>Substituting $m = \frac{1}{2}$ gives $x^2 - \frac{3}{2}x = x\left(x - \frac{3}{2}\right) = 0$, with
+                    roots $0$ and $\frac{3}{2}$. Since $0 \notin (0, 2)$ while $\frac{3}{2} \in (0, 2)$, there is
+                    <strong>exactly one</strong> root inside $(0, 2)$! Thus <strong>$m = \dfrac{1}{2}$ is
+                        VALID</strong>.
+                </p>
+            </li>
+            <li><strong>Case 3 (Boundary Check $f(2) = 0 \implies m = \dfrac{3}{4}$):</strong>
+                <p>Substituting $m = \frac{3}{4}$ gives $x^2 - \frac{9}{4}x + \frac{1}{2} = (x - 2)\left(x -
+                    \frac{1}{4}\right) = 0$, with roots $2$ and $\frac{1}{4}$. Since $2 \notin (0, 2)$ while
+                    $\frac{1}{4} \in (0, 2)$, there is <strong>exactly one</strong> root inside $(0, 2)$! Thus
+                    <strong>$m = \dfrac{3}{4}$ is VALID</strong>.
+                </p>
+            </li>
+        </ol>
+        <p>Taking the union of Cases 1, 2, and 3 gives $m \in \left(-\infty,\ \dfrac{1}{2}\right] \cup
+            \left[\dfrac{3}{4},\ \infty\right)$. Hence <strong>(B)</strong>.</p>
+    </div>
+
+    <!-- S23 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q23</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p><strong>CRITICAL FIRST STEP &mdash; Always Factor Before Cross-Multiplying!</strong></p>
+        <p>A student who blindly cross-multiplies $y(x^2 - 6x + 5) = x^2 - 4x + 3$ and takes $D_x \ge 0$ gets a
+            perfect-square discriminant $(6y - 4)^2 - 4(y - 1)(5y - 3) = 4(2y - 1)^2 \ge 0$ and falsely concludes the
+            range is $\mathbb{R}$ or $\mathbb{R} \setminus \{1\}$, missing the removable hole at $x = 1$!</p>
+        <p><strong>Exact Solution:</strong> Factor numerator and denominator over the real domain $x \neq 1, 5$:</p>
+        $$y = \frac{(x - 1)(x - 3)}{(x - 1)(x - 5)} = \frac{x - 3}{x - 5} \qquad (x \neq 1,\ 5)$$
+        <p>Solve for $x$ in terms of $y$:</p>
+        $$y(x - 5) = x - 3 \implies x(y - 1) = 5y - 3$$
+        <ul>
+            <li><strong>Check $y = 1$:</strong> Yields $0 \cdot x = 2$ (contradiction), so <strong>$y \neq 1$</strong>.
+            </li>
+            <li><strong>Check the Removable Hole $x = 1$:</strong> Since $x = \dfrac{5y - 3}{y - 1}$ is strictly
+                forbidden from equaling $1$, solve $\dfrac{5y - 3}{y - 1} = 1 \implies 5y - 3 = y - 1 \implies 4y = 2
+                \implies y = \dfrac{1}{2}$. Because $x \neq 1$, the value <strong>$y = \dfrac{1}{2}$ can NEVER be
+                    attained</strong>!</li>
+            <li><strong>Check $x = 5$:</strong> $\dfrac{5y - 3}{y - 1} = 5 \implies 5y - 3 = 5y - 5$ (impossible), so no
+                other $y$ is lost.</li>
+        </ul>
+        <p>Therefore, the exact range is $\mathbb{R} \setminus \left\{\dfrac{1}{2},\ 1\right\}$. Hence
+            <strong>(D)</strong>.
+        </p>
+    </div>
+
+    <!-- S24 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q24</span>
+            <span class="badge badge-l3">Level 3 &bull; Passage 2</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p>Given $f(x) = x^2 - 2ax + (a^2 + a - 6)$, with $A = 1 > 0$ and vertex $x_v = a$. By <strong>Location of Roots
+                Case (iv)</strong>, both roots lie strictly inside $(0, 6)$ iff all four conditions hold:</p>
+        <ol>
+            <li><strong>Real roots ($D \ge 0$):</strong> $D = 4a^2 - 4(a^2 + a - 6) = 4(6 - a) \ge 0 \implies a \le 6$.
+            </li>
+            <li><strong>Left endpoint ($f(0) > 0$):</strong> $a^2 + a - 6 = (a + 3)(a - 2) > 0 \implies a \in (-\infty,
+                -3) \cup (2, \infty)$.</li>
+            <li><strong>Right endpoint ($f(6) > 0$):</strong> $36 - 12a + a^2 + a - 6 = a^2 - 11a + 30 = (a - 5)(a - 6)
+                > 0 \implies a \in (-\infty, 5) \cup (6, \infty)$.</li>
+            <li><strong>Vertex inside interval ($0 < x_v < 6$):</strong> $0 < a < 6$.</li>
+        </ol>
+        <p>Intersecting all four sets: $(0, 6) \cap (2, \infty) \cap (-\infty, 5) \cap (-\infty, 6] = (2, 5)$. Hence
+            <strong>(B) $(2, 5)$</strong>.
+        </p>
+    </div>
+
+    <!-- S25 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q25</span>
+            <span class="badge badge-l3">Level 3 &bull; Passage 2</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p>By <strong>Location of Roots Case (i)</strong>, both roots of $f(x) = x^2 - 2ax + (a^2 + a - 6) = 0$ are real
+            (not necessarily distinct) and strictly greater than $4$ iff:</p>
+        <ol>
+            <li><strong>Real roots ($D \ge 0$):</strong> From Q24, $a \le 6$.</li>
+            <li><strong>Endpoint sign ($f(4) > 0$):</strong>
+                $$f(4) = 16 - 8a + a^2 + a - 6 = a^2 - 7a + 10 = (a - 2)(a - 5) > 0 \implies a \in (-\infty, 2) \cup (5,
+                \infty)$$
+            </li>
+            <li><strong>Vertex position ($x_v > 4$):</strong> $a > 4$.</li>
+        </ol>
+        <p>Intersecting $a \le 6$, $a \in (-\infty, 2) \cup (5, \infty)$, and $a > 4$ gives $a \in (5, 6]$. (At $a = 6$,
+            $f(x) = (x - 6)^2 = 0$ has equal roots $6, 6 > 4$, so $6$ is included.) Hence <strong>(A) $(5, 6]$</strong>.
+        </p>
+    </div>
+
+    <!-- S26 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q26</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Answer: 7</span>
+        </div>
+        <p><strong>Step 1 &mdash; Factor Numerator &amp; Denominator Completely:</strong></p>
+        $$\frac{(x - 8)(x + 5)(x - 2)^2}{(x - 6)(x + 1)} \le 0$$
+        <p><strong>Step 2 &mdash; Classify Critical Points:</strong></p>
+        <ul>
+            <li>$x = -5$ (num, odd mult $1$, $\bullet$), $\quad x = -1$ (pole, odd mult $1$, $\circ$), $\quad x = 2$
+                (num, <strong>even</strong> mult $2$, $\bullet$), $\quad x = 6$ (pole, odd mult $1$, $\circ$), $\quad x
+                = 8$ (num, odd mult $1$, $\bullet$).</li>
+        </ul>
+        <p><strong>Step 3 &mdash; Wavy Curve Right-to-Left Sweep:</strong></p>
+        $$(8, \infty): + \;\longrightarrow\; (6, 8): - \;\longrightarrow\; (2, 6): + \;\xrightarrow{\text{even
+        bounce}}\; (-1, 2): + \;\longrightarrow\; (-5, -1): - \;\longrightarrow\; (-\infty, -5): +$$
+        <p><strong>Step 4 &mdash; Collect Solution Set for $\le 0$ (Do Not Miss Isolated Point $\{2\}$!):</strong></p>
+        $$x \in [-5, -1) \cup \{2\} \cup (6, 8]$$
+        <p><strong>Step 5 &mdash; Count All Integer Solutions Explicitly:</strong></p>
+        <ul>
+            <li>In $[-5, -1)$: $\{-5, -4, -3, -2\}$ &rarr; $4$ integers (remember pole $-1$ is excluded!).</li>
+            <li>Isolated numerator zero: $\{2\}$ &rarr; $1$ integer (at $x = 2$, LHS $= 0 \le 0$!).</li>
+            <li>In $(6, 8]$: $\{7, 8\}$ &rarr; $2$ integers (pole $6$ is excluded!).</li>
+        </ul>
+        <p>Total integer solutions $= 4 + 1 + 2 = 7$.</p>
+        <p><strong>NAT Answer: $7$</strong>.</p>
+    </div>
+
+    <!-- S27 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q27</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Answer: 113</span>
+        </div>
+        <p>Let $\alpha > 0$ be the common positive root of all three quadratic equations:</p>
+        $$\alpha^2 + a\alpha + 12 = 0 \qquad \text{(1)}$$
+        $$\alpha^2 + b\alpha + 15 = 0 \qquad \text{(2)}$$
+        $$\alpha^2 + (a + b)\alpha + 36 = 0 \qquad \text{(3)}$$
+        <p><strong>Step 1 &mdash; Eliminate Both Parameters $(a + b)\alpha$ in One Line:</strong></p>
+        <p>Add Eq (1) and Eq (2):</p>
+        $$2\alpha^2 + (a + b)\alpha + 27 = 0 \qquad \text{(4)}$$
+        <p>Subtract Eq (3) from Eq (4):</p>
+        $$(2\alpha^2 - \alpha^2) + (27 - 36) = 0 \implies \alpha^2 - 9 = 0 \implies \alpha = 3 \quad (\text{since }
+        \alpha > 0)$$
+        <p><strong>Step 2 &mdash; Recover $a$ and $b$:</strong></p>
+        <ul>
+            <li>From Eq (1): $3^2 + 3a + 12 = 0 \implies 3a = -21 \implies a = -7$.</li>
+            <li>From Eq (2): $3^2 + 3b + 15 = 0 \implies 3b = -24 \implies b = -8$.</li>
+        </ul>
+        <p><em>Verification in Eq (3):</em> $3^2 + (-7 - 8)(3) + 36 = 9 - 45 + 36 = 0$. Exact match!</p>
+        <p><strong>Step 3 &mdash; Compute $a^2 + b^2$:</strong></p>
+        $$a^2 + b^2 = (-7)^2 + (-8)^2 = 49 + 64 = 113$$
+        <p><strong>NAT Answer: $113$</strong>.</p>
+    </div>
+
+    <!-- S28 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q28</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Answer: 105</span>
+        </div>
+        <p><strong>Step 1 &mdash; Verify the Denominator Is Strictly Positive Everywhere:</strong></p>
+        <p>For $x^2 - x + 1$, $a = 1 > 0$ and $D = (-1)^2 - 4(1)(1) = -3 < 0$, so $x^2 - x + 1> 0$ for
+                <strong>every</strong> $x \in \mathbb{R}$. Because the denominator is strictly positive everywhere, we
+                are 100% legally permitted to multiply through both inequalities by $(x^2 - x + 1)$ without reversing
+                either sign!</p>
+        <p><strong>Step 2 &mdash; Solve Left Inequality for All $x \in \mathbb{R}$:</strong></p>
+        $$-8(x^2 - x + 1) < x^2 + kx - 4 \implies 9x^2 + (k - 8)x + 4> 0 \quad \forall x \in \mathbb{R}$$
+            <p>Since the leading coefficient is $9 > 0$, this holds for all $x \in \mathbb{R}$ iff $D_1 < 0$:</p>
+                    $$(k - 8)^2 - 4(9)(4) < 0 \implies (k - 8)^2 < 144 \implies -12 < k - 8 < 12 \implies -4 < k < 20$$
+                        <p><strong>Step 3 &mdash; Solve Right Inequality for All $x \in \mathbb{R}$:</strong></p>
+            $$x^2 + kx - 4 < 5(x^2 - x + 1) \implies 4x^2 - (k + 5)x + 9> 0 \quad \forall x \in \mathbb{R}$$
+                <p>Since the leading coefficient is $4 > 0$, this holds for all $x \in \mathbb{R}$ iff $D_2 < 0$:</p>
+                        $$(k + 5)^2 - 4(4)(9) < 0 \implies (k + 5)^2 < 144 \implies -12 < k + 5 < 12 \implies -17 < k <
+                            7$$ <p><strong>Step 4 &mdash; Intersect &amp; Sum the Squares of Valid Integers:</strong>
+                </p>
+                <p>Intersecting $(-4, 20)$ and $(-17, 7)$ yields $-4 < k < 7$. The valid integers are $k \in \{-3, -2,
+                        -1, 0, 1, 2, 3, 4, 5, 6\}$:</p>
+                        $$\sum k^2 = (-3)^2 + (-2)^2 + (-1)^2 + 0^2 + 1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2$$
+                        $$= (9 + 4 + 1) + 0 + (1 + 4 + 9 + 16 + 25 + 36) = 14 + 91 = 105$$
+                        <p><strong>NAT Answer: $105$</strong>.</p>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- TRAP & ERROR FORENSICS CARDS                                          -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">Trap &amp; Error Forensics &mdash; Chapter 9 Post-Mortem</h2>
+
+    <!-- Trap Card 1 -->
+    <div class="trap-box">
+        <span class="box-label">Error Forensics #1 &mdash; The Two-Faced $a = 0$ Parametric Quadratic Trap</span>
+        <p><strong>The Blunder:</strong> Students treat $a = 0$ inconsistently&mdash;either forgetting to
+            <strong>exclude</strong> $a = 0$ when a problem demands a <em>quadratic</em> equation (selecting $k = 2, 5$
+            in Q1 instead of $k = 5$ only), OR forgetting to <strong>include</strong> $a = 0$ when a problem asks for an
+            inequality or real-root condition valid for all $x \in \mathbb{R}$ (selecting $(3, 8)$ in Q9 instead of $[3,
+            8)$!).
+        </p>
+        <p><strong>Why It Fails:</strong> Setting $D = 0$ or $D < 0$ is only meaningful when $a \neq 0$. At $a=0$, the
+                parabola disappears and collapses into a straight line $bx + c$ or a horizontal constant $c$&mdash;whose
+                behavior cannot be predicted by $D$.</p>
+                <p><strong>Exam Antidote:</strong> Whenever the coefficient of $x^2$ contains a parameter $k$, write
+                    <strong>&ldquo;Boundary Check: $a(k) = 0$&rdquo;</strong> as Line 1 of your scratchpad. Plug that
+                    value directly into the original equation/inequality and judge its truth by hand before touching
+                    $D$.
+                </p>
+    </div>
+
+    <!-- Trap Card 2 -->
+    <div class="trap-box">
+        <span class="box-label">Error Forensics #2 &mdash; Blindly Assuming Conjugate Pairs Without Checking Coefficient
+            Fields</span>
+        <p><strong>The Blunder:</strong> Applying &ldquo;roots occur in conjugate pairs&rdquo; mechanically without
+            verifying the number field of the coefficients: claiming that if $2 + \sqrt{3}$ is a root of $ax^2 + bx + c
+            = 0$ with <em>real</em> coefficients, then $2 - \sqrt{3}$ must also be a root; OR forgetting to rationalize
+            $\frac{1}{3 - \sqrt{5}}$ first in Q3.</p>
+        <p><strong>Why It Fails:</strong> Conjugate pairing is strictly field-dependent:</p>
+        <ul>
+            <li><strong>Complex conjugates ($p \pm iq$):</strong> Guaranteed ONLY when $a, b, c \in \mathbb{R}$ (this is
+                why Q10 works!).</li>
+            <li><strong>Irrational surd conjugates ($p \pm \sqrt{q}$):</strong> Guaranteed ONLY when $a, b, c \in
+                \mathbb{Q}$! With irrational real coefficients like $x^2 - (3 + \sqrt{3})x + (2 + \sqrt{3}) = 0$, the
+                roots are $2 + \sqrt{3}$ and $1$&mdash;NOT conjugates.</li>
+        </ul>
+        <p><strong>Exam Antidote:</strong> Before invoking conjugates, underline the exact field hypothesis in the
+            problem stem ($a, b, c \in \mathbb{Q}$ for surds; $a, b, c \in \mathbb{R}$ for complex roots). Never assume
+            $\mathbb{Q}$ when the problem only grants $\mathbb{R}$.</p>
+    </div>
+
+    <!-- Trap Card 3 -->
+    <div class="trap-box">
+        <span class="box-label">Error Forensics #3 &mdash; Squaring Radical Equations &amp; Ignoring Substitution Range
+            Filters</span>
+        <p><strong>The Blunder:</strong> In Q7 ($\sqrt{5x + 19} = x + 1$), squaring both sides to get $x^2 - 3x - 18 =
+            0$ and summing the roots via Vieta ($-b/a = 3$) without noticing that $x = -3$ makes the RHS $-2 < 0$! The
+                same silent killer occurs in exponential quadratics ($2^x=-3$, impossible), reciprocal quartics ($|x +
+                1/x| < 2$, non-real), and rational ranges where cancelling $(x - 1)$ hides a hole (Q23).</p>
+                <p><strong>Why It Fails:</strong> Squaring is NOT a reversible equivalence: $A = B \implies A^2 = B^2$,
+                    but $A^2 = B^2$ merges the true equation $A = B$ with the <em>shadow equation</em> $A = -B$. Thus $x
+                    = -3$ is actually the root of $\sqrt{5x + 19} = -(x + 1)$, NOT the original problem!</p>
+                <p><strong>Exam Antidote:</strong> Never apply Vieta&rsquo;s sum of roots to a squared radical equation!
+                    Write the non-negativity filter $Q(x) \ge 0$ BEFORE squaring, and explicitly back-substitute every
+                    candidate root into the original un-squared equation.</p>
+    </div>
+
+    <!-- Trap Card 4 -->
+    <div class="trap-box">
+        <span class="box-label">Error Forensics #4 &mdash; Cross-Multiplying Inequalities by Unknown Signs &amp; Wavy
+            Curve Blind Spots</span>
+        <p><strong>The Blunder:</strong> Solving $\dfrac{x^2 - 3x - 40}{x^2 - 5x - 6} \le 0$ by cross-multiplying $(x^2
+            - 5x - 6)$ to the right side to get $x^2 - 3x - 40 \le 0$; OR forgetting three Wavy Curve edge cases: (i)
+            keeping even-multiplicity poles like $(x + 2)^2$ in Q13 excluded as $(-2, -2)$ splits, (ii) omitting
+            isolated even-multiplicity numerator zeros like $\{3\}$ in Q13 and $\{2\}$ in Q26 under $\le/\ge$, and (iii)
+            failing to flip the sign when normalizing $(3 - 4m) = -(4m - 3)$ in Q22.</p>
+        <p><strong>Why It Fails:</strong> Multiplying an inequality by an expression $E(x)$ preserves the inequality
+            ONLY when $E(x) > 0$ everywhere (which is WHY cross-multiplying by $x^2 - x + 1 > 0$ WAS legal in Q28,
+            because $a = 1 > 0,\ D = -3 < 0$!). Whenever $E(x)$ changes sign, cross-multiplication destroys half the
+                solution set.</p>
+                <p><strong>Exam Antidote:</strong> Only cross-multiply by an expression after proving $a > 0, D < 0$
+                        (strictly positive everywhere). Otherwise, move everything to one side, normalize every
+                        factor&rsquo;s $x$-coefficient to $+1$, mark poles with hollow $\circ$, bounce on even
+                        multiplicities, and manually test every solid numerator zero $\bullet$ at the end.</p>
+    </div>
+
+    <!-- Trap Card 5 -->
+    <div class="trap-box">
+        <span class="box-label">Error Forensics #5 &mdash; Missing Boundary Zeros in &ldquo;Exactly One Root in $(k_1,
+            k_2)$&rdquo; &amp; Both-Roots Common Trap</span>
+        <p><strong>The Blunder:</strong> (a) In Q22, using ONLY $f(0) \cdot f(2) < 0$ to answer $(-\infty, \frac{1}{2})
+                \cup (\frac{3}{4}, \infty)$ and losing the exact closed endpoints $m=\frac{1}{2}$ and $m=\frac{3}{4}$.
+                (b) In Q20, solving $(k - 2)(\alpha - 1)=0$ and selecting both $k=2$ and $k=-3$ for &ldquo;exactly one
+                common root.&rdquo;</p>
+                <p><strong>Why It Fails:</strong> The strict product condition $f(k_1) f(k_2) < 0$ is <em>
+                        sufficient</em> for exactly one root in $(k_1, k_2)$, NOT <em>necessary</em>&mdash;because one
+                        root can sit harmlessly ON the excluded boundary ($0$ or $2$) while the second root sits
+                        strictly inside $(0, 2)$! Likewise, eliminating $x^2$ in common-root problems produces
+                        candidates where the two equations become completely identical (sharing BOTH roots).</p>
+                <p><strong>Exam Antidote:</strong> Whenever a problem says <strong>&ldquo;exactly
+                        one&rdquo;</strong>&mdash;whether one root in $(k_1, k_2)$ or one common root&mdash;budget 15
+                    seconds for explicit boundary verification: test $f(k_1) = 0$ and $f(k_2) = 0$ individually, and
+                    verify that common-root parameters do not make the two quadratics proportional.</p>
+    </div>
+
+</article>

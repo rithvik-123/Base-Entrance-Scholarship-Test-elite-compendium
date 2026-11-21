@@ -1,0 +1,1030 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 7: Polynomials, Vieta's Formulas & Symmetric Roots">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">VOLUME 2: MATHEMATICS (PAPER 1) &bull; PART 1: THEORY &amp; WORKED EXAMPLES</div>
+        <h1>Chapter 7: Polynomials, Vieta&rsquo;s Formulas &amp; Symmetric Roots</h1>
+        <p>From root multiplicity and geometric curve behavior to quadratic/cubic divisors, Newton&rsquo;s Sums,
+            10-second equation transformations, and IOQM-style polynomial reconstruction&mdash;engineered for Paper 1
+            BEST dominance.</p>
+        <div class="tag-row">
+            <span class="meta-pill">Target Study Time: 6 Hours</span>
+            <span class="meta-pill">BEST Paper 1 Core + Bridge</span>
+            <span class="meta-pill">3 Vector Diagrams</span>
+            <span class="meta-pill">9 Graded Worked Examples</span>
+        </div>
+    </header>
+
+    <!-- ==================== SECTION 1 ==================== -->
+    <h2 class="section-heading">7.1 Polynomial Structure, Zero Multiplicity &amp; End-Behavior Geometry</h2>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Core &bull; Real Polynomials &amp; Degree Rules</span>
+        <p>A <strong>polynomial in $x$ of degree $n$</strong> (where $n \in \{0, 1, 2, \dots\}$) over the real numbers
+            is an algebraic expression of the form:</p>
+        $$P(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0, \qquad a_n \neq 0$$
+        <ul>
+            <li><strong>Leading Term &amp; Monic Form:</strong> $a_n x^n$ is the leading term and $a_n$ is the
+                <em>leading coefficient</em>. If $a_n = 1$, $P(x)$ is called a <strong>monic polynomial</strong>.
+            </li>
+            <li><strong>Non-Polynomial Traps:</strong> Exponents of $x$ must be <em>non-negative integers</em>.
+                Expressions like $x^{-2} + 3$, $\sqrt{x} + 1$, or $\dfrac{1}{x - 1}$ are <strong>not</strong>
+                polynomials.</li>
+            <li><strong>Zero Polynomial vs. Non-Zero Constant:</strong> A non-zero constant $P(x) = c$ ($c \neq 0$) has
+                degree $0$ and <em>no zeroes</em>. The zero polynomial $P(x) \equiv 0$ has an <em>undefined</em> degree
+                and infinitely many zeroes.</li>
+            <li><strong>Fundamental Theorem of Algebra (Real Consequence):</strong> A polynomial of degree $n \ge 1$ has
+                <em>exactly $n$ complex roots</em> counting multiplicity, and therefore <strong>at most $n$ distinct
+                    real zeroes</strong>. Furthermore, for polynomials with <strong>real coefficients</strong>, non-real
+                complex roots always occur in conjugate pairs ($p \pm iq$), which forces every <strong>odd-degree real
+                    polynomial to have at least one real root</strong>.
+            </li>
+        </ul>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Geometric Meaning of Zeroes &bull; Multiplicity &amp; Sign Changes</span>
+        <p>A real number $r$ is a <strong>zero (root)</strong> of $P(x)$ if and only if $P(r) = 0$, which geometrically
+            means the graph $y = P(x)$ meets the $x$-axis at $(r, 0)$. Suppose $(x - r)^m$ is the highest power of $(x -
+            r)$ dividing $P(x)$, so that $P(x) = (x - r)^m Q(x)$ with $Q(r) \neq 0$. The positive integer $m$ is the
+            <strong>multiplicity</strong> of the root $r$, and it completely dictates the local shape of the curve at $x
+            = r$:
+        </p>
+        <ul>
+            <li><strong>Odd Multiplicity ($m = 1, 3, 5, \dots$) &mdash; Curve CROSSES the $x$-axis:</strong> As $x$
+                passes from $r - \varepsilon$ to $r + \varepsilon$, the factor $(x - r)^m$ flips sign from negative to
+                positive, while $Q(x)$ keeps the same sign near $r$. Hence $P(x)$ <strong>changes sign</strong> and
+                crosses the $x$-axis.
+                <ul>
+                    <li>If $m = 1$ (<em>simple root</em>): the graph crosses cleanly with a non-zero slope.</li>
+                    <li>If $m = 3, 5, \dots$: the graph flattens out horizontally (inflection point) as it crosses.</li>
+                </ul>
+            </li>
+            <li><strong>Even Multiplicity ($m = 2, 4, 6, \dots$) &mdash; Curve TOUCHES (Bounces off) the
+                    $x$-axis:</strong> Because $(x - r)^m \ge 0$ on <em>both</em> sides of $r$, $P(x)$ retains the
+                <strong>same sign</strong> immediately before and after $r$. The graph is tangent to the $x$-axis at
+                $(r, 0)$ and bounces back without crossing.
+            </li>
+            <li><strong>Turning Points Bound:</strong> A smooth polynomial of degree $n$ has <strong>at most $(n - 1)$
+                    local turning points</strong> (peaks and valleys). Reading $T$ turning points on a graph immediately
+                gives a lower bound on degree: $n \ge T + 1$.</li>
+        </ul>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 720 340" width="100%" role="img"
+            aria-label="Local behavior at odd and even multiplicity zeroes and a composite quartic graph P(x) = (x+2)(x-1)^2(x-3)">
+            <defs>
+                <marker id="arr-poly-axis" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+                </marker>
+            </defs>
+
+            <!-- Top 3 Mini Panels -->
+            <!-- Panel 1: m = 1 -->
+            <rect x="10" y="10" width="222" height="122" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="121" y="29" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#0f172a">Simple Root (m = 1)</text>
+            <line x1="28" y1="78" x2="214" y2="78" stroke="#64748b" stroke-width="1.4"
+                marker-end="url(#arr-poly-axis)" />
+            <path d="M 62 114 L 180 42" fill="none" stroke="#2563eb" stroke-width="2.6" />
+            <circle cx="121" cy="78" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="1.3" />
+            <text x="127" y="92" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#1e293b">r</text>
+            <text x="121" y="124" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                fill="#334155">Clean crossing (sign flips)</text>
+
+            <!-- Panel 2: m = 2 -->
+            <rect x="249" y="10" width="222" height="122" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="360" y="29" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#0f172a">Even Multiplicity (m = 2)</text>
+            <line x1="267" y1="88" x2="453" y2="88" stroke="#64748b" stroke-width="1.4"
+                marker-end="url(#arr-poly-axis)" />
+            <path d="M 295 42 Q 360 134 425 42" fill="none" stroke="#dc2626" stroke-width="2.6" />
+            <circle cx="360" cy="88" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.3" />
+            <text x="360" y="103" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#1e293b">r</text>
+            <text x="360" y="124" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                fill="#334155">Tangent bounce (sign stays same)</text>
+
+            <!-- Panel 3: m = 3 -->
+            <rect x="488" y="10" width="222" height="122" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="599" y="29" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#0f172a">Odd Multiplicity (m = 3)</text>
+            <line x1="506" y1="78" x2="692" y2="78" stroke="#64748b" stroke-width="1.4"
+                marker-end="url(#arr-poly-axis)" />
+            <path d="M 544 114 C 562 78, 578 78, 599 78 C 620 78, 636 78, 654 42" fill="none" stroke="#059669"
+                stroke-width="2.6" />
+            <circle cx="599" cy="78" r="4.5" fill="#059669" stroke="#ffffff" stroke-width="1.3" />
+            <text x="604" y="93" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#1e293b">r</text>
+            <text x="599" y="124" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                fill="#334155">Flat inflection crossing (sign flips)</text>
+
+            <!-- Bottom Composite Panel -->
+            <rect x="10" y="146" width="700" height="184" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="360" y="167" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12.5"
+                font-weight="700" fill="#0f172a">Composite Example: P(x) = (x + 2)(x &minus; 1)&sup2;(x &minus; 3)
+                &nbsp;&bull;&nbsp; Degree 4, Leading Coeff +1</text>
+
+            <!-- Axes: x-axis at y=232, y-axis at x=330 (scale: 75px per unit in x) -->
+            <line x1="40" y1="232" x2="682" y2="232" stroke="#475569" stroke-width="1.5"
+                marker-end="url(#arr-poly-axis)" />
+            <line x1="330" y1="316" x2="330" y2="178" stroke="#94a3b8" stroke-width="1.2"
+                marker-end="url(#arr-poly-axis)" />
+            <text x="688" y="236" font-family="system-ui, sans-serif" font-size="11" font-weight="600"
+                fill="#475569">x</text>
+            <text x="336" y="185" font-family="system-ui, sans-serif" font-size="11" font-weight="600"
+                fill="#475569">y</text>
+
+            <!-- Root x-coordinates: x=-2 -> 180; x=0 -> 330; x=1 -> 405; x=2 -> 480; x=3 -> 555 -->
+            <!-- Composite quartic curve: + for x<-2, crosses down at 180, trough near 265 (y=302), touches x-axis from BELOW at 405 (y=232), shallow trough near 480 (y=266), crosses up at 555 to top-right -->
+            <path
+                d="M 142 180 C 158 205, 170 220, 180 232 C 202 258, 228 302, 268 302 C 325 302, 368 232, 405 232 C 436 232, 456 266, 488 266 C 516 266, 538 250, 555 232 C 570 216, 584 196, 598 180"
+                fill="none" stroke="#1d4ed8" stroke-width="2.8" />
+
+            <!-- Sign badges -->
+            <rect x="92" y="196" width="38" height="20" rx="4" fill="#dbeafe" />
+            <text x="111" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#1d4ed8">(+)</text>
+            <rect x="249" y="264" width="38" height="20" rx="4" fill="#fee2e2" />
+            <text x="268" y="278" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#b91c1c">(&minus;)</text>
+            <rect x="469" y="239" width="38" height="19" rx="4" fill="#fee2e2" />
+            <text x="488" y="252" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#b91c1c">(&minus;)</text>
+            <rect x="606" y="196" width="38" height="20" rx="4" fill="#dbeafe" />
+            <text x="625" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#1d4ed8">(+)</text>
+
+            <!-- Zero dots and labels -->
+            <circle cx="180" cy="232" r="5" fill="#2563eb" stroke="#ffffff" stroke-width="1.4" />
+            <text x="195" y="223" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#1e293b">x = &minus;2 (m=1)</text>
+
+            <circle cx="405" cy="232" r="5.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.4" />
+            <text x="405" y="218" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#dc2626">x = 1 (m=2, touches!)</text>
+
+            <circle cx="555" cy="232" r="5" fill="#2563eb" stroke="#ffffff" stroke-width="1.4" />
+            <text x="536" y="223" text-anchor="end" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#1e293b">x = 3 (m=1)</text>
+        </svg>
+        <div class="diagram-caption"><strong>Figure 7.1:</strong> Top: Local geometry at zeroes of multiplicity $m = 1,
+            2, 3$. Bottom: On $P(x) = (x+2)(x-1)^2(x-3)$, the curve crosses at the odd-multiplicity roots $x = -2$ and
+            $x = 3$, but touches and rebounds downward at the even-multiplicity root $x = 1$, keeping $P(x) \lt 0$ on
+            both sides of $1$.</div>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Asymptotic Dominance &bull; Leading Coefficient End-Behavior</span>
+        <p>Factor out the leading term $a_n x^n$ from $P(x)$:</p>
+        $$P(x) = a_n x^n \left(1 + \frac{a_{n-1}}{a_n x} + \frac{a_{n-2}}{a_n x^2} + \dots + \frac{a_0}{a_n
+        x^n}\right)$$
+        <p>As $|x| \to \infty$, every fractional term $\dfrac{a_k}{a_n x^{n-k}} \to 0$, so the parenthesis approaches
+            $1$. Therefore, for very large $|x|$, <strong>the entire polynomial behaves identically to its single
+                leading term $a_n x^n$</strong>. Four universal end-behavior cases emerge purely from the parity of
+            degree $n$ and the sign of $a_n$:</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 720 278" width="100%" role="img"
+            aria-label="Four-quadrant end-behavior matrix for even and odd degree polynomials with positive and negative leading coefficients">
+            <!-- Card 1: Even n, a_n > 0 -->
+            <rect x="10" y="10" width="342" height="124" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="181" y="29" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#0f172a">Even Degree n &nbsp;|&nbsp; Leading Coeff a&#8345; &gt; 0</text>
+            <line x1="40" y1="92" x2="322" y2="92" stroke="#94a3b8" stroke-width="1.1" stroke-dasharray="3,3" />
+            <path d="M 75 44 C 102 108, 140 112, 181 78 C 222 112, 260 108, 287 44" fill="none" stroke="#2563eb"
+                stroke-width="2.6" />
+            <polygon points="75,40 69,51 81,50" fill="#2563eb" />
+            <polygon points="287,40 281,50 293,51" fill="#2563eb" />
+            <text x="48" y="55" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#2563eb">+&infin;</text>
+            <text x="296" y="55" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#2563eb">+&infin;</text>
+            <text x="181" y="124" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                fill="#334155">Both ends rise (has a global minimum)</text>
+
+            <!-- Card 2: Even n, a_n < 0 -->
+            <rect x="368" y="10" width="342" height="124" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="539" y="29" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#0f172a">Even Degree n &nbsp;|&nbsp; Leading Coeff a&#8345; &lt; 0</text>
+            <line x1="398" y1="68" x2="680" y2="68" stroke="#94a3b8" stroke-width="1.1" stroke-dasharray="3,3" />
+            <path d="M 433 108 C 460 44, 498 40, 539 74 C 580 40, 618 44, 645 108" fill="none" stroke="#dc2626"
+                stroke-width="2.6" />
+            <polygon points="433,112 427,101 439,102" fill="#dc2626" />
+            <polygon points="645,112 639,102 651,101" fill="#dc2626" />
+            <text x="404" y="108" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#dc2626">&minus;&infin;</text>
+            <text x="654" y="108" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#dc2626">&minus;&infin;</text>
+            <text x="539" y="124" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                fill="#334155">Both ends fall (has a global maximum)</text>
+
+            <!-- Card 3: Odd n, a_n > 0 -->
+            <rect x="10" y="144" width="342" height="124" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="181" y="163" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#0f172a">Odd Degree n &nbsp;|&nbsp; Leading Coeff a&#8345; &gt; 0</text>
+            <line x1="40" y1="210" x2="322" y2="210" stroke="#94a3b8" stroke-width="1.1" stroke-dasharray="3,3" />
+            <path d="M 76 242 C 115 170, 155 182, 181 210 C 207 238, 247 250, 286 178" fill="none" stroke="#059669"
+                stroke-width="2.6" />
+            <polygon points="74,246 72,234 83,239" fill="#059669" />
+            <polygon points="288,174 279,181 290,186" fill="#059669" />
+            <text x="46" y="244" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#059669">&minus;&infin;</text>
+            <text x="296" y="186" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#059669">+&infin;</text>
+            <text x="181" y="258" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                fill="#334155">Falls left, rises right (Range = &Ropf;; &ge;1 real root)</text>
+
+            <!-- Card 4: Odd n, a_n < 0 -->
+            <rect x="368" y="144" width="342" height="124" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="539" y="163" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#0f172a">Odd Degree n &nbsp;|&nbsp; Leading Coeff a&#8345; &lt; 0</text>
+            <line x1="398" y1="210" x2="680" y2="210" stroke="#94a3b8" stroke-width="1.1" stroke-dasharray="3,3" />
+            <path d="M 434 178 C 473 250, 513 238, 539 210 C 565 182, 605 170, 644 242" fill="none" stroke="#7c3aed"
+                stroke-width="2.6" />
+            <polygon points="432,174 430,186 441,181" fill="#7c3aed" />
+            <polygon points="646,246 637,239 648,234" fill="#7c3aed" />
+            <text x="404" y="186" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#7c3aed">+&infin;</text>
+            <text x="654" y="244" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#7c3aed">&minus;&infin;</text>
+            <text x="539" y="258" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                fill="#334155">Rises left, falls right (Range = &Ropf;; &ge;1 real root)</text>
+        </svg>
+        <div class="diagram-caption"><strong>Figure 7.2:</strong> End-behavior classification of real polynomials.
+            Notice the right-hand arrow ($x \to +\infty$) ALWAYS matches the sign of $a_n$; the left-hand arrow matches
+            the right arrow when $n$ is even and opposes it when $n$ is odd.</div>
+    </div>
+
+    <!-- ==================== SECTION 2 ==================== -->
+    <h2 class="section-heading">7.2 Division Algorithm, Remainder Theorem &amp; Factor Theorem</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Polynomial Division Engine &bull; Linear, Quadratic &amp; Cubic Divisors</span>
+        <p><strong>Division Algorithm for Polynomials:</strong> Given any dividend polynomial $P(x)$ and any non-zero
+            divisor polynomial $D(x)$, there exist <em>unique</em> polynomials $Q(x)$ (quotient) and $R(x)$ (remainder)
+            such that:</p>
+        $$P(x) = D(x) \cdot Q(x) + R(x), \qquad \text{where either } R(x) \equiv 0 \text{ or } \deg R(x) \lt \deg D(x)$$
+        <p><strong>1. Remainder Theorem (Linear Divisor):</strong> Set $D(x) = x - \alpha$. Since $\deg D = 1$, $R(x)$
+            must be a constant $r$. Substituting $x = \alpha$ annihilates $(x - \alpha)Q(x)$ immediately:</p>
+        $$P(\alpha) = (\alpha - \alpha)Q(\alpha) + r \implies r = P(\alpha)$$
+        <p>For a general linear divisor $(ax - b)$ with $a \neq 0$, the remainder is $P\!\left(\dfrac{b}{a}\right)$.</p>
+        <p><strong>2. Factor Theorem:</strong> $(x - \alpha)$ is an exact factor of $P(x)$ if and only if the remainder
+            $P(\alpha) = 0$. More generally, if $\alpha_1, \alpha_2, \dots, \alpha_k$ are <em>distinct</em> roots of
+            $P(x)$, then the product $(x - \alpha_1)(x - \alpha_2)\cdots(x - \alpha_k)$ divides $P(x)$.</p>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &bull; Non-Linear Divisors (Quadratic &amp; Cubic
+            Remainders)</span>
+        <p>BEST rarely stops at linear divisors. Whenever $D(x)$ has degree $2$ or $3$, set up the general remainder
+            polynomial $R(x)$ of degree <strong>strictly less than $\deg D(x)$</strong> and annihilate $Q(x)$ by
+            substituting the roots of $D(x)$:</p>
+        <ul>
+            <li><strong>Case A &mdash; Quadratic Divisor with Distinct Roots $D(x) = (x - \alpha)(x - \beta)$:</strong>
+                Since $\deg D = 2$, write $R(x) = ax + b$:
+                $$P(x) = (x - \alpha)(x - \beta)Q(x) + (ax + b)$$
+                Substitute $x = \alpha$ and $x = \beta$ to obtain the $2 \times 2$ linear system $a\alpha + b =
+                P(\alpha)$ and $a\beta + b = P(\beta)$. Solving explicitly gives the instant two-point formula:
+                $$R(x) = P(\alpha) + \frac{P(\beta) - P(\alpha)}{\beta - \alpha}(x - \alpha)$$</li>
+            <li><strong>Case B &mdash; Cubic Divisor $D(x) = (x - \alpha)(x - \beta)(x - \gamma)$:</strong> Write $R(x)
+                = ax^2 + bx + c$ (degree $\le 2$) and solve the $3 \times 3$ system from $R(\alpha) = P(\alpha)$,
+                $R(\beta) = P(\beta)$, $R(\gamma) = P(\gamma)$. <em>Pro Move:</em> Write $R(x)$ in <strong>staged Newton
+                    form</strong> $R(x) = c_0 + c_1(x - \alpha) + c_2(x - \alpha)(x - \beta)$ so each constant pops out
+                in one line without solving simultaneous equations!</li>
+            <li><strong>Case C &mdash; Repeated Root Divisor $D(x) = (x - \alpha)^2$ (Algebraic Reduction):</strong>
+                Substitute $t = x - \alpha$ (so $x = t + \alpha$) into $P(x)$ and expand up to $t^1$; all terms with
+                $t^2, t^3, \dots$ are divisible by $(x - \alpha)^2$, leaving $R(x) = P(\alpha) + c_1(x - \alpha)$
+                immediately. (Equivalently, using Class 11 calculus, $c_1 = P'(\alpha)$.)</li>
+            <li><strong>Case D &mdash; Unfactorable Quadratic Divisor (e.g., $x^2 + x + 1$ or $x^2 + 1$):</strong> Use
+                polynomial congruence! For $D(x) = x^2 + 1$, replace every $x^2$ by $-1$ (so $x^4 \equiv 1$, $x^3 \equiv
+                -x$). For $D(x) = x^2 + x + 1$, since $(x - 1)(x^2 + x + 1) = x^3 - 1$, replace every $x^3$ by $1$ and
+                then replace any leftover $x^2$ by $-x - 1$!</li>
+        </ul>
+    </div>
+
+    <!-- ==================== SECTION 3 ==================== -->
+    <h2 class="section-heading">7.3 Vieta&rsquo;s Formulas: Quadratic, Cubic &amp; Biquadratic Polynomials</h2>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Derivation &bull; Connecting Coefficients to Elementary Symmetric
+            Sums</span>
+        <p>If a degree-$n$ polynomial $P(x) = a_n x^n + a_{n-1}x^{n-1} + \dots + a_0$ ($a_n \neq 0$) has roots
+            $\alpha_1, \alpha_2, \dots, \alpha_n$, the Factor Theorem guarantees the identity:</p>
+        $$a_n x^n + a_{n-1} x^{n-1} + \dots + a_0 \equiv a_n (x - \alpha_1)(x - \alpha_2)\cdots(x - \alpha_n)$$
+        <p>Dividing both sides by $a_n$ and expanding the right-hand product matches the coefficient of $x^{n-k}$ to
+            $(-1)^k e_k$, where $e_k$ is the <strong>$k$-th elementary symmetric sum</strong> (sum of all products of
+            $k$ distinct roots chosen from the $n$ roots):</p>
+        $$e_k = \sum_{1 \le i_1 \lt \dots \lt i_k \le n} \alpha_{i_1}\alpha_{i_2}\cdots\alpha_{i_k} = (-1)^k
+        \frac{a_{n-k}}{a_n}$$
+        <p>Notice the <strong>strictly alternating sign pattern</strong>: $-,\, +,\, -,\, +,\, \dots$ starting from the
+            ratio of the second coefficient to the leading coefficient!</p>
+    </div>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Polynomial Family</th>
+                <th>Standard Form ($a \neq 0$)</th>
+                <th>Vieta&rsquo;s Formulas (Elementary Symmetric Sums)</th>
+                <th>Sign Pattern</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Quadratic ($n = 2$)</strong><br />Roots: $\alpha, \beta$</td>
+                <td>$ax^2 + bx + c = 0$</td>
+                <td>
+                    $e_1 = \alpha + \beta = -\dfrac{b}{a}$<br />
+                    $e_2 = \alpha\beta = +\dfrac{c}{a}$
+                </td>
+                <td>$-,\; +$</td>
+            </tr>
+            <tr>
+                <td><strong>Cubic ($n = 3$)</strong><br />Roots: $\alpha, \beta, \gamma$</td>
+                <td>$ax^3 + bx^2 + cx + d = 0$</td>
+                <td>
+                    $e_1 = \alpha + \beta + \gamma = -\dfrac{b}{a}$<br />
+                    $e_2 = \alpha\beta + \beta\gamma + \gamma\alpha = +\dfrac{c}{a}$<br />
+                    $e_3 = \alpha\beta\gamma = -\dfrac{d}{a}$
+                </td>
+                <td>$-,\; +,\; -$</td>
+            </tr>
+            <tr>
+                <td><strong>Biquadratic / Quartic ($n = 4$)</strong><br />Roots: $\alpha, \beta, \gamma, \delta$</td>
+                <td>$ax^4 + bx^3 + cx^2 + dx + e = 0$</td>
+                <td>
+                    $e_1 = \sum \alpha = -\dfrac{b}{a}$<br />
+                    $e_2 = \sum \alpha\beta = +\dfrac{c}{a}$<br />
+                    $e_3 = \sum \alpha\beta\gamma = -\dfrac{d}{a}$<br />
+                    $e_4 = \alpha\beta\gamma\delta = +\dfrac{e}{a}$
+                </td>
+                <td>$-,\; +,\; -,\; +$</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="trap-box">
+        <span class="box-label">Missing-Term Alert &bull; Zero-Coefficient Vigilance</span>
+        <p>In $x^3 + 5x - 7 = 0$, the $x^2$ term is <strong>absent</strong>, which means $b = 0$ (NOT $b = 5$!). Rewrite
+            explicitly as $1\cdot x^3 + 0\cdot x^2 + 5x - 7 = 0$ before reading off Vieta&rsquo;s sums: $\alpha + \beta
+            + \gamma = 0$, $\sum \alpha\beta = 5$, and $\alpha\beta\gamma = 7$. Missing-term equations (depressed
+            cubics/quartics) are a favorite BEST speed trap.</p>
+    </div>
+
+    <!-- ==================== SECTION 4 ==================== -->
+    <h2 class="section-heading">7.4 Symmetric Functions of Roots &amp; Newton&rsquo;s Sums Shortcut</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Symmetric Identities &bull; Expressing Power Sums via $e_1, e_2, e_3$</span>
+        <p>An expression in the roots is <strong>symmetric</strong> if swapping any two roots leaves it unchanged. By
+            the Fundamental Theorem of Symmetric Polynomials, every symmetric polynomial can be written purely in terms
+            of Vieta&rsquo;s sums without ever computing irrational or complex roots:</p>
+        <ul>
+            <li><strong>Quadratic Core Toolkit ($\alpha + \beta = s$, $\alpha\beta = p$):</strong>
+                $$\alpha^2 + \beta^2 = s^2 - 2p, \qquad (\alpha - \beta)^2 = s^2 - 4p \implies |\alpha - \beta| =
+                \sqrt{s^2 - 4p} = \frac{\sqrt{\Delta}}{|a|}$$
+                $$\alpha^3 + \beta^3 = s^3 - 3ps, \qquad \alpha^4 + \beta^4 = (\alpha^2 + \beta^2)^2 - 2p^2 = (s^2 -
+                2p)^2 - 2p^2$$
+                $$\frac{1}{\alpha} + \frac{1}{\beta} = \frac{s}{p}, \qquad \frac{\alpha}{\beta} + \frac{\beta}{\alpha} =
+                \frac{\alpha^2 + \beta^2}{\alpha\beta} = \frac{s^2 - 2p}{p}$$</li>
+            <li><strong>Cubic Core Toolkit ($e_1 = \sum \alpha,\; e_2 = \sum \alpha\beta,\; e_3 =
+                    \alpha\beta\gamma$):</strong>
+                $$\alpha^2 + \beta^2 + \gamma^2 = e_1^2 - 2e_2, \qquad \frac{1}{\alpha} + \frac{1}{\beta} +
+                \frac{1}{\gamma} = \frac{e_2}{e_3}$$
+                $$\alpha^3 + \beta^3 + \gamma^3 = e_1(e_1^2 - 3e_2) + 3e_3 = e_1^3 - 3e_1 e_2 + 3e_3$$
+                $$\alpha^2\beta^2 + \beta^2\gamma^2 + \gamma^2\alpha^2 = e_2^2 - 2e_1 e_3$$</li>
+        </ul>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &bull; Newton&rsquo;s Sums Recurrence for $S_n = \sum
+            \alpha_i^n$</span>
+        <p>When an Olympiad problem asks for $\alpha^5 + \beta^5$, $\alpha^7 + \beta^7$, or $\alpha^4 + \beta^4 +
+            \gamma^4$, expanding binomials by hand is slow and error-prone. <strong>Newton&rsquo;s Sums</strong> convert
+            high-power root sums into a 5-second linear recurrence directly from the polynomial itself!</p>
+        <p><strong>First-Principles Proof (Quadratic $ax^2 + bx + c = 0$):</strong> Since $\alpha$ and $\beta$ satisfy
+            $ax^2 + bx + c = 0$, multiply both sides by $x^{n-2}$ (for any integer $n \ge 2$):</p>
+        $$a x^n + b x^{n-1} + c x^{n-2} = 0$$
+        <p>Evaluate this exact equation at $x = \alpha$ and $x = \beta$, and add the two equations together:</p>
+        $$a(\alpha^n + \beta^n) + b(\alpha^{n-1} + \beta^{n-1}) + c(\alpha^{n-2} + \beta^{n-2}) = 0$$
+        <p>Defining $S_n = \alpha^n + \beta^n$ (with $S_0 = \alpha^0 + \beta^0 = \mathbf{2}$ and $S_1 = \alpha + \beta =
+            -b/a$), we obtain the <strong>Quadratic Newton Recurrence</strong>:</p>
+        $$\boxed{a S_n + b S_{n-1} + c S_{n-2} = 0 \qquad (\text{valid for all } n \in \mathbb{Z} \text{ if } c \neq
+        0!)}$$
+        <p><strong>Cubic Newton Recurrence ($ax^3 + bx^2 + cx + d = 0$):</strong> By the identical multiplication by
+            $x^{n-3}$ and summing over $\alpha, \beta, \gamma$, with $S_n = \alpha^n + \beta^n + \gamma^n$:</p>
+        <ul>
+            <li>Seed values: $S_0 = \mathbf{3}$, $S_1 = -\dfrac{b}{a}$, $S_2 = S_1^2 - 2\dfrac{c}{a}$ (or equivalently
+                $a S_1 + b = 0$ and $a S_2 + b S_1 + 2c = 0$).</li>
+            <li>Recurrence for all $n \ge 3$:
+                $$\boxed{a S_n + b S_{n-1} + c S_{n-2} + d S_{n-3} = 0}$$</li>
+        </ul>
+        <p><strong>Doubling Shortcut (When $n$ is Even or a Multiple of $3$):</strong> For a quadratic with product $p =
+            \alpha\beta$, you can jump exponentially instead of stepping one by one: $S_{2k} = S_k^2 - 2p^k$ and $S_{3k}
+            = S_k^3 - 3p^k S_k$!</p>
+    </div>
+
+    <!-- ==================== SECTION 5 ==================== -->
+    <h2 class="section-heading">7.5 Transformation of Equations (10-Second Substitution Method)</h2>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &bull; The Reverse-Substitution Engine</span>
+        <p>Suppose $\alpha_1, \alpha_2, \dots, \alpha_n$ are the roots of a polynomial equation $P(x) = 0$, and you want
+            the new polynomial equation $Q(y) = 0$ whose roots are $y_i = g(\alpha_i)$ for a known invertible
+            transformation $g$.</p>
+        <p><strong>First-Principles Derivation:</strong> If $y = g(x)$ is a root of the new equation, then the
+            corresponding old root is $x = g^{-1}(y)$. Since $x$ satisfies $P(x) = 0$, substituting $x = g^{-1}(y)$
+            directly yields:</p>
+        $$P\!\big(g^{-1}(y)\big) = 0$$
+        <p>Clearing denominators (or isolating radicals and squaring for $y = x^2$) instantly produces the exact
+            transformed polynomial—<strong>without computing a single Vieta sum!</strong></p>
+    </div>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Desired New Roots</th>
+                <th>Set $y = g(x)$</th>
+                <th>Substitute into $P(x) = 0$</th>
+                <th>10-Second Structural Shortcut on $a_n x^n + \dots + a_0 = 0$</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Negated:</strong> $-\alpha_i$</td>
+                <td>$y = -x$</td>
+                <td>$P(-y) = 0$</td>
+                <td>Flip signs of <strong>odd-power</strong> terms only.</td>
+            </tr>
+            <tr>
+                <td><strong>Scaled:</strong> $k\alpha_i$ ($k \neq 0$)</td>
+                <td>$y = kx$</td>
+                <td>$P(y/k) = 0$</td>
+                <td>Multiply $a_{n-r}$ by $k^r$: $a_n y^n + k a_{n-1} y^{n-1} + k^2 a_{n-2} y^{n-2} + \dots + k^n a_0 =
+                    0$.</td>
+            </tr>
+            <tr>
+                <td><strong>Shifted:</strong> $\alpha_i + k$</td>
+                <td>$y = x + k$</td>
+                <td>$P(y - k) = 0$</td>
+                <td>Replace every $x$ with $(y - k)$ and expand. (For $\alpha_i - k$, substitute $y + k$.)</td>
+            </tr>
+            <tr>
+                <td><strong>Reciprocal:</strong> $1/\alpha_i$ ($a_0 \neq 0$)</td>
+                <td>$y = 1/x$</td>
+                <td>$y^n P(1/y) = 0$</td>
+                <td><strong>Reverse the order of coefficients:</strong> $a_0 y^n + a_1 y^{n-1} + \dots + a_n = 0$.</td>
+            </tr>
+            <tr>
+                <td><strong>Squared:</strong> $\alpha_i^2$</td>
+                <td>$y = x^2$</td>
+                <td>$P(\sqrt{y}) = 0$</td>
+                <td>Separate <strong>even powers</strong> and <strong>odd powers</strong> of $x$ on opposite sides,
+                    square both sides, then replace $x^2 \to y$.</td>
+            </tr>
+            <tr>
+                <td><strong>Fractional Linear:</strong> $\dfrac{p\alpha_i + q}{r\alpha_i + s}$</td>
+                <td>$y = \dfrac{px + q}{rx + s}$</td>
+                <td>$x = \dfrac{q - sy}{ry - p}$</td>
+                <td>Substitute $x = \dfrac{q - sy}{ry - p}$ into $P(x) = 0$ and multiply through by $(ry - p)^n$.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ==================== SECTION 6 ==================== -->
+    <h2 class="section-heading">7.6 Olympiad Polynomial Construction &amp; Rational Root Theorem</h2>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &bull; Pattern Construction $P(x) = k\prod(x - a_i) +
+            R(x)$</span>
+        <p>One of the highest-yield IOQM/PRMO and BEST Level 3 weapons occurs when you are told the degree $n$ of a
+            polynomial $P(x)$ along with its values at $n$ points $x = a_1, a_2, \dots, a_n$ that follow a recognizable
+            rule $R(x)$ (such as a constant $c$, a linear rule $mx + c$, or a quadratic $x^2 + 1$).</p>
+        <p><strong>The Auxiliary Difference Trick:</strong> Instead of setting $P(x) = c_n x^n + \dots + c_0$ and
+            drowning in an $n \times n$ linear system, define the auxiliary polynomial:</p>
+        $$Q(x) = P(x) - R(x)$$
+        <p>Whenever $\deg R(x) \lt \deg P(x) = n$, the polynomial $Q(x)$ has the <strong>exact same degree $n$ and
+                leading coefficient $k$ as $P(x)$</strong>, AND satisfies $Q(a_1) = Q(a_2) = \dots = Q(a_n) = 0$. By the
+            Factor Theorem, $Q(x)$ collapses instantly into a single factored product:</p>
+        $$P(x) - R(x) = k(x - a_1)(x - a_2)\cdots(x - a_n) \implies \boxed{P(x) = k(x - a_1)(x - a_2)\cdots(x - a_n) +
+        R(x)}$$
+        <p><strong>Crucial Extension (Non-Polynomial Patterns like $P(a_i) = \dfrac{1}{a_i}$ or $\dfrac{a_i}{a_i +
+                1}$):</strong> You cannot subtract $\dfrac{1}{x}$ because it is not a polynomial! Instead, <strong>clear
+                the denominator first</strong>: form the higher-degree polynomial $H(x) = x P(x) - 1$ (degree $n + 1$)
+            or $H(x) = (x + 1)P(x) - x$. Now $H(x)$ vanishes at all given points, and substituting the <em>denominator
+                root</em> ($x = 0$ or $x = -1$) kills the unknown $P(x)$ term and immediately pins down the leading
+            constant $k$!</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 720 265" width="100%" role="img"
+            aria-label="Geometric visualization of the Olympiad polynomial construction trick: shifting P(x) minus R(x) turns intersections with R(x) into x-axis roots">
+            <defs>
+                <marker id="arr-con-axis" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+                </marker>
+                <marker id="arr-con-shift" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669" />
+                </marker>
+            </defs>
+
+            <!-- Left Panel: y = P(x) intersecting y = R(x) -->
+            <rect x="10" y="10" width="318" height="245" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="169" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#0f172a">Original Curve y = P(x) &amp; Pattern y = R(x)</text>
+
+            <!-- Axes -->
+            <line x1="30" y1="215" x2="310" y2="215" stroke="#475569" stroke-width="1.3"
+                marker-end="url(#arr-con-axis)" />
+            <line x1="48" y1="238" x2="48" y2="44" stroke="#475569" stroke-width="1.3"
+                marker-end="url(#arr-con-axis)" />
+            <text x="314" y="219" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600"
+                fill="#475569">x</text>
+            <text x="53" y="50" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600"
+                fill="#475569">y</text>
+
+            <!-- Slanted line y = R(x) passing through (92, 165), (172, 133), (252, 101) -->
+            <line x1="56" y1="180" x2="296" y2="83" stroke="#d97706" stroke-width="2" stroke-dasharray="6,4" />
+            <text x="275" y="76" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#b45309">y =
+                R(x)</text>
+
+            <!-- Cubic y = P(x) weaving across R(x) at x = 92, 172, 252 -->
+            <path
+                d="M 68 205 C 78 190, 86 175, 92 165 C 110 132, 134 95, 154 114 C 162 122, 168 129, 172 133 C 194 155, 222 152, 252 101 C 266 78, 276 62, 286 48"
+                fill="none" stroke="#2563eb" stroke-width="2.6" />
+            <text x="122" y="92" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#2563eb">y =
+                P(x)</text>
+
+            <!-- Vertical drop lines to a, b, c -->
+            <line x1="92" y1="165" x2="92" y2="215" stroke="#94a3b8" stroke-width="1.1" stroke-dasharray="3,3" />
+            <line x1="172" y1="133" x2="172" y2="215" stroke="#94a3b8" stroke-width="1.1" stroke-dasharray="3,3" />
+            <line x1="252" y1="101" x2="252" y2="215" stroke="#94a3b8" stroke-width="1.1" stroke-dasharray="3,3" />
+            <text x="92" y="230" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#1e293b">a</text>
+            <text x="172" y="230" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#1e293b">b</text>
+            <text x="252" y="230" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#1e293b">c</text>
+
+            <!-- Intersection points -->
+            <circle cx="92" cy="165" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.2" />
+            <circle cx="172" cy="133" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.2" />
+            <circle cx="252" cy="101" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.2" />
+
+            <!-- Center transformation arrow -->
+            <line x1="334" y1="135" x2="384" y2="135" stroke="#059669" stroke-width="2.4"
+                marker-end="url(#arr-con-shift)" />
+            <text x="360" y="122" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#059669">Subtract</text>
+            <text x="360" y="152" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#059669">R(x)</text>
+
+            <!-- Right Panel: Q(x) = P(x) - R(x) -->
+            <rect x="392" y="10" width="318" height="245" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="551" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#0f172a">Shifted Curve Q(x) = P(x) &minus; R(x)</text>
+
+            <!-- Axes -->
+            <line x1="412" y1="145" x2="692" y2="145" stroke="#475569" stroke-width="1.4"
+                marker-end="url(#arr-con-axis)" />
+            <line x1="430" y1="238" x2="430" y2="44" stroke="#475569" stroke-width="1.3"
+                marker-end="url(#arr-con-axis)" />
+            <text x="696" y="149" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600"
+                fill="#475569">x</text>
+            <text x="435" y="50" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600"
+                fill="#475569">Q</text>
+
+            <!-- Cubic Q(x) = k(x-a)(x-b)(x-c) crossing x-axis at 474, 554, 634 -->
+            <path
+                d="M 452 215 C 460 190, 468 164, 474 145 C 492 88, 526 88, 554 145 C 582 202, 616 202, 634 145 C 644 114, 654 84, 664 62"
+                fill="none" stroke="#059669" stroke-width="2.6" />
+
+            <!-- Roots on x-axis -->
+            <circle cx="474" cy="145" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.2" />
+            <text x="474" y="164" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#1e293b">a</text>
+            <circle cx="554" cy="145" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.2" />
+            <text x="554" y="164" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#1e293b">b</text>
+            <circle cx="634" cy="145" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.2" />
+            <text x="634" y="164" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#1e293b">c</text>
+
+            <!-- Formula pill inside right panel -->
+            <rect x="444" y="216" width="240" height="26" rx="5" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1" />
+            <text x="564" y="233" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#065f46">Q(x) = k(x &minus; a)(x &minus; b)(x &minus; c)</text>
+        </svg>
+        <div class="diagram-caption"><strong>Figure 7.3:</strong> Geometric meaning of the Olympiad construction trick.
+            Subtracting the pattern curve $R(x)$ from $P(x)$ flattens the intersection points $(a, R(a)), (b, R(b)), (c,
+            R(c))$ directly onto the $x$-axis as exact zeroes of $Q(x)$, triggering the Factor Theorem immediately.
+        </div>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Factoring High-Degree Polynomials &bull; Rational Root Theorem</span>
+        <p><strong>Rational Root Theorem:</strong> Let $P(x) = a_n x^n + a_{n-1}x^{n-1} + \dots + a_1 x + a_0$ be a
+            polynomial with <strong>integer coefficients</strong> ($a_n \neq 0, a_0 \neq 0$). If a reduced rational
+            number $\dfrac{p}{q}$ (with $\gcd(p, q) = 1$ and $q \gt 0$) is a root of $P(x) = 0$, then:</p>
+        $$p \mid a_0 \quad (\text{numerator divides constant term}) \qquad \text{AND} \qquad q \mid a_n \quad
+        (\text{denominator divides leading coefficient})$$
+        <p><strong>First-Principles Proof:</strong> Substitute $x = p/q$ into $P(x) = 0$ and multiply through by $q^n$:
+        </p>
+        $$a_n p^n + a_{n-1} p^{n-1} q + \dots + a_1 p q^{n-1} + a_0 q^n = 0$$
+        <ul>
+            <li>Isolating the last term gives $p\big(a_n p^{n-1} + \dots + a_1 q^{n-1}\big) = -a_0 q^n$, so $p \mid a_0
+                q^n$. Because $\gcd(p, q) = 1$, Euclid&rsquo;s Lemma forces $p \mid a_0$.</li>
+            <li>Isolating the first term gives $q\big(a_{n-1} p^{n-1} + \dots + a_0 q^{n-1}\big) = -a_n p^n$, so $q \mid
+                a_n p^n$, forcing $q \mid a_n$. $\blacksquare$</li>
+        </ul>
+        <p><strong>Fast Monic Corollary &amp; 2-Second Checks:</strong> If $P(x)$ is <em>monic</em> ($a_n = 1$), any
+            rational root MUST be an <strong>integer dividing $a_0$</strong>. Before testing divisors, always run two
+            instant mental checks:</p>
+        <ul>
+            <li><strong>Test $x = 1$:</strong> $x = 1$ is a root $\iff$ sum of all coefficients $= 0$ ($a_n + a_{n-1} +
+                \dots + a_0 = 0$).</li>
+            <li><strong>Test $x = -1$:</strong> $x = -1$ is a root $\iff$ sum of even-power coefficients $=$ sum of
+                odd-power coefficients.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== SECTION 7: FORMULA VAULT ==================== -->
+    <h2 class="section-heading">7.7 High-Density Formula Vault</h2>
+
+    <div class="formula-vault">
+        <span class="box-label">Master Quick-Revision Vault &bull; Chapter 7</span>
+        <ul>
+            <li><strong>Zero Multiplicity &amp; End-Behavior:</strong> Odd multiplicity $m$ $\implies$ crosses $x$-axis
+                (sign flips); even $m$ $\implies$ touches/bounces (sign preserved). Right end ($x \to +\infty$) matches
+                sign of $a_n$; left end matches right end for even $n$ and opposes it for odd $n$.</li>
+            <li><strong>Division &amp; Remainders:</strong> $P(x) = D(x)Q(x) + R(x)$ with $\deg R \lt \deg D$. Linear
+                divisor $(ax - b) \implies R = P(b/a)$. Quadratic divisor $(x - \alpha)(x - \beta) \implies R(x) = ax +
+                b$ fixed by $R(\alpha) = P(\alpha),\; R(\beta) = P(\beta)$.</li>
+            <li><strong>Vieta&rsquo;s Formulas (Alternating $-, +, -, +$):</strong>
+                $$\text{Cubic } ax^3 + bx^2 + cx + d = 0: \quad \sum \alpha = -\frac{b}{a}, \quad \sum \alpha\beta =
+                \frac{c}{a}, \quad \alpha\beta\gamma = -\frac{d}{a}$$
+                $$\text{Quartic } ax^4 + bx^3 + cx^2 + dx + e = 0: \quad \sum \alpha = -\frac{b}{a}, \quad \sum
+                \alpha\beta = \frac{c}{a}, \quad \sum \alpha\beta\gamma = -\frac{d}{a}, \quad \alpha\beta\gamma\delta =
+                \frac{e}{a}$$</li>
+            <li><strong>Newton&rsquo;s Sums ($S_n = \sum \alpha_i^n$):</strong>
+                $$\text{Quadratic: } aS_n + bS_{n-1} + cS_{n-2} = 0 \; (S_0 = 2); \qquad \text{Cubic: } aS_n + bS_{n-1}
+                + cS_{n-2} + dS_{n-3} = 0 \; (S_0 = 3)$$
+                Quadratic doubling shortcuts ($p = \alpha\beta$): $S_{2k} = S_k^2 - 2p^k$ and $S_{3k} = S_k^3 - 3p^k
+                S_k$.</li>
+            <li><strong>10-Second Transformations of $P(x) = 0$:</strong>
+                $$-\alpha \to P(-y) = 0; \qquad k\alpha \to P(y/k) = 0; \qquad \alpha + k \to P(y - k) = 0; \qquad
+                1/\alpha \to y^n P(1/y) = 0 \text{ (reverse coeffs)}$$
+                $$\alpha^2 \to \text{split even/odd powers of } x, \text{ square both sides, replace } x^2 = y$$</li>
+            <li><strong>Olympiad Construction &amp; Rational Roots:</strong> If $P(a_i) = R(a_i)$ for $i = 1,\dots,n$
+                ($\deg P = n \gt \deg R$), then $P(x) = k\prod_{i=1}^n (x - a_i) + R(x)$. If $P(p/q) = 0$ (integer
+                coeffs, $\gcd(p,q)=1$), then $p \mid a_0$ and $q \mid a_n$.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== SECTION 8: WORKED EXAMPLES ==================== -->
+    <h2 class="section-heading">7.8 Graded Worked Examples Arena</h2>
+
+    <!-- LEVEL 1 -->
+    <div class="level-banner l1">LEVEL 1 &bull; WARMUP &amp; CONCEPT CONSOLIDATION (FOUNDATION ACCURACY)</div>
+
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1 &bull; Warmup</span>
+            <span class="badge badge-type">Example 1 &bull; Multiplicity, Graph Reconstruction &amp; End Behavior</span>
+        </div>
+        <div class="ex-problem">
+            <p>A real polynomial $P(x)$ of the <strong>minimum possible degree</strong> has a graph that crosses the
+                $x$-axis cleanly (non-zero slope) at $x = -3$ and $x = 4$, touches the $x$-axis without crossing at $x =
+                2$, and passes through the $y$-intercept $(0, 24)$.</p>
+            <p>(a) Determine the explicit factored formula for $P(x)$ and its leading coefficient.<br />
+                (b) Describe its end behavior as $x \to \pm\infty$ and compute $P(1)$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a):</strong> Match each geometric feature to its minimum allowable root multiplicity:</p>
+            <ul>
+                <li>Clean crossing at $x = -3 \implies$ odd multiplicity $m = 1 \implies$ factor $(x + 3)^1$.</li>
+                <li>Touch without crossing at $x = 2 \implies$ even multiplicity $m = 2 \implies$ factor $(x - 2)^2$.
+                </li>
+                <li>Clean crossing at $x = 4 \implies$ odd multiplicity $m = 1 \implies$ factor $(x - 4)^1$.</li>
+            </ul>
+            <p>Thus the minimum possible degree is $1 + 2 + 1 = 4$, and $P(x)$ takes the form:</p>
+            $$P(x) = A(x + 3)(x - 2)^2(x - 4)$$
+            <p>Use the $y$-intercept condition $P(0) = 24$ to pin down the leading coefficient $A$:</p>
+            $$P(0) = A(0 + 3)(0 - 2)^2(0 - 4) = A(3)(4)(-4) = -48A = 24 \implies A = -\frac{24}{48} = -\frac{1}{2}$$
+            <p>Therefore, the exact polynomial is $\mathbf{P(x) = -\dfrac{1}{2}(x + 3)(x - 2)^2(x - 4)}$, with leading
+                coefficient $\mathbf{-\dfrac{1}{2}}$.</p>
+            <p><strong>Part (b):</strong> The leading term is $-\dfrac{1}{2}x^4$. Since the degree $n = 4$ is
+                <em>even</em> and the leading coefficient is <em>negative</em>, <strong>both ends fall</strong>: as $x
+                \to -\infty$ and as $x \to +\infty$, $P(x) \to -\infty$.
+            </p>
+            <p>Evaluating at $x = 1$:</p>
+            $$P(1) = -\frac{1}{2}(1 + 3)(1 - 2)^2(1 - 4) = -\frac{1}{2}(4)(1)(-3) = \mathbf{6}$$
+        </div>
+    </div>
+
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1 &bull; Warmup</span>
+            <span class="badge badge-type">Example 2 &bull; Remainder Theorem with Quadratic Divisor</span>
+        </div>
+        <div class="ex-problem">
+            <p>When a polynomial $P(x)$ is divided by $(x - 2)$, the remainder is $7$; when divided by $(x + 3)$, the
+                remainder is $-8$. Find the exact remainder when $P(x)$ is divided by $x^2 + x - 6$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; Factor the Quadratic Divisor and Set Up the Division Algorithm:</strong></p>
+            $$x^2 + x - 6 = (x - 2)(x + 3)$$
+            <p>Since the divisor has degree $2$, the remainder $R(x)$ must have degree at most $1$, so write $R(x) = ax
+                + b$:</p>
+            $$P(x) = (x - 2)(x + 3)Q(x) + (ax + b)$$
+            <p><strong>Step 2 &mdash; Apply the Remainder Theorem at Both Roots of the Divisor:</strong></p>
+            <ul>
+                <li>From division by $(x - 2)$: $P(2) = 7 \implies (0)Q(2) + 2a + b = 7 \implies 2a + b = 7$
+                    &nbsp;&hellip;(1)</li>
+                <li>From division by $(x + 3)$: $P(-3) = -8 \implies (0)Q(-3) - 3a + b = -8 \implies -3a + b = -8$
+                    &nbsp;&hellip;(2)</li>
+            </ul>
+            <p><strong>Step 3 &mdash; Solve for $a$ and $b$:</strong> Subtract (2) from (1):</p>
+            $$(2a + b) - (-3a + b) = 7 - (-8) \implies 5a = 15 \implies a = 3$$
+            <p>Substitute $a = 3$ into (1): $2(3) + b = 7 \implies b = 1$.</p>
+            <p>Check: $R(2) = 3(2) + 1 = 7$ and $R(-3) = 3(-3) + 1 = -8$. Hence the exact remainder is $\mathbf{3x +
+                1}$.</p>
+        </div>
+    </div>
+
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1 &bull; Warmup</span>
+            <span class="badge badge-type">Example 3 &bull; Quadratic Vieta&rsquo;s Formulas &amp; Symmetric
+                Functions</span>
+        </div>
+        <div class="ex-problem">
+            <p>Let $\alpha$ and $\beta$ be the zeroes of $f(x) = 2x^2 - 5x + 1$. Without solving for $\alpha$ and
+                $\beta$, compute the exact values of:</p>
+            <p>(a) $\alpha^2 + \beta^2$, &nbsp;&nbsp;(b) $\alpha^3 + \beta^3$, &nbsp;&nbsp;(c) $\dfrac{1}{\alpha^2} +
+                \dfrac{1}{\beta^2}$.</p>
+        </div>
+        <div class="ex-solution">
+            <p>From $2x^2 - 5x + 1 = 0$ (here $a = 2, b = -5, c = 1$; note $\Delta = 25 - 8 = 17 \gt 0$ and $c \neq 0$,
+                so both roots are distinct, real, and non-zero), Vieta&rsquo;s formulas give:</p>
+            $$s = \alpha + \beta = -\frac{-5}{2} = \frac{5}{2}, \qquad p = \alpha\beta = \frac{1}{2}$$
+            <ol>
+                <li><strong>Compute $\alpha^2 + \beta^2$:</strong>
+                    $$\alpha^2 + \beta^2 = (\alpha + \beta)^2 - 2\alpha\beta = \left(\frac{5}{2}\right)^2 -
+                    2\left(\frac{1}{2}\right) = \frac{25}{4} - 1 = \mathbf{\frac{21}{4}}$$</li>
+                <li><strong>Compute $\alpha^3 + \beta^3$:</strong>
+                    $$\alpha^3 + \beta^3 = (\alpha + \beta)^3 - 3\alpha\beta(\alpha + \beta) =
+                    \left(\frac{5}{2}\right)^3 - 3\left(\frac{1}{2}\right)\left(\frac{5}{2}\right) = \frac{125}{8} -
+                    \frac{15}{4} = \frac{125 - 30}{8} = \mathbf{\frac{95}{8}}$$</li>
+                <li><strong>Compute $\dfrac{1}{\alpha^2} + \dfrac{1}{\beta^2}$:</strong> Combine over the common
+                    denominator $(\alpha\beta)^2$:
+                    $$\frac{1}{\alpha^2} + \frac{1}{\beta^2} = \frac{\alpha^2 + \beta^2}{(\alpha\beta)^2} =
+                    \frac{21/4}{(1/2)^2} = \frac{21/4}{1/4} = \mathbf{21}$$</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- LEVEL 2 -->
+    <div class="level-banner l2">LEVEL 2 &bull; BEST EXAM-REAL APPLICATIONS (STANDARD SELECTION BENCHMARK)</div>
+
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2 &bull; Exam-Real</span>
+            <span class="badge badge-type">Example 4 &bull; Cubic Vieta&rsquo;s Formulas &amp; Power Sums</span>
+        </div>
+        <div class="ex-problem">
+            <p>Let $\alpha, \beta, \gamma$ be the roots of the cubic equation $x^3 - 4x^2 + 5x - 3 = 0$. Compute the
+                exact numerical values of:</p>
+            <p>(a) $\alpha^2 + \beta^2 + \gamma^2$, &nbsp;&nbsp;(b) $\dfrac{1}{\alpha} + \dfrac{1}{\beta} +
+                \dfrac{1}{\gamma}$, &nbsp;&nbsp;(c) $\alpha^3 + \beta^3 + \gamma^3$.</p>
+        </div>
+        <div class="ex-solution">
+            <p>Reading the coefficients $a = 1, b = -4, c = 5, d = -3$ with alternating signs $(-, +, -)$ gives
+                Vieta&rsquo;s elementary symmetric sums:</p>
+            $$e_1 = \alpha + \beta + \gamma = 4, \qquad e_2 = \alpha\beta + \beta\gamma + \gamma\alpha = 5, \qquad e_3 =
+            \alpha\beta\gamma = 3$$
+            <p>(Since $e_3 = 3 \neq 0$, none of the roots is zero, so all reciprocals are well-defined.)</p>
+            <ol>
+                <li><strong>Sum of squares:</strong>
+                    $$\alpha^2 + \beta^2 + \gamma^2 = e_1^2 - 2e_2 = 4^2 - 2(5) = 16 - 10 = \mathbf{6}$$</li>
+                <li><strong>Sum of reciprocals:</strong>
+                    $$\frac{1}{\alpha} + \frac{1}{\beta} + \frac{1}{\gamma} = \frac{\beta\gamma + \gamma\alpha +
+                    \alpha\beta}{\alpha\beta\gamma} = \frac{e_2}{e_3} = \mathbf{\frac{5}{3}}$$</li>
+                <li><strong>Sum of cubes (Direct Equation-Substitution / Newton&rsquo;s Method):</strong> Because each
+                    root satisfies $x^3 = 4x^2 - 5x + 3$, substitute $x = \alpha, \beta, \gamma$ and add all three
+                    equations together:
+                    $$(\alpha^3 + \beta^3 + \gamma^3) = 4(\alpha^2 + \beta^2 + \gamma^2) - 5(\alpha + \beta + \gamma) +
+                    (3 + 3 + 3)$$
+                    $$\alpha^3 + \beta^3 + \gamma^3 = 4(6) - 5(4) + 9 = 24 - 20 + 9 = \mathbf{13}$$
+                    <em>Cross-check via identity:</em> $e_1(e_1^2 - 3e_2) + 3e_3 = 4(16 - 15) + 3(3) = 4 + 9 = 13$.
+                    Matches identically!
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2 &bull; Exam-Real</span>
+            <span class="badge badge-type">Example 5 &bull; Transformation of Equations via Substitution</span>
+        </div>
+        <div class="ex-problem">
+            <p>If $\alpha, \beta, \gamma$ are the roots of $x^3 - 2x^2 + 4x - 5 = 0$, find the monic cubic equations (in
+                variable $y$) whose roots are:</p>
+            <p>(a) $\alpha + 2,\; \beta + 2,\; \gamma + 2$, &nbsp;&nbsp;(b) $\dfrac{1}{\alpha},\; \dfrac{1}{\beta},\;
+                \dfrac{1}{\gamma}$, &nbsp;&nbsp;(c) $\alpha^2,\; \beta^2,\; \gamma^2$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) &mdash; Shift Transformation ($y = x + 2 \implies x = y - 2$):</strong> Substitute $x =
+                y - 2$ directly into $x^3 - 2x^2 + 4x - 5 = 0$:</p>
+            $$(y - 2)^3 - 2(y - 2)^2 + 4(y - 2) - 5 = 0$$
+            $$(y^3 - 6y^2 + 12y - 8) - 2(y^2 - 4y + 4) + (4y - 8) - 5 = 0$$
+            $$y^3 + (-6 - 2)y^2 + (12 + 8 + 4)y + (-8 - 8 - 8 - 5) = 0 \implies \mathbf{y^3 - 8y^2 + 24y - 29 = 0}$$
+
+            <p><strong>Part (b) &mdash; Reciprocal Transformation ($y = 1/x \implies x = 1/y$):</strong> Since $x = 0$
+                is not a root ($-5 \neq 0$), substitute $x = 1/y$:</p>
+            $$\frac{1}{y^3} - \frac{2}{y^2} + \frac{4}{y} - 5 = 0$$
+            <p>Multiply through by $-y^3$ (reversing coefficients): $5y^3 - 4y^2 + 2y - 1 = 0$. Dividing by $5$ for
+                monic form:</p>
+            $$\mathbf{y^3 - \frac{4}{5}y^2 + \frac{2}{5}y - \frac{1}{5} = 0}$$
+
+            <p><strong>Part (c) &mdash; Squaring Transformation ($y = x^2$):</strong> Isolate odd powers of $x$ on the
+                left and even powers on the right <em>before</em> squaring:</p>
+            $$x^3 + 4x = 2x^2 + 5 \implies x(x^2 + 4) = 2x^2 + 5$$
+            <p>Square both sides to eliminate the lone factor of $x$:</p>
+            $$x^2(x^2 + 4)^2 = (2x^2 + 5)^2$$
+            <p>Now substitute $x^2 = y$ cleanly:</p>
+            $$y(y + 4)^2 = (2y + 5)^2 \implies y(y^2 + 8y + 16) = 4y^2 + 20y + 25$$
+            $$y^3 + 8y^2 + 16y - 4y^2 - 20y - 25 = 0 \implies \mathbf{y^3 + 4y^2 - 4y - 25 = 0}$$
+            <p><em>Quick Vieta Check for (c):</em> $\sum \alpha^2 = 2^2 - 2(4) = -4$ (coeff of $y^2$ is $+4$), and
+                $\alpha^2\beta^2\gamma^2 = 5^2 = 25$ (constant is $-25$). Confirmed!</p>
+        </div>
+    </div>
+
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2 &bull; Exam-Real</span>
+            <span class="badge badge-type">Example 6 &bull; Rational Root Theorem &amp; Quartic Factorization</span>
+        </div>
+        <div class="ex-problem">
+            <p>Use the Rational Root Theorem to completely factor the quartic polynomial $P(x) = 2x^4 - 3x^3 - 12x^2 +
+                7x + 6$ over $\mathbb{Q}$, and list all four real roots.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; List Candidate Rational Roots $p/q$:</strong> Here $a_0 = 6$ (divisors $p \in
+                \{\pm 1, \pm 2, \pm 3, \pm 6\}$) and $a_4 = 2$ (divisors $q \in \{1, 2\}$). Thus every rational root
+                lies in $\left\{\pm 1, \pm 2, \pm 3, \pm 6, \pm \frac{1}{2}, \pm \frac{3}{2}\right\}$.</p>
+            <p><strong>Step 2 &mdash; Run the Instant $x = 1$ Check:</strong> Sum of coefficients $= 2 - 3 - 12 + 7 + 6
+                = 0$. Therefore $x = 1$ is a root, and $(x - 1)$ is an exact factor! Dividing $P(x)$ by $(x - 1)$:</p>
+            $$2x^4 - 3x^3 - 12x^2 + 7x + 6 = (x - 1)(2x^3 - x^2 - 13x - 6)$$
+            <p><strong>Step 3 &mdash; Factor the Depressed Cubic $Q(x) = 2x^3 - x^2 - 13x - 6$:</strong> Check small
+                integers:</p>
+            <ul>
+                <li>$Q(1) = 2 - 1 - 13 - 6 = -18 \neq 0$; &nbsp; $Q(-1) = -2 - 1 + 13 - 6 = 4 \neq 0$.</li>
+                <li>$Q(-2) = 2(-8) - (-2)^2 - 13(-2) - 6 = -16 - 4 + 26 - 6 = 0$!</li>
+            </ul>
+            <p>Hence $(x + 2)$ divides $Q(x)$. Dividing $Q(x)$ by $(x + 2)$ leaves a simple quadratic:</p>
+            $$2x^3 - x^2 - 13x - 6 = (x + 2)(2x^2 - 5x - 3)$$
+            <p><strong>Step 4 &mdash; Factor the Quadratic:</strong> Splitting the middle term ($-5 = -6 + 1$):</p>
+            $$2x^2 - 5x - 3 = 2x^2 - 6x + x - 3 = 2x(x - 3) + 1(x - 3) = (2x + 1)(x - 3)$$
+            <p>Therefore, the complete factorization is $\mathbf{P(x) = (x - 1)(x + 2)(x - 3)(2x + 1)}$, and the four
+                real roots are $\mathbf{x \in \left\{-2,\; -\dfrac{1}{2},\; 1,\; 3\right\}}$.</p>
+        </div>
+    </div>
+
+    <!-- LEVEL 3 -->
+    <div class="level-banner l3">LEVEL 3 &bull; RANK-BOOSTER &amp; OLYMPIAD BRIDGE (FULL DERIVATION + 30-SECOND
+        SHORTCUT)</div>
+
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3 &bull; Rank-Booster</span>
+            <span class="badge badge-type">Example 7 &bull; Newton&rsquo;s Sums Recurrence for High Powers</span>
+        </div>
+        <div class="ex-problem">
+            <p>Let $\alpha$ and $\beta$ be the roots of $x^2 - 3x + 1 = 0$, and define $S_n = \alpha^n + \beta^n$ for
+                integers $n \ge 0$. Find the exact integer value of $S_6 = \alpha^6 + \beta^6$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation (Newton&rsquo;s Sums Recurrence):</strong></p>
+            <ol>
+                <li>Since $\alpha$ and $\beta$ are roots of $x^2 - 3x + 1 = 0$, we have $x^2 = 3x - 1$. Multiplying by
+                    $x^{n-2}$ (for $n \ge 2$) yields $x^n = 3x^{n-1} - x^{n-2}$.</li>
+                <li>Summing this identity over $x = \alpha$ and $x = \beta$ produces the linear recurrence:
+                    $$S_n = 3S_{n-1} - S_{n-2}$$</li>
+                <li>Establish the two seed values directly from Vieta&rsquo;s formulas:
+                    $$S_0 = \alpha^0 + \beta^0 = 1 + 1 = 2, \qquad S_1 = \alpha + \beta = 3$$</li>
+                <li>Climb the recurrence ladder step-by-step up to $S_6$:
+                    $$S_2 = 3S_1 - S_0 = 3(3) - 2 = 7$$
+                    $$S_3 = 3S_2 - S_1 = 3(7) - 3 = 18$$
+                    $$S_4 = 3S_3 - S_2 = 3(18) - 7 = 54 - 7 = 47$$
+                    $$S_5 = 3S_4 - S_3 = 3(47) - 18 = 141 - 18 = 123$$
+                    $$S_6 = 3S_5 - S_4 = 3(123) - 47 = 369 - 47 = \mathbf{322}$$</li>
+            </ol>
+            <div class="shortcut-box">
+                <strong>30-Second Exam Shortcut (Doubling Jump):</strong> Since $p = \alpha\beta = 1$, don&rsquo;t climb
+                one step at a time! Jump straight $S_1 \to S_3 \to S_6$: first $S_3 = S_1^3 - 3pS_1 = 3^3 - 3(1)(3) =
+                18$. Then square it: $S_6 = \alpha^6 + \beta^6 = (\alpha^3 + \beta^3)^2 - 2(\alpha\beta)^3 = S_3^2 -
+                2(1)^3 = 18^2 - 2 = 324 - 2 = \mathbf{322}$ in 10 seconds flat!
+            </div>
+        </div>
+    </div>
+
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3 &bull; Rank-Booster</span>
+            <span class="badge badge-type">Example 8 &bull; Olympiad Polynomial Construction (Linear Pattern)</span>
+        </div>
+        <div class="ex-problem">
+            <p>Let $P(x)$ be a monic polynomial of degree $4$ satisfying $P(1) = 3$, $P(2) = 5$, $P(3) = 7$, and $P(4) =
+                9$. Find the exact integer value of $P(5) + P(0)$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <ol>
+                <li><strong>Identify the Pattern $R(x)$:</strong> Inspect the input-output pairs $(1, 3), (2, 5), (3,
+                    7), (4, 9)$. Every output satisfies the exact linear formula $R(x) = 2x + 1$.</li>
+                <li><strong>Construct the Auxiliary Polynomial $Q(x)$:</strong> Define $Q(x) = P(x) - (2x + 1)$.
+                    <ul>
+                        <li>Because $P(x)$ is monic of degree $4$ and $2x + 1$ has degree $1$, $Q(x)$ is also a
+                            <strong>monic polynomial of degree $4$</strong>.
+                        </li>
+                        <li>Evaluating at $x = 1, 2, 3, 4$ gives $Q(1) = Q(2) = Q(3) = Q(4) = 0$.</li>
+                    </ul>
+                </li>
+                <li><strong>Apply the Factor Theorem:</strong> Having four distinct roots and leading coefficient $1$,
+                    $Q(x)$ is uniquely determined as:
+                    $$Q(x) = (x - 1)(x - 2)(x - 3)(x - 4)$$
+                    Therefore, for every real number $x$:
+                    $$P(x) = (x - 1)(x - 2)(x - 3)(x - 4) + (2x + 1)$$</li>
+                <li><strong>Evaluate $P(5)$ and $P(0)$:</strong>
+                    $$P(5) = (5 - 1)(5 - 2)(5 - 3)(5 - 4) + (2(5) + 1) = (4)(3)(2)(1) + 11 = 24 + 11 = 35$$
+                    $$P(0) = (0 - 1)(0 - 2)(0 - 3)(0 - 4) + (2(0) + 1) = (-1)(-2)(-3)(-4) + 1 = 24 + 1 = 25$$
+                    Adding both values yields:
+                    $$P(5) + P(0) = 35 + 25 = \mathbf{60}$$</li>
+            </ol>
+            <div class="shortcut-box">
+                <strong>30-Second Exam Shortcut (Endpoint Factorial Symmetry):</strong> Whenever a monic degree-$n$
+                polynomial matches a pattern $R(x)$ on consecutive integers $\{1, 2, \dots, n\}$, the product term at $x
+                = n + 1$ is always $+n!$, and at $x = 0$ is always $(-1)^n n!$. Here $n = 4$ (even), so both product
+                terms equal $+4! = 24$, immediately giving $P(5) + P(0) = 2(24) + R(5) + R(0) = 48 + 11 + 1 =
+                \mathbf{60}$!
+            </div>
+        </div>
+    </div>
+
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3 &bull; Rank-Booster</span>
+            <span class="badge badge-type">Example 9 &bull; IOQM Classic: Reciprocal Pattern $P(k) = 1/k$</span>
+        </div>
+        <div class="ex-problem">
+            <p>Let $P(x)$ be a polynomial of degree $3$ such that $P(1) = 1$, $P(2) = \dfrac{1}{2}$, $P(3) =
+                \dfrac{1}{3}$, and $P(4) = \dfrac{1}{4}$. Determine the exact values of $P(5)$ and $P(6)$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <ol>
+                <li><strong>Clear the Non-Polynomial Denominator:</strong> Notice that $P(k) = \dfrac{1}{k}$ cannot be
+                    written as $P(x) - \dfrac{1}{x}$ because $\dfrac{1}{x}$ is not a polynomial. Instead, multiply by
+                    $x$ and define the auxiliary polynomial:
+                    $$H(x) = x P(x) - 1$$</li>
+                <li><strong>Determine the Degree and Roots of $H(x)$:</strong> Since $\deg P(x) = 3$, multiplying by $x$
+                    raises the degree to $\deg H(x) = 4$. Testing the four given points:
+                    $$H(1) = 1\cdot 1 - 1 = 0, \quad H(2) = 2\cdot\frac{1}{2} - 1 = 0, \quad H(3) = 3\cdot\frac{1}{3} -
+                    1 = 0, \quad H(4) = 4\cdot\frac{1}{4} - 1 = 0$$
+                    Thus $H(x)$ is a degree-$4$ polynomial with four distinct roots $1, 2, 3, 4$. By the Factor Theorem,
+                    there exists a non-zero constant $k$ such that:
+                    $$x P(x) - 1 = k(x - 1)(x - 2)(x - 3)(x - 4)$$</li>
+                <li><strong>Pin Down $k$ by Annihilating $x P(x)$ at $x = 0$:</strong> Substitute $x = 0$ into the
+                    identity:
+                    $$0 \cdot P(0) - 1 = k(-1)(-2)(-3)(-4) \implies -1 = 24k \implies k = -\frac{1}{24}$$</li>
+                <li><strong>Evaluate at $x = 5$ and $x = 6$:</strong>
+                    <ul>
+                        <li>At $x = 5$: $5 P(5) - 1 = -\dfrac{1}{24}(4)(3)(2)(1) = -\dfrac{24}{24} = -1 \implies 5 P(5)
+                            = 0 \implies \mathbf{P(5) = 0}$.</li>
+                        <li>At $x = 6$: $6 P(6) - 1 = -\dfrac{1}{24}(5)(4)(3)(2) = -\dfrac{120}{24} = -5 \implies 6 P(6)
+                            = -4 \implies \mathbf{P(6) = -\dfrac{2}{3}}$.</li>
+                    </ul>
+                </li>
+            </ol>
+            <div class="shortcut-box">
+                <strong>30-Second Exam Shortcut (Universal $P(k) = 1/k$ Theorem):</strong> Whenever a polynomial $P(x)$
+                of degree $n$ satisfies $P(k) = \dfrac{1}{k}$ for $k = 1, 2, \dots, n+1$, the exact next value $P(n +
+                2)$ obeys a famous parity law:
+                $$P(n + 2) = \begin{cases} \mathbf{0}, & \text{if } n \text{ is odd} \\ \mathbf{\dfrac{2}{n + 2}}, &
+                \text{if } n \text{ is even} \end{cases}$$
+                Here $n = 3$ is odd, so $P(5) = \mathbf{0}$ instantaneously! (And for $x = n + 3 = 6$, $(n+2)$ factorial
+                ratio gives $6 P(6) - 1 = -(n+2) = -5 \implies P(6) = -2/3$.)
+            </div>
+        </div>
+    </div>
+
+</article>

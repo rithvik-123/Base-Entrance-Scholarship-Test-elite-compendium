@@ -1,0 +1,1161 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 8: Pair of Linear Equations & Consistency Traps">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 2: Mathematics (Paper 1) &bull; Part 1: Theory &amp; Worked Examples &bull;
+            Target Study Time: 5 Hours</div>
+        <h1>Chapter 8: Pair of Linear Equations &amp; Consistency Traps</h1>
+        <p>From graphical geometry and determinant-based consistency forensics to symmetric reductions, coordinate-axis
+            polygons, homogeneous 3-variable elimination, and Olympiad-grade Linear Diophantine Equations.</p>
+        <div class="tag-row">
+            <span class="meta-pill">Zero-Coefficient Traps</span>
+            <span class="meta-pill">2&times;2 Cramer&rsquo;s Rule</span>
+            <span class="meta-pill">Symmetric &amp; Reducible Systems</span>
+            <span class="meta-pill">Coordinate Polygon Areas</span>
+            <span class="meta-pill">Linear Diophantine Bridge</span>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 1: GRAPHICAL REPRESENTATION & CONSISTENCY TRAPS               -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">1. Graphical Representation, Consistency &amp; The Zero-Coefficient Trap</h2>
+
+    <p>A <strong>pair of linear equations in two variables</strong> $x$ and $y$ over $\mathbb{R}$ is written in standard
+        form as:</p>
+    $$a_1 x + b_1 y + c_1 = 0 \qquad (a_1^2 + b_1^2 \neq 0)$$
+    $$a_2 x + b_2 y + c_2 = 0 \qquad (a_2^2 + b_2^2 \neq 0)$$
+    <p>The non-degeneracy condition $a_i^2 + b_i^2 \neq 0$ simply guarantees that $a_i$ and $b_i$ are not
+        <em>simultaneously</em> zero, so each equation represents a genuine straight line in the Cartesian plane
+        $\mathbb{R}^2$. A pair $(x_0, y_0)$ is a <strong>solution</strong> of the system if and only if the point $(x_0,
+        y_0)$ lies on both lines simultaneously.
+    </p>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 780 250" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Three graphical states of a pair of linear equations: intersecting, parallel, and coincident">
+            <defs>
+                <marker id="axisArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+                </marker>
+            </defs>
+
+            <!-- Panel 1: Intersecting -->
+            <rect x="10" y="10" width="240" height="230" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="130" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">1. Intersecting
+                (Unique)</text>
+            <!-- Axes -->
+            <line x1="30" y1="145" x2="235" y2="145" stroke="#475569" stroke-width="1.2" marker-end="url(#axisArrow)" />
+            <line x1="110" y1="220" x2="110" y2="42" stroke="#475569" stroke-width="1.2" marker-end="url(#axisArrow)" />
+            <text x="236" y="140" font-size="10" fill="#475569">x</text>
+            <text x="115" y="48" font-size="10" fill="#475569">y</text>
+            <!-- L1: x + y = 4 -->
+            <line x1="88" y1="45" x2="215" y2="172" stroke="#2563eb" stroke-width="2.2" />
+            <!-- L2: x - y = 2 -->
+            <line x1="88" y1="211" x2="220" y2="79" stroke="#dc2626" stroke-width="2.2" />
+            <!-- Intersection (3,1) -> (176, 123) -->
+            <circle cx="176" cy="123" r="4.5" fill="#0f172a" stroke="#ffffff" stroke-width="1.5" />
+            <text x="184" y="121" font-size="10.5" font-weight="700" fill="#0f172a">P(3, 1)</text>
+            <text x="122" y="70" font-size="9.5" fill="#2563eb">x + y = 4</text>
+            <text x="165" y="195" font-size="9.5" fill="#dc2626">x &minus; y = 2</text>
+            <text x="130" y="232" text-anchor="middle" font-size="10.5" font-weight="600" fill="#15803d">Consistent
+                &bull; &Delta; &ne; 0</text>
+
+            <!-- Panel 2: Parallel -->
+            <rect x="270" y="10" width="240" height="230" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="390" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">2. Parallel (No
+                Solution)</text>
+            <!-- Axes -->
+            <line x1="290" y1="145" x2="495" y2="145" stroke="#475569" stroke-width="1.2"
+                marker-end="url(#axisArrow)" />
+            <line x1="360" y1="220" x2="360" y2="42" stroke="#475569" stroke-width="1.2" marker-end="url(#axisArrow)" />
+            <text x="496" y="140" font-size="10" fill="#475569">x</text>
+            <text x="365" y="48" font-size="10" fill="#475569">y</text>
+            <!-- L1: x + 2y = 4 -->
+            <line x1="316" y1="79" x2="492" y2="167" stroke="#2563eb" stroke-width="2.2" />
+            <!-- L2: 2x + 4y = 2 -->
+            <line x1="316" y1="112" x2="492" y2="200" stroke="#dc2626" stroke-width="2.2" />
+            <text x="408" y="106" font-size="9.5" fill="#2563eb">x + 2y = 4</text>
+            <text x="395" y="186" font-size="9.5" fill="#dc2626">2x + 4y = 2</text>
+            <text x="390" y="232" text-anchor="middle" font-size="10.5" font-weight="600" fill="#b91c1c">Inconsistent
+                &bull; &Delta; = 0</text>
+
+            <!-- Panel 3: Coincident -->
+            <rect x="530" y="10" width="240" height="230" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="650" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">3. Coincident
+                (Infinite)</text>
+            <!-- Axes -->
+            <line x1="550" y1="145" x2="755" y2="145" stroke="#475569" stroke-width="1.2"
+                marker-end="url(#axisArrow)" />
+            <line x1="630" y1="220" x2="630" y2="42" stroke="#475569" stroke-width="1.2" marker-end="url(#axisArrow)" />
+            <text x="756" y="140" font-size="10" fill="#475569">x</text>
+            <text x="635" y="48" font-size="10" fill="#475569">y</text>
+            <!-- L1 & L2 overlapping: x - y = 1 and 2x - 2y = 2 -->
+            <line x1="586" y1="211" x2="740" y2="57" stroke="#2563eb" stroke-width="4.2" />
+            <line x1="586" y1="211" x2="740" y2="57" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,5" />
+            <text x="680" y="152" font-size="9.5" fill="#2563eb">x &minus; y = 1</text>
+            <text x="674" y="166" font-size="9.5" fill="#b45309">2x &minus; 2y = 2</text>
+            <text x="650" y="232" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1d4ed8">Dependent
+                Consistent &bull; &Delta; = 0</text>
+        </svg>
+        <div class="diagram-caption">Figure 8.1: The three exhaustive geometric configurations of two straight lines in
+            $\mathbb{R}^2$. Both parallel and coincident systems share the vanishing determinant $\Delta = a_1 b_2 - a_2
+            b_1 = 0$.</div>
+    </div>
+
+    <h3>1.1 First-Principles Derivation of Consistency Conditions</h3>
+    <p>Eliminate $y$ by multiplying the first equation by $b_2$ and the second by $b_1$, then subtracting:</p>
+    $$(a_1 b_2 - a_2 b_1)x = b_1 c_2 - b_2 c_1$$
+    <p>Similarly, eliminate $x$ by multiplying the first by $a_2$ and the second by $a_1$, then subtracting:</p>
+    $$(a_1 b_2 - a_2 b_1)y = c_1 a_2 - c_2 a_1$$
+    <p>Define the three fundamental $2 \times 2$ <strong>determinants</strong> (keeping $c_1, c_2$ on the <em>left-hand
+            side</em> as $a_i x + b_i y + c_i = 0$):</p>
+    $$\Delta = a_1 b_2 - a_2 b_1, \qquad D_x = b_1 c_2 - b_2 c_1, \qquad D_y = c_1 a_2 - c_2 a_1$$
+    <p>This gives the exact linear identities $\Delta \cdot x = D_x$ and $\Delta \cdot y = D_y$. Every consistency
+        theorem follows rigorously from these two equations&mdash;without ever dividing by a potentially zero
+        coefficient:</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Geometric State</th>
+                <th>Consistency Label</th>
+                <th>Exact Determinant Criterion (Always Valid)</th>
+                <th>Ratio Form (Valid ONLY if $a_2, b_2, c_2 \neq 0$)</th>
+                <th>Number of Solutions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Intersecting Lines</strong></td>
+                <td>Consistent &amp; Independent</td>
+                <td>$\Delta = a_1 b_2 - a_2 b_1 \neq 0$</td>
+                <td>$\dfrac{a_1}{a_2} \neq \dfrac{b_1}{b_2}$</td>
+                <td>Exactly $1$</td>
+            </tr>
+            <tr>
+                <td><strong>Parallel Distinct Lines</strong></td>
+                <td>Inconsistent</td>
+                <td>$\Delta = 0$ AND at least one of $D_x \neq 0$ or $D_y \neq 0$</td>
+                <td>$\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} \neq \dfrac{c_1}{c_2}$</td>
+                <td>$0$ (No solution)</td>
+            </tr>
+            <tr>
+                <td><strong>Coincident Lines</strong></td>
+                <td>Consistent &amp; Dependent</td>
+                <td>$\Delta = 0$, $D_x = 0$, AND $D_y = 0$ (assuming $a_i^2+b_i^2 \neq 0$)</td>
+                <td>$\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} = \dfrac{c_1}{c_2}$</td>
+                <td>Infinitely many</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <span class="box-label">Critical Warning &mdash; The Deadly Zero-Coefficient Trap</span>
+        <p>In NCERT Level 1 questions, coefficients are nonzero numbers, so students memorize $\frac{a_1}{a_2} =
+            \frac{b_1}{b_2} \neq \frac{c_1}{c_2}$ mechanically. In BEST, NTSE Stage 2, and PRMO-lite exams, examiners
+            deliberately inject parameters that vanish at critical roots. Naive ratio division fails in <strong>three
+                distinct ways</strong>:</p>
+        <ol>
+            <li><strong>Silent Root Loss by Cancellation:</strong> Writing $\frac{k-1}{k^2-1} = \frac{3}{2k+1}$ and
+                cancelling $(k-1)$ implicitly assumes $k \neq 1$, silently deleting $k=1$&mdash;which is frequently the
+                exact value producing parallel horizontal/vertical lines!</li>
+            <li><strong>Division by Zero ($0/0$ Ambiguity):</strong> If $a_1 = a_2 = 0$ (both lines horizontal: $b_1 y +
+                c_1 = 0$ and $b_2 y + c_2 = 0$), the fraction $\frac{a_1}{a_2}$ is undefined, yet the lines are
+                legitimately parallel or coincident.</li>
+            <li><strong>The Constant-Zero Trap ($c_1 = c_2 = 0$):</strong> A <em>homogeneous system</em> $a_1 x + b_1 y
+                = 0,\ a_2 x + b_2 y = 0$ is <strong>ALWAYS consistent</strong> because $(0, 0)$ is always a solution. It
+                can NEVER have &ldquo;no solution&rdquo;! When $\Delta = 0$, it automatically has infinitely many
+                solutions; when $\Delta \neq 0$, its only solution is the trivial solution $(0, 0)$.</li>
+        </ol>
+        <p><strong>Golden Exam Protocol:</strong> To find parameter values for &ldquo;no solution&rdquo; or
+            &ldquo;infinitely many solutions,&rdquo; <strong>NEVER start with fractions.</strong> Always:</p>
+        <ol>
+            <li>Solve the polynomial equation $\Delta = a_1 b_2 - a_2 b_1 = 0$ to collect <em>all</em> candidate
+                parameter values (never cancel a common parameter factor!).</li>
+            <li>Substitute <strong>each candidate value explicitly back into the original two equations</strong> and
+                inspect by sight whether the resulting lines are parallel (contradiction) or identical (coincident).
+            </li>
+        </ol>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &mdash; Degenerate Line Check ($0x + 0y = c$)</span>
+        <p>Watch out for the ultimate Olympiad edge case: what if a parameter value $k = k_0$ makes <em>both</em> $a_1 =
+            0$ AND $b_1 = 0$ in one equation? Then $\Delta = 0$ automatically, AND $D_x, D_y$ might vanish too if $c_1 =
+            0$!</p>
+        <ul>
+            <li>If Equation 1 collapses to $0x + 0y = 0$, it holds for <em>every</em> point $(x, y) \in \mathbb{R}^2$,
+                so the solution set is the entire second line (<strong>infinitely many solutions</strong>).</li>
+            <li>If Equation 1 collapses to $0x + 0y = 5$, it holds for <em>no</em> point, so the system has <strong>no
+                    solution</strong>&mdash;even if someone only checked $b_1 c_2 - b_2 c_1 = 0$ when $b_1 = b_2 = 0$!
+            </li>
+        </ul>
+        <p>Direct substitution of every root of $\Delta = 0$ into the original equations makes you 100% immune to this
+            trap.</p>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 2: ALGEBRAIC METHODS & 2x2 CRAMER'S RULE                      -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">2. Algebraic Solution Methods &amp; 2&times;2 Cramer&rsquo;s Rule Shortcut</h2>
+
+    <p>Choosing the right algebraic solver cuts solution time from 2 minutes to 20 seconds and eliminates sign errors.
+    </p>
+
+    <ul>
+        <li><strong>Substitution Method:</strong> Optimal when one variable already has coefficient $\pm 1$ (e.g., $y =
+            3x - 7$), or when solving a line-curve system later in Quadratics/Coordinate Geometry.</li>
+        <li><strong>Elimination (Linear Combination) Method:</strong> Multiply equations by minimal integer factors to
+            match the LCM of coefficients of $x$ or $y$, then add or subtract. Optimal for standard integer-coefficient
+            systems.</li>
+        <li><strong>Cross-Multiplication / $2 \times 2$ Cramer&rsquo;s Rule:</strong> Optimal when coefficients are
+            <strong>algebraic parameters</strong> (like $a, b, m, k$) or prime/coprime integers where finding LCMs is
+            messy.
+        </li>
+    </ul>
+
+    <h3>2.1 Derivation of Cross-Multiplication &amp; Cramer&rsquo;s Rule</h3>
+    <p>Consider the system written in <strong>RHS-constant form</strong> (preferred in JEE/Olympiad work to prevent sign
+        mistakes):</p>
+    $$a_1 x + b_1 y = d_1$$
+    $$a_2 x + b_2 y = d_2$$
+    <p>Eliminating $y$ via $b_2 \cdot (\text{Eq } 1) - b_1 \cdot (\text{Eq } 2)$ yields $(a_1 b_2 - a_2 b_1)x = d_1 b_2
+        - d_2 b_1$. Eliminating $x$ via $a_1 \cdot (\text{Eq } 2) - a_2 \cdot (\text{Eq } 1)$ yields $(a_1 b_2 - a_2
+        b_1)y = a_1 d_2 - a_2 d_1$. Using $2 \times 2$ determinant notation $\begin{vmatrix} p & q \\ r & s
+        \end{vmatrix} = ps - qr$, we obtain <strong>Cramer&rsquo;s Rule</strong>:</p>
+    $$\Delta = \begin{vmatrix} a_1 & b_1 \\ a_2 & b_2 \end{vmatrix} = a_1 b_2 - a_2 b_1, \qquad \Delta_x =
+    \begin{vmatrix} d_1 & b_1 \\ d_2 & b_2 \end{vmatrix} = d_1 b_2 - d_2 b_1, \qquad \Delta_y = \begin{vmatrix} a_1 &
+    d_1 \\ a_2 & d_2 \end{vmatrix} = a_1 d_2 - a_2 d_1$$
+    <p>Whenever $\Delta \neq 0$, the unique solution is instantly:</p>
+    $$x = \frac{\Delta_x}{\Delta}, \qquad y = \frac{\Delta_y}{\Delta}$$
+
+    <div class="concept-box">
+        <span class="box-label">Sign-Error Firewall &mdash; RHS vs. LHS Convention</span>
+        <p>Notice the subtle difference between the NCERT Cross-Multiplication form (constants on the
+            <strong>LHS</strong>: $a_i x + b_i y + c_i = 0$) and Cramer&rsquo;s Rule (constants on the
+            <strong>RHS</strong>: $a_i x + b_i y = d_i$, so $d_i = -c_i$):
+        </p>
+        <ul>
+            <li><strong>LHS Form ($a_i x + b_i y + c_i = 0$):</strong> $\dfrac{x}{b_1 c_2 - b_2 c_1} = \dfrac{y}{c_1 a_2
+                - c_2 a_1} = \dfrac{1}{a_1 b_2 - a_2 b_1}$.</li>
+            <li><strong>RHS Form ($a_i x + b_i y = d_i$):</strong> $\Delta_x$ replaces the $x$-column with the RHS
+                column; $\Delta_y$ replaces the $y$-column with the RHS column.</li>
+        </ul>
+        <p>Pick <strong>Cramer&rsquo;s Rule (RHS form)</strong> as your default: replacing column $1$ for $x$ and column
+            $2$ for $y$ generalizes directly to $3 \times 3$ matrices in Class 11/12 JEE Mathematics and virtually
+            eliminates cyclic-order sign slips.</p>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 3: SPECIAL SYMMETRIC & REDUCIBLE SYSTEMS                      -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">3. Special Symmetric Systems &amp; Equations Reducible to Linear Form</h2>
+
+    <h3>3.1 The Interchanged-Coefficient (Symmetric) System</h3>
+    <p>Whenever a system has large coefficients swapped between $x$ and $y$:</p>
+    $$ax + by = c_1 \quad \text{(1)}$$
+    $$bx + ay = c_2 \quad \text{(2)}$$
+    <p>where $|a| \neq |b|$, <strong>never multiply by $a$ and $b$</strong> (that creates 5-digit numbers and arithmetic
+        errors). Instead, exploit symmetry by <strong>adding and subtracting</strong>:</p>
+    <ol>
+        <li><strong>Add (1) + (2):</strong> $(a + b)(x + y) = c_1 + c_2 \implies x + y = \dfrac{c_1 + c_2}{a + b}$.</li>
+        <li><strong>Subtract (1) &minus; (2):</strong> $(a - b)(x - y) = c_1 - c_2 \implies x - y = \dfrac{c_1 - c_2}{a
+            - b}$.</li>
+    </ol>
+    <p>This collapses huge coefficients into a trivial sum-and-difference pair $x + y = S$ and $x - y = D$, giving $x =
+        \frac{S+D}{2}$ and $y = \frac{S-D}{2}$ in under 20 seconds.</p>
+    <p><em>Note on Anti-Symmetric Variant:</em> If $ax - by = c_1$ and $bx - ay = c_2$, adding gives $(a+b)(x-y) =
+        c_1+c_2$ and subtracting gives $(a-b)(x+y) = c_1-c_2$. The exact same add-and-subtract engine works!</p>
+
+    <h3>3.2 Equations Reducible to Linear Form &amp; Domain Traps</h3>
+    <p>Many non-linear systems become strictly linear after substituting auxiliary variables $u$ and $v$:</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Non-Linear Pattern</th>
+                <th>Linearizing Substitution</th>
+                <th>Mandatory Domain Restriction</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$\dfrac{p_1}{x} + \dfrac{q_1}{y} = r_1,\; \dfrac{p_2}{x} + \dfrac{q_2}{y} = r_2$</td>
+                <td>$u = \dfrac{1}{x},\; v = \dfrac{1}{y}$</td>
+                <td>$x \neq 0,\; y \neq 0$ (hence $u \neq 0,\; v \neq 0$)</td>
+            </tr>
+            <tr>
+                <td>$\dfrac{p_1}{ax+by} + \dfrac{q_1}{cx+dy} = r_1$</td>
+                <td>$u = \dfrac{1}{ax+by},\; v = \dfrac{1}{cx+dy}$</td>
+                <td>$ax+by \neq 0,\; cx+dy \neq 0$</td>
+            </tr>
+            <tr>
+                <td>$\dfrac{p_1}{\sqrt{x}} + \dfrac{q_1}{\sqrt{y}} = r_1$</td>
+                <td>$u = \dfrac{1}{\sqrt{x}},\; v = \dfrac{1}{\sqrt{y}}$</td>
+                <td><strong>$x > 0,\; y > 0$ AND $u > 0,\; v > 0$!</strong></td>
+            </tr>
+            <tr>
+                <td>$a_1 x + b_1 y = c_1 xy,\; a_2 x + b_2 y = c_2 xy$</td>
+                <td>Check $(0,0)$ first; then divide by $xy$ and set $u = \frac{1}{y}, v = \frac{1}{x}$</td>
+                <td><strong>Never lose $(0,0)$</strong> when dividing by $xy$!</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &mdash; Two Extraneous-Solution Killers</span>
+        <p><strong>Trap A (The Square-Root Sign Trap):</strong> If you substitute $u = \frac{1}{\sqrt{x}}$ and solve the
+            linear system to get $u = -\frac{1}{2}$, you must <strong>REJECT</strong> this solution! By definition of
+            the principal square root over $\mathbb{R}$, $\sqrt{x} > 0$, so $u = \frac{1}{\sqrt{x}}$ cannot be negative.
+            Squaring $u = -\frac{1}{2}$ to write $x = 4$ is a classic Olympiad blunder.</p>
+        <p><strong>Trap B (The Lost-Origin Trap):</strong> In systems like $6x + 3y = 6xy$ and $2x + 4y = 5xy$, dividing
+            both sides by $xy$ yields a linear system in $\frac{1}{y}$ and $\frac{1}{x}$ giving $(x, y) = (1, 2)$.
+            However, $(0, 0)$ ALSO satisfies both original equations! Always test $x = 0$ and $y = 0$ separately before
+            dividing by $xy$.</p>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 4: AREA OF TRIANGLES & QUADRILATERALS WITH AXES               -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">4. Areas of Triangles &amp; Quadrilaterals Bounded by Linear Graphs</h2>
+
+    <p>BEST Paper 1 frequently fuses algebra with coordinate geometry by asking for the area enclosed by two
+        intersecting lines $L_1, L_2$ and one or both coordinate axes.</p>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 640 380" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Area of triangle PAB and first-quadrant quadrilateral OAPE formed by 2x+y=8 and x-2y=-1">
+            <defs>
+                <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+                </marker>
+            </defs>
+
+            <!-- Background & light grid -->
+            <rect x="10" y="10" width="620" height="360" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <!-- Vertical grid lines x = -1..5 -->
+            <line x1="105" y1="25" x2="105" y2="345" stroke="#e2e8f0" stroke-width="1" />
+            <line x1="235" y1="25" x2="235" y2="345" stroke="#e2e8f0" stroke-width="1" />
+            <line x1="300" y1="25" x2="300" y2="345" stroke="#e2e8f0" stroke-width="1" />
+            <line x1="365" y1="25" x2="365" y2="345" stroke="#e2e8f0" stroke-width="1" />
+            <line x1="430" y1="25" x2="430" y2="345" stroke="#e2e8f0" stroke-width="1" />
+            <line x1="495" y1="25" x2="495" y2="345" stroke="#e2e8f0" stroke-width="1" />
+            <!-- Horizontal grid lines y = 2, 4, 6, 8 -->
+            <line x1="40" y1="246" x2="560" y2="246" stroke="#e2e8f0" stroke-width="1" />
+            <line x1="40" y1="182" x2="560" y2="182" stroke="#e2e8f0" stroke-width="1" />
+            <line x1="40" y1="118" x2="560" y2="118" stroke="#e2e8f0" stroke-width="1" />
+            <line x1="40" y1="54" x2="560" y2="54" stroke="#e2e8f0" stroke-width="1" />
+
+            <!-- Shaded triangle OBE (Q2 slice of PAB) -->
+            <polygon points="105,310 170,310 170,294" fill="#fca5a5" fill-opacity="0.45" />
+            <!-- Shaded Quadrilateral OAPE (Q1 region) -->
+            <polygon points="170,310 430,310 365,246 170,294" fill="#38bdf8" fill-opacity="0.30" stroke="#0284c7"
+                stroke-width="1.2" />
+
+            <!-- Coordinate Axes -->
+            <line x1="40" y1="310" x2="575" y2="310" stroke="#334155" stroke-width="1.6" marker-end="url(#arr2)" />
+            <line x1="170" y1="350" x2="170" y2="22" stroke="#334155" stroke-width="1.6" marker-end="url(#arr2)" />
+            <text x="580" y="314" font-size="12" font-weight="700" fill="#334155">x</text>
+            <text x="176" y="28" font-size="12" font-weight="700" fill="#334155">y</text>
+
+            <!-- Line L1: 2x + y = 8 through D(0,8)=(170,54) and A(4,0)=(430,310) -->
+            <line x1="150" y1="34" x2="458" y2="338" stroke="#2563eb" stroke-width="2.4" />
+            <!-- Line L2: x - 2y = -1 through B(-1,0)=(105,310), E(0,0.5)=(170,294), P(3,2)=(365,246) -->
+            <line x1="53" y1="323" x2="528" y2="206" stroke="#dc2626" stroke-width="2.4" />
+
+            <!-- Altitude from P(3,2) to x-axis -->
+            <line x1="365" y1="246" x2="365" y2="310" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="4,3" />
+            <rect x="357" y="302" width="8" height="8" fill="none" stroke="#0f172a" stroke-width="1" />
+            <text x="371" y="283" font-size="11" font-weight="700" fill="#0f172a">h = y&#x209A; = 2</text>
+
+            <!-- Base bracket for AB -->
+            <line x1="105" y1="332" x2="430" y2="332" stroke="#0f766e" stroke-width="1.5" />
+            <line x1="105" y1="327" x2="105" y2="337" stroke="#0f766e" stroke-width="1.5" />
+            <line x1="430" y1="327" x2="430" y2="337" stroke="#0f766e" stroke-width="1.5" />
+            <text x="267" y="348" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f766e">Base AB = |4
+                &minus; (&minus;1)| = 5</text>
+
+            <!-- Key Vertices -->
+            <circle cx="170" cy="310" r="3.5" fill="#334155" />
+            <text x="176" y="324" font-size="11" font-weight="600" fill="#334155">O(0, 0)</text>
+
+            <circle cx="430" cy="310" r="4.5" fill="#2563eb" />
+            <text x="436" y="302" font-size="11.5" font-weight="700" fill="#1e40af">A(4, 0)</text>
+
+            <circle cx="105" cy="310" r="4.5" fill="#dc2626" />
+            <text x="58" y="298" font-size="11.5" font-weight="700" fill="#991b1b">B(&minus;1, 0)</text>
+
+            <circle cx="170" cy="54" r="4.5" fill="#2563eb" />
+            <text x="180" y="57" font-size="11.5" font-weight="700" fill="#1e40af">D(0, 8)</text>
+
+            <circle cx="170" cy="294" r="4.5" fill="#dc2626" />
+            <text x="178" y="286" font-size="11" font-weight="700" fill="#991b1b">E(0, 0.5)</text>
+
+            <circle cx="365" cy="246" r="5" fill="#0f172a" stroke="#ffffff" stroke-width="1.5" />
+            <text x="373" y="241" font-size="12" font-weight="700" fill="#0f172a">P(3, 2)</text>
+
+            <!-- Equation Labels -->
+            <text x="285" y="140" font-size="12" font-weight="700" fill="#2563eb">L&#x2081;: 2x + y = 8</text>
+            <text x="438" y="200" font-size="12" font-weight="700" fill="#dc2626">L&#x2082;: x &minus; 2y =
+                &minus;1</text>
+
+            <!-- Legend Box -->
+            <rect x="420" y="30" width="195" height="62" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+            <rect x="432" y="42" width="14" height="10" fill="#38bdf8" fill-opacity="0.45" stroke="#0284c7" />
+            <text x="453" y="51" font-size="10.5" fill="#0f172a">Quad OAPE = 19/4 = 4.75</text>
+            <rect x="432" y="64" width="14" height="10" fill="#fca5a5" fill-opacity="0.6" stroke="#dc2626" />
+            <text x="453" y="73" font-size="10.5" fill="#0f172a">&Delta;OBE = 1/4 &rArr; &Delta;PAB = 5</text>
+        </svg>
+        <div class="diagram-caption">Figure 8.2: Geometric decomposition of $\triangle PAB$ (bounded by $L_1, L_2$, and
+            the $x$-axis) and the first-quadrant quadrilateral $OAPE$ (bounded by $L_1, L_2$, and both positive axes).
+        </div>
+    </div>
+
+    <h3>4.1 Direct Axis-Triangle Formulas</h3>
+    <p>Suppose $L_1$ and $L_2$ intersect at $P(x_P, y_P)$, cut the $x$-axis at $A(x_1, 0)$ and $B(x_2, 0)$, and cut the
+        $y$-axis at $D(0, y_1)$ and $E(0, y_2)$.</p>
+    <ul>
+        <li><strong>Triangle with the $x$-axis ($\triangle PAB$):</strong> The base lies strictly along $y = 0$, so its
+            length is $|x_1 - x_2|$, and the perpendicular altitude from $P$ to the $x$-axis is $|y_P|$:
+            $$\text{Area}(\triangle PAB) = \frac{1}{2} \, |x_1 - x_2| \cdot |y_P|$$
+        </li>
+        <li><strong>Triangle with the $y$-axis ($\triangle PDE$):</strong> The base lies strictly along $x = 0$, so its
+            length is $|y_1 - y_2|$, and the perpendicular altitude from $P$ to the $y$-axis is $|x_P|$:
+            $$\text{Area}(\triangle PDE) = \frac{1}{2} \, |y_1 - y_2| \cdot |x_P|$$
+        </li>
+        <li><strong>Quadrilateral in Quadrant I (or Trapezium between Parallel Lines):</strong> Always decompose a
+            quadrilateral bounded by two lines and the axes as the <strong>difference of two right/axis
+                triangles</strong>! As Figure 8.2 illustrates, $\text{Area}(OAPE) = \text{Area}(\triangle PAB) -
+            \text{Area}(\triangle OBE) = \text{Area}(\triangle OAD) - \text{Area}(\triangle PDE)$.</li>
+    </ul>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &mdash; Shoelace Formula &amp; Single-Line Axis
+            Triangle</span>
+        <p><strong>1. Single Line with Both Axes:</strong> A line $ax + by = c$ ($a, b, c \neq 0$) intercepts the axes
+            at $\left(\frac{c}{a}, 0\right)$ and $\left(0, \frac{c}{b}\right)$, forming a right triangle with the origin
+            of area:</p>
+        $$\text{Area} = \frac{1}{2}\left|\frac{c}{a}\right|\left|\frac{c}{b}\right| = \frac{c^2}{2|ab|}$$
+        <p><strong>2. Arbitrary 3-Line Triangle (Shoelace Formula):</strong> If three non-concurrent lines meet pairwise
+            at $(x_1, y_1)$, $(x_2, y_2)$, and $(x_3, y_3)$, compute the area directly via the determinant shoelace
+            formula (no distance formula or Heron&rsquo;s formula needed):</p>
+        $$\text{Area} = \frac{1}{2}\Bigl|x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)\Bigr|$$
+        <p><strong>Exam Trap:</strong> Always draw a quick 5-second quadrant sketch before subtracting areas! Never
+            assume both $x$-intercepts are positive&mdash;if $x_1 = 4$ and $x_2 = -1$, the base is $|4 - (-1)| = 5$, NOT
+            $4 - 1 = 3$.</p>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 5: LINEAR DIOPHANTINE EQUATIONS (OLYMPIAD BRIDGE)             -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">5. Linear Diophantine Equations (Olympiad Bridge)</h2>
+
+    <p>A single linear equation $ax + by = c$ has infinitely many real solutions $(x, y) \in \mathbb{R}^2$. However,
+        when BEST Paper 1 or IOQM restricts $(x, y)$ to <strong>integers</strong> ($\mathbb{Z}$), <strong>non-negative
+            integers</strong> ($\mathbb{Z}_{\ge 0}$), or <strong>positive integers</strong> ($\mathbb{Z}^+$)&mdash;often
+        disguised inside coin, stamp, or ticket word problems&mdash;it becomes a <strong>Linear Diophantine
+            Equation</strong>.</p>
+
+    <div class="concept-box">
+        <span class="box-label">Fundamental Theorem of Linear Diophantine Equations</span>
+        <p>Let $a, b, c \in \mathbb{Z}$ with $a, b$ not both zero, and let $d = \gcd(a, b)$.</p>
+        <ol>
+            <li><strong>Existence (B&eacute;zout&rsquo;s Criterion):</strong> The equation $ax + by = c$ has integer
+                solutions $(x, y) \in \mathbb{Z}^2$ <strong>if and only if</strong> $d \mid c$ (i.e., $\gcd(a, b)$
+                divides $c$). If $d \nmid c$, there are <strong>zero</strong> integer solutions.</li>
+            <li><strong>Complete Parametric Solution:</strong> If $d \mid c$ and $(x_0, y_0)$ is <em>any one</em>
+                particular integer solution, then <strong>every</strong> integer solution is generated uniquely by an
+                integer parameter $t \in \mathbb{Z}$:
+                $$x = x_0 + \frac{b}{d}t, \qquad y = y_0 - \frac{a}{d}t \qquad (t \in \mathbb{Z})$$
+            </li>
+        </ol>
+    </div>
+
+    <h3>5.1 First-Principles Proof of the Parametric Generator</h3>
+    <p>First divide $ax + by = c$ by $d = \gcd(a, b)$ to obtain the reduced equation $a' x + b' y = c'$, where $a' =
+        \frac{a}{d}$, $b' = \frac{b}{d}$, $c' = \frac{c}{d}$, and crucially $\gcd(a', b') = 1$. Since $(x_0, y_0)$ is
+        also a solution, $a' x_0 + b' y_0 = c'$. Subtracting the two equations eliminates $c'$:</p>
+    $$a'(x - x_0) + b'(y - y_0) = 0 \implies a'(x - x_0) = -b'(y - y_0)$$
+    <p>Since $b'$ divides the right-hand side, $b'$ must divide $a'(x - x_0)$. Because $\gcd(a', b') = 1$,
+        Euclid&rsquo;s Lemma forces $b' \mid (x - x_0)$. Therefore, there exists a unique integer $t \in \mathbb{Z}$
+        such that:</p>
+    $$x - x_0 = b' t = \frac{b}{d}t$$
+    <p>Substituting back into $a'(b' t) = -b'(y - y_0)$ and dividing by $b' \neq 0$ yields $y - y_0 = -a' t =
+        -\frac{a}{d}t$. Conversely, substituting these into $ax + by$ gives $a\left(x_0 + \frac{b}{d}t\right) +
+        b\left(y_0 - \frac{a}{d}t\right) = ax_0 + by_0 + \frac{ab - ba}{d}t = c$. Hence the formula generates
+        <em>all</em> and <em>only</em> the integer solutions.
+    </p>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 640 360" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Integer lattice points on the line 3x + 5y = 47 in the first quadrant showing constant step vector (+5, -3)">
+            <defs>
+                <marker id="arr3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+                </marker>
+                <marker id="stepArr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#0f766e" />
+                </marker>
+            </defs>
+
+            <rect x="10" y="10" width="620" height="340" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+
+            <!-- Integer Lattice Grid: x=0..16 (step 32), y=0..10 (step 26) -->
+            <g stroke="#e2e8f0" stroke-width="0.9">
+                <!-- Verticals -->
+                <line x1="92" y1="50" x2="92" y2="310" />
+                <line x1="124" y1="50" x2="124" y2="310" />
+                <line x1="156" y1="50" x2="156" y2="310" />
+                <line x1="188" y1="50" x2="188" y2="310" />
+                <line x1="220" y1="50" x2="220" y2="310" />
+                <line x1="252" y1="50" x2="252" y2="310" />
+                <line x1="284" y1="50" x2="284" y2="310" />
+                <line x1="316" y1="50" x2="316" y2="310" />
+                <line x1="348" y1="50" x2="348" y2="310" />
+                <line x1="380" y1="50" x2="380" y2="310" />
+                <line x1="412" y1="50" x2="412" y2="310" />
+                <line x1="444" y1="50" x2="444" y2="310" />
+                <line x1="476" y1="50" x2="476" y2="310" />
+                <line x1="508" y1="50" x2="508" y2="310" />
+                <line x1="540" y1="50" x2="540" y2="310" />
+                <line x1="572" y1="50" x2="572" y2="310" />
+                <!-- Horizontals -->
+                <line x1="60" y1="284" x2="572" y2="284" />
+                <line x1="60" y1="258" x2="572" y2="258" />
+                <line x1="60" y1="232" x2="572" y2="232" />
+                <line x1="60" y1="206" x2="572" y2="206" />
+                <line x1="60" y1="180" x2="572" y2="180" />
+                <line x1="60" y1="154" x2="572" y2="154" />
+                <line x1="60" y1="128" x2="572" y2="128" />
+                <line x1="60" y1="102" x2="572" y2="102" />
+                <line x1="60" y1="76" x2="572" y2="76" />
+                <line x1="60" y1="50" x2="572" y2="50" />
+            </g>
+
+            <!-- Axes -->
+            <line x1="50" y1="310" x2="595" y2="310" stroke="#334155" stroke-width="1.6" marker-end="url(#arr3)" />
+            <line x1="60" y1="322" x2="60" y2="30" stroke="#334155" stroke-width="1.6" marker-end="url(#arr3)" />
+            <text x="602" y="314" font-size="12" font-weight="700" fill="#334155">x</text>
+            <text x="66" y="34" font-size="12" font-weight="700" fill="#334155">y</text>
+
+            <!-- Axis Ticks -->
+            <g font-size="10" fill="#475569" text-anchor="middle">
+                <text x="60" y="325">0</text>
+                <text x="188" y="325">4</text>
+                <text x="348" y="325">9</text>
+                <text x="508" y="325">14</text>
+                <text x="572" y="325">16</text>
+            </g>
+            <g font-size="10" fill="#475569" text-anchor="end">
+                <text x="52" y="288">1</text>
+                <text x="52" y="210">4</text>
+                <text x="52" y="132">7</text>
+                <text x="52" y="54">10</text>
+            </g>
+
+            <!-- Diophantine Line: 3x + 5y = 47 from (0, 9.4)=(60, 65.6) to (15.67, 0)=(561.3, 310) -->
+            <line x1="60" y1="65.6" x2="561.3" y2="310" stroke="#2563eb" stroke-width="2.4" />
+
+            <!-- Step Staircase 1: (4,7) -> (9,4) -->
+            <line x1="188" y1="128" x2="348" y2="128" stroke="#0f766e" stroke-width="1.8" stroke-dasharray="5,3"
+                marker-end="url(#stepArr)" />
+            <line x1="348" y1="128" x2="348" y2="201" stroke="#0f766e" stroke-width="1.8" stroke-dasharray="5,3"
+                marker-end="url(#stepArr)" />
+            <text x="268" y="121" text-anchor="middle" font-size="11" font-weight="700" fill="#0f766e">&Delta;x = +b =
+                +5</text>
+            <text x="355" y="170" font-size="11" font-weight="700" fill="#0f766e">&Delta;y = &minus;a = &minus;3</text>
+
+            <!-- Step Staircase 2: (9,4) -> (14,1) -->
+            <line x1="348" y1="206" x2="508" y2="206" stroke="#0f766e" stroke-width="1.8" stroke-dasharray="5,3"
+                marker-end="url(#stepArr)" />
+            <line x1="508" y1="206" x2="508" y2="279" stroke="#0f766e" stroke-width="1.8" stroke-dasharray="5,3"
+                marker-end="url(#stepArr)" />
+            <text x="428" y="199" text-anchor="middle" font-size="11" font-weight="700" fill="#0f766e">&Delta;x =
+                +5</text>
+            <text x="515" y="248" font-size="11" font-weight="700" fill="#0f766e">&Delta;y = &minus;3</text>
+
+            <!-- Feasible Positive Integer Lattice Points -->
+            <circle cx="188" cy="128" r="6" fill="#dc2626" stroke="#ffffff" stroke-width="2" />
+            <text x="178" y="146" text-anchor="end" font-size="11.5" font-weight="700" fill="#991b1b">(4, 7)</text>
+
+            <circle cx="348" cy="206" r="6" fill="#dc2626" stroke="#ffffff" stroke-width="2" />
+            <text x="338" y="224" text-anchor="end" font-size="11.5" font-weight="700" fill="#991b1b">(9, 4)</text>
+
+            <circle cx="508" cy="284" r="6" fill="#dc2626" stroke="#ffffff" stroke-width="2" />
+            <text x="498" y="301" text-anchor="end" font-size="11.5" font-weight="700" fill="#991b1b">(14, 1)</text>
+
+            <!-- Title badge inside graph -->
+            <rect x="355" y="28" width="248" height="58" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+            <text x="368" y="47" font-size="12" font-weight="700" fill="#1e40af">3x + 5y = 47 (x, y &isin;
+                &Zopf;&#x207A;)</text>
+            <text x="368" y="64" font-size="10.5" fill="#334155">General: x = 4 + 5t, y = 7 &minus; 3t</text>
+            <text x="368" y="79" font-size="10.5" font-weight="600" fill="#0f766e">Exact Count: 3 lattice points (t = 0,
+                1, 2)</text>
+        </svg>
+        <div class="diagram-caption">Figure 8.3: Integer lattice geometry of $3x + 5y = 47$ in Quadrant I. Every valid
+            lattice point is separated from the next by the constant vector $(\Delta x, \Delta y) = (+b/d, -a/d) = (+5,
+            -3)$.</div>
+    </div>
+
+    <h3>5.2 Step-by-Step Algorithm for Counting Feasible Integer Pairs</h3>
+    <ol>
+        <li><strong>Reduce:</strong> Compute $d = \gcd(a, b)$. If $d \nmid c$, answer is $0$ immediately. Otherwise
+            divide through by $d$ so $\gcd(a, b) = 1$.</li>
+        <li><strong>Find One Particular Solution $(x_0, y_0)$:</strong> Take the equation modulo the <em>smaller</em>
+            coefficient (say $a$): $by \equiv c \pmod{a}$. Solve for the smallest valid $y_0$ (e.g., $y_0 \ge 1$ for
+            positive integers, or $y_0 \ge 0$ for non-negative integers), then compute $x_0 = \frac{c - by_0}{a}$.</li>
+        <li><strong>Parametrize:</strong> Write $x = x_0 - bt$ and $y = y_0 + at$ (or $x = x_0 + bt,\ y = y_0 - at$).
+        </li>
+        <li><strong>Bound $t$:</strong> Impose the exact domain inequalities carefully:
+            <ul>
+                <li>For <strong>positive integers</strong> (natural numbers): require $x \ge 1$ AND $y \ge 1$.</li>
+                <li>For <strong>non-negative integers</strong> (whole numbers): require $x \ge 0$ AND $y \ge 0$.</li>
+            </ul>
+            Solve both inequalities for $t$ to get $t_{\min} \le t \le t_{\max}$ (rounding $t_{\min}$ <em>up</em> with
+            $\lceil \cdot \rceil$ and $t_{\max}$ <em>down</em> with $\lfloor \cdot \rfloor$). The exact count is
+            $t_{\max} - t_{\min} + 1$ (or $0$ if $t_{\max} < t_{\min}$). </li>
+    </ol>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &mdash; Exact Quotient Formula &amp; Chicken McNugget
+            Theorem</span>
+        <p><strong>1. The Quotient-Remainder Counting Shortcut ($\gcd(a,b) = 1$, $a, b > 0$):</strong> Divide $c$ by
+            $ab$: write $c = q(ab) + r$ with $0 \le r < ab$, where $q=\left\lfloor \frac{c}{ab} \right\rfloor$.</p>
+                <ul>
+                    <li><strong>Positive integer solutions ($x, y \ge 1$):</strong>
+                        <ul>
+                            <li>If $r = 0$ (i.e., $ab \mid c$): exact count $= q - 1$.</li>
+                            <li>If $r > 0$: exact count $= q + 1$ if $ax + by = r$ has a positive integer solution, and
+                                $q$ otherwise!</li>
+                        </ul>
+                    </li>
+                    <li><strong>Non-negative integer solutions ($x, y \ge 0$):</strong> Since $x' = x+1 \ge 1$ and $y' =
+                        y+1 \ge 1$ transforms $ax + by = c$ into $ax' + by' = c + a + b$, the count is always
+                        $\left\lfloor \frac{c}{ab} \right\rfloor$ or $\left\lfloor \frac{c}{ab} \right\rfloor + 1$
+                        (specifically, $q + 1$ if $ax + by = r$ has a <em>non-negative</em> solution, else $q$).</li>
+                </ul>
+                <p><strong>2. Frobenius Coin (Chicken McNugget) Theorem:</strong> For coprime positive integers $a, b$,
+                    the <strong>largest integer $c$</strong> that CANNOT be expressed as $ax + by$ in
+                    <em>non-negative</em> integers ($x, y \ge 0$) is:
+                </p>
+                $$g(a, b) = ab - a - b$$
+                <p>Every integer $c > ab - a - b$ has at least one non-negative integer representation! Furthermore, the
+                    total number of unrepresentable positive integers is exactly $\dfrac{(a-1)(b-1)}{2}$.</p>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 6: HIGH-TRAP SITUATIONAL WORD PROBLEMS                        -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">6. High-Trap Situational Word Problems &amp; 3-Variable Homogeneous Systems</h2>
+
+    <p>Even strong algebra students lose marks on Paper 1 word problems due to phrasing traps. Lock in these five
+        canonical modeling blueprints:</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Word-Problem Archetype</th>
+                <th>Exact Algebraic Model</th>
+                <th>Deadly Exam Trap to Neutralize</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Digit Reversal (2-Digit Number)</strong></td>
+                <td>Original $= 10x + y$, Reversed $= 10y + x$.<br>Sum $= 11(x+y)$; Difference $= 9(x-y)$.</td>
+                <td>Never confuse the <em>digits</em> $(x,y)$ with the <em>number</em> $10x+y$. Enforce $1 \le x \le 9$
+                    and $0 \le y \le 9$. When &ldquo;difference between digits is $d$,&rdquo; test BOTH $x-y=d$ and
+                    $y-x=d$!</td>
+            </tr>
+            <tr>
+                <td><strong>Two-Way Fractions</strong></td>
+                <td>Fraction $= \dfrac{N}{D}$ ($D \neq 0$). Translate numerator and denominator changes into two
+                    separate equations.</td>
+                <td>Check whether the question asks for the <em>original</em> fraction or its simplified form, and
+                    ensure $D \neq 0$.</td>
+            </tr>
+            <tr>
+                <td><strong>Ages (Past / Future Shifts)</strong></td>
+                <td>Let present ages be $F$ and $S$. In $k$ years: $F+k, S+k$. $k$ years ago: $F-k, S-k$.</td>
+                <td>Phrasing trap: &ldquo;When I was as old as you are now&rdquo; shifts time back by $(F - S)$ years,
+                    making the younger person&rsquo;s age $S - (F - S) = 2S - F$!</td>
+            </tr>
+            <tr>
+                <td><strong>Boat &amp; Stream / Trains</strong></td>
+                <td>Downstream $= b + s$, Upstream $= b - s$ ($b > s > 0$).<br>Time $= \dfrac{d_1}{b-s} +
+                    \dfrac{d_2}{b+s}$.</td>
+                <td>Never add or average speeds! Always form equations using <strong>Total Time</strong> $= t_1 + t_2$
+                    and linearize via $u = \frac{1}{b-s},\ v = \frac{1}{b+s}$.</td>
+            </tr>
+            <tr>
+                <td><strong>3-Variable Homogeneous Ratios</strong></td>
+                <td>$a_1 x + b_1 y + c_1 z = 0$<br>$a_2 x + b_2 y + c_2 z = 0$</td>
+                <td>Two equations cannot determine unique $(x,y,z)$, ONLY their <strong>ratio</strong> $x : y : z$ via
+                    cross-multiplication! Sufficient to evaluate any homogeneous expression (equal degree in numerator
+                    &amp; denominator).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <span class="box-label">3-Variable Homogeneous Ratio Formula (Cross-Product Rule)</span>
+        <p>Given two independent homogeneous equations $a_1 x + b_1 y + c_1 z = 0$ and $a_2 x + b_2 y + c_2 z = 0$,
+            divide through by $z$ (assuming $z \neq 0$) and apply $2 \times 2$ cross-multiplication to $(x/z, y/z)$:</p>
+        $$\frac{x}{b_1 c_2 - b_2 c_1} = \frac{y}{c_1 a_2 - c_2 a_1} = \frac{z}{a_1 b_2 - a_2 b_1} = k \qquad (k \neq
+        0)$$
+        <p>Thus $x = (b_1 c_2 - b_2 c_1)k$, $y = (c_1 a_2 - c_2 a_1)k$, and $z = (a_1 b_2 - a_2 b_1)k$. In any
+            homogeneous ratio like $\frac{x^2 + y^2 + z^2}{xy + yz + zx}$, the scalar $k^2$ cancels identically&mdash;so
+            you can simply set $k = 1$!</p>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- FORMULA VAULT                                                         -->
+    <!-- ===================================================================== -->
+    <div class="formula-vault">
+        <span class="box-label">Chapter 8 Formula Vault &mdash; High-Density Rapid Revision</span>
+        <ul>
+            <li><strong>Determinant Consistency Criteria ($a_i x + b_i y + c_i = 0$):</strong> $\Delta = a_1 b_2 - a_2
+                b_1$, $D_x = b_1 c_2 - b_2 c_1$, $D_y = c_1 a_2 - c_2 a_1$.
+                Unique solution $\iff \Delta \neq 0$. No solution $\iff \Delta = 0$ and $(D_x, D_y) \neq (0, 0)$ (verify
+                by direct substitution!). Infinite solutions $\iff$ identical equations.</li>
+            <li><strong>2&times;2 Cramer&rsquo;s Rule ($a_i x + b_i y = d_i$):</strong> $x = \dfrac{d_1 b_2 - d_2
+                b_1}{a_1 b_2 - a_2 b_1}$, $\quad y = \dfrac{a_1 d_2 - a_2 d_1}{a_1 b_2 - a_2 b_1}$ (for $\Delta \neq
+                0$).</li>
+            <li><strong>Symmetric System ($ax + by = c_1,\ bx + ay = c_2$):</strong> $x + y = \dfrac{c_1 + c_2}{a + b}$
+                and $x - y = \dfrac{c_1 - c_2}{a - b}$ ($|a| \neq |b|$).</li>
+            <li><strong>Axis Triangle Areas:</strong> With $x$-axis: $\frac{1}{2}|x_1 - x_2|\cdot |y_P|$. With $y$-axis:
+                $\frac{1}{2}|y_1 - y_2|\cdot |x_P|$. Single line $ax + by = c$ with both axes: $\dfrac{c^2}{2|ab|}$.
+            </li>
+            <li><strong>Shoelace Area of $\triangle P_1 P_2 P_3$:</strong> $\dfrac{1}{2}\bigl|x_1(y_2 - y_3) + x_2(y_3 -
+                y_1) + x_3(y_1 - y_2)\bigr|$.</li>
+            <li><strong>Linear Diophantine ($ax + by = c$, $d = \gcd(a,b)$):</strong> Solvable in $\mathbb{Z} \iff d
+                \mid c$. General solution: $x = x_0 + \dfrac{b}{d}t,\; y = y_0 - \dfrac{a}{d}t$ ($t \in \mathbb{Z}$).
+            </li>
+            <li><strong>Diophantine Positive Count ($\gcd(a,b)=1,\ c = qab + r,\ 0 \le r < ab$):</strong> Count $= q -
+                        1$ if $r = 0$; else $q + 1$ if $ax + by = r$ has a positive integer solution, otherwise $q$.
+            </li>
+            <li><strong>Frobenius Bound ($\gcd(a,b)=1$):</strong> Largest integer NOT expressible as $ax + by$ ($x, y
+                \ge 0$) is $ab - a - b$.</li>
+            <li><strong>3-Variable Homogeneous Ratio:</strong> $x : y : z = (b_1 c_2 - b_2 c_1) : (c_1 a_2 - c_2 a_1) :
+                (a_1 b_2 - a_2 b_1)$.</li>
+        </ul>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- WORKED EXAMPLES: LEVEL 1 (WARMUP)                                     -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">7. Graded Worked Examples (Level 1 &rarr; Level 2 &rarr; Level 3)</h2>
+
+    <div class="level-banner l1">LEVEL 1: WARMUP &mdash; Core Mechanics &amp; Foundation Precision</div>
+
+    <!-- Worked Example 1 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Consistency Parameters</span>
+            <strong>Worked Example 1: Distinguishing No Solution vs. Infinite Solutions</strong>
+        </div>
+        <div class="ex-problem">
+            Find all real values of $k$ for which the system of linear equations
+            $$kx + 3y = k - 3$$
+            $$12x + ky = k$$
+            has (a) no solution, and (b) infinitely many solutions.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; Apply the Determinant Condition (Avoid Premature Division):</strong></p>
+            <p>Here $a_1 = k,\ b_1 = 3$ and $a_2 = 12,\ b_2 = k$. For the system to have either no solution or
+                infinitely many solutions, the coefficient determinant $\Delta$ must vanish:</p>
+            $$\Delta = a_1 b_2 - a_2 b_1 = k(k) - 12(3) = k^2 - 36 = 0 \implies k = 6 \quad \text{or} \quad k = -6$$
+            <p>Notice that for $k = 0$, $\Delta = -36 \neq 0$, so $k = 0$ yields a unique solution $(0, -1)$ even though
+                the naive ratio $\frac{b_1}{b_2} = \frac{3}{0}$ is undefined.</p>
+
+            <p><strong>Step 2 &mdash; Substitute Each Candidate Back into the Original System:</strong></p>
+            <ul>
+                <li><strong>Case $k = 6$:</strong>
+                    $$\text{Eq (1): } 6x + 3y = 3 \iff 2x + y = 1$$
+                    $$\text{Eq (2): } 12x + 6y = 6 \iff 2x + y = 1$$
+                    Both equations represent the exact same line $2x + y = 1$. Hence $k = 6$ gives <strong>infinitely
+                        many solutions</strong>.
+                </li>
+                <li><strong>Case $k = -6$:</strong>
+                    $$\text{Eq (1): } -6x + 3y = -9 \iff 2x - y = 3$$
+                    $$\text{Eq (2): } 12x - 6y = -6 \iff 2x - y = -1$$
+                    Here the left-hand sides are identical while $3 \neq -1$, representing two parallel distinct lines.
+                    Hence $k = -6$ gives <strong>no solution</strong>.
+                </li>
+            </ul>
+            <p><strong>Final Answer:</strong> (a) No solution for $k = -6$; (b) Infinitely many solutions for $k = 6$.
+            </p>
+        </div>
+    </div>
+
+    <!-- Worked Example 2 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Symmetric System</span>
+            <strong>Worked Example 2: High-Coefficient Interchanged System</strong>
+        </div>
+        <div class="ex-problem">
+            Solve the following system of equations efficiently:
+            $$152x - 378y = -74$$
+            $$-378x + 152y = -604$$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; Recognize Coefficient Symmetry:</strong></p>
+            <p>The coefficients $152$ and $-378$ are interchanged between the two equations. Instead of multiplying by
+                $152$ and $378$, add and subtract the equations directly.</p>
+
+            <p><strong>Step 2 &mdash; Add Eq (1) and Eq (2):</strong></p>
+            $$(152 - 378)x + (-378 + 152)y = -74 + (-604)$$
+            $$-226x - 226y = -678$$
+            <p>Dividing both sides by $-226$ (since $226 \times 3 = 678$):</p>
+            $$x + y = 3 \qquad \text{(3)}$$
+
+            <p><strong>Step 3 &mdash; Subtract Eq (2) from Eq (1):</strong></p>
+            $$\bigl(152 - (-378)\bigr)x + (-378 - 152)y = -74 - (-604)$$
+            $$530x - 530y = 530$$
+            <p>Dividing both sides by $530$:</p>
+            $$x - y = 1 \qquad \text{(4)}$$
+
+            <p><strong>Step 4 &mdash; Solve the Reduced Pair (3) &amp; (4):</strong></p>
+            <p>Adding (3) and (4): $2x = 4 \implies x = 2$. Substituting into (3): $2 + y = 3 \implies y = 1$.</p>
+            <p><em>Verification:</em> $152(2) - 378(1) = 304 - 378 = -74$ and $-378(2) + 152(1) = -756 + 152 = -604$.
+                Both match.</p>
+            <p><strong>Final Answer:</strong> $(x, y) = (2, 1)$.</p>
+        </div>
+    </div>
+
+    <!-- Worked Example 3 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Reducible + Cramer&rsquo;s Rule</span>
+            <strong>Worked Example 3: Linearizing Reciprocal Binomial Denominators</strong>
+        </div>
+        <div class="ex-problem">
+            Solve for real $(x, y)$:
+            $$\frac{10}{x + y} + \frac{2}{x - y} = 4, \qquad \frac{15}{x + y} - \frac{5}{x - y} = -2$$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; State Domain Restrictions &amp; Substitute:</strong></p>
+            <p>Denominators cannot vanish, so $x + y \neq 0$ and $x - y \neq 0$. Set $u = \dfrac{1}{x+y}$ and $v =
+                \dfrac{1}{x-y}$ (with $u, v \neq 0$). The system linearizes to:</p>
+            $$10u + 2v = 4 \iff 5u + v = 2 \qquad \text{(1)}$$
+            $$15u - 5v = -2 \qquad \text{(2)}$$
+
+            <p><strong>Step 2 &mdash; Solve for $(u, v)$ via $2 \times 2$ Cramer&rsquo;s Rule:</strong></p>
+            $$\Delta = \begin{vmatrix} 5 & 1 \\ 15 & -5 \end{vmatrix} = 5(-5) - 15(1) = -25 - 15 = -40$$
+            $$\Delta_u = \begin{vmatrix} 2 & 1 \\ -2 & -5 \end{vmatrix} = 2(-5) - (-2)(1) = -10 + 2 = -8 \implies u =
+            \frac{-8}{-40} = \frac{1}{5}$$
+            $$\Delta_v = \begin{vmatrix} 5 & 2 \\ 15 & -2 \end{vmatrix} = 5(-2) - 15(2) = -10 - 30 = -40 \implies v =
+            \frac{-40}{-40} = 1$$
+
+            <p><strong>Step 3 &mdash; Back-Substitute &amp; Verify Domain:</strong></p>
+            $$\frac{1}{x + y} = \frac{1}{5} \implies x + y = 5, \qquad \frac{1}{x - y} = 1 \implies x - y = 1$$
+            <p>Adding gives $2x = 6 \implies x = 3$; subtracting gives $2y = 4 \implies y = 2$. Since $x+y = 5 \neq 0$
+                and $x-y = 1 \neq 0$, the domain conditions are satisfied.</p>
+            <p><strong>Final Answer:</strong> $(x, y) = (3, 2)$.</p>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- WORKED EXAMPLES: LEVEL 2 (EXAM-REAL)                                  -->
+    <!-- ===================================================================== -->
+    <div class="level-banner l2">LEVEL 2: EXAM-REAL &mdash; BEST / NTSE Stage 2 Traps &amp; Multi-Concept Modeling</div>
+
+    <!-- Worked Example 4 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Zero-Coefficient Trap</span>
+            <strong>Worked Example 4: Catching the Hidden Root Lost by Naive Ratio Cancellation</strong>
+        </div>
+        <div class="ex-problem">
+            Find all real values of $m$ for which the following system of linear equations has (a) <strong>no
+                solution</strong>, and (b) <strong>infinitely many solutions</strong>:
+            $$(m - 1)x + 3y = m + 2$$
+            $$(m^2 - 1)x + (2m + 1)y = 2m + 4$$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Why Naive Ratio Division Fails Here:</strong></p>
+            <p>A student who writes $\dfrac{m - 1}{m^2 - 1} = \dfrac{3}{2m + 1}$ and cancels $(m - 1)$ immediately gets
+                $\frac{1}{m+1} = \frac{3}{2m+1} \implies m = -2$, completely losing the critical value $m = 1$ where
+                both $x$-coefficients become $0$!</p>
+
+            <p><strong>Step 1 &mdash; Factor the Determinant $\Delta = 0$ Without Cancelling:</strong></p>
+            $$\Delta = (m - 1)(2m + 1) - 3(m^2 - 1) = 0$$
+            <p>Write $m^2 - 1 = (m - 1)(m + 1)$ and <em>factor out</em> $(m - 1)$ instead of dividing by it:</p>
+            $$(m - 1)\bigl[(2m + 1) - 3(m + 1)\bigr] = 0$$
+            $$(m - 1)(-m - 2) = 0 \implies -(m - 1)(m + 2) = 0$$
+            <p>Thus $\Delta = 0$ if and only if $m = 1$ or $m = -2$. (For all other real $m$, $\Delta \neq 0$ and the
+                system has a unique solution.)</p>
+
+            <p><strong>Step 2 &mdash; Test Both Candidates Directly in the Original Equations:</strong></p>
+            <ul>
+                <li><strong>Test $m = 1$:</strong>
+                    $$\text{Eq (1): } 0 \cdot x + 3y = 3 \implies y = 1$$
+                    $$\text{Eq (2): } 0 \cdot x + 3y = 6 \implies y = 2$$
+                    These are two distinct parallel horizontal lines ($y = 1$ and $y = 2$). They never intersect, so $m
+                    = 1$ gives <strong>no solution</strong>.
+                </li>
+                <li><strong>Test $m = -2$:</strong>
+                    $$\text{Eq (1): } -3x + 3y = 0 \implies x - y = 0$$
+                    $$\text{Eq (2): } 3x - 3y = 0 \implies x - y = 0$$
+                    Both equations collapse to the exact same line $y = x$, so $m = -2$ gives <strong>infinitely many
+                        solutions</strong>.
+                </li>
+            </ul>
+            <p><strong>Final Answer:</strong> (a) No solution solely at $m = 1$; (b) Infinitely many solutions solely at
+                $m = -2$.</p>
+        </div>
+    </div>
+
+    <!-- Worked Example 5 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Coordinate Geometry Area</span>
+            <strong>Worked Example 5: Triangle &amp; First-Quadrant Quadrilateral Bounded by Two Lines</strong>
+        </div>
+        <div class="ex-problem">
+            Two straight lines are defined by $L_1: 2x + y = 8$ and $L_2: x - 2y + 1 = 0$.
+            <br>(a) Find the area of the triangle bounded by $L_1$, $L_2$, and the $x$-axis.
+            <br>(b) Find the area of the quadrilateral bounded by $L_1$, $L_2$, and the positive $x$- and $y$-axes in
+            Quadrant I.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; Find the Intersection Point $P$ and All Axis Intercepts (see Figure 8.2):</strong>
+            </p>
+            <ul>
+                <li><strong>Intersection $P$:</strong> From $L_2$, $x = 2y - 1$. Substituting into $L_1$:
+                    $$2(2y - 1) + y = 8 \implies 5y - 2 = 8 \implies y = 2, \quad x = 2(2) - 1 = 3$$
+                    Hence $P = (3, 2)$, which lies strictly in Quadrant I.
+                </li>
+                <li><strong>$x$-intercepts (set $y = 0$):</strong> $L_1$ meets the $x$-axis at $A(4, 0)$; $L_2$ meets
+                    the $x$-axis at $B(-1, 0)$.</li>
+                <li><strong>$y$-intercepts (set $x = 0$):</strong> $L_1$ meets the $y$-axis at $D(0, 8)$; $L_2$ meets
+                    the $y$-axis at $E\left(0, \frac{1}{2}\right)$.</li>
+            </ul>
+
+            <p><strong>Step 2 &mdash; Part (a): Area of $\triangle PAB$ with the $x$-Axis:</strong></p>
+            <p>The base $AB$ runs along the $x$-axis from $x = -1$ to $x = 4$, so its length is $AB = |4 - (-1)| = 5$.
+                The perpendicular height from $P(3, 2)$ to the $x$-axis is $h = |y_P| = 2$:</p>
+            $$\text{Area}(\triangle PAB) = \frac{1}{2} \times AB \times |y_P| = \frac{1}{2} \times 5 \times 2 = 5 \text{
+            sq. units}$$
+
+            <p><strong>Step 3 &mdash; Part (b): Area of Quadrilateral $OAPE$ in Quadrant I:</strong></p>
+            <p>Notice that the $y$-axis cuts $\triangle PAB$ along segment $OE$, removing the small right triangle
+                $\triangle OBE$ lying in Quadrant II (with vertices $O(0,0)$, $B(-1,0)$, $E\left(0,
+                \frac{1}{2}\right)$). Therefore:</p>
+            $$\text{Area}(\triangle OBE) = \frac{1}{2} \times OB \times OE = \frac{1}{2} \times 1 \times \frac{1}{2} =
+            \frac{1}{4} \text{ sq. units}$$
+            $$\text{Area}(OAPE) = \text{Area}(\triangle PAB) - \text{Area}(\triangle OBE) = 5 - \frac{1}{4} =
+            \frac{19}{4} = 4.75 \text{ sq. units}$$
+            <p><em>Independent Cross-Check via the $y$-Axis:</em> $\text{Area}(OAPE) = \text{Area}(\triangle OAD) -
+                \text{Area}(\triangle PDE) = \frac{1}{2}(4)(8) - \frac{1}{2}\left(8 - \frac{1}{2}\right)(3) = 16 -
+                \frac{45}{4} = \frac{19}{4}$. Exact match!</p>
+            <p><strong>Final Answer:</strong> (a) $5$ sq. units; (b) $\dfrac{19}{4}$ (or $4.75$) sq. units.</p>
+        </div>
+    </div>
+
+    <!-- Worked Example 6 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Situational Modeling</span>
+            <strong>Worked Example 6: Boat-and-Stream Reducible Time System</strong>
+        </div>
+        <div class="ex-problem">
+            A motorboat travels $30\text{ km}$ upstream and $44\text{ km}$ downstream in $10\text{ hours}$. In $13\text{
+            hours}$, it can travel $40\text{ km}$ upstream and $55\text{ km}$ downstream. Find the speed of the boat in
+            still water and the speed of the stream.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; Model Upstream &amp; Downstream Speeds:</strong></p>
+            <p>Let the speed of the boat in still water be $b\text{ km/h}$ and the speed of the stream be $s\text{
+                km/h}$ ($b > s > 0$). Then upstream speed $= b - s$ and downstream speed $= b + s$. Using $\text{Time} =
+                \frac{\text{Distance}}{\text{Speed}}$:</p>
+            $$\frac{30}{b - s} + \frac{44}{b + s} = 10 \qquad \text{(1)}$$
+            $$\frac{40}{b - s} + \frac{55}{b + s} = 13 \qquad \text{(2)}$$
+
+            <p><strong>Step 2 &mdash; Linearize &amp; Exploit GCD Structure:</strong></p>
+            <p>Set $u = \dfrac{1}{b - s}$ and $v = \dfrac{1}{b + s}$ ($u, v > 0$). Divide Eq (1) by $2$ first to shrink
+                coefficients:</p>
+            $$15u + 22v = 5 \qquad \text{(1')}$$
+            $$40u + 55v = 13 \qquad \text{(2')}$$
+            <p>Notice that $\text{LCM}(22, 55) = 110$ (since $22 = 2 \times 11$ and $55 = 5 \times 11$). Multiply (1')
+                by $5$ and (2') by $2$:</p>
+            $$75u + 110v = 25$$
+            $$80u + 110v = 26$$
+            <p>Subtracting the first from the second gives $5u = 1 \implies u = \dfrac{1}{5}$. Substituting $u =
+                \frac{1}{5}$ into (1'):</p>
+            $$15\left(\frac{1}{5}\right) + 22v = 5 \implies 3 + 22v = 5 \implies 22v = 2 \implies v = \frac{1}{11}$$
+
+            <p><strong>Step 3 &mdash; Recover $b$ and $s$:</strong></p>
+            $$b - s = \frac{1}{u} = 5, \qquad b + s = \frac{1}{v} = 11$$
+            <p>Adding: $2b = 16 \implies b = 8\text{ km/h}$. Subtracting: $2s = 6 \implies s = 3\text{ km/h}$.</p>
+            <p><em>Verification:</em> $\frac{30}{5} + \frac{44}{11} = 6 + 4 = 10\text{ h}$; $\frac{40}{5} +
+                \frac{55}{11} = 8 + 5 = 13\text{ h}$.</p>
+            <p><strong>Final Answer:</strong> Speed of boat in still water $= 8\text{ km/h}$; speed of stream $= 3\text{
+                km/h}$.</p>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- WORKED EXAMPLES: LEVEL 3 (RANK-BOOSTER)                               -->
+    <!-- ===================================================================== -->
+    <div class="level-banner l3">LEVEL 3: RANK-BOOSTER &mdash; IOQM-Lite / Olympiad Bridges with 30-Second Shortcuts
+    </div>
+
+    <!-- Worked Example 7 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Linear Diophantine</span>
+            <strong>Worked Example 7: Exact Counting of Positive Integer Solutions</strong>
+        </div>
+        <div class="ex-problem">
+            Find the exact number of ordered pairs of <strong>positive integers</strong> $(x, y)$ that satisfy the
+            equation
+            $$7x + 11y = 2027.$$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <p><strong>Step 1 &mdash; Check B&eacute;zout&rsquo;s Condition:</strong> $\gcd(7, 11) = 1$, which divides
+                $2027$, so integer solutions exist.</p>
+            <p><strong>Step 2 &mdash; Find a Particular Solution $(x_0, y_0)$ Modulo the Smaller Coefficient
+                    ($7$):</strong></p>
+            <p>Reduce $7x + 11y = 2027$ modulo $7$. Since $2027 = 7 \times 289 + 4$ and $11 \equiv 4 \pmod{7}$:</p>
+            $$11y \equiv 2027 \pmod{7} \implies 4y \equiv 4 \pmod{7}$$
+            <p>Since $\gcd(4, 7) = 1$, we can cancel $4$ to obtain $y \equiv 1 \pmod{7}$. Choose the smallest positive
+                value $y_0 = 1$:</p>
+            $$7x_0 = 2027 - 11(1) = 2016 \implies x_0 = \frac{2016}{7} = 288$$
+            <p>Verify: $7(288) + 11(1) = 2016 + 11 = 2027$.</p>
+
+            <p><strong>Step 3 &mdash; Write the Complete Parametric Family &amp; Bound $t$:</strong></p>
+            $$x = 288 - 11t, \qquad y = 1 + 7t \qquad (t \in \mathbb{Z})$$
+            <p>Enforce the positive-integer conditions $x \ge 1$ and $y \ge 1$:</p>
+            <ul>
+                <li>$y \ge 1 \implies 1 + 7t \ge 1 \implies 7t \ge 0 \implies t \ge 0$.</li>
+                <li>$x \ge 1 \implies 288 - 11t \ge 1 \implies 11t \le 287 \implies t \le \dfrac{287}{11} = 26.09\ldots
+                    \implies t \le 26$.</li>
+            </ul>
+            <p>Therefore, $t$ takes every integer value in $\{0, 1, 2, \ldots, 26\}$, giving $26 - 0 + 1 = 27$ ordered
+                pairs (ranging from $(288, 1)$ at $t = 0$ down to $(2, 183)$ at $t = 26$).</p>
+
+            <div class="shortcut-box">
+                <strong>30-Second Exam Trick (Quotient-Remainder Test):</strong>
+                <p>Since $\gcd(7, 11) = 1$, divide $c = 2027$ by $ab = 7 \times 11 = 77$:</p>
+                $$2027 = 77 \times 26 + 25 \implies q = 26,\quad r = 25$$
+                <p>By the Quotient-Remainder Theorem, the positive integer count is $q + 1$ if $7x + 11y = r$ has a
+                    positive integer solution, and $q$ otherwise. Test $7x + 11y = 25$ mentally: $y = 1 \implies 7x = 14
+                    \implies x = 2$ works! Hence the exact count is immediately $26 + 1 = 27$.</p>
+            </div>
+            <p><strong>Final Answer:</strong> $27$ ordered pairs.</p>
+        </div>
+    </div>
+
+    <!-- Worked Example 8 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Homogeneous 3-Variable Ratio</span>
+            <strong>Worked Example 8: Evaluating a Degree-2 Symmetric Ratio from Two Equations</strong>
+        </div>
+        <div class="ex-problem">
+            If $x, y, z$ are non-zero real numbers satisfying
+            $$2x - 3y + 4z = 0$$
+            $$3x + 2y - 5z = 0$$
+            find the exact simplified value of $\dfrac{x^2 + y^2 + z^2}{xy + yz + zx}$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <p>Since $z \neq 0$, divide both equations by $z$ and set $p = \dfrac{x}{z}$ and $q = \dfrac{y}{z}$:</p>
+            $$2p - 3q = -4 \qquad \text{(1)}$$
+            $$3p + 2q = 5 \qquad \text{(2)}$$
+            <p>Eliminate $q$ by taking $2 \times \text{(1)} + 3 \times \text{(2)}$:</p>
+            $$(4p - 6q) + (9p + 6q) = -8 + 15 \implies 13p = 7 \implies p = \frac{7}{13}$$
+            <p>Substitute $p = \frac{7}{13}$ into Eq (2):</p>
+            $$2q = 5 - 3\left(\frac{7}{13}\right) = \frac{65 - 21}{13} = \frac{44}{13} \implies q = \frac{22}{13}$$
+            <p>Now divide numerator and denominator of the target expression by $z^2$:</p>
+            $$\frac{x^2 + y^2 + z^2}{xy + yz + zx} = \frac{p^2 + q^2 + 1}{pq + q + p} =
+            \frac{\left(\frac{7}{13}\right)^2 + \left(\frac{22}{13}\right)^2 +
+            1}{\left(\frac{7}{13}\right)\left(\frac{22}{13}\right) + \frac{22}{13} + \frac{7}{13}}$$
+            <p>Multiply numerator and denominator by $13^2 = 169$:</p>
+            $$= \frac{7^2 + 22^2 + 13^2}{7(22) + 22(13) + 13(7)} = \frac{49 + 484 + 169}{154 + 286 + 91} =
+            \frac{702}{531}$$
+            <p>Notice both $702$ and $531$ have digit sum $9$, so divide top and bottom by $9$:</p>
+            $$\frac{702 \div 9}{531 \div 9} = \frac{78}{59}$$
+            <p>Since $59$ is prime and $59 \nmid 78$, this fraction is in lowest terms.</p>
+
+            <div class="shortcut-box">
+                <strong>30-Second Exam Trick (Cross-Product Ratio + Scale Invariance):</strong>
+                <p>Skip $p, q$ fractions completely! Apply the Cross-Product Ratio Rule directly to the coefficient rows
+                    $[2,\ -3,\ 4]$ and $[3,\ 2,\ -5]$:</p>
+                $$x : y : z = \bigl((-3)(-5) - (2)(4)\bigr) : \bigl((4)(3) - (-5)(2)\bigr) : \bigl((2)(2) -
+                (3)(-3)\bigr) = 7 : 22 : 13$$
+                <p>Because $\frac{x^2+y^2+z^2}{xy+yz+zx}$ is homogeneous of degree $2$ in both numerator and
+                    denominator, plug in $(x, y, z) = (7, 22, 13)$ directly to get $\frac{49+484+169}{154+286+91} =
+                    \frac{702}{531} = \frac{78}{59}$ in 25 seconds!</p>
+            </div>
+            <p><strong>Final Answer:</strong> $\dfrac{78}{59}$.</p>
+        </div>
+    </div>
+
+    <!-- Worked Example 9 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Parametric Area Synthesis</span>
+            <strong>Worked Example 9: Area-Partitioning Ray Through the Origin</strong>
+        </div>
+        <div class="ex-problem">
+            The line $L_1: 3x + 4y = 24$ intersects the $x$-axis at $A$ and the $y$-axis at $B$. A line $L_2: y = kx$
+            (with $k > 0$) passes through the origin $O(0,0)$ and intersects segment $AB$ at point $P$. If
+            $\text{Area}(\triangle OAP) = \dfrac{1}{3}\,\text{Area}(\triangle OAB)$, find the value of $k$ and the
+            coordinates of $P$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <p><strong>Step 1 &mdash; Determine Intercepts &amp; Total Triangle Area:</strong></p>
+            <ul>
+                <li>Setting $y = 0$ in $3x + 4y = 24$ gives $x = 8 \implies A(8, 0)$.</li>
+                <li>Setting $x = 0$ in $3x + 4y = 24$ gives $y = 6 \implies B(0, 6)$.</li>
+            </ul>
+            $$\text{Area}(\triangle OAB) = \frac{1}{2} \times OA \times OB = \frac{1}{2} \times 8 \times 6 = 24 \text{
+            sq. units}$$
+            <p>Hence the required area is $\text{Area}(\triangle OAP) = \dfrac{1}{3}(24) = 8$ sq. units.</p>
+
+            <p><strong>Step 2 &mdash; Solve the Parametric System for $P(x_P, y_P)$:</strong></p>
+            <p>Substitute $y = kx$ into $3x + 4y = 24$:</p>
+            $$(3 + 4k)x_P = 24 \implies x_P = \frac{24}{3 + 4k}, \qquad y_P = kx_P = \frac{24k}{3 + 4k}$$
+
+            <p><strong>Step 3 &mdash; Equate $\text{Area}(\triangle OAP) = 8$ and Solve for $k$:</strong></p>
+            <p>Since $O(0,0)$ and $A(8,0)$ lie on the $x$-axis and $k > 0 \implies y_P > 0$, $\triangle OAP$ has base
+                $OA = 8$ and altitude $y_P$:</p>
+            $$\frac{1}{2} \times 8 \times y_P = 8 \implies 4y_P = 8 \implies y_P = 2$$
+            <p>Equating the two expressions for $y_P$:</p>
+            $$\frac{24k}{3 + 4k} = 2 \implies 24k = 6 + 8k \implies 16k = 6 \implies k = \frac{3}{8}$$
+            <p>Substituting $y_P = 2$ back into $3x_P + 4y_P = 24$ gives $3x_P + 8 = 24 \implies x_P = \dfrac{16}{3}$.
+                Thus $P = \left(\dfrac{16}{3}, 2\right)$.</p>
+
+            <div class="shortcut-box">
+                <strong>30-Second Exam Trick (Shared-Base Altitude Ratio / Section Formula):</strong>
+                <p>$\triangle OAP$ and $\triangle OAB$ share the exact same base $OA$ along the $x$-axis! Therefore, the
+                    ratio of their areas equals the ratio of their $y$-coordinates directly:</p>
+                $$\frac{y_P}{y_B} = \frac{\text{Area}(\triangle OAP)}{\text{Area}(\triangle OAB)} = \frac{1}{3} \implies
+                y_P = \frac{6}{3} = 2$$
+                <p>Plug $y_P = 2$ straight into $3x + 4y = 24 \implies x_P = \frac{16}{3}$, and read off the slope $k =
+                    \dfrac{y_P}{x_P} = \dfrac{2}{16/3} = \dfrac{3}{8}$. Zero parametric solving required!</p>
+            </div>
+            <p><strong>Final Answer:</strong> $k = \dfrac{3}{8}$ and $P = \left(\dfrac{16}{3},\ 2\right)$.</p>
+        </div>
+    </div>
+
+</article>

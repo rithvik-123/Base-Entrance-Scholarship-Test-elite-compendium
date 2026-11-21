@@ -1,0 +1,807 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 8: Pair of Linear Equations & Consistency Traps">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 2: Mathematics (Paper 1) &bull; Part 3: Full Step-by-Step Solutions &amp; Error
+            Forensics &bull; All 28 Problems Verified</div>
+        <h1>Chapter 8: Complete Solutions &amp; Error Forensics</h1>
+        <p>Zero-skip, fully verified derivations for every problem in the Chapter 8 Graded Practice Arena
+            (Q1&ndash;Q28), calibrated to the exact Answer Key, followed by four high-yield Trap &amp; Error Forensics
+            cards to immunize you against BEST Paper 1 mark-killers.</p>
+        <div class="tag-row">
+            <span class="meta-pill">Level 1: Q1&ndash;Q8</span>
+            <span class="meta-pill">Level 2: Q9&ndash;Q19</span>
+            <span class="meta-pill">Level 3: Q20&ndash;Q28</span>
+            <span class="meta-pill">4 Error Forensics Cards</span>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- LEVEL 1 SOLUTIONS (Q1 - Q8)                                           -->
+    <!-- ===================================================================== -->
+    <div class="level-banner l1">LEVEL 1 SOLUTIONS &mdash; Foundation Mechanics &amp; Standard Models (Q1&ndash;Q8)
+    </div>
+
+    <!-- S1 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q1</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p><strong>Given system:</strong> $3x - 2y = 5$ and $6x + ky = 10$.</p>
+        <p><strong>Step 1 &mdash; Set the determinant $\Delta = 0$:</strong></p>
+        $$\Delta = (3)(k) - (6)(-2) = 3k + 12 = 0 \implies 3k = -12 \implies k = -4$$
+        <p><strong>Step 2 &mdash; Substitute $k = -4$ back into Equation 2 to verify coincidence:</strong></p>
+        $$6x - 4y = 10 \iff 2(3x - 2y) = 2(5) \iff 3x - 2y = 5$$
+        <p>Both equations represent the identical line, yielding infinitely many solutions. Hence <strong>(A)
+                $-4$</strong>.</p>
+    </div>
+
+    <!-- S2 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q2</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p><strong>Given system:</strong> $2x + 3y = 7$ and $(k - 1)x + (k + 2)y = 3k + 1$.</p>
+        <p><strong>Step 1 &mdash; Solve $\Delta = 0$:</strong></p>
+        $$\Delta = 2(k + 2) - 3(k - 1) = 2k + 4 - 3k + 3 = 7 - k = 0 \implies k = 7$$
+        <p><strong>Step 2 &mdash; Substitute $k = 7$ back into Equation 2:</strong></p>
+        $$(7 - 1)x + (7 + 2)y = 3(7) + 1 \implies 6x + 9y = 22 \iff 2x + 3y = \frac{22}{3}$$
+        <p>Comparing with Equation 1 ($2x + 3y = 7 = \frac{21}{3}$), the lines have identical left-hand sides but
+            distinct constants ($\frac{22}{3} \neq 7$). Thus they are parallel and distinct (no solution) at $k = 7$.
+            Hence <strong>(D) $7$</strong>.</p>
+    </div>
+
+    <!-- S3 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q3</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Given symmetric system:</strong></p>
+        $$49x + 51y = 499 \qquad \text{(1)}$$
+        $$51x + 49y = 501 \qquad \text{(2)}$$
+        <p><strong>Step 1 &mdash; Add (1) + (2):</strong></p>
+        $$(49 + 51)x + (51 + 49)y = 499 + 501 \implies 100(x + y) = 1000 \implies x + y = 10$$
+        <p><strong>Step 2 &mdash; Subtract (2) &minus; (1):</strong></p>
+        $$(51 - 49)x + (49 - 51)y = 501 - 499 \implies 2(x - y) = 2 \implies x - y = 1$$
+        <p><strong>Step 3 &mdash; Apply the difference-of-squares identity directly (no need to find $x, y$
+                individually):</strong></p>
+        $$x^2 - y^2 = (x + y)(x - y) = 10 \times 1 = 10$$
+        <p>Hence <strong>(C) $10$</strong>.</p>
+    </div>
+
+    <!-- S4 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q4</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Given parametric system:</strong> $ax + by = a^2 + b^2$ and $bx - ay = 0$ with $a^2 + b^2 \neq 0$.
+        </p>
+        <p><strong>Apply $2 \times 2$ Cramer&rsquo;s Rule directly:</strong></p>
+        $$\Delta = \begin{vmatrix} a & b \\ b & -a \end{vmatrix} = -a^2 - b^2 = -(a^2 + b^2) \neq 0$$
+        $$\Delta_x = \begin{vmatrix} a^2 + b^2 & b \\ 0 & -a \end{vmatrix} = -a(a^2 + b^2) - 0 = -a(a^2 + b^2)$$
+        $$\Delta_y = \begin{vmatrix} a & a^2 + b^2 \\ b & 0 \end{vmatrix} = 0 - b(a^2 + b^2) = -b(a^2 + b^2)$$
+        <p>Therefore:</p>
+        $$x = \frac{\Delta_x}{\Delta} = \frac{-a(a^2 + b^2)}{-(a^2 + b^2)} = a, \qquad y = \frac{\Delta_y}{\Delta} =
+        \frac{-b(a^2 + b^2)}{-(a^2 + b^2)} = b$$
+        <p>Thus $(x, y) = (a, b)$. Hence <strong>(B)</strong>.</p>
+    </div>
+
+    <!-- S5 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q5</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Find the intersection $P$ of $x + y = 6$ and $x - y = 2$:</strong></p>
+        <p>Adding the two equations gives $2x = 8 \implies x = 4$. Substituting into $x + y = 6$ gives $y = 2$, so $P =
+            (4, 2)$.</p>
+        <p><strong>Step 2 &mdash; Find the $x$-intercepts (set $y = 0$):</strong></p>
+        <ul>
+            <li>$x + 0 = 6 \implies A(6, 0)$.</li>
+            <li>$x - 0 = 2 \implies B(2, 0)$.</li>
+        </ul>
+        <p><strong>Step 3 &mdash; Compute the triangle area:</strong></p>
+        <p>Base along the $x$-axis is $AB = |6 - 2| = 4$ units, and perpendicular height from $P(4, 2)$ to the $x$-axis
+            is $|y_P| = 2$ units:</p>
+        $$\text{Area}(\triangle PAB) = \frac{1}{2} \times 4 \times 2 = 4 \text{ sq. units}$$
+        <p>Hence <strong>(B) $4$</strong>.</p>
+    </div>
+
+    <!-- S6 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q6</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Answer: 10</span>
+        </div>
+        <p><strong>Step 1 &mdash; Linearize:</strong> Since $x, y \neq 0$, let $u = \dfrac{1}{x}$ and $v = \dfrac{1}{y}$
+            ($u, v \neq 0$):</p>
+        $$2u + 3v = 13 \qquad \text{(1)}$$
+        $$5u - 4v = -2 \qquad \text{(2)}$$
+        <p><strong>Step 2 &mdash; Eliminate $v$ via $4 \times \text{(1)} + 3 \times \text{(2)}$:</strong></p>
+        $$(8u + 12v) + (15u - 12v) = 52 + (-6) \implies 23u = 46 \implies u = 2$$
+        <p>Substitute $u = 2$ into (1): $2(2) + 3v = 13 \implies 3v = 9 \implies v = 3$.</p>
+        <p><strong>Step 3 &mdash; Recover $x, y$ and evaluate $12(x + y)$:</strong></p>
+        $$x = \frac{1}{u} = \frac{1}{2}, \qquad y = \frac{1}{v} = \frac{1}{3}$$
+        $$12(x + y) = 12\left(\frac{1}{2} + \frac{1}{3}\right) = 12\left(\frac{5}{6}\right) = 10$$
+        <p><strong>NAT Answer: $10$</strong>.</p>
+    </div>
+
+    <!-- S7 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q7</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Answer: 47</span>
+        </div>
+        <p>Let the original two-digit number be $10x + y$, where $x \in \{1, \dots, 9\}$ is the tens digit and $y \in
+            \{0, \dots, 9\}$ is the units digit.</p>
+        <ul>
+            <li><strong>Digit sum condition:</strong> $x + y = 11 \qquad \text{(1)}$.</li>
+            <li><strong>Reversal condition:</strong> The reversed number is $10y + x$, which exceeds $10x + y$ by $27$:
+                $$(10y + x) - (10x + y) = 27 \implies 9y - 9x = 27 \implies y - x = 3 \qquad \text{(2)}$$
+            </li>
+        </ul>
+        <p>Adding (1) and (2): $2y = 14 \implies y = 7$. Substituting into (1): $x = 11 - 7 = 4$.</p>
+        <p>Original number $= 10(4) + 7 = 47$. (Check: $74 - 47 = 27$ and $4 + 7 = 11$.)</p>
+        <p><strong>NAT Answer: $47$</strong>.</p>
+    </div>
+
+    <!-- S8 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q8</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Answer: 16</span>
+        </div>
+        <p>Let the fraction be $\dfrac{p}{q}$ with $\gcd(p, q) = 1$ and $p, q > 0$.</p>
+        <ul>
+            <li><strong>First condition:</strong> $\dfrac{p + 1}{q + 1} = \dfrac{4}{5} \implies 5(p + 1) = 4(q + 1)
+                \implies 5p - 4q = -1 \qquad \text{(1)}$.</li>
+            <li><strong>Second condition:</strong> $\dfrac{p - 5}{q - 5} = \dfrac{1}{2} \implies 2(p - 5) = q - 5
+                \implies q = 2p - 5 \qquad \text{(2)}$.</li>
+        </ul>
+        <p>Substitute (2) into (1):</p>
+        $$5p - 4(2p - 5) = -1 \implies 5p - 8p + 20 = -1 \implies -3p = -21 \implies p = 7$$
+        <p>Then $q = 2(7) - 5 = 9$. Since $\gcd(7, 9) = 1$, the fraction $\frac{7}{9}$ is in lowest terms. (Check:
+            $\frac{8}{10} = \frac{4}{5}$ and $\frac{2}{4} = \frac{1}{2}$.) Therefore:</p>
+        $$p + q = 7 + 9 = 16$$
+        <p><strong>NAT Answer: $16$</strong>.</p>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- LEVEL 2 SOLUTIONS (Q9 - Q19)                                          -->
+    <!-- ===================================================================== -->
+    <div class="level-banner l2">LEVEL 2 SOLUTIONS &mdash; BEST / NTSE Stage 2 Consistency Traps &amp; Applications
+        (Q9&ndash;Q19)</div>
+
+    <!-- S9 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q9</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Given system:</strong> $(k - 2)x + 4y = k + 1$ and $(k^2 - 4)x + (3k - 2)y = 2k + 5$.</p>
+        <p><strong>Step 1 &mdash; Factor the Determinant $\Delta = 0$ (Do NOT Divide by $k - 2$!):</strong></p>
+        $$\Delta = (k - 2)(3k - 2) - 4(k^2 - 4) = 0$$
+        <p>Write $k^2 - 4 = (k - 2)(k + 2)$ and factor out $(k - 2)$:</p>
+        $$(k - 2)\bigl[(3k - 2) - 4(k + 2)\bigr] = 0 \implies (k - 2)(-k - 10) = 0$$
+        <p>Thus $\Delta = 0$ yields two candidates: $k = 2$ and $k = -10$. (For all other $k \in \mathbb{R}$, $\Delta
+            \neq 0$, giving a unique solution.)</p>
+        <p><strong>Step 2 &mdash; Substitute BOTH Candidates Back into the Original System:</strong></p>
+        <ul>
+            <li><strong>Case $k = 2$:</strong>
+                $$\text{Eq (1): } 0x + 4y = 3 \implies y = \frac{3}{4}$$
+                $$\text{Eq (2): } 0x + 4y = 9 \implies y = \frac{9}{4}$$
+                These are two distinct parallel horizontal lines. Hence $k = 2$ yields <strong>no solution</strong>. (A
+                student using naive ratio division $\frac{k-2}{k^2-4}$ silently deletes this root!)
+            </li>
+            <li><strong>Case $k = -10$:</strong>
+                $$\text{Eq (1): } -12x + 4y = -9 \iff 12x - 4y = 9$$
+                $$\text{Eq (2): } 96x - 32y = -15 \iff 8(12x - 4y) = -15 \iff 12x - 4y = -\frac{15}{8}$$
+                Since $9 \neq -\frac{15}{8}$, these are also parallel distinct lines. Hence $k = -10$ also yields
+                <strong>no solution</strong>.
+            </li>
+        </ul>
+        <p><strong>Step 3 &mdash; Sum of all valid $k$:</strong> $2 + (-10) = -8$. Hence <strong>(B) $-8$</strong>.</p>
+    </div>
+
+    <!-- S10 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q10</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Given homogeneous system:</strong> $(a - 1)x + 3y = 0$ and $4x + (a + 3)y = 0$.</p>
+        <p><strong>Step 1 &mdash; Universal Consistency of Homogeneous Systems:</strong></p>
+        <p>Because both constant terms are $0$, $(x, y) = (0, 0)$ satisfies both equations for <em>every</em> real value
+            of $a$. Therefore, the system is <strong>always consistent</strong>&mdash;it can NEVER have &ldquo;no
+            solution&rdquo; (immediately eliminating (A) and (D)).</p>
+        <p><strong>Step 2 &mdash; Compute $\Delta$:</strong></p>
+        $$\Delta = (a - 1)(a + 3) - 3(4) = a^2 + 2a - 3 - 12 = a^2 + 2a - 15 = (a + 5)(a - 3)$$
+        <ul>
+            <li>For $a \in \{-5, 3\}$, $\Delta = 0$, so both lines pass through the origin with identical slopes
+                (coincident lines) $\implies$ <strong>infinitely many solutions</strong>.</li>
+            <li>For $a \notin \{-5, 3\}$, $\Delta \neq 0 \implies$ unique solution $(0, 0)$, which is the
+                <em>trivial</em> (zero) solution (making (B) false).
+            </li>
+        </ul>
+        <p>Hence <strong>(C)</strong> is the unique true statement.</p>
+    </div>
+
+    <!-- S11 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q11</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Enforce Principal Square-Root Domain:</strong></p>
+        <p>For $\frac{1}{\sqrt{x}}$ and $\frac{1}{\sqrt{y}}$ to be real, we strictly require $x > 0$ and $y > 0$, which
+            forces $u = \dfrac{1}{\sqrt{x}} > 0$ and $v = \dfrac{1}{\sqrt{y}} > 0$.</p>
+        <p><strong>Step 2 &mdash; Solve the Linearized System:</strong></p>
+        $$2u + 3v = 2 \qquad \text{(1)}$$
+        $$4u - 9v = -11 \qquad \text{(2)}$$
+        <p>Multiply (1) by $3$ and add to (2):</p>
+        $$(6u + 9v) + (4u - 9v) = 6 + (-11) \implies 10u = -5 \implies u = -\frac{1}{2}$$
+        <p>(And $v = \frac{2 - 2(-1/2)}{3} = 1$.)</p>
+        <p><strong>Step 3 &mdash; Domain Check:</strong> We obtained $\dfrac{1}{\sqrt{x}} = -\dfrac{1}{2} < 0$, which is
+                impossible for any real $x$ because $\sqrt{x}$ denotes the non-negative principal square root.
+                Therefore, the system has <strong>$0$ real solutions</strong>. Hence <strong>(A) $0$</strong>.</p>
+    </div>
+
+    <!-- S12 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q12</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Given system:</strong> $6x + 3y = 6xy$ (1) and $2x + 4y = 5xy$ (2).</p>
+        <p><strong>Case 1 &mdash; Boundary Check ($xy = 0$, before dividing by $xy$):</strong></p>
+        <ul>
+            <li>If $x = 0$, Eq (1) gives $3y = 0 \implies y = 0$. Checking $(0, 0)$ in Eq (2): $0 + 0 = 0$. Valid
+                solution #1: <strong>$(0, 0)$</strong>.</li>
+            <li>If $y = 0$, Eq (1) gives $6x = 0 \implies x = 0$, recovering $(0, 0)$ again.</li>
+        </ul>
+        <p><strong>Case 2 &mdash; Non-Zero Solutions ($x \neq 0$ and $y \neq 0$):</strong></p>
+        <p>Divide both equations by $xy \neq 0$, and let $u = \frac{1}{x},\ v = \frac{1}{y}$:</p>
+        $$\frac{6}{y} + \frac{3}{x} = 6 \iff u + 2v = 2 \qquad \text{(1')}$$
+        $$\frac{2}{y} + \frac{4}{x} = 5 \iff 4u + 2v = 5 \qquad \text{(2')}$$
+        <p>Subtracting (1') from (2'): $3u = 3 \implies u = 1 \implies x = 1$. Substituting into (1'): $1 + 2v = 2
+            \implies v = \frac{1}{2} \implies y = 2$. Valid solution #2: <strong>$(1, 2)$</strong>.</p>
+        <p>Thus there are exactly <strong>$2$</strong> distinct ordered pairs: $(0, 0)$ and $(1, 2)$. Hence <strong>(C)
+                $2$</strong>.</p>
+    </div>
+
+    <!-- S13 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q13</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p>Let the present ages of the father and son be $F$ and $S$ years respectively ($F > S$), so their constant age
+            gap is $d = F - S$.</p>
+        <ul>
+            <li><strong>Statement 1:</strong> &ldquo;When I was as old as you are now&rdquo; refers to $d = F - S$ years
+                <em>ago</em>. At that time, the son&rsquo;s age was $S - (F - S) = 2S - F$. Thus:
+                $$2S - F = \frac{1}{3}F \implies 2S = \frac{4}{3}F \implies S = \frac{2}{3}F \qquad \text{(1)}$$
+            </li>
+            <li><strong>Statement 2:</strong> &ldquo;When you become as old as I am now&rdquo; refers to $d = F - S$
+                years in the <em>future</em>. At that time, the son&rsquo;s age will be $F$ and the father&rsquo;s age
+                will be $F + (F - S) = 2F - S$. Their sum will be $126$:
+                $$(2F - S) + F = 126 \implies 3F - S = 126 \qquad \text{(2)}$$
+            </li>
+        </ul>
+        <p>Substitute (1) into (2):</p>
+        $$3F - \frac{2}{3}F = 126 \implies \frac{7}{3}F = 126 \implies F = 126 \times \frac{3}{7} = 18 \times 3 = 54$$
+        <p><em>Verification:</em> $F = 54,\ S = 36$, gap $= 18$. Eighteen years ago, father was $36$ and son was $18 =
+            \frac{54}{3}$. Eighteen years later, father is $72$ and son is $54$; sum $= 72 + 54 = 126$. Hence
+            <strong>(D) $54$</strong>.
+        </p>
+    </div>
+
+    <!-- S14 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q14</span>
+            <span class="badge badge-l2">Level 2 &bull; Passage 1</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Given lines:</strong> $L_1: 3x + 2y = 12$ and $L_2: x - 2y = -4$.</p>
+        <p><strong>Step 1 &mdash; Find Intersection $P$ and Intercepts $A, B, C, D$:</strong></p>
+        <ul>
+            <li>Adding $L_1$ and $L_2$: $4x = 8 \implies x = 2$. Substituting into $L_2$: $2 - 2y = -4 \implies y = 3$.
+                So $P = (2, 3)$.</li>
+            <li>$x$-intercepts ($y = 0$): $L_1 \implies A(4, 0)$; $L_2 \implies B(-4, 0)$.</li>
+            <li>$y$-intercepts ($x = 0$): $L_1 \implies C(0, 6)$; $L_2 \implies D(0, 2)$.</li>
+        </ul>
+        <p><strong>Step 2 &mdash; Compute Both Triangle Areas &amp; Ratio:</strong></p>
+        $$\text{Area}(\triangle PAB) = \frac{1}{2} \cdot |x_A - x_B| \cdot |y_P| = \frac{1}{2} \cdot |4 - (-4)| \cdot 3
+        = \frac{1}{2} \cdot 8 \cdot 3 = 12$$
+        $$\text{Area}(\triangle PCD) = \frac{1}{2} \cdot |y_C - y_D| \cdot |x_P| = \frac{1}{2} \cdot |6 - 2| \cdot 2 =
+        \frac{1}{2} \cdot 4 \cdot 2 = 4$$
+        <p>Therefore, $\text{Area}(\triangle PAB) : \text{Area}(\triangle PCD) = 12 : 4 = 3 : 1$. Hence <strong>(B) $3 :
+                1$</strong>.</p>
+    </div>
+
+    <!-- S15 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q15</span>
+            <span class="badge badge-l2">Level 2 &bull; Passage 1</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p>From Q14, the vertices of the first-quadrant quadrilateral $OAPD$ are $O(0, 0)$, $A(4, 0)$, $P(2, 3)$, and
+            $D(0, 2)$.</p>
+        <p><strong>Method 1 (Subtract Quadrant II Triangle from $\triangle PAB$):</strong></p>
+        <p>Line $L_2$ passes through $B(-4, 0)$ and $D(0, 2)$, cutting off the right triangle $\triangle OBD$ in
+            Quadrant II with legs $OB = 4$ and $OD = 2$:</p>
+        $$\text{Area}(\triangle OBD) = \frac{1}{2} \times 4 \times 2 = 4$$
+        $$\text{Area}(OAPD) = \text{Area}(\triangle PAB) - \text{Area}(\triangle OBD) = 12 - 4 = 8 \text{ sq. units}$$
+        <p><strong>Method 2 (Cross-Check via $\triangle OAC - \triangle PCD$):</strong></p>
+        $$\text{Area}(OAPD) = \text{Area}(\triangle OAC) - \text{Area}(\triangle PCD) = \frac{1}{2}(4)(6) - 4 = 12 - 4 =
+        8 \text{ sq. units}$$
+        <p>Hence <strong>(A) $8$</strong>.</p>
+    </div>
+
+    <!-- S16 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q16</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 77</span>
+        </div>
+        <p><strong>Step 1 &mdash; Linearize:</strong> Let $u = \dfrac{1}{2x + y}$ and $v = \dfrac{1}{2x - y}$ ($u, v
+            \neq 0$):</p>
+        $$u + v = \frac{3}{8} \qquad \text{(1)}$$
+        $$3u - 2v = -\frac{1}{8} \qquad \text{(2)}$$
+        <p><strong>Step 2 &mdash; Eliminate $v$ via $2 \times \text{(1)} + \text{(2)}$:</strong></p>
+        $$(2u + 2v) + (3u - 2v) = \frac{6}{8} - \frac{1}{8} \implies 5u = \frac{5}{8} \implies u = \frac{1}{8}$$
+        <p>Substituting $u = \frac{1}{8}$ into (1): $v = \frac{3}{8} - \frac{1}{8} = \frac{2}{8} = \frac{1}{4}$.</p>
+        <p><strong>Step 3 &mdash; Back-Substitute and Solve for $(x, y)$:</strong></p>
+        $$2x + y = 8 \qquad \text{and} \qquad 2x - y = 4$$
+        <p>Adding gives $4x = 12 \implies x = 3$; subtracting gives $2y = 4 \implies y = 2$. Both denominators ($8$ and
+            $4$) are non-zero. Therefore:</p>
+        $$17x + 13y = 17(3) + 13(2) = 51 + 26 = 77$$
+        <p><strong>NAT Answer: $77$</strong>.</p>
+    </div>
+
+    <!-- S17 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q17</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 140</span>
+        </div>
+        <p>Let the train&rsquo;s speed be $T\text{ km/h}$ and the car&rsquo;s speed be $C\text{ km/h}$ ($T, C > 0$).
+            Total distance $= 300\text{ km}$.</p>
+        <ul>
+            <li><strong>Trip 1:</strong> $60\text{ km}$ by train and $240\text{ km}$ by car in $4\text{ hours}$:
+                $$\frac{60}{T} + \frac{240}{C} = 4 \iff \frac{15}{T} + \frac{60}{C} = 1 \qquad \text{(1)}$$
+            </li>
+            <li><strong>Trip 2:</strong> $100\text{ km}$ by train and $200\text{ km}$ by car in $4\text{ h } 10\text{
+                min} = 4 + \frac{1}{6} = \frac{25}{6}\text{ hours}$:
+                $$\frac{100}{T} + \frac{200}{C} = \frac{25}{6} \iff \frac{4}{T} + \frac{8}{C} = \frac{1}{6} \iff
+                \frac{24}{T} + \frac{48}{C} = 1 \qquad \text{(2)}$$
+            </li>
+        </ul>
+        <p>Set $u = \frac{1}{T}$ and $v = \frac{1}{C}$. Then $15u + 60v = 1$ and $24u + 48v = 1$. Multiply the first by
+            $4$ and the second by $5$ to align $240v$:</p>
+        $$60u + 240v = 4$$
+        $$120u + 240v = 5$$
+        <p>Subtracting gives $60u = 1 \implies u = \frac{1}{60} \implies T = 60\text{ km/h}$. Substituting into $15u +
+            60v = 1$:</p>
+        $$\frac{15}{60} + 60v = 1 \implies 60v = \frac{3}{4} \implies v = \frac{1}{80} \implies C = 80\text{ km/h}$$
+        <p>Therefore, $T + C = 60 + 80 = 140\text{ km/h}$.</p>
+        <p><strong>NAT Answer: $140$</strong>.</p>
+    </div>
+
+    <!-- S18 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q18</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 15</span>
+        </div>
+        <p>Let $x$ be the number of ₹$5$ tokens and $y$ be the number of ₹$8$ tokens. Because using zero tokens of one
+            denomination is permitted, we seek all <strong>non-negative integer</strong> pairs $(x, y) \in
+            \mathbb{Z}_{\ge 0}^2$ satisfying:</p>
+        $$5x + 8y = 575$$
+        <p><strong>Step 1 &mdash; Reduce Modulo $5$:</strong></p>
+        $$8y \equiv 575 \equiv 0 \pmod{5} \implies 3y \equiv 0 \pmod{5} \implies y \equiv 0 \pmod{5}$$
+        <p><strong>Step 2 &mdash; Parametrize &amp; Enforce $x \ge 0,\ y \ge 0$:</strong></p>
+        <p>Write $y = 5t$ ($t \in \mathbb{Z}$). Substituting into $5x + 8(5t) = 575$ and dividing by $5$ yields:</p>
+        $$x = 115 - 8t, \qquad y = 5t$$
+        <ul>
+            <li>$y \ge 0 \implies 5t \ge 0 \implies t \ge 0$.</li>
+            <li>$x \ge 0 \implies 115 - 8t \ge 0 \implies 8t \le 115 \implies t \le \dfrac{115}{8} = 14.375 \implies t
+                \le 14$.</li>
+        </ul>
+        <p>Thus $t \in \{0, 1, 2, \dots, 14\}$, giving $14 - 0 + 1 = 15$ distinct ways (from $(115, 0)$ down to $(3,
+            70)$).</p>
+        <p><strong>NAT Answer: $15$</strong>.</p>
+    </div>
+
+    <!-- S19 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q19</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 650</span>
+        </div>
+        <p><strong>Given homogeneous system:</strong> $3x - 2y - z = 0$ and $2x + y - 5z = 0$.</p>
+        <p><strong>Step 1 &mdash; Find $x : y : z$ by the Cross-Product Ratio Rule:</strong></p>
+        <p>Using coefficient rows $[3,\ -2,\ -1]$ and $[2,\ 1,\ -5]$:</p>
+        $$\frac{x}{(-2)(-5) - (1)(-1)} = \frac{y}{(-1)(2) - (-5)(3)} = \frac{z}{(3)(1) - (2)(-2)}$$
+        $$\frac{x}{10 + 1} = \frac{y}{-2 + 15} = \frac{z}{3 + 4} \implies \frac{x}{11} = \frac{y}{13} = \frac{z}{7} = k
+        \quad (k \neq 0)$$
+        <p><em>Quick Verification:</em> $3(11) - 2(13) - 7 = 33 - 26 - 7 = 0$ and $2(11) + 13 - 5(7) = 22 + 13 - 35 =
+            0$.</p>
+        <p><strong>Step 2 &mdash; Substitute $x = 11k,\ y = 13k,\ z = 7k$ (cancelling $k^2$):</strong></p>
+        $$\frac{x^2 + y^2 + z^2}{xy + yz + zx} = \frac{11^2 + 13^2 + 7^2}{11(13) + 13(7) + 7(11)} = \frac{121 + 169 +
+        49}{143 + 91 + 77} = \frac{339}{311}$$
+        <p><strong>Step 3 &mdash; Check Coprimality:</strong> Since $\sqrt{311} \approx 17.6$ and none of the primes
+            $\{2, 3, 5, 7, 11, 13, 17\}$ divide $311$, $311$ is prime and $311 \nmid 339$. Thus $p = 339$ and $q = 311$,
+            giving:</p>
+        $$p + q = 339 + 311 = 650$$
+        <p><strong>NAT Answer: $650$</strong>.</p>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- LEVEL 3 SOLUTIONS (Q20 - Q28)                                         -->
+    <!-- ===================================================================== -->
+    <div class="level-banner l3">LEVEL 3 SOLUTIONS &mdash; IOQM-Lite &amp; Olympiad Bridges (Q20&ndash;Q28)</div>
+
+    <!-- S20 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q20</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Given system:</strong></p>
+        $$(k^2 - 1)x + (k - 1)y = k - 1 \qquad \text{(1)}$$
+        $$(k + 1)x + y = k^2 - 5k + 7 \qquad \text{(2)}$$
+        <p><strong>Step 1 &mdash; Check Determinant $\Delta$:</strong></p>
+        $$\Delta = (k^2 - 1)(1) - (k + 1)(k - 1) = (k^2 - 1) - (k^2 - 1) = 0 \quad \text{for ALL } k \in \mathbb{R}$$
+        <p>Because $\Delta \equiv 0$ identically, for every real $k$ the system has either no solution or infinitely
+            many solutions. We split strictly on whether the common factor $(k - 1)$ in Eq (1) vanishes!</p>
+        <p><strong>Case 1 &mdash; Degenerate Case $k = 1$:</strong></p>
+        <ul>
+            <li>Eq (1) becomes $(1 - 1)x + (1 - 1)y = 1 - 1 \implies 0x + 0y = 0$, which is satisfied by <em>every</em>
+                point $(x, y) \in \mathbb{R}^2$.</li>
+            <li>Eq (2) becomes $2x + y = 1 - 5 + 7 = 3$, which is a valid straight line containing infinitely many
+                points.</li>
+        </ul>
+        <p>Hence the combined solution set at $k = 1$ is the entire line $2x + y = 3$, giving <strong>infinitely many
+                solutions</strong>! Thus $k = 1$ MUST be included.</p>
+        <p><strong>Case 2 &mdash; Non-Degenerate Case $k \neq 1$:</strong></p>
+        <p>Since $k - 1 \neq 0$, we may legally divide Eq (1) by $(k - 1)$:</p>
+        $$(k + 1)x + y = 1$$
+        <p>For this line to coincide with Eq (2), $(k + 1)x + y = k^2 - 5k + 7$, the right-hand sides must match:</p>
+        $$k^2 - 5k + 7 = 1 \implies k^2 - 5k + 6 = 0 \implies (k - 2)(k - 3) = 0 \implies k = 2 \text{ or } k = 3$$
+        <p>Combining Case 1 and Case 2, the complete set of real values is $\{1, 2, 3\}$. Hence <strong>(C) $\{1, 2,
+                3\}$</strong>.</p>
+    </div>
+
+    <!-- S21 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q21</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Given system:</strong> $kx + 4y = 22$ (1) and $3x + 2y = 5$ (2).</p>
+        <p><strong>Step 1 &mdash; Eliminate $y$ to Express $x$ in Terms of $k$:</strong></p>
+        <p>Multiply Eq (2) by $2$ to get $6x + 4y = 10$, then subtract from Eq (1):</p>
+        $$(k - 6)x = 12$$
+        <p>For a unique solution, $\Delta = 2k - 12 = 2(k - 6) \neq 0$, so $k \neq 6$, and:</p>
+        $$x = \frac{12}{k - 6}$$
+        <p><strong>Step 2 &mdash; Enforce BOTH $x \in \mathbb{Z}$ AND $y \in \mathbb{Z}$ (The Parity Filter!):</strong>
+        </p>
+        <p>From Eq (2), $y = \dfrac{5 - 3x}{2}$. For $y$ to be an integer, $5 - 3x$ must be <strong>even</strong>, which
+            forces $3x$ to be <strong>odd</strong>, and hence $x$ must be an <strong>odd integer</strong>!</p>
+        <p><strong>Step 3 &mdash; Count Odd Divisors of $12$:</strong></p>
+        <p>Since $k \in \mathbb{Z}$, $k - 6$ is an integer, so $x = \frac{12}{k - 6}$ can be any integer divisor of $12$
+            (positive or negative). The <em>odd</em> integer divisors of $12$ are precisely $x \in \{1, -1, 3, -3\}$.
+            Each yields a unique integer $k = 6 + \frac{12}{x}$:</p>
+        <ul>
+            <li>$x = 1 \implies k = 18,\; y = 1$</li>
+            <li>$x = -1 \implies k = -6,\; y = 4$</li>
+            <li>$x = 3 \implies k = 10,\; y = -2$</li>
+            <li>$x = -3 \implies k = 2,\; y = 7$</li>
+        </ul>
+        <p>Notice that all $8$ even divisors of $12$ ($\pm 2, \pm 4, \pm 6, \pm 12$) produce half-integer values of $y$
+            and must be rejected! Thus there are exactly <strong>$4$</strong> integer values of $k$. Hence <strong>(B)
+                $4$</strong>.</p>
+    </div>
+
+    <!-- S22 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q22</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p>Purchasing $n$ muffins using $x \ge 0$ boxes of $7$ and $y \ge 0$ boxes of $11$ corresponds to solving $7x +
+            11y = n$ in non-negative integers.</p>
+        <p>Since $\gcd(7, 11) = 1$, apply the <strong>Frobenius Coin (Chicken McNugget) Theorem</strong> directly:</p>
+        <ol>
+            <li><strong>Largest unrepresentable integer:</strong>
+                $$g(7, 11) = (7)(11) - 7 - 11 = 77 - 18 = 59$$
+            </li>
+            <li><strong>Total count of unrepresentable positive integers:</strong>
+                <p>Partition $\{1, 2, \dots, 59\}$ (along with $0$, which IS representable, and $60$, which IS
+                    representable as $7(7) + 11(1) = 60$? Wait: $7(7) + 11(1) = 60$, yes!) into complementary pairs
+                    $\{k, 59 - k\}$ for $k = 0, 1, \dots, 29$. Exactly one element of each of the $30$ pairs is
+                    representable, leaving exactly:</p>
+                $$N(7, 11) = \frac{(7 - 1)(11 - 1)}{2} = \frac{6 \times 10}{2} = 30$$
+            </li>
+        </ol>
+        <p>Hence <strong>(A) Largest $= 59$, Count $= 30$</strong>.</p>
+    </div>
+
+    <!-- S23 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q23</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p><strong>Given lines:</strong> $L_1: 2x + y = 8$, $L_2: x - 2y = -1$, and $L_3: kx + 2y = 22$.</p>
+        <p>First observe that $L_1$ and $L_2$ are NOT parallel ($\Delta(L_1, L_2) = 2(-2) - 1(1) = -5 \neq 0$).
+            Therefore, three lines fail to form a triangle in the plane if and only if one of three mutually exclusive
+            conditions occurs:</p>
+        <ol>
+            <li><strong>$L_3$ is parallel to $L_1$:</strong>
+                $$\Delta(L_1, L_3) = (2)(2) - (k)(1) = 4 - k = 0 \implies k = 4$$
+            </li>
+            <li><strong>$L_3$ is parallel to $L_2$:</strong>
+                $$\Delta(L_2, L_3) = (1)(2) - (k)(-2) = 2 + 2k = 0 \implies k = -1$$
+            </li>
+            <li><strong>$L_1, L_2, L_3$ are concurrent (all three meet at a single point $P$):</strong>
+                <p>Find $P = L_1 \cap L_2$: from $L_2$, $x = 2y - 1$. Substituting into $L_1$: $2(2y - 1) + y = 8
+                    \implies 5y = 10 \implies y = 2$, and $x = 2(2) - 1 = 3$. Thus $P = (3, 2)$.</p>
+                <p>Force $L_3$ to pass through $P(3, 2)$:</p>
+                $$k(3) + 2(2) = 22 \implies 3k + 4 = 22 \implies 3k = 18 \implies k = 6$$
+            </li>
+        </ol>
+        <p>The three distinct real values are $k \in \{-1, 4, 6\}$, whose sum is $-1 + 4 + 6 = 9$. Hence <strong>(D)
+                $9$</strong>.</p>
+    </div>
+
+    <!-- S24 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q24</span>
+            <span class="badge badge-l3">Level 3 &bull; Passage 2</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Given Diophantine line:</strong> $5x + 12y = 426$ with $x, y \in \mathbb{Z}^+$ ($x \ge 1,\ y \ge 1$).
+            Note $\gcd(5, 12) = 1$.</p>
+        <p><strong>Step 1 &mdash; Reduce Modulo $5$ to Find $P_{\text{first}}$:</strong></p>
+        $$12y \equiv 426 \pmod{5} \implies 2y \equiv 1 \pmod{5}$$
+        <p>Multiplying by $3$ (since $3 \times 2 = 6 \equiv 1 \pmod{5}$): $y \equiv 3 \pmod{5}$. The smallest positive
+            value is $y_0 = 3$, giving:</p>
+        $$5x_0 = 426 - 12(3) = 426 - 36 = 390 \implies x_0 = 78$$
+        <p>Thus the point with the largest $x$-coordinate is $P_{\text{first}} = (78, 3)$.</p>
+        <p><strong>Step 2 &mdash; Parametrize &amp; Bound $t$:</strong></p>
+        $$x = 78 - 12t, \qquad y = 3 + 5t \qquad (t \in \mathbb{Z})$$
+        <ul>
+            <li>$y \ge 1 \implies 3 + 5t \ge 1 \implies t \ge -\frac{2}{5} \implies t \ge 0$.</li>
+            <li>$x \ge 1 \implies 78 - 12t \ge 1 \implies 12t \le 77 \implies t \le \dfrac{77}{12} = 6.416\ldots
+                \implies t \le 6$.</li>
+        </ul>
+        <p>Thus $t \in \{0, 1, 2, 3, 4, 5, 6\}$, giving $6 - 0 + 1 = 7$ positive integer lattice points. Hence
+            <strong>(C) $7$</strong>.
+        </p>
+    </div>
+
+    <!-- S25 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q25</span>
+            <span class="badge badge-l3">Level 3 &bull; Passage 2</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p>From Q24, the extreme lattice points correspond to $t = 0$ and $t = 6$:</p>
+        <ul>
+            <li>$P_{\text{first}} = (78, 3)$ (at $t = 0$).</li>
+            <li>$P_{\text{last}} = (78 - 12(6),\; 3 + 5(6)) = (6, 33)$ (at $t = 6$).</li>
+        </ul>
+        <p><strong>Method 1 &mdash; Shoelace Formula with Origin $O(0, 0)$:</strong></p>
+        $$\text{Area}(\triangle O P_{\text{first}} P_{\text{last}}) = \frac{1}{2}\bigl|x_1 y_2 - x_2 y_1\bigr| =
+        \frac{1}{2}\bigl|(78)(33) - (6)(3)\bigr|$$
+        $$= \frac{1}{2}\bigl|2574 - 18\bigr| = \frac{2556}{2} = 1278 \text{ sq. units}$$
+        <p><strong>Method 2 &mdash; Olympiad Geometry Shortcut (Base $\times$ Perpendicular Distance):</strong></p>
+        <p>Each lattice step has vector $(-12, +5)$ of length $\sqrt{(-12)^2 + 5^2} = 13$, so $6$ steps give base
+            $P_{\text{first}} P_{\text{last}} = 6 \times 13 = 78$. The perpendicular distance from $O(0, 0)$ to $5x +
+            12y - 426 = 0$ is $h = \dfrac{426}{\sqrt{5^2 + 12^2}} = \dfrac{426}{13}$. Thus $\text{Area} =
+            \frac{1}{2}(78)\left(\frac{426}{13}\right) = 3 \times 426 = 1278$!</p>
+        <p>Hence <strong>(B) $1278$</strong>.</p>
+    </div>
+
+    <!-- S26 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q26</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Answer: 9</span>
+        </div>
+        <p><strong>Given equation:</strong> $13x + 17y = 2026$ with $x, y \in \mathbb{Z}^+$. Since $13$ and $17$ are
+            distinct primes, $\gcd(13, 17) = 1$.</p>
+        <p><strong>Step 1 &mdash; Find Particular Solution Modulo $13$:</strong></p>
+        <p>Divide $2026$ by $13$: $2026 = 13 \times 155 + 11$, so $2026 \equiv 11 \pmod{13}$, and $17 \equiv 4
+            \pmod{13}$:</p>
+        $$4y \equiv 11 \pmod{13}$$
+        <p>Add $13$ to the RHS so it becomes divisible by $4$: $4y \equiv 11 + 13 = 24 \pmod{13} \implies y \equiv 6
+            \pmod{13}$.</p>
+        <p>Take $y_0 = 6$: $13x_0 = 2026 - 17(6) = 2026 - 102 = 1924 \implies x_0 = \dfrac{1924}{13} = 148$.</p>
+        <p><strong>Step 2 &mdash; Parametrize &amp; Bound $t$:</strong></p>
+        $$x = 148 - 17t, \qquad y = 6 + 13t \qquad (t \in \mathbb{Z})$$
+        <ul>
+            <li>$y \ge 1 \implies 6 + 13t \ge 1 \implies t \ge -\frac{5}{13} \implies t \ge 0$.</li>
+            <li>$x \ge 1 \implies 148 - 17t \ge 1 \implies 17t \le 147 \implies t \le \dfrac{147}{17} = 8.647\ldots
+                \implies t \le 8$.</li>
+        </ul>
+        <p>Hence $t \in \{0, 1, 2, \dots, 8\}$, yielding $8 - 0 + 1 = 9$ ordered pairs.</p>
+        <p><em>30-Second Quotient-Remainder Verification:</em> $13 \times 17 = 221$, and $2026 = 221 \times 9 + 37$ ($q
+            = 9,\ r = 37$). Check $13x + 17y = 37$ in positive integers: $y = 1 \implies 13x = 20$ (no); $y = 2 \implies
+            13x = 3$ (no). Since $r = 37$ has no positive solution, the exact count is $q = 9$.</p>
+        <p><strong>NAT Answer: $9$</strong>.</p>
+    </div>
+
+    <!-- S27 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q27</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Answer: 68</span>
+        </div>
+        <p><strong>Step 1 &mdash; Invert Each Reciprocal Equation:</strong></p>
+        <p>Since $x, y, z \neq 0$, take reciprocals of all three equations and split each fraction:</p>
+        $$\frac{2x + 3y}{xy} = 12 \implies \frac{3}{x} + \frac{2}{y} = 12$$
+        $$\frac{3y + 4z}{yz} = 27 \implies \frac{4}{y} + \frac{3}{z} = 27$$
+        $$\frac{4z + 2x}{zx} = 18 \implies \frac{4}{x} + \frac{2}{z} = 18$$
+        <p><strong>Step 2 &mdash; Linearize with $a = \frac{1}{x},\ b = \frac{1}{y},\ c = \frac{1}{z}$:</strong></p>
+        $$3a + 2b = 12 \qquad \text{(1)}$$
+        $$4b + 3c = 27 \qquad \text{(2)}$$
+        $$4a + 2c = 18 \iff 2a + c = 9 \implies c = 9 - 2a \qquad \text{(3)}$$
+        <p>Substitute (3) into (2):</p>
+        $$4b + 3(9 - 2a) = 27 \implies 4b + 27 - 6a = 27 \implies 4b = 6a \implies 2b = 3a$$
+        <p>Substitute $2b = 3a$ into (1):</p>
+        $$3a + 3a = 12 \implies 6a = 12 \implies a = 2$$
+        <p>Immediately $2b = 3(2) = 6 \implies b = 3$, and $c = 9 - 2(2) = 5$.</p>
+        <p><strong>Step 3 &mdash; Evaluate the Target Expression:</strong></p>
+        $$\frac{1}{xyz} + \frac{1}{x^2} + \frac{1}{y^2} + \frac{1}{z^2} = abc + a^2 + b^2 + c^2 = (2)(3)(5) + 2^2 + 3^2
+        + 5^2 = 30 + 4 + 9 + 25 = 68$$
+        <p><strong>NAT Answer: $68$</strong>.</p>
+    </div>
+
+    <!-- S28 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q28</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Answer: 125</span>
+        </div>
+        <p><strong>Step 1 &mdash; Intercepts of $L_1: 5x + 6y = 60$:</strong></p>
+        <p>Setting $y = 0$ gives $A(12, 0)$; setting $x = 0$ gives $B(0, 10)$.</p>
+        <p><strong>Step 2 &mdash; Equal-Area Trisection Property:</strong></p>
+        <p>The three triangles $\triangle OAP$, $\triangle OPQ$, and $\triangle OQB$ all share the exact same
+            perpendicular altitude from the origin $O$ to the line $AB$. Therefore, equal areas imply equal bases along
+            $AB$: $AP = PQ = QB$. Thus $P$ and $Q$ are the <strong>points of trisection</strong> of segment $AB$!</p>
+        <ul>
+            <li><strong>Point $P$ (closer to $A$, divides $AB$ in ratio $1 : 2$):</strong>
+                $$P = \left(\frac{2(12) + 1(0)}{3},\; \frac{2(0) + 1(10)}{3}\right) = \left(8,\; \frac{10}{3}\right)$$
+                Since $P$ lies on $y = mx$:
+                $$m = \frac{y_P}{x_P} = \frac{10/3}{8} = \frac{10}{24} = \frac{5}{12}$$
+            </li>
+            <li><strong>Point $Q$ (closer to $B$, divides $AB$ in ratio $2 : 1$):</strong>
+                $$Q = \left(\frac{1(12) + 2(0)}{3},\; \frac{1(0) + 2(10)}{3}\right) = \left(4,\; \frac{20}{3}\right)$$
+                Since $Q$ lies on $y = nx$:
+                $$n = \frac{y_Q}{x_Q} = \frac{20/3}{4} = \frac{20}{12} = \frac{5}{3}$$
+            </li>
+        </ul>
+        <p>Check: $n = \frac{5}{3} > m = \frac{5}{12} > 0$, and both $P, Q$ satisfy $5x + 6y = 60$.</p>
+        <p><strong>Step 3 &mdash; Compute $60(m + n)$:</strong></p>
+        $$60(m + n) = 60\left(\frac{5}{12} + \frac{5}{3}\right) = 60\left(\frac{5 + 20}{12}\right) = 5 \times 25 = 125$$
+        <p><strong>NAT Answer: $125$</strong>.</p>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- TRAP & ERROR FORENSICS CARDS                                          -->
+    <!-- ===================================================================== -->
+    <h2 class="section-heading">Trap &amp; Error Forensics &mdash; Chapter 8 Post-Mortem</h2>
+
+    <!-- Trap Card 1 -->
+    <div class="trap-box">
+        <span class="box-label">Error Forensics #1 &mdash; The $k^2 = c \implies k = \pm\sqrt{c}$ Extraneous-Root
+            Trap</span>
+        <p><strong>The Blunder:</strong> In problems like $kx + 3y = k - 3,\; 12x + ky = k$ (Worked Example 1) or
+            homogeneous systems like Q10, setting $\Delta = 0$ produces a quadratic such as $k^2 = 36 \implies k = \pm
+            6$. Students reflexively mark <strong>both</strong> roots $+6$ and $-6$ as the answer for &ldquo;infinitely
+            many solutions&rdquo; or &ldquo;no solution.&rdquo;</p>
+        <p><strong>Why It Fails:</strong> The condition $\Delta = a_1 b_2 - a_2 b_1 = 0$ ONLY guarantees that the two
+            lines have the <strong>same slope</strong> (parallel OR coincident). It does NOT distinguish between the
+            two! Almost universally in exam design, one root ($k = +6$) aligns the constant terms to produce
+            <em>infinitely many solutions</em> while the opposite root ($k = -6$) misaligns them to produce <em>no
+                solution</em>. Conversely, in a homogeneous system ($c_1 = c_2 = 0$, Q10), BOTH roots produce infinitely
+            many solutions and NEITHER can produce no solution.
+        </p>
+        <p><strong>Exam Antidote:</strong> Treat $\Delta = 0$ strictly as a <em>candidate generator</em>. Budget 10
+            seconds to plug every single root back into both original equations and visually confirm identical lines vs.
+            contradiction.</p>
+    </div>
+
+    <!-- Trap Card 2 -->
+    <div class="trap-box">
+        <span class="box-label">Error Forensics #2 &mdash; Zero-Denominator &amp; Premature Cancellation in Ratio
+            Tests</span>
+        <p><strong>The Blunder:</strong> Writing $\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2}$ directly when coefficients
+            contain parameters&mdash;as in Q9, where writing $\dfrac{k-2}{k^2-4} = \dfrac{4}{3k-2}$ and cancelling
+            $(k-2)$ yields only $k = -10$ and completely loses $k = 2$; or in Q20, where cancelling $(k - 1)$ silently
+            deletes the degenerate identity $0x + 0y = 0$ at $k = 1$.</p>
+        <p><strong>Why It Fails:</strong> Algebraic cancellation $\frac{f(k)}{f(k)} = 1$ is strictly illegal whenever
+            $f(k) = 0$. Furthermore, two horizontal lines ($0x + 4y = 3$ and $0x + 4y = 9$) or a degenerate identity
+            ($0x + 0y = 0$) have undefined ratios $\frac{0}{0}$ yet are 100% valid geometric configurations.</p>
+        <p><strong>Exam Antidote:</strong> Ban fractions during the first step of any parametric consistency problem.
+            Always write $\Delta = a_1 b_2 - a_2 b_1 = 0$ as a factored polynomial, list <em>all</em> roots (including
+            zeros of common factors!), and explicitly inspect any value where an entire row $(a_i, b_i)$ becomes $(0,
+            0)$.</p>
+    </div>
+
+    <!-- Trap Card 3 -->
+    <div class="trap-box">
+        <span class="box-label">Error Forensics #3 &mdash; Reducible-System Domain Killers ($\sqrt{x} > 0$ &amp; Lost
+            Origin)</span>
+        <p><strong>The Blunder:</strong> (a) In Q11, substituting $u = \frac{1}{\sqrt{x}}$, getting $u = -\frac{1}{2}$,
+            and mindlessly squaring to claim $x = 4$ is a solution. (b) In Q12, dividing $6x + 3y = 6xy$ by $xy$ without
+            first testing $xy = 0$, thereby reporting only $1$ solution $(1, 2)$ instead of $2$ solutions $\{(0, 0), (1,
+            2)\}$.</p>
+        <p><strong>Why It Fails:</strong> Every variable substitution $u = g(x)$ carries an invisible <strong>range
+                constraint</strong>. For $u = \frac{1}{\sqrt{x}}$, the range over $\mathbb{R}$ is strictly $(0,
+            \infty)$&mdash;never negative! And dividing an equation by a variable expression $xy$ silently assumes $xy
+            \neq 0$, discarding boundary solutions lying on the coordinate axes.</p>
+        <p><strong>Exam Antidote:</strong> Before linearizing, write a 2-word domain header on your scratchpad:
+            &ldquo;Require $u > 0, v > 0$&rdquo; for radicals, or &ldquo;Test $x=0, y=0$ first&rdquo; whenever variables
+            multiply on the RHS.</p>
+    </div>
+
+    <!-- Trap Card 4 -->
+    <div class="trap-box">
+        <span class="box-label">Error Forensics #4 &mdash; Diophantine Boundary Off-By-One &amp; Integer-Parity
+            Errors</span>
+        <p><strong>The Blunder:</strong> Three fatal off-by-one traps dominate Olympiad Diophantine counting (Q18, Q24,
+            Q26) and integer-parameter systems (Q21):</p>
+        <ul>
+            <li><strong>Positive vs. Non-Negative Confusion:</strong> Using $x \ge 1$ when zero is allowed (Q18:
+                &ldquo;zero tokens permitted&rdquo; $\implies x \ge 0,\ y \ge 0$) drops the boundary solution $(115, 0)$
+                and gives $14$ instead of $15$. Conversely, using $x \ge 0$ when positive integers are required adds
+                fake axis intercepts.</li>
+            <li><strong>Fencepost Miscounting:</strong> Finding $0 \le t \le 8$ (Q26) and reporting $8 - 0 = 8$ instead
+                of $t_{\max} - t_{\min} + 1 = 9$.</li>
+            <li><strong>Half-Integer Blindness (Q21):</strong> Counting all $12$ integer divisors of $12$ for $x =
+                \frac{12}{k-6}$ without checking whether $y = \frac{5 - 3x}{2}$ is ALSO an integer! Parity eliminates
+                all $8$ even divisors immediately.</li>
+        </ul>
+        <p><strong>Exam Antidote:</strong> Underline the exact domain phrase (&ldquo;positive integers&rdquo; $\to \ge
+            1$ vs. &ldquo;non-negative / whole numbers&rdquo; $\to \ge 0$), explicitly list the first and last pairs
+            $(x, y)$ at $t_{\min}$ and $t_{\max}$ to verify both are valid, and always apply the inclusive count formula
+            $t_{\max} - t_{\min} + 1$.</p>
+    </div>
+
+</article>

@@ -1,0 +1,1260 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 6: Real Numbers, Irrationality, Surds & Logarithms Bridge">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">VOLUME 2: MATHEMATICS (PAPER 1) &bull; PART 1: THEORY &amp; WORKED EXAMPLES</div>
+        <h1>Chapter 6: Real Numbers, Irrationality, Surds &amp; Logarithms Bridge</h1>
+        <p>From the Fundamental Theorem of Arithmetic and nested irrational expressions to Class 11 Foundation
+            Logarithms and Modulus Inequalities—engineered to bridge NCERT Class 10 directly to BEST, NTSE Stage 2, and
+            IOQM-lite mastery.</p>
+        <div class="tag-row">
+            <span class="meta-pill">Target Study Time: 6 Hours</span>
+            <span class="meta-pill">BEST Paper 1 Core + Bridge</span>
+            <span class="meta-pill">3 Vector Diagrams</span>
+            <span class="meta-pill">9 Graded Worked Examples</span>
+        </div>
+    </header>
+
+    <!-- ==================== SECTION 1 ==================== -->
+    <h2 class="section-heading">6.1 Fundamental Theorem of Arithmetic, Divisors &amp; Decimal Expansions</h2>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Core &bull; Unique Prime Factorization</span>
+        <p><strong>Fundamental Theorem of Arithmetic (FTA):</strong> Every composite integer $N \gt 1$ can be expressed
+            as a product of prime numbers, and this factorization is <em>unique</em> apart from the order in which the
+            prime factors occur. Grouping identical primes yields the <strong>canonical prime factorization</strong>:
+        </p>
+        $$N = p_1^{a_1} \cdot p_2^{a_2} \cdot p_3^{a_3} \cdots p_k^{a_k}$$
+        <p>where $p_1 \lt p_2 \lt \dots \lt p_k$ are distinct prime numbers and $a_1, a_2, \dots, a_k \in \mathbb{Z}^+$.
+        </p>
+        <p><strong>Euclid's Lemma (The Engine Behind FTA &amp; Irrationality):</strong> If a prime $p$ divides a product
+            $ab$ (written $p \mid ab$), then $p \mid a$ or $p \mid b$ (or both). In particular, for any integer $n \ge
+            1$:</p>
+        $$p \mid a^n \implies p \mid a$$
+        <p>Notice why primality is essential: $6 \mid 4 \cdot 9$, yet $6 \nmid 4$ and $6 \nmid 9$. Never apply Euclid's
+            Lemma to composite divisors.</p>
+        <p><strong>HCF and LCM via Prime Exponents:</strong> Let $A = \prod p_i^{\alpha_i}$ and $B = \prod
+            p_i^{\beta_i}$ (allowing exponent $0$ when a prime is absent from one number). Then:</p>
+        $$\operatorname{HCF}(A, B) = \prod p_i^{\min(\alpha_i, \beta_i)}, \qquad \operatorname{LCM}(A, B) = \prod
+        p_i^{\max(\alpha_i, \beta_i)}$$
+        <p>Because $\min(\alpha_i, \beta_i) + \max(\alpha_i, \beta_i) = \alpha_i + \beta_i$ for every prime $p_i$, we
+            immediately obtain the two-number identity:</p>
+        $$\operatorname{HCF}(A, B) \times \operatorname{LCM}(A, B) = A \times B$$
+        <p><strong>Three-Number Warning:</strong> For three integers $A, B, C$, $\min + \max$ does <em>not</em> account
+            for the middle exponent. Therefore, in general, $\operatorname{HCF}(A, B, C) \cdot \operatorname{LCM}(A, B,
+            C) \neq A \cdot B \cdot C$. Instead, the exact inclusion-exclusion identity holds:</p>
+        $$\operatorname{LCM}(A, B, C) = \frac{A \cdot B \cdot C \cdot \operatorname{HCF}(A, B, C)}{\operatorname{HCF}(A,
+        B) \cdot \operatorname{HCF}(B, C) \cdot \operatorname{HCF}(C, A)}$$
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &bull; Complete Divisor Arithmetic</span>
+        <p>Given $N = p_1^{a_1} p_2^{a_2} \cdots p_k^{a_k}$, every positive divisor $d$ of $N$ has the exact form $d =
+            p_1^{e_1} p_2^{e_2} \cdots p_k^{e_k}$, where each exponent independently satisfies $0 \le e_i \le a_i$.</p>
+        <ul>
+            <li><strong>1. Total Number of Positive Divisors, $d(N)$:</strong> There are $(a_i + 1)$ independent choices
+                for each exponent $e_i$ (namely $0, 1, \dots, a_i$). By the Fundamental Principle of Counting:
+                $$d(N) = (a_1 + 1)(a_2 + 1) \cdots (a_k + 1)$$
+                <em>Special Structural Corollary:</em> $d(N)$ is <strong>odd</strong> if and only if every $(a_i + 1)$
+                is odd, meaning every exponent $a_i$ is even—that is, if and only if <strong>$N$ is a perfect
+                    square</strong>.
+            </li>
+            <li><strong>2. Restricted Divisor Counts:</strong>
+                <ul>
+                    <li><em>Odd divisors of $N$:</em> Fix the exponent of prime $2$ at $e_1 = 0$, leaving $\prod_{p_i
+                        \neq 2} (a_i + 1)$.</li>
+                    <li><em>Even divisors of $N$ (when $2^{a_1} \parallel N$, $a_1 \ge 1$):</em> Exponent of $2$ has
+                        $a_1$ choices ($1$ to $a_1$), giving $a_1 \prod_{p_i \neq 2}(a_i + 1)$, which equals $d(N) -
+                        d_{\text{odd}}(N)$.</li>
+                    <li><em>Divisors divisible by a fixed factor $m$:</em> Provided $m \mid N$, any divisor $d$
+                        satisfying $m \mid d \mid N$ corresponds bijectively to a divisor $d/m$ of $N/m$. Hence the
+                        count is simply $d(N/m)$.</li>
+                    <li><em>Perfect-square divisors of $N$:</em> Each exponent $e_i$ must be even: $e_i \in \{0, 2, 4,
+                        \dots, 2\lfloor a_i/2 \rfloor\}$, giving $\prod_{i=1}^k \left(\lfloor a_i / 2 \rfloor +
+                        1\right)$ divisors.</li>
+                </ul>
+            </li>
+            <li><strong>3. Sum of All Positive Divisors, $\sigma(N)$:</strong> Expanding the product of finite geometric
+                series generates every divisor $p_1^{e_1} \cdots p_k^{e_k}$ exactly once:
+                $$\sigma(N) = \prod_{i=1}^k \left(1 + p_i + p_i^2 + \dots + p_i^{a_i}\right) = \prod_{i=1}^k
+                \frac{p_i^{a_i + 1} - 1}{p_i - 1}$$
+                <em>Sum of Reciprocals of Divisors:</em> Since replacing $d$ by $N/d$ permutes the set of all divisors
+                of $N$,
+                $$\sum_{d \mid N} \frac{1}{d} = \frac{1}{N} \sum_{d \mid N} \frac{N}{d} = \frac{\sigma(N)}{N}$$
+            </li>
+            <li><strong>4. Product of All Positive Divisors, $P(N)$:</strong> List the divisors in ascending order $d_1
+                \lt d_2 \lt \dots \lt d_m$, where $m = d(N)$. Multiply $P(N)$ by itself in reverse order:
+                $$[P(N)]^2 = (d_1 \cdot d_m)(d_2 \cdot d_{m-1}) \cdots (d_m \cdot d_1)$$
+                Because $d_j \cdot d_{m+1-j} = N$ for every $j$ (even when $m$ is odd, the middle term pairs with itself
+                as $\sqrt{N} \cdot \sqrt{N} = N$), there are $m$ factors each equal to $N$:
+                $$[P(N)]^2 = N^{d(N)} \implies P(N) = N^{\,d(N)/2}$$</li>
+            <li><strong>5. Factorization into Two Unordered Positive Factors:</strong>
+                <ul>
+                    <li>If $N$ is <em>not</em> a perfect square: $\dfrac{d(N)}{2}$ unordered pairs $\{a, b\}$ with $ab =
+                        N$.</li>
+                    <li>If $N$ <em>is</em> a perfect square: $\dfrac{d(N) + 1}{2}$ unordered pairs (including
+                        $\{\sqrt{N}, \sqrt{N}\}$), or $\dfrac{d(N) - 1}{2}$ pairs of <em>distinct</em> factors.</li>
+                    <li><em>Coprime unordered pairs</em> ($\gcd(a,b)=1$, $ab=N$): Each prime power $p_i^{a_i}$ must go
+                        entirely into $a$ or entirely into $b$, giving $2^k$ ordered pairs and $2^{k-1}$ unordered
+                        coprime pairs (for $k \ge 1$).</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Decimal Structure &bull; Terminating vs. Recurring Decimals</span>
+        <p>Let $x = \dfrac{p}{q}$ be a rational number in <strong>lowest (reduced) form</strong>, meaning $\gcd(p, q) =
+            1$ and $q \gt 0$. Always reduce the fraction <em>before</em> inspecting $q$—unreduced factors of $3$ or $7$
+            in $q$ are a classic BEST trap.</p>
+        <ul>
+            <li><strong>Terminating Decimal Criterion:</strong> $x = \dfrac{p}{q}$ terminates if and only if $q = 2^m
+                \cdot 5^n$ for non-negative integers $m, n$. Multiplying numerator and denominator by $5^{m-n}$ (if $m
+                \ge n$) or $2^{n-m}$ (if $n \gt m$) converts the denominator to $10^{\max(m, n)}$, proving that the
+                decimal terminates after <strong>exact $\max(m, n)$ decimal places</strong>.</li>
+            <li><strong>Pure vs. Mixed Recurring Decimals:</strong> Factor $q = 2^m \cdot 5^n \cdot r$, where $\gcd(r,
+                10) = 1$ and $r \gt 1$.
+                <ul>
+                    <li>If $m = n = 0$ (so $\gcd(q, 10) = 1$), the expansion is <strong>purely recurring</strong>
+                        immediately after the decimal point (e.g., $\frac{1}{7} = 0.\overline{142857}$).</li>
+                    <li>If $\max(m, n) \ge 1$ and $r \gt 1$, the expansion is <strong>mixed recurring</strong>: it has
+                        exactly $\max(m, n)$ non-repeating digits followed by an infinitely repeating block (e.g.,
+                        $\frac{1}{12} = \frac{1}{2^2 \cdot 3} = 0.08\overline{3}$ has $\max(2,0) = 2$ non-repeating
+                        digits).</li>
+                </ul>
+            </li>
+            <li><strong>Algebraic Conversion of Recurring Decimals to $\frac{p}{q}$:</strong> For a mixed recurring
+                decimal with $u$ non-repeating digits (integer block $A$) and $v$ repeating digits (integer block $B$):
+                $$x = 0.A\overline{B} \implies 10^u x = A.\overline{B}, \quad 10^{u+v} x = AB.\overline{B}$$
+                Subtracting eliminates the infinite tail cleanly:
+                $$x = \frac{\text{Full block } AB - \text{Non-repeating block } A}{\underbrace{99\dots 9}_{v \text{
+                nines}}\underbrace{00\dots 0}_{u \text{ zeros}}}$$</li>
+        </ul>
+    </div>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Decimal Class</th>
+                <th>Reduced Denominator $q$</th>
+                <th>Pre-Period Length</th>
+                <th>Representative Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Terminating (Rational)</strong></td>
+                <td>$q = 2^m \cdot 5^n$ ($r = 1$)</td>
+                <td>Terminates in $\max(m, n)$ digits</td>
+                <td>$\dfrac{19}{80} = \dfrac{19}{2^4 \cdot 5^1} = 0.2375$ (4 places)</td>
+            </tr>
+            <tr>
+                <td><strong>Pure Recurring (Rational)</strong></td>
+                <td>$\gcd(q, 10) = 1$, $q \gt 1$</td>
+                <td>$0$ non-repeating digits</td>
+                <td>$\dfrac{5}{11} = 0.\overline{45}$</td>
+            </tr>
+            <tr>
+                <td><strong>Mixed Recurring (Rational)</strong></td>
+                <td>$q = 2^m 5^n r$, $\max(m,n) \ge 1$, $r \gt 1$</td>
+                <td>$\max(m, n)$ non-repeating digits</td>
+                <td>$\dfrac{7}{60} = \dfrac{7}{2^2 \cdot 5 \cdot 3} = 0.11\overline{6}$ (2 non-rep.)</td>
+            </tr>
+            <tr>
+                <td><strong>Non-Terminating, Non-Repeating</strong></td>
+                <td>Cannot be written as $p/q$ ($p,q\in\mathbb{Z}$)</td>
+                <td>No finite period exists</td>
+                <td>$\sqrt{2}, \;\pi, \;0.1010010001\dots$</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ==================== SECTION 2 ==================== -->
+    <h2 class="section-heading">6.2 Irrationality Proofs, Surds, Rationalization &amp; Nested Radicals</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Rigorous Proof Technique &bull; Contradiction Method for $\sqrt{p}$</span>
+        <p><strong>Theorem:</strong> For every prime number $p$ (in particular $p = 2, 3, 5, \dots$), $\sqrt{p}$ is
+            irrational.</p>
+        <p><strong>Proof (by Contradiction):</strong></p>
+        <ol>
+            <li>Assume, for the sake of contradiction, that $\sqrt{p}$ is rational. Then there exist integers $a$ and
+                $b$ with $b \gt 0$ and <strong>$\gcd(a, b) = 1$</strong> (fully reduced form) such that $\sqrt{p} =
+                \dfrac{a}{b}$.</li>
+            <li>Squaring both sides gives $p = \dfrac{a^2}{b^2}$, so $a^2 = p b^2$.</li>
+            <li>Hence $p \mid a^2$. Since $p$ is prime, Euclid's Lemma forces $p \mid a$. Write $a = p k$ for some
+                integer $k$.</li>
+            <li>Substitute $a = p k$ back into $a^2 = p b^2$: $(pk)^2 = p b^2 \implies p^2 k^2 = p b^2 \implies b^2 = p
+                k^2$.</li>
+            <li>Thus $p \mid b^2$, and by Euclid's Lemma again, $p \mid b$.</li>
+            <li>Therefore $p$ is a common divisor of both $a$ and $b$, contradicting $\gcd(a, b) = 1$. Hence our initial
+                assumption is false, and $\sqrt{p}$ is irrational. $\blacksquare$</li>
+        </ol>
+        <p><strong>Algebraic Closure &amp; Traps:</strong></p>
+        <ul>
+            <li>If $r \in \mathbb{Q}$ and $s \notin \mathbb{Q}$, then $r \pm s$ is <strong>always irrational</strong>;
+                if $r \neq 0$, then $r \cdot s$ and $r/s$ are <strong>always irrational</strong>. (Beware $r = 0$: $0
+                \cdot \sqrt{2} = 0 \in \mathbb{Q}$.)</li>
+            <li>If $s_1, s_2 \notin \mathbb{Q}$, their sum, difference, product, or quotient <strong>may be rational or
+                    irrational</strong>: e.g., $(2 + \sqrt{3}) + (2 - \sqrt{3}) = 4 \in \mathbb{Q}$, and $\sqrt{2} \cdot
+                \sqrt{8} = 4 \in \mathbb{Q}$.</li>
+            <li><strong>Equality of Quadratic Surds:</strong> If $a, b, c, d \in \mathbb{Q}$ and $\sqrt{m} \notin
+                \mathbb{Q}$, then $a + b\sqrt{m} = c + d\sqrt{m} \iff a = c$ and $b = d$. (Proof: if $b \neq d$, then
+                $\sqrt{m} = \frac{a-c}{d-b} \in \mathbb{Q}$, contradiction.)</li>
+        </ul>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Surd Algebra &bull; Rationalizing Complex Denominators</span>
+        <p>A <strong>rationalizing factor (RF)</strong> of an irrational expression $E$ is a non-zero expression $F$
+            such that $E \cdot F \in \mathbb{Q}$. Beyond simple binomial conjugates, BEST tests three distinct tiers of
+            rationalization:</p>
+        <ul>
+            <li><strong>Tier 1 (Quadratic Binomial):</strong> For $\sqrt{a} \pm \sqrt{b}$, multiply by the conjugate
+                $\sqrt{a} \mp \sqrt{b}$ using $(x+y)(x-y) = x^2 - y^2$:
+                $$\frac{1}{\sqrt{a} \pm \sqrt{b}} = \frac{\sqrt{a} \mp \sqrt{b}}{a - b}$$</li>
+            <li><strong>Tier 2 (Quadratic Trinomial $\sqrt{a} + \sqrt{b} + \sqrt{c}$):</strong> Group two terms together
+                as $(\sqrt{a} + \sqrt{b}) + \sqrt{c}$. First multiply by $(\sqrt{a} + \sqrt{b}) - \sqrt{c}$ to obtain
+                $(a + b - c) + 2\sqrt{ab}$ in the denominator, then rationalize that single remaining surd. <em>Smart
+                    Grouping Trick:</em> Whenever $a + b = c$ (for instance $\sqrt{2} + \sqrt{3} - \sqrt{5}$), grouping
+                $(\sqrt{2}+\sqrt{3}) - \sqrt{5}$ collapses the denominator immediately to $(2 + 3 - 5) + 2\sqrt{6} =
+                2\sqrt{6}$, eliminating the second stage!</li>
+            <li><strong>Tier 3 (Cubic Surds $\sqrt[3]{a} \pm \sqrt[3]{b}$):</strong> Set $u = a^{1/3}, v = b^{1/3}$ and
+                invoke $u^3 \pm v^3 = (u \pm v)(u^2 \mp uv + v^2)$:
+                $$\frac{1}{a^{1/3} - b^{1/3}} = \frac{a^{2/3} + (ab)^{1/3} + b^{2/3}}{a - b}, \qquad \frac{1}{a^{1/3} +
+                b^{1/3}} = \frac{a^{2/3} - (ab)^{1/3} + b^{2/3}}{a + b}$$</li>
+        </ul>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &bull; Nested Radicals &amp; Infinite Nested Surds</span>
+        <p><strong>1. Denesting $\sqrt{a \pm 2\sqrt{b}}$:</strong> Observe the expansion for positive real numbers $x,
+            y$:</p>
+        $$(\sqrt{x} \pm \sqrt{y})^2 = (x + y) \pm 2\sqrt{xy}$$
+        <p>Therefore, to simplify $\sqrt{a \pm 2\sqrt{b}}$, find two positive numbers $x$ and $y$ (with $x \ge y$)
+            satisfying $x + y = a$ and $xy = b$. Taking the <strong>principal (non-negative) square root</strong> gives:
+        </p>
+        $$\sqrt{a + 2\sqrt{b}} = \sqrt{x} + \sqrt{y}, \qquad \sqrt{a - 2\sqrt{b}} = |\sqrt{x} - \sqrt{y}| = \sqrt{x} -
+        \sqrt{y} \quad (x \ge y)$$
+        <p><strong>Crucial Sign Discipline:</strong> Because $\sqrt{\phantom{x}}$ always denotes the non-negative root,
+            always place the <em>larger</em> number first in the subtraction case. Writing $\sqrt{5} - \sqrt{6}$ instead
+            of $\sqrt{6} - \sqrt{5}$ flips the sign and destroys the answer.</p>
+        <p><strong>When the Coefficient $2$ is Missing:</strong> For $\sqrt{a \pm \sqrt{c}}$, multiply inside by
+            $\dfrac{2}{2}$ to force the factor of $2$:</p>
+        $$\sqrt{a \pm \sqrt{c}} = \frac{\sqrt{2a \pm 2\sqrt{c}}}{\sqrt{2}}$$
+        <p><em>Example:</em> $\sqrt{2 + \sqrt{3}} = \dfrac{\sqrt{4 + 2\sqrt{3}}}{\sqrt{2}} = \dfrac{\sqrt{3} +
+            1}{\sqrt{2}}$ (since $3 + 1 = 4$ and $3 \cdot 1 = 3$).</p>
+
+        <p><strong>2. Infinite Nested Surds:</strong> For any positive real $k \gt 0$, the following nested radicals
+            converge to unique positive real limits:</p>
+        <ul>
+            <li><strong>Additive Infinite Surd:</strong> Let $x = \sqrt{k + \sqrt{k + \sqrt{k + \dots}}}$. Since $x \gt
+                0$ and the expression inside the outer radical repeats $x$:
+                $$x = \sqrt{k + x} \implies x^2 - x - k = 0 \implies x = \frac{1 + \sqrt{1 + 4k}}{2}$$
+                (Rejecting the negative root since $x \gt 0$.) <em>Consecutive-Factor Shortcut:</em> If $k = n(n+1)$,
+                then $x^2 - x - n(n+1) = (x - (n+1))(x + n) = 0 \implies x = n + 1$.</li>
+            <li><strong>Subtractive Infinite Surd:</strong> Let $y = \sqrt{k - \sqrt{k - \sqrt{k - \dots}}}$ (for $k \ge
+                1$). Then $y \gt 0$ satisfies:
+                $$y = \sqrt{k - y} \implies y^2 + y - k = 0 \implies y = \frac{-1 + \sqrt{1 + 4k}}{2}$$
+                <em>Consecutive-Factor Shortcut:</em> If $k = n(n+1)$, then $y = n$. Note also that for any $k \ge 1$,
+                $x - y = 1$ and $x \cdot y = k$!
+            </li>
+            <li><strong>Multiplicative Surds (Infinite vs. Finite):</strong>
+                $$\underbrace{\sqrt{k\sqrt{k\sqrt{k\dots}}}}_{\text{infinite}} = k, \qquad
+                \underbrace{\sqrt{k\sqrt{k\cdots\sqrt{k}}}}_{n \text{ radicals}} = k^{\frac{1}{2} + \frac{1}{4} + \dots
+                + \frac{1}{2^n}} = k^{\,1 - \frac{1}{2^n}}$$</li>
+        </ul>
+    </div>
+
+    <!-- ==================== SECTION 3 ==================== -->
+    <h2 class="section-heading">6.3 Exponential Equations &amp; Comparing Large Powers and Surds</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Exponent Engine &bull; Solving Exponential Equations</span>
+        <p>For bases $a, b \gt 0$ and rational (or real) exponents $m, n$, the governing laws are $a^m a^n = a^{m+n}$,
+            $a^m/a^n = a^{m-n}$, $(a^m)^n = a^{mn}$, $(ab)^m = a^m b^m$, $a^0 = 1$, and $a^{-m} = 1/a^m$. Crucially, for
+            any $a \gt 0$, the exponential function satisfies <strong>strict positivity ($a^x \gt 0$)</strong> and
+            <strong>strict monotonicity</strong> (when $a \neq 1$). Four canonical tactics crack almost every BEST
+            exponential equation:
+        </p>
+        <ol>
+            <li><strong>Common Base Reduction:</strong> If $a \gt 0$ and $a \neq 1$, then $a^{f(x)} = a^{g(x)} \iff f(x)
+                = g(x)$. Factor composite numbers into primes immediately (e.g., $8, 16, 32 \to$ powers of $2$; $27, 81
+                \to$ powers of $3$).</li>
+            <li><strong>Quadratic-in-$a^x$ Substitution:</strong> Equations such as $a^{2x} + p a^x + q = 0$ reduce via
+                $t = a^x \gt 0$ to $t^2 + pt + q = 0$. <em>Always discard any root $t \le 0$</em> because $a^x$ can
+                never be zero or negative.</li>
+            <li><strong>Equal Exponent, Different Bases:</strong> If $a^{f(x)} = b^{f(x)}$ with $a, b \gt 0$ and $a \neq
+                b$, divide by $b^{f(x)}$ to get $(a/b)^{f(x)} = 1 = (a/b)^0 \implies f(x) = 0$.</li>
+            <li><strong>Variable-Base Power Equation $u(x)^{v(x)} = 1$:</strong> Never miss edge roots! This holds in
+                <em>three</em> separate cases: (i) $v(x) = 0$ with $u(x) \neq 0$, (ii) $u(x) = 1$, or (iii) $u(x) = -1$
+                with $v(x)$ an <em>even integer</em>.
+            </li>
+        </ol>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &bull; Comparing Giant Powers &amp; Surds</span>
+        <p>When direct evaluation is impossible, transform both numbers so that either their <strong>exponents</strong>,
+            their <strong>bases</strong>, or their <strong>rationalized structures</strong> match:</p>
+        <ul>
+            <li><strong>Technique 1 — Equalize Exponents via GCD:</strong> To compare $a^M$ and $b^N$, let $g = \gcd(M,
+                N)$. Rewrite as $(a^{M/g})^g$ vs. $(b^{N/g})^g$. Since $t \mapsto t^g$ is strictly increasing on $(0,
+                \infty)$, compare the reduced bases $a^{M/g}$ and $b^{N/g}$ directly.</li>
+            <li><strong>Technique 2 — Equalize Radical Indices via LCM:</strong> To compare $\sqrt[m]{a}$ and
+                $\sqrt[n]{b}$, let $L = \operatorname{lcm}(m, n)$. Raise both positive quantities to the $L$-th power
+                and compare $a^{L/m}$ vs. $b^{L/n}$.</li>
+            <li><strong>Technique 3 — Constant-Sum Surd Squaring:</strong> To compare $\sqrt{a} + \sqrt{b}$ and
+                $\sqrt{c} + \sqrt{d}$ when $a + b = c + d$, square both positive expressions:
+                $$(\sqrt{a} + \sqrt{b})^2 = (a + b) + 2\sqrt{ab}, \qquad (\sqrt{c} + \sqrt{d})^2 = (c + d) +
+                2\sqrt{cd}$$
+                The larger sum corresponds to the <strong>larger product $ab$</strong> (i.e., the pair whose numbers are
+                closer together).</li>
+            <li><strong>Technique 4 — Constant-Difference Surd Rationalization:</strong> To compare $\sqrt{a} -
+                \sqrt{b}$ and $\sqrt{c} - \sqrt{d}$ when $a - b = c - d = k \gt 0$, rationalize the <em>numerators</em>:
+                $$\sqrt{a} - \sqrt{b} = \frac{k}{\sqrt{a} + \sqrt{b}}, \qquad \sqrt{c} - \sqrt{d} = \frac{k}{\sqrt{c} +
+                \sqrt{d}}$$
+                The <em>smaller</em> denominator yields the <em>larger</em> difference! Thus $\sqrt{101} - \sqrt{100}
+                \lt \sqrt{11} - \sqrt{10}$.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== SECTION 4 ==================== -->
+    <h2 class="section-heading">6.4 Logarithms (Class 11 / Olympiad Bridge)</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Out-of-Portion Bridge &bull; Definition &amp; Strict Domain Commandments</span>
+        <p>A logarithm is simply an <strong>exponent in disguise</strong>. Specifically, $\log_a b$ answers the
+            question: <em>"To what power must we raise the base $a$ in order to obtain $b$?"</em></p>
+        $$y = \log_a b \iff a^y = b$$
+        <p><strong>The Three Non-Negotiable Domain Conditions:</strong> The real number $\log_a b$ is defined if and
+            only if ALL THREE conditions hold simultaneously:</p>
+        <ol>
+            <li><strong>Argument strictly positive ($b \gt 0$):</strong> Since $a \gt 0$, $a^y$ is strictly positive for
+                all $y \in \mathbb{R}$; hence $a^y = b$ has no real solution if $b \le 0$.</li>
+            <li><strong>Base strictly positive ($a \gt 0$):</strong> If $a \lt 0$, fractional exponents such as
+                $(-2)^{1/2}$ leave the real numbers; if $a = 0$, $0^y$ is either $0$ or undefined.</li>
+            <li><strong>Base not equal to unity ($a \neq 1$):</strong> Since $1^y = 1$ for every $y \in \mathbb{R}$,
+                $\log_1 5$ has no solution and $\log_1 1$ is non-unique (ambiguous).</li>
+        </ol>
+        <p><strong>Immediate Consequence Values:</strong> For any valid base ($a \gt 0, a \neq 1$): $\log_a 1 = 0$
+            (since $a^0 = 1$), $\log_a a = 1$ (since $a^1 = a$), and $\log_a (1/a) = -1$.</p>
+        <p><strong>Notation Convention:</strong> In BEST and Olympiad contexts, $\log_{10} x$ is the <em>common
+                logarithm</em> (often written $\log x$ in digit-counting problems), while $\log_e x = \ln x$ ($e \approx
+            2.71828$) is the <em>natural logarithm</em>.</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 720 295" width="100%" role="img"
+            aria-label="Symmetry of exponential and logarithmic graphs across y = x for base a greater than 1 and base a between 0 and 1">
+            <defs>
+                <marker id="arr-log-axis" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+                </marker>
+            </defs>
+
+            <!-- Panel backgrounds -->
+            <rect x="10" y="10" width="340" height="275" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
+            <rect x="370" y="10" width="340" height="275" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
+
+            <!-- Panel Titles -->
+            <text x="180" y="30" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="700" fill="#0f172a">Case 1: Base a &gt; 1 (Strictly Increasing)</text>
+            <text x="540" y="30" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="700" fill="#0f172a">Case 2: 0 &lt; a &lt; 1 (Strictly Decreasing)</text>
+
+            <!-- ===== LEFT PANEL (Origin at 150, 175; scale 30px = 1 unit) ===== -->
+            <!-- Axes -->
+            <line x1="35" y1="175" x2="325" y2="175" stroke="#475569" stroke-width="1.4"
+                marker-end="url(#arr-log-axis)" />
+            <line x1="150" y1="270" x2="150" y2="42" stroke="#475569" stroke-width="1.4"
+                marker-end="url(#arr-log-axis)" />
+            <text x="330" y="179" font-family="system-ui, sans-serif" font-size="11" font-weight="600"
+                fill="#475569">x</text>
+            <text x="155" y="47" font-family="system-ui, sans-serif" font-size="11" font-weight="600"
+                fill="#475569">y</text>
+            <text x="137" y="189" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">O</text>
+
+            <!-- Mirror line y = x -->
+            <line x1="70" y1="255" x2="280" y2="45" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5,4" />
+            <text x="275" y="65" font-family="system-ui, sans-serif" font-size="11" font-style="italic" fill="#64748b">y
+                = x</text>
+
+            <!-- Exponential y = 2^x -->
+            <path d="M 45 173.5 Q 95 170 120 160 T 150 145 Q 180 115 215 48" fill="none" stroke="#2563eb"
+                stroke-width="2.5" />
+            <text x="172" y="62" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#2563eb">y =
+                aˣ</text>
+
+            <!-- Logarithm y = log_2(x) -->
+            <path d="M 152.5 268 Q 156 225 165 205 T 180 175 Q 210 145 305 103" fill="none" stroke="#dc2626"
+                stroke-width="2.5" />
+            <text x="242" y="138" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#dc2626">y
+                = logₐ x</text>
+
+            <!-- Reflection connector between (0,1) and (1,0) -->
+            <line x1="150" y1="145" x2="180" y2="175" stroke="#059669" stroke-width="1.2" stroke-dasharray="2,2" />
+            <circle cx="150" cy="145" r="4" fill="#2563eb" stroke="#ffffff" stroke-width="1.2" />
+            <text x="115" y="143" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600"
+                fill="#1e293b">(0, 1)</text>
+            <circle cx="180" cy="175" r="4" fill="#dc2626" stroke="#ffffff" stroke-width="1.2" />
+            <text x="176" y="191" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600"
+                fill="#1e293b">(1, 0)</text>
+
+            <!-- Inequality note -->
+            <text x="180" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                fill="#334155">x₁ &lt; x₂ &#8660; logₐ x₁ &lt; logₐ x₂ (Sign Preserved)</text>
+
+            <!-- ===== RIGHT PANEL (Origin at 510, 175; scale 30px = 1 unit) ===== -->
+            <!-- Axes -->
+            <line x1="395" y1="175" x2="685" y2="175" stroke="#475569" stroke-width="1.4"
+                marker-end="url(#arr-log-axis)" />
+            <line x1="510" y1="270" x2="510" y2="42" stroke="#475569" stroke-width="1.4"
+                marker-end="url(#arr-log-axis)" />
+            <text x="690" y="179" font-family="system-ui, sans-serif" font-size="11" font-weight="600"
+                fill="#475569">x</text>
+            <text x="515" y="47" font-family="system-ui, sans-serif" font-size="11" font-weight="600"
+                fill="#475569">y</text>
+            <text x="497" y="189" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">O</text>
+
+            <!-- Mirror line y = x -->
+            <line x1="430" y1="255" x2="640" y2="45" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5,4" />
+            <text x="635" y="65" font-family="system-ui, sans-serif" font-size="11" font-style="italic" fill="#64748b">y
+                = x</text>
+
+            <!-- Exponential y = (1/2)^x -->
+            <path d="M 445 48 Q 480 115 510 145 T 540 160 Q 570 169 665 173.5" fill="none" stroke="#2563eb"
+                stroke-width="2.5" />
+            <text x="408" y="68" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#2563eb">y =
+                aˣ</text>
+
+            <!-- Logarithm y = log_{1/2}(x) -->
+            <path d="M 513 55 Q 518 125 529 156 T 540 175 Q 570 205 660 245" fill="none" stroke="#dc2626"
+                stroke-width="2.5" />
+            <text x="612" y="218" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#dc2626">y
+                = logₐ x</text>
+
+            <!-- Key intercepts & intersection -->
+            <circle cx="510" cy="145" r="4" fill="#2563eb" stroke="#ffffff" stroke-width="1.2" />
+            <text x="475" y="143" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600"
+                fill="#1e293b">(0, 1)</text>
+            <circle cx="540" cy="175" r="4" fill="#dc2626" stroke="#ffffff" stroke-width="1.2" />
+            <text x="538" y="191" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600"
+                fill="#1e293b">(1, 0)</text>
+            <circle cx="529" cy="156" r="3.5" fill="#059669" />
+
+            <!-- Inequality note -->
+            <text x="540" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                fill="#334155">x₁ &lt; x₂ &#8660; logₐ x₁ &gt; logₐ x₂ (Sign Flips!)</text>
+        </svg>
+        <div class="diagram-caption"><strong>Figure 6.1:</strong> Inverse symmetry of $y = a^x$ and $y = \log_a x$
+            across $y = x$. The horizontal asymptote $y = 0$ of $a^x$ reflects into the vertical asymptote $x = 0$ of
+            $\log_a x$ (explaining visually why $x$ must stay strictly positive). When $0 \lt a \lt 1$, taking
+            logarithms <em>reverses</em> inequality direction.</div>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Derivations &bull; Laws of Logarithms &amp; Change of Base</span>
+        <p>Every logarithmic law follows directly from translating into exponential form. Assume $m, n \gt 0$ and all
+            bases are positive and distinct from $1$. Let $x = \log_a m$ ($a^x = m$) and $y = \log_a n$ ($a^y = n$):</p>
+        <ol>
+            <li><strong>Product Law:</strong> $mn = a^x \cdot a^y = a^{x+y} \implies \log_a(mn) = x + y = \log_a m +
+                \log_a n$.</li>
+            <li><strong>Quotient Law:</strong> $\dfrac{m}{n} = \dfrac{a^x}{a^y} = a^{x-y} \implies
+                \log_a\!\left(\dfrac{m}{n}\right) = x - y = \log_a m - \log_a n$.</li>
+            <li><strong>Power Law:</strong> $m^r = (a^x)^r = a^{rx} \implies \log_a(m^r) = r \log_a m$ for any $r \in
+                \mathbb{R}$.</li>
+            <li><strong>Base-Power Law:</strong> Let $z = \log_{a^k} m$ ($k \neq 0$). Then $(a^k)^z = m \implies a^{kz}
+                = m \implies kz = \log_a m \implies$
+                $$\log_{a^k} m = \frac{1}{k}\log_a m, \qquad \text{and generally } \log_{a^k}(m^r) = \frac{r}{k}\log_a
+                m$$</li>
+            <li><strong>Change of Base Formula:</strong> Let $p = \log_a b$, so $a^p = b$. Take $\log_c$ of both sides
+                (for any valid base $c \gt 0, c \neq 1$):
+                $$\log_c(a^p) = \log_c b \implies p \log_c a = \log_c b \implies \log_a b = \frac{\log_c b}{\log_c a}$$
+                Setting $c = b$ yields the <strong>Reciprocal Identity</strong>, and telescoping products yield the
+                <strong>Chain Rule</strong>:
+                $$\log_a b = \frac{1}{\log_b a}, \qquad \log_a b \cdot \log_b c \cdot \log_c d = \log_a d$$
+            </li>
+            <li><strong>Fundamental Exponential-Log Identities:</strong> By definition $a^y = b$ with $y = \log_a b$, we
+                have $a^{\log_a b} = b$. More powerfully, for any $a, b, c \gt 0$ ($c \neq 1$), taking $\log_c$ of both
+                sides verifies the <strong>Base-Argument Swap Identity</strong>:
+                $$a^{\log_c b} = b^{\log_c a}$$</li>
+        </ol>
+    </div>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Correct Logarithmic Law</th>
+                <th>Fatal Exam Fallacy (NEVER DO THIS)</th>
+                <th>Why the Fallacy Fails (Counterexample)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$\log_a(xy) = \log_a x + \log_a y$ ($x,y\gt 0$)</td>
+                <td>$\log_a(x + y) = \log_a x + \log_a y$</td>
+                <td>$\log_2(2 + 2) = 2$, wait—test $(2+6)$: $\log_2 8 = 3 \neq \log_2 2 + \log_2 6 \approx 3.58$.</td>
+            </tr>
+            <tr>
+                <td>$\log_a(x/y) = \log_a x - \log_a y$</td>
+                <td>$\dfrac{\log_a x}{\log_a y} = \log_a(x - y)$ or $\log_a(x/y)$</td>
+                <td>$\dfrac{\log_2 8}{\log_2 2} = \dfrac{3}{1} = 3$, whereas $\log_2(8/2) = 2$. Remember $\dfrac{\log_a
+                    x}{\log_a y} = \log_y x$.</td>
+            </tr>
+            <tr>
+                <td>$\log_a(x^2) = 2\log_a |x|$ ($x \neq 0$)</td>
+                <td>$\log_a(x^2) = 2\log_a x$ for all $x$</td>
+                <td>At $x = -3$, $\log_3((-3)^2) = 2$ exists, while $2\log_3(-3)$ is undefined!</td>
+            </tr>
+            <tr>
+                <td>$(\log_a x)^n$ stays as a power of the log</td>
+                <td>$(\log_a x)^n = n\log_a x$</td>
+                <td>$(\log_2 8)^2 = 3^2 = 9$, whereas $2\log_2 8 = 6$. Only $\log_a(x^n) = n\log_a x$.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &bull; Characteristic, Mantissa &amp; Counting Digits in
+            $a^n$</span>
+        <p>Every real number $r$ splits uniquely into its integer floor and non-negative fractional part: $r = \lfloor r
+            \rfloor + \{r\}$, where $\lfloor r \rfloor \in \mathbb{Z}$ and $0 \le \{r\} \lt 1$. Applying this to
+            $\log_{10} N$ (for $N \gt 0$):</p>
+        $$\log_{10} N = C + M, \qquad C = \lfloor \log_{10} N \rfloor \in \mathbb{Z} \text{ (Characteristic)}, \qquad M
+        \in [0, 1) \text{ (Mantissa)}$$
+        <p><strong>Critical Negative-Log Rule:</strong> The mantissa $M$ is <em>never negative</em>! If $\log_{10} N =
+            -2.35$, rewrite it as $-2.35 = -3 + 0.65$ (often written $\bar{3}.65$). Thus $C = -3$ and $M =
+            0.65$—<strong>not</strong> $C = -2, M = -0.35$.</p>
+        <ul>
+            <li><strong>Theorem 1 — Counting Digits of $N \ge 1$:</strong> A positive integer $N$ has exactly $d$ digits
+                in base $10$ if and only if $10^{d-1} \le N \lt 10^d$. Taking $\log_{10}$ (which preserves inequalities
+                since $10 \gt 1$) yields:
+                $$d - 1 \le \log_{10} N \lt d \implies C = \lfloor \log_{10} N \rfloor = d - 1 \implies
+                \boxed{\text{Number of digits in } N = C + 1 = \lfloor \log_{10} N \rfloor + 1}$$</li>
+            <li><strong>Theorem 2 — Counting Leading Zeros of $0 \lt N \lt 1$:</strong> Suppose $N$ has exactly $z$
+                zeros immediately after the decimal point before its first non-zero digit (e.g., $0.0047$ has $z = 2$).
+                Then $10^{-(z+1)} \le N \lt 10^{-z}$, so:
+                $$-(z + 1) \le \log_{10} N \lt -z \implies C = -(z + 1) \implies \boxed{\text{Leading zeros after
+                decimal} = |C| - 1 = -C - 1}$$</li>
+            <li><strong>BEST Essential Log Table (Memorize to 5 Decimals):</strong>
+                $$\log_{10} 2 \approx 0.30103, \quad \log_{10} 3 \approx 0.47712, \quad \log_{10} 5 = 1 - \log_{10} 2
+                \approx 0.69897, \quad \log_{10} 7 \approx 0.84510$$
+                Notice that $\log_{10} 5$ is never memorized independently—it is derived instantaneously from
+                $\log_{10}(10/2) = 1 - \log_{10} 2$.</li>
+        </ul>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Logarithmic Equations &bull; Why Extraneous Roots Sneak In</span>
+        <p>Combining two logs via $\log_a f(x) + \log_a g(x) = \log_a(f(x)g(x))$ is <strong>not
+                domain-equivalent</strong>! On the left side, both $f(x) \gt 0$ and $g(x) \gt 0$ are required. On the
+            right side, $f(x)g(x) \gt 0$ is also satisfied when <em>both</em> $f(x) \lt 0$ and $g(x) \lt 0$. Similarly,
+            $2\log_a f(x) \to \log_a(f(x)^2)$ silently invites negative values of $f(x)$.</p>
+        <p><strong>Mandatory 3-Step Protocol:</strong> (1) Write down ALL domain constraints directly from the
+            <em>original unsimplified equation</em> ($b \gt 0$, $a \gt 0$, $a \neq 1$). (2) Solve algebraically. (3)
+            Substitute every candidate root back into the original domain constraints and discard any violator.
+        </p>
+    </div>
+
+    <!-- ==================== SECTION 5 ==================== -->
+    <h2 class="section-heading">6.5 Modulus (Absolute Value) &amp; Basic Inequalities Bridge</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Geometric &amp; Algebraic Foundations &bull; Absolute Value</span>
+        <p>For any real number $x \in \mathbb{R}$, the <strong>modulus</strong> (or absolute value) $|x|$ is defined
+            piecewise as:</p>
+        $$|x| = \begin{cases} x, & \text{if } x \ge 0 \\ -x, & \text{if } x \lt 0 \end{cases}$$
+        <p><strong>The Square-Root Identity (Most Misused Formula in Class 10):</strong></p>
+        $$\sqrt{x^2} = |x| \qquad (\text{NEVER blindly write } \sqrt{x^2} = x!)$$
+        <p>Check at $x = -5$: $\sqrt{(-5)^2} = \sqrt{25} = +5 = |-5| \neq -5$. This identity directly governs every
+            denesting problem ($\sqrt{(\sqrt{x}-\sqrt{y})^2} = |\sqrt{x}-\sqrt{y}|$).</p>
+        <p><strong>Geometric Distance Interpretation:</strong> On the real number line, $|x|$ is the distance of $x$
+            from $0$. More generally, <strong>$|x - a|$ is the exact distance between the point $x$ and the anchor point
+                $a$</strong>. In particular, $|x + a| = |x - (-a)|$ is the distance from $x$ to $-a$.</p>
+        <p><strong>Core Algebraic Properties:</strong> For all $x, y \in \mathbb{R}$:</p>
+        <ul>
+            <li>$|x| \ge 0$, with $|x| = 0 \iff x = 0$; and $|-x| = |x|$, $|x|^2 = x^2$.</li>
+            <li>$|xy| = |x|\cdot|y|$, and $\left|\dfrac{x}{y}\right| = \dfrac{|x|}{|y|}$ ($y \neq 0$).</li>
+            <li><strong>Triangle Inequality:</strong> $|x + y| \le |x| + |y|$, with equality if and only if $x$ and $y$
+                have the same sign (or one is zero), i.e., <strong>$xy \ge 0$</strong>.</li>
+            <li><strong>Reverse Triangle Inequality:</strong> $\big||x| - |y|\big| \le |x - y|$.</li>
+        </ul>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Inequality Translation &bull; Standard Modulus Intervals</span>
+        <p>Assuming $a \gt 0$, distance intuition converts modulus inequalities directly into number-line intervals:</p>
+        <ul>
+            <li><strong>Bounded Neighborhood ($|x| \le a$):</strong> Distance from $0$ is at most $a \iff -a \le x \le a
+                \iff x \in [-a, a]$.</li>
+            <li><strong>Exterior Rays ($|x| \ge a$):</strong> Distance from $0$ is at least $a \iff x \le -a \text{ or }
+                x \ge a \iff x \in (-\infty, -a] \cup [a, \infty)$.</li>
+            <li><strong>Shifted Center ($|x - c| \lt r$, $r \gt 0$):</strong> Distance from $c$ is strictly less than $r
+                \iff c - r \lt x \lt c + r \iff x \in (c - r, c + r)$.</li>
+            <li><strong>Degenerate Edge Cases ($a \le 0$ — Frequent MCQ Traps):</strong>
+                <ul>
+                    <li>If $a \lt 0$: $|x| \le a$ has <strong>no solution ($\emptyset$)</strong>, whereas $|x| \ge a$
+                        holds for <strong>all $x \in \mathbb{R}$</strong>.</li>
+                    <li>If $a = 0$: $|x| \le 0 \iff x = 0$; $|x| \lt 0 \implies \emptyset$; $|x| \gt 0 \iff x \in
+                        \mathbb{R} \setminus \{0\}$.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 720 265" width="100%" role="img"
+            aria-label="Number-line intervals for absolute value inequalities |x| <= a, |x| >= a, and |x - c| < r">
+            <defs>
+                <marker id="arr-num-axis" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b" />
+                </marker>
+                <marker id="arr-num-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+                </marker>
+            </defs>
+
+            <!-- Row 1: |x| <= a -->
+            <text x="24" y="30" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1e293b">1.
+                |x| &le; a (a &gt; 0) &#8660; x &isin; [&minus;a, a]</text>
+            <text x="455" y="30" font-family="system-ui, sans-serif" font-size="11.5" fill="#2563eb"
+                font-weight="600">Bounded closed interval (distance from 0 &le; a)</text>
+            <line x1="60" y1="58" x2="660" y2="58" stroke="#94a3b8" stroke-width="1.6" marker-start="url(#arr-num-axis)"
+                marker-end="url(#arr-num-axis)" />
+            <!-- Shaded segment -->
+            <line x1="240" y1="58" x2="480" y2="58" stroke="#2563eb" stroke-width="5.5" />
+            <!-- Center tick 0 -->
+            <line x1="360" y1="50" x2="360" y2="66" stroke="#334155" stroke-width="1.5" />
+            <text x="360" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="600" fill="#334155">0</text>
+            <!-- Endpoints -a and a -->
+            <circle cx="240" cy="58" r="5.5" fill="#2563eb" />
+            <text x="240" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#2563eb">&minus;a</text>
+            <circle cx="480" cy="58" r="5.5" fill="#2563eb" />
+            <text x="480" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#2563eb">+a</text>
+
+            <!-- Divider -->
+            <line x1="20" y1="95" x2="700" y2="95" stroke="#e2e8f0" stroke-width="1" />
+
+            <!-- Row 2: |x| >= a -->
+            <text x="24" y="118" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1e293b">2.
+                |x| &ge; a (a &gt; 0) &#8660; x &isin; (&minus;&infin;, &minus;a] &cup; [a, &infin;)</text>
+            <text x="455" y="118" font-family="system-ui, sans-serif" font-size="11.5" fill="#dc2626"
+                font-weight="600">Two outer rays (distance from 0 &ge; a)</text>
+            <line x1="60" y1="146" x2="660" y2="146" stroke="#94a3b8" stroke-width="1.6" />
+            <!-- Shaded rays -->
+            <line x1="240" y1="146" x2="66" y2="146" stroke="#dc2626" stroke-width="5.5"
+                marker-end="url(#arr-num-red)" />
+            <line x1="480" y1="146" x2="654" y2="146" stroke="#dc2626" stroke-width="5.5"
+                marker-end="url(#arr-num-red)" />
+            <!-- Center tick 0 -->
+            <line x1="360" y1="138" x2="360" y2="154" stroke="#334155" stroke-width="1.5" />
+            <text x="360" y="168" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="600" fill="#334155">0</text>
+            <!-- Endpoints -->
+            <circle cx="240" cy="146" r="5.5" fill="#dc2626" />
+            <text x="240" y="168" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#dc2626">&minus;a</text>
+            <circle cx="480" cy="146" r="5.5" fill="#dc2626" />
+            <text x="480" y="168" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#dc2626">+a</text>
+
+            <!-- Divider -->
+            <line x1="20" y1="183" x2="700" y2="183" stroke="#e2e8f0" stroke-width="1" />
+
+            <!-- Row 3: |x - c| < r -->
+            <text x="24" y="206" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1e293b">3.
+                |x &minus; c| &lt; r (r &gt; 0) &#8660; x &isin; (c &minus; r, c + r)</text>
+            <text x="455" y="206" font-family="system-ui, sans-serif" font-size="11.5" fill="#059669"
+                font-weight="600">Open interval centered at c with radius r</text>
+            <line x1="60" y1="234" x2="660" y2="234" stroke="#94a3b8" stroke-width="1.6"
+                marker-start="url(#arr-num-axis)" marker-end="url(#arr-num-axis)" />
+            <!-- Shaded open segment -->
+            <line x1="265" y1="234" x2="505" y2="234" stroke="#059669" stroke-width="5.5" />
+            <!-- Center c -->
+            <line x1="385" y1="226" x2="385" y2="242" stroke="#0f172a" stroke-width="1.8" />
+            <text x="385" y="257" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#0f172a">c</text>
+            <!-- Radius braces/labels -->
+            <text x="325" y="224" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="600" fill="#059669">&larr; r &rarr;</text>
+            <text x="445" y="224" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="600" fill="#059669">&larr; r &rarr;</text>
+            <!-- Hollow circles (strict inequality) -->
+            <circle cx="265" cy="234" r="5.5" fill="#ffffff" stroke="#059669" stroke-width="2.5" />
+            <text x="265" y="257" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#059669">c &minus; r</text>
+            <circle cx="505" cy="234" r="5.5" fill="#ffffff" stroke="#059669" stroke-width="2.5" />
+            <text x="505" y="257" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#059669">c + r</text>
+        </svg>
+        <div class="diagram-caption"><strong>Figure 6.2:</strong> Number-line interval geometry for basic modulus
+            inequalities. Solid dots ($\bullet$) include boundary points ($\le, \ge$); hollow circles ($\circ$) exclude
+            boundary points ($\lt, \gt$).</div>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &bull; Critical-Point Method &amp; $|x - a| + |x - b| =
+            c$</span>
+        <p><strong>The Critical-Point Method (Universal Algorithm):</strong> To solve any equation or inequality
+            involving sums of moduli such as $|x - a_1| + |x - a_2| + \dots + |x - a_n| = c$:</p>
+        <ol>
+            <li><strong>Locate Critical Points:</strong> Set each expression inside an absolute value to zero ($x = a_1,
+                a_2, \dots, a_n$) and sort them in ascending order.</li>
+            <li><strong>Partition the Number Line:</strong> $n$ distinct critical points split $\mathbb{R}$ into $(n +
+                1)$ non-overlapping intervals.</li>
+            <li><strong>Open Every Modulus by Sign:</strong> Inside each interval, every $(x - a_i)$ has a fixed sign,
+                so replace $|x - a_i|$ by $+(x - a_i)$ or $-(x - a_i)$ and solve the resulting linear
+                equation/inequality.</li>
+            <li><strong>Intersect with the Active Interval:</strong> Keep <em>only</em> solutions that actually lie
+                inside the interval assumed for that case, then take the union across all intervals.</li>
+        </ol>
+        <p><strong>Exact Geometric Trichotomy for $|x - a| + |x - b| = c$ (with $a \lt b$ and $d = b - a$):</strong></p>
+        <p>Think of $|x - a| + |x - b|$ as the total walking distance from $x$ to $a$ plus from $x$ to $b$. Opening the
+            moduli across the three regions gives the piecewise function:</p>
+        $$f(x) = |x - a| + |x - b| = \begin{cases} (a + b) - 2x, & x \lt a \quad (\text{slope } -2) \\ b - a = d, & a
+        \le x \le b \quad (\text{flat valley!}) \\ 2x - (a + b), & x \gt b \quad (\text{slope } +2) \end{cases}$$
+        <ul>
+            <li><strong>If $c \lt d$:</strong> <strong>No real solution</strong> (the shortest path between $a$ and $b$
+                is already $d$).</li>
+            <li><strong>If $c = d$:</strong> <strong>Infinitely many solutions</strong>—every point on the closed
+                segment $x \in [a, b]$.</li>
+            <li><strong>If $c \gt d$:</strong> <strong>Exactly two solutions</strong>, displaced outward from $a$ and
+                $b$ by half the excess distance $\Delta = \dfrac{c - d}{2}$:
+                $$x_1 = a - \frac{c - d}{2}, \qquad x_2 = b + \frac{c - d}{2}$$</li>
+        </ul>
+        <p><strong>General Median Minimization Theorem:</strong> For sorted points $a_1 \le a_2 \le \dots \le a_n$, the
+            sum $S(x) = \sum_{i=1}^n |x - a_i|$ achieves its global minimum at the <strong>median</strong>: at the
+            unique point $x = a_{(n+1)/2}$ if $n$ is odd, and on the entire closed interval $x \in [a_{n/2}, a_{n/2 +
+            1}]$ if $n$ is even.</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 720 300" width="100%" role="img"
+            aria-label="Geometric distance intuition on the number line and piecewise valley graph of y = |x - a| + |x - b|">
+            <defs>
+                <marker id="arr-mod-axis" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+                </marker>
+            </defs>
+
+            <!-- Left Panel: Distance Intuition -->
+            <rect x="10" y="10" width="320" height="280" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="170" y="32" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13"
+                font-weight="700" fill="#0f172a">Distance Intuition on Number Line</text>
+
+            <!-- Sub-case A: x inside [a, b] -->
+            <text x="26" y="64" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#059669">Case A: x inside [a, b]</text>
+            <line x1="30" y1="100" x2="310" y2="100" stroke="#64748b" stroke-width="1.5"
+                marker-start="url(#arr-mod-axis)" marker-end="url(#arr-mod-axis)" />
+            <circle cx="90" cy="100" r="4.5" fill="#1e293b" />
+            <text x="90" y="118" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#1e293b">a</text>
+            <circle cx="245" cy="100" r="4.5" fill="#1e293b" />
+            <text x="245" y="118" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#1e293b">b</text>
+            <circle cx="155" cy="100" r="5" fill="#059669" />
+            <text x="155" y="118" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#059669">x</text>
+            <!-- Distance arcs -->
+            <path d="M 90 95 Q 122 76 155 95" fill="none" stroke="#2563eb" stroke-width="1.8" />
+            <text x="122" y="81" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                font-weight="600" fill="#2563eb">|x&minus;a|</text>
+            <path d="M 155 95 Q 200 76 245 95" fill="none" stroke="#d97706" stroke-width="1.8" />
+            <text x="200" y="81" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                font-weight="600" fill="#d97706">|x&minus;b|</text>
+            <text x="170" y="138" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                fill="#334155">Total = (x &minus; a) + (b &minus; x) = <tspan font-weight="700" fill="#059669">b &minus;
+                    a = d</tspan></text>
+
+            <line x1="26" y1="154" x2="314" y2="154" stroke="#e2e8f0" stroke-width="1" />
+
+            <!-- Sub-case B: x outside [a, b] -->
+            <text x="26" y="176" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#dc2626">Case B: x outside [a, b] (by &Delta; past b)</text>
+            <line x1="30" y1="226" x2="310" y2="226" stroke="#64748b" stroke-width="1.5"
+                marker-start="url(#arr-mod-axis)" marker-end="url(#arr-mod-axis)" />
+            <circle cx="80" cy="226" r="4.5" fill="#1e293b" />
+            <text x="80" y="244" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#1e293b">a</text>
+            <circle cx="205" cy="226" r="4.5" fill="#1e293b" />
+            <text x="205" y="244" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#1e293b">b</text>
+            <circle cx="265" cy="226" r="5" fill="#dc2626" />
+            <text x="265" y="244" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#dc2626">x</text>
+            <!-- Distance bars -->
+            <path d="M 80 218 Q 172 184 265 218" fill="none" stroke="#2563eb" stroke-width="1.8" />
+            <text x="172" y="196" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                font-weight="600" fill="#2563eb">|x &minus; a| = d + &Delta;</text>
+            <path d="M 205 221 Q 235 206 265 221" fill="none" stroke="#dc2626" stroke-width="1.8" />
+            <text x="235" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                font-weight="600" fill="#dc2626">&Delta;</text>
+            <text x="170" y="270" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                fill="#334155">Total = (d + &Delta;) + &Delta; = <tspan font-weight="700" fill="#dc2626">d + 2&Delta;
+                </tspan> &rArr; &Delta; = (c &minus; d)/2</text>
+
+            <!-- Right Panel: Piecewise Graph -->
+            <rect x="348" y="10" width="362" height="280" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="529" y="32" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13"
+                font-weight="700" fill="#0f172a">Piecewise "Valley" Graph: y = |x &minus; a| + |x &minus; b|</text>
+
+            <!-- Axes -->
+            <line x1="370" y1="245" x2="690" y2="245" stroke="#475569" stroke-width="1.4"
+                marker-end="url(#arr-mod-axis)" />
+            <line x1="392" y1="262" x2="392" y2="48" stroke="#475569" stroke-width="1.4"
+                marker-end="url(#arr-mod-axis)" />
+            <text x="694" y="249" font-family="system-ui, sans-serif" font-size="11" font-weight="600"
+                fill="#475569">x</text>
+            <text x="398" y="54" font-family="system-ui, sans-serif" font-size="11" font-weight="600"
+                fill="#475569">y</text>
+
+            <!-- Vertical guide lines at a and b -->
+            <line x1="475" y1="175" x2="475" y2="245" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="3,3" />
+            <line x1="585" y1="175" x2="585" y2="245" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="3,3" />
+            <text x="475" y="261" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#1e293b">a</text>
+            <text x="585" y="261" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#1e293b">b</text>
+
+            <!-- Horizontal reference lines for c -->
+            <!-- c > d (2 solutions) -->
+            <line x1="392" y1="115" x2="672" y2="115" stroke="#2563eb" stroke-width="1.3" stroke-dasharray="5,4" />
+            <text x="676" y="119" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#2563eb">c
+                &gt; d</text>
+            <text x="530" y="108" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                font-weight="600" fill="#2563eb">2 solutions (x₁, x₂)</text>
+
+            <!-- c = d (infinitely many) -->
+            <line x1="392" y1="175" x2="672" y2="175" stroke="#059669" stroke-width="1.2" stroke-dasharray="4,4" />
+            <text x="373" y="179" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#059669">d</text>
+            <text x="676" y="179" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#059669">c
+                = d</text>
+
+            <!-- c < d (no solution) -->
+            <line x1="392" y1="215" x2="672" y2="215" stroke="#dc2626" stroke-width="1.3" stroke-dasharray="5,4" />
+            <text x="530" y="230" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                font-weight="600" fill="#dc2626">c &lt; d: No Solution</text>
+
+            <!-- The Valley Graph: slope -2 (dx=30, dy=-60), flat floor, slope +2 -->
+            <polyline points="415,55 475,175 585,175 645,55" fill="none" stroke="#0f172a" stroke-width="2.8"
+                stroke-linejoin="round" />
+
+            <!-- Slope annotations -->
+            <text x="415" y="96" font-family="system-ui, sans-serif" font-size="10" font-weight="600"
+                fill="#475569">slope &minus;2</text>
+            <text x="625" y="96" font-family="system-ui, sans-serif" font-size="10" font-weight="600"
+                fill="#475569">slope +2</text>
+            <text x="530" y="166" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                font-weight="700" fill="#059669">Flat Floor: y = b &minus; a</text>
+
+            <!-- Intersection dots at c > d (x = 445 and x = 615) -->
+            <circle cx="445" cy="115" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="1.2" />
+            <circle cx="615" cy="115" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="1.2" />
+            <!-- Corner dots at a and b -->
+            <circle cx="475" cy="175" r="4" fill="#059669" />
+            <circle cx="585" cy="175" r="4" fill="#059669" />
+        </svg>
+        <div class="diagram-caption"><strong>Figure 6.3:</strong> Left: Walking distance intuition showing why points
+            inside $[a, b]$ yield a constant minimum sum $d = b - a$, while stepping outward by $\Delta$ adds $2\Delta$.
+            Right: The flat-bottomed valley graph of $y = |x - a| + |x - b|$ visually resolves the exact number of roots
+            for every horizontal level $y = c$.</div>
+    </div>
+
+    <!-- ==================== SECTION 6: FORMULA VAULT ==================== -->
+    <h2 class="section-heading">6.6 High-Density Formula Vault</h2>
+
+    <div class="formula-vault">
+        <span class="box-label">Master Quick-Revision Vault &bull; Chapter 6</span>
+        <ul>
+            <li><strong>Divisors of $N = \prod_{i=1}^k p_i^{a_i}$:</strong>
+                $$d(N) = \prod_{i=1}^k (a_i + 1), \qquad \sigma(N) = \prod_{i=1}^k \frac{p_i^{a_i + 1} - 1}{p_i - 1},
+                \qquad P(N) = N^{\,d(N)/2}, \qquad \sum_{d \mid N} \frac{1}{d} = \frac{\sigma(N)}{N}$$</li>
+            <li><strong>Decimal Expansions (Reduced $p/q$):</strong> Terminates iff $q = 2^m 5^n$ (in $\max(m, n)$
+                places). Mixed recurring $q = 2^m 5^n r$ ($\gcd(r,10)=1, r\gt 1$) has $\max(m, n)$ non-repeating digits.
+            </li>
+            <li><strong>Nested &amp; Infinite Surds:</strong>
+                $$\sqrt{(x + y) \pm 2\sqrt{xy}} = \sqrt{x} \pm \sqrt{y} \; (x \ge y), \qquad \sqrt{k + \sqrt{k + \dots}}
+                = \frac{1 + \sqrt{1 + 4k}}{2}, \qquad \sqrt{k - \sqrt{k - \dots}} = \frac{-1 + \sqrt{1 + 4k}}{2}$$
+                For $k = n(n+1)$: additive limit $= n + 1$, subtractive limit $= n$. Finite $n$-nested
+                $\sqrt{k\sqrt{k\cdots\sqrt{k}}} = k^{1 - 2^{-n}}$.</li>
+            <li><strong>Logarithm Domain &amp; Core Laws ($\log_a b \iff b \gt 0,\; a \gt 0,\; a \neq 1$):</strong>
+                $$\log_a(mn) = \log_a m + \log_a n, \quad \log_a\!\left(\frac{m}{n}\right) = \log_a m - \log_a n, \quad
+                \log_{a^k}(m^r) = \frac{r}{k}\log_a m$$
+                $$\log_a b = \frac{\log_c b}{\log_c a} = \frac{1}{\log_b a}, \qquad a^{\log_a b} = b, \qquad a^{\log_c
+                b} = b^{\log_c a}$$</li>
+            <li><strong>Characteristic &amp; Digits:</strong> $\log_{10} N = C + M$ ($C \in \mathbb{Z},\; 0 \le M \lt
+                1$). Digits of $N \ge 1$: $\lfloor \log_{10} N \rfloor + 1$. Leading zeros of $0 \lt N \lt 1$: $|C| -
+                1$. Key constants: $\log_{10} 2 \approx 0.30103,\; \log_{10} 3 \approx 0.47712,\; \log_{10} 5 \approx
+                0.69897,\; \log_{10} 7 \approx 0.84510$.</li>
+            <li><strong>Modulus &amp; Inequalities:</strong> $\sqrt{x^2} = |x|$. For $a \gt 0$: $|x| \le a \iff x \in
+                [-a, a]$; $|x| \ge a \iff x \le -a \text{ or } x \ge a$. For $a \lt b$ with $d = b - a$: $|x-a|+|x-b| =
+                c$ has $0$ roots ($c \lt d$), interval $[a, b]$ ($c = d$), or $x = a - \frac{c-d}{2},\; b +
+                \frac{c-d}{2}$ ($c \gt d$).</li>
+        </ul>
+    </div>
+
+    <!-- ==================== SECTION 7: WORKED EXAMPLES ==================== -->
+    <h2 class="section-heading">6.7 Graded Worked Examples Arena</h2>
+
+    <!-- LEVEL 1 -->
+    <div class="level-banner l1">LEVEL 1 &bull; WARMUP &amp; CONCEPT CONSOLIDATION (FOUNDATION ACCURACY)</div>
+
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1 &bull; Warmup</span>
+            <span class="badge badge-type">Example 1 &bull; Divisors &amp; Terminating Decimals</span>
+        </div>
+        <div class="ex-problem">
+            <p>(a) For the integer $N = 1440$, compute: (i) the total number of positive divisors, (ii) the number of
+                odd positive divisors, and (iii) the sum of all positive divisors.</p>
+            <p>(b) Without performing long division, determine after how many decimal places the rational number
+                $\dfrac{173}{1600}$ terminates.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a):</strong> First obtain the canonical prime factorization of $1440$:</p>
+            $$1440 = 144 \times 10 = (16 \times 9) \times (2 \times 5) = 2^5 \cdot 3^2 \cdot 5^1$$
+            <ol>
+                <li><strong>Total positive divisors:</strong> Using $d(N) = (a_1 + 1)(a_2 + 1)(a_3 + 1)$,
+                    $$d(1440) = (5 + 1)(2 + 1)(1 + 1) = 6 \times 3 \times 2 = 36$$</li>
+                <li><strong>Odd positive divisors:</strong> An odd divisor cannot include any factor of $2$, so we fix
+                    the exponent of $2$ at $0$ and vary only the exponents of $3$ and $5$:
+                    $$d_{\text{odd}}(1440) = (2 + 1)(1 + 1) = 3 \times 2 = 6$$
+                    (Explicitly, these six divisors are $1, 3, 5, 9, 15, 45$.)</li>
+                <li><strong>Sum of all positive divisors:</strong> Applying the geometric-series formula $\sigma(N) =
+                    \prod \dfrac{p_i^{a_i + 1} - 1}{p_i - 1}$,
+                    $$\sigma(1440) = \left(\frac{2^6 - 1}{2 - 1}\right)\left(\frac{3^3 - 1}{3 - 1}\right)\left(\frac{5^2
+                    - 1}{5 - 1}\right) = 63 \times \frac{26}{2} \times \frac{24}{4} = 63 \times 13 \times 6 = 819 \times
+                    6 = 4914$$</li>
+            </ol>
+            <p><strong>Part (b):</strong> Factor the denominator $1600$ into primes:</p>
+            $$1600 = 16 \times 100 = 2^4 \cdot (2^2 \cdot 5^2) = 2^6 \cdot 5^2$$
+            <p>Check reduced form: $173$ is odd (not divisible by $2$) and ends in $3$ (not divisible by $5$), so
+                $\gcd(173, 1600) = 1$. Since the denominator contains only primes $2$ and $5$, the decimal terminates.
+                Balancing the powers of $2$ and $5$ by multiplying top and bottom by $5^4 = 625$:</p>
+            $$\frac{173}{2^6 \cdot 5^2} = \frac{173 \times 5^4}{2^6 \cdot 5^6} = \frac{108125}{10^6} = 0.108125$$
+            <p>Hence $\dfrac{173}{1600}$ terminates after exactly $\max(6, 2) = \mathbf{6}$ decimal places.</p>
+        </div>
+    </div>
+
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1 &bull; Warmup</span>
+            <span class="badge badge-type">Example 2 &bull; Nested Radicals &amp; Rationalization</span>
+        </div>
+        <div class="ex-problem">
+            <p>Simplify the following radical expression to a single exact rational number:</p>
+            $$E = \sqrt{11 - 2\sqrt{30}} + \sqrt{14 + 2\sqrt{45}} - \frac{2}{\sqrt{6} + 2}$$
+        </div>
+        <div class="ex-solution">
+            <p>Evaluate each of the three terms independently:</p>
+            <ol>
+                <li><strong>First term $\sqrt{11 - 2\sqrt{30}}$:</strong> We need $x, y \gt 0$ with $x + y = 11$ and $xy
+                    = 30$. Clearly $x = 6$ and $y = 5$. Since $\sqrt{6} \gt \sqrt{5}$:
+                    $$\sqrt{11 - 2\sqrt{30}} = \sqrt{(\sqrt{6} - \sqrt{5})^2} = |\sqrt{6} - \sqrt{5}| = \sqrt{6} -
+                    \sqrt{5}$$</li>
+                <li><strong>Second term $\sqrt{14 + 2\sqrt{45}}$:</strong> We need $u, v \gt 0$ with $u + v = 14$ and
+                    $uv = 45$. Clearly $u = 9$ and $v = 5$:
+                    $$\sqrt{14 + 2\sqrt{45}} = \sqrt{(\sqrt{9} + \sqrt{5})^2} = \sqrt{9} + \sqrt{5} = 3 + \sqrt{5}$$
+                </li>
+                <li><strong>Third term $\dfrac{2}{\sqrt{6} + 2}$:</strong> Multiply numerator and denominator by the
+                    conjugate $\sqrt{6} - 2$:
+                    $$\frac{2}{\sqrt{6} + 2} \cdot \frac{\sqrt{6} - 2}{\sqrt{6} - 2} = \frac{2(\sqrt{6} -
+                    2)}{(\sqrt{6})^2 - 2^2} = \frac{2(\sqrt{6} - 2)}{6 - 4} = \frac{2(\sqrt{6} - 2)}{2} = \sqrt{6} - 2$$
+                </li>
+            </ol>
+            <p>Combine all three simplified terms carefully, watching the minus sign in front of the third term:</p>
+            $$E = (\sqrt{6} - \sqrt{5}) + (3 + \sqrt{5}) - (\sqrt{6} - 2) = \sqrt{6} - \sqrt{5} + 3 + \sqrt{5} -
+            \sqrt{6} + 2 = \mathbf{5}$$
+        </div>
+    </div>
+
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1 &bull; Warmup</span>
+            <span class="badge badge-type">Example 3 &bull; Logarithm Laws &amp; Change of Base</span>
+        </div>
+        <div class="ex-problem">
+            <p>Compute the exact numerical value of:</p>
+            $$K = 2\log_{10} 5 + \log_{10} 8 - \frac{1}{2}\log_{10} 4 + \log_2 9 \cdot \log_3 8$$
+        </div>
+        <div class="ex-solution">
+            <p>Split $K$ into the base-$10$ group and the mixed-base product:</p>
+            <ol>
+                <li><strong>Base-$10$ group:</strong> First absorb coefficients into exponents via $r \log_a m =
+                    \log_a(m^r)$:
+                    $$2\log_{10} 5 = \log_{10}(5^2) = \log_{10} 25, \qquad \frac{1}{2}\log_{10} 4 = \log_{10}(4^{1/2}) =
+                    \log_{10} 2$$
+                    Now combine using the Product and Quotient Laws:
+                    $$\log_{10} 25 + \log_{10} 8 - \log_{10} 2 = \log_{10}\!\left(\frac{25 \times 8}{2}\right) =
+                    \log_{10}(100) = \log_{10}(10^2) = 2$$</li>
+                <li><strong>Mixed-base product:</strong> Apply Change of Base to a common base (say base $10$) and
+                    factor $9 = 3^2$, $8 = 2^3$:
+                    $$\log_2 9 \cdot \log_3 8 = \frac{\log 9}{\log 2} \cdot \frac{\log 8}{\log 3} = \frac{2\log 3}{\log
+                    2} \cdot \frac{3\log 2}{\log 3} = 2 \times 3 = 6$$</li>
+            </ol>
+            <p>Adding both parts gives:</p>
+            $$K = 2 + 6 = \mathbf{8}$$
+        </div>
+    </div>
+
+    <!-- LEVEL 2 -->
+    <div class="level-banner l2">LEVEL 2 &bull; BEST EXAM-REAL APPLICATIONS (STANDARD SELECTION BENCHMARK)</div>
+
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2 &bull; Exam-Real</span>
+            <span class="badge badge-type">Example 4 &bull; Comparing Giant Powers &amp; Digit Counting</span>
+        </div>
+        <div class="ex-problem">
+            <p>(a) Arrange the four large powers $A = 2^{60}$, $B = 3^{48}$, $C = 4^{36}$, and $D = 5^{24}$ in strictly
+                ascending order.</p>
+            <p>(b) Given $\log_{10} 2 \approx 0.30103$ and $\log_{10} 3 \approx 0.47712$, determine the exact number of
+                digits in $N = 18^{40}$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a):</strong> Compute the greatest common divisor of the four exponents: $\gcd(60, 48, 36,
+                24) = 12$. Rewrite every power with the uniform outer exponent $12$:</p>
+            $$A = 2^{60} = (2^5)^{12} = 32^{12}, \qquad B = 3^{48} = (3^4)^{12} = 81^{12}$$
+            $$C = 4^{36} = (4^3)^{12} = 64^{12}, \qquad D = 5^{24} = (5^2)^{12} = 25^{12}$$
+            <p>Since $f(t) = t^{12}$ is strictly increasing for $t \gt 0$, the order of the powers matches the order of
+                their reduced bases. Because $25 \lt 32 \lt 64 \lt 81$, we conclude:</p>
+            $$D \lt A \lt C \lt B \quad \text{i.e., } \mathbf{5^{24} \lt 2^{60} \lt 4^{36} \lt 3^{48}}$$
+            <p><strong>Part (b):</strong> Express $18$ in terms of primes $2$ and $3$: $18 = 2 \cdot 3^2$. Take
+                $\log_{10}$ of $N = 18^{40}$:</p>
+            $$\log_{10} N = \log_{10}\!\left((2 \cdot 3^2)^{40}\right) = 40\big(\log_{10} 2 + 2\log_{10} 3\big)$$
+            <p>Substitute the given values carefully:</p>
+            $$\log_{10} 2 + 2\log_{10} 3 \approx 0.30103 + 2(0.47712) = 0.30103 + 0.95424 = 1.25527$$
+            $$\log_{10} N \approx 40 \times 1.25527 = 4 \times 12.5527 = 50.2108$$
+            <p>Since $50.2108$ lies safely away from an integer boundary, the exact characteristic is $C = \lfloor
+                \log_{10} N \rfloor = 50$. By the Digit-Counting Theorem:</p>
+            $$\text{Number of digits in } 18^{40} = C + 1 = 50 + 1 = \mathbf{51}$$
+        </div>
+    </div>
+
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2 &bull; Exam-Real</span>
+            <span class="badge badge-type">Example 5 &bull; Logarithmic Equation &amp; Extraneous Root Trap</span>
+        </div>
+        <div class="ex-problem">
+            <p>Find all real values of $x$ satisfying the equation:</p>
+            $$\log_4(x - 1) = \log_2(x - 3)$$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Lock the Domain First:</strong> Both logarithmic arguments in the <em>original</em>
+                equation must be strictly positive:</p>
+            $$x - 1 \gt 0 \implies x \gt 1 \qquad \text{AND} \qquad x - 3 \gt 0 \implies x \gt 3$$
+            <p>Intersecting both conditions gives the exact allowable domain: <strong>$x \gt 3$</strong>.</p>
+            <p><strong>Step 2 — Convert to a Common Base and Solve:</strong> Rewrite base $4 = 2^2$ using the Base-Power
+                Law $\log_{a^k} m = \dfrac{1}{k}\log_a m$:</p>
+            $$\log_{2^2}(x - 1) = \log_2(x - 3) \implies \frac{1}{2}\log_2(x - 1) = \log_2(x - 3)$$
+            <p>Multiply both sides by $2$ and move the coefficient into the exponent:</p>
+            $$\log_2(x - 1) = 2\log_2(x - 3) = \log_2\!\big((x - 3)^2\big)$$
+            <p>Since $t \mapsto \log_2 t$ is strictly increasing (one-to-one), we equate arguments:</p>
+            $$x - 1 = (x - 3)^2 = x^2 - 6x + 9$$
+            $$x^2 - 7x + 10 = 0 \implies (x - 5)(x - 2) = 0 \implies x = 5 \text{ or } x = 2$$
+            <p><strong>Step 3 — Filter Against the Original Domain ($x \gt 3$):</strong></p>
+            <ul>
+                <li>Check $x = 2$: Even though $x = 2$ is positive and makes $\log_4(2 - 1) = \log_4 1 = 0$ defined, it
+                    produces $\log_2(2 - 3) = \log_2(-1)$ on the right-hand side, which is <strong>undefined in
+                        $\mathbb{R}$</strong>! Hence $x = 2$ is an <em>extraneous root</em> introduced by squaring $(x -
+                    3)$.</li>
+                <li>Check $x = 5$: Satisfies $5 \gt 3$. Direct verification: $\text{LHS} = \log_4(4) = 1$ and
+                    $\text{RHS} = \log_2(2) = 1$. Valid!</li>
+            </ul>
+            <p>Therefore, the unique real solution is $\mathbf{x = 5}$.</p>
+        </div>
+    </div>
+
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2 &bull; Exam-Real</span>
+            <span class="badge badge-type">Example 6 &bull; Modulus Equation via Critical Points</span>
+        </div>
+        <div class="ex-problem">
+            <p>Find all real solutions to the modulus equation:</p>
+            $$|x - 2| + |x + 4| = 10$$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Method 1 — Rigorous Critical-Point Analysis:</strong> Setting each inner expression to zero
+                yields the critical points $x = -4$ and $x = 2$, which divide $\mathbb{R}$ into three intervals:</p>
+            <ol>
+                <li><strong>Interval 1 ($x \lt -4$):</strong> Here $x + 4 \lt 0$ and $x - 2 \lt 0$, so both moduli open
+                    with negative signs:
+                    $$-(x - 2) - (x + 4) = 10 \implies -2x - 2 = 10 \implies -2x = 12 \implies x = -6$$
+                    Check active interval: $-6 \lt -4$ holds. Valid!</li>
+                <li><strong>Interval 2 ($-4 \le x \lt 2$):</strong> Here $x + 4 \ge 0$ while $x - 2 \lt 0$:
+                    $$-(x - 2) + (x + 4) = 10 \implies 6 = 10 \quad (\text{Contradiction})$$
+                    No solution exists in $[-4, 2)$.</li>
+                <li><strong>Interval 3 ($x \ge 2$):</strong> Here both $x - 2 \ge 0$ and $x + 4 \gt 0$, so both moduli
+                    open positively:
+                    $$(x - 2) + (x + 4) = 10 \implies 2x + 2 = 10 \implies 2x = 8 \implies x = 4$$
+                    Check active interval: $4 \ge 2$ holds. Valid!</li>
+            </ol>
+            <p><strong>Method 2 — Geometric Verification:</strong> Rewrite as $|x - 2| + |x - (-4)| = 10$. The anchor
+                points $a = -4$ and $b = 2$ are separated by $d = 2 - (-4) = 6$. Since $c = 10 \gt 6$, the excess
+                distance is $c - d = 4$, so we step outward by $\Delta = 4/2 = 2$ units from each endpoint: $x_1 = -4 -
+                2 = -6$ and $x_2 = 2 + 2 = 4$.</p>
+            <p>Combining all cases, the solution set is $\mathbf{x \in \{-6, 4\}}$.</p>
+        </div>
+    </div>
+
+    <!-- LEVEL 3 -->
+    <div class="level-banner l3">LEVEL 3 &bull; RANK-BOOSTER &amp; OLYMPIAD BRIDGE (FULL DERIVATION + 30-SECOND
+        SHORTCUT)</div>
+
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3 &bull; Rank-Booster</span>
+            <span class="badge badge-type">Example 7 &bull; Product of Divisors &amp; Logarithms Bridge</span>
+        </div>
+        <div class="ex-problem">
+            <p>Let $P$ denote the product of all positive divisors of $N = 900$. Find the exact integer value of
+                $\log_{30} P$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <ol>
+                <li>Factor $N = 900$ into its canonical prime factorization:
+                    $$900 = 30^2 = (2 \cdot 3 \cdot 5)^2 = 2^2 \cdot 3^2 \cdot 5^2$$</li>
+                <li>Compute the total number of positive divisors of $900$:
+                    $$d(900) = (2 + 1)(2 + 1)(2 + 1) = 3 \times 3 \times 3 = 27$$</li>
+                <li>Notice that $d(900) = 27$ is <em>odd</em> because $900 = 30^2$ is a perfect square. List all $27$
+                    divisors in ascending order: $d_1 \lt d_2 \lt \dots \lt d_{13} \lt d_{14} \lt d_{15} \lt \dots \lt
+                    d_{27}$.
+                    <ul>
+                        <li>The middle (14th) divisor is $d_{14} = \sqrt{900} = 30$, which pairs with itself.</li>
+                        <li>The remaining $26$ divisors form $\dfrac{27 - 1}{2} = 13$ complementary pairs $(d_1,
+                            d_{27}), (d_2, d_{26}), \dots, (d_{13}, d_{15})$, where every pair multiplies to $900$.</li>
+                    </ul>
+                    Multiplying all $27$ divisors together yields:
+                    $$P = (d_1 d_{27})(d_2 d_{26}) \cdots (d_{13} d_{15}) \cdot d_{14} = 900^{13} \cdot 30$$
+                </li>
+                <li>Express $P$ purely as a power of $30$ (since $900 = 30^2$):
+                    $$P = (30^2)^{13} \cdot 30^1 = 30^{26} \cdot 30^1 = 30^{27}$$
+                    (Observe how this confirms the general formula $P(N) = N^{d(N)/2} = (30^2)^{27/2} = 30^{27}$ even
+                    when $d(N)$ is odd!)</li>
+                <li>Finally, apply the definition of the logarithm:
+                    $$\log_{30} P = \log_{30}(30^{27}) = 27 \cdot \log_{30} 30 = \mathbf{27}$$</li>
+            </ol>
+            <div class="shortcut-box">
+                <strong>30-Second Exam Shortcut:</strong> Whenever $N = a^2$ is a perfect square, the universal product
+                formula $P(N) = N^{d(N)/2}$ simplifies immediately to $P(N) = (a^2)^{d(N)/2} = a^{d(N)}$, which means
+                $\log_a P(N) = d(N)$ directly! Here $a = 30 = 2 \cdot 3 \cdot 5 \implies 900 = 2^2 \cdot 3^2 \cdot 5^2
+                \implies d(900) = 3^3 = \mathbf{27}$ in under 10 seconds.
+            </div>
+        </div>
+    </div>
+
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3 &bull; Rank-Booster</span>
+            <span class="badge badge-type">Example 8 &bull; Infinite Nested Surds + Log Reciprocal + Exponentials</span>
+        </div>
+        <div class="ex-problem">
+            <p>Let $x = \sqrt{6 + \sqrt{6 + \sqrt{6 + \dots}}}$ and $y = \sqrt{20 - \sqrt{20 - \sqrt{20 - \dots}}}$.
+                Solve for the exact real number $t$ satisfying:</p>
+            $$x^{2t - 1} \cdot y^{t} = 72 \cdot \left(\frac{1}{\log_y(xy)} + \frac{1}{\log_x(xy)}\right)^{2026}$$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <ol>
+                <li><strong>Evaluate $x$:</strong> Since $x \gt 0$ and the infinite tail repeats $x$, write $x = \sqrt{6
+                    + x}$. Squaring both sides:
+                    $$x^2 = 6 + x \implies x^2 - x - 6 = 0 \implies (x - 3)(x + 2) = 0$$
+                    Rejecting $x = -2$ because $x \gt 0$, we obtain $x = 3$.</li>
+                <li><strong>Evaluate $y$:</strong> Since $y \gt 0$ and the infinite tail repeats $y$, write $y =
+                    \sqrt{20 - y}$. Squaring both sides:
+                    $$y^2 = 20 - y \implies y^2 + y - 20 = 0 \implies (y + 5)(y - 4) = 0$$
+                    Rejecting $y = -5$ because $y \gt 0$, we obtain $y = 4$.</li>
+                <li><strong>Collapse the Logarithmic Bracket:</strong> Since $x = 3, y = 4$, both $x, y, xy$ are
+                    strictly greater than $1$, so all logs are well-defined. Apply the Reciprocal Identity
+                    $\dfrac{1}{\log_a b} = \log_b a$:
+                    $$\frac{1}{\log_y(xy)} + \frac{1}{\log_x(xy)} = \log_{xy} y + \log_{xy} x = \log_{xy}(y \cdot x) =
+                    \log_{xy}(xy) = 1$$
+                    Raising $1$ to the $2026$-th power gives $1^{2026} = 1$, so the entire right-hand side collapses to
+                    $72 \cdot 1 = 72$.</li>
+                <li><strong>Solve the Exponential Equation:</strong> Substitute $x = 3$ and $y = 4$ into the left-hand
+                    side:
+                    $$3^{2t - 1} \cdot 4^t = 72$$
+                    Split $3^{2t - 1} = \dfrac{3^{2t}}{3} = \dfrac{9^t}{3}$ and combine the $t$-th powers:
+                    $$\frac{9^t \cdot 4^t}{3} = 72 \implies (9 \cdot 4)^t = 72 \times 3 \implies 36^t = 216$$
+                    Rewrite both sides in the common prime/composite base $6$ ($36 = 6^2$ and $216 = 6^3$):
+                    $$(6^2)^t = 6^3 \implies 6^{2t} = 6^3 \implies 2t = 3 \implies t = \mathbf{\frac{3}{2}}$$</li>
+            </ol>
+            <div class="shortcut-box">
+                <strong>30-Second Exam Shortcut:</strong> Spot three Olympiad patterns simultaneously: (1) $6 = 2 \times
+                3$ (additive) $\implies x = 3$; (2) $20 = 4 \times 5$ (subtractive) $\implies y = 4$; (3)
+                $\frac{1}{\log_a(ab)} + \frac{1}{\log_b(ab)} \equiv 1$ identically (never substitute $x, y$ inside the
+                logs!). That drops you directly to $\frac{1}{3}(36)^t = 72 \implies 36^t = 216 \implies 6^{2t} = 6^3
+                \implies t = \mathbf{3/2}$.
+            </div>
+        </div>
+    </div>
+
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3 &bull; Rank-Booster</span>
+            <span class="badge badge-type">Example 9 &bull; Multi-Modulus Inequality &amp; Log Domain Synthesis</span>
+        </div>
+        <div class="ex-problem">
+            <p>Find the total number of <strong>integer values</strong> of $x$ that simultaneously satisfy both
+                conditions:</p>
+            <p>(1) $|x - 1| + |x - 5| + |x - 8| \le 11$, &nbsp;&nbsp;and&nbsp;&nbsp; (2) $\log_{(x - 2)}(10 - x)$ is a
+                well-defined real number.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <p><strong>Part I — Solve the Multi-Modulus Inequality (Condition 1):</strong> Let $f(x) = |x - 1| + |x - 5|
+                + |x - 8|$. Its critical points are $x = 1, 5, 8$, creating four intervals:</p>
+            <ol>
+                <li><strong>$x \lt 1$:</strong> $f(x) = (1 - x) + (5 - x) + (8 - x) = 14 - 3x$.
+                    $$14 - 3x \le 11 \implies 3x \ge 3 \implies x \ge 1$$
+                    Intersecting with $x \lt 1$ gives $\emptyset$.</li>
+                <li><strong>$1 \le x \lt 5$:</strong> $f(x) = (x - 1) + (5 - x) + (8 - x) = 12 - x$.
+                    $$12 - x \le 11 \implies x \ge 1$$
+                    Intersecting with $[1, 5)$ keeps the full interval $[1, 5)$.</li>
+                <li><strong>$5 \le x \lt 8$:</strong> $f(x) = (x - 1) + (x - 5) + (8 - x) = x + 2$.
+                    $$x + 2 \le 11 \implies x \le 9$$
+                    Intersecting with $[5, 8)$ keeps the full interval $[5, 8)$.</li>
+                <li><strong>$x \ge 8$:</strong> $f(x) = (x - 1) + (x - 5) + (x - 8) = 3x - 14$.
+                    $$3x - 14 \le 11 \implies 3x \le 25 \implies x \le \frac{25}{3} = 8.\overline{3}$$
+                    Intersecting with $[8, \infty)$ gives $\left[8, \dfrac{25}{3}\right]$.</li>
+            </ol>
+            <p>Taking the union across all four intervals gives $x \in \left[1, \dfrac{25}{3}\right]$. The integers
+                satisfying Condition 1 are $\{1, 2, 3, 4, 5, 6, 7, 8\}$.</p>
+            <p><strong>Part II — Enforce All Three Logarithm Domain Rules (Condition 2):</strong> For $\log_{(x - 2)}(10
+                - x)$ to exist in $\mathbb{R}$:</p>
+            <ul>
+                <li>Argument $\gt 0$: $10 - x \gt 0 \implies x \lt 10$.</li>
+                <li>Base $\gt 0$: $x - 2 \gt 0 \implies x \gt 2$.</li>
+                <li>Base $\neq 1$: $x - 2 \neq 1 \implies x \neq 3$. <em>(Critical BEST trap!)</em></li>
+            </ul>
+            <p>Thus Condition 2 restricts $x \in (2, 3) \cup (3, 10)$.</p>
+            <p><strong>Part III — Intersect Both Conditions:</strong> Filtering $\{1, 2, 3, 4, 5, 6, 7, 8\}$ against $x
+                \gt 2$, $x \lt 10$, and $x \neq 3$ eliminates $1, 2,$ and $3$, leaving:</p>
+            $$x \in \{4, 5, 6, 7, 8\}$$
+            <p>Hence there are exactly $\mathbf{5}$ valid integer values of $x$.</p>
+            <div class="shortcut-box">
+                <strong>30-Second Exam Shortcut:</strong> Always apply the <em>tighter discrete filter</em> (Condition
+                2) FIRST! The log domain instantly restricts candidate integers to $x \in \{4, 5, 6, 7, 8, 9\}$
+                (skipping $3$ because base $\neq 1$). Now use the Median Theorem on $f(x) = |x-1|+|x-5|+|x-8|$: minimum
+                is at median $x = 5$, where $f(5) = 4 + 0 + 3 = 7$. Between $1$ and $5$, slope is $-1 \implies f(4) = 8
+                \le 11$. Between $5$ and $8$, slope is $+1 \implies f(8) = 7 + 3 = 10 \le 11$. Past $8$, slope jumps to
+                $+3 \implies f(9) = 10 + 3 = 13 \gt 11$. Instantly drop $9$, leaving $\{4, 5, 6, 7, 8\} \implies
+                \mathbf{5}$ integers!
+            </div>
+        </div>
+    </div>
+
+</article>
