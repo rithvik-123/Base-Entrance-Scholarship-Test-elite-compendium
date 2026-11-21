@@ -1,0 +1,574 @@
+<article data-volume="Volume 1: Quantitative Aptitude &amp; Logical Reasoning (Paper 1)"
+    data-title="Chapter 4: Combinatorics &amp; Probability Bridge — Full Solutions &amp; Error Forensics">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">VOLUME 1 · QUANTITATIVE APTITUDE &amp; LOGICAL REASONING · CHAPTER 4</div>
+        <h1>Step-by-Step Verified Solutions &amp; Error Forensics</h1>
+        <p>Complete zero-skip derivations, fast verification checks, and forensic trap autopsies for all 30 problems in
+            the Chapter 4 Practice Arena.</p>
+        <div class="tag-row">
+            <span class="meta-pill">30 Complete Solutions</span>
+            <span class="meta-pill">100% Key-Matched</span>
+            <span class="meta-pill">5 Trap &amp; Error Forensics Cards</span>
+            <span class="meta-pill">Part 3: Solutions &amp; Forensics</span>
+        </div>
+    </header>
+
+    <div class="level-banner l1">LEVEL 1 · WARMUP &amp; FOUNDATION SOLUTIONS (Q01–Q09)</div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q01</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Key: 055</span>
+        </div>
+        <p><strong>Step 1 (Split by Units Digit):</strong> A number is divisible by $5$ iff its units digit is $0$ or
+            $5$. Because $0$ cannot occupy the hundreds slot, split into two disjoint cases using the $7$-digit pool
+            $\{0, 1, 2, 3, 4, 5, 6\}$:</p>
+        <ul>
+            <li><strong>Case 1 (Units digit $= 0$):</strong> Units slot has $1$ choice; hundreds slot has $6$ choices
+                (any of $\{1, 2, 3, 4, 5, 6\}$); tens slot has $5$ remaining choices:
+                $$6 \times 5 \times 1 = 30$$
+            </li>
+            <li><strong>Case 2 (Units digit $= 5$):</strong> Units slot has $1$ choice; hundreds slot excludes both $0$
+                and $5$, leaving $5$ choices; tens slot now re-allows $0$, leaving $7 - 2 = 5$ choices:
+                $$5 \times 5 \times 1 = 25$$
+            </li>
+        </ul>
+        <p><strong>Step 2 (Sum Disjoint Cases):</strong> $30 + 25 = \mathbf{55}$.</p>
+        <p><strong>Final Answer:</strong> <code>055</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q02</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Key: 049</span>
+        </div>
+        <p><strong>Step 1 (Apply Legendre's Formula for $p = 5$):</strong> The number of trailing zeroes in $200!$
+            equals $v_5(200!)$:</p>
+        $$v_5(200!) = \left\lfloor \frac{200}{5} \right\rfloor + \left\lfloor \frac{200}{25} \right\rfloor +
+        \left\lfloor \frac{200}{125} \right\rfloor = 40 + 8 + 1 = \mathbf{49}$$
+        <p><strong>Final Answer:</strong> <code>049</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q03</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Key: (C)</span>
+        </div>
+        <p><strong>Step 1 (Inventory Letter Multiplicities):</strong> <code>SUCCESS</code> has $7$ letters: three
+            <code>S</code>'s, two <code>C</code>'s, one <code>U</code>, and one <code>E</code>.
+        </p>
+        <p><strong>Step 2 (Identical-Object Permutation Formula):</strong></p>
+        $$\text{Arrangements} = \frac{7!}{3!\,2!} = \frac{5040}{6 \times 2} = \frac{5040}{12} = \mathbf{420}$$
+        <p>Hence, option <strong>(C)</strong> is correct.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q04</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Key: 060</span>
+        </div>
+        <p><strong>Step 1 (Apply Necklace Flip Symmetry):</strong> For $n = 6$ distinct beads on a physical necklace ($n
+            \ge 3$), turning the necklace over makes clockwise and anticlockwise orientations indistinguishable:</p>
+        $$\text{Distinct Necklaces} = \frac{(6 - 1)!}{2} = \frac{5!}{2} = \frac{120}{2} = \mathbf{60}$$
+        <p><strong>Final Answer:</strong> <code>060</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q05</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Key: 012</span>
+        </div>
+        <p><strong>Step 1 (Set Up Diagonal Equation):</strong> A convex $n$-gon has $\dfrac{n(n - 3)}{2}$ diagonals:</p>
+        $$\frac{n(n - 3)}{2} = 54 \implies n(n - 3) = 108 \implies n^2 - 3n - 108 = 0$$
+        $$(n - 12)(n + 9) = 0$$
+        <p>Since $n &gt; 0$, we get $n = \mathbf{12}$ sides.</p>
+        <p><strong>Final Answer:</strong> <code>012</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q06</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Key: (A)</span>
+        </div>
+        <p><strong>Step 1 (Enumerate Disjoint Cases for "At Least 3 Girls"):</strong> From $6$ boys and $5$ girls, a
+            $4$-member team with $\ge 3$ girls has either $3$ girls + $1$ boy, or $4$ girls + $0$ boys:</p>
+        $$\text{Ways} = \binom{5}{3}\binom{6}{1} + \binom{5}{4}\binom{6}{0} = (10 \times 6) + (5 \times 1) = 60 + 5 =
+        \mathbf{65}$$
+        <p>Hence, option <strong>(A)</strong> is correct.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q07</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Key: 078</span>
+        </div>
+        <p><strong>Step 1 (Positive Integer Stars &amp; Bars):</strong> For $x + y + z = 14$ with $x, y, z \ge 1$ ($n =
+            14, r = 3$):</p>
+        $$\text{Solutions} = \binom{n - 1}{r - 1} = \binom{14 - 1}{3 - 1} = \binom{13}{2} = \frac{13 \times 12}{2} =
+        \mathbf{78}$$
+        <p><strong>Final Answer:</strong> <code>078</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q08</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Key: 016</span>
+        </div>
+        <p><strong>Step 1 (Worst-Case Pigeonhole Adversary):</strong> There are $k = 5$ colours, and every colour has at
+            least $4$ marbles available. To avoid reaching $4$ of any single colour, the worst-case draw picks $3$ of
+            each of the $5$ colours ($5 \times 3 = 15$ marbles). The $16\text{th}$ marble must match one of the $5$
+            triples:</p>
+        $$N_{\min} = 5(4 - 1) + 1 = 15 + 1 = \mathbf{16}$$
+        <p><strong>Final Answer:</strong> <code>016</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q09</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Key: (D)</span>
+        </div>
+        <p><strong>Step 1 (Count Prime Sums in $n(S) = 36$):</strong> Possible prime sums from two dice are $2, 3, 5,
+            7,$ and $11$. Using the triangular sum counts:</p>
+        <ul>
+            <li>Sum $2$: $1$ way; Sum $3$: $2$ ways; Sum $5$: $4$ ways; Sum $7$: $6$ ways; Sum $11$: $2$ ways.</li>
+        </ul>
+        $$n(E) = 1 + 2 + 4 + 6 + 2 = 15 \implies P(E) = \frac{15}{36} = \mathbf{\frac{5}{12}}$$
+        <p>Hence, option <strong>(D)</strong> is correct.</p>
+    </div>
+
+    <div class="level-banner l2">LEVEL 2 · BEST EXAM-REAL SOLUTIONS (Q10–Q21)</div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q10</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Key: 014</span>
+        </div>
+        <p><strong>Step 1 (Prime-Factorize the Composite Divisor):</strong> $18 = 2^1 \times 3^2$. Compute $v_3(60!)$
+            and $v_2(60!)$ via Legendre's Formula:</p>
+        $$v_3(60!) = \left\lfloor \frac{60}{3} \right\rfloor + \left\lfloor \frac{60}{9} \right\rfloor + \left\lfloor
+        \frac{60}{27} \right\rfloor = 20 + 6 + 2 = 28 \implies \left\lfloor \frac{28}{2} \right\rfloor = 14\text{ copies
+        of } 3^2$$
+        $$v_2(60!) = 30 + 15 + 7 + 3 + 1 = 56\text{ copies of } 2^1$$
+        <p><strong>Step 2 (Take the Bottleneck):</strong> $k = \min(56, 14) = \mathbf{14}$.</p>
+        <p><strong>Final Answer:</strong> <code>014</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q11</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Key: 144</span>
+        </div>
+        <p><strong>Step 1 (Apply the Gap Method):</strong> Arrange the $3$ distinct Biology textbooks first in $3! = 6$
+            ways. This creates $3 + 1 = 4$ gaps (`_ B _ B _ B _`).</p>
+        <p><strong>Step 2 (Place the $3$ Distinct Chemistry Textbooks):</strong> Choose and order $3$ of the $4$ gaps
+            for the $3$ distinct Chemistry textbooks in ${}^4P_3 = 4 \times 3 \times 2 = 24$ ways:</p>
+        $$\text{Total Arrangements} = 3! \times {}^4P_3 = 6 \times 24 = \mathbf{144}$$
+        <p><strong>Final Answer:</strong> <code>144</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q12</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Key: (C)</span>
+        </div>
+        <p><strong>Step 1 (Apply the String / Bundle Method):</strong> <code>DAUGHTER</code> has $8$ distinct letters:
+            $3$ vowels (<code>A, U, E</code>) and $5$ consonants (<code>D, G, H, T, R</code>). Tie the $3$ vowels into
+            $1$ super-block <code>[AUE]</code>.</p>
+        <p><strong>Step 2 (Permute Externally and Internally):</strong> Arrange the $5 + 1 = 6$ blocks in $6! = 720$
+            ways, and permute the $3$ distinct vowels inside the block in $3! = 6$ ways:</p>
+        $$\text{Total Arrangements} = 6! \times 3! = 720 \times 6 = \mathbf{4320}$$
+        <p>Hence, option <strong>(C)</strong> is correct.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q13</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Key: 079</span>
+        </div>
+        <p><strong>Step 1 (Sort Distinct Letters Alphabetically):</strong> <code>A, M, R, S, T</code>. Apply the
+            factorial-base rank formula to <code>S M A R T</code>:</p>
+        <ul>
+            <li><strong><code>S</code></strong> ($4!$): $3$ smaller letters to its right (`A, M, R`) $\implies 3 \times
+                24 = 72$.</li>
+            <li><strong><code>M</code></strong> ($3!$): $1$ smaller letter to its right (`A`) $\implies 1 \times 6 = 6$.
+            </li>
+            <li><strong><code>A</code></strong> ($2!$): $0$ smaller letters to its right $\implies 0$.</li>
+            <li><strong><code>R</code></strong> ($1!$): $0$ smaller letters to its right (`T` &gt; `R`) $\implies 0$.
+            </li>
+            <li><strong><code>T</code></strong> ($0!$): $0$.</li>
+        </ul>
+        <p><strong>Step 2 (Add $+1$ for the Word Itself):</strong> $\text{Rank}(\texttt{SMART}) = 72 + 6 + 0 + 0 + 0 + 1
+            = \mathbf{79}$.</p>
+        <p><strong>Final Answer:</strong> <code>079</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q14</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Key: 435</span>
+        </div>
+        <p><strong>Step 1 (Subtract Collinear Triples):</strong> Total $3$-point combinations from $15$ points is
+            $\dbinom{15}{3} = \dfrac{15 \times 14 \times 13}{6} = 455$. The $6$ collinear points yield $\dbinom{6}{3} =
+            \dfrac{6 \times 5 \times 4}{6} = 20$ degenerate triples that form zero triangles:</p>
+        $$\text{Distinct Triangles} = 455 - 20 = \mathbf{435}$$
+        <p><strong>Final Answer:</strong> <code>435</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q15</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Key: 150</span>
+        </div>
+        <p><strong>Step 1 (Split the Journey at $(4, 2)$):</strong></p>
+        <ul>
+            <li><strong>Leg 1: $(0, 0) \to (4, 2)$</strong> requires $4$ East and $2$ North steps ($6$ steps total):
+                $\dbinom{6}{2} = \dfrac{6 \times 5}{2} = 15$ paths.</li>
+            <li><strong>Leg 2: $(4, 2) \to (7, 4)$</strong> requires $7 - 4 = 3$ East and $4 - 2 = 2$ North steps ($5$
+                steps total): $\dbinom{5}{2} = \dfrac{5 \times 4}{2} = 10$ paths.</li>
+        </ul>
+        <p><strong>Step 2 (Multiply Independent Legs):</strong> $15 \times 10 = \mathbf{150}$ shortest paths.</p>
+        <p><strong>Final Answer:</strong> <code>150</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q16</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Key: 165</span>
+        </div>
+        <p><strong>Step 1 (Normalize Lower Bounds to Zero):</strong> Set $a' = a - 1$, $b' = b - 2$, $c' = c - 3$, and
+            $d' = d - 4$, all $\ge 0$. Pre-paying $1 + 2 + 3 + 4 = 10$ reduces the sum to:</p>
+        $$a' + b' + c' + d' = 18 - 10 = 8, \qquad a', b', c', d' \ge 0$$
+        <p><strong>Step 2 (Non-Negative Stars &amp; Bars with $n = 8, r = 4$):</strong></p>
+        $$\text{Solutions} = \binom{8 + 4 - 1}{4 - 1} = \binom{11}{3} = \frac{11 \times 10 \times 9}{6} = \mathbf{165}$$
+        <p><strong>Final Answer:</strong> <code>165</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q17</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Key: (A)</span>
+        </div>
+        <p><strong>Step 1 (Inclusion–Exclusion &amp; De Morgan's Law):</strong></p>
+        $$P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.55 + 0.40 - 0.20 = 0.75$$
+        $$P(A' \cap B') = 1 - P(A \cup B) = 1 - 0.75 = \mathbf{0.25}$$
+        <p>Hence, option <strong>(A)</strong> is correct.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q18</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Key: (D)</span>
+        </div>
+        <p><strong>Step 1 (Invert to the Complement — "None Solves It"):</strong> Because the three attempts are
+            independent:</p>
+        $$P(\text{none solves}) = \left(1 - \frac{1}{3}\right)\left(1 - \frac{1}{4}\right)\left(1 - \frac{1}{5}\right) =
+        \frac{2}{3} \times \frac{3}{4} \times \frac{4}{5} = \frac{2}{5}$$
+        <p><strong>Step 2 (Subtract from $1$):</strong></p>
+        $$P(\text{at least one solves}) = 1 - \frac{2}{5} = \mathbf{\frac{3}{5}}$$
+        <p>Hence, option <strong>(D)</strong> is correct.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q19</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Key: 019</span>
+        </div>
+        <p><strong>Step 1 (Heterogeneous-Capacity Pigeonhole Adversary):</strong> We need $6$ pens of one colour, so the
+            adversary tries to give us at most $5$ of each colour. However, there are only <strong>$3$ green
+                pens</strong> in the pouch! Thus, the maximum failure draw without hitting $6$ of any colour is:</p>
+        $$\text{Worst-case failure} = 5\text{ black} + 5\text{ blue} + 5\text{ red} + 3\text{ green} = 18\text{ pens}$$
+        <p><strong>Step 2 (Add $1$ to Break the Barrier):</strong> The $19\text{th}$ pen must be black, blue, or red,
+            completing a set of $6$:</p>
+        $$N_{\min} = 18 + 1 = \mathbf{19}$$
+        <p><strong>Final Answer:</strong> <code>019</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q20</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Key: (B)</span>
+        </div>
+        <p><strong>Step 1 (Dependent Sequential Multiplication):</strong> There are $12$ face cards (`J, Q, K` $\times
+            4$) in a $52$-card deck. Without replacement:</p>
+        $$P(\text{both face cards}) = \frac{12}{52} \times \frac{11}{51} = \frac{3}{13} \times \frac{11}{51} =
+        \frac{1}{13} \times \frac{11}{17} = \mathbf{\frac{11}{221}}$$
+        <p><em>Note:</em> Distractor (A) $\frac{9}{169}$ is the <em>with-replacement</em> answer
+            $\left(\frac{3}{13}\right)^2$. Hence, option <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q21</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Key: (C)</span>
+        </div>
+        <p><strong>Step 1 (Shrink Sample Space to Red Cards):</strong> Given the card is red, the reduced sample space
+            has $n(\text{Red}) = 26$ cards (Hearts and Diamonds). Among these $26$ red cards, there are $2$ red Kings
+            ($K\heartsuit, K\diamondsuit$) and $2$ red Aces ($A\heartsuit, A\diamondsuit$), giving $4$ favourable
+            outcomes:</p>
+        $$P(\text{King or Ace} \mid \text{Red}) = \frac{4}{26} = \mathbf{\frac{2}{13}}$$
+        <p>Hence, option <strong>(C)</strong> is correct.</p>
+    </div>
+
+    <div class="level-banner l3">LEVEL 3 · RANK-BOOSTER &amp; OLYMPIAD SOLUTIONS (Q22–Q30)</div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q22</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Key: 072</span>
+        </div>
+        <p><strong>Step 1 (List All Valid 2-Digit Endings Divisible by 4):</strong> A number is divisible by $4$ iff its
+            last two digits form a multiple of $4$. Using distinct digits from $\{0, 1, 2, 3, 4, 5\}$, split valid
+            endings by whether they contain $0$:</p>
+        <ul>
+            <li><strong>Group A (Endings containing $0$):</strong> <code>04</code>, <code>20</code>, <code>40</code>
+                ($3$ endings). For each ending, $0$ is already used, so the thousands slot has $4$ choices and the
+                hundreds slot has $3$ choices:
+                $$3 \times (4 \times 3) = 3 \times 12 = 36$$
+            </li>
+            <li><strong>Group B (Endings NOT containing $0$):</strong> <code>12</code>, <code>24</code>,
+                <code>32</code>, <code>52</code> ($4$ endings). For each ending, $0$ is still in the pool, so the
+                thousands slot excludes $0$ and the $2$ used digits ($6 - 3 = 3$ choices), while the hundreds slot
+                re-allows $0$ ($6 - 3 = 3$ choices):
+                $$4 \times (3 \times 3) = 4 \times 9 = 36$$
+            </li>
+        </ul>
+        <p><strong>Step 2 (Sum Both Groups):</strong> $36 + 36 = \mathbf{72}$.</p>
+        <p><strong>Final Answer:</strong> <code>072</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q23</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Key: 255</span>
+        </div>
+        <p><strong>Step 1 (Apply Repeat-Adjusted Factorial-Base Algorithm):</strong> Sort <code>SECRET</code>
+            alphabetically: <code>C, E, E, R, S, T</code> (two <code>E</code>'s). Evaluate $\dfrac{c_i}{R_i}(6 - i)!$
+            for each slot in <code>S E C R E T</code>:</p>
+        <ul>
+            <li><strong><code>S</code></strong> ($5!$): $4$ smaller letters to its right (`E, C, R, E`); repeats from
+                `S` onward $= 2!$ (two `E`'s) $\implies \dfrac{4}{2!} \times 120 = 240$.</li>
+            <li><strong><code>E</code></strong> ($4!$): $1$ smaller letter to its right (`C`); repeats from this `E`
+                onward $= 2!$ (two `E`'s) $\implies \dfrac{1}{2!} \times 24 = 12$.</li>
+            <li><strong><code>C</code></strong> ($3!$): $0$ smaller letters to its right $\implies 0$.</li>
+            <li><strong><code>R</code></strong> ($2!$): $1$ smaller letter to its right (`E`); repeats from `R` onward
+                $= 1$ $\implies \dfrac{1}{1} \times 2 = 2$.</li>
+            <li><strong><code>E</code></strong> ($1!$), <strong><code>T</code></strong> ($0!$): $0, 0$.</li>
+        </ul>
+        <p><strong>Step 2 (Add $+1$):</strong> $\text{Rank}(\texttt{SECRET}) = 240 + 12 + 0 + 2 + 0 + 0 + 1 =
+            \mathbf{255}$.</p>
+        <p><strong>Final Answer:</strong> <code>255</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q24</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Key: 021</span>
+        </div>
+        <p><strong>Method 1 (Olympiad Upper-Bound Complement Substitution — 15 Seconds):</strong> Notice that the sum of
+            the upper bounds is $6 + 7 + 8 = 21$, which is very close to $16$! Define the "unused slack" variables:</p>
+        $$x' = 6 - x, \qquad y' = 7 - y, \qquad z' = 8 - z$$
+        <p>Then $x', y', z' \ge 0$, and summing all three gives:</p>
+        $$x' + y' + z' = (6 + 7 + 8) - (x + y + z) = 21 - 16 = 5$$
+        <p>Because the new sum is only $5$, <em>every</em> non-negative solution $(x', y', z')$ automatically satisfies
+            $x' \le 5 \le 6$, $y' \le 5 \le 7$, and $z' \le 5 \le 8$! Therefore, zero upper-bound violations are
+            possible:</p>
+        $$\text{Solutions} = \binom{5 + 3 - 1}{3 - 1} = \binom{7}{2} = \frac{7 \times 6}{2} = \mathbf{21}$$
+        <p><strong>Method 2 (PIE Verification):</strong> $\binom{18}{2} - \binom{11}{2} - \binom{10}{2} - \binom{9}{2} +
+            \binom{3}{2} + \binom{2}{2} + 0 = 153 - 55 - 45 - 36 + 3 + 1 = 21$.</p>
+        <p><strong>Final Answer:</strong> <code>021</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q25</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Key: (B)</span>
+        </div>
+        <p><strong>Step 1 (Complementary Path Counting):</strong> Total unrestricted shortest paths from $(0, 0)$ to
+            $(6, 4)$ is $\dbinom{6 + 4}{4} = \dbinom{10}{4} = \dfrac{10 \times 9 \times 8 \times 7}{24} = 210$.</p>
+        <p><strong>Step 2 (Subtract Paths Through the Forbidden Node $(3, 2)$):</strong></p>
+        $$\text{Paths through }(3, 2) = \binom{3 + 2}{2} \times \binom{(6 - 3) + (4 - 2)}{2} = \binom{5}{2} \times
+        \binom{5}{2} = 10 \times 10 = 100$$
+        $$\text{Valid Paths} = 210 - 100 = \mathbf{110}$$
+        <p>Hence, option <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q26</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Key: 096</span>
+        </div>
+        <p><strong>Step 1 (Bundle Each Couple):</strong> Tie each husband and wife into $1$ couple-block, giving $4$
+            distinct blocks around the circular table.</p>
+        <p><strong>Step 2 (Arrange Blocks Circularly, Then Flip Internally):</strong></p>
+        <ul>
+            <li>Circular arrangements of $4$ couple-blocks: $(4 - 1)! = 3! = 6$ ways.</li>
+            <li>Internal ordering within each of the $4$ couples (husband on left or right): $2 \times 2 \times 2 \times
+                2 = 2^4 = 16$ ways.</li>
+        </ul>
+        $$\text{Total Circular Arrangements} = 6 \times 16 = \mathbf{96}$$
+        <p><strong>Final Answer:</strong> <code>096</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q27</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Key: (D)</span>
+        </div>
+        <p><strong>Step 1 (Shrink Sample Space to Unequal Pairs):</strong> Out of $36$ ordered outcomes, $6$ are doubles
+            $(1,1), \dots, (6,6)$, leaving $n(B) = 36 - 6 = 30$ equally likely pairs with different numbers.</p>
+        <p><strong>Step 2 (Filter Favourable Outcomes Inside $B$):</strong> Pairs summing to $6$ are $(1,5), (2,4),
+            (3,3), (4,2), (5,1)$. Excluding the double $(3,3)$ leaves $n(A \cap B) = 4$ valid pairs:</p>
+        $$P(\text{Sum } = 6 \mid \text{Different}) = \frac{4}{30} = \mathbf{\frac{2}{15}}$$
+        <p>Hence, option <strong>(D)</strong> is correct.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q28</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Key: 024</span>
+        </div>
+        <p><strong>Step 1 (Construct Complementary-Sum Pigeonholes):</strong> Partition $S = \{1, 2, \dots, 45\}$ into
+            pairs that sum to $46$:</p>
+        $$\{1, 45\},\; \{2, 44\},\; \{3, 43\},\; \dots,\; \{22, 24\} \quad\text{(22 pairs)}, \qquad\text{plus the
+        unpaired singleton } \{23\}$$
+        <p>Notice that $23$ cannot pair with itself because we must select <em>distinct</em> integers.</p>
+        <p><strong>Step 2 (Worst-Case Adversary):</strong> We now have $22 + 1 = 23$ disjoint pigeonholes. To avoid any
+            pair summing to $46$, we can pick at most $1$ integer from each of the $22$ pairs plus the singleton $23$,
+            giving $23$ integers. By the Pigeonhole Principle, selecting a $24\text{th}$ distinct integer forces both
+            members of some pair to be chosen:</p>
+        $$N_{\min} = 23 + 1 = \mathbf{24}$$
+        <p><strong>Final Answer:</strong> <code>024</code></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q29</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Key: (C)</span>
+        </div>
+        <p><strong>Step 1 (Apply Law of Total Probability):</strong> Given $P(A) = 0.60$, $P(B) = 0.40$, $P(D \mid A) =
+            0.05$, and $P(D \mid B) = 0.10$:</p>
+        $$P(D) = P(A)\,P(D \mid A) + P(B)\,P(D \mid B) = (0.60)(0.05) + (0.40)(0.10) = 0.030 + 0.040 = \mathbf{0.070}$$
+        <p><em>Trap Check:</em> Averaging $5\%$ and $10\%$ blindly gives distractor (A) $0.075$, ignoring the $60:40$
+            production weights! Hence, option <strong>(C)</strong> is correct.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q30</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Key: (A)</span>
+        </div>
+        <p><strong>Step 1 (Apply Bayes' Theorem Using Q29 Leaves):</strong></p>
+        $$P(B \mid D) = \frac{P(B)\,P(D \mid B)}{P(D)} = \frac{0.040}{0.070} = \mathbf{\frac{4}{7}}$$
+        <p><em>Natural-Frequency Check:</em> Out of $1000$ chips, Line $A$ makes $600$ ($30$ defective) and Line $B$
+            makes $400$ ($40$ defective). Given a chip is among the $70$ defective chips, the chance it came from Line
+            $B$ is $\frac{40}{70} = \frac{4}{7}$. Hence, option <strong>(A)</strong> is correct.</p>
+    </div>
+
+    <h2 class="section-heading">4.8 Trap &amp; Error Forensics · BEST Paper 1 Autopsy</h2>
+
+    <div class="trap-box">
+        <span class="box-label">Forensic Card 1 · Double-Counting &amp; Order-Matters vs. Selection Errors (Q06, Q11,
+            Q26)</span>
+        <p><strong>The Fatal Errors:</strong></p>
+        <ul>
+            <li><em>Double-Counting in "At Least $k$" Committees (Q06):</em> Students write $\binom{5}{3} \times
+                \binom{8}{1} = 80$ ("pick $3$ girls first, then pick $1$ more from the remaining $8$ students"). This
+                <strong>quadruple-counts</strong> every $4$-girl committee! Whenever an overlap exists between the
+                pre-selected group and the remaining pool, strictly separate disjoint cases ($3\text{G} + 1\text{B}$ and
+                $4\text{G} + 0\text{B}$).
+            </li>
+            <li><em>Selection (${}^nC_r$) vs. Arrangement (${}^nP_r$) in Gap Method (Q11):</em> Writing $3! \times
+                \binom{4}{3} = 24$ treats the $3$ distinct Chemistry textbooks as identical. Always check whether the
+                items placed into gaps are <strong>distinct</strong> (use ${}^gP_k$) or <strong>identical</strong> (use
+                ${}^gC_k$).</li>
+            <li><em>Forgetting Internal Permutations in Bundles (Q26):</em> Writing $(4 - 1)! = 6$ or $(4 - 1)! \times 2
+                = 12$ instead of $3! \times 2^4 = 96$. Every single bundle of size $2$ flips independently!</li>
+        </ul>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensic Card 2 · Pigeonhole Off-by-One &amp; Heterogeneous Capacity Traps (Q08, Q19,
+            Q28)</span>
+        <p><strong>The Fatal Errors:</strong></p>
+        <ul>
+            <li><em>Forgetting the "+1" Barrier Breaker (Q08, Q28):</em> Computing the worst-case failure count ($15$ in
+                Q08, or $23$ in Q28) and submitting that as the answer. The worst-case count is the maximum number of
+                draws that can <em>still fail</em>—you must always add $+1$ to guarantee success.</li>
+            <li><em>Blindly Applying $k(m - 1) + 1$ When a Colour Runs Out (Q19):</em> Plugging $k = 4, m = 6$ into
+                $4(5) + 1 = 21$ fails because there are only $3$ green pens, not $5$! Always cap each category's
+                adversary contribution at $\min(\text{available}, m - 1)$.</li>
+            <li><em>Missing the Unpaired Singleton in Sum-Pairing (Q28):</em> Dividing $45/2$ carelessly to get $22$
+                holes instead of $22$ pairs $+ 1$ singleton $\{23\} = 23$ holes.</li>
+        </ul>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensic Card 3 · Zero-Digit &amp; Divisibility-by-4 Unsplit Slot Traps (Q01,
+            Q22)</span>
+        <p><strong>The Fatal Error:</strong> In Q01, filling the units slot with $2$ choices ($\{0, 5\}$) and then
+            multiplying by $5$ for the hundreds slot gives $5 \times 5 \times 2 = 50$—wrong! When $0$ is used in the
+            units slot, the hundreds slot has $6$ choices, not $5$. The exact same error strikes Q22 if you lump `04,
+            20, 40` together with `12, 24, 32, 52`.</p>
+        <p><strong>The Antidote:</strong> Whenever $0$ is in the digit pool AND can legally occupy a constrained
+            rightmost slot, <strong>always isolate "ends with/uses $0$" from "does not use $0$"</strong> before filling
+            the leading digit.</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensic Card 4 · Stars &amp; Bars Upper-Bound Symmetry vs. PIE (Q16, Q24)</span>
+        <p><strong>The Fatal Error:</strong> Students try to apply raw PIE to Q24 ($x + y + z = 16$ with $x \le 6, y \le
+            7, z \le 8$) and forget the pairwise intersection terms $\binom{3}{2} + \binom{2}{2}$, landing on $17$
+            instead of $21$.</p>
+        <p><strong>The Antidote:</strong> Whenever the target sum $n$ is larger than half the sum of the upper bounds
+            ($\sum u_i$), immediately invert variables via $x_i' = u_i - x_i$. In Q24, that single substitution
+            collapses a messy 7-term PIE calculation into a 10-second $\binom{7}{2} = 21$ calculation.</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensic Card 5 · Conditional Sample-Space Shrinkage &amp; Bayes Base-Rate Fallacy (Q21,
+            Q27, Q29–Q30)</span>
+        <p><strong>The Fatal Errors:</strong></p>
+        <ul>
+            <li><em>Forgetting to Exclude Doubles in Conditional Dice (Q27):</em> Dividing $5$ (all pairs summing to
+                $6$, including $(3,3)$) by $30$ to get $\frac{1}{6}$ (distractor A), or dividing $5$ by $36$ (distractor
+                C). When conditioning on $B$, <strong>both</strong> the denominator $n(B)$ AND the numerator $n(A \cap
+                B)$ must live strictly inside $B$!</li>
+            <li><em>Ignoring Base Rates in Bayes' Theorem (Q29–Q30):</em> Claiming $P(B \mid D) = \frac{10\%}{5\% +
+                10\%} = \frac{2}{3}$ (distractor C in Q30). That ignores the fact that Line $A$ produces $60\%$ of all
+                chips while Line $B$ produces only $40\%$. Always multiply prior $\times$ likelihood ($0.40 \times 0.10
+                = 0.040$) before normalizing.</li>
+        </ul>
+    </div>
+
+</article>

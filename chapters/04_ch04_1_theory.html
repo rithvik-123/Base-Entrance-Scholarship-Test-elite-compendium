@@ -1,0 +1,957 @@
+<article data-volume="Volume 1: Quantitative Aptitude &amp; Logical Reasoning (Paper 1)"
+    data-title="Chapter 4: Combinatorics &amp; Probability Bridge">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">VOLUME 1 · QUANTITATIVE APTITUDE &amp; LOGICAL REASONING · CHAPTER 4</div>
+        <h1>Combinatorics &amp; Probability Bridge</h1>
+        <p>Build an airtight counting engine—from slot-filling invariants, Legendre's prime-power law, circular
+            symmetries, and Stars &amp; Bars to Pigeonhole worst-case guarantees, Inclusion–Exclusion, and tree-diagram
+            Bayesian probability.</p>
+        <div class="tag-row">
+            <span class="meta-pill">Target Study Time: 8 Hours</span>
+            <span class="meta-pill">Paper 1 Core + Olympiad Bridge</span>
+            <span class="meta-pill">Part 1: Theory &amp; 9 Worked Examples</span>
+            <span class="meta-pill">NTSE Stage 2 · IOQM-Lite · Resonance Foundation</span>
+        </div>
+    </header>
+
+    <h2 class="section-heading">4.1 Fundamental Counting Principle &amp; Slot-Filling Traps</h2>
+
+    <p>Every advanced formula in combinatorics—permutations, combinations, grid paths, and probability—is built from
+        just two foundational laws governing how choices combine:</p>
+
+    <div class="concept-box">
+        <span class="box-label">Core Principle · Addition Rule (OR) vs. Multiplication Rule (AND)</span>
+        <ul>
+            <li><strong>Rule of Sum (Addition Rule — Mutually Exclusive Cases):</strong> If a task can be performed in
+                $m$ ways under Case 1 <strong>OR</strong> in $n$ ways under Case 2, and the two cases share <em>no
+                    common outcome</em>, the total number of ways is $m + n$.</li>
+            <li><strong>Rule of Product (Multiplication Rule — Sequential Independent Choices):</strong> If a procedure
+                consists of Stage 1 (possible in $m$ ways) <strong>AND</strong> Stage 2 (possible in $n$ ways for
+                <em>each</em> outcome of Stage 1), the total number of ways is $m \times n$.
+            </li>
+        </ul>
+    </div>
+
+    <h3>The Slot-Filling Method &amp; The "Most Constrained Slot First" Law</h3>
+    <p>When building $k$-digit numbers, passwords, or seatings, draw $k$ empty slots and write the number of valid
+        options inside each slot before multiplying. Always obey two golden discipline rules:</p>
+    <ol>
+        <li><strong>Fill the Most Restricted Slot First:</strong> Never fill slots blindly left-to-right if the
+            rightmost slot carries a parity or divisibility constraint (e.g., even number, multiple of $5$).</li>
+        <li><strong>The Zero-Cannot-Be-First-Digit Trap (Mandatory Case Split):</strong> In forming an $n$-digit number
+            without repetition using a digit pool containing $0$, the leading digit cannot be $0$. If another slot (such
+            as the units digit for even numbers or multiples of $5$) <em>also</em> accepts $0$, the number of choices
+            left for the leading digit <strong>depends on whether $0$ was already used in the units slot</strong>.
+            Therefore, you <strong>must split</strong> the count into two disjoint cases:
+            <ul>
+                <li><strong>Case 1:</strong> Units digit $= 0$ (now $0$ is gone, so all remaining digits are non-zero
+                    and eligible for the leading slot).</li>
+                <li><strong>Case 2:</strong> Units digit $\ne 0$ (now $0$ is still in the pool, so the leading slot
+                    excludes <em>both</em> $0$ and the chosen units digit).</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2 class="section-heading">4.2 Factorials &amp; Legendre's Prime-Power Formula</h2>
+
+    <p>For any positive integer $n$, the factorial $n!$ counts the number of ways to order $n$ distinct objects in a
+        row: $n! = n \times (n - 1) \times \dots \times 2 \times 1$. From the recurrence $n! = n \cdot (n - 1)!$,
+        setting $n = 1$ yields $1! = 1 \cdot 0! \implies \mathbf{0! = 1}$ (combinatorially, there is exactly $1$ way to
+        arrange zero objects: the empty arrangement).</p>
+
+    <h3>Legendre's Formula: Highest Power of a Prime $p$ Dividing $n!$</h3>
+    <p>Denote by $v_p(n!)$ the largest integer exponent $e$ such that $p^e \mid n!$. How do we count every factor of
+        prime $p$ inside $1 \times 2 \times 3 \times \dots \times n$ without double-counting?</p>
+    <ul>
+        <li>Every multiple of $p$ contributes at least <strong>1</strong> factor of $p$: there are $\left\lfloor
+            \dfrac{n}{p} \right\rfloor$ such integers.</li>
+        <li>Every multiple of $p^2$ contributes a <strong>2nd</strong> factor of $p$: there are $\left\lfloor
+            \dfrac{n}{p^2} \right\rfloor$ such integers.</li>
+        <li>Every multiple of $p^3$ contributes a <strong>3rd</strong> factor of $p$: there are $\left\lfloor
+            \dfrac{n}{p^3} \right\rfloor$ such integers, and so on until $p^k &gt; n$.</li>
+    </ul>
+    <p>Summing all tiers gives <strong>Legendre's Formula</strong>:</p>
+    $$v_p(n!) = \left\lfloor \frac{n}{p} \right\rfloor + \left\lfloor \frac{n}{p^2} \right\rfloor + \left\lfloor
+    \frac{n}{p^3} \right\rfloor + \dots$$
+    <p><em>Fast Successive-Division Computation:</em> Because $\left\lfloor \frac{\lfloor n/p \rfloor}{p} \right\rfloor
+        = \left\lfloor \frac{n}{p^2} \right\rfloor$, simply divide $n$ repeatedly by $p$ (dropping remainders each time)
+        and sum all quotients! For example, $v_5(125!)$: $125 \div 5 = 25$, $25 \div 5 = 5$, $5 \div 5 = 1 \implies 25 +
+        5 + 1 = 31$.</p>
+
+    <h3>Trailing Zeroes of $n!$</h3>
+    <p>Each trailing zero corresponds to one factor of $10 = 2 \times 5$. In any factorial $n!$, factors of $2$ are
+        always far more abundant than factors of $5$ ($v_2(n!) \ge v_5(n!)$). Thus, the number of trailing zeroes in
+        $n!$ is governed solely by the bottleneck prime $5$:</p>
+    $$\text{Trailing Zeroes in } n! = v_5(n!) = \left\lfloor \frac{n}{5} \right\rfloor + \left\lfloor \frac{n}{25}
+    \right\rfloor + \left\lfloor \frac{n}{125} \right\rfloor + \dots$$
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge · Composite Divisors &amp; Legendre's Base-$p$
+            Identity</span>
+        <p><strong>1. Highest Power of a Composite Number $M$ in $n!$:</strong> Prime-factorize $M = p_1^{a_1} p_2^{a_2}
+            \cdots p_k^{a_k}$. Each copy of $M$ consumes $a_i$ copies of prime $p_i$, so the maximum number of complete
+            copies of $M$ inside $n!$ is the tightest bottleneck across all prime factors:</p>
+        $$v_M(n!) = \min_{1 \le i \le k} \left\lfloor \frac{v_{p_i}(n!)}{a_i} \right\rfloor$$
+        <p><em>Trap Warning:</em> Never assume the largest prime factor of $M$ is always the bottleneck! For $M = 24 =
+            2^3 \cdot 3$ dividing $20!$: $v_2(20!) = 18 \implies \lfloor 18/3 \rfloor = 6$, while $v_3(20!) = 8 \implies
+            \lfloor 8/1 \rfloor = 8$. Here $2^3$ (not $3$!) limits the answer to $6$.</p>
+        <p><strong>2. Base-$p$ Digit-Sum Identity (IOQM Favorite):</strong> If $s_p(n)$ denotes the sum of digits of $n$
+            written in base $p$, then $v_p(n!) = \dfrac{n - s_p(n)}{p - 1}$. In particular, for $p = 2$, $v_2(n!) = n -
+            (\text{number of } 1\text{'s in the binary representation of } n)$.</p>
+    </div>
+
+    <h2 class="section-heading">4.3 Permutations: Linear, Identical, Circular &amp; Dictionary Rank</h2>
+
+    <p>A <strong>permutation</strong> is an ordered arrangement where sequence matters ($AB \ne BA$). Selecting and
+        ordering $r$ objects from $n$ distinct objects fills $r$ slots in $n(n - 1)\cdots(n - r + 1)$ ways:</p>
+    $${}^nP_r = \frac{n!}{(n - r)!}$$
+
+    <h3>Permutations with Identical (Indistinguishable) Objects</h3>
+    <p>Suppose we have $n$ objects where $p$ are identical of Type 1, $q$ are identical of Type 2, and $r$ are identical
+        of Type 3 ($p + q + r \le n$). If all objects were temporarily tagged distinct, there would be $n!$ orderings.
+        Removing tags collapses every $p!$ internal reorderings of Type 1, $q!$ of Type 2, and $r!$ of Type 3 into a
+        single indistinguishable arrangement:</p>
+    $$\text{Distinct Linear Permutations} = \frac{n!}{p!\,q!\,r!}$$
+
+    <h3>String Method (Always Together) vs. Gap Method (Never Together)</h3>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Constraint</th>
+                <th>Technique</th>
+                <th>Execution Blueprint</th>
+                <th>Critical Exam Trap</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>$k$ specific objects ALWAYS together</strong></td>
+                <td><strong>String / Bundle Method</strong></td>
+                <td>Tie the $k$ objects into $1$ super-block. Arrange $(n - k + 1)$ blocks externally, then permute the
+                    $k$ objects internally: $(n - k + 1)! \times k!$.</td>
+                <td>Forgetting the internal $k!$ (or dividing by identical repeats inside the bundle).</td>
+            </tr>
+            <tr>
+                <td><strong>NO TWO of $k$ specific objects together</strong></td>
+                <td><strong>Gap Method</strong></td>
+                <td>Arrange the $(n - k)$ unrestricted objects first in $(n - k)!$ ways, creating $(n - k + 1)$ gaps.
+                    Place the $k$ restricted objects into $k$ chosen gaps: $(n - k)! \times {}^{n-k+1}P_k$ (use
+                    ${}^{n-k+1}C_k$ if the $k$ objects are identical).</td>
+                <td><strong>FATAL ERROR for $k \ge 3$:</strong> Using $(\text{Total} - \text{All } k \text{ Together})$!
+                    That only forbids all $k$ being together—it still counts pairs being adjacent!</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Circular Permutations &amp; The Necklace Flip Rule</h3>
+    <p>On a circular table with unlabeled chairs, rotating all $n$ people clockwise by $1, 2, \dots, n - 1$ seats
+        produces the <em>exact same relative seating</em>. Because each circular arrangement corresponds to $n$
+        identical linear rotations:</p>
+    $$\text{Circular Permutations (Clockwise } \ne \text{ Anticlockwise)} = \frac{n!}{n} = (n - 1)!$$
+    <p>However, for a <strong>physical necklace, garland, or key ring</strong> that can be lifted and flipped over in 3D
+        space, every clockwise ordering is physically identical to its mirror-image anticlockwise ordering. For $n \ge
+        3$, this divides the count by $2$:</p>
+    $$\text{Necklace / Garland Permutations } (n \ge 3) = \frac{(n - 1)!}{2}$$
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 700 220" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Circular seating versus flip-symmetric necklace diagram">
+            <!-- Left Panel: Circular Table (CW != ACW) -->
+            <rect x="15" y="15" width="320" height="190" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="175" y="38" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Dining Table: CW ≠
+                ACW → (n − 1)!</text>
+
+            <!-- Circle 1: A top, B right, C bottom, D left -->
+            <circle cx="95" cy="112" r="44" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2" />
+            <circle cx="95" cy="68" r="11" fill="#1d4ed8" /><text x="95" y="72" text-anchor="middle" font-size="11"
+                font-weight="700" fill="#fff">A</text>
+            <circle cx="139" cy="112" r="11" fill="#0f766e" /><text x="139" y="116" text-anchor="middle" font-size="11"
+                font-weight="700" fill="#fff">B</text>
+            <circle cx="95" cy="156" r="11" fill="#7c3aed" /><text x="95" y="160" text-anchor="middle" font-size="11"
+                font-weight="700" fill="#fff">C</text>
+            <circle cx="51" cy="112" r="11" fill="#dc2626" /><text x="51" y="116" text-anchor="middle" font-size="11"
+                font-weight="700" fill="#fff">D</text>
+
+            <text x="175" y="118" text-anchor="middle" font-size="18" font-weight="700" fill="#dc2626">≠</text>
+
+            <!-- Circle 2: A top, D right, C bottom, B left -->
+            <circle cx="255" cy="112" r="44" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2" />
+            <circle cx="255" cy="68" r="11" fill="#1d4ed8" /><text x="255" y="72" text-anchor="middle" font-size="11"
+                font-weight="700" fill="#fff">A</text>
+            <circle cx="299" cy="112" r="11" fill="#dc2626" /><text x="299" y="116" text-anchor="middle" font-size="11"
+                font-weight="700" fill="#fff">D</text>
+            <circle cx="255" cy="156" r="11" fill="#7c3aed" /><text x="255" y="160" text-anchor="middle" font-size="11"
+                font-weight="700" fill="#fff">C</text>
+            <circle cx="211" cy="112" r="11" fill="#0f766e" /><text x="211" y="116" text-anchor="middle" font-size="11"
+                font-weight="700" fill="#fff">B</text>
+
+            <text x="175" y="190" text-anchor="middle" font-size="11" fill="#334155">Left/right neighbours of A swap (2
+                distinct seatings)</text>
+
+            <!-- Right Panel: Necklace (CW = ACW via 3D Flip) -->
+            <rect x="365" y="15" width="320" height="190" rx="8" fill="#fefce8" stroke="#fde047" stroke-width="1.5" />
+            <text x="525" y="38" text-anchor="middle" font-size="13" font-weight="700" fill="#854d0e">Necklace (n ≥ 3):
+                Flip Symmetry → (n − 1)!/2</text>
+
+            <!-- Necklace 1 -->
+            <circle cx="445" cy="112" r="44" fill="none" stroke="#a16207" stroke-width="2.5" stroke-dasharray="4,3" />
+            <circle cx="445" cy="68" r="11" fill="#1d4ed8" /><text x="445" y="72" text-anchor="middle" font-size="11"
+                font-weight="700" fill="#fff">A</text>
+            <circle cx="489" cy="112" r="11" fill="#0f766e" /><text x="489" y="116" text-anchor="middle" font-size="11"
+                font-weight="700" fill="#fff">B</text>
+            <circle cx="445" cy="156" r="11" fill="#7c3aed" /><text x="445" y="160" text-anchor="middle" font-size="11"
+                font-weight="700" fill="#fff">C</text>
+            <circle cx="401" cy="112" r="11" fill="#dc2626" /><text x="401" y="116" text-anchor="middle" font-size="11"
+                font-weight="700" fill="#fff">D</text>
+
+            <!-- Flip axis symbol -->
+            <text x="525" y="106" text-anchor="middle" font-size="16" font-weight="700" fill="#15803d">≡</text>
+            <text x="525" y="124" text-anchor="middle" font-size="10" font-weight="700" fill="#15803d">180° Flip</text>
+
+            <!-- Necklace 2 -->
+            <circle cx="605" cy="112" r="44" fill="none" stroke="#a16207" stroke-width="2.5" stroke-dasharray="4,3" />
+            <circle cx="605" cy="68" r="11" fill="#1d4ed8" /><text x="605" y="72" text-anchor="middle" font-size="11"
+                font-weight="700" fill="#fff">A</text>
+            <circle cx="649" cy="112" r="11" fill="#dc2626" /><text x="649" y="116" text-anchor="middle" font-size="11"
+                font-weight="700" fill="#fff">D</text>
+            <circle cx="605" cy="156" r="11" fill="#7c3aed" /><text x="605" y="160" text-anchor="middle" font-size="11"
+                font-weight="700" fill="#fff">C</text>
+            <circle cx="561" cy="112" r="11" fill="#0f766e" /><text x="561" y="116" text-anchor="middle" font-size="11"
+                font-weight="700" fill="#fff">B</text>
+
+            <text x="525" y="190" text-anchor="middle" font-size="11" fill="#713f12">Turning the necklace over maps CW
+                onto ACW (1 necklace)</text>
+        </svg>
+        <div class="diagram-caption">Figure 4.1: Rotating breaks linear order by a factor of $n$; 3D flip symmetry
+            collapses clockwise and anticlockwise necklaces by an extra factor of $2$.</div>
+    </div>
+
+    <h3>Dictionary (Lexicographical) Rank of a Word</h3>
+    <p>When all distinct permutations of a word's letters are listed in strict alphabetical order, the
+        <strong>rank</strong> of the target word equals $(\text{number of words strictly preceding it}) + 1$. From first
+        principles, scan left to right: at each position $i$, count how many valid permutations can be formed by placing
+        a letter <em>strictly smaller alphabetically</em> than the target letter at position $i$, while locking all
+        earlier letters $1, \dots, i - 1$. Then lock position $i$ and advance to $i + 1$.
+    </p>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge · The 30-Second Factorial-Base Rank Algorithm</span>
+        <p>Write the $n$-letter word horizontally. For each position $i$ from left to right ($k = n - i$ letters
+            remaining to its right):</p>
+        <ol>
+            <li>Count $c_i$ = number of letters strictly to the <em>right</em> of position $i$ that are alphabetically
+                <em>smaller</em> than the letter at position $i$.
+            </li>
+            <li>Compute $R_i$ = product of factorials of multiplicities of all repeated letters from position $i$
+                <strong>inclusive</strong> to the end of the word.
+            </li>
+            <li>Add $\dfrac{c_i}{R_i} \times (n - i)!$ across all positions, then add $+1$ at the very end for the word
+                itself:
+                $$\text{Rank} = 1 + \sum_{i=1}^{n} \frac{c_i}{R_i}\,(n - i)!$$
+            </li>
+        </ol>
+        <p><em>Why does dividing by $R_i$ work automatically even with repeats?</em> Suppose letter $x$ occurs $m$ times
+            from position $i$ onward ($x$ smaller than the target letter). Those $m$ identical copies contribute $m$ to
+            $c_i$, while $R_i$ contains $m!$, yielding $\frac{m}{m!} = \frac{1}{(m-1)!}$—which is <em>precisely</em> the
+            denominator needed when one copy of $x$ is placed at position $i$ and $(m - 1)$ copies remain to its right!
+        </p>
+    </div>
+
+    <h2 class="section-heading">4.4 Combinations, Geometric Counting &amp; Stars and Bars</h2>
+
+    <p>A <strong>combination</strong> selects $r$ objects from $n$ distinct objects where internal order is irrelevant
+        ($AB \equiv BA$). Since every unordered subset of size $r$ can be ordered in $r!$ ways, dividing ${}^nP_r$ by
+        $r!$ gives:</p>
+    $${}^nC_r = \binom{n}{r} = \frac{n!}{r!(n - r)!}$$
+    <p>Key identities used constantly in BEST Paper 1: <strong>Symmetry</strong> $\binom{n}{r} = \binom{n}{n-r}$,
+        <strong>Pascal's Rule</strong> $\binom{n}{r} + \binom{n}{r-1} = \binom{n+1}{r}$, and <strong>Total
+            Subsets</strong> $\sum_{r=0}^{n} \binom{n}{r} = 2^n$ (non-empty subsets $= 2^n - 1$).
+    </p>
+
+    <h3>Selection with Constraints (Committee Problems)</h3>
+    <ul>
+        <li><strong>Always Include $k$ Specific Members:</strong> Pre-select them immediately; choose the remaining $(r
+            - k)$ from the remaining $(n - k)$ people in $\binom{n - k}{r - k}$ ways.</li>
+        <li><strong>Never Include $k$ Specific Members:</strong> Exclude them immediately; choose all $r$ from $(n - k)$
+            people in $\binom{n - k}{r}$ ways.</li>
+        <li><strong>At Least One from a Subgroup:</strong> Use complementary counting: $\text{Total committees} -
+            \text{Committees with zero from subgroup}$.</li>
+    </ul>
+
+    <h3>Geometric Counting &amp; Shortest Lattice Grid Paths</h3>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Geometric Object</th>
+                <th>General Position ($n$ points)</th>
+                <th>With Exactly $k$ Collinear Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Distinct Straight Lines</strong></td>
+                <td>$\dbinom{n}{2}$</td>
+                <td>$\dbinom{n}{2} - \dbinom{k}{2} + 1$ &nbsp;(all $\binom{k}{2}$ pairs form 1 single line!)</td>
+            </tr>
+            <tr>
+                <td><strong>Distinct Triangles</strong></td>
+                <td>$\dbinom{n}{3}$</td>
+                <td>$\dbinom{n}{3} - \dbinom{k}{3}$ &nbsp;(collinear triples form 0 triangles!)</td>
+            </tr>
+            <tr>
+                <td><strong>Diagonals of a Convex $n$-gon</strong></td>
+                <td>$\dbinom{n}{2} - n = \dfrac{n(n - 3)}{2}$</td>
+                <td>Remove the $n$ perimeter sides from all $\binom{n}{2}$ vertex pairs.</td>
+            </tr>
+            <tr>
+                <td><strong>Rectangles / Squares on $m \times n$ Grid</strong></td>
+                <td colspan="2">Rectangles: $\dbinom{m + 1}{2}\dbinom{n + 1}{2}$ (choose 2 vertical &amp; 2 horizontal
+                    grid lines). &nbsp; Squares ($m \le n$): $\sum_{k=0}^{m-1} (m - k)(n - k)$.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Shortest Lattice Grid Paths:</strong> To walk from $(0,0)$ to $(m,n)$ moving <em>only</em> East ($E$:
+        $+1$ unit right) or North ($N$: $+1$ unit up), every shortest path must contain <strong>exactly $m$ steps of $E$
+            and $n$ steps of $N$</strong> (total $m + n$ steps). Hence, counting shortest paths is a 1-to-1 bijection
+        with permuting $m$ identical $E$'s and $n$ identical $N$'s:</p>
+    $$\text{Shortest Paths from } (0,0) \text{ to } (m,n) = \frac{(m + n)!}{m!\,n!} = \binom{m + n}{m} = \binom{m +
+    n}{n}$$
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 230" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="4 by 3 lattice grid path bijection showing E N E E N E N">
+            <!-- Grid lines (origin at x=60, y=185; cell size = 55px; 4 cols x 3 rows) -->
+            <g stroke="#cbd5e1" stroke-width="1.5">
+                <!-- Vertical lines x=0..4 -->
+                <line x1="60" y1="20" x2="60" y2="185" />
+                <line x1="115" y1="20" x2="115" y2="185" />
+                <line x1="170" y1="20" x2="170" y2="185" />
+                <line x1="225" y1="20" x2="225" y2="185" />
+                <line x1="280" y1="20" x2="280" y2="185" />
+                <!-- Horizontal lines y=0..3 -->
+                <line x1="60" y1="185" x2="280" y2="185" />
+                <line x1="60" y1="130" x2="280" y2="130" />
+                <line x1="60" y1="75" x2="280" y2="75" />
+                <line x1="60" y1="20" x2="280" y2="20" />
+            </g>
+
+            <!-- Highlighted Path: E(60->115), N(185->130), E(115->170), E(170->225), N(130->75), E(225->280), N(75->20) -->
+            <polyline points="60,185 115,185 115,130 170,130 225,130 225,75 280,75 280,20" fill="none" stroke="#1d4ed8"
+                stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
+
+            <!-- Step labels along path -->
+            <text x="87" y="179" text-anchor="middle" font-size="11" font-weight="700" fill="#1d4ed8">E</text>
+            <text x="106" y="160" text-anchor="end" font-size="11" font-weight="700" fill="#15803d">N</text>
+            <text x="142" y="124" text-anchor="middle" font-size="11" font-weight="700" fill="#1d4ed8">E</text>
+            <text x="197" y="124" text-anchor="middle" font-size="11" font-weight="700" fill="#1d4ed8">E</text>
+            <text x="216" y="105" text-anchor="end" font-size="11" font-weight="700" fill="#15803d">N</text>
+            <text x="252" y="69" text-anchor="middle" font-size="11" font-weight="700" fill="#1d4ed8">E</text>
+            <text x="290" y="50" font-size="11" font-weight="700" fill="#15803d">N</text>
+
+            <!-- Start and End Dots -->
+            <circle cx="60" cy="185" r="6" fill="#0f172a" />
+            <text x="60" y="206" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">(0, 0)</text>
+
+            <circle cx="280" cy="20" r="6" fill="#dc2626" />
+            <text x="310" y="24" font-size="12" font-weight="700" fill="#dc2626">(4, 3)</text>
+
+            <!-- Right Explanation Box -->
+            <rect x="355" y="28" width="305" height="162" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="375" y="54" font-size="13" font-weight="700" fill="#0f172a">Grid-to-Word Bijection</text>
+            <text x="375" y="80" font-size="12" fill="#334155">Shown path code: E – N – E – E – N – E – N</text>
+            <text x="375" y="104" font-size="12" fill="#334155">• Every shortest path uses 4 E's &amp; 3 N's.</text>
+            <text x="375" y="124" font-size="12" fill="#334155">• Total steps = 4 + 3 = 7 slots.</text>
+            <text x="375" y="144" font-size="12" fill="#334155">• Choose any 3 slots for N (rest are E):</text>
+            <text x="375" y="170" font-size="13" font-weight="700" fill="#1d4ed8">Total paths = C(7, 3) = 7! / (4! 3!) =
+                35</text>
+        </svg>
+        <div class="diagram-caption">Figure 4.2: Every shortest path on an $m \times n$ grid corresponds uniquely to a
+            binary word of $m$ East steps and $n$ North steps.</div>
+    </div>
+
+    <h3>Stars &amp; Bars (Beggar's Method)</h3>
+    <p>How many ways can we distribute $n$ <strong>identical</strong> coins among $r$ <strong>distinct</strong>
+        recipients—equivalently, how many integer solutions exist to $x_1 + x_2 + \dots + x_r = n$?</p>
+    <ol>
+        <li><strong>Non-Negative Integer Solutions ($x_i \ge 0$, zero allowed):</strong> Line up $n$ identical stars
+            ($\star$) and $r - 1$ identical vertical bars ($|$) to partition them into $r$ bins. For instance, with $n =
+            5, r = 3$, the string $\star\star\,|\,|\,\star\star\star$ encodes $(x_1, x_2, x_3) = (2, 0, 3)$. Arranging
+            $n$ stars and $(r - 1)$ bars yields:
+            $$\text{Non-Negative Solutions } (x_i \ge 0) = \frac{(n + r - 1)!}{n!\,(r - 1)!} = \binom{n + r - 1}{r -
+            1}$$
+        </li>
+        <li><strong>Positive Integer Solutions ($x_i \ge 1$, every bin gets at least 1):</strong> Pre-allocate $1$ star
+            to each of the $r$ bins immediately, leaving $n - r$ stars to distribute freely ($\ge 0$). Alternatively,
+            choose $r - 1$ gaps from the $n - 1$ interior gaps between $n$ stars:
+            $$\text{Positive Solutions } (x_i \ge 1) = \binom{(n - r) + r - 1}{r - 1} = \binom{n - 1}{r - 1}$$
+        </li>
+    </ol>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge · Lower-Bound Shifts, Upper-Bound Exclusions &amp;
+            Inequalities</span>
+        <ul>
+            <li><strong>Arbitrary Lower Bounds ($x_i \ge a_i$):</strong> Substitute $y_i = x_i - a_i \ge 0$. The
+                equation collapses to $y_1 + \dots + y_r = n - \sum a_i$ in non-negative integers, solved instantly by
+                $\binom{n - \sum a_i + r - 1}{r - 1}$.</li>
+            <li><strong>Upper Bound ($x_k \le u_k$):</strong> Compute the unrestricted count, then <em>subtract</em> the
+                bad solutions where $x_k \ge u_k + 1$ (shifting $z_k = x_k - (u_k + 1) \ge 0$). If two variables have
+                upper bounds, apply Inclusion–Exclusion!</li>
+            <li><strong>Inequality $x_1 + x_2 + \dots + x_r \le n$ ($x_i \ge 0$):</strong> Introduce a <strong>slack
+                    variable</strong> $x_{r+1} \ge 0$ so $x_1 + \dots + x_r + x_{r+1} = n$. That gives $(r + 1)$
+                variables and $\binom{n + r}{r}$ solutions in one step!</li>
+        </ul>
+    </div>
+
+    <h2 class="section-heading">4.5 The Pigeonhole Principle (Worst-Case Guarantee Engine)</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Core Principle · Basic &amp; Generalized Pigeonhole Principle (PHP)</span>
+        <ul>
+            <li><strong>Basic PHP:</strong> If $N$ pigeons are placed into $k$ pigeonholes with $N &gt; k$, then at
+                least one pigeonhole must contain <strong>at least $2$ pigeons</strong>.</li>
+            <li><strong>Generalized PHP:</strong> If $N$ pigeons are placed into $k$ pigeonholes, then at least one
+                pigeonhole must contain at least $\left\lceil \dfrac{N}{k} \right\rceil$ pigeons.</li>
+            <li><strong>Worst-Case Guarantee Formula:</strong> To <em>guarantee</em> at least $m$ objects of the same
+                type out of $k$ types (assuming each type has at least $m$ items available), imagine an evil adversary
+                trying to delay you as long as possible: the adversary hands you $(m - 1)$ items of <em>every</em> type
+                first, totaling $k(m - 1)$ items. The very next item breaks the barrier:
+                $$N_{\min} = k(m - 1) + 1$$
+            </li>
+        </ul>
+    </div>
+
+    <p><em>Heterogeneous Capacity Trap:</em> If one of the $k$ categories has <em>fewer</em> than $(m - 1)$ items (say a
+        box has $10$ red, $10$ blue, and only $2$ green balls, and you want $5$ of one color), the adversary can hand
+        you at most $2$ green balls (not $4$!), plus $4$ red and $4$ blue, giving worst-case failure $= 2 + 4 + 4 = 10$,
+        so $N_{\min} = 10 + 1 = 11$.</p>
+
+    <h2 class="section-heading">4.6 Probability Bridge: Classical, Complementary &amp; Bayesian Trees</h2>
+
+    <p>For a random experiment with a finite sample space $S$ of <strong>equally likely</strong> outcomes, the classical
+        probability of event $E \subseteq S$ is:</p>
+    $$P(E) = \frac{n(E)}{n(S)}, \qquad 0 \le P(E) \le 1, \qquad P(E) + P(E') = 1$$
+
+    <h3>Essential Sample Spaces (Coins, Dice &amp; 52-Card Deck)</h3>
+    <ul>
+        <li><strong>$n$ Fair Coins:</strong> $n(S) = 2^n$; exact $k$ heads occurs in $\binom{n}{k}$ ways.</li>
+        <li><strong>Two Fair Dice ($n(S) = 36$):</strong> The count of ordered pairs $(d_1, d_2)$ giving sum $s$ forms a
+            symmetric tent peaking at $s = 7$:
+            $$\text{Sum } s: \quad 2(1),\; 3(2),\; 4(3),\; 5(4),\; 6(5),\; \mathbf{7(6)},\; 8(5),\; 9(4),\; 10(3),\;
+            11(2),\; 12(1)$$
+            Notice the fast rule: for $s \le 7$, count $= s - 1$; for $s \ge 7$, count $= 13 - s$.</li>
+        <li><strong>Standard 52-Card Deck:</strong> $4$ suits ($\spadesuit, \clubsuit$ black; $\heartsuit, \diamondsuit$
+            red) $\times 13$ ranks each (`A, 2–10, J, Q, K`). There are $26$ red, $26$ black, $12$ face cards (`J, Q, K`
+            $\times 4$), $4$ aces (<em>aces are NOT face cards!</em>), and $16$ honour cards (`A, K, Q, J`).</li>
+    </ul>
+
+    <h3>Complementary Counting, Inclusion–Exclusion &amp; Independence</h3>
+    <ul>
+        <li><strong>Complementary Rule:</strong> Whenever a problem asks for <em>"at least one"</em>, <em>"not
+                all"</em>, or <em>"product is even"</em>, invert immediately: $P(E) = 1 - P(E')$.</li>
+        <li><strong>Inclusion–Exclusion &amp; De Morgan's Laws:</strong>
+            $$P(A \cup B) = P(A) + P(B) - P(A \cap B), \qquad P(A' \cap B') = 1 - P(A \cup B), \qquad P(A \cap B') =
+            P(A) - P(A \cap B)$$
+        </li>
+        <li><strong>Independent vs. Dependent Events:</strong> Events $A$ and $B$ are <strong>independent</strong> iff
+            $P(A \cap B) = P(A) \cdot P(B)$ (knowing $B$ occurred does not alter $A$'s probability—e.g., drawing
+            <em>with replacement</em>). Drawing <em>without replacement</em> makes successive draws
+            <strong>dependent</strong> because the denominator and composition shift.
+            <br><em>Classic Concept Trap:</em> <strong>Mutually exclusive $\ne$ Independent!</strong> In fact, if $P(A)
+            &gt; 0$ and $P(B) &gt; 0$ are mutually exclusive ($P(A \cap B) = 0$), they are <em>strongly dependent</em>
+            because $P(A)P(B) &gt; 0 \ne 0$ (if $A$ happens, $B$ is guaranteed NOT to happen).
+        </li>
+    </ul>
+
+    <h3>Conditional Probability &amp; Tree-Diagram Bayes Intuition</h3>
+    <p>The <strong>conditional probability</strong> of $A$ given that event $B$ has already occurred ($P(B) &gt; 0$)
+        shrinks the sample space from $S$ down to $B$:</p>
+    $$P(A \mid B) = \frac{P(A \cap B)}{P(B)} \implies P(A \cap B) = P(B)\,P(A \mid B)$$
+    <p>When an experiment unfolds in two stages—first choosing a hidden cause/box $B_i$ (mutually exclusive and
+        exhaustive), then observing outcome $R$—a <strong>probability tree</strong> visualizes both the <strong>Law of
+            Total Probability</strong> and <strong>Bayes' Theorem</strong> directly:</p>
+    $$P(R) = \sum_{i} P(B_i)\,P(R \mid B_i), \qquad P(B_k \mid R) = \frac{P(B_k)\,P(R \mid B_k)}{\sum_{i} P(B_i)\,P(R
+    \mid B_i)}$$
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 700 245" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Two-stage probability tree diagram for conditional probability and Bayes theorem">
+            <!-- Root Node -->
+            <circle cx="52" cy="122" r="8" fill="#0f172a" />
+            <text x="52" y="148" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Start</text>
+
+            <!-- Stage 1 Branches -->
+            <line x1="60" y1="118" x2="205" y2="62" stroke="#1d4ed8" stroke-width="2.5" />
+            <text x="128" y="76" text-anchor="middle" font-size="12" font-weight="700" fill="#1d4ed8">P(B₁) = 1/2</text>
+
+            <line x1="60" y1="126" x2="205" y2="182" stroke="#7c3aed" stroke-width="2.5" />
+            <text x="128" y="176" text-anchor="middle" font-size="12" font-weight="700" fill="#7c3aed">P(B₂) =
+                1/2</text>
+
+            <!-- Stage 1 Nodes -->
+            <rect x="205" y="45" width="76" height="34" rx="6" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2" />
+            <text x="243" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="#1e3a8a">Box I
+                (3R,5B)</text>
+
+            <rect x="205" y="165" width="76" height="34" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2" />
+            <text x="243" y="186" text-anchor="middle" font-size="12" font-weight="700" fill="#4c1d95">Box II
+                (4R,2B)</text>
+
+            <!-- Stage 2 Branches from Box I -->
+            <line x1="281" y1="56" x2="430" y2="34" stroke="#dc2626" stroke-width="2.5" />
+            <text x="355" y="34" text-anchor="middle" font-size="11" font-weight="700" fill="#dc2626">P(R|B₁) =
+                3/8</text>
+
+            <line x1="281" y1="68" x2="430" y2="92" stroke="#64748b" stroke-width="1.8" stroke-dasharray="4,3" />
+            <text x="355" y="96" text-anchor="middle" font-size="11" fill="#475569">P(Bl|B₁) = 5/8</text>
+
+            <!-- Stage 2 Branches from Box II -->
+            <line x1="281" y1="176" x2="430" y2="152" stroke="#dc2626" stroke-width="2.5" />
+            <text x="355" y="152" text-anchor="middle" font-size="11" font-weight="700" fill="#dc2626">P(R|B₂) =
+                2/3</text>
+
+            <line x1="281" y1="188" x2="430" y2="212" stroke="#64748b" stroke-width="1.8" stroke-dasharray="4,3" />
+            <text x="355" y="216" text-anchor="middle" font-size="11" fill="#475569">P(Bl|B₂) = 1/3</text>
+
+            <!-- Leaf Joint Probabilities -->
+            <rect x="435" y="18" width="248" height="30" rx="5" fill="#fef2f2" stroke="#dc2626" stroke-width="1.8" />
+            <text x="559" y="37" text-anchor="middle" font-size="12" font-weight="700" fill="#991b1b">R (from B₁): 1/2 ×
+                3/8 = 3/16 = 9/48</text>
+
+            <rect x="435" y="76" width="248" height="28" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="559" y="94" text-anchor="middle" font-size="11" fill="#475569">Blue (from B₁): 1/2 × 5/8 = 5/16 =
+                15/48</text>
+
+            <rect x="435" y="136" width="248" height="30" rx="5" fill="#fef2f2" stroke="#dc2626" stroke-width="1.8" />
+            <text x="559" y="155" text-anchor="middle" font-size="12" font-weight="700" fill="#991b1b">R (from B₂): 1/2
+                × 2/3 = 1/3 = 16/48</text>
+
+            <rect x="435" y="196" width="248" height="28" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="559" y="214" text-anchor="middle" font-size="11" fill="#475569">Blue (from B₂): 1/2 × 1/3 = 1/6 =
+                8/48</text>
+        </svg>
+        <div class="diagram-caption">Figure 4.3: Multiply along branches to get joint probabilities; sum the red leaves
+            ($9/48 + 16/48 = 25/48$) for $P(R)$; divide the target red leaf by that sum for Bayes' reverse probability
+            ($16/25$).</div>
+    </div>
+
+    <div class="formula-vault">
+        <span class="box-label">Chapter 4 Formula Vault · High-Density Revision Sheet</span>
+        <ul>
+            <li><strong>FCP:</strong> Mutually exclusive OR $\Rightarrow m + n$; Sequential AND $\Rightarrow m \times
+                n$; split $0$ vs non-zero when $0$ can occupy the constrained units slot.</li>
+            <li><strong>Legendre's Formula:</strong> $v_p(n!) = \sum_{k \ge 1} \lfloor n/p^k \rfloor$; Trailing zeroes
+                $= v_5(n!)$; Composite $M = \prod p_i^{a_i} \Rightarrow v_M(n!) = \min_i \lfloor v_{p_i}(n!)/a_i
+                \rfloor$.</li>
+            <li><strong>Permutations:</strong> Distinct ${}^nP_r = \frac{n!}{(n-r)!}$; Identical $\frac{n!}{p!q!r!}$;
+                Circular table $(n-1)!$; Necklace ($n \ge 3$) $\frac{(n-1)!}{2}$; Rank $= 1 + \sum
+                \frac{c_i}{R_i}(n-i)!$.</li>
+            <li><strong>Combinations &amp; Geometry:</strong> ${}^nC_r = \frac{n!}{r!(n-r)!}$; Lines ($k$ collinear) $=
+                \binom{n}{2} - \binom{k}{2} + 1$; Triangles $= \binom{n}{3} - \binom{k}{3}$; Diagonals $=
+                \frac{n(n-3)}{2}$; Grid paths $(0,0)\to(m,n) = \binom{m+n}{m}$.</li>
+            <li><strong>Stars &amp; Bars ($x_1 + \dots + x_r = n$):</strong> Non-negative ($x_i \ge 0$) $\Rightarrow
+                \binom{n+r-1}{r-1}$; Positive ($x_i \ge 1$) $\Rightarrow \binom{n-1}{r-1}$; Inequality ($\le n$)
+                $\Rightarrow \binom{n+r}{r}$.</li>
+            <li><strong>Pigeonhole Principle:</strong> At least $\lceil N/k \rceil$ in one box; guarantee $m$ of same
+                type from $k$ types $\Rightarrow N_{\min} = k(m - 1) + 1$.</li>
+            <li><strong>Probability:</strong> $P(E) = 1 - P(E')$; $P(A \cup B) = P(A) + P(B) - P(A \cap B)$; Independent
+                $\iff P(A \cap B) = P(A)P(B)$; Conditional $P(A \mid B) = \frac{P(A \cap B)}{P(B)}$; Bayes $P(B_k \mid
+                R) = \frac{P(B_k)P(R \mid B_k)}{\sum P(B_i)P(R \mid B_i)}$.</li>
+        </ul>
+    </div>
+
+    <h2 class="section-heading">4.7 Escalating Worked Examples (Level 1 → Level 3)</h2>
+
+    <div class="level-banner l1">LEVEL 1 · WARMUP &amp; FOUNDATION CALIBRATION (EXAMPLES 1–3)</div>
+
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">FCP · Zero-Digit Trap</span>
+            <strong>Worked Example 1: 4-Digit Even Numbers Without Repetition</strong>
+        </div>
+        <div class="ex-problem">
+            <p>How many distinct $4$-digit even numbers can be formed using the digits $\{0, 1, 2, 3, 4, 5\}$ without
+                repeating any digit?</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Why We Must Split Cases:</strong> A $4$-digit number cannot start with $0$, and an even number
+                must end in $\{0, 2, 4\}$. Because $0$ can occupy the units slot, the number of choices for the
+                thousands slot changes depending on whether $0$ is used at the end.</p>
+
+            <p><strong>Case 1: Units digit is $0$</strong></p>
+            <ul>
+                <li>Units slot: $1$ choice ($0$).</li>
+                <li>Thousands slot: $5$ choices (any of $\{1, 2, 3, 4, 5\}$, since $0$ is already used).</li>
+                <li>Hundreds slot: $4$ remaining digits.</li>
+                <li>Tens slot: $3$ remaining digits.</li>
+            </ul>
+            $$\text{Count}_1 = 5 \times 4 \times 3 \times 1 = 60$$
+
+            <p><strong>Case 2: Units digit is $2$ or $4$</strong></p>
+            <ul>
+                <li>Units slot: $2$ choices ($2$ or $4$).</li>
+                <li>Thousands slot: $4$ choices (cannot be $0$ and cannot be the chosen units digit, leaving $6 - 2 = 4$
+                    digits).</li>
+                <li>Hundreds slot: $4$ choices (now $0$ is permitted again, leaving $6 - 2 = 4$ unused digits).</li>
+                <li>Tens slot: $3$ remaining digits.</li>
+            </ul>
+            $$\text{Count}_2 = 4 \times 4 \times 3 \times 2 = 96$$
+
+            <p><strong>Total (by Addition Rule):</strong> $60 + 96 = \mathbf{156}$ distinct $4$-digit even numbers.</p>
+            <p><em>Sanity Cross-Check:</em> Total $4$-digit numbers $= 5 \times 5 \times 4 \times 3 = 300$. Odd numbers
+                (units $\in \{1, 3, 5\}$) $= 4 \times 4 \times 3 \times 3 = 144$. Check: $156 + 144 = 300$.</p>
+        </div>
+    </div>
+
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Factorials · Legendre</span>
+            <strong>Worked Example 2: Trailing Zeroes &amp; Highest Power of a Composite Divisor</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Find (a) the exact number of trailing zeroes at the end of $125!$, and (b) the largest integer $k$ such
+                that $12^k$ divides $50!$ completely.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a): Trailing Zeroes in $125!$</strong></p>
+            <p>Each trailing zero comes from a factor of $10 = 2 \times 5$, limited by $v_5(125!)$. Applying Legendre's
+                Formula:</p>
+            $$v_5(125!) = \left\lfloor \frac{125}{5} \right\rfloor + \left\lfloor \frac{125}{25} \right\rfloor +
+            \left\lfloor \frac{125}{125} \right\rfloor = 25 + 5 + 1 = \mathbf{31\text{ trailing zeroes}}$$
+
+            <p><strong>Part (b): Highest Power of $12$ Dividing $50!$</strong></p>
+            <p>Prime-factorize $12 = 2^2 \times 3^1$. We must compute both $v_2(50!)$ and $v_3(50!)$ to find the
+                bottleneck:</p>
+            $$v_2(50!) = \left\lfloor \frac{50}{2} \right\rfloor + \left\lfloor \frac{50}{4} \right\rfloor +
+            \left\lfloor \frac{50}{8} \right\rfloor + \left\lfloor \frac{50}{16} \right\rfloor + \left\lfloor
+            \frac{50}{32} \right\rfloor = 25 + 12 + 6 + 3 + 1 = 47$$
+            <p>Since each factor of $12$ requires $2^2$, the $47$ copies of $2$ supply $\left\lfloor \dfrac{47}{2}
+                \right\rfloor = 23$ copies of $4$.</p>
+            $$v_3(50!) = \left\lfloor \frac{50}{3} \right\rfloor + \left\lfloor \frac{50}{9} \right\rfloor +
+            \left\lfloor \frac{50}{27} \right\rfloor = 16 + 5 + 1 = 22$$
+            <p>Comparing the two bottlenecks: $k = \min(23, 22) = \mathbf{22}$. Thus, $12^{22}$ is the highest power of
+                $12$ dividing $50!$.</p>
+        </div>
+    </div>
+
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Probability · Complement</span>
+            <strong>Worked Example 3: Rolling Three Dice — Complementary &amp; Distinct Counting</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Three fair six-sided dice are rolled simultaneously. Find the exact probability that (a) the product of
+                the three numbers shown is even, and (b) all three dice display different numbers.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Sample Space:</strong> Each die has $6$ equally likely faces, so $n(S) = 6 \times 6 \times 6 =
+                216$.</p>
+
+            <p><strong>Part (a): Product Is Even (Complementary Counting)</strong></p>
+            <p>A product of integers is even if and only if <em>at least one</em> factor is even. Instead of summing
+                1-even, 2-even, and 3-even cases, invert to the complement: <strong>all three dice show odd
+                    numbers</strong> $\{1, 3, 5\}$.</p>
+            $$n(\text{all odd}) = 3 \times 3 \times 3 = 27 \implies P(\text{all odd}) = \frac{27}{216} = \frac{1}{8}$$
+            $$P(\text{even product}) = 1 - P(\text{all odd}) = 1 - \frac{1}{8} = \mathbf{\frac{7}{8}}$$
+
+            <p><strong>Part (b): All Three Dice Show Distinct Numbers</strong></p>
+            <p>Fill the three dice slots sequentially without repetition: $6$ choices for Die 1, $5$ for Die 2, and $4$
+                for Die 3:</p>
+            $$n(\text{all distinct}) = 6 \times 5 \times 4 = 120 \implies P(\text{all distinct}) = \frac{120}{216} =
+            \mathbf{\frac{5}{9}}$$
+        </div>
+    </div>
+
+    <div class="level-banner l2">LEVEL 2 · BEST EXAM-REAL APPLICATION (EXAMPLES 4–6)</div>
+
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Permutations · String, Gap &amp; PIE</span>
+            <strong>Worked Example 4: Adjacency Constraints on Identical Letters (`ARRANGE`)</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Consider all distinct $7$-letter arrangements formed using all letters of the word
+                <strong><code>ARRANGE</code></strong>. Find the number of arrangements in which (a) the two
+                <code>R</code>'s are always together, (b) the two <code>R</code>'s are never together, and (c) neither
+                the two <code>R</code>'s nor the two <code>A</code>'s are together.
+            </p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Baseline Inventory:</strong> <code>ARRANGE</code> has $7$ letters: two <code>A</code>'s, two
+                <code>R</code>'s, and three distinct letters <code>N, G, E</code>. Total unrestricted arrangements:
+            </p>
+            $$N_{\text{total}} = \frac{7!}{2!\,2!} = \frac{5040}{4} = 1260$$
+
+            <p><strong>Part (a): Two <code>R</code>'s Always Together (String Method)</strong></p>
+            <p>Tie the two <code>R</code>'s into a single block <code>[RR]</code>. We now permute $6$ objects:
+                <code>[RR], A, A, N, G, E</code> (where <code>A</code> repeats twice; internally <code>[RR]</code> has
+                only $\frac{2!}{2!} = 1$ arrangement):
+            </p>
+            $$|E_R| = \frac{6!}{2!} = \frac{720}{2} = \mathbf{360}$$
+
+            <p><strong>Part (b): Two <code>R</code>'s Never Together (Gap Method &amp; Complement Verification)</strong>
+            </p>
+            <p><em>Gap Method:</em> First arrange the $5$ other letters <code>A, A, N, G, E</code> in $\dfrac{5!}{2!} =
+                60$ ways. This creates $5 + 1 = 6$ gaps (`_ X _ X _ X _ X _ X _`). Choose $2$ gaps for the two identical
+                <code>R</code>'s in $\dbinom{6}{2} = 15$ ways:
+            </p>
+            $$N_{\text{no RR}} = 60 \times 15 = \mathbf{900}$$
+            <p><em>Complement Check (valid here ONLY because there are just 2 <code>R</code>'s):</em> $1260 - 360 =
+                900$.</p>
+
+            <p><strong>Part (c): Neither Two <code>R</code>'s Together Nor Two <code>A</code>'s Together
+                    (Inclusion–Exclusion)</strong></p>
+            <p>By symmetry with Part (a), arrangements with two <code>A</code>'s together is $|E_A| = \dfrac{6!}{2!} =
+                360$. Arrangements with <em>both</em> <code>[RR]</code> and <code>[AA]</code> together treat
+                <code>[RR], [AA], N, G, E</code> as $5$ distinct blocks, giving $|E_R \cap E_A| = 5! = 120$. By
+                Inclusion–Exclusion:
+            </p>
+            $$|E_R \cup E_A| = |E_R| + |E_A| - |E_R \cap E_A| = 360 + 360 - 120 = 600$$
+            $$\text{Neither pair together} = N_{\text{total}} - |E_R \cup E_A| = 1260 - 600 = \mathbf{660}$$
+        </div>
+    </div>
+
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Combinations · Geometry &amp; Grids</span>
+            <strong>Worked Example 5: Collinear Points &amp; Checkpoint Lattice Paths</strong>
+        </div>
+        <div class="ex-problem">
+            <p>(a) Out of $12$ points in a plane, exactly $5$ lie on a single straight line, and no other $3$ points are
+                collinear. Find the number of distinct straight lines and distinct triangles that can be formed using
+                these points. (b) On a coordinate grid, how many shortest paths travel from $(0,0)$ to $(6,4)$ while
+                passing through the checkpoint $(3,2)$?</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a): Lines and Triangles with $5$ Collinear Points</strong></p>
+            <ul>
+                <li><strong>Straight Lines:</strong> Any $2$ points determine a line, giving $\dbinom{12}{2} = \dfrac{12
+                    \times 11}{2} = 66$ pairs. Among the $5$ collinear points, all $\dbinom{5}{2} = 10$ pairs collapse
+                    onto the <em>exact same $1$ line</em>. Subtract all $10$ redundant pairs and add back that $1$ line:
+                    $$\text{Lines} = \binom{12}{2} - \binom{5}{2} + 1 = 66 - 10 + 1 = \mathbf{57\text{ lines}}$$
+                </li>
+                <li><strong>Triangles:</strong> Any $3$ non-collinear points determine a triangle. Out of
+                    $\dbinom{12}{3} = \dfrac{12 \times 11 \times 10}{6} = 220$ triples, the $\dbinom{5}{3} = 10$ triples
+                    drawn solely from the collinear set collapse to degenerate flat segments (forming $0$ triangles—do
+                    <em>not</em> add $1$!):
+                    $$\text{Triangles} = \binom{12}{3} - \binom{5}{3} = 220 - 10 = \mathbf{210\text{ triangles}}$$
+                </li>
+            </ul>
+
+            <p><strong>Part (b): Shortest Grid Paths via Checkpoint $(3,2)$</strong></p>
+            <p>Split the journey at $(3,2)$ and apply the Multiplication Rule:</p>
+            <ul>
+                <li><strong>Leg 1: $(0,0) \to (3,2)$</strong> requires $3$ East and $2$ North steps ($5$ total):
+                    $\dbinom{5}{2} = 10$ paths.</li>
+                <li><strong>Leg 2: $(3,2) \to (6,4)$</strong> requires $6 - 3 = 3$ East and $4 - 2 = 2$ North steps ($5$
+                    total): $\dbinom{5}{2} = 10$ paths.</li>
+            </ul>
+            $$\text{Total paths through }(3,2) = 10 \times 10 = \mathbf{100\text{ shortest paths}}$$
+        </div>
+    </div>
+
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">PHP · Circular Seating</span>
+            <strong>Worked Example 6: Pigeonhole Guarantee &amp; Alternating Circular Table</strong>
+        </div>
+        <div class="ex-problem">
+            <p>(a) A dark drawer contains $10$ red, $8$ blue, $6$ green, and $4$ yellow socks. What is the minimum
+                number of socks you must draw blindly to guarantee having at least $3$ socks of the same color? (b) In
+                how many ways can $4$ boys and $4$ girls be seated around a circular table such that no two girls sit
+                adjacent to each other?</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a): Pigeonhole Worst-Case Adversary</strong></p>
+            <p>There are $k = 4$ colors (pigeonholes), and every color has at least $3$ socks available. To delay
+                reaching $3$ of any single color for as long as possible, the worst-case adversary hands you $2$ red,
+                $2$ blue, $2$ green, and $2$ yellow socks—a maximum failure draw of $4 \times (3 - 1) = 8$ socks. The
+                very next sock drawn <em>must</em> match one of the $4$ existing pairs, guaranteeing a triple:</p>
+            $$N_{\min} = 4(3 - 1) + 1 = \mathbf{9\text{ socks}}$$
+
+            <p><strong>Part (b): Circular Alternating Seating ($4$ Boys, $4$ Girls)</strong></p>
+            <ol>
+                <li><strong>Seat the $4$ Boys First Around the Circle:</strong> Using circular permutations, this takes
+                    $(4 - 1)! = 3! = 6$ ways.</li>
+                <li><strong>Seat the $4$ Girls in the Resulting $4$ Gaps:</strong> The $4$ boys partition the circle
+                    into $4$ gaps between adjacent boys. <em>Crucial Insight:</em> Once the boys are seated, rotational
+                    symmetry is <strong>already broken</strong> (every gap sits between a unique ordered pair of boys!).
+                    Therefore, the $4$ girls are arranged linearly into those $4$ distinct gaps in $4! = 24$ ways (NOT
+                    $3!$).</li>
+            </ol>
+            $$\text{Total Circular Arrangements} = 3! \times 4! = 6 \times 24 = \mathbf{144\text{ ways}}$$
+        </div>
+    </div>
+
+    <div class="level-banner l3">LEVEL 3 · RANK-BOOSTER &amp; OLYMPIAD SYNTHESIS (EXAMPLES 7–9)</div>
+
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Permutations · Dictionary Rank</span>
+            <strong>Worked Example 7: Dictionary Rank with Repeated Letters (`LETTER`)</strong>
+        </div>
+        <div class="ex-problem">
+            <p>All distinct permutations of the letters of the word <strong><code>LETTER</code></strong> are arranged in
+                alphabetical order as in a dictionary. Find the exact dictionary rank of the word
+                <strong><code>LETTER</code></strong>.
+            </p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Method 1: Rigorous First-Principles Prefix Enumeration</strong></p>
+            <p>Sort the $6$ letters alphabetically: <code>E, E, L, R, T, T</code>. Count all distinct words strictly
+                preceding <code>LETTER</code> prefix by prefix:</p>
+            <ol>
+                <li><strong>Words starting with <code>E</code>:</strong> Remaining $5$ letters are
+                    <code>{E, L, R, T, T}</code> (two <code>T</code>'s) $\implies \dfrac{5!}{2!} = 60$ words.
+                </li>
+                <li><strong>Lock 1st letter <code>L</code></strong> (remaining: <code>{E, E, R, T, T}</code>). Next
+                    target letter is <code>E</code>, which is already the smallest remaining letter $\implies 0$ skipped
+                    words. Lock <code>LE</code> (remaining: <code>{E, R, T, T}</code>).</li>
+                <li><strong>3rd letter target is <code>T</code></strong> (smaller available letters: <code>E</code> and
+                    <code>R</code>):
+                    <ul>
+                        <li>Prefix <code>LEE...</code> (remaining <code>{R, T, T}</code>): $\dfrac{3!}{2!} = 3$ words.
+                        </li>
+                        <li>Prefix <code>LER...</code> (remaining <code>{E, T, T}</code>): $\dfrac{3!}{2!} = 3$ words.
+                        </li>
+                    </ul>
+                    Lock <code>LET</code> (remaining: <code>{E, R, T}</code>).
+                </li>
+                <li><strong>4th letter target is <code>T</code></strong> (smaller available letters: <code>E</code> and
+                    <code>R</code>):
+                    <ul>
+                        <li>Prefix <code>LETE...</code> (remaining <code>{R, T}</code>): $2! = 2$ words.</li>
+                        <li>Prefix <code>LETR...</code> (remaining <code>{E, T}</code>): $2! = 2$ words.</li>
+                    </ul>
+                    Lock <code>LETT</code> (remaining: <code>{E, R}</code>).
+                </li>
+                <li><strong>5th letter target is <code>E</code></strong> (smallest remaining) $\implies 0$ skipped
+                    words; lock <code>LETTE</code>, then <code>LETTER</code>.</li>
+            </ol>
+            <p>Total words preceding <code>LETTER</code> $= 60 + 3 + 3 + 2 + 2 = 70$. Adding $+1$ for
+                <code>LETTER</code> itself gives:
+            </p>
+            $$\text{Rank}(\texttt{LETTER}) = 70 + 1 = \mathbf{71}$$
+
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Exam Shortcut · Repeat-Adjusted Factorial-Base Table</span>
+                <p>Write <code>L  E  T  T  E  R</code> and compute $\dfrac{\text{smaller letters to the
+                    right}}{\text{repeat factorials from self onward}} \times (n - i)!$ at each slot:</p>
+                <ul>
+                    <li><strong><code>L</code></strong> ($5!$): smaller right $= \{\texttt{E, E}\}$ ($2$); repeats from
+                        <code>L</code> onward $= 2!\,2!$ $\implies \dfrac{2}{2!\,2!} \times 120 = 60$.
+                    </li>
+                    <li><strong><code>E</code></strong> ($4!$): smaller right $= 0$ $\implies 0$.</li>
+                    <li><strong><code>T</code></strong> ($3!$): smaller right $= \{\texttt{E, R}\}$ ($2$); repeats from
+                        <code>T</code> onward $= 2!$ (two <code>T</code>'s) $\implies \dfrac{2}{2!} \times 6 = 6$.
+                    </li>
+                    <li><strong><code>T</code></strong> ($2!$): smaller right $= \{\texttt{E, R}\}$ ($2$); repeats from
+                        <code>T</code> onward $= 1$ $\implies \dfrac{2}{1} \times 2 = 4$.
+                    </li>
+                    <li><strong><code>E</code></strong> ($1!$), <strong><code>R</code></strong> ($0!$): smaller right $=
+                        0, 0$.</li>
+                </ul>
+                <p>Sum $+ 1 = (60 + 0 + 6 + 4 + 0 + 0) + 1 = \mathbf{71}$.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Stars &amp; Bars · Bounded Solutions</span>
+            <strong>Worked Example 8: Integer Solutions with Simultaneous Lower &amp; Upper Bounds</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Find the total number of integer solutions to the equation $x_1 + x_2 + x_3 = 15$ satisfying the
+                constraints $x_1 \ge 2$, $x_2 \ge 1$, and $0 \le x_3 \le 5$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Method 1: Rigorous Variable Shifting &amp; Complementary Exclusion</strong></p>
+            <p><strong>Step 1 (Normalize All Lower Bounds to Zero):</strong> Define shifted non-negative variables $y_1
+                = x_1 - 2 \ge 0$, $y_2 = x_2 - 1 \ge 0$, and $y_3 = x_3 \ge 0$. Substituting $x_1 = y_1 + 2$ and $x_2 =
+                y_2 + 1$ into the equation gives:</p>
+            $$(y_1 + 2) + (y_2 + 1) + y_3 = 15 \implies y_1 + y_2 + y_3 = 12, \qquad y_1, y_2, y_3 \ge 0,\quad y_3 \le
+            5$$
+
+            <p><strong>Step 2 (Count All Non-Negative Solutions Ignoring the Upper Bound):</strong> With $n = 12$ stars
+                and $r = 3$ bins ($r - 1 = 2$ bars):</p>
+            $$N_{\text{all}} = \binom{12 + 3 - 1}{3 - 1} = \binom{14}{2} = \frac{14 \times 13}{2} = 91$$
+
+            <p><strong>Step 3 (Count Violating Solutions Where $y_3 \ge 6$):</strong> The negation of $y_3 \le 5$ in
+                integers is $y_3 \ge 6$. Shift $z_3 = y_3 - 6 \ge 0$ to obtain:</p>
+            $$y_1 + y_2 + (z_3 + 6) = 12 \implies y_1 + y_2 + z_3 = 6, \qquad y_1, y_2, z_3 \ge 0$$
+            $$N_{\text{bad}} = \binom{6 + 3 - 1}{3 - 1} = \binom{8}{2} = \frac{8 \times 7}{2} = 28$$
+
+            <p><strong>Step 4 (Subtract Violations):</strong></p>
+            $$N_{\text{valid}} = N_{\text{all}} - N_{\text{bad}} = 91 - 28 = \mathbf{63\text{ solutions}}$$
+
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Exam Shortcut · Instant Pre-Allocation &amp; Over-Limit Shift</span>
+                <p>1. Pre-pay the lower bounds ($2 + 1 + 0 = 3$) out of $15$ to get effective sum $S = 12$ for $3$ bins.
+                </p>
+                <p>2. To violate $y_3 \le 5$, pre-pay $5 + 1 = 6$ (always $\text{limit} + 1$, never $\text{limit}$!),
+                    dropping $S$ to $12 - 6 = 6$.</p>
+                <p>3. Write the one-line difference: $\dbinom{12 + 2}{2} - \dbinom{6 + 2}{2} = \dbinom{14}{2} -
+                    \dbinom{8}{2} = 91 - 28 = \mathbf{63}$.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Conditional Probability · Bayes</span>
+            <strong>Worked Example 9: Unequal Box Sizes &amp; Reverse-Cause Bayes Probability</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Two closed boxes sit on a bench: Box I contains $3$ red and $5$ blue marbles, while Box II contains $4$
+                red and $2$ blue marbles. A fair coin is tossed: if it shows Heads, one marble is drawn randomly from
+                Box I; if it shows Tails, one marble is drawn randomly from Box II. (a) Find the probability that the
+                drawn marble is red. (b) Given that the drawn marble turns out to be red, find the probability that it
+                came from Box II.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Method 1: Rigorous Law of Total Probability &amp; Bayes' Theorem</strong></p>
+            <p>Let $B_1$ and $B_2$ denote selecting Box I and Box II respectively, and let $R$ denote drawing a red
+                marble. From the problem statement (visualized in Figure 4.3):</p>
+            $$P(B_1) = P(B_2) = \frac{1}{2}, \qquad P(R \mid B_1) = \frac{3}{3 + 5} = \frac{3}{8}, \qquad P(R \mid B_2)
+            = \frac{4}{4 + 2} = \frac{2}{3}$$
+
+            <p><strong>Part (a): Total Probability of Drawing a Red Marble</strong></p>
+            $$P(R) = P(B_1)\,P(R \mid B_1) + P(B_2)\,P(R \mid B_2) = \left(\frac{1}{2} \times \frac{3}{8}\right) +
+            \left(\frac{1}{2} \times \frac{2}{3}\right) = \frac{3}{16} + \frac{1}{3} = \frac{9 + 16}{48} =
+            \mathbf{\frac{25}{48}}$$
+
+            <p><strong>Part (b): Reverse Conditional Probability $P(B_2 \mid R)$</strong></p>
+            $$P(B_2 \mid R) = \frac{P(B_2 \cap R)}{P(R)} = \frac{P(B_2)\,P(R \mid B_2)}{P(R)} = \frac{1/3}{25/48} =
+            \frac{16/48}{25/48} = \mathbf{\frac{16}{25}}$$
+            <p><em>Trap Check:</em> Simply pooling marbles across both boxes ($\frac{4}{3 + 4} = \frac{4}{7}$) is
+                <strong>WRONG</strong>! Because Box II has fewer marbles ($6$ vs. $8$), each red marble inside Box II is
+                individually more likely to be drawn than a red marble inside Box I.
+            </p>
+
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Exam Shortcut · Natural-Frequency LCM Scaling (Zero Fractions!)</span>
+                <p>Choose a total trial count that kills all denominators: $\text{LCM}(8, 6) = 24$ trials per box ($48$
+                    trials total since the coin is $1:1$).</p>
+                <ul>
+                    <li>Out of $24$ visits to Box I: $\frac{3}{8} \times 24 = \mathbf{9}$ red marbles.</li>
+                    <li>Out of $24$ visits to Box II: $\frac{4}{6} \times 24 = \mathbf{16}$ red marbles.</li>
+                </ul>
+                <p>Total red outcomes $= 9 + 16 = 25$ out of $48$ trials $\implies P(R) = \mathbf{\dfrac{25}{48}}$ and
+                    $P(B_2 \mid R) = \mathbf{\dfrac{16}{25}}$ in ten seconds flat.</p>
+            </div>
+        </div>
+    </div>
+
+</article>

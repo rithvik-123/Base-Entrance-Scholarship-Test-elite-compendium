@@ -44,7 +44,8 @@
             <li>$B = 8 \implies A = 3$ ($3 + 8 = 11$) $\implies 10A + B = 10(3) + 8 = 38$.</li>
         </ul>
         <p>Verification for $(A, B) = (7, 4)$: $53774248 = 88 \times 611071$. Thus the maximum value of $10A + B$ is
-            <strong>$74$</strong>.</p>
+            <strong>$74$</strong>.
+        </p>
     </div>
 
     <!-- S2 -->
@@ -164,7 +165,8 @@
             <li>$1 \div 8 = 0$ with remainder $1$ (sixty-fours digit)</li>
         </ul>
         <p>Reading remainders from bottom to top yields $(141)_8$. Verification: $1(64) + 4(8) + 1 = 97$.
-            <strong>Correct Option: (B)</strong>.</p>
+            <strong>Correct Option: (B)</strong>.
+        </p>
     </div>
 
     <!-- S8 -->
@@ -272,7 +274,8 @@
         <p><strong>Step 2 (Add &amp; Reduce Cleanly):</strong></p>
         $$10^{57} + 12^{57} \equiv (-1 + 1) + 2(57)(11) = 114 \cdot 11 \pmod{121}$$
         <p>Since $114 = 11(10) + 4$, multiplying by $11$ gives $114 \cdot 11 = 121(10) + 44 \equiv 44 \pmod{121}$.
-            <strong>Correct Option: (C)</strong>.</p>
+            <strong>Correct Option: (C)</strong>.
+        </p>
     </div>
 
     <!-- S13 -->
@@ -442,7 +445,8 @@
             <li>$(x, y) = (6, 7) \implies x + y = 13 \implies a + b = 18(13) = 234$</li>
         </ul>
         <p>Hence there are $4$ valid pairs and the minimum sum is $a + b = 234$ (achieved at $a = 108, b = 126$).
-            <strong>Correct Option: (C)</strong>.</p>
+            <strong>Correct Option: (C)</strong>.
+        </p>
     </div>
 
     <!-- S21 -->
@@ -653,7 +657,8 @@
         <ul>
             <li><strong>Statement I ($2026^{2027} \gt 2027^{2026}$):</strong> Since $e \lt 2026 \lt 2027$, strict
                 decrease on $(e, \infty)$ yields $2026^{1/2026} \gt 2027^{1/2027} \implies 2026^{2027} \gt 2027^{2026}$.
-                <strong>TRUE</strong>.</li>
+                <strong>TRUE</strong>.
+            </li>
             <li><strong>Statement II ($e^{\pi} \lt \pi^{e}$):</strong> Because $x = e$ is the strict global maximum of
                 $f(x)$ and $\pi \neq e$, we have $e^{1/e} \gt \pi^{1/\pi} \implies e^{\pi} \gt \pi^{e}$. Thus Statement
                 II is <strong>FALSE</strong>.</li>
@@ -730,7 +735,8 @@
 
     <p>In BEST Paper 1, top-5% students rarely lose marks because they do not know a theorem&mdash;they lose marks to
         <strong>five recurring structural traps</strong> engineered directly into MCQ distractors and NAT grids. Audit
-        every solution you write against this checklist.</p>
+        every solution you write against this checklist.
+    </p>
 
     <!-- TRAP 1 -->
     <div class="trap-box">
@@ -755,7 +761,8 @@
             <strong>catastrophically false</strong> because $\gcd(2, 100) = 2 \neq 1$: in fact $2^{40} \equiv 76
             \not\equiv 1 \pmod{100}$, and while $2^{26} \equiv 64$ happens to agree for $m \ge 2$ only because $76 \cdot
             2^m \equiv 2^m$, the same false logic predicts $2^{2000} \equiv 2^0 = 1 \pmod{100}$ when the true value is
-            $76$!</p>
+            $76$!
+        </p>
         <p><strong>Diagnostic Cure:</strong> Before invoking $a^{\phi(n)} \equiv 1 \pmod n$, perform a mandatory
             1-second <strong>coprimality check: &ldquo;Is $\gcd(a, n) = 1$?&rdquo;</strong> If NO, immediately split $n$
             into coprime prime-power factors via CRT (e.g., $100 = 4 \times 25$, where $2^k \equiv 0 \pmod 4$ and

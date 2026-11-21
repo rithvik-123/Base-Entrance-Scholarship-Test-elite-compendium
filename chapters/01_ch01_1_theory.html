@@ -55,7 +55,8 @@
     <p>Multiplying $N = 10q + u$ by $k$ (which preserves divisibility by $p$ because $\gcd(k, p) = 1$) gives:</p>
     $$kN = (10k)q + ku \equiv q + ku \pmod p$$
     <p>Therefore, <strong>$p \mid (10q + u) \iff p \mid (q + ku)$</strong>. The multiplier $k$ is called the
-        <strong>osculator</strong> of $p$. Repeating this operation reduces a large number by one digit per step.</p>
+        <strong>osculator</strong> of $p$. Repeating this operation reduces a large number by one digit per step.
+    </p>
 
     <table class="comparison-table">
         <thead>
@@ -123,7 +124,8 @@
     <div class="bridge-box">
         <span class="box-label">Resonance / Olympiad Bridge: Block-Grouping Rules ($1001$, $999$, $99$)</span>
         <p>For large $6$- to $15$-digit BEST/IOQM numbers, digit-by-digit osculators are too slow. Use
-            <strong>block-grouping</strong> based on key factorizations of $10^m \pm 1$:</p>
+            <strong>block-grouping</strong> based on key factorizations of $10^m \pm 1$:
+        </p>
         <ul>
             <li><strong>The $1001 = 7 \times 11 \times 13$ Rule:</strong> Since $10^3 = 1000 \equiv -1 \pmod{1001}$,
                 partition $N$ into $3$-digit blocks $B_0, B_1, B_2, \dots$ from right to left. Then:
@@ -335,7 +337,8 @@
                     <li>$3^{4k} = (81)^k \implies$ tens digit is $(8k) \bmod 10$.</li>
                     <li>For general $a$ ending in $3, 7, 9$, note that $a^4$ always ends in $1$, and even better,
                         <strong>$a^{20} \equiv 01 \pmod{100}$</strong> for every integer coprime to $10$ (proved in
-                        Section 4 via CRT: $\phi(4) = 2$, $\phi(25) = 20$, $\operatorname{lcm}(2, 20) = 20$).</li>
+                        Section 4 via CRT: $\phi(4) = 2$, $\phi(25) = 20$, $\operatorname{lcm}(2, 20) = 20$).
+                    </li>
                 </ul>
             </li>
 
@@ -345,7 +348,8 @@
                 <strong>odd</strong> $n = 2m + 1 \ge 3$:
                 $$(10t + 5)^{2m+1} \equiv 25(10t + 5) = 250t + 125 \equiv 50t + 25 \pmod{100}$$
                 Hence, for $n \ge 2$: $(10t+5)^n$ ends in <strong>$75$</strong> if and only if <strong>both $t$ and $n$
-                    are odd</strong>; in all other cases it ends in <strong>$25$</strong>.</li>
+                    are odd</strong>; in all other cases it ends in <strong>$25$</strong>.
+            </li>
 
             <li><strong>Even Bases (Powers of $2$ &amp; Factor Splitting):</strong>
                 Compute $2^{10} = 1024 \equiv 24 \pmod{100}$. Notice $24^2 = 576 \equiv 76 \pmod{100}$, $76^2 = 5776
@@ -484,7 +488,8 @@
     <p>Suppose a problem asks for the remainder of a giant expression divided by a composite modulus like $72$, $91$,
         $100$, or $899$. Evaluating directly modulo $899$ is painful, because $899$ is neither prime nor small. The
         <strong>Chinese Remainder Theorem</strong> lets us shatter $m$ into pairwise coprime pieces, solve each tiny
-        piece independently, and stitch the answers back together uniquely.</p>
+        piece independently, and stitch the answers back together uniquely.
+    </p>
 
     <div class="concept-box">
         <span class="box-label">Theorem 5.1: Chinese Remainder Theorem (CRT)</span>
@@ -712,7 +717,8 @@
                     digits</strong> is divisible by $(b - 1)$.</li>
             <li><strong>Divisibility by $(b + 1)$:</strong> Since $b \equiv -1 \pmod{b + 1}$, $(d_k \dots d_1 d_0)_b
                 \equiv d_0 - d_1 + d_2 - \dots \pmod{b + 1}$. Divisibility by $(b + 1)$ is governed by the
-                <strong>alternating sum of its base-$b$ digits</strong>.</li>
+                <strong>alternating sum of its base-$b$ digits</strong>.
+            </li>
             <li><strong>Even/Odd Parity Trap in Odd Bases:</strong> In an <strong>odd base</strong> (e.g., base $7$ or
                 base $9$), $b - 1$ is even, so $2 \mid (b - 1)$. Therefore, a number in an odd base is even if and only
                 if the <strong>sum of its digits is even</strong>&mdash;NOT merely because its last digit is even! For
@@ -1138,7 +1144,8 @@
                     &bull; $\bmod\, 25$: $23^7 \equiv (-2)^7 = -128 \equiv -3 \equiv 22 \pmod{25} \implies$ candidates
                     are $\{22, 47, 72, 97\}$.<br>
                     &bull; $\bmod\, 4$: $23^7 \equiv (-1)^7 = -1 \equiv 3 \pmod 4$. Among $\{22, 47, 72, 97\}$, only
-                    <strong>$47$</strong> leaves remainder $3$ mod $4$!</p>
+                    <strong>$47$</strong> leaves remainder $3$ mod $4$!
+                </p>
             </div>
         </div>
     </div>
