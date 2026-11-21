@@ -1,0 +1,12 @@
+# Dependencies & build artifacts
+node_modules/
+.cache/
+output/
+.tmp_render_*.html
+
+# Keep third-party/compiled PDFs out of Git history (use GitHub Releases instead)
+*.pdf
+
+# OS & editor clutter
+.DS_Store
+Thumbs.db

@@ -1,0 +1,1241 @@
+<article data-volume="Volume 1: Quantitative Aptitude &amp; Logical Reasoning (Paper 1)"
+    data-title="Chapter 1: Number Theory &amp; Modular Arithmetic">
+
+    <!-- ==================== CHAPTER HERO ==================== -->
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 1 &middot; Quantitative Aptitude &amp; Logical Reasoning (Paper 1) &middot;
+            Chapter 1 &middot; Part 1 of 3</div>
+        <h1>Number Theory &amp; Modular Arithmetic</h1>
+        <p>From Euclid&rsquo;s Division Lemma and osculator divisibility to Euler&rsquo;s Totient Theorem,
+            Wilson&rsquo;s Theorem, Chinese Remainder Theorem, non-decimal base systems, and Olympiad inequality
+            techniques for surds and indices.</p>
+        <div class="tag-row">
+            <span class="meta-pill">Target Study Time: 8 Hours</span>
+            <span class="meta-pill">Level: Class 10 &rarr; NTSE Stage 2 &rarr; IOQM-Lite</span>
+            <span class="meta-pill">High-Weightage BEST Paper 1 Core</span>
+            <span class="meta-pill">NAT (000&ndash;999) + MCQ Mastery</span>
+        </div>
+    </header>
+
+    <!-- ==================== SECTION 1: DIVISIBILITY RULES ==================== -->
+    <h2 class="section-heading">1. Divisibility Rules, Osculators &amp; Composite Divisors</h2>
+
+    <p>Every integer $N$ written in base $10$ with digits $d_k d_{k-1} \dots d_1 d_0$ is a polynomial evaluated at $x =
+        10$:</p>
+    $$N = d_k \cdot 10^k + d_{k-1} \cdot 10^{k-1} + \dots + d_1 \cdot 10 + d_0 = \sum_{i=0}^{k} d_i \cdot 10^i$$
+    <p>Every divisibility test in elementary and Olympiad arithmetic is simply a consequence of reducing powers of $10$
+        modulo the divisor $d$. Rather than memorizing isolated tricks, master the underlying modular invariant.</p>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Core: Standard Power-of-10 Divisibility</span>
+        <ul>
+            <li><strong>Divisibility by $2^k$ and $5^k$:</strong> Because $10^k = 2^k \cdot 5^k \equiv 0 \pmod{2^k}$ and
+                $\pmod{5^k}$, every term $d_i 10^i$ with $i \ge k$ vanishes. Thus $N$ is divisible by $2^k$ (or $5^k$)
+                if and only if the number formed by its <strong>last $k$ digits</strong> is divisible by $2^k$ (or
+                $5^k$). For example, divisibility by $8 = 2^3$ depends strictly on the last $3$ digits; divisibility by
+                $16 = 2^4$ depends on the last $4$ digits.</li>
+            <li><strong>Divisibility by $3$ and $9$:</strong> Since $10 \equiv 1 \pmod 9$, we have $10^i \equiv 1^i = 1
+                \pmod 9$ for all $i \ge 0$. Therefore:
+                $$N = \sum_{i=0}^{k} d_i \cdot 10^i \equiv \sum_{i=0}^{k} d_i \pmod 9$$
+                The remainder of $N$ modulo $9$ (and modulo $3$) equals the remainder of its <strong>digit sum</strong>
+                modulo $9$ (and modulo $3$).</li>
+            <li><strong>Divisibility by $11$:</strong> Since $10 \equiv -1 \pmod{11}$, we have $10^i \equiv (-1)^i
+                \pmod{11}$. Therefore:
+                $$N \equiv d_0 - d_1 + d_2 - d_3 + \dots + (-1)^k d_k \pmod{11}$$
+                Crucial detail: the <strong>sign starts positive at the units digit $d_0$</strong>. The alternating sum
+                gives not just divisibility, but the <em>exact remainder</em> modulo $11$ (add $11$ if negative).</li>
+        </ul>
+    </div>
+
+    <h3>1.1 The Osculator (Seed-Number) Method for Primes $7, 13, 17, 19, 23, 29$</h3>
+    <p>How do we test divisibility by a prime $p$ ending in $1, 3, 7,$ or $9$? Write any integer as $N = 10q + u$, where
+        $u$ is the units digit and $q$ is the truncated number formed by removing $u$. Since $\gcd(10, p) = 1$, there
+        exists a unique smallest-magnitude integer $k$ (positive or negative) satisfying:</p>
+    $$10k \equiv 1 \pmod p$$
+    <p>Multiplying $N = 10q + u$ by $k$ (which preserves divisibility by $p$ because $\gcd(k, p) = 1$) gives:</p>
+    $$kN = (10k)q + ku \equiv q + ku \pmod p$$
+    <p>Therefore, <strong>$p \mid (10q + u) \iff p \mid (q + ku)$</strong>. The multiplier $k$ is called the
+        <strong>osculator</strong> of $p$. Repeating this operation reduces a large number by one digit per step.</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Prime $p$</th>
+                <th>Congruence $10k \equiv 1 \pmod p$</th>
+                <th>Osculator $k$</th>
+                <th>Reduction Rule ($N = 10q + u$)</th>
+                <th>Verification Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>$7$</strong></td>
+                <td>$10(-2) = -20 \equiv 1 \pmod 7$</td>
+                <td>$-2$</td>
+                <td>$q - 2u$</td>
+                <td>$371 \to 37 - 2(1) = 35$ ($7 \mid 35$, Yes)</td>
+            </tr>
+            <tr>
+                <td><strong>$13$</strong></td>
+                <td>$10(+4) = 40 \equiv 1 \pmod{13}$</td>
+                <td>$+4$</td>
+                <td>$q + 4u$</td>
+                <td>$442 \to 44 + 4(2) = 52$ ($13 \mid 52$, Yes)</td>
+            </tr>
+            <tr>
+                <td><strong>$17$</strong></td>
+                <td>$10(-5) = -50 \equiv 1 \pmod{17}$</td>
+                <td>$-5$</td>
+                <td>$q - 5u$</td>
+                <td>$391 \to 39 - 5(1) = 34$ ($17 \mid 34$, Yes)</td>
+            </tr>
+            <tr>
+                <td><strong>$19$</strong></td>
+                <td>$10(+2) = 20 \equiv 1 \pmod{19}$</td>
+                <td>$+2$</td>
+                <td>$q + 2u$</td>
+                <td>$437 \to 43 + 2(7) = 57$ ($19 \mid 57$, Yes)</td>
+            </tr>
+            <tr>
+                <td><strong>$23$</strong></td>
+                <td>$10(+7) = 70 \equiv 1 \pmod{23}$</td>
+                <td>$+7$</td>
+                <td>$q + 7u$</td>
+                <td>$391 \to 39 + 7(1) = 46$ ($23 \mid 46$, Yes)</td>
+            </tr>
+            <tr>
+                <td><strong>$29$</strong></td>
+                <td>$10(+3) = 30 \equiv 1 \pmod{29}$</td>
+                <td>$+3$</td>
+                <td>$q + 3u$</td>
+                <td>$493 \to 49 + 3(3) = 58$ ($29 \mid 58$, Yes)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="trap-box">
+        <span class="box-label">Warning: Osculators Test Divisibility, NOT Direct Remainders</span>
+        <p>Because $q + ku \equiv kN \pmod p$ (not $N \pmod p$), the final small number preserves zero-ness ($0 \pmod
+            p$), but its non-zero remainder is scaled by $k^m \pmod p$ after $m$ steps. Never read a non-zero osculator
+            output directly as the remainder of $N$ divided by $p$.</p>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Block-Grouping Rules ($1001$, $999$, $99$)</span>
+        <p>For large $6$- to $15$-digit BEST/IOQM numbers, digit-by-digit osculators are too slow. Use
+            <strong>block-grouping</strong> based on key factorizations of $10^m \pm 1$:</p>
+        <ul>
+            <li><strong>The $1001 = 7 \times 11 \times 13$ Rule:</strong> Since $10^3 = 1000 \equiv -1 \pmod{1001}$,
+                partition $N$ into $3$-digit blocks $B_0, B_1, B_2, \dots$ from right to left. Then:
+                $$N \equiv B_0 - B_1 + B_2 - B_3 + \dots \pmod{1001}$$
+                This single alternating sum simultaneously gives the exact remainder modulo $7$, $11$, $13$, and $1001$.
+                Immediate Olympiad corollary: any $6$-digit number of the form $\overline{abcabc} = \overline{abc}
+                \times 1001$ is always divisible by $7, 11,$ and $13$.</li>
+            <li><strong>The $999 = 27 \times 37$ Rule:</strong> Since $10^3 \equiv 1 \pmod{999}$, the <em>plain sum</em>
+                of $3$-digit blocks $B_0 + B_1 + B_2 + \dots$ preserves the exact remainder modulo $27$, $37$, and
+                $999$.</li>
+            <li><strong>The $99 = 9 \times 11$ Rule:</strong> Since $10^2 \equiv 1 \pmod{99}$, the plain sum of
+                $2$-digit blocks from the right preserves the exact remainder modulo $99$ (and hence modulo $9$ and
+                $11$).</li>
+        </ul>
+    </div>
+
+    <h3>1.2 Composite Divisors: The Coprime Factorization Criterion</h3>
+    <p>A composite divisor $D$ can be decomposed into factors $D = a \cdot b$. However, $a \mid N$ and $b \mid N$
+        implies $(ab) \mid N$ <strong>if and only if $\gcd(a, b) = 1$</strong> (pairwise coprime factors). In general,
+        $a \mid N$ and $b \mid N \iff \operatorname{lcm}(a, b) \mid N$.</p>
+    <ul>
+        <li><strong>Valid splits:</strong> $12 = 3 \times 4$, $18 = 2 \times 9$, $24 = 3 \times 8$, $36 = 4 \times 9$,
+            $45 = 5 \times 9$, $72 = 8 \times 9$, $88 = 8 \times 11$, $99 = 9 \times 11$, $132 = 3 \times 4 \times 11$.
+        </li>
+        <li><strong>Invalid split trap:</strong> Splitting $24$ into $4 \times 6$ fails because $\gcd(4, 6) = 2 \neq 1$;
+            for instance, $12$ is divisible by both $4$ and $6$, yet $24 \nmid 12$.</li>
+    </ul>
+
+    <!-- ==================== SECTION 2: POWER CYCLICITY & LAST TWO DIGITS ==================== -->
+    <h2 class="section-heading">2. Power Cyclicity, Units Digit &amp; Last Two Digits ($\bmod\, 100$)</h2>
+
+    <h3>2.1 Units Digit Cyclicity ($\bmod\, 10$)</h3>
+    <p>The units digit of $N^k$ depends exclusively on the units digit $u = N \bmod 10$. Because $\mathbb{Z}_{10}$ has
+        only $10$ residues, the sequence $u^1, u^2, u^3, \dots \pmod{10}$ must cycle periodically. Crucially, the period
+        of every decimal digit divides $4$:</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Units Digit $u$</th>
+                <th>Cycle ($u^1, u^2, u^3, u^4 \bmod 10$)</th>
+                <th>Cycle Length</th>
+                <th>Units Digit Rule for $u^k$ ($k \ge 1$)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>$0, 1, 5, 6$</strong></td>
+                <td>Constant: $u, u, u, u$</td>
+                <td>$1$</td>
+                <td>Always $u$ (invariant for all $k \ge 1$)</td>
+            </tr>
+            <tr>
+                <td><strong>$4, 9$</strong></td>
+                <td>$4 \to 6$; &nbsp; $9 \to 1$</td>
+                <td>$2$</td>
+                <td>Odd $k \implies 4, 9$; &nbsp; Even $k \implies 6, 1$</td>
+            </tr>
+            <tr>
+                <td><strong>$2, 3, 7, 8$</strong></td>
+                <td>$2,4,8,6$; &nbsp; $3,9,7,1$; &nbsp; $7,9,3,1$; &nbsp; $8,4,2,6$</td>
+                <td>$4$</td>
+                <td>Let $r = k \bmod 4$. If $r = 0$, use $u^4$; else $u^r$</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 270" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Modular arithmetic clock and power cyclicity wheel">
+            <!-- Background panel -->
+            <rect x="4" y="4" width="672" height="262" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+            <!-- Left title -->
+            <text x="175" y="28" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700"
+                fill="#0f172a">Power Cycle of 3 (mod 10)</text>
+            <!-- Left circle -->
+            <circle cx="175" cy="145" r="85" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"
+                stroke-dasharray="4,4" />
+            <!-- 10 clock positions around (175, 145), radius 85 -->
+            <!-- 0 at top: (175, 60) -->
+            <!-- 1 at 36 deg: (225, 76) -->
+            <!-- 2 at 72 deg: (256, 119) -->
+            <!-- 3 at 108 deg: (256, 171) -->
+            <!-- 4 at 144 deg: (225, 214) -->
+            <!-- 5 at 180 deg: (175, 230) -->
+            <!-- 6 at 216 deg: (125, 214) -->
+            <!-- 7 at 252 deg: (94, 171) -->
+            <!-- 8 at 288 deg: (94, 119) -->
+            <!-- 9 at 324 deg: (125, 76) -->
+            <!-- Arrows for 3 -> 9 -> 7 -> 1 -> 3 -->
+            <defs>
+                <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb" />
+                </marker>
+                <marker id="arrowTeal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#0d9488" />
+                </marker>
+                <marker id="arrowRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+                </marker>
+            </defs>
+            <!-- Directed chord 3(256,171) to 9(125,76) -->
+            <line x1="244" y1="162" x2="139" y2="86" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrowBlue)" />
+            <!-- 9(125,76) to 7(94,171) -->
+            <line x1="120" y1="90" x2="99" y2="156" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrowBlue)" />
+            <!-- 7(94,171) to 1(225,76) -->
+            <line x1="106" y1="162" x2="211" y2="86" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrowBlue)" />
+            <!-- 1(225,76) to 3(256,171) -->
+            <line x1="230" y1="90" x2="251" y2="156" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrowBlue)" />
+
+            <!-- Inactive nodes -->
+            <g font-family="sans-serif" font-size="11" fill="#64748b" text-anchor="middle">
+                <circle cx="175" cy="60" r="12" fill="#f1f5f9" stroke="#cbd5e1" /><text x="175" y="64">0</text>
+                <circle cx="256" cy="119" r="12" fill="#f1f5f9" stroke="#cbd5e1" /><text x="256" y="123">2</text>
+                <circle cx="225" cy="214" r="12" fill="#f1f5f9" stroke="#cbd5e1" /><text x="225" y="218">4</text>
+                <circle cx="175" cy="230" r="12" fill="#f1f5f9" stroke="#cbd5e1" /><text x="175" y="234">5</text>
+                <circle cx="125" cy="214" r="12" fill="#f1f5f9" stroke="#cbd5e1" /><text x="125" y="218">6</text>
+                <circle cx="94" cy="119" r="12" fill="#f1f5f9" stroke="#cbd5e1" /><text x="94" y="123">8</text>
+            </g>
+            <!-- Active cycle nodes: 3, 9, 7, 1 -->
+            <g font-family="sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">
+                <circle cx="256" cy="171" r="14" fill="#2563eb" /><text x="256" y="175">3</text>
+                <circle cx="125" cy="76" r="14" fill="#2563eb" /><text x="125" y="80">9</text>
+                <circle cx="94" cy="171" r="14" fill="#2563eb" /><text x="94" y="175">7</text>
+                <circle cx="225" cy="76" r="14" fill="#1d4ed8" /><text x="225" y="80">1</text>
+            </g>
+            <text x="281" y="175" font-family="sans-serif" font-size="10" fill="#1e40af">3¹</text>
+            <text x="100" y="70" font-family="sans-serif" font-size="10" fill="#1e40af">3²</text>
+            <text x="68" y="175" font-family="sans-serif" font-size="10" fill="#1e40af">3³</text>
+            <text x="247" y="70" font-family="sans-serif" font-size="10" fill="#1e40af">3⁴</text>
+            <text x="175" y="256" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#334155">Period = 4
+                &rArr; 3⁴ &equiv; 1 (mod 10)</text>
+
+            <!-- Divider -->
+            <line x1="340" y1="20" x2="340" y2="250" stroke="#e2e8f0" stroke-width="1.5" />
+
+            <!-- Right panel: Positive vs Negative Remainder on Mod 7 Clock -->
+            <text x="510" y="28" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700"
+                fill="#0f172a">Negative Remainders on a Mod 7 Clock</text>
+            <circle cx="510" cy="145" r="80" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+
+            <!-- Arc clockwise (+6) from 0(510,65) to 6(448,95) -->
+            <path d="M 526 67 A 80 80 0 1 1 446 108" fill="none" stroke="#0d9488" stroke-width="2.5"
+                stroke-dasharray="5,3" marker-end="url(#arrowTeal)" />
+            <!-- Arc counter-clockwise (-1) from 0(510,65) to 6(448,95) -->
+            <path d="M 495 67 A 80 80 0 0 0 458 84" fill="none" stroke="#dc2626" stroke-width="3"
+                marker-end="url(#arrowRed)" />
+
+            <!-- 7 nodes around (510,145) r=80 -->
+            <!-- 0: (510, 65) -->
+            <!-- 1: (572, 95) -->
+            <!-- 2: (588, 163) -->
+            <!-- 3: (545, 217) -->
+            <!-- 4: (475, 217) -->
+            <!-- 5: (432, 163) -->
+            <!-- 6: (448, 95) -->
+            <g font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle">
+                <circle cx="510" cy="65" r="13" fill="#0f172a" /><text x="510" y="69" fill="#ffffff">0</text>
+                <circle cx="572" cy="95" r="13" fill="#f1f5f9" stroke="#64748b" /><text x="572" y="99"
+                    fill="#0f172a">1</text>
+                <circle cx="588" cy="163" r="13" fill="#f1f5f9" stroke="#64748b" /><text x="588" y="167"
+                    fill="#0f172a">2</text>
+                <circle cx="545" cy="217" r="13" fill="#f1f5f9" stroke="#64748b" /><text x="545" y="221"
+                    fill="#0f172a">3</text>
+                <circle cx="475" cy="217" r="13" fill="#f1f5f9" stroke="#64748b" /><text x="475" y="221"
+                    fill="#0f172a">4</text>
+                <circle cx="432" cy="163" r="13" fill="#f1f5f9" stroke="#64748b" /><text x="432" y="167"
+                    fill="#0f172a">5</text>
+                <circle cx="448" cy="95" r="15" fill="#dc2626" /><text x="448" y="99" fill="#ffffff">6</text>
+            </g>
+            <text x="510" y="142" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700"
+                fill="#dc2626">6 &equiv; &minus;1 (mod 7)</text>
+            <text x="510" y="160" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0d9488">CW +6
+                steps = CCW &minus;1 step</text>
+            <text x="510" y="256" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#334155">6¹⁰⁰
+                &equiv; (&minus;1)¹⁰⁰ = +1 (mod 7)</text>
+        </svg>
+        <div class="diagram-caption">Figure 1.1: Left &mdash; The closed $4$-cycle of $3^k \pmod{10}$ inside
+            $\mathbb{Z}_{10}$. Right &mdash; Positive ($+6$) and negative ($-1$) remainders represent the exact same
+            residue class on the $\pmod 7$ clock.</div>
+    </div>
+
+    <h3>2.2 Last Two Digits ($\bmod\, 100$): Exhaustive Case-by-Case Derivation</h3>
+    <p>Finding the last two digits of $a^n$ is identical to computing $a^n \pmod{100}$. Because $100 = 4 \times 25$,
+        every base falls into one of four clean structural classes:</p>
+
+    <div class="concept-box">
+        <span class="box-label">Master Toolkit for Last Two Digits ($a^n \bmod 100$)</span>
+        <ol>
+            <li><strong>Bases ending in $1$:</strong> Write $a = 10t + 1$. By the Binomial Theorem:
+                $$(10t + 1)^n = 1 + \binom{n}{1}(10t) + \binom{n}{2}(10t)^2 + \dots \equiv 1 + 10tn \pmod{100}$$
+                Every term from $k = 2$ onward has $10^2 = 100$ as a factor. Therefore:
+                <ul>
+                    <li><strong>Units digit</strong> $= 1$.</li>
+                    <li><strong>Tens digit</strong> $= (t \times n) \bmod 10$ (multiply the base&rsquo;s tens digit by
+                        the exponent&rsquo;s units digit).</li>
+                </ul>
+                <em>Example:</em> $41^{73}$ has tens digit $(4 \times 3) \bmod 10 = 2$, so $41^{73} \equiv 21
+                \pmod{100}$.
+            </li>
+
+            <li><strong>Bases ending in $3, 7,$ or $9$:</strong> Convert the base into a number ending in $1$ using $3^4
+                = 81$, $7^4 = 2401 \equiv 01$, or $9^2 = 81$, then apply Case 1:
+                <ul>
+                    <li>$7^{4k} = (7^4)^k \equiv (01)^k = 01 \pmod{100}$.</li>
+                    <li>$3^{4k} = (81)^k \implies$ tens digit is $(8k) \bmod 10$.</li>
+                    <li>For general $a$ ending in $3, 7, 9$, note that $a^4$ always ends in $1$, and even better,
+                        <strong>$a^{20} \equiv 01 \pmod{100}$</strong> for every integer coprime to $10$ (proved in
+                        Section 4 via CRT: $\phi(4) = 2$, $\phi(25) = 20$, $\operatorname{lcm}(2, 20) = 20$).</li>
+                </ul>
+            </li>
+
+            <li><strong>Bases ending in $5$:</strong> Write $a = 10t + 5$. For $n = 2$:
+                $$(10t + 5)^2 = 100t(t+1) + 25 \equiv 25 \pmod{100}$$
+                Since $25^m \equiv 25 \pmod{100}$, every <strong>even</strong> power ($n \ge 2$) ends in $25$. For
+                <strong>odd</strong> $n = 2m + 1 \ge 3$:
+                $$(10t + 5)^{2m+1} \equiv 25(10t + 5) = 250t + 125 \equiv 50t + 25 \pmod{100}$$
+                Hence, for $n \ge 2$: $(10t+5)^n$ ends in <strong>$75$</strong> if and only if <strong>both $t$ and $n$
+                    are odd</strong>; in all other cases it ends in <strong>$25$</strong>.</li>
+
+            <li><strong>Even Bases (Powers of $2$ &amp; Factor Splitting):</strong>
+                Compute $2^{10} = 1024 \equiv 24 \pmod{100}$. Notice $24^2 = 576 \equiv 76 \pmod{100}$, $76^2 = 5776
+                \equiv 76 \pmod{100}$, and $76 \times 24 = 1824 \equiv 24 \pmod{100}$. Thus:
+                $$2^{10 \times \text{odd}} \equiv 24 \pmod{100}, \qquad 2^{10 \times \text{even}} \equiv 76 \pmod{100}$$
+                Furthermore, because $76 \equiv 0 \pmod 4$ and $76 \equiv 1 \pmod{25}$, multiplying <em>any</em>
+                multiple of $4$ by $76$ leaves it invariant modulo $100$:
+                $$76 \times 2^m \equiv 2^m \pmod{100} \quad (\text{for all } m \ge 2)$$
+                For any general even base $(2b)^n = 2^n \cdot b^n$, compute $2^n \pmod{100}$ and $b^n \pmod{100}$
+                separately and multiply their last two digits modulo $100$.</li>
+        </ol>
+    </div>
+
+    <!-- ==================== SECTION 3: REMAINDER THEOREM & BINOMIAL TRICK ==================== -->
+    <h2 class="section-heading">3. Modular Arithmetic, Negative Remainders &amp; The Binomial Trick</h2>
+
+    <p>By <strong>Euclid&rsquo;s Division Lemma</strong>, for any integer $a$ and positive integer $m$, there exist
+        unique integers $q$ (quotient) and $r$ (canonical remainder) such that:</p>
+    $$a = mq + r, \qquad 0 \le r \lt m$$
+    <p>We write $a \equiv b \pmod m$ (read &ldquo;$a$ is congruent to $b$ modulo $m$&rdquo;) if $m \mid (a - b)$,
+        equivalently if $a$ and $b$ leave the exact same remainder when divided by $m$.</p>
+
+    <div class="concept-box">
+        <span class="box-label">Laws of Congruence &amp; The Cancellation Trap</span>
+        <p>If $a \equiv b \pmod m$ and $c \equiv d \pmod m$, then:</p>
+        <ul>
+            <li><strong>Addition / Subtraction:</strong> $a \pm c \equiv b \pm d \pmod m$.</li>
+            <li><strong>Multiplication:</strong> $ac \equiv bd \pmod m$.</li>
+            <li><strong>Positive Integer Powers:</strong> $a^k \equiv b^k \pmod m$ for all integers $k \ge 1$.</li>
+            <li><strong>Division / Cancellation Law (CRITICAL TRAP):</strong> You <em>cannot</em> blindly divide both
+                sides of a congruence by $c$. The exact law is:
+                $$ca \equiv cb \pmod m \iff a \equiv b \pmod{\frac{m}{\gcd(c, m)}}$$
+                Only when $\gcd(c, m) = 1$ does the modulus stay $m$. Example: $2 \cdot 5 \equiv 2 \cdot 2 \pmod 6$
+                reduces to $5 \equiv 2 \pmod 3$, NOT $5 \equiv 2 \pmod 6$.</li>
+        </ul>
+    </div>
+
+    <h3>3.1 Negative Remainders &amp; Common-Factor Scaling</h3>
+    <p>When a positive remainder $r$ is close to $m$, replacing $r$ with $r - m$ yields a tiny negative residue whose
+        high powers are effortless to evaluate. At the end of a calculation, convert any negative residue back to
+        canonical form $[0, m-1]$ by adding a suitable multiple of $m$.</p>
+    <p><strong>Common-Factor Cancellation Identity:</strong> If both the dividend $A$ and divisor $B$ share a positive
+        common factor $k$, write $A = kA'$ and $B = kB'$. From Euclid&rsquo;s lemma $A' = B'q + r'$ ($0 \le r' \lt B'$),
+        multiplying through by $k$ gives $A = Bq + kr'$ with $0 \le kr' \lt B$. Therefore:</p>
+    $$\operatorname{Rem}\!\left(\frac{k \cdot A'}{k \cdot B'}\right) = k \cdot
+    \operatorname{Rem}\!\left(\frac{A'}{B'}\right)$$
+    <p>Always remember to <strong>multiply back by the cancelled factor $k$</strong> at the final step! Forgetting to
+        restore $k$ is the single most frequent NAT error in BEST Paper 1.</p>
+
+    <h3>3.2 The Binomial Remainder Trick &amp; Polynomial Divisibility</h3>
+    <p>To find $(km \pm a)^n \pmod m$, expand via the Binomial Theorem:</p>
+    $$(km \pm a)^n = \sum_{j=0}^{n} \binom{n}{j} (km)^{n-j} (\pm a)^j$$
+    <p>Every term except $j = n$ carries at least one factor of $m$, leaving:</p>
+    $$(km \pm a)^n \equiv (\pm a)^n \pmod m$$
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Higher-Order Binomial Truncation ($\bmod\, m^2$)</span>
+        <p>When the modulus is a <strong>prime square $p^2$</strong> (like $49$, $121$, $169$) or $m^2$, expand $(kp \pm
+            1)^n$ and retain the last <em>two</em> terms ($j = 0$ and $j = 1$), since every term with $j \ge 2$ contains
+            $p^2$:</p>
+        $$(kp + 1)^n \equiv 1 + nkp \pmod{p^2}, \qquad (kp - 1)^n \equiv (-1)^n + (-1)^{n-1} nkp \pmod{p^2}$$
+        <p><strong>Algebraic Divisibility Identities (Factor Theorem in Disguise):</strong></p>
+        <ul>
+            <li>$a^n - b^n$ is divisible by $(a - b)$ for <strong>all</strong> positive integers $n$.</li>
+            <li>$a^n - b^n$ is divisible by $(a + b)$ for all <strong>even</strong> positive integers $n$.</li>
+            <li>$a^n + b^n$ is divisible by $(a + b)$ for all <strong>odd</strong> positive integers $n$.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== SECTION 4: FLT, WILSON & EULER ==================== -->
+    <h2 class="section-heading">4. Fermat&rsquo;s Little Theorem, Wilson&rsquo;s Theorem &amp; Euler&rsquo;s Totient
+        Theorem</h2>
+
+    <p>When an exponent reaches thousands or appears inside a power tower, repeated squaring is too slow. Three
+        classical theorems collapse enormous exponents in a single step.</p>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 4.1: Fermat&rsquo;s Little Theorem (FLT)</span>
+        <p>Let $p$ be a <strong>prime number</strong> and $a$ be any integer. Then:</p>
+        $$a^p \equiv a \pmod p$$
+        <p>If, in addition, $\gcd(a, p) = 1$ (i.e., $p \nmid a$), we may cancel $a$ to obtain the exam workhorse form:
+        </p>
+        $$a^{p-1} \equiv 1 \pmod p$$
+        <p><strong>First-Principles Proof Sketch:</strong> Consider the $p - 1$ non-zero multiples $\{a, 2a, 3a, \dots,
+            (p-1)a\}$. Because $\gcd(a, p) = 1$, no two are congruent modulo $p$ and none is $0 \pmod p$. Hence they are
+            merely a permutation of $\{1, 2, \dots, p-1\} \pmod p$. Multiplying all elements of both sets gives:</p>
+        $$a^{p-1} (p-1)! \equiv (p-1)! \pmod p$$
+        <p>Since $p$ is prime, $\gcd((p-1)!, p) = 1$, so cancelling $(p-1)!$ yields $a^{p-1} \equiv 1 \pmod p$.</p>
+    </div>
+
+    <h3>4.1 Euler&rsquo;s Totient Function $\phi(n)$ &amp; Euler&rsquo;s Theorem</h3>
+    <p>What if the modulus $n$ is <strong>composite</strong>? Euler generalized Fermat&rsquo;s Little Theorem by
+        replacing the set $\{1, 2, \dots, p-1\}$ with the set of integers in $\{1, 2, \dots, n\}$ that are <em>coprime
+            to $n$</em>. The count of such integers is <strong>Euler&rsquo;s Totient Function $\phi(n)$</strong>.</p>
+    <p>If the prime factorization of $n$ is $n = p_1^{e_1} p_2^{e_2} \cdots p_k^{e_k}$, then by Inclusion-Exclusion:</p>
+    $$\phi(n) = n \left(1 - \frac{1}{p_1}\right)\left(1 - \frac{1}{p_2}\right)\cdots\left(1 - \frac{1}{p_k}\right)$$
+    <p>Key properties: $\phi(p) = p - 1$ for prime $p$; $\phi(p^e) = p^e - p^{e-1} = p^{e-1}(p-1)$; and $\phi(mn) =
+        \phi(m)\phi(n)$ whenever $\gcd(m, n) = 1$.</p>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 4.2: Euler&rsquo;s Totient Theorem</span>
+        <p>For any positive integer $n$ and any integer $a$ satisfying <strong>$\gcd(a, n) = 1$</strong>:</p>
+        $$a^{\phi(n)} \equiv 1 \pmod n$$
+        <p><strong>Exam Rule:</strong> Whenever $\gcd(a, n) = 1$, you may reduce the exponent $E$ modulo $\phi(n)$: $a^E
+            \equiv a^{E \bmod \phi(n)} \pmod n$. If $\gcd(a, n) \neq 1$, Euler&rsquo;s Theorem <strong>DOES NOT
+                APPLY</strong>&mdash;split the modulus using CRT or use common-factor cancellation instead!</p>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Wilson&rsquo;s Theorem &amp; Factorial Corollaries</span>
+        <p><strong>Theorem 4.3 (Wilson&rsquo;s Theorem):</strong> An integer $p \ge 2$ is <strong>prime</strong> if and
+            only if:</p>
+        $$(p - 1)! \equiv -1 \pmod p$$
+        <p><strong>Why it holds:</strong> Modulo a prime $p$, every residue $x \in \{1, 2, \dots, p-1\}$ has a unique
+            multiplicative inverse $x^{-1}$. The only residues that are their <em>own</em> inverses satisfy $x^2 \equiv
+            1 \pmod p \implies p \mid (x-1)(x+1) \implies x \equiv 1$ or $x \equiv p-1$. The remaining $p - 3$ residues
+            pair up into inverse couples whose product is $1$, leaving $(p-1)! \equiv 1 \cdot (p-1) \equiv -1 \pmod p$.
+        </p>
+        <p><strong>Three High-Frequency BEST/IOQM Corollaries (for odd prime $p$):</strong></p>
+        <ol>
+            <li><strong>$(p - 2)! \equiv 1 \pmod p$:</strong> From $(p-1)(p-2)! \equiv -1 \implies (-1)(p-2)! \equiv -1
+                \pmod p$.</li>
+            <li><strong>$(p - 3)! \equiv \dfrac{p - 1}{2} \pmod p$:</strong> From $(p-1)(p-2)(p-3)! \equiv -1 \implies
+                (-1)(-2)(p-3)! \equiv p - 1 \implies 2(p-3)! \equiv p - 1 \pmod p$. Since $p$ is odd, dividing by $2$
+                gives $\dfrac{p-1}{2}$.</li>
+            <li><strong>Composite Factorial Collapse:</strong> For every composite integer $n \gt 4$, $(n - 1)! \equiv 0
+                \pmod n$ (if $n = ab$ with $2 \le a \lt b \lt n$, both $a$ and $b$ appear as distinct factors in
+                $(n-1)!$; if $n = p^2$ with $p \ge 3$, both $p$ and $2p$ appear in $(n-1)!$). The sole composite
+                exception is $n = 4$, where $3! = 6 \equiv 2 \pmod 4$.</li>
+        </ol>
+    </div>
+
+    <!-- ==================== SECTION 5: CHINESE REMAINDER THEOREM ==================== -->
+    <h2 class="section-heading">5. Chinese Remainder Theorem (CRT) &amp; Splitting Composite Moduli</h2>
+
+    <p>Suppose a problem asks for the remainder of a giant expression divided by a composite modulus like $72$, $91$,
+        $100$, or $899$. Evaluating directly modulo $899$ is painful, because $899$ is neither prime nor small. The
+        <strong>Chinese Remainder Theorem</strong> lets us shatter $m$ into pairwise coprime pieces, solve each tiny
+        piece independently, and stitch the answers back together uniquely.</p>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 5.1: Chinese Remainder Theorem (CRT)</span>
+        <p>Let $m_1, m_2, \dots, m_k$ be positive integers that are <strong>pairwise coprime</strong> ($\gcd(m_i, m_j) =
+            1$ for $i \neq j$), and let $M = m_1 m_2 \cdots m_k$. Then the simultaneous system of congruences:</p>
+        $$x \equiv r_1 \pmod{m_1}, \quad x \equiv r_2 \pmod{m_2}, \quad \dots, \quad x \equiv r_k \pmod{m_k}$$
+        <p>has a <strong>unique solution modulo $M$</strong>.</p>
+        <p><strong>Constructive Formula:</strong> Define $M_i = M / m_i$ and let $y_i$ be the modular inverse of $M_i$
+            modulo $m_i$ (so $M_i y_i \equiv 1 \pmod{m_i}$). Then:</p>
+        $$x \equiv \sum_{i=1}^{k} r_i M_i y_i \pmod M$$
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 245" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Chinese Remainder Theorem 3 by 4 bijection grid for mod 12">
+            <rect x="4" y="4" width="672" height="237" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="340" y="28" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700"
+                fill="#0f172a">CRT Bijection Intuition: (x mod 3, x mod 4) &harr; x mod 12</text>
+
+            <!-- Left Grid: 3 rows (mod 3: 0,1,2) x 4 cols (mod 4: 0,1,2,3) -->
+            <!-- Grid top-left at (115, 65), cell width=68, cell height=46 -->
+            <text x="251" y="54" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700"
+                fill="#1e40af">Remainder mod 4</text>
+            <text x="58" y="136" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700"
+                fill="#0f766e" transform="rotate(-90 58 136)">Remainder mod 3</text>
+
+            <!-- Column headers -->
+            <g font-family="sans-serif" font-size="11" font-weight="700" fill="#1e40af" text-anchor="middle">
+                <text x="149" y="72">0</text>
+                <text x="217" y="72">1</text>
+                <text x="285" y="72">2</text>
+                <text x="353" y="72">3</text>
+            </g>
+            <!-- Row headers -->
+            <g font-family="sans-serif" font-size="11" font-weight="700" fill="#0f766e" text-anchor="middle">
+                <text x="98" y="106">0</text>
+                <text x="98" y="152">1</text>
+                <text x="98" y="198">2</text>
+            </g>
+
+            <!-- Cells -->
+            <!-- Row 0 (mod 3 = 0): 0, 9, 6, 3 -->
+            <g font-family="sans-serif" font-size="14" font-weight="700" text-anchor="middle">
+                <rect x="115" y="80" width="68" height="46" fill="#ffffff" stroke="#94a3b8" /><text x="149" y="108"
+                    fill="#0f172a">0</text>
+                <rect x="183" y="80" width="68" height="46" fill="#ffffff" stroke="#94a3b8" /><text x="217" y="108"
+                    fill="#0f172a">9</text>
+                <rect x="251" y="80" width="68" height="46" fill="#ffffff" stroke="#94a3b8" /><text x="285" y="108"
+                    fill="#0f172a">6</text>
+                <rect x="319" y="80" width="68" height="46" fill="#ffffff" stroke="#94a3b8" /><text x="353" y="108"
+                    fill="#0f172a">3</text>
+
+                <!-- Row 1 (mod 3 = 1): 4, 1, 10, 7 -->
+                <rect x="115" y="126" width="68" height="46" fill="#ffffff" stroke="#94a3b8" /><text x="149" y="154"
+                    fill="#0f172a">4</text>
+                <rect x="183" y="126" width="68" height="46" fill="#ffffff" stroke="#94a3b8" /><text x="217" y="154"
+                    fill="#0f172a">1</text>
+                <rect x="251" y="126" width="68" height="46" fill="#ffffff" stroke="#94a3b8" /><text x="285" y="154"
+                    fill="#0f172a">10</text>
+                <rect x="319" y="126" width="68" height="46" fill="#ffffff" stroke="#94a3b8" /><text x="353" y="154"
+                    fill="#0f172a">7</text>
+
+                <!-- Row 2 (mod 3 = 2): 8, 5, 2, 11 -->
+                <rect x="115" y="172" width="68" height="46" fill="#ffffff" stroke="#94a3b8" /><text x="149" y="200"
+                    fill="#0f172a">8</text>
+                <rect x="183" y="172" width="68" height="46" fill="#ffffff" stroke="#94a3b8" /><text x="217" y="200"
+                    fill="#0f172a">5</text>
+                <rect x="251" y="172" width="68" height="46" fill="#ffffff" stroke="#94a3b8" /><text x="285" y="200"
+                    fill="#0f172a">2</text>
+                <rect x="319" y="172" width="68" height="46" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5" /><text
+                    x="353" y="200" fill="#1d4ed8">11</text>
+            </g>
+
+            <!-- Explanatory Callout on Right -->
+            <rect x="415" y="76" width="242" height="142" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="430" y="98" font-family="sans-serif" font-size="12" font-weight="700" fill="#0f172a">Why
+                Coprimality Matters</text>
+            <text x="430" y="120" font-family="sans-serif" font-size="11" fill="#334155">&bull; Because gcd(3, 4) = 1,
+                stepping</text>
+            <text x="438" y="136" font-family="sans-serif" font-size="11" fill="#334155">diagonally (+1, +1) visits
+                every</text>
+            <text x="438" y="152" font-family="sans-serif" font-size="11" fill="#334155">single cell of the 3 &times; 4
+                grid</text>
+            <text x="438" y="168" font-family="sans-serif" font-size="11" fill="#334155">exactly once before
+                repeating.</text>
+            <text x="430" y="191" font-family="sans-serif" font-size="11" font-weight="700" fill="#1d4ed8">Highlighted
+                Cell (2, 3):</text>
+            <text x="430" y="207" font-family="sans-serif" font-size="11" fill="#1e40af">x &equiv; 2 (mod 3) &amp; x
+                &equiv; 3 (mod 4) &rArr; 11</text>
+        </svg>
+        <div class="diagram-caption">Figure 1.2: Every residue $x \in \{0, 1, \dots, 11\}$ occupies a unique coordinate
+            $(x \bmod 3,\, x \bmod 4)$ because $\gcd(3, 4) = 1$.</div>
+    </div>
+
+    <h3>5.1 Exam-Speed CRT: The Successive Substitution Method</h3>
+    <p>In a timed BEST exam, solving $2$ or $3$ congruences via <strong>successive substitution</strong> is faster and
+        less error-prone than memorizing the formula:</p>
+    <ol>
+        <li>Start with the congruence having the <strong>largest modulus</strong>: write $x = m_1 k + r_1$.</li>
+        <li>Substitute into the second congruence: $m_1 k + r_1 \equiv r_2 \pmod{m_2}$.</li>
+        <li>Solve for the smallest non-negative integer $k = k_0 \pmod{m_2}$, giving $k = m_2 t + k_0$.</li>
+        <li>Substitute back to obtain $x = m_1 m_2 t + (m_1 k_0 + r_1)$, which combines both congruences into a single
+            congruence modulo $m_1 m_2$. Repeat if a third modulus exists.</li>
+    </ol>
+
+    <!-- ==================== SECTION 6: HCF & LCM REMAINDER MODELS ==================== -->
+    <h2 class="section-heading">6. HCF &amp; LCM with Same &amp; Different Remainders</h2>
+
+    <p>For any two positive integers $a$ and $b$, let $g = \gcd(a, b) = \operatorname{HCF}(a, b)$. Then we can write:
+    </p>
+    $$a = gx, \qquad b = gy, \qquad \text{where } \gcd(x, y) = 1$$
+    <p>From this coprime decomposition, $\operatorname{LCM}(a, b) = gxy$, which immediately proves the classical
+        identity:</p>
+    $$\operatorname{HCF}(a, b) \times \operatorname{LCM}(a, b) = g \cdot (gxy) = (gx)(gy) = a \times b$$
+
+    <div class="trap-box">
+        <span class="box-label">Critical Trap: Two Numbers Only!</span>
+        <p>The product rule $\operatorname{HCF} \times \operatorname{LCM} = \text{Product}$ holds <strong>strictly for
+                two positive integers</strong>. For three numbers $a, b, c$:
+            $$\operatorname{HCF}(a,b,c) \times \operatorname{LCM}(a,b,c) \neq abc \quad \text{(in general)}$$
+            For example, with $2, 4, 6$: $\operatorname{HCF} = 2$, $\operatorname{LCM} = 12$, so $2 \times 12 = 24 \neq
+            2 \times 4 \times 6 = 48$. The true three-variable identity is $\operatorname{LCM}(a,b,c) = \dfrac{abc \cdot
+            \gcd(a,b,c)}{\gcd(a,b)\gcd(b,c)\gcd(c,a)}$.</p>
+    </div>
+
+    <h3>6.1 Complete Taxonomy of HCF &amp; LCM Remainder Models</h3>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Model Type</th>
+                <th>Problem Condition</th>
+                <th>General Solution Formula</th>
+                <th>Proof / Key Verification Check</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>LCM Type A</strong><br>(Same Remainder)</td>
+                <td>$N$ leaves the same remainder $r$ when divided by $a, b, c$</td>
+                <td>$N = k \cdot \operatorname{LCM}(a,b,c) + r$</td>
+                <td>$N - r$ is divisible by $a, b,$ and $c$. Smallest positive $N$: take $k = 0$ if $r \gt 0$ (check if
+                    problem says &ldquo;smallest number greater than divisors,&rdquo; then $k = 1$).</td>
+            </tr>
+            <tr>
+                <td><strong>LCM Type B</strong><br>(Constant Difference)</td>
+                <td>$N$ leaves remainders $r_1, r_2, r_3$ with $a - r_1 = b - r_2 = c - r_3 = d$</td>
+                <td>$N = k \cdot \operatorname{LCM}(a,b,c) - d$</td>
+                <td>Each congruence reads $N \equiv -d \pmod{a,b,c}$, so $N + d$ is a common multiple of $a, b, c$.
+                    Smallest positive $N$ uses $k = 1$.</td>
+            </tr>
+            <tr>
+                <td><strong>LCM Type C</strong><br>(Arbitrary Remainders)</td>
+                <td>$N \equiv r_1 \pmod a$, $r_2 \pmod b$, $r_3 \pmod c$ with no constant sum/diff</td>
+                <td>$N = k \cdot \operatorname{LCM}(a,b,c) + N_0$</td>
+                <td>Find the smallest solution $N_0$ by CRT / successive substitution; every subsequent solution jumps
+                    by $\operatorname{LCM}(a,b,c)$.</td>
+            </tr>
+            <tr>
+                <td><strong>HCF Type A</strong><br>(Known Remainders)</td>
+                <td>Largest divisor $D$ leaving remainders $r_1, r_2, r_3$ when dividing $a, b, c$</td>
+                <td>$D = \operatorname{HCF}(a - r_1,\, b - r_2,\, c - r_3)$</td>
+                <td>Must verify $D \gt \max(r_1, r_2, r_3)$; otherwise no such divisor exists!</td>
+            </tr>
+            <tr>
+                <td><strong>HCF Type B</strong><br>(Unknown Same Remainder)</td>
+                <td>Largest divisor $D$ leaving the <em>same</em> (unspecified) remainder $r$ on $a, b, c$</td>
+                <td>$D = \operatorname{HCF}(|a - b|,\, |b - c|,\, |c - a|)$</td>
+                <td>If $a = Dq_1 + r$ and $b = Dq_2 + r$, subtracting eliminates $r$: $a - b = D(q_1 - q_2)$, so $D$
+                    divides every pairwise difference.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Euclidean Algorithm &amp; B&eacute;zout&rsquo;s
+            Identity</span>
+        <p>For any integers $a, b$ with $b \gt 0$, $\gcd(a, b) = \gcd(b, a \bmod b)$. Even more generally, $\gcd(a, b) =
+            \gcd(a - kb, b)$ for any integer $k$. In Olympiad algebra, this lets you find the HCF of polynomial
+            expressions immediately! For instance, to find $\gcd(2n + 1, 3n + 2)$:</p>
+        $$\gcd(2n + 1,\, 3n + 2) = \gcd(2n + 1,\, (3n + 2) - (2n + 1)) = \gcd(2n + 1,\, n + 1) = \gcd((2n+1) - 2(n+1),\,
+        n+1) = \gcd(-1,\, n+1) = 1$$
+        <p><strong>B&eacute;zout&rsquo;s Identity:</strong> For any integers $a, b$ not both zero, there exist integers
+            $x, y$ such that $ax + by = \gcd(a, b)$. Consequently, the linear Diophantine equation $ax + by = c$ has
+            integer solutions if and only if $\gcd(a, b) \mid c$.</p>
+    </div>
+
+    <!-- ==================== SECTION 7: BASE SYSTEMS ==================== -->
+    <h2 class="section-heading">7. Positional Base Systems (Conversion, Arithmetic &amp; Divisibility)</h2>
+
+    <p>In a positional number system with integer base (radix) $b \ge 2$, the permissible digit set is $\{0, 1, 2,
+        \dots, b - 1\}$ (for $b \gt 10$, letters $A = 10, B = 11, \dots, F = 15$ represent digits). A number with
+        integer part $d_k \dots d_1 d_0$ and fractional part $f_1 f_2 \dots$ has base-$10$ value:</p>
+    $$(d_k \dots d_1 d_0 . f_1 f_2 \dots)_b = \sum_{i=0}^{k} d_i b^i + \sum_{j \ge 1} f_j b^{-j}$$
+
+    <div class="concept-box">
+        <span class="box-label">Core Conversion &amp; Arithmetic Algorithms</span>
+        <ul>
+            <li><strong>Base-$10 \to$ Base-$b$ (Integer Part):</strong> Repeatedly divide by $b$ and record the
+                remainders. Read the remainders from <strong>bottom (last) to top (first)</strong>.</li>
+            <li><strong>Base-$10 \to$ Base-$b$ (Fractional Part):</strong> Repeatedly multiply the fractional part by
+                $b$ and record the integer part produced at each step. Read from <strong>top (first) to bottom
+                    (last)</strong>.</li>
+            <li><strong>Power-Base Grouping ($b \leftrightarrow b^k$):</strong> To convert directly between binary ($2$)
+                and octal ($8 = 2^3$) or hexadecimal ($16 = 2^4$), group binary digits in blocks of $3$ or $4$ starting
+                from the radix point&mdash;never pass through base $10$.</li>
+            <li><strong>Base-$b$ Addition &amp; Subtraction:</strong>
+                <ul>
+                    <li><em>Addition:</em> Whenever a column sum $S \ge b$, write down $S \bmod b$ and carry $\lfloor S
+                        / b \rfloor$ to the next column left.</li>
+                    <li><em>Subtraction:</em> Whenever a top digit is smaller than the bottom digit, borrowing $1$ from
+                        the left column adds <strong>$b$</strong> (not $10$!) to the current column.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Universal Divisibility Laws in Base $b$</span>
+        <p>Our base-$10$ divisibility rules for $9$ and $11$ are just special cases of universal base-$b$ theorems:</p>
+        <ul>
+            <li><strong>Divisibility by $(b - 1)$:</strong> Since $b \equiv 1 \pmod{b - 1}$, we have $b^i \equiv 1
+                \pmod{b - 1}$. Thus $(d_k \dots d_1 d_0)_b \equiv \sum_{i=0}^k d_i \pmod{b - 1}$. A base-$b$ number is
+                divisible by $(b - 1)$ (and any factor of $b - 1$) if and only if the <strong>sum of its base-$b$
+                    digits</strong> is divisible by $(b - 1)$.</li>
+            <li><strong>Divisibility by $(b + 1)$:</strong> Since $b \equiv -1 \pmod{b + 1}$, $(d_k \dots d_1 d_0)_b
+                \equiv d_0 - d_1 + d_2 - \dots \pmod{b + 1}$. Divisibility by $(b + 1)$ is governed by the
+                <strong>alternating sum of its base-$b$ digits</strong>.</li>
+            <li><strong>Even/Odd Parity Trap in Odd Bases:</strong> In an <strong>odd base</strong> (e.g., base $7$ or
+                base $9$), $b - 1$ is even, so $2 \mid (b - 1)$. Therefore, a number in an odd base is even if and only
+                if the <strong>sum of its digits is even</strong>&mdash;NOT merely because its last digit is even! For
+                example, $(11)_7 = 7 + 1 = 8$ is even despite ending in $1$.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== SECTION 8: SURDS & INDICES COMPARISONS ==================== -->
+    <h2 class="section-heading">8. Surds &amp; Indices: Laws, Denesting &amp; Comparison Techniques</h2>
+
+    <p>Before comparing expressions, eliminate the #1 notation trap in indices: <strong>power towers are
+            right-associative</strong>.</p>
+    $$a^{b^c} = a^{(b^c)} \neq (a^b)^c = a^{bc}$$
+    <p>For example, $2^{3^2} = 2^9 = 512$, whereas $(2^3)^2 = 8^2 = 64$.</p>
+
+    <div class="concept-box">
+        <span class="box-label">Five-Weapon Arsenal for Comparing Surds &amp; Large Indices</span>
+        <ol>
+            <li><strong>HCF of Exponents (Large Powers):</strong> To compare $a^m$ and $b^n$, let $g = \gcd(m, n)$ and
+                rewrite as $(a^{m/g})^g$ vs $(b^{n/g})^g$. Compare the inner bases directly. Example: $2^{60} =
+                (2^5)^{12} = 32^{12}$ vs $3^{48} = (3^4)^{12} = 81^{12} \implies 2^{60} \lt 3^{48}$.</li>
+            <li><strong>LCM of Radical Orders (Pure Surds):</strong> To compare $\sqrt[m]{a}$ and $\sqrt[n]{b}$ ($a, b
+                \gt 0$), let $L = \operatorname{lcm}(m, n)$ and raise both to power $L$: compare $a^{L/m}$ vs $b^{L/n}$.
+            </li>
+            <li><strong>Constant-Sum Surd Rule ($\sqrt{a} + \sqrt{b}$ with $a + b = S$):</strong> Squaring gives
+                $(\sqrt{a} + \sqrt{b})^2 = S + 2\sqrt{ab}$. Since $S$ is fixed, <strong>the pair with the larger product
+                    $ab$ (i.e., closer $a$ and $b$) gives the larger sum</strong>.</li>
+            <li><strong>Constant-Difference Rationalization ($\sqrt{a} - \sqrt{b}$ with $a - b = d \gt 0$):</strong>
+                Multiply by the conjugate:
+                $$\sqrt{a} - \sqrt{b} = \frac{a - b}{\sqrt{a} + \sqrt{b}} = \frac{d}{\sqrt{a} + \sqrt{b}}$$
+                With a fixed positive numerator $d$, <strong>larger $a, b$ produce a larger denominator and therefore a
+                    SMALLER difference</strong>.</li>
+            <li><strong>Denesting Compound Radicals:</strong> Whenever $x, y \gt 0$ satisfy $x + y = A$ and $xy = B$:
+                $$\sqrt{A \pm 2\sqrt{B}} = \left|\sqrt{x} \pm \sqrt{y}\right|$$
+                If the coefficient of $\sqrt{B}$ is not $2$, force a $2$ by multiplying and dividing inside the outer
+                radical by $2$ (e.g., $\sqrt{3 + \sqrt{5}} = \sqrt{\dfrac{6 + 2\sqrt{5}}{2}} = \dfrac{\sqrt{5} +
+                1}{\sqrt{2}}$).</li>
+        </ol>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Comparing $a^b$ vs $b^a$ via the $f(x) = x^{1/x}$
+            Curve</span>
+        <p>How do you compare $99^{100}$ vs $100^{99}$, or $3^\pi$ vs $\pi^3$, without a calculator? Take the $(ab)$-th
+            root of both sides ($a, b \gt 0$):</p>
+        $$a^b \gt b^a \iff a^{1/a} \gt b^{1/b}$$
+        <p>Consider the function $f(x) = x^{1/x}$ for $x \gt 0$. Taking the logarithm $\ln f(x) = \dfrac{\ln x}{x}$, its
+            derivative is $\dfrac{1 - \ln x}{x^2}$, which is positive for $0 \lt x \lt e$ and negative for $x \gt e$
+            (where $e \approx 2.71828$). Hence $f(x)$ reaches its <strong>unique global maximum at $x = e$</strong>,
+            strictly increases on $(0, e)$, and strictly decreases on $(e, \infty)$.</p>
+        <p><strong>Golden Exam Rule:</strong> For any two real numbers $e \le a \lt b$ (in particular, any integers $3
+            \le a \lt b$), we have $a^{1/a} \gt b^{1/b}$, so <strong>$a^b \gt b^a$</strong> (the smaller base with the
+            larger exponent always wins!). Watch the sole small-integer exceptions on the left of $e$: $2^3 = 8 \lt 3^2
+            = 9$, and $2^4 = 4^2 = 16$ (exact tie because $2^{1/2} = 4^{1/4}$).</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 250" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Graph of f(x) = x^(1/x) peaking at x = e">
+            <rect x="4" y="4" width="672" height="242" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="340" y="26" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700"
+                fill="#0f172a">The Dominance Curve: f(x) = x^(1/x) for Comparing a^b vs b^a</text>
+
+            <!-- Axes: origin at (75, 205), x-scale: 75px per unit (x=0..7), y-scale: y=1.0 at 185, y=1.5 at 65 (240px per unit of y) -->
+            <!-- Let's map y: y_svg = 205 - (y_val - 0.9)*250 -->
+            <!-- Check points:
+           x=1.0, y=1.000 -> (150, 180)
+           x=1.5, y=1.310 -> (187.5, 102.5)
+           x=2.0, y=1.414 -> (225, 76.5)
+           x=2.718 (e), y=1.4447 -> (278.9, 68.8)
+           x=3.0, y=1.4422 -> (300, 69.5)
+           x=4.0, y=1.4142 -> (375, 76.5)
+           x=5.0, y=1.3797 -> (450, 85.1)
+           x=6.0, y=1.3480 -> (525, 93.0)
+           x=7.0, y=1.3205 -> (600, 99.9)
+      -->
+            <!-- Shaded regions -->
+            <rect x="75" y="45" width="203.9" height="160" fill="#fef2f2" opacity="0.55" />
+            <rect x="278.9" y="45" width="351.1" height="160" fill="#ecfdf5" opacity="0.55" />
+
+            <!-- Grid horizontal line y=1.0 -->
+            <line x1="75" y1="180" x2="630" y2="180" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,4" />
+            <text x="68" y="184" text-anchor="end" font-family="sans-serif" font-size="10" fill="#475569">1.0</text>
+            <!-- Tie line y = sqrt(2) = 1.4142 at y_svg=76.5 -->
+            <line x1="225" y1="76.5" x2="375" y2="76.5" stroke="#7c3aed" stroke-width="1.4" stroke-dasharray="4,3" />
+            <text x="300" y="92" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700"
+                fill="#6d28d9">Tie: 2^(1/2) = 4^(1/4) &rArr; 2⁴ = 4²</text>
+
+            <!-- Vertical line at x = e -->
+            <line x1="278.9" y1="45" x2="278.9" y2="205" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="5,3" />
+
+            <!-- Axes -->
+            <line x1="75" y1="205" x2="635" y2="205" stroke="#0f172a" stroke-width="1.8" />
+            <line x1="75" y1="205" x2="75" y2="42" stroke="#0f172a" stroke-width="1.8" />
+
+            <!-- X-axis ticks -->
+            <g font-family="sans-serif" font-size="11" fill="#334155" text-anchor="middle">
+                <line x1="150" y1="205" x2="150" y2="210" stroke="#0f172a" /><text x="150" y="222">1</text>
+                <line x1="225" y1="205" x2="225" y2="210" stroke="#0f172a" /><text x="225" y="222">2</text>
+                <text x="278.9" y="222" font-weight="700" fill="#dc2626">e &approx; 2.72</text>
+                <line x1="300" y1="205" x2="300" y2="210" stroke="#0f172a" /><text x="306" y="222">3</text>
+                <line x1="375" y1="205" x2="375" y2="210" stroke="#0f172a" /><text x="375" y="222">4</text>
+                <line x1="450" y1="205" x2="450" y2="210" stroke="#0f172a" /><text x="450" y="222">5</text>
+                <line x1="525" y1="205" x2="525" y2="210" stroke="#0f172a" /><text x="525" y="222">6</text>
+                <line x1="600" y1="205" x2="600" y2="210" stroke="#0f172a" /><text x="600" y="222">7</text>
+            </g>
+
+            <!-- Smooth curve x^(1/x) -->
+            <path
+                d="M 150 180 C 170 132, 195 92, 225 76.5 C 248 69.5, 265 68.8, 278.9 68.8 C 288 68.8, 294 69.1, 300 69.5 C 330 71.8, 355 74.3, 375 76.5 C 405 79.8, 428 82.6, 450 85.1 C 485 89.0, 510 91.5, 525 93.0 C 555 96.0, 580 98.3, 600 99.9"
+                fill="none" stroke="#2563eb" stroke-width="3" />
+
+            <!-- Key points -->
+            <circle cx="150" cy="180" r="4.5" fill="#2563eb" />
+            <circle cx="225" cy="76.5" r="5" fill="#7c3aed" />
+            <circle cx="278.9" cy="68.8" r="5.5" fill="#dc2626" />
+            <circle cx="300" cy="69.5" r="4.5" fill="#059669" />
+            <circle cx="375" cy="76.5" r="5" fill="#7c3aed" />
+            <circle cx="450" cy="85.1" r="4.5" fill="#059669" />
+
+            <!-- Annotations -->
+            <text x="278.9" y="57" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700"
+                fill="#dc2626">Peak: e^(1/e) &approx; 1.445</text>
+            <text x="155" y="60" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700"
+                fill="#991b1b">Increasing (x &lt; e)</text>
+            <text x="485" y="60" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700"
+                fill="#065f46">Strictly Decreasing (x &gt; e)</text>
+            <text x="485" y="135" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#065f46">For e &le;
+                a &lt; b: a^(1/a) &gt; b^(1/b)</text>
+            <text x="485" y="152" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700"
+                fill="#065f46">&rArr; a^b &gt; b^a (e.g., 3⁴ &gt; 4³, 99¹⁰⁰ &gt; 100⁹⁹)</text>
+            <text x="485" y="172" text-anchor="middle" font-family="sans-serif" font-size="10.5"
+                fill="#475569">Asymptote y &rarr; 1 as x &rarr; &infin;</text>
+        </svg>
+        <div class="diagram-caption">Figure 1.3: The curve $f(x) = x^{1/x}$ peaks at $x = e \approx 2.718$. Because $3$
+            is the integer closest to $e$, $3^{1/3}$ is the largest of all $n^{1/n}$ for $n \in \mathbb{Z}^+$.</div>
+    </div>
+
+    <!-- ==================== FORMULA VAULT ==================== -->
+    <div class="formula-vault">
+        <span class="box-label">Chapter 1 Formula Vault &mdash; High-Density Revision Sheet</span>
+        <ul>
+            <li><strong>Osculators ($N = 10q + u$):</strong> $7 \to q - 2u$;&nbsp; $13 \to q + 4u$;&nbsp; $17 \to q -
+                5u$;&nbsp; $19 \to q + 2u$;&nbsp; $23 \to q + 7u$;&nbsp; $29 \to q + 3u$.</li>
+            <li><strong>Block Sums:</strong> $1001 = 7 \cdot 11 \cdot 13$ (alternating $3$-digit blocks);&nbsp; $999 =
+                27 \cdot 37$ (sum of $3$-digit blocks);&nbsp; $99 = 9 \cdot 11$ (sum of $2$-digit blocks).</li>
+            <li><strong>Last Two Digits ($\bmod\, 100$):</strong> $(10t+1)^n \equiv 10(tn \bmod 10) + 1$;&nbsp; $a^{20}
+                \equiv 01$ for $\gcd(a,10)=1$;&nbsp; $2^{10 \cdot \text{odd}} \equiv 24$, $2^{10 \cdot \text{even}}
+                \equiv 76$, $76 \cdot 2^m \equiv 2^m$ ($m \ge 2$);&nbsp; $(10t+5)^n$ ($n \ge 2$) ends in $75$ iff $t, n$
+                both odd, else $25$.</li>
+            <li><strong>Binomial Truncation:</strong> $(km \pm a)^n \equiv (\pm a)^n \pmod m$;&nbsp; $(kp \pm 1)^n
+                \equiv (\pm 1)^n + (\pm 1)^{n-1}nkp \pmod{p^2}$.</li>
+            <li><strong>Common Factor Scaling:</strong> $\operatorname{Rem}(kA', kB') = k \cdot \operatorname{Rem}(A',
+                B')$;&nbsp; $ca \equiv cb \pmod m \iff a \equiv b \pmod{m/\gcd(c,m)}$.</li>
+            <li><strong>Classical Trio:</strong>
+                <ul>
+                    <li><em>FLT:</em> $a^{p-1} \equiv 1 \pmod p$ (prime $p$, $p \nmid a$).</li>
+                    <li><em>Euler:</em> $a^{\phi(n)} \equiv 1 \pmod n$ ($\gcd(a,n)=1$), where $\phi(n) = n \prod_{p \mid
+                        n}(1 - 1/p)$.</li>
+                    <li><em>Wilson:</em> $(p-1)! \equiv -1$,&nbsp; $(p-2)! \equiv 1$,&nbsp; $(p-3)! \equiv
+                        \dfrac{p-1}{2} \pmod p$ (odd prime $p$).</li>
+                </ul>
+            </li>
+            <li><strong>HCF/LCM Remainders:</strong> Same rem $r \to kL + r$;&nbsp; Constant diff $d \to kL - d$;&nbsp;
+                Known rems $r_i \to \gcd(a_i - r_i)$;&nbsp; Same unknown rem $\to \gcd(|a-b|, |b-c|, |c-a|)$.</li>
+            <li><strong>Base-$b$ Divisibility:</strong> $(b-1) \mid N \iff (b-1) \mid \sum d_i$;&nbsp; $(b+1) \mid N
+                \iff (b+1) \mid \sum (-1)^i d_i$.</li>
+            <li><strong>Surd &amp; Power Comparisons:</strong> $e \le a \lt b \implies a^b \gt b^a$;&nbsp;
+                $\sqrt{a}-\sqrt{b} = \dfrac{a-b}{\sqrt{a}+\sqrt{b}}$;&nbsp; $\sqrt{x+y \pm 2\sqrt{xy}} = |\sqrt{x} \pm
+                \sqrt{y}|$.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== WORKED EXAMPLES ==================== -->
+    <h2 class="section-heading">9. Graded Worked Examples (Level 1 &rarr; Level 2 &rarr; Level 3)</h2>
+
+    <!-- LEVEL 1 BANNER -->
+    <div class="level-banner l1">Level 1: Warmup &mdash; BEST Sample-Paper &amp; Foundation Calibration</div>
+
+    <!-- WORKED EXAMPLE 1 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1 &middot; Warmup</span>
+            <span class="badge badge-type">NAT (000&ndash;999)</span>
+            <strong>Worked Example 1: Composite Divisibility with Weight Optimization</strong>
+        </div>
+        <div class="ex-problem">
+            <p>A $7$-digit number $48A56B2$ is completely divisible by $72$, where $A$ and $B$ are single decimal digits
+                ($0 \le A, B \le 9$). Find the maximum possible value of $10A + B$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 (Coprime Factorization):</strong> Factor $72 = 8 \times 9$, noting that $\gcd(8, 9) = 1$.
+                Therefore, $72 \mid 48A56B2$ if and only if both $8$ and $9$ divide $48A56B2$.</p>
+            <p><strong>Step 2 (Apply Divisibility by $8$):</strong> The last three digits $6B2$ must be divisible by
+                $8$. Write $6B2 = 600 + 10B + 2$. Since $8 \mid 600$ ($600 = 8 \times 75$), we require:</p>
+            $$10B + 2 \equiv 0 \pmod 8 \implies 2B + 2 \equiv 0 \pmod 8 \implies B + 1 \equiv 0 \pmod 4$$
+            <p>For $B \in \{0, 1, \dots, 9\}$, the valid solutions are $B = 3$ ($632 = 8 \times 79$) and $B = 7$ ($672 =
+                8 \times 84$).</p>
+            <p><strong>Step 3 (Apply Divisibility by $9$):</strong> The digit sum must be a multiple of $9$:</p>
+            $$4 + 8 + A + 5 + 6 + B + 2 = 25 + A + B \equiv 0 \pmod 9$$
+            <p>Since $25 \equiv 7 \pmod 9$, we need $A + B \equiv 2 \pmod 9$. Because $0 \le A + B \le 18$, the only
+                possible sums are $A + B = 2$ or $A + B = 11$.</p>
+            <p><strong>Step 4 (Evaluate Both Cases &amp; Maximize $10A + B$):</strong></p>
+            <ul>
+                <li><em>Case 1 ($B = 3$):</em> $A + 3 \in \{2, 11\}$. Since $A \ge 0$, $A = 8$ is the unique digit. This
+                    yields $10A + B = 10(8) + 3 = 83$. (Check: $4885632 = 72 \times 67856$.)</li>
+                <li><em>Case 2 ($B = 7$):</em> $A + 7 \in \{2, 11\} \implies A = 4$. This yields $10A + B = 10(4) + 7 =
+                    47$. (Check: $4845672 = 72 \times 67301$.)</li>
+            </ul>
+            <p>Comparing both valid pairs, the maximum value of $10A + B$ is $\max(83, 47) = \mathbf{83}$.</p>
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 2 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1 &middot; Warmup</span>
+            <span class="badge badge-type">Single-Correct MCQ</span>
+            <strong>Worked Example 2: Mixed-Base Units Digit Cyclicity</strong>
+        </div>
+        <div class="ex-problem">
+            <p>What is the units digit of the positive integer $N = 17^{2026} + 23^{2027} - 14^{2028} + 19^{2029}$?</p>
+            <p>(A) $1$ &emsp;&emsp; (B) $3$ &emsp;&emsp; (C) $7$ &emsp;&emsp; (D) $9$</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 (Verify Sign of $N$):</strong> Because $23^{2027} \gt 14^{2028}$ (since $(23/14)^{2027}
+                \gg 14$), $N$ is strictly positive, so its units digit equals $N \bmod 10$.</p>
+            <p><strong>Step 2 (Reduce Each Term Modulo $10$):</strong></p>
+            <ul>
+                <li>$17^{2026} \equiv 7^{2026} \pmod{10}$. The units cycle of $7$ is $(7, 9, 3, 1)$ of period $4$. Since
+                    $2026 = 4(506) + 2$, we get $7^{2026} \equiv 7^2 = 49 \equiv 9 \pmod{10}$.</li>
+                <li>$23^{2027} \equiv 3^{2027} \pmod{10}$. The units cycle of $3$ is $(3, 9, 7, 1)$ of period $4$. Since
+                    $2027 = 4(506) + 3$, we get $3^{2027} \equiv 3^3 = 27 \equiv 7 \pmod{10}$.</li>
+                <li>$14^{2028} \equiv 4^{2028} \pmod{10}$. Even powers of $4$ always end in $6$, so $4^{2028} \equiv 6
+                    \pmod{10}$.</li>
+                <li>$19^{2029} \equiv 9^{2029} \pmod{10}$. Odd powers of $9$ always end in $9$, so $9^{2029} \equiv 9
+                    \pmod{10}$.</li>
+            </ul>
+            <p><strong>Step 3 (Combine Modulo $10$):</strong></p>
+            $$N \equiv 9 + 7 - 6 + 9 = 19 \equiv 9 \pmod{10}$$
+            <p>Hence the units digit of $N$ is $9$. <strong>Correct Option: (D)</strong>.</p>
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 3 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1 &middot; Warmup</span>
+            <span class="badge badge-type">NAT (000&ndash;999)</span>
+            <strong>Worked Example 3: Dual LCM Constant-Difference &amp; HCF Equal-Remainder Problem</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Let $X$ be the smallest positive integer that leaves remainders $7, 11,$ and $15$ when divided by $12,
+                16,$ and $20$ respectively. Let $Y$ be the largest positive integer that leaves the same remainder when
+                dividing $152, 242,$ and $377$. Find the value of $X + Y$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 (Find $X$ via LCM Constant-Difference Model):</strong> Check the gap between each divisor
+                and its remainder:</p>
+            $$12 - 7 = 5, \qquad 16 - 11 = 5, \qquad 20 - 15 = 5$$
+            <p>Since the difference is constant ($d = 5$), $X + 5$ is a common multiple of $12, 16,$ and $20$. Compute
+                the LCM via prime factorization: $12 = 2^2 \cdot 3$, $16 = 2^4$, $20 = 2^2 \cdot 5$:</p>
+            $$\operatorname{LCM}(12, 16, 20) = 2^4 \cdot 3 \cdot 5 = 240$$
+            <p>The smallest positive integer is $X = 240 - 5 = 235$. (Verification: $235 = 12(19)+7 = 16(14)+11 =
+                20(11)+15$.)</p>
+            <p><strong>Step 2 (Find $Y$ via HCF Unknown-Same-Remainder Model):</strong> Since $152, 242,$ and $377$
+                leave the same remainder $r$ upon division by $Y$, subtracting any two eliminates $r$, so $Y$ divides
+                every pairwise difference:</p>
+            $$242 - 152 = 90, \qquad 377 - 242 = 135, \qquad 377 - 152 = 225$$
+            <p>Thus $Y = \operatorname{HCF}(90, 135, 225)$. Since $90 = 2 \cdot 45$, $135 = 3 \cdot 45$, and $225 = 5
+                \cdot 45$ with $\gcd(2, 3, 5) = 1$, we get $Y = 45$. (Verification: $152 = 45(3)+17$, $242 = 45(5)+17$,
+                $377 = 45(8)+17$.)</p>
+            <p><strong>Step 3 (Final Answer):</strong></p>
+            $$X + Y = 235 + 45 = \mathbf{280}$$
+        </div>
+    </div>
+
+    <!-- LEVEL 2 BANNER -->
+    <div class="level-banner l2">Level 2: Exam-Real &mdash; Actual BEST &amp; NTSE Stage 2 Difficulty</div>
+
+    <!-- WORKED EXAMPLE 4 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2 &middot; Exam-Real</span>
+            <span class="badge badge-type">NAT (000&ndash;999)</span>
+            <strong>Worked Example 4: Second-Order Binomial Remainder Trick ($\bmod\, p^2$)</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Find the exact remainder when $N = 6^{83} + 8^{83}$ is divided by $49$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 (Anchor Around the Base Prime $7$):</strong> Observe that $49 = 7^2$, while $6 = 7 - 1$
+                and $8 = 7 + 1$. Express both powers using the Binomial Theorem:</p>
+            $$6^{83} = (7 - 1)^{83} = \sum_{k=0}^{83} \binom{83}{k} 7^k (-1)^{83-k}$$
+            $$8^{83} = (7 + 1)^{83} = \sum_{k=0}^{83} \binom{83}{k} 7^k (1)^{83-k}$$
+            <p><strong>Step 2 (Truncate Modulo $49 = 7^2$):</strong> Every term with $k \ge 2$ contains $7^2 = 49$ as a
+                factor and vanishes modulo $49$. Retaining only $k = 0$ and $k = 1$:</p>
+            $$6^{83} \equiv (-1)^{83} + \binom{83}{1} \cdot 7 \cdot (-1)^{82} = -1 + 83 \cdot 7 \pmod{49}$$
+            $$8^{83} \equiv 1^{83} + \binom{83}{1} \cdot 7 \cdot 1^{82} = 1 + 83 \cdot 7 \pmod{49}$$
+            <p><strong>Step 3 (Add &amp; Reduce Cleanly):</strong> Adding the two congruences cancels the $\pm 1$ terms
+                immediately:</p>
+            $$6^{83} + 8^{83} \equiv 2 \cdot 83 \cdot 7 = 166 \cdot 7 \pmod{49}$$
+            <p>To compute $166 \cdot 7 \pmod{49}$, reduce $166 \pmod 7$ (since $7 \cdot (7q + r) = 49q + 7r \equiv 7r
+                \pmod{49}$):</p>
+            $$166 = 7 \times 23 + 5 \implies 166 \cdot 7 = 49 \times 23 + 35 \equiv 35 \pmod{49}$$
+            <p><em>Independent Check via Euler&rsquo;s Theorem:</em> $\phi(49) = 42$, so $6^{84} \equiv 8^{84} \equiv 1
+                \pmod{49}$. Hence $6^{83} \equiv 6^{-1} \equiv -8 \equiv 41$ and $8^{83} \equiv 8^{-1} \equiv -6 \equiv
+                43 \pmod{49}$, giving $41 + 43 = 84 \equiv 35 \pmod{49}$. Exact match!</p>
+            <p><strong>Final Answer:</strong> $\mathbf{35}$.</p>
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 5 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2 &middot; Exam-Real</span>
+            <span class="badge badge-type">NAT (000&ndash;999)</span>
+            <strong>Worked Example 5: Unknown Base Equation &amp; Base-$b$ Divisibility Synthesis</strong>
+        </div>
+        <div class="ex-problem">
+            <p>In a positional number system of base $b$, the product $(12)_b \times (15)_b = (202)_b$ holds true. If
+                the $4$-digit number $(3A52)_b$ is divisible by $(b - 1)$, where $A$ is a valid digit in base $b$, find
+                the base-$10$ value of $(3A5)_b$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 (Determine the Base $b$):</strong> Since the digit $5$ appears in $(15)_b$, we must have
+                $b \gt 5$. Expand the equation into base-$10$ polynomials:</p>
+            $$(b + 2)(b + 5) = 2b^2 + 0 \cdot b + 2$$
+            $$b^2 + 7b + 10 = 2b^2 + 2 \implies b^2 - 7b - 8 = 0 \implies (b - 8)(b + 1) = 0$$
+            <p>Since $b \gt 5$, the unique valid base is $b = 8$. (Quick check: $(12)_8 = 10$, $(15)_8 = 13$, $10 \times
+                13 = 130 = 2(64) + 0(8) + 2 = (202)_8$.)</p>
+            <p><strong>Step 2 (Find Digit $A$ via Base-$b$ Divisibility by $b - 1$):</strong> In base $b = 8$, a number
+                is divisible by $b - 1 = 7$ if and only if the sum of its base-$8$ digits is divisible by $7$:</p>
+            $$3 + A + 5 + 2 = 10 + A \equiv 0 \pmod 7$$
+            <p>Because $A$ is a valid base-$8$ digit ($0 \le A \le 7$), we have $10 \le 10 + A \le 17$. The unique
+                multiple of $7$ in this interval is $14$, giving $A = 4$. (Check: $(3452)_8 = 3(512)+4(64)+5(8)+2 = 1834
+                = 7 \times 262$.)</p>
+            <p><strong>Step 3 (Convert $(3A5)_8$ to Base $10$):</strong> Substitute $A = 4$ and $b = 8$:</p>
+            $$(345)_8 = 3 \cdot 8^2 + 4 \cdot 8^1 + 5 \cdot 8^0 = 3(64) + 32 + 5 = 192 + 37 = \mathbf{229}$$
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 6 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2 &middot; Exam-Real</span>
+            <span class="badge badge-type">Single-Correct MCQ</span>
+            <strong>Worked Example 6: Surd Comparison with the Concavity Trap</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Arrange the following four real numbers in strictly ascending order:</p>
+            $$A = \sqrt{17} - \sqrt{15}, \qquad B = \sqrt{13} - \sqrt{11}, \qquad C = \sqrt{19} - \sqrt{17}, \qquad D =
+            \frac{1}{4}$$
+            <p>(A) $C \lt A \lt D \lt B$ &emsp; (B) $C \lt D \lt A \lt B$ &emsp; (C) $B \lt A \lt D \lt C$ &emsp; (D) $C
+                \lt D \lt B \lt A$</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 (Rationalize to Equalize Numerators):</strong> Notice that $A, B,$ and $C$ all have a
+                constant radicand difference of $2$. Multiply numerator and denominator by each conjugate, and rewrite
+                $D = \dfrac{1}{4} = \dfrac{2}{8}$ so all four fractions share the exact same numerator $2$:</p>
+            $$A = \frac{2}{\sqrt{17} + \sqrt{15}}, \qquad B = \frac{2}{\sqrt{13} + \sqrt{11}}, \qquad C =
+            \frac{2}{\sqrt{19} + \sqrt{17}}, \qquad D = \frac{2}{8}$$
+            <p><strong>Step 2 (Compare the Four Denominators):</strong> Denote the denominators by $d_A, d_B, d_C, d_D$.
+            </p>
+            <ul>
+                <li>Since $\sqrt{13} \lt \sqrt{16} = 4$ and $\sqrt{11} \lt 4$, we immediately have $d_B = \sqrt{13} +
+                    \sqrt{11} \lt \sqrt{17} + \sqrt{15} = d_A$.</li>
+                <li>Since $\sqrt{19} \gt 4$ and $\sqrt{17} \gt 4$, we immediately have $d_C = \sqrt{19} + \sqrt{17} \gt
+                    8 = d_D$.</li>
+                <li><strong>The Crucial Trap ($d_A$ vs $8$):</strong> Do NOT guess! Square both positive quantities and
+                    compare:
+                    $$d_A^2 = (\sqrt{17} + \sqrt{15})^2 = 17 + 15 + 2\sqrt{17 \times 15} = 32 + 2\sqrt{255}$$
+                    $$d_D^2 = 8^2 = 64 = 32 + 32 = 32 + 2\sqrt{256}$$
+                    Because $255 \lt 256$, we get $d_A^2 \lt d_D^2 \implies d_A \lt 8$! (Geometrically, $\sqrt{x}$ is
+                    strictly concave, so $\sqrt{16+1} + \sqrt{16-1} \lt 2\sqrt{16}$.)</li>
+            </ul>
+            <p><strong>Step 3 (Invert the Inequality):</strong> The denominators satisfy $d_B \lt d_A \lt d_D \lt d_C$.
+                Taking reciprocals and multiplying by $2 \gt 0$ reverses every inequality sign:</p>
+            $$C \lt D \lt A \lt B$$
+            <p><strong>Correct Option: (B)</strong>.</p>
+        </div>
+    </div>
+
+    <!-- LEVEL 3 BANNER -->
+    <div class="level-banner l3">Level 3: Rank-Booster &mdash; PRMO / IOQM-Lite &amp; Scholarship Top-1% Separators
+    </div>
+
+    <!-- WORKED EXAMPLE 7 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3 &middot; Rank-Booster</span>
+            <span class="badge badge-type">NAT (000&ndash;999)</span>
+            <strong>Worked Example 7: Last Two Digits of a Power Tower via Euler&rsquo;s Theorem &amp; CRT</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Find the last two digits of the power tower $N = 23^{23^{23}}$ (i.e., the remainder when $N$ is divided
+                by $100$).</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <p><strong>Step 1 (Apply Euler&rsquo;s Totient Theorem Modulo $100$):</strong> Since $\gcd(23, 100) = 1$,
+                compute $\phi(100)$:</p>
+            $$\phi(100) = 100 \left(1 - \frac{1}{2}\right)\left(1 - \frac{1}{5}\right) = 40$$
+            <p>By Euler&rsquo;s Theorem, $23^{40} \equiv 1 \pmod{100}$. Thus we need to reduce the exponent $E =
+                23^{23}$ modulo $40$.</p>
+            <p><strong>Step 2 (Reduce $E = 23^{23} \pmod{40}$):</strong> Compute successive powers of $23$ modulo $40$:
+            </p>
+            $$23^2 = 529 = 13(40) + 9 \equiv 9 \pmod{40} \implies 23^4 \equiv 9^2 = 81 \equiv 1 \pmod{40}$$
+            <p>Since $23 = 4(5) + 3$, we have:</p>
+            $$23^{23} = (23^4)^5 \cdot 23^3 \equiv 1^5 \cdot (9 \cdot 23) = 207 = 5(40) + 7 \equiv 7 \pmod{40}$$
+            <p><strong>Step 3 (Evaluate $23^7 \pmod{100}$):</strong> By Step 1 and Step 2, $23^{23^{23}} \equiv 23^7
+                \pmod{100}$. Compute via modular squaring:</p>
+            $$23^2 = 529 \equiv 29 \pmod{100}$$
+            $$23^3 \equiv 29 \times 23 = 667 \equiv 67 \pmod{100}$$
+            $$23^4 \equiv 29^2 = 841 \equiv 41 \pmod{100}$$
+            $$23^7 = 23^4 \cdot 23^3 \equiv 41 \times 67 = 2747 \equiv \mathbf{47} \pmod{100}$$
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Exam Shortcut (Period-20 + CRT Mod $25$ &amp; Mod $4$)</span>
+                <p>1. Every base coprime to $10$ satisfies $a^{20} \equiv 1 \pmod{100}$. Reduce the exponent mod $20$:
+                    $23^{23} \equiv 3^{23} \pmod{20}$. Since $3^4 = 81 \equiv 1 \pmod{20}$, $3^{23} \equiv 3^3 = 27
+                    \equiv 7 \pmod{20}$.<br>
+                    2. Evaluate $23^7$ separately modulo $25$ and modulo $4$:
+                    &bull; $\bmod\, 25$: $23^7 \equiv (-2)^7 = -128 \equiv -3 \equiv 22 \pmod{25} \implies$ candidates
+                    are $\{22, 47, 72, 97\}$.<br>
+                    &bull; $\bmod\, 4$: $23^7 \equiv (-1)^7 = -1 \equiv 3 \pmod 4$. Among $\{22, 47, 72, 97\}$, only
+                    <strong>$47$</strong> leaves remainder $3$ mod $4$!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 8 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3 &middot; Rank-Booster</span>
+            <span class="badge badge-type">NAT (000&ndash;999)</span>
+            <strong>Worked Example 8: Grand Synthesis &mdash; Wilson&rsquo;s Theorem + FLT + CRT ($\bmod\,
+                899$)</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Find the exact remainder when $N = 28! + 2^{2026}$ is divided by $899$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <p><strong>Step 1 (Factor the Modulus):</strong> Recognize the difference of squares $899 = 900 - 1 = 30^2 -
+                1 = 29 \times 31$. Both $29$ and $31$ are distinct primes, so $\gcd(29, 31) = 1$, and we can split via
+                CRT.</p>
+            <p><strong>Step 2 (Evaluate $N \pmod{29}$):</strong></p>
+            <ul>
+                <li>By <strong>Wilson&rsquo;s Theorem</strong> for prime $p = 29$: $28! = (29-1)! \equiv -1 \pmod{29}$.
+                </li>
+                <li>By <strong>Fermat&rsquo;s Little Theorem</strong>, since $\gcd(2, 29) = 1$: $2^{28} \equiv 1
+                    \pmod{29}$. Dividing $2026$ by $28$ gives $2026 = 28(72) + 10$. Thus:
+                    $$2^{2026} \equiv 2^{10} = (2^5)^2 = 32^2 \equiv 3^2 = 9 \pmod{29}$$</li>
+            </ul>
+            <p>Combining both terms: $N \equiv -1 + 9 = 8 \pmod{29}$.</p>
+            <p><strong>Step 3 (Evaluate $N \pmod{31}$):</strong></p>
+            <ul>
+                <li>By <strong>Wilson&rsquo;s Theorem</strong> for prime $p = 31$: $30! \equiv -1 \pmod{31}$. Expand
+                    $30! = 30 \cdot 29 \cdot 28!$:
+                    $$(-1)(-2) \cdot 28! \equiv -1 \equiv 30 \pmod{31} \implies 2 \cdot 28! \equiv 30 \pmod{31} \implies
+                    28! \equiv 15 \pmod{31}$$</li>
+                <li>For $2^{2026} \pmod{31}$, notice $2^5 = 32 \equiv 1 \pmod{31}$! Since $2026 = 5(405) + 1$:
+                    $$2^{2026} = (2^5)^{405} \cdot 2^1 \equiv 1^{405} \cdot 2 = 2 \pmod{31}$$</li>
+            </ul>
+            <p>Combining both terms: $N \equiv 15 + 2 = 17 \pmod{31}$.</p>
+            <p><strong>Step 4 (Stitch Together via CRT Successive Substitution):</strong> From $N \equiv 17 \pmod{31}$,
+                write $N = 31k + 17$ and substitute into $N \equiv 8 \pmod{29}$:</p>
+            $$31k + 17 \equiv 8 \pmod{29} \implies 2k \equiv -9 \equiv 20 \pmod{29} \implies k \equiv 10 \pmod{29}$$
+            <p>Setting $k = 10$ yields:</p>
+            $$N \equiv 31(10) + 17 = \mathbf{327} \pmod{899}$$
+            <p><em>Verification:</em> $327 = 29(11) + 8$ and $327 = 31(10) + 17$. Both congruences hold identically.</p>
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Exam Shortcut (Twin-Prime CRT Formula)</span>
+                <p>1. Instantly spot $899 = 30^2 - 1 = 29 \times 31$ and $2^5 = 32$ (which gives $3 \bmod 29$ and $1
+                    \bmod 31$ simultaneously!).<br>
+                    2. Use Wilson directly: $28! \equiv -1 \pmod{29}$ and $(p-3)! \equiv \frac{31-1}{2} = 15 \pmod{31}$,
+                    giving $r_1 = 8 \pmod{29}$ and $r_2 = 17 \pmod{31}$.<br>
+                    3. Whenever two moduli differ by $2$ ($m_2 = m_1 + 2$, odd), $k = \frac{r_1 - r_2}{2} \bmod m_1 =
+                    \frac{8 - 17 + 29}{2} = 10 \implies N = 31(10) + 17 = \mathbf{327}$.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 9 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3 &middot; Rank-Booster</span>
+            <span class="badge badge-type">NAT (000&ndash;999)</span>
+            <strong>Worked Example 9: Non-Coprime Bases &amp; Common-Factor Scaling ($\bmod\, 504$)</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Find the exact remainder when $N = 12^{100} + 18^{100}$ is divided by $504$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation (Common-Factor Cancellation):</strong></p>
+            <p><strong>Step 1 (Detect Non-Coprimality &amp; Factor the Divisor):</strong> Prime-factorize $504 = 8
+                \times 9 \times 7 = 72 \times 7$. Both $12 = 2^2 \cdot 3$ and $18 = 2 \cdot 3^2$ share factors of $2$
+                and $3$ with $504$, so Euler&rsquo;s Theorem <em>cannot</em> be applied directly modulo $504$.</p>
+            <p><strong>Step 2 (Extract the Common Factor $72$):</strong> Note that $12^3 = 1728 = 72 \times 24$ and
+                $18^3 = 5832 = 72 \times 81$. Factor $72$ out of both numerator and denominator:</p>
+            $$\operatorname{Rem}\!\left(\frac{12^{100} + 18^{100}}{504}\right) = \operatorname{Rem}\!\left(\frac{72(24
+            \cdot 12^{97} + 81 \cdot 18^{97})}{72 \cdot 7}\right) = 72 \cdot \operatorname{Rem}\!\left(\frac{24 \cdot
+            12^{97} + 81 \cdot 18^{97}}{7}\right)$$
+            <p><strong>Step 3 (Apply Fermat&rsquo;s Little Theorem Modulo $7$):</strong> Since $7$ is prime and
+                $\gcd(12, 7) = \gcd(18, 7) = 1$, FLT gives $12^6 \equiv 1 \pmod 7$ and $18^6 \equiv 1 \pmod 7$. Writing
+                $97 = 6(16) + 1$:</p>
+            $$12^{97} \equiv 12^1 \equiv 5 \pmod 7, \qquad 18^{97} \equiv 18^1 \equiv 4 \pmod 7$$
+            <p>Also reduce the coefficients modulo $7$: $24 \equiv 3 \pmod 7$ and $81 = 7(11) + 4 \equiv 4 \pmod 7$.
+                Therefore:</p>
+            $$24 \cdot 12^{97} + 81 \cdot 18^{97} \equiv 3(5) + 4(4) = 15 + 16 = 31 \equiv 3 \pmod 7$$
+            <p><strong>Step 4 (Restore the Cancelled Factor $72$):</strong></p>
+            $$\operatorname{Rem}\!\left(\frac{12^{100} + 18^{100}}{504}\right) = 72 \times 3 = \mathbf{216}$$
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Exam Shortcut (Zero-Remainder CRT Split)</span>
+                <p>Don&rsquo;t even factor out $12^3$ and $18^3$! Split $504 = 72 \times 7$ ($\gcd(72,7)=1$):<br>
+                    1. $\bmod\, 72$: Clearly $72 = 2^3 \cdot 3^2$ divides both $12^{100}$ and $18^{100}$, so $N \equiv 0
+                    \pmod{72} \implies N = 72k$.<br>
+                    2. $\bmod\, 7$: Since $100 \equiv 4 \pmod 6$, $N \equiv (-2)^4 + 4^4 = 16 + 256 \equiv 2 + 4 = 6
+                    \pmod 7$.<br>
+                    3. Solve $72k \equiv 6 \pmod 7 \implies 2k \equiv 6 \pmod 7 \implies k = 3 \implies N = 72 \times 3
+                    = \mathbf{216}$!</p>
+            </div>
+        </div>
+    </div>
+
+</article>

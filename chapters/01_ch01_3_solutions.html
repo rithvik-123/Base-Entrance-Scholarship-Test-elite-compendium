@@ -1,0 +1,849 @@
+<article data-volume="Volume 1: Quantitative Aptitude &amp; Logical Reasoning (Paper 1)"
+    data-title="Chapter 1: Number Theory &amp; Modular Arithmetic — Full Solutions &amp; Error Forensics">
+
+    <!-- ==================== CHAPTER HERO ==================== -->
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 1 &middot; Quantitative Aptitude &amp; Logical Reasoning (Paper 1) &middot;
+            Chapter 1 &middot; Part 3 of 3</div>
+        <h1>Complete Step-by-Step Solutions &amp; Error Forensics</h1>
+        <p>Zero-skip, first-principles verified solutions for all 30 questions in the Chapter 1 Practice Arena, paired
+            with 30-second Rank-Booster shortcuts and forensic dissections of the five deadliest BEST Paper 1 traps.</p>
+        <div class="tag-row">
+            <span class="meta-pill">30 Verified Solutions (Q1&ndash;Q30)</span>
+            <span class="meta-pill">100% Answer Key Alignment</span>
+            <span class="meta-pill">Zero Algebraic Hand-Waving</span>
+            <span class="meta-pill">5 Trap &amp; Error Forensics Cards</span>
+        </div>
+    </header>
+
+    <!-- ==================== LEVEL 1 SOLUTIONS ==================== -->
+    <div class="level-banner l1">Level 1 Solutions (Q1&ndash;Q9) &mdash; Warmup &amp; Foundation Calibration</div>
+
+    <!-- S1 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q1</span>
+            <span class="badge badge-l1">Level 1 &middot; Warmup</span>
+            <span class="badge badge-type">NAT &middot; Answer: 74</span>
+        </div>
+        <p><strong>Step 1 (Coprime Factorization):</strong> Factor $88 = 8 \times 11$. Since $\gcd(8, 11) = 1$, the
+            $8$-digit integer $53A742B8$ is divisible by $88$ if and only if it is divisible by both $8$ and $11$.</p>
+        <p><strong>Step 2 (Divisibility by $8$):</strong> The last three digits $\overline{2B8}$ must be divisible by
+            $8$. Expand $\overline{2B8} = 200 + 10B + 8 = 208 + 10B$. Since $208 = 8 \times 26$, we require:</p>
+        $$10B \equiv 0 \pmod 8 \implies 5B \equiv 0 \pmod 4 \implies B \equiv 0 \pmod 4$$
+        <p>For a single digit $B \in \{0, 1, \dots, 9\}$, the valid values are $B \in \{0, 4, 8\}$.</p>
+        <p><strong>Step 3 (Divisibility by $11$):</strong> Compute the alternating digit sum starting positively at the
+            units digit $d_0 = 8$:</p>
+        $$(8 + 2 + 7 + 3) - (B + 4 + A + 5) = 20 - (9 + A + B) = 11 - (A + B)$$
+        <p>For $11 \mid (11 - A - B)$, we need $A + B \equiv 0 \pmod{11}$. Because $0 \le A + B \le 18$, either $A + B =
+            0$ or $A + B = 11$.</p>
+        <p><strong>Step 4 (Evaluate All Valid Pairs &amp; Maximize $10A + B$):</strong></p>
+        <ul>
+            <li>$B = 0 \implies A = 0$ ($A + B = 0$, as $A = 11$ is not a digit) $\implies 10A + B = 0$.</li>
+            <li>$B = 4 \implies A = 7$ ($7 + 4 = 11$) $\implies 10A + B = 10(7) + 4 = 74$.</li>
+            <li>$B = 8 \implies A = 3$ ($3 + 8 = 11$) $\implies 10A + B = 10(3) + 8 = 38$.</li>
+        </ul>
+        <p>Verification for $(A, B) = (7, 4)$: $53774248 = 88 \times 611071$. Thus the maximum value of $10A + B$ is
+            <strong>$74$</strong>.</p>
+    </div>
+
+    <!-- S2 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q2</span>
+            <span class="badge badge-l1">Level 1 &middot; Warmup</span>
+            <span class="badge badge-type">MCQ &middot; Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 (Apply the Osculator of $19$):</strong> Since $10(+2) = 20 \equiv 1 \pmod{19}$, the osculator
+            for $19$ is $k = +2$ (reduction rule: $10q + u \to q + 2u$).</p>
+        <p><strong>Step 2 (Successive Reductions):</strong></p>
+        <ul>
+            <li>First step on $\overline{43A71}$: drop units digit $1$ and add $2(1) = 2$ to $\overline{43A7}$ to get
+                $\overline{43A9}$.</li>
+            <li>Second step on $\overline{43A9}$: drop units digit $9$ and add $2(9) = 18$ to $\overline{43A} = 430 +
+                A$:
+                $$(430 + A) + 18 = 448 + A$$</li>
+        </ul>
+        <p><strong>Step 3 (Solve Modulo $19$):</strong> Divide $448$ by $19$: $19 \times 23 = 437$, so $448 = 19(23) +
+            11 \equiv 11 \pmod{19}$. Therefore:</p>
+        $$11 + A \equiv 0 \pmod{19} \implies A \equiv 8 \pmod{19}$$
+        <p>Since $0 \le A \le 9$, the unique digit is $A = 8$. Verification: $43871 = 19 \times 2309$. <strong>Correct
+                Option: (D)</strong>.</p>
+    </div>
+
+    <!-- S3 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q3</span>
+            <span class="badge badge-l1">Level 1 &middot; Warmup</span>
+            <span class="badge badge-type">NAT &middot; Answer: 22</span>
+        </div>
+        <p><strong>Step 1 (Determine Each Units Digit via Period-$4$ Cyclicity):</strong> Every base $2, 3, 7, 8$ has
+            units-digit cycle length $4$, so reduce each exponent modulo $4$ (using $4$ when the remainder is $0$):</p>
+        <ul>
+            <li>$7^{77}$: $77 = 4(19) + 1 \implies 7^{77} \equiv 7^1 = 7 \pmod{10} \implies u_1 = 7$.</li>
+            <li>$8^{88}$: $88 = 4(22) + 0 \implies 8^{88} \equiv 8^4 = 4096 \equiv 6 \pmod{10} \implies u_2 = 6$.</li>
+            <li>$3^{99}$: $99 = 4(24) + 3 \implies 3^{99} \equiv 3^3 = 27 \equiv 7 \pmod{10} \implies u_3 = 7$.</li>
+            <li>$2^{101}$: $101 = 4(25) + 1 \implies 2^{101} \equiv 2^1 = 2 \pmod{10} \implies u_4 = 2$.</li>
+        </ul>
+        <p><strong>Step 2 (Sum the Digits):</strong></p>
+        $$u_1 + u_2 + u_3 + u_4 = 7 + 6 + 7 + 2 = \mathbf{22}$$
+    </div>
+
+    <!-- S4 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q4</span>
+            <span class="badge badge-l1">Level 1 &middot; Warmup</span>
+            <span class="badge badge-type">MCQ &middot; Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 (Apply Fermat&rsquo;s Little Theorem Modulo $13$):</strong> Since $13$ is prime and $\gcd(3,
+            13) = \gcd(5, 13) = 1$, FLT gives:</p>
+        $$3^{12} \equiv 1 \pmod{13}, \qquad 5^{12} \equiv 1 \pmod{13}$$
+        <p><strong>Step 2 (Reduce the Exponent $50$ Modulo $12$):</strong> Writing $50 = 12(4) + 2$, we obtain:</p>
+        $$3^{50} = (3^{12})^4 \cdot 3^2 \equiv 1^4 \cdot 9 = 9 \pmod{13}$$
+        $$5^{50} = (5^{12})^4 \cdot 5^2 \equiv 1^4 \cdot 25 = 25 \equiv 12 \equiv -1 \pmod{13}$$
+        <p><strong>Step 3 (Combine Residues):</strong></p>
+        $$3^{50} + 5^{50} \equiv 9 + (-1) = 8 \pmod{13}$$
+        <p><strong>Correct Option: (B)</strong>.</p>
+    </div>
+
+    <!-- S5 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q5</span>
+            <span class="badge badge-l1">Level 1 &middot; Warmup</span>
+            <span class="badge badge-type">NAT &middot; Answer: 184</span>
+        </div>
+        <p><strong>Step 1 (Set Up the LCM Same-Remainder Model):</strong> Any integer $N$ leaving remainder $4$ when
+            divided by $6, 9,$ and $15$ satisfies:</p>
+        $$N = k \cdot \operatorname{LCM}(6, 9, 15) + 4$$
+        <p><strong>Step 2 (Compute the LCM):</strong> Prime-factorize $6 = 2 \cdot 3$, $9 = 3^2$, and $15 = 3 \cdot 5$:
+        </p>
+        $$\operatorname{LCM}(6, 9, 15) = 2 \cdot 3^2 \cdot 5 = 90$$
+        <p>Thus $N = 90k + 4$.</p>
+        <p><strong>Step 3 (Enforce the $3$-Digit Constraint):</strong></p>
+        <ul>
+            <li>$k = 1 \implies N = 90(1) + 4 = 94$ (only $2$ digits &mdash; rejected).</li>
+            <li>$k = 2 \implies N = 90(2) + 4 = 184$ (smallest $3$-digit integer).</li>
+        </ul>
+        <p>Verification: $184 = 6(30)+4 = 9(20)+4 = 15(12)+4$. Final answer: <strong>$184$</strong>.</p>
+    </div>
+
+    <!-- S6 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q6</span>
+            <span class="badge badge-l1">Level 1 &middot; Warmup</span>
+            <span class="badge badge-type">NAT &middot; Answer: 36</span>
+        </div>
+        <p><strong>Step 1 (Apply HCF Known-Remainder Model):</strong> Since $D$ divides $329, 475,$ and $622$ leaving
+            remainders $5, 7,$ and $10$ respectively, $D$ must divide each adjusted dividend exactly:</p>
+        $$329 - 5 = 324, \qquad 475 - 7 = 468, \qquad 622 - 10 = 612$$
+        <p><strong>Step 2 (Compute $\operatorname{HCF}(324, 468, 612)$):</strong> Prime-factorize each difference:</p>
+        $$324 = 2^2 \cdot 3^4 = 36 \times 9, \qquad 468 = 2^2 \cdot 3^2 \cdot 13 = 36 \times 13, \qquad 612 = 2^2 \cdot
+        3^2 \cdot 17 = 36 \times 17$$
+        <p>Because $\gcd(9, 13, 17) = 1$, the greatest common divisor is $D = 2^2 \cdot 3^2 = 36$.</p>
+        <p><strong>Step 3 (Remainder Feasibility Check):</strong> Verify $D = 36 \gt \max(5, 7, 10) = 10$. Valid! Final
+            answer: <strong>$36$</strong>.</p>
+    </div>
+
+    <!-- S7 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q7</span>
+            <span class="badge badge-l1">Level 1 &middot; Warmup</span>
+            <span class="badge badge-type">MCQ &middot; Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 (Convert Base $5$ to Base $10$):</strong></p>
+        $$(342)_5 = 3 \cdot 5^2 + 4 \cdot 5^1 + 2 \cdot 5^0 = 3(25) + 20 + 2 = 97_{10}$$
+        <p><strong>Step 2 (Convert Base $10$ to Base $8$ via Repeated Division):</strong></p>
+        <ul>
+            <li>$97 \div 8 = 12$ with remainder $1$ (units digit)</li>
+            <li>$12 \div 8 = 1$ with remainder $4$ (eights digit)</li>
+            <li>$1 \div 8 = 0$ with remainder $1$ (sixty-fours digit)</li>
+        </ul>
+        <p>Reading remainders from bottom to top yields $(141)_8$. Verification: $1(64) + 4(8) + 1 = 97$.
+            <strong>Correct Option: (B)</strong>.</p>
+    </div>
+
+    <!-- S8 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q8</span>
+            <span class="badge badge-l1">Level 1 &middot; Warmup</span>
+            <span class="badge badge-type">MCQ &middot; Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 (Equalize Radical Orders):</strong> The radical indices are $6, 3, 4,$ and $12$, with
+            $\operatorname{LCM}(6, 3, 4, 12) = 12$. Because all four numbers are positive, raising each to the $12$-th
+            power preserves their strict ordering:</p>
+        <ul>
+            <li>$(\sqrt[6]{28})^{12} = 28^{12/6} = 28^2 = 784$</li>
+            <li>$(\sqrt[3]{5})^{12} = 5^{12/3} = 5^4 = 625$</li>
+            <li>$(\sqrt[4]{9})^{12} = 9^{12/4} = 9^3 = 729$</li>
+            <li>$(\sqrt[12]{750})^{12} = 750^1 = 750$</li>
+        </ul>
+        <p><strong>Step 2 (Compare Integer Values):</strong> Since $784 \gt 750 \gt 729 \gt 625$, the largest number is
+            $\sqrt[6]{28}$. <strong>Correct Option: (A)</strong>.</p>
+    </div>
+
+    <!-- S9 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q9</span>
+            <span class="badge badge-l1">Level 1 &middot; Warmup</span>
+            <span class="badge badge-type">NAT &middot; Answer: 86</span>
+        </div>
+        <p><strong>Step 1 (Find $x = 31^{47} \bmod 100$):</strong> Using the Binomial rule for bases ending in $1$,
+            $(10t + 1)^n \equiv 10(tn \bmod 10) + 1 \pmod{100}$:</p>
+        $$31^{47} = (30 + 1)^{47} \equiv 1 + 47(30) = 1 + 1410 \equiv 11 \pmod{100}$$
+        <p>(Equivalently, tens digit $= (3 \times 7) \bmod 10 = 1$, units digit $= 1$.) Thus $x = 11$.</p>
+        <p><strong>Step 2 (Find $y = 75^{89} \bmod 100$):</strong> For bases ending in $5$ with exponent $n \ge 2$,
+            $(10t + 5)^n$ ends in $75$ if and only if both $t$ and $n$ are odd. Here $t = 7$ (odd) and $n = 89$ (odd),
+            so $y = 75$. (Direct check: $75^2 = 5625 \equiv 25 \implies 75^{89} = (75^2)^{44} \cdot 75 \equiv 25 \cdot
+            75 = 1875 \equiv 75 \pmod{100}$.)
+        </p>
+        <p><strong>Step 3 (Sum):</strong> $x + y = 11 + 75 = \mathbf{86}$.</p>
+    </div>
+
+    <!-- ==================== LEVEL 2 SOLUTIONS ==================== -->
+    <div class="level-banner l2">Level 2 Solutions (Q10&ndash;Q21) &mdash; Exam-Real BEST &amp; NTSE Stage 2</div>
+
+    <!-- S10 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q10</span>
+            <span class="badge badge-l2">Level 2 &middot; Exam-Real</span>
+            <span class="badge badge-type">NAT &middot; Answer: 117</span>
+        </div>
+        <p><strong>Step 1 (Merge Divisors via $1001$):</strong> Since $7, 11,$ and $13$ are pairwise coprime primes,
+            simultaneous divisibility by $7, 11,$ and $13$ is equivalent to divisibility by $7 \times 11 \times 13 =
+            1001$.</p>
+        <p><strong>Step 2 (Apply the $3$-Digit Alternating Block Rule):</strong> Partition $N = 413A7225B$ into
+            $3$-digit blocks from right to left: $B_0 = \overline{25B}$, $B_1 = \overline{A72}$, and $B_2 = 413$. Then:
+        </p>
+        $$N \equiv B_0 - B_1 + B_2 = (250 + B) - (100A + 72) + 413 = 591 + B - 100A \pmod{1001}$$
+        <p><strong>Step 3 (Bound the Expression):</strong> Since $0 \le A, B \le 9$, we have:</p>
+        $$591 + 0 - 900 = -309 \le 591 + B - 100A \le 591 + 9 - 0 = 600$$
+        <p>The only multiple of $1001$ inside $[-309, 600]$ is $0$. Therefore:</p>
+        $$591 + B - 100A = 0 \implies 100A = 591 + B$$
+        <p>For $591 + B$ to be a multiple of $100$, its units digit must be $0$, forcing $B = 9$. Then $100A = 600
+            \implies A = 6$.</p>
+        <p><strong>Step 4 (Verification &amp; Final Calculation):</strong> $413672259 = 1001 \times 413259$. Hence:</p>
+        $$A^2 + B^2 = 6^2 + 9^2 = 36 + 81 = \mathbf{117}$$
+    </div>
+
+    <!-- S11 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q11</span>
+            <span class="badge badge-l2">Level 2 &middot; Exam-Real</span>
+            <span class="badge badge-type">NAT &middot; Answer: 20</span>
+        </div>
+        <p><strong>Step 1 (Evaluate $2^{2026} \pmod{100}$):</strong> Recall $2^{10 \cdot \text{even}} \equiv 76
+            \pmod{100}$ and $76 \cdot 2^m \equiv 2^m \pmod{100}$ for all $m \ge 2$. Write $2026 = 10(202) + 6$:</p>
+        $$2^{2026} = 2^{10 \times 202} \cdot 2^6 \equiv 76 \cdot 2^6 \equiv 2^6 = 64 \pmod{100}$$
+        <p><em>Independent CRT check:</em> $2^{2026} \equiv 0 \pmod 4$, and modulo $25$ (where $\phi(25) = 20$),
+            $2^{2026} \equiv 2^6 = 64 \equiv 14 \pmod{25}$. The unique residue mod $100$ matching both is $64$.</p>
+        <p><strong>Step 2 (Evaluate $6^{2026} \pmod{100}$):</strong> Note that $6^5 = 7776 \equiv 76 \pmod{100}$, and
+            because $76^2 = 5776 \equiv 76 \pmod{100}$, every positive power of $76$ ends in $76$. Since $2025 = 5
+            \times 405$:</p>
+        $$6^{2026} = (6^5)^{405} \cdot 6 \equiv 76^{405} \cdot 6 \equiv 76 \cdot 6 = 456 \equiv 56 \pmod{100}$$
+        <p>(Alternatively, $6^{2026} = 2^{2026} \cdot 3^{2026} \equiv 64 \cdot 3^6 = 64 \cdot 729 \equiv 64 \cdot 29 =
+            1856 \equiv 56 \pmod{100}$.)
+        </p>
+        <p><strong>Step 3 (Add Modulo $100$):</strong></p>
+        $$N = 2^{2026} + 6^{2026} \equiv 64 + 56 = 120 \equiv \mathbf{20} \pmod{100}$$
+    </div>
+
+    <!-- S12 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q12</span>
+            <span class="badge badge-l2">Level 2 &middot; Exam-Real</span>
+            <span class="badge badge-type">MCQ &middot; Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 (Apply Second-Order Binomial Expansion Modulo $11^2 = 121$):</strong> Rewrite $10 = 11 - 1$
+            and $12 = 11 + 1$. Every term with $11^k$ ($k \ge 2$) is divisible by $121$, so keep only $k = 0$ and $k =
+            1$:</p>
+        $$10^{57} = (11 - 1)^{57} \equiv (-1)^{57} + \binom{57}{1} \cdot 11 \cdot (-1)^{56} = -1 + 57 \cdot 11
+        \pmod{121}$$
+        $$12^{57} = (11 + 1)^{57} \equiv 1^{57} + \binom{57}{1} \cdot 11 \cdot 1^{56} = 1 + 57 \cdot 11 \pmod{121}$$
+        <p><strong>Step 2 (Add &amp; Reduce Cleanly):</strong></p>
+        $$10^{57} + 12^{57} \equiv (-1 + 1) + 2(57)(11) = 114 \cdot 11 \pmod{121}$$
+        <p>Since $114 = 11(10) + 4$, multiplying by $11$ gives $114 \cdot 11 = 121(10) + 44 \equiv 44 \pmod{121}$.
+            <strong>Correct Option: (C)</strong>.</p>
+    </div>
+
+    <!-- S13 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q13</span>
+            <span class="badge badge-l2">Level 2 &middot; Exam-Real</span>
+            <span class="badge badge-type">NAT &middot; Answer: 12</span>
+        </div>
+        <p><strong>Step 1 (Reduce Exponent via Fermat&rsquo;s Little Theorem Modulo $19$):</strong> Since $19$ is prime,
+            $a^{18} \equiv 1 \pmod{19}$ for $a = 5, 7$. Divide $2026$ by $18$: $18 \times 112 = 2016$, so $2026 =
+            18(112) + 10$. Thus:</p>
+        $$5^{2026} + 7^{2026} \equiv 5^{10} + 7^{10} \pmod{19}$$
+        <p><strong>Step 2 (Evaluate $5^{10} \pmod{19}$):</strong> Use successive squaring:</p>
+        $$5^2 = 25 \equiv 6, \qquad 5^4 \equiv 36 \equiv -2, \qquad 5^8 \equiv (-2)^2 = 4 \pmod{19}$$
+        $$5^{10} = 5^8 \cdot 5^2 \equiv 4 \cdot 6 = 24 \equiv 5 \pmod{19}$$
+        <p>(Notice this reveals $5^9 \equiv 1 \pmod{19}$!)</p>
+        <p><strong>Step 3 (Evaluate $7^{10} \pmod{19}$):</strong> Notice that $7^2 = 49 \equiv 11 \pmod{19}$ and $7^3
+            \equiv 11 \cdot 7 = 77 = 19(4) + 1 \equiv 1 \pmod{19}$. Therefore:</p>
+        $$7^{10} = (7^3)^3 \cdot 7 \equiv 1^3 \cdot 7 = 7 \pmod{19}$$
+        <p><strong>Step 4 (Combine):</strong> $5^{2026} + 7^{2026} \equiv 5 + 7 = \mathbf{12} \pmod{19}$.</p>
+    </div>
+
+    <!-- S14 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q14</span>
+            <span class="badge badge-l2">Level 2 &middot; Exam-Real</span>
+            <span class="badge badge-type">NAT &middot; Answer: 13</span>
+        </div>
+        <p><strong>Step 1 (Split $45 = 9 \times 5$ via CRT):</strong> Since $\gcd(9, 5) = 1$, evaluate $7^{2027}$ modulo
+            $9$ and modulo $5$ independently.</p>
+        <ul>
+            <li><strong>Modulo $9$:</strong> $7 \equiv -2 \pmod 9$, so $7^3 \equiv (-2)^3 = -8 \equiv 1 \pmod 9$. Since
+                $2027 = 3(675) + 2$:
+                $$7^{2027} = (7^3)^{675} \cdot 7^2 \equiv 1 \cdot 49 \equiv 4 \pmod 9$$</li>
+            <li><strong>Modulo $5$:</strong> $7 \equiv 2 \pmod 5$, and by FLT $2^4 \equiv 1 \pmod 5$. Since $2027 =
+                4(506) + 3$:
+                $$7^{2027} \equiv 2^3 = 8 \equiv 3 \pmod 5$$</li>
+        </ul>
+        <p><strong>Step 2 (Stitch via Successive Substitution):</strong> From $N \equiv 4 \pmod 9$, write $N = 9k + 4$
+            and substitute into $N \equiv 3 \pmod 5$:</p>
+        $$9k + 4 \equiv 3 \pmod 5 \implies 4k \equiv -1 \equiv 4 \pmod 5 \implies k \equiv 1 \pmod 5$$
+        <p>Setting $k = 1$ gives $N = 9(1) + 4 = \mathbf{13}$.</p>
+        <p><em>Alternative Verification via Euler&rsquo;s Theorem:</em> $\phi(45) = 24$, and in fact $7^{12} = (7^3)^4
+            \equiv 1 \pmod 9$ and $(7^4)^3 \equiv 1 \pmod 5 \implies 7^{12} \equiv 1 \pmod{45}$. Since $2027 = 12(168) +
+            11$, $7^{2027} \equiv 7^{11} \equiv 7^{-1} \pmod{45}$. Because $7 \times 13 = 91 = 2(45) + 1 \equiv 1
+            \pmod{45}$, we confirm $7^{-1} \equiv 13 \pmod{45}$.</p>
+    </div>
+
+    <!-- S15 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q15</span>
+            <span class="badge badge-l2">Level 2 &middot; Exam-Real</span>
+            <span class="badge badge-type">NAT &middot; Answer: 17</span>
+        </div>
+        <p><strong>Step 1 (Apply Wilson&rsquo;s Theorem &amp; Corollaries for Prime $p = 37$):</strong> Because $37$ is
+            an odd prime:</p>
+        <ul>
+            <li>$36! = (37 - 1)! \equiv -1 \pmod{37}$ (Wilson&rsquo;s Theorem).</li>
+            <li>$35! = (37 - 2)! \equiv 1 \pmod{37}$ (from $36 \cdot 35! \equiv (-1)35! \equiv -1 \pmod{37}$).</li>
+            <li>$34! = (37 - 3)! \equiv \dfrac{37 - 1}{2} = 18 \pmod{37}$ (from $36 \cdot 35 \cdot 34! \equiv
+                (-1)(-2)34! = 2 \cdot 34! \equiv -1 \equiv 36 \pmod{37}$, dividing by $2$ gives $18$).</li>
+        </ul>
+        <p><strong>Step 2 (Substitute into $N$):</strong></p>
+        $$N = 34! + 2 \cdot 35! + 3 \cdot 36! \equiv 18 + 2(1) + 3(-1) = 18 + 2 - 3 = \mathbf{17} \pmod{37}$$
+    </div>
+
+    <!-- S16 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q16</span>
+            <span class="badge badge-l2">Level 2 &middot; Exam-Real</span>
+            <span class="badge badge-type">NAT &middot; Answer: 157</span>
+        </div>
+        <p><strong>Step 1 (Method 1 &mdash; Standard CRT Successive Substitution):</strong> Start with the largest
+            modulus $9$: $N = 9k + 4$.</p>
+        <p>Substitute into $N \equiv 3 \pmod 7$:</p>
+        $$9k + 4 \equiv 3 \pmod 7 \implies 2k \equiv -1 \equiv 6 \pmod 7 \implies k \equiv 3 \pmod 7$$
+        <p>Write $k = 7m + 3$, giving $N = 9(7m + 3) + 4 = 63m + 31$. Now substitute into $N \equiv 2 \pmod 5$:</p>
+        $$63m + 31 \equiv 2 \pmod 5 \implies 3m + 1 \equiv 2 \pmod 5 \implies 3m \equiv 1 \equiv 6 \pmod 5 \implies m
+        \equiv 2 \pmod 5$$
+        <p>Setting $m = 2$ yields $N = 63(2) + 31 = \mathbf{157}$.</p>
+        <p><strong>Step 2 (Method 2 &mdash; The $2N$ Scaling Trick):</strong> Notice that doubling each remainder gives
+            $2(2) = 4 \equiv -1 \pmod 5$, $2(3) = 6 \equiv -1 \pmod 7$, and $2(4) = 8 \equiv -1 \pmod 9$. Thus $2N
+            \equiv -1 \pmod{\operatorname{LCM}(5, 7, 9)} \implies 2N \equiv -1 \pmod{315}$. Taking the smallest positive
+            value $2N = 315 - 1 = 314$ gives $N = 157$ in 10 seconds! (Check: $157 = 5(31)+2 = 7(22)+3 = 9(17)+4$.)</p>
+    </div>
+
+    <!-- S17 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q17</span>
+            <span class="badge badge-l2">Level 2 &middot; Exam-Real</span>
+            <span class="badge badge-type">NAT &middot; Answer: 204</span>
+        </div>
+        <p><strong>Step 1 (Find Base $b$ from Polynomial Expansion):</strong> Since digit $7$ appears, $b \gt 7$. Expand
+            $(623)_b - (257)_b = (355)_b$ in base $10$:</p>
+        $$(6b^2 + 2b + 3) - (2b^2 + 5b + 7) = 3b^2 + 5b + 5$$
+        $$4b^2 - 3b - 4 = 3b^2 + 5b + 5 \implies b^2 - 8b - 9 = 0 \implies (b - 9)(b + 1) = 0$$
+        <p>Since $b \gt 7$, we get $b = 9$. (Column-borrow check in base $9$: units $(3+9)-7 = 5$; middle $(1+9)-5 = 5$;
+            left $5 - 2 = 3 \implies (355)_9$.)</p>
+        <p><strong>Step 2 (Convert $(246)_9$ to Base $10$):</strong></p>
+        $$(246)_9 = 2 \cdot 9^2 + 4 \cdot 9^1 + 6 \cdot 9^0 = 2(81) + 36 + 6 = 162 + 42 = \mathbf{204}$$
+    </div>
+
+    <!-- S18 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q18</span>
+            <span class="badge badge-l2">Level 2 &middot; Exam-Real</span>
+            <span class="badge badge-type">MCQ &middot; Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 (Find the HCF of Exponents):</strong> The exponents are $63, 42, 28,$ and $21$. Their greatest
+            common divisor is $g = \gcd(63, 42, 28, 21) = 7$.</p>
+        <p><strong>Step 2 (Rewrite All Four Numbers with Common Exponent $7$):</strong></p>
+        <ul>
+            <li>$P = 2^{63} = (2^9)^7 = 512^7$</li>
+            <li>$Q = 3^{42} = (3^6)^7 = 729^7$</li>
+            <li>$R = 5^{28} = (5^4)^7 = 625^7$</li>
+            <li>$S = 7^{21} = (7^3)^7 = 343^7$</li>
+        </ul>
+        <p><strong>Step 3 (Order the Bases):</strong> Since $729 \gt 625 \gt 512 \gt 343$, strictly descending order is
+            $Q \gt R \gt P \gt S$. <strong>Correct Option: (B)</strong>.</p>
+    </div>
+
+    <!-- S19 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q19</span>
+            <span class="badge badge-l2">Level 2 &middot; Exam-Real</span>
+            <span class="badge badge-type">MCQ &middot; Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 (Denest $\sqrt{28 - 16\sqrt{3}}$):</strong> Force coefficient $2$ outside the inner radical:
+            $16\sqrt{3} = 2 \cdot 8\sqrt{3} = 2\sqrt{64 \times 3} = 2\sqrt{192}$. Find $x, y \gt 0$ with $x + y = 28$
+            and $xy = 192$: clearly $x = 16, y = 12$. Thus:</p>
+        $$\sqrt{28 - 16\sqrt{3}} = \left|\sqrt{16} - \sqrt{12}\right| = \left|4 - 2\sqrt{3}\right| = 4 - 2\sqrt{3} \quad
+        (\text{since } 4^2 = 16 \gt 12 = (2\sqrt{3})^2)$$
+        <p><strong>Step 2 (Denest $\sqrt{13 - 4\sqrt{3}}$):</strong> Write $4\sqrt{3} = 2\sqrt{12}$. Find $x + y = 13$
+            and $xy = 12$: clearly $x = 12, y = 1$. Carefully apply the absolute value:</p>
+        $$\sqrt{13 - 4\sqrt{3}} = \left|\sqrt{12} - \sqrt{1}\right| = \left|2\sqrt{3} - 1\right| = 2\sqrt{3} - 1 \quad
+        (\text{since } (2\sqrt{3})^2 = 12 \gt 1)$$
+        <p><strong>Step 3 (Sum Both Simplified Terms):</strong></p>
+        $$E = (4 - 2\sqrt{3}) + (2\sqrt{3} - 1) = 3$$
+        <p><strong>Correct Option: (A)</strong>.</p>
+    </div>
+
+    <!-- S20 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q20</span>
+            <span class="badge badge-l2">Level 2 &middot; Exam-Real</span>
+            <span class="badge badge-type">Passage MCQ &middot; Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 (Coprime Representation):</strong> Since $\operatorname{HCF}(a, b) = 18$, write $a = 18x$ and
+            $b = 18y$ where $\gcd(x, y) = 1$ and $x \lt y$ (because $a \lt b$). Then $\operatorname{LCM}(a, b) = 18xy =
+            756$, which gives:</p>
+        $$xy = \frac{756}{18} = 42 = 2^1 \times 3^1 \times 7^1$$
+        <p><strong>Step 2 (Count Pairs with $x \lt y$ and $\gcd(x, y) = 1$):</strong> Because $42$ has $k = 3$ distinct
+            prime factors and each prime power must go entirely to either $x$ or $y$, there are $2^3 = 8$ ordered pairs
+            $(x, y)$, and exactly half ($2^{3-1} = 4$ pairs) satisfy $x \lt y$:</p>
+        <ul>
+            <li>$(x, y) = (1, 42) \implies x + y = 43 \implies a + b = 18(43) = 774$</li>
+            <li>$(x, y) = (2, 21) \implies x + y = 23 \implies a + b = 18(23) = 414$</li>
+            <li>$(x, y) = (3, 14) \implies x + y = 17 \implies a + b = 18(17) = 306$</li>
+            <li>$(x, y) = (6, 7) \implies x + y = 13 \implies a + b = 18(13) = 234$</li>
+        </ul>
+        <p>Hence there are $4$ valid pairs and the minimum sum is $a + b = 234$ (achieved at $a = 108, b = 126$).
+            <strong>Correct Option: (C)</strong>.</p>
+    </div>
+
+    <!-- S21 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q21</span>
+            <span class="badge badge-l2">Level 2 &middot; Exam-Real</span>
+            <span class="badge badge-type">Passage MCQ &middot; Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 (Determine $M$ via LCM Constant-Difference Model):</strong> Check the gaps between divisors
+            and remainders: $18 - 11 = 7$, $24 - 17 = 7$, and $30 - 23 = 7$. Compute the LCM:</p>
+        $$\operatorname{LCM}(18, 24, 30) = \operatorname{LCM}(2 \cdot 3^2,\; 2^3 \cdot 3,\; 2 \cdot 3 \cdot 5) = 2^3
+        \cdot 3^2 \cdot 5 = 360$$
+        <p>Thus the smallest positive integer is $M = 360 - 7 = 353$.</p>
+        <p><strong>Step 2 (Reduce $M \pmod{13}$):</strong> Divide $353$ by $13$: $13 \times 27 = 351$, so $M = 353
+            \equiv 2 \pmod{13}$.</p>
+        <p><strong>Step 3 (Evaluate $2^{2026} \pmod{13}$ via FLT):</strong> Since $13$ is prime, $2^{12} \equiv 1
+            \pmod{13}$. Write $2026 = 12(168) + 10$ ($12 \times 168 = 2016$). Hence:</p>
+        $$M^{2026} \equiv 2^{2026} \equiv 2^{10} \pmod{13}$$
+        <p>Notice $2^6 = 64 = 13(5) - 1 \equiv -1 \pmod{13}$, so:</p>
+        $$2^{10} = 2^6 \cdot 2^4 \equiv (-1)(16) = -16 \equiv -3 \equiv 10 \pmod{13}$$
+        <p>(Direct check: $2^{10} = 1024 = 13(78) + 10$.) <strong>Correct Option: (D)</strong>.</p>
+    </div>
+
+    <!-- ==================== LEVEL 3 SOLUTIONS ==================== -->
+    <div class="level-banner l3">Level 3 Solutions (Q22&ndash;Q30) &mdash; Rank-Booster PRMO / IOQM-Lite</div>
+
+    <!-- S22 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q22</span>
+            <span class="badge badge-l3">Level 3 &middot; Rank-Booster</span>
+            <span class="badge badge-type">NAT &middot; Answer: 245</span>
+        </div>
+        <p><strong>Step 1 (Factor $539$ &amp; Spot Non-Coprimality):</strong> Factor $539 = 49 \times 11 = 7^2 \times
+            11$. Both $14 = 2 \cdot 7$ and $21 = 3 \cdot 7$ share the factor $7$, so Euler&rsquo;s Theorem cannot be
+            applied directly modulo $539$. Instead, split $539 = 49 \times 11$ via CRT (since $\gcd(49, 11) = 1$).</p>
+        <p><strong>Step 2 (Evaluate Modulo $49$):</strong> Because $99 \ge 2$, $7^2 = 49$ divides both $14^{99}$ and
+            $21^{99}$, so:</p>
+        $$N \equiv 0 \pmod{49} \implies N = 49k$$
+        <p><strong>Step 3 (Evaluate Modulo $11$):</strong> Reduce bases modulo $11$: $14 \equiv 3 \pmod{11}$ and $21
+            \equiv -1 \pmod{11}$. By FLT, $3^{10} \equiv 1 \pmod{11}$ (in fact, $3^5 = 243 = 11(22) + 1 \equiv 1
+            \pmod{11}$). Since $99 = 5(19) + 4$:</p>
+        $$14^{99} \equiv 3^{99} = (3^5)^{19} \cdot 3^4 \equiv 1 \cdot 81 \equiv 4 \pmod{11}$$
+        $$21^{99} \equiv (-1)^{99} = -1 \pmod{11}$$
+        <p>Thus $N \equiv 4 + (-1) = 3 \pmod{11}$.</p>
+        <p><strong>Step 4 (Solve for $k$ &amp; Restore $49$):</strong> Substitute $N = 49k$ into $N \equiv 3 \pmod{11}$.
+            Since $49 = 44 + 5 \equiv 5 \pmod{11}$:</p>
+        $$5k \equiv 3 \pmod{11} \implies 5k \equiv 25 \pmod{11} \implies k \equiv 5 \pmod{11}$$
+        <p>Setting $k = 5$ gives $N = 49 \times 5 = \mathbf{245}$.</p>
+        <div class="shortcut-box">
+            <span class="box-label">30-Second Shortcut</span>
+            <p>Instantly see $539 = 49 \times 11 \implies N = 49k$. Mod $11$: $3^{99} + (-1)^{99} \equiv 3^{-1} - 1
+                \equiv 4 - 1 = 3$. Solve $5k \equiv 3 \pmod{11} \implies k = 5 \implies 49 \times 5 = \mathbf{245}$.</p>
+        </div>
+    </div>
+
+    <!-- S23 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q23</span>
+            <span class="badge badge-l3">Level 3 &middot; Rank-Booster</span>
+            <span class="badge badge-type">NAT &middot; Answer: 77</span>
+        </div>
+        <p><strong>Step 1 (Apply Euler&rsquo;s Theorem Modulo $100$):</strong> Since $\gcd(17, 100) = 1$, $\phi(100) =
+            40$ gives $17^{40} \equiv 1 \pmod{100}$. Thus we reduce the exponent $E = 17^{17}$ modulo $40$.</p>
+        <p><strong>Step 2 (Reduce $E = 17^{17} \pmod{40}$):</strong> Compute successive squares of $17$ modulo $40$:</p>
+        $$17^2 = 289 = 40(7) + 9 \equiv 9 \pmod{40} \implies 17^4 \equiv 9^2 = 81 \equiv 1 \pmod{40}$$
+        <p>Since $17 = 4(4) + 1$, we get:</p>
+        $$17^{17} = (17^4)^4 \cdot 17 \equiv 1^4 \cdot 17 = 17 \pmod{40}$$
+        <p><strong>Step 3 (Evaluate $17^{17} \pmod{100}$):</strong> Convert $17^4$ into a number ending in $1$:</p>
+        $$17^2 = 289 \equiv 89 \equiv -11 \pmod{100} \implies 17^4 \equiv (-11)^2 = 121 \equiv 21 \pmod{100}$$
+        <p>Now apply the base-ending-in-$1$ rule to $17^{16} = (17^4)^4 \equiv 21^4 \pmod{100}$: the tens digit is $(2
+            \times 4) \bmod 10 = 8$, so $21^4 \equiv 81 \pmod{100}$. Finally:</p>
+        $$17^{17} = 17^{16} \cdot 17 \equiv 81 \times 17 = 1377 \equiv \mathbf{77} \pmod{100}$$
+        <div class="shortcut-box">
+            <span class="box-label">30-Second Shortcut (Period $20$ + CRT Mod $25$ &amp; Mod $4$)</span>
+            <p>Since $a^{20} \equiv 1 \pmod{100}$ for $\gcd(a, 10) = 1$, reduce $17^{17} \equiv (-3)^{17} \equiv (-3)
+                \cdot (81)^4 \equiv -3 \equiv 17 \pmod{20}$. Now $17^{17} \equiv 1^{17} = 1 \pmod 4$, and mod $25$,
+                $17^{17} \equiv 17^{-3}$ where $17^3 \equiv (-8)^3 = -512 \equiv -12 \equiv 13 \pmod{25}$, whose inverse
+                is $2$ ($13 \times 2 = 26 \equiv 1$). Among $\{02, 27, 52, 77\}$, only <strong>$77$</strong> is $\equiv
+                1 \pmod 4$!</p>
+        </div>
+    </div>
+
+    <!-- S24 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q24</span>
+            <span class="badge badge-l3">Level 3 &middot; Rank-Booster</span>
+            <span class="badge badge-type">NAT &middot; Answer: 177</span>
+        </div>
+        <p><strong>Step 1 (Factor $323$ via Difference of Squares):</strong> Recognize $323 = 324 - 1 = 18^2 - 1 = 17
+            \times 19$. Both $17$ and $19$ are prime with $\gcd(17, 19) = 1$.</p>
+        <p><strong>Step 2 (Evaluate $N = 16! + 3^{2026} \pmod{17}$):</strong></p>
+        <ul>
+            <li>By Wilson&rsquo;s Theorem: $16! = (17 - 1)! \equiv -1 \pmod{17}$.</li>
+            <li>By FLT: $3^{16} \equiv 1 \pmod{17}$. Dividing $2026$ by $16$ gives $2026 = 16(126) + 10$. Compute
+                $3^{10} \pmod{17}$:
+                $$3^2 = 9, \qquad 3^4 = 81 \equiv 13 \equiv -4, \qquad 3^8 \equiv (-4)^2 = 16 \equiv -1 \pmod{17}$$
+                $$3^{10} = 3^8 \cdot 3^2 \equiv (-1)(9) = -9 \equiv 8 \pmod{17}$$</li>
+        </ul>
+        <p>Hence $N \equiv -1 + 8 = 7 \pmod{17}$.</p>
+        <p><strong>Step 3 (Evaluate $N \pmod{19}$):</strong></p>
+        <ul>
+            <li>By the Wilson corollary for $(p - 3)!$: $16! = (19 - 3)! \equiv \dfrac{19 - 1}{2} = 9 \pmod{19}$.</li>
+            <li>By FLT: $3^{18} \equiv 1 \pmod{19}$. Dividing $2026$ by $18$ gives $2026 = 18(112) + 10$. Compute
+                $3^{10} \pmod{19}$:
+                $$3^3 = 27 \equiv 8, \qquad 3^6 \equiv 64 \equiv 7, \qquad 3^9 \equiv 56 \equiv -1 \pmod{19}$$
+                $$3^{10} = 3^9 \cdot 3 \equiv (-1)(3) = -3 \equiv 16 \pmod{19}$$</li>
+        </ul>
+        <p>Hence $N \equiv 9 + 16 = 25 \equiv 6 \pmod{19}$.</p>
+        <p><strong>Step 4 (Stitch via CRT):</strong> Write $N = 19k + 6$ and substitute into $N \equiv 7 \pmod{17}$:</p>
+        $$19k + 6 \equiv 7 \pmod{17} \implies 2k \equiv 1 \equiv 18 \pmod{17} \implies k \equiv 9 \pmod{17}$$
+        <p>Setting $k = 9$ gives $N = 19(9) + 6 = 171 + 6 = \mathbf{177}$. (Check: $177 = 17(10)+7 = 19(9)+6$.)</p>
+        <div class="shortcut-box">
+            <span class="box-label">30-Second Shortcut (Twin-Prime CRT Stitch)</span>
+            <p>With $N \equiv r_1 = 7 \pmod{17}$ and $N \equiv r_2 = 6 \pmod{19}$, since $19 - 17 = 2$, $k = \frac{r_1 -
+                r_2 + 17}{2} = \frac{7 - 6 + 17}{2} = 9 \implies N = 19(9) + 6 = \mathbf{177}$.</p>
+        </div>
+    </div>
+
+    <!-- S25 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q25</span>
+            <span class="badge badge-l3">Level 3 &middot; Rank-Booster</span>
+            <span class="badge badge-type">NAT &middot; Answer: 280</span>
+        </div>
+        <p><strong>Step 1 (Eliminate Middle Digit $y$ by Subtraction):</strong> Expand both $3$-digit base-$r$
+            representations into base $10$:</p>
+        $$xr^2 + yr + z = 275, \qquad zr^2 + yr + x = 131$$
+        <p>Subtracting the second equation from the first cancels $yr$ cleanly:</p>
+        $$(x - z)(r^2 - 1) = 275 - 131 = 144$$
+        <p><strong>Step 2 (Bound the Base $r$):</strong> Because $(xyz)_r = 275$ is a $3$-digit number in base $r$, we
+            must have $r^2 \le 275 \lt r^3$. Testing cubes and squares: $6^3 = 216 \lt 275 \lt 343 = 7^3$, and $16^2 =
+            256 \le 275 \lt 289 = 17^2$. Thus $7 \le r \le 16$.</p>
+        <p><strong>Step 3 (Filter by Divisibility $(r^2 - 1) \mid 144$):</strong> Check $r^2 - 1$ for $r \in \{7, 8,
+            \dots, 16\}$:</p>
+        <ul>
+            <li>$r = 7 \implies r^2 - 1 = 48$, and $48 \mid 144$ ($144 / 48 = 3$). Valid!</li>
+            <li>$r = 8 \implies 63 \nmid 144$;&nbsp; $r = 9 \implies 80 \nmid 144$;&nbsp; $r = 10 \implies 99 \nmid
+                144$;&nbsp; $r = 11 \implies 120 \nmid 144$;&nbsp; $r = 12 \implies 143 \nmid 144$;&nbsp; $r \ge 13
+                \implies r^2 - 1 \ge 168 \gt 144$.</li>
+        </ul>
+        <p>Hence $r = 7$ is strictly unique, and $x - z = 3$.</p>
+        <p><strong>Step 4 (Recover Digits $x, y, z$ in Base $7$):</strong> Convert $275_{10}$ directly to base $7$:</p>
+        $$275 = 5(49) + 30 = 5(7^2) + 4(7) + 2 = (542)_7$$
+        <p>Thus $x = 5, y = 4, z = 2$ (all valid base-$7$ digits with $x - z = 3$). Verification: $(245)_7 = 2(49) +
+            4(7) + 5 = 98 + 28 + 5 = 131$. Exact match!</p>
+        <p><strong>Step 5 (Final Product):</strong> $r \cdot x \cdot y \cdot z = 7 \times 5 \times 4 \times 2 =
+            \mathbf{280}$.</p>
+    </div>
+
+    <!-- S26 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q26</span>
+            <span class="badge badge-l3">Level 3 &middot; Rank-Booster</span>
+            <span class="badge badge-type">NAT &middot; Answer: 61</span>
+        </div>
+        <p><strong>Step 1 (Eliminate $n$ via Linear Combination):</strong> Let $d = \gcd(5n + 7,\, 7n + 2)$. Since $d$
+            divides both $5n + 7$ and $7n + 2$, $d$ must divide the $n$-free linear combination:</p>
+        $$7(5n + 7) - 5(7n + 2) = (35n + 49) - (35n + 10) = 39$$
+        <p>Therefore $d \mid 39$, which imposes the upper bound $G \le 39$.</p>
+        <p><strong>Step 2 (Find the Smallest Positive Integer $n_0$ Achieving $d = 39$):</strong> We require $39 \mid
+            (5n + 7)$ and $39 \mid (7n + 2)$. Observe that $5(7n + 2) = 7(5n + 7) - 39$, so whenever $39 \mid (5n + 7)$,
+            since $\gcd(5, 39) = 1$, divisibility $39 \mid (7n + 2)$ holds automatically! Solve:</p>
+        $$5n + 7 \equiv 0 \pmod{39} \implies 5n \equiv -7 \equiv 32 \pmod{39}$$
+        <p>Multiply both sides by $8$ (the modular inverse of $5$ modulo $39$, because $5 \times 8 = 40 \equiv 1
+            \pmod{39}$):</p>
+        $$n \equiv 8 \times 32 = 256 = 39(6) + 22 \equiv 22 \pmod{39}$$
+        <p>Thus $G = 39$ is achieved at the smallest positive integer $n_0 = 22$. Verification: $5(22) + 7 = 117 = 39
+            \times 3$ and $7(22) + 2 = 156 = 39 \times 4$, giving $\gcd(117, 156) = 39$.</p>
+        <p><strong>Step 3 (Final Answer):</strong> $G + n_0 = 39 + 22 = \mathbf{61}$.</p>
+    </div>
+
+    <!-- S27 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q27</span>
+            <span class="badge badge-l3">Level 3 &middot; Rank-Booster</span>
+            <span class="badge badge-type">NAT &middot; Answer: 99</span>
+        </div>
+        <p><strong>Step 1 (Denest the Denominator):</strong> Recognize $2k + 1 = (k + 1) + k$ and $k^2 + k = (k + 1)k$.
+            Therefore:</p>
+        $$\sqrt{2k + 1 + 2\sqrt{k^2 + k}} = \sqrt{(\sqrt{k + 1} + \sqrt{k})^2} = \sqrt{k + 1} + \sqrt{k}$$
+        <p><strong>Step 2 (Rationalize the $k$-th Term):</strong> Multiply numerator and denominator by the conjugate
+            $\sqrt{k + 1} - \sqrt{k}$:</p>
+        $$\frac{1}{\sqrt{k + 1} + \sqrt{k}} = \frac{\sqrt{k + 1} - \sqrt{k}}{(k + 1) - k} = \sqrt{k + 1} - \sqrt{k}$$
+        <p><strong>Step 3 (Evaluate the Telescoping Sum):</strong></p>
+        $$S = \sum_{k=1}^{9999} \left(\sqrt{k + 1} - \sqrt{k}\right) = (\sqrt{2} - \sqrt{1}) + (\sqrt{3} - \sqrt{2}) +
+        \dots + (\sqrt{10000} - \sqrt{9999})$$
+        <p>Every intermediate radical cancels in pairs, leaving only the first and last endpoints:</p>
+        $$S = \sqrt{10000} - \sqrt{1} = 100 - 1 = \mathbf{99}$$
+    </div>
+
+    <!-- S28 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q28</span>
+            <span class="badge badge-l3">Level 3 &middot; Rank-Booster</span>
+            <span class="badge badge-type">MCQ &middot; Answer: (A)</span>
+        </div>
+        <p><strong>Core Principle:</strong> Recall that $a^b \gt b^a \iff f(a) \gt f(b)$, where $f(x) = x^{1/x}$
+            strictly increases on $(0, e)$, reaches its unique global maximum at $x = e \approx 2.71828$, and strictly
+            decreases on $(e, \infty)$.</p>
+        <ul>
+            <li><strong>Statement I ($2026^{2027} \gt 2027^{2026}$):</strong> Since $e \lt 2026 \lt 2027$, strict
+                decrease on $(e, \infty)$ yields $2026^{1/2026} \gt 2027^{1/2027} \implies 2026^{2027} \gt 2027^{2026}$.
+                <strong>TRUE</strong>.</li>
+            <li><strong>Statement II ($e^{\pi} \lt \pi^{e}$):</strong> Because $x = e$ is the strict global maximum of
+                $f(x)$ and $\pi \neq e$, we have $e^{1/e} \gt \pi^{1/\pi} \implies e^{\pi} \gt \pi^{e}$. Thus Statement
+                II is <strong>FALSE</strong>.</li>
+            <li><strong>Statement III ($\sqrt[3]{3} \gt \sqrt{2} \gt \sqrt[5]{5}$):</strong> Check each pair by raising
+                to common integer powers:
+                <ul>
+                    <li>$3^{1/3}$ vs $2^{1/2}$: raising to power $6$ gives $3^2 = 9 \gt 8 = 2^3 \implies \sqrt[3]{3} \gt
+                        \sqrt{2}$.</li>
+                    <li>$2^{1/2}$ vs $5^{1/5}$: raising to power $10$ gives $2^5 = 32 \gt 25 = 5^2 \implies \sqrt{2} \gt
+                        \sqrt[5]{5}$. (Alternatively, $2^{1/2} = 4^{1/4} \gt 5^{1/5}$ since $e \lt 4 \lt 5$.)</li>
+                </ul>
+                Hence Statement III is <strong>TRUE</strong>.
+            </li>
+        </ul>
+        <p>Statements I and III only are true. <strong>Correct Option: (A)</strong>.</p>
+    </div>
+
+    <!-- S29 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q29</span>
+            <span class="badge badge-l3">Level 3 &middot; Rank-Booster</span>
+            <span class="badge badge-type">Passage MCQ &middot; Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 (Split $87 = 3 \times 29$ via CRT):</strong> Since $\gcd(3, 29) = 1$, evaluate $a_{27} =
+            2^{27} + 3^{27} + 6^{27} - 1$ modulo $3$ and modulo $29$ separately.</p>
+        <p><strong>Step 2 (Evaluate Modulo $3$):</strong> Clearly $3^{27} \equiv 0$ and $6^{27} \equiv 0 \pmod 3$, while
+            $2^{27} \equiv (-1)^{27} = -1 \pmod 3$. Therefore:</p>
+        $$a_{27} \equiv -1 + 0 + 0 - 1 = -2 \equiv 1 \pmod 3$$
+        <p><strong>Step 3 (Evaluate Modulo $29$ &mdash; Classic IMO Identity):</strong> Notice the exponent is $27 = 29
+            - 2$. Multiply $a_{27}$ by $6 = 2 \cdot 3$ (permissible because $\gcd(6, 29) = 1$):</p>
+        $$6 \cdot a_{27} = 6(2^{27} + 3^{27} + 6^{27} - 1) = 3 \cdot 2^{28} + 2 \cdot 3^{28} + 6^{28} - 6$$
+        <p>By Fermat&rsquo;s Little Theorem for prime $p = 29$, $2^{28} \equiv 3^{28} \equiv 6^{28} \equiv 1 \pmod{29}$.
+            Substituting gives:</p>
+        $$6 \cdot a_{27} \equiv 3(1) + 2(1) + 1 - 6 = 0 \pmod{29}$$
+        <p>Since $\gcd(6, 29) = 1$, cancel $6$ to conclude $a_{27} \equiv 0 \pmod{29}$!</p>
+        <p><strong>Step 4 (Stitch via CRT):</strong> From $a_{27} \equiv 0 \pmod{29}$, write $a_{27} = 29k$.
+            Substituting into $a_{27} \equiv 1 \pmod 3$:</p>
+        $$29k \equiv 1 \pmod 3 \implies 2k \equiv 1 \equiv 4 \pmod 3 \implies k \equiv 2 \pmod 3$$
+        <p>Thus $a_{27} \equiv 29(2) = 58 \pmod{87}$. <strong>Correct Option: (C)</strong>.</p>
+        <div class="shortcut-box">
+            <span class="box-label">30-Second Olympiad Pattern Recognition</span>
+            <p>For <em>every</em> prime $p \ge 5$, $p \mid (2^{p-2} + 3^{p-2} + 6^{p-2} - 1)$ because multiplying by $6$
+                yields $3 + 2 + 1 - 6 = 0 \pmod p$ via FLT! Immediately conclude $29 \mid a_{27}$ and test the multiples
+                of $29$ below $87$ ($0, 29, 58$) mod $3$: only <strong>$58$</strong> is $\equiv 1 \pmod 3$.</p>
+        </div>
+    </div>
+
+    <!-- S30 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q30</span>
+            <span class="badge badge-l3">Level 3 &middot; Rank-Booster</span>
+            <span class="badge badge-type">Passage MCQ &middot; Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 (Spot the Shared Negative Remainder):</strong> Rewrite the three congruences using negative
+            remainders:</p>
+        $$X \equiv -2 \pmod 7, \qquad X \equiv -3 \pmod{11}, \qquad X \equiv -3 \pmod{13}$$
+        <p>Because the second and third congruences share the <em>exact same negative remainder</em> $-3$ and $\gcd(11,
+            13) = 1$, they collapse immediately into a single congruence modulo $11 \times 13 = 143$:</p>
+        $$X \equiv -3 \pmod{143} \implies X = 143k - 3$$
+        <p><strong>Step 2 (Substitute into the Remaining Mod-$7$ Congruence):</strong> Reduce $143 \pmod 7$: $143 =
+            7(20) + 3 \equiv 3 \pmod 7$. Therefore:</p>
+        $$143k - 3 \equiv 5 \pmod 7 \implies 3k - 3 \equiv 5 \pmod 7 \implies 3k \equiv 8 \equiv 1 \equiv 15 \pmod 7
+        \implies k \equiv 5 \pmod 7$$
+        <p><strong>Step 3 (Compute the Smallest Positive Solution):</strong> Taking $k = 5$ yields:</p>
+        $$X = 143(5) - 3 = 715 - 3 = 712$$
+        <p>Verification: $712 = 7(101) + 5$, $712 = 11(64) + 8$, and $712 = 13(54) + 10$. <strong>Correct Option:
+                (D)</strong>.</p>
+    </div>
+
+    <!-- ==================== TRAP & ERROR FORENSICS ==================== -->
+    <h2 class="section-heading">Trap &amp; Error Forensics &mdash; The 5 Deadliest Chapter 1 Killers</h2>
+
+    <p>In BEST Paper 1, top-5% students rarely lose marks because they do not know a theorem&mdash;they lose marks to
+        <strong>five recurring structural traps</strong> engineered directly into MCQ distractors and NAT grids. Audit
+        every solution you write against this checklist.</p>
+
+    <!-- TRAP 1 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #1: Forgetting to Restore the Cancelled Common Factor (Q22)</span>
+        <p><strong>The Fatal Mistake:</strong> When computing $\operatorname{Rem}\!\left(\dfrac{14^{99} +
+            21^{99}}{539}\right)$, students rightly cancel $49$ from numerator and denominator to evaluate
+            $\operatorname{Rem}\!\left(\dfrac{2^{99}\cdot 7^{97} + 3^{99}\cdot 7^{97}}{11}\right) = 5$, and then
+            immediately bubble <strong><code>005</code></strong> into the NAT box&mdash;forgetting to multiply back by
+            $49$ to get <strong><code>245</code></strong>.</p>
+        <p><strong>Diagnostic Cure:</strong> Whenever you cancel a factor $k$ out of a remainder problem, immediately
+            draw a bold boxed reminder <strong>&ldquo;$\times\, k$ AT END!&rdquo;</strong> next to your final answer
+            slot before simplifying a single exponent. Better yet, use the Zero-Remainder CRT split ($N = 49k$
+            directly), which structurally prevents dropping $49$.</p>
+    </div>
+
+    <!-- TRAP 2 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #2: Blindly Applying Euler&rsquo;s Theorem to Non-Coprime Bases (Q11,
+            Q22)</span>
+        <p><strong>The Fatal Mistake:</strong> Computing $2^{2026} \pmod{100}$ by writing &ldquo;$\phi(100) = 40$, so
+            $2^{40} \equiv 1 \pmod{100}$, hence $2^{2026} \equiv 2^{26} \pmod{100}$.&rdquo; That is
+            <strong>catastrophically false</strong> because $\gcd(2, 100) = 2 \neq 1$: in fact $2^{40} \equiv 76
+            \not\equiv 1 \pmod{100}$, and while $2^{26} \equiv 64$ happens to agree for $m \ge 2$ only because $76 \cdot
+            2^m \equiv 2^m$, the same false logic predicts $2^{2000} \equiv 2^0 = 1 \pmod{100}$ when the true value is
+            $76$!</p>
+        <p><strong>Diagnostic Cure:</strong> Before invoking $a^{\phi(n)} \equiv 1 \pmod n$, perform a mandatory
+            1-second <strong>coprimality check: &ldquo;Is $\gcd(a, n) = 1$?&rdquo;</strong> If NO, immediately split $n$
+            into coprime prime-power factors via CRT (e.g., $100 = 4 \times 25$, where $2^k \equiv 0 \pmod 4$ and
+            $\gcd(2, 25) = 1$ allows Euler&rsquo;s Theorem safely modulo $25$).</p>
+    </div>
+
+    <!-- TRAP 3 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #3: Ordered vs. Unordered Pairs &amp; Boundary Constraints (Q5,
+            Q20)</span>
+        <p><strong>The Fatal Mistake:</strong> In Q5, students compute $\operatorname{LCM}(6, 9, 15) + 4 = 94$ and enter
+            <code>094</code>, missing the single adjective &ldquo;smallest <strong>$3$-digit</strong> positive
+            integer&rdquo; ($184$). In Q20, students compute $2^k = 2^3 = 8$ for $xy = 42$ and select Option (D),
+            ignoring the strict ordering condition <strong>$a \lt b$</strong> that cuts $8$ ordered pairs down to $4$.
+        </p>
+        <p><strong>Diagnostic Cure:</strong> Underline three high-risk constraint words during your first reading of
+            every problem: <strong>digit count</strong> ($3$-digit / $4$-digit), <strong>ordering</strong> ($a \lt b$ vs
+            ordered pairs), and <strong>sign/positivity</strong> (smallest <em>positive</em> vs non-negative).</p>
+    </div>
+
+    <!-- TRAP 4 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #4: Dropping Absolute Value Bars When Denesting Radicals (Q19)</span>
+        <p><strong>The Fatal Mistake:</strong> Writing $\sqrt{13 - 4\sqrt{3}} = \sqrt{(1 - 2\sqrt{3})^2} = 1 -
+            2\sqrt{3}$ because $1$ was listed before $12$. Adding $(4 - 2\sqrt{3}) + (1 - 2\sqrt{3})$ produces the exact
+            distractor <strong>Option (B): $5 - 4\sqrt{3}$</strong>! Remember that the principal square root $\sqrt{u}$
+            is <em>always non-negative</em>, whereas $1 - 2\sqrt{3} \approx -2.464 \lt 0$.</p>
+        <p><strong>Diagnostic Cure:</strong> Always write the <strong>larger</strong> term first inside $\sqrt{A -
+            2\sqrt{B}} = \sqrt{x} - \sqrt{y}$ (enforce $x \ge y$ by comparing squares $x$ and $y$, never by eyeballing
+            coefficients).</p>
+    </div>
+
+    <!-- TRAP 5 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #5: The $a^b$ vs $b^a$ Direction Reversal &amp; Osculator Remainder
+            Misuse (Q2, Q28)</span>
+        <p><strong>The Fatal Mistake:</strong> (a) Students test $2^3 = 8 \lt 3^2 = 9$, conclude &ldquo;larger base
+            wins,&rdquo; and mistakenly mark $e^\pi \lt \pi^e$ as TRUE in Q28&mdash;forgetting that $2 \lt e$ sits on
+            the <em>increasing</em> side of $f(x) = x^{1/x}$, whereas every $x \ge e$ sits on the <em>decreasing</em>
+            side where the <strong>smaller base (larger exponent)</strong> wins. (b) In divisibility problems, students
+            use an osculator (like $q + 2u$ for $19$) to find a <em>non-zero remainder</em>, forgetting that $q + 2u
+            \equiv 2N \pmod{19}$, not $N \pmod{19}$.</p>
+        <p><strong>Diagnostic Cure:</strong> Anchor $e \approx 2.72$ mentally as the summit of $x^{1/x}$: to the right
+            of $e$ (all integers $\ge 3$, plus $\pi$), smaller base always beats larger base ($e^\pi \gt \pi^e$, $3^4
+            \gt 4^3$, $2026^{2027} \gt 2027^{2026}$). Restrict osculators strictly to testing <strong>zero
+                remainder</strong> (exact divisibility); for non-zero remainders, always use block rules ($1001, 999,
+            99$) or direct modular arithmetic.</p>
+    </div>
+
+    <!-- QUICK DIAGNOSTIC SUMMARY TABLE -->
+    <h2 class="section-heading">Chapter 1 Self-Audit &amp; Readiness Matrix</h2>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Score Band (Out of 30)</th>
+                <th>Level 3 Accuracy (Q22&ndash;Q30)</th>
+                <th>Diagnostic Verdict</th>
+                <th>Recommended Action Before Chapter 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>26&ndash;30</strong></td>
+                <td>$7+$ correct</td>
+                <td>Top-1% Scholarship Ready</td>
+                <td>Log any silly errors from the 5 Trap Cards; advance directly to Chapter 2.</td>
+            </tr>
+            <tr>
+                <td><strong>19&ndash;25</strong></td>
+                <td>$4$&ndash;$6$ correct</td>
+                <td>Solid BEST Exam-Real</td>
+                <td>Re-solve missed Level 3 questions (Q22&ndash;Q30) blind after 48 hours using CRT/Euler shortcuts.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>12&ndash;18</strong></td>
+                <td>$1$&ndash;$3$ correct</td>
+                <td>Warmup Strong, Olympiad Gap</td>
+                <td>Re-study Sections 4, 5, and 7 in Part 1; re-attempt Q10&ndash;Q24 without looking at notes.</td>
+            </tr>
+            <tr>
+                <td><strong>Below 12</strong></td>
+                <td>$0$ correct</td>
+                <td>Foundation Rebuild Needed</td>
+                <td>Rework Worked Examples 1&ndash;6 step-by-step on paper before re-taking Level 1 &amp; Level 2.</td>
+            </tr>
+        </tbody>
+    </table>
+
+</article>
