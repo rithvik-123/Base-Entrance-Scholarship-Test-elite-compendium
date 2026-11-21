@@ -1,0 +1,1451 @@
+<article data-volume="Volume 1: Quantitative Aptitude &amp; Logical Reasoning (Paper 1)"
+    data-title="Chapter 5: Advanced Logical Reasoning — Part 1: Theory &amp; Worked Examples">
+
+    <div class="chapter-hero">
+        <div class="chapter-meta">Volume 1 · Chapter 5 · Part 1 of 3 — Theory &amp; Worked Examples</div>
+        <h1>Advanced Logical Reasoning</h1>
+        <p>Seven families of Paper 1 reasoning problems, built from first principles: inequality logic, cryptarithmetic,
+            coding and series, seating, blood relations and syllogisms, clocks and calendars, and non-verbal matrices.
+            Every shortcut is derived before it is shortened, and every example is solved and verified.</p>
+        <div class="tag-row">
+            <span class="meta-pill">⏱ 7 Hours</span>
+            <span class="meta-pill">Paper 1 · Reasoning</span>
+            <span class="meta-pill">9 Worked Examples</span>
+            <span class="meta-pill">Level 1 → Level 3</span>
+            <span class="meta-pill">NTSE Stage 2 · IOQM-lite Bridge</span>
+        </div>
+    </div>
+
+    <!-- ===================== 1. QUANTITATIVE COMPARISON ===================== -->
+    <h2 class="section-heading">1 · Quantitative Comparison &amp; Inequality Logic</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Core Idea — The Four Verdicts</span>
+        <p>You are given Column A and Column B and must pick one of four verdicts: <b>(A)</b> A is always greater,
+            <b>(B)</b> B is always greater, <b>(C)</b> they are always equal, <b>(D)</b> the relation cannot be
+            determined. "Always" means <i>for every value allowed by the given conditions</i>.
+        </p>
+        <ul>
+            <li>Verdicts A, B and C each need a <b>proof</b> that covers every admissible case.</li>
+            <li>Verdict D needs only <b>two admissible inputs that give different outcomes</b>. One counter-example
+                kills any "always".</li>
+            <li>First squeeze every given condition for sign and size information, then test boundary cases.</li>
+        </ul>
+    </div>
+
+    <h3>1.1 Sign analysis from first principles</h3>
+    <ul>
+        <li>A product or quotient is negative exactly when it has an <b>odd number of negative factors</b>.</li>
+        <li>$x^2 \ge 0$ for every real $x$, and $x^2 = 0$ only when $x=0$.</li>
+        <li>If $b^2c &gt; 0$, then $b^2 \neq 0$, so $b^2&gt;0$. A positive number times $c$ is positive only if
+            $c&gt;0$. So <b>$b\neq 0$ and $c&gt;0$</b>.</li>
+        <li>If also $abc &lt; 0$, write $abc=(ab)\cdot c$. With $c&gt;0$ this forces $ab&lt;0$, so $a$ and $b$ have
+            <b>opposite signs</b>. This does not tell you which one is positive.
+        </li>
+    </ul>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 560 120" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Number line showing where x squared is greater than or less than x">
+            <line x1="20" y1="60" x2="540" y2="60" stroke="#64748b" stroke-width="2" />
+            <circle cx="200" cy="60" r="5" fill="#2563eb" />
+            <circle cx="360" cy="60" r="5" fill="#2563eb" />
+            <text x="200" y="82" text-anchor="middle" font-size="14" fill="currentColor">0</text>
+            <text x="360" y="82" text-anchor="middle" font-size="14" fill="currentColor">1</text>
+            <text x="200" y="40" text-anchor="middle" font-size="12" fill="#2563eb">x² = x</text>
+            <text x="360" y="40" text-anchor="middle" font-size="12" fill="#2563eb">x² = x</text>
+            <text x="105" y="40" text-anchor="middle" font-size="13" fill="#059669">x² &gt; x</text>
+            <text x="280" y="40" text-anchor="middle" font-size="13" fill="#dc2626">x² &lt; x</text>
+            <text x="450" y="40" text-anchor="middle" font-size="13" fill="#059669">x² &gt; x</text>
+            <text x="105" y="105" text-anchor="middle" font-size="12" fill="currentColor">x &lt; 0</text>
+            <text x="280" y="105" text-anchor="middle" font-size="12" fill="currentColor">0 &lt; x &lt; 1</text>
+            <text x="450" y="105" text-anchor="middle" font-size="12" fill="currentColor">x &gt; 1</text>
+        </svg>
+        <div class="diagram-caption">Fig 5.1 — $x^2 - x = x(x-1)$ is positive when $x&lt;0$ or $x&gt;1$, negative on
+            $(0,1)$, and zero at $0$ and $1$. This is why "$x^2 &gt; x$" is a classic "cannot be determined" trap.</div>
+    </div>
+
+    <h3>1.2 The boundary-case test set</h3>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Test value</th>
+                <th>What it breaks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$0$</td>
+                <td>Strict inequalities, division, "positive ⇒ bigger", $x^2 &gt; x$</td>
+            </tr>
+            <tr>
+                <td>$1$</td>
+                <td>Everything collapses: $x=x^2=\sqrt{x}=1/x$. It is the usual source of the "equal" verdict.</td>
+            </tr>
+            <tr>
+                <td>$-1$</td>
+                <td>Odd and even powers flip sign. $x^2=1&gt;x$, and $1/x=x$.</td>
+            </tr>
+            <tr>
+                <td>$\tfrac12$ (and any $0&lt;x&lt;1$)</td>
+                <td>Powers <i>shrink</i>: $x^3&lt;x^2&lt;x&lt;\sqrt{x}&lt;1&lt;\tfrac1x$</td>
+            </tr>
+            <tr>
+                <td>$-\tfrac12$ (and any $-1&lt;x&lt;0$)</td>
+                <td>$x&lt;x^3&lt;0&lt;x^2$, and $\tfrac1x=-2&lt;x$</td>
+            </tr>
+            <tr>
+                <td>Large positive / large negative</td>
+                <td>Checks the "grows without bound" side. For $x&gt;1$ the chain reverses:
+                    $\tfrac1x&lt;1&lt;\sqrt{x}&lt;x&lt;x^2&lt;x^3$. For $x&lt;-1$: $x^3&lt;x&lt;0&lt;x^2$.</td>
+            </tr>
+            <tr>
+                <td>Equal variables ($a=b$)</td>
+                <td>Reveals equality cases in AM–GM and squares</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>1.3 Legal moves on inequalities</h3>
+    <ul>
+        <li>Multiplying or dividing by a <b>negative</b> number reverses the inequality. <b>Never</b> multiply by an
+            expression whose sign is unknown.</li>
+        <li>Reciprocals: if $a&gt;b&gt;0$ then $\tfrac1a&lt;\tfrac1b$. If $a&gt;0&gt;b$ then $\tfrac1a&gt;\tfrac1b$,
+            because the sign changes.</li>
+        <li>Squaring preserves order only when both sides are $\ge 0$. Counter-example: $-3&lt;2$ but
+            $(-3)^2=9&gt;4=2^2$.</li>
+        <li>Safest method: study the <b>sign of $A-B$</b>.</li>
+    </ul>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge — Squares and AM–GM</span>
+        <p>From $(a-b)^2\ge 0$ we get $a^2+b^2\ge 2ab$ for all real $a,b$. For positive $a,b$ this gives
+            $\dfrac{a+b}{2}\ge\sqrt{ab}$, with equality only when $a=b$.</p>
+        <p><b>Derivation of a famous comparison.</b> For $x\neq 0$,
+            $x+\dfrac1x-2=\dfrac{x^2-2x+1}{x}=\dfrac{(x-1)^2}{x}$. So for $x&gt;0$, $x+\tfrac1x\ge 2$ with equality only
+            at $x=1$. For $x&lt;0$, $x+\tfrac1x\le -2$. If the question says "$x&gt;0$", Column $x+\tfrac1x$ versus
+            Column $2$ is verdict "A ≥ B", but <i>not</i> strictly greater unless $x\ne1$ is also given. Always check
+            whether the equality case is allowed.</p>
+    </div>
+
+    <!-- ===================== 2. CRYPTARITHMETIC ===================== -->
+    <h2 class="section-heading">2 · Cryptarithmetic (Alphametics)</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Rules of the Game</span>
+        <ul>
+            <li>Each letter stands for <b>one</b> digit, and different letters stand for <b>different</b> digits (unless
+                the question says otherwise).</li>
+            <li>The <b>leading letter of any number is not 0</b>.</li>
+            <li>The puzzle is ordinary integer arithmetic. A well-set exam puzzle has <b>exactly one</b> solution.
+                <i>Some famous puzzles do not.</i> $TWO+TWO=FOUR$ has both $734+734=1468$ and $765+765=1530$, so you
+                must verify uniqueness, not just find an answer.
+            </li>
+        </ul>
+        <p><b>Column equation.</b> Number the columns from the right and let $c_i$ be the carry into column $i$
+            ($c_1=0$). Then
+            $$a_i+b_i+c_i=r_i+10\,c_{i+1}.$$</p>
+        <p><b>Carry bounds.</b> Adding two numbers gives a carry $\le 1$, and adding three gives $\le 2$. In a column of
+            a number times a single digit $k$, the carry is $\le k-1$. Proof for the last: the column value is at most
+            $9k+(k-1)=10k-1$, and its carry is $\lfloor (10k-1)/10\rfloor=k-1$.</p>
+    </div>
+
+    <h3>2.1 The attack ladder (use in this order)</h3>
+    <ol>
+        <li><b>Length mismatch.</b> If a sum of two $n$-digit numbers has $n+1$ digits, its leading digit is <b>1</b>,
+            because the carry is at most 1.</li>
+        <li><b>Leading column.</b> Write its equation and bound the letters. Usually only one or two cases survive.</li>
+        <li><b>Cancelling letter.</b> If a letter appears as an addend <i>and</i> as the result in the same column, then
+            $X+Y+c=X+10c'$, so $Y+c\in\{0,10\}$. That means $(Y,c)=(0,0)$ or $(9,1)$.</li>
+        <li><b>Parity.</b> $A+A$ is even, so the units digit of any doubled letter is even.</li>
+        <li><b>Casting out nines.</b> The digit-sum relation $\text{addend}_1+\text{addend}_2\equiv\text{sum}\pmod 9$
+            gives a linear equation among the letters.</li>
+        <li><b>Branch last.</b> Split into cases only when forced. If more than two branches remain, you missed a
+            constraint.</li>
+    </ol>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge — Modular Filters</span>
+        <p>A number is congruent to its digit sum modulo $9$ and, with alternating signs, modulo $11$. For
+            $SEND+MORE=MONEY$, reducing mod $9$ gives $S+E+D+R-Y\equiv 0\pmod 9$. This is an extra check on any
+            candidate solution, and Worked Example 7 uses it.</p>
+    </div>
+
+    <!-- ===================== 3. CODING & SERIES ===================== -->
+    <h2 class="section-heading">3 · Coding-Decoding &amp; Number / Letter Series</h2>
+
+    <div class="concept-box">
+        <span class="box-label">The Alphabet as a Number Line</span>
+        <p>Let $A=1,\,B=2,\dots,Z=26$. Memorise the anchors <b>E J O T Y = 5, 10, 15, 20, 25</b>.</p>
+        <ul>
+            <li><b>Opposite letter</b> of position $p$ is $27-p$ (A↔Z, B↔Y, …, M↔N).</li>
+            <li><b>Shift by $s$ with wrap-around:</b> $p\mapsto\big((p+s-1)\bmod 26\big)+1$. Example: $Y(25)+3=28\to
+                28-26=2=B$.</li>
+        </ul>
+    </div>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Coding type</th>
+                <th>Rule</th>
+                <th>Verified example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Constant shift</td>
+                <td>every letter $+k$</td>
+                <td>CAT → ECV ($+2$)</td>
+            </tr>
+            <tr>
+                <td>Progressive shift</td>
+                <td>$+1,+2,+3,\dots$</td>
+                <td>FIRE → GKUI</td>
+            </tr>
+            <tr>
+                <td>Alternating shift</td>
+                <td>$+2,-1,+2,-1,\dots$</td>
+                <td>MIND → OHPC</td>
+            </tr>
+            <tr>
+                <td>Opposite letters</td>
+                <td>$p\to 27-p$</td>
+                <td>DOG → WLT</td>
+            </tr>
+            <tr>
+                <td>Reverse, then shift</td>
+                <td>reverse the word, then $+1$</td>
+                <td>CAT → TAC → UBD</td>
+            </tr>
+            <tr>
+                <td>Positional sum</td>
+                <td>sum of letter positions</td>
+                <td>BAD → $2+1+4=7$</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>3.1 The series diagnosis ladder</h3>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Check</th>
+                <th>Fingerprint</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1st differences constant</td>
+                <td>AP</td>
+                <td>5, 9, 13, 17</td>
+            </tr>
+            <tr>
+                <td>Ratios constant</td>
+                <td>GP</td>
+                <td>3, 6, 12, 24</td>
+            </tr>
+            <tr>
+                <td>2nd differences constant</td>
+                <td>quadratic</td>
+                <td>2, 3, 6, 11, 18 (differences 1, 3, 5, 7)</td>
+            </tr>
+            <tr>
+                <td>Differences are squares</td>
+                <td>sum of squares</td>
+                <td>1, 2, 6, 15, 31 (add 1, 4, 9, 16)</td>
+            </tr>
+            <tr>
+                <td>Terms near squares or cubes</td>
+                <td>$n^2\pm k$</td>
+                <td>3, 8, 15, 24, 35 ($n^2-1$ for $n=2,\dots,6$)</td>
+            </tr>
+            <tr>
+                <td>"×a + b" rule</td>
+                <td>affine recursion</td>
+                <td>3, 7, 15, 31, 63 (×2 + 1)</td>
+            </tr>
+            <tr>
+                <td>Sum of previous two</td>
+                <td>Fibonacci-type</td>
+                <td>2, 3, 5, 8, 13</td>
+            </tr>
+            <tr>
+                <td>Two interleaved series</td>
+                <td>alternating</td>
+                <td>2, 5, 4, 10, 8, 20, 16</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><b>Derivation (Newton's forward formula).</b> If $\Delta_1$ is the first first-difference and $\Delta_2$ the
+        constant second difference, then
+        $$T_n=T_1+(n-1)\Delta_1+\binom{n-1}{2}\Delta_2 .$$
+        Check on $2,3,6,11,18$: $T_1=2,\ \Delta_1=1,\ \Delta_2=2$ gives $T_5=2+4+6\cdot 2/2\cdot 1\cdot\!\!\!\!\quad$ —
+        more simply $T_5=2+4(1)+\binom42(2)=2+4+12=18$ ✓.</p>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge — Last-Digit Cycles</span>
+        <p>Last digits of powers repeat: $2:\,2,4,8,6$; $3:\,3,9,7,1$; $7:\,7,9,3,1$; $8:\,8,4,2,6$ (cycle length 4);
+            $4:\,4,6$ and $9:\,9,1$ (length 2). Example: the last digit of $7^{2026}$. Since $2026\equiv 2\pmod 4$, it
+            is the 2nd entry of the cycle, namely $9$. If the $k$-th differences of a series are constant, the series is
+            a polynomial of degree $k$ in $n$.</p>
+    </div>
+
+    <!-- ===================== 4. SEATING ===================== -->
+    <h2 class="section-heading">4 · Seating Arrangements &amp; Puzzles</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Facing Rules — Never Guess Left and Right</span>
+        <p><b>Linear rows.</b> A person facing <b>North</b> has West on their left and East on their right. A person
+            facing <b>South</b> has East on their left and West on their right. In two parallel rows facing each other,
+            one row faces North and the other faces South, so left and right <i>swap between the rows</i>.</p>
+        <p><b>Circular tables</b> (clockwise is measured as seen from above):</p>
+        <ul>
+            <li>Facing the <b>centre</b>: left hand = <b>clockwise</b>, right hand = anticlockwise.</li>
+            <li>Facing <b>outward</b>: left hand = <b>anticlockwise</b>, right hand = clockwise.</li>
+            <li>In a circle of $n$ ($n$ even), the seat opposite seat $k$ is seat $k+\tfrac n2$.</li>
+        </ul>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 460 135" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Linear row of five people facing North">
+            <defs>
+                <marker id="ch5-ar1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M0 0 L10 5 L0 10 z" fill="#2563eb" />
+                </marker>
+            </defs>
+            <text x="230" y="14" text-anchor="middle" font-size="12" fill="currentColor">All five face NORTH ↑</text>
+            <g stroke="#2563eb" stroke-width="2" marker-end="url(#ch5-ar1)">
+                <line x1="60" y1="55" x2="60" y2="30" />
+                <line x1="140" y1="55" x2="140" y2="30" />
+                <line x1="220" y1="55" x2="220" y2="30" />
+                <line x1="300" y1="55" x2="300" y2="30" />
+                <line x1="380" y1="55" x2="380" y2="30" />
+            </g>
+            <g fill="#e0e7ff" stroke="#4f46e5" stroke-width="2">
+                <circle cx="60" cy="80" r="18" />
+                <circle cx="140" cy="80" r="18" />
+                <circle cx="220" cy="80" r="18" />
+                <circle cx="300" cy="80" r="18" />
+                <circle cx="380" cy="80" r="18" />
+            </g>
+            <g font-size="14" text-anchor="middle" fill="#1e1b4b" font-weight="bold">
+                <text x="60" y="85">A</text><text x="140" y="85">B</text><text x="220" y="85">C</text><text x="300"
+                    y="85">D</text><text x="380" y="85">E</text>
+            </g>
+            <text x="10" y="122" font-size="12" fill="currentColor">◄ WEST = LEFT of each person</text>
+            <text x="450" y="122" text-anchor="end" font-size="12" fill="currentColor">EAST = RIGHT of each person
+                ►</text>
+        </svg>
+        <div class="diagram-caption">Fig 5.2 — Linear row facing North. "A is to the immediate left of B" means A is on
+            B's <b>west</b> side. Reverse every statement for a row facing South.</div>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 440 190" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Left hand rule for circular seating">
+            <defs>
+                <marker id="ch5-ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M0 0 L10 5 L0 10 z" fill="#2563eb" />
+                </marker>
+                <marker id="ch5-ar3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M0 0 L10 5 L0 10 z" fill="#ea580c" />
+                </marker>
+                <marker id="ch5-ar4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M0 0 L10 5 L0 10 z" fill="#059669" />
+                </marker>
+            </defs>
+            <circle cx="110" cy="100" r="52" fill="none" stroke="#94a3b8" stroke-width="2" />
+            <circle cx="110" cy="48" r="10" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2" />
+            <circle cx="110" cy="152" r="10" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2" />
+            <line x1="110" y1="36" x2="110" y2="14" stroke="#2563eb" stroke-width="2" marker-end="url(#ch5-ar2)" />
+            <line x1="110" y1="141" x2="110" y2="122" stroke="#2563eb" stroke-width="2" marker-end="url(#ch5-ar2)" />
+            <line x1="98" y1="48" x2="68" y2="48" stroke="#ea580c" stroke-width="2" marker-end="url(#ch5-ar3)" />
+            <line x1="98" y1="152" x2="68" y2="152" stroke="#ea580c" stroke-width="2" marker-end="url(#ch5-ar3)" />
+            <line x1="122" y1="48" x2="152" y2="48" stroke="#059669" stroke-width="2" stroke-dasharray="4 3"
+                marker-end="url(#ch5-ar4)" />
+            <line x1="98" y1="168" x2="68" y2="168" stroke="#059669" stroke-width="2" stroke-dasharray="4 3"
+                marker-end="url(#ch5-ar4)" />
+            <text x="62" y="44" text-anchor="end" font-size="11" fill="#ea580c">left</text>
+            <text x="62" y="156" text-anchor="end" font-size="11" fill="#ea580c">left</text>
+            <text x="158" y="52" font-size="11" fill="#059669">clockwise</text>
+            <text x="62" y="172" text-anchor="end" font-size="11" fill="#059669">clockwise</text>
+            <text x="200" y="40" font-size="12" fill="currentColor">Top seat faces OUTWARD:</text>
+            <text x="200" y="56" font-size="12" fill="currentColor">left hand points ANTICLOCKWISE.</text>
+            <text x="200" y="140" font-size="12" fill="currentColor">Bottom seat faces CENTRE:</text>
+            <text x="200" y="156" font-size="12" fill="currentColor">left hand points CLOCKWISE.</text>
+        </svg>
+        <div class="diagram-caption">Fig 5.3 — Both people look "up the page", so both have West on their left.
+            Clockwise, however, runs East at the top and West at the bottom. Memory hook: <b>Inside-Left =
+                Clockwise</b>.</div>
+    </div>
+
+    <h3>4.1 The five-step method</h3>
+    <ol>
+        <li><b>Anchor.</b> A circle has rotational symmetry, so seat one person anywhere. Their seat number is free.
+        </li>
+        <li><b>Draw all slots</b> and mark IN/OUT arrows as soon as the facing pattern is known.</li>
+        <li><b>Place the definite facts first</b> (exact positions, "opposite", "immediate").</li>
+        <li><b>Branch only when forced</b>, and prune a branch the moment a clue is violated.</li>
+        <li><b>Re-verify every clue</b> against the final picture.</li>
+    </ol>
+
+    <h3>4.2 Multi-attribute grid elimination</h3>
+    <p>For "who has which colour / pet / city", draw a table with persons as rows and each attribute as column groups.
+        Every value is used <b>exactly once</b> (a Latin-square property), so:</p>
+    <ul>
+        <li>A ✗ in a cell is as valuable as a ✓.</li>
+        <li>When three cells in a row or column are crossed out, the fourth is forced.</li>
+        <li>Write each negative clue ("P does not like Red") as ✗ immediately, and each chain clue ("the person who
+            likes Red sits left of Q") as a linked pair.</li>
+    </ul>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge — Counting Arrangements</span>
+        <p>$n$ distinct people around a circle can be arranged in $(n-1)!$ ways (fix one person to kill the rotations).
+            If clockwise and anticlockwise count as the same (e.g. a necklace), there are $\dfrac{(n-1)!}{2}$ ways for
+            $n\ge3$. A clue such as "A and B are neighbours" glues them into one block of $2$ (with $2!$ internal
+            orders).</p>
+    </div>
+
+    <!-- ===================== 5. BLOOD RELATIONS & SYLLOGISMS ===================== -->
+    <h2 class="section-heading">5 · Blood Relations &amp; Syllogisms</h2>
+
+    <h3>5.1 Blood relations</h3>
+    <div class="diagram-box">
+        <svg viewBox="0 0 520 215" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Family tree key">
+            <g stroke="#475569" stroke-width="2" fill="none">
+                <line x1="162" y1="39" x2="218" y2="39" />
+                <line x1="162" y1="45" x2="218" y2="45" />
+                <line x1="190" y1="45" x2="190" y2="80" />
+                <line x1="110" y1="80" x2="320" y2="80" />
+                <line x1="110" y1="80" x2="110" y2="110" />
+                <line x1="320" y1="80" x2="320" y2="110" />
+                <line x1="122" y1="119" x2="178" y2="119" />
+                <line x1="122" y1="125" x2="178" y2="125" />
+                <line x1="150" y1="125" x2="150" y2="160" />
+                <line x1="320" y1="134" x2="320" y2="160" />
+            </g>
+            <rect x="138" y="27" width="24" height="24" fill="#dbeafe" stroke="#2563eb" stroke-width="2" />
+            <circle cx="230" cy="39" r="12" fill="#fce7f3" stroke="#db2777" stroke-width="2" />
+            <rect x="98" y="110" width="24" height="24" fill="#dbeafe" stroke="#2563eb" stroke-width="2" />
+            <circle cx="190" cy="122" r="12" fill="#fce7f3" stroke="#db2777" stroke-width="2" />
+            <circle cx="320" cy="122" r="12" fill="#fce7f3" stroke="#db2777" stroke-width="2" />
+            <rect x="120" y="160" width="60" height="28" rx="6" fill="#f1f5f9" stroke="#475569" stroke-width="2" />
+            <rect x="290" y="160" width="60" height="28" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2" />
+            <g font-size="12" fill="currentColor" text-anchor="middle">
+                <text x="150" y="20">Grandfather</text><text x="230" y="64">Grandmother</text>
+                <text x="110" y="148">Father</text><text x="190" y="148">Mother</text>
+                <text x="320" y="152" dy="0">Aunt (Bua)</text>
+                <text x="150" y="179">Self</text><text x="320" y="179">Cousin (M)</text>
+            </g>
+            <g font-size="12" fill="currentColor">
+                <text x="400" y="40">□ male ○ female</text>
+                <text x="400" y="62">═ married couple</text>
+                <text x="400" y="84">│ parent → child</text>
+                <text x="400" y="106">─┬─ siblings share the bar</text>
+            </g>
+        </svg>
+        <div class="diagram-caption">Fig 5.4 — Family-tree conventions. Father and Bua (father's sister) are siblings,
+            so Bua's son is Self's cousin.</div>
+    </div>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Phrase</th>
+                <th>Translation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mother's brother</td>
+                <td>Maternal uncle</td>
+            </tr>
+            <tr>
+                <td>Father's sister</td>
+                <td>Paternal aunt</td>
+            </tr>
+            <tr>
+                <td>Son / daughter of uncle or aunt</td>
+                <td>Cousin</td>
+            </tr>
+            <tr>
+                <td>Wife's brother, sister's husband</td>
+                <td>Brother-in-law</td>
+            </tr>
+            <tr>
+                <td>Brother's wife, husband's sister</td>
+                <td>Sister-in-law</td>
+            </tr>
+            <tr>
+                <td>Only daughter of my mother's mother</td>
+                <td><b>My mother</b> (the "only" collapses the phrase onto a known person)</td>
+            </tr>
+            <tr>
+                <td>My father's only son</td>
+                <td>Me if I am male; my brother if I am female</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <span class="box-label">Pointing-to-a-Photo Traps</span>
+        <ol>
+            <li><b>"Only" collapse.</b> Phrases like "only daughter of my mother's mother" return to a person you
+                already know (your mother).</li>
+            <li><b>Speaker's gender.</b> If the speaker's gender is not given, "my father's only son" can be the speaker
+                (male) or a brother (female). If the answer changes, the correct verdict is "cannot be determined".</li>
+            <li><b>Direction.</b> "He is the son of X" describes the man <i>from X</i>. Always rebuild the tree starting
+                from the speaker, never from the photo.</li>
+        </ol>
+        <p><b>Coded relations.</b> Suppose $A+B$ means "A is the mother of B", $A-B$ means "A is the brother of B", and
+            $A\times B$ means "A is the father of B". Then $P+Q\times R$ means P is the mother of Q, and Q is the father
+            of R. So <b>P is R's paternal grandmother</b>. Decode left to right and build a tree.</p>
+    </div>
+
+    <h3>5.2 Syllogisms</h3>
+    <div class="diagram-box">
+        <svg viewBox="0 0 520 130" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Three basic Venn diagrams">
+            <g fill-opacity=".2" stroke-width="2">
+                <ellipse cx="90" cy="60" rx="70" ry="45" fill="#10b981" stroke="#10b981" />
+                <ellipse cx="90" cy="60" rx="32" ry="22" fill="#3b82f6" stroke="#3b82f6" />
+                <ellipse cx="260" cy="60" rx="40" ry="30" fill="#3b82f6" stroke="#3b82f6"
+                    transform="translate(-45 0)" />
+                <ellipse cx="260" cy="60" rx="40" ry="30" fill="#10b981" stroke="#10b981" transform="translate(45 0)" />
+                <ellipse cx="420" cy="60" rx="42" ry="30" fill="#3b82f6" stroke="#3b82f6" />
+                <ellipse cx="468" cy="60" rx="42" ry="30" fill="#10b981" stroke="#10b981" />
+            </g>
+            <g font-size="13" text-anchor="middle" fill="currentColor">
+                <text x="90" y="64">A</text><text x="90" y="32">B</text>
+                <text x="215" y="64">A</text><text x="305" y="64">B</text>
+                <text x="405" y="64">A</text><text x="484" y="64">B</text>
+                <text x="90" y="122">All A are B</text><text x="260" y="122">No A is B</text><text x="440" y="122">Some
+                    A are B</text>
+            </g>
+        </svg>
+        <div class="diagram-caption">Fig 5.5 — The three building blocks. "All A are B": A sits inside B. "No A is B":
+            the circles are disjoint. "Some A are B": the circles overlap.</div>
+    </div>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Statement</th>
+                <th>Certain consequences</th>
+                <th>Not guaranteed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>All A are B</td>
+                <td>Some A are B; Some B are A</td>
+                <td>All B are A</td>
+            </tr>
+            <tr>
+                <td>No A is B</td>
+                <td>No B is A; Some A are not B</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td>Some A are B</td>
+                <td>Some B are A</td>
+                <td><b>Some A are not B</b> (a classic trap)</td>
+            </tr>
+            <tr>
+                <td>Some A are not B</td>
+                <td>—</td>
+                <td>Some B are not A (no conversion)</td>
+            </tr>
+            <tr>
+                <td><b>Only a few</b> A are B</td>
+                <td>Some A are B; Some A are not B; Some B are A</td>
+                <td>All A are B (false); Some B are not A (only possible)</td>
+            </tr>
+            <tr>
+                <td><b>Only</b> A are B</td>
+                <td>All B are A</td>
+                <td>All A are B</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><b>Two-premise rules.</b> Arrange the statements so the middle term $B$ is the predicate of the first premise and
+        the subject of the second:</p>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Premise 1</th>
+                <th>Premise 2</th>
+                <th>Conclusion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>All A are B</td>
+                <td>All B are C</td>
+                <td>All A are C</td>
+            </tr>
+            <tr>
+                <td>All A are B</td>
+                <td>No B is C</td>
+                <td>No A is C</td>
+            </tr>
+            <tr>
+                <td>Some A are B</td>
+                <td>All B are C</td>
+                <td>Some A are C</td>
+            </tr>
+            <tr>
+                <td>Some A are B</td>
+                <td>No B is C</td>
+                <td>Some A are not C</td>
+            </tr>
+            <tr>
+                <td>No A is B</td>
+                <td>All B are C</td>
+                <td>Some C are not A (reverse)</td>
+            </tr>
+            <tr>
+                <td>No A is B</td>
+                <td>Some B are C</td>
+                <td>Some C are not A (reverse)</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Pairs not listed give <b>no definite conclusion</b>. Examples: two "Some" premises, "All A are B + Some B are C",
+        and any pair starting with "Some A are not B".</p>
+
+    <div class="concept-box">
+        <span class="box-label">Either–Or and Possibility</span>
+        <ul>
+            <li><b>Either–Or</b> applies only when (i) both conclusions have the <b>same subject and predicate</b>, (ii)
+                <b>neither follows on its own</b>, and (iii) they are <b>contradictories</b>: "All A are B" with "Some A
+                are not B", or "No A is B" with "Some A are B". "Some A are B" and "Some A are not B" are <i>not</i>
+                contradictories, since both can be true.
+            </li>
+            <li><b>Possibility</b> conclusions ("can be", "may be") are true if at least one valid diagram makes them
+                true, so they need only to be <i>consistent</i> with the statements. A possibility fails only if it
+                directly contradicts a given statement.</li>
+        </ul>
+    </div>
+
+    <!-- ===================== 6. CLOCKS & CALENDARS ===================== -->
+    <h2 class="section-heading">6 · Clocks &amp; Calendars</h2>
+
+    <h3>6.1 Clocks</h3>
+    <div class="concept-box">
+        <span class="box-label">Derivation of the Angle Formula</span>
+        <p>The minute hand turns $360^\circ$ in $60$ min, so it moves $6^\circ$ per minute. The hour hand turns
+            $30^\circ$ per hour, so it moves $0.5^\circ$ per minute. At $H$ hours $M$ minutes:
+            $$\text{minute hand}=6M,\qquad \text{hour hand}=30H+0.5M,$$
+            $$\theta=\big|30H-5.5M\big|\ \ (\text{if }\theta&gt;180^\circ,\text{ take }360^\circ-\theta).$$
+            The hands close in on each other at a relative speed of $5.5^\circ$ per minute.</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 220 215" width="260" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Clock at 2:30 showing 105 degrees">
+            <circle cx="100" cy="100" r="80" fill="none" stroke="#475569" stroke-width="2" />
+            <path
+                d="M100 28V20 M136 37.65L140 30.72 M162.35 64L169.28 60 M172 100H180 M162.35 136L169.28 140 M136 162.35L140 169.28 M100 172V180 M64 162.35L60 169.28 M37.65 136L30.72 140 M28 100H20 M37.65 64L30.72 60 M64 37.65L60 30.72"
+                stroke="#475569" stroke-width="2" fill="none" />
+            <g font-size="14" text-anchor="middle" fill="currentColor"><text x="100" y="14">12</text><text x="192"
+                    y="105">3</text><text x="100" y="199">6</text><text x="8" y="105">9</text></g>
+            <line x1="100" y1="100" x2="143.5" y2="88.35" stroke="#2563eb" stroke-width="4" stroke-linecap="round" />
+            <line x1="100" y1="100" x2="100" y2="165" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M124.15 93.53 A25 25 0 0 1 100 125" fill="none" stroke="#059669" stroke-width="2" />
+            <text x="130" y="125" font-size="12" fill="#059669">105°</text>
+            <circle cx="100" cy="100" r="3.5" fill="currentColor" />
+        </svg>
+        <div class="diagram-caption">Fig 5.6 — 2:30. Hour hand $=30(2)+0.5(30)=75^\circ$, minute hand
+            $=6(30)=180^\circ$, so $\theta=|75-180|=105^\circ$. The formula gives $|60-165|=105^\circ$ ✓.</div>
+    </div>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Situation (between $H$ and $H+1$ o'clock)</th>
+                <th>Minutes past $H$</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hands coincide ($\theta=0$)</td>
+                <td>$M=\dfrac{60H}{11}$</td>
+            </tr>
+            <tr>
+                <td>Hands opposite ($\theta=180^\circ$)</td>
+                <td>$M=\dfrac{60H+360}{11}$ for $H=0,\dots,4$; $\ M=\dfrac{60H-360}{11}$ for $H=6,\dots,11$</td>
+            </tr>
+            <tr>
+                <td>Right angle ($\theta=90^\circ$)</td>
+                <td>$M=\dfrac{60H\pm180}{11}$ (keep values with $0\le M&lt;60$)</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><b>Counts.</b> In 12 hours the hands coincide <b>11</b> times, are opposite <b>11</b> times and are at right
+        angles <b>22</b> times. In 24 hours these are <b>22, 22</b> and <b>44</b>.</p>
+    <p><b>Faulty clocks.</b> If a clock gains $g$ minutes per real hour, it shows $60+g$ minutes of "clock time" per
+        $60$ real minutes. So
+        $$\text{real elapsed}=\text{shown elapsed}\times\frac{60}{60+g}.$$
+        Example: a clock gaining $5$ min/h, set right at 6 am, shows 12:30 pm. Shown elapsed $=390$ min, so real elapsed
+        $=390\times\tfrac{60}{65}=360$ min $=6$ h, and the true time is 12 noon. <b>Mirror image</b> of time $T$ is
+        $11{:}60-T$ (for $4{:}20$ it is $7{:}40$).</p>
+
+    <h3>6.2 Calendars</h3>
+    <div class="concept-box">
+        <span class="box-label">Odd Days Method</span>
+        <p><b>Odd days</b> are the days left over after removing complete weeks. An ordinary year ($365=52\times7+1$)
+            has <b>1</b> odd day, and a leap year has <b>2</b>.</p>
+        <p><b>Leap-year rule:</b> divisible by 4, but a <b>century year</b> must be divisible by <b>400</b>. So 1900 was
+            not a leap year and 2000 was.</p>
+        <p>Day code: $0=$ Sunday, $1=$ Monday, $2=$ Tuesday, $3=$ Wednesday, $4=$ Thursday, $5=$ Friday, $6=$ Saturday.
+        </p>
+    </div>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Block</th>
+                <th>Odd days</th>
+                <th>Why</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>100 years</td>
+                <td>5</td>
+                <td>$76\times1+24\times2=124=17\times7+5$</td>
+            </tr>
+            <tr>
+                <td>200 years</td>
+                <td>3</td>
+                <td>$2\times5=10\equiv3$</td>
+            </tr>
+            <tr>
+                <td>300 years</td>
+                <td>1</td>
+                <td>$3\times5=15\equiv1$</td>
+            </tr>
+            <tr>
+                <td>400 years</td>
+                <td>0</td>
+                <td>$4\times5+1=21\equiv0$ (the 400th year is a leap century)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Jan</th>
+                <th>Feb</th>
+                <th>Mar</th>
+                <th>Apr</th>
+                <th>May</th>
+                <th>Jun</th>
+                <th>Jul</th>
+                <th>Aug</th>
+                <th>Sep</th>
+                <th>Oct</th>
+                <th>Nov</th>
+                <th>Dec</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Odd days</td>
+                <td>3</td>
+                <td>0 (1 leap)</td>
+                <td>3</td>
+                <td>2</td>
+                <td>3</td>
+                <td>2</td>
+                <td>3</td>
+                <td>3</td>
+                <td>2</td>
+                <td>3</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><b>Algorithm.</b> (1) Count the <i>completed</i> years before the target date. (2) Split them into complete
+        centuries and $n$ leftover years, where $n$ lies within a century. The leftover years contribute $\big(n+\lfloor
+        n/4\rfloor\big)\bmod 7$ odd days. (3) Add the days elapsed in the target year, up to and including the date. (4)
+        Reduce mod 7 and read the day code.</p>
+    <p><b>Repeating calendars.</b> From year $Y$, add $1$ per ordinary year and $2$ per leap year through year $Y'-1$.
+        The calendar of $Y$ repeats in $Y'$ when the total is $\equiv 0\pmod 7$ <b>and $Y'$ is the same type (leap or
+            ordinary) as $Y$</b>. In 1901–2099 an ordinary year repeats after 6 or 11 years, and a leap year after 28
+        years.</p>
+
+    <!-- ===================== 7. NON-VERBAL ===================== -->
+    <h2 class="section-heading">7 · Non-Verbal Pattern Matrices &amp; Visual Reasoning</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Transformation Toolkit (on an $n\times n$ grid, cells numbered $(r,c)$ from $0$)</span>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Transformation</th>
+                    <th>Cell rule</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rotate $90^\circ$ clockwise</td>
+                    <td>$(r,c)\to(c,\ n-1-r)$</td>
+                </tr>
+                <tr>
+                    <td>Rotate $90^\circ$ anticlockwise</td>
+                    <td>$(r,c)\to(n-1-c,\ r)$</td>
+                </tr>
+                <tr>
+                    <td>Rotate $180^\circ$</td>
+                    <td>$(r,c)\to(n-1-r,\ n-1-c)$</td>
+                </tr>
+                <tr>
+                    <td>Mirror image (left↔right)</td>
+                    <td>$(r,c)\to(r,\ n-1-c)$</td>
+                </tr>
+                <tr>
+                    <td>Water image (top↕bottom)</td>
+                    <td>$(r,c)\to(n-1-r,\ c)$</td>
+                </tr>
+                <tr>
+                    <td>Reflection in the main diagonal</td>
+                    <td>$(r,c)\to(c,\ r)$</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>Superposition logic.</b> <b>XOR</b>: a cell is shaded when it is shaded in <i>exactly one</i> of the two
+            figures (common cells cancel). <b>OR</b>: shaded in at least one. <b>AND</b>: shaded in both. Always test
+            the rule on the complete rows before using it on the unknown one.</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 400 92" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="An L-shape under rotation, mirror and water image">
+            <g stroke="#64748b" stroke-width="1.5" fill="none">
+                <g transform="translate(10,12)">
+                    <path d="M0 0h48v48h-48z M16 0v48 M32 0v48 M0 16h48 M0 32h48" />
+                </g>
+                <g transform="translate(110,12)">
+                    <path d="M0 0h48v48h-48z M16 0v48 M32 0v48 M0 16h48 M0 32h48" />
+                </g>
+                <g transform="translate(210,12)">
+                    <path d="M0 0h48v48h-48z M16 0v48 M32 0v48 M0 16h48 M0 32h48" />
+                </g>
+                <g transform="translate(310,12)">
+                    <path d="M0 0h48v48h-48z M16 0v48 M32 0v48 M0 16h48 M0 32h48" />
+                </g>
+            </g>
+            <g fill="#2563eb" fill-opacity=".85">
+                <g transform="translate(10,12)">
+                    <rect x="0" y="0" width="16" height="16" />
+                    <rect x="0" y="16" width="16" height="16" />
+                    <rect x="0" y="32" width="16" height="16" />
+                    <rect x="16" y="32" width="16" height="16" />
+                </g>
+                <g transform="translate(110,12)">
+                    <rect x="32" y="0" width="16" height="16" />
+                    <rect x="16" y="0" width="16" height="16" />
+                    <rect x="0" y="0" width="16" height="16" />
+                    <rect x="0" y="16" width="16" height="16" />
+                </g>
+                <g transform="translate(210,12)">
+                    <rect x="32" y="0" width="16" height="16" />
+                    <rect x="32" y="16" width="16" height="16" />
+                    <rect x="32" y="32" width="16" height="16" />
+                    <rect x="16" y="32" width="16" height="16" />
+                </g>
+                <g transform="translate(310,12)">
+                    <rect x="0" y="32" width="16" height="16" />
+                    <rect x="0" y="16" width="16" height="16" />
+                    <rect x="0" y="0" width="16" height="16" />
+                    <rect x="16" y="0" width="16" height="16" />
+                </g>
+            </g>
+            <g font-size="11" text-anchor="middle" fill="currentColor">
+                <text x="34" y="82">Original</text><text x="134" y="82">Rotate 90° CW</text><text x="234" y="82">Mirror
+                    (L↔R)</text><text x="334" y="82">Water (T↕B)</text>
+            </g>
+        </svg>
+        <div class="diagram-caption">Fig 5.7 — The same L-shape $\{(0,0),(1,0),(2,0),(2,1)\}$ under three
+            transformations, computed with the cell rules above. Rotation and reflection are <i>different</i>
+            operations. A reflection cannot be reproduced by any rotation.</div>
+    </div>
+
+    <p><b>Counting figures.</b> These counts are all verifiable by direct enumeration:</p>
+    <ul>
+        <li><b>Triangles from an apex.</b> If $p$ points lie on the base (including both end-points) and each is joined
+            to the apex, the number of triangles is $\binom p2$. For $p=4$ this is $6$.</li>
+        <li><b>Rectangles</b> in an $m\times n$ grid of unit squares: $\binom{m+1}{2}\binom{n+1}{2}$. For $2\times2$
+            this is $3\cdot3=9$.</li>
+        <li><b>Squares</b> in an $n\times n$ grid: $\sum_{k=1}^{n}k^2=\dfrac{n(n+1)(2n+1)}{6}$. For $n=2$ this is $5$.
+        </li>
+    </ul>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge — Invariants</span>
+        <p>Under a rotation or reflection the <b>number of shaded cells never changes</b>. Under XOR, $|A\oplus
+            B|=|A|+|B|-2|A\cap B|$. Checking this count first rules out wrong options in seconds, before you compare any
+            shapes.</p>
+    </div>
+
+    <!-- ===================== FORMULA VAULT ===================== -->
+    <div class="formula-vault">
+        <span class="box-label">Formula Vault — Chapter 5</span>
+        <ul>
+            <li><b>Inequality:</b> $x^2&gt;x\iff x&lt;0$ or $x&gt;1$. For $0&lt;x&lt;1$:
+                $x^3&lt;x^2&lt;x&lt;\sqrt{x}&lt;1&lt;\tfrac1x$. AM–GM: $\tfrac{a+b}{2}\ge\sqrt{ab}$ ($a,b&gt;0$).
+                $x+\tfrac1x\ge2$ for $x&gt;0$.</li>
+            <li><b>Cryptarithmetic:</b> $a_i+b_i+c_i=r_i+10c_{i+1}$. Two addends: carry $\le1$. Multiplier $k$: carry
+                $\le k-1$. Cancelling letter: $Y+c\in\{0,10\}$. Mod 9: digit sums must balance.</li>
+            <li><b>Letters:</b> opposite of $p$ is $27-p$. Shift: $((p+s-1)\bmod26)+1$. EJOTY $=5,10,15,20,25$.</li>
+            <li><b>Series:</b> $T_n=T_1+(n-1)\Delta_1+\binom{n-1}2\Delta_2$. $\sum k^2=\tfrac{n(n+1)(2n+1)}6$.
+                Last-digit cycles have length 4 (or 2).</li>
+            <li><b>Seating:</b> facing centre ⇒ left = clockwise. Facing outward ⇒ left = anticlockwise. Opposite of
+                seat $k$ in $n$ seats is $k+\tfrac n2$. Circular arrangements: $(n-1)!$.</li>
+            <li><b>Syllogisms:</b> A+A=A, A+E=E, I+A=I, I+E=O, E+A=O*, E+I=O*. Either–Or needs contradictory pairs on
+                the same terms with neither true alone.</li>
+            <li><b>Clocks:</b> $\theta=|30H-5.5M|$. Coincide $M=\tfrac{60H}{11}$. Opposite $M=\tfrac{60H\pm360}{11}$.
+                Right angle $M=\tfrac{60H\pm180}{11}$. Mirror $=11{:}60-T$. Real $=$ shown $\times\tfrac{60}{60+g}$.
+            </li>
+            <li><b>Calendars:</b> ordinary year 1 odd day, leap year 2. Centuries: $100\to5,\ 200\to3,\ 300\to1,\
+                400\to0$. Leftover $n$ years: $(n+\lfloor n/4\rfloor)\bmod7$. Day code $0=$ Sun. Repeat gaps: 6 or 11
+                (ordinary), 28 (leap).</li>
+            <li><b>Visual:</b> rotate CW $(r,c)\to(c,n-1-r)$. Mirror $(r,n-1-c)$. Water $(n-1-r,c)$. XOR: $|A\oplus
+                B|=|A|+|B|-2|A\cap B|$. Triangles from an apex: $\binom p2$.</li>
+        </ul>
+    </div>
+
+    <!-- ===================== WORKED EXAMPLES ===================== -->
+    <h2 class="section-heading">8 · Worked Examples — Level 1 → Level 3</h2>
+
+    <div class="level-banner l1">Level 1 · Warm-Up — Master the Mechanics</div>
+
+    <div class="worked-example tier-1">
+        <div class="ex-header"><span class="badge badge-l1">Level 1</span><span class="badge badge-type">Quantitative
+                Comparison</span> <b>Example 1 — Sign Analysis</b></div>
+        <div class="ex-problem">
+            <p>Real numbers $a,b,c$ satisfy $abc&lt;0$ and $b^2c&gt;0$. Compare <b>Column A: $ab$</b> and <b>Column B:
+                    $c$</b>.</p>
+            <p>(A) A is greater &nbsp; (B) B is greater &nbsp; (C) equal &nbsp; (D) cannot be determined</p>
+        </div>
+        <div class="ex-solution">
+            <p><b>Step 1.</b> Since $b^2\ge0$ and $b^2c&gt;0$, we need $b^2\neq0$, so $b^2&gt;0$. A positive number
+                times $c$ is positive only if $c&gt;0$. Hence $b\ne0$ and <b>$c&gt;0$</b>.</p>
+            <p><b>Step 2.</b> $abc=(ab)\cdot c&lt;0$ with $c&gt;0$ forces <b>$ab&lt;0$</b>.</p>
+            <p><b>Step 3.</b> Column A $=ab&lt;0&lt;c=$ Column B in every admissible case.</p>
+            <p><b>Check with two different inputs.</b> $(a,b,c)=(-2,1,3)$: $abc=-6&lt;0$, $b^2c=3&gt;0$, $ab=-2&lt;3$ ✓.
+                $(a,b,c)=(2,-1,3)$: $abc=-6$, $b^2c=3$, $ab=-2&lt;3$ ✓.</p>
+            <p><b>Answer: (B).</b> The trap is assuming $a&gt;0$. The two checks above use opposite signs of $a$ and the
+                verdict holds in both, which is exactly what "always" demands.</p>
+        </div>
+    </div>
+
+    <div class="worked-example tier-1">
+        <div class="ex-header"><span class="badge badge-l1">Level 1</span><span class="badge badge-type">Clocks</span>
+            <b>Example 2 — Angle and Coinciding Time</b>
+        </div>
+        <div class="ex-problem">
+            <p>(a) Find the angle between the hands at 4:20. (b) After 4:00, at what time do the hands first coincide?
+            </p>
+        </div>
+        <div class="ex-solution">
+            <p><b>(a)</b> $\theta=|30H-5.5M|=|30(4)-5.5(20)|=|120-110|=\mathbf{10^\circ}$.</p>
+            <p><i>Check from first principles:</i> hour hand $=30(4)+0.5(20)=130^\circ$, minute hand $=6(20)=120^\circ$,
+                difference $10^\circ$ ✓.</p>
+            <p><b>(b)</b> Coinciding means $30H+0.5M=6M$, so $5.5M=30H$ and $M=\dfrac{60H}{11}$. For $H=4$:
+                $M=\dfrac{240}{11}=21\tfrac{9}{11}$.</p>
+            <p><i>Check:</i> hour hand $=120+0.5\cdot\tfrac{240}{11}=130.909^\circ$, minute hand
+                $=6\cdot\tfrac{240}{11}=130.909^\circ$ ✓.</p>
+            <p><b>Answers: (a) $10^\circ$; (b) $4{:}21\tfrac{9}{11}$.</b></p>
+        </div>
+    </div>
+
+    <div class="worked-example tier-1">
+        <div class="ex-header"><span class="badge badge-l1">Level 1</span><span class="badge badge-type">Blood
+                Relations</span> <b>Example 3 — The "Only" Collapse</b></div>
+        <div class="ex-problem">
+            <p>Pointing to a man in a photograph, Meera says, "His mother is the only daughter of my mother's mother."
+                How is the man related to Meera?</p>
+        </div>
+        <div class="ex-solution">
+            <div class="diagram-box">
+                <svg viewBox="0 0 360 215" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-label="Meera and the man are children of the same mother">
+                    <g stroke="#475569" stroke-width="2" fill="none">
+                        <line x1="180" y1="44" x2="180" y2="80" />
+                        <line x1="180" y1="108" x2="180" y2="135" />
+                        <line x1="110" y1="135" x2="250" y2="135" />
+                        <line x1="110" y1="135" x2="110" y2="152" />
+                        <line x1="250" y1="135" x2="250" y2="152" />
+                    </g>
+                    <circle cx="180" cy="30" r="14" fill="#fce7f3" stroke="#db2777" stroke-width="2" />
+                    <circle cx="180" cy="94" r="14" fill="#fce7f3" stroke="#db2777" stroke-width="2" />
+                    <circle cx="110" cy="166" r="14" fill="#fce7f3" stroke="#db2777" stroke-width="2" />
+                    <rect x="236" y="152" width="28" height="28" fill="#dbeafe" stroke="#2563eb" stroke-width="2" />
+                    <g font-size="12" fill="currentColor">
+                        <text x="202" y="34">Meera's mother's mother</text>
+                        <text x="202" y="98">Meera's mother (the only daughter)</text>
+                        <text x="110" y="200" text-anchor="middle">Meera</text>
+                        <text x="250" y="200" text-anchor="middle">Man in photo</text>
+                    </g>
+                </svg>
+                <div class="diagram-caption">Fig 5.8 — The only daughter of Meera's mother's mother is Meera's own
+                    mother.</div>
+            </div>
+            <p><b>Step 1.</b> Rebuild from the speaker. Meera's mother's mother has an <i>only</i> daughter, and Meera's
+                mother is a daughter of that woman. So the only daughter <b>is Meera's mother</b>.</p>
+            <p><b>Step 2.</b> The man's mother is Meera's mother, so the man is a son of Meera's mother, i.e. Meera's
+                male sibling.</p>
+            <p><b>Answer: the man is Meera's brother.</b> The common wrong answers are "cousin" and "uncle", which come
+                from treating the phrase as a new person instead of collapsing it onto a known one.</p>
+        </div>
+    </div>
+
+    <div class="level-banner l2">Level 2 · Exam-Real — Multi-Step Control</div>
+
+    <div class="worked-example tier-2">
+        <div class="ex-header"><span class="badge badge-l2">Level 2</span><span
+                class="badge badge-type">Syllogism</span> <b>Example 4 — "Only a Few" and Either–Or</b></div>
+        <div class="ex-problem">
+            <p><b>Statements:</b> Only a few Pens are Books. All Books are Cups. No Cup is a Ladle.</p>
+            <p><b>Conclusions:</b> I. Some Pens are Cups. &nbsp; II. Some Pens are not Ladles. &nbsp; III. Some Books
+                are not Pens. &nbsp; IV. All Books are Pens.</p>
+            <p>Which of the conclusions follow?</p>
+        </div>
+        <div class="ex-solution">
+            <div class="diagram-box">
+                <svg viewBox="0 0 440 200" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-label="Venn diagram for Pens, Books, Cups and Ladle">
+                    <ellipse cx="200" cy="100" rx="110" ry="72" fill="#f59e0b" fill-opacity=".15" stroke="#f59e0b"
+                        stroke-width="2" />
+                    <ellipse cx="175" cy="100" rx="50" ry="36" fill="#10b981" fill-opacity=".25" stroke="#10b981"
+                        stroke-width="2" />
+                    <ellipse cx="105" cy="100" rx="65" ry="42" fill="#3b82f6" fill-opacity=".15" stroke="#3b82f6"
+                        stroke-width="2" stroke-dasharray="5 3" />
+                    <ellipse cx="385" cy="100" rx="42" ry="30" fill="#ef4444" fill-opacity=".15" stroke="#ef4444"
+                        stroke-width="2" />
+                    <g font-size="13" text-anchor="middle" fill="currentColor">
+                        <text x="75" y="104">Pens</text><text x="198" y="104">Books</text><text x="268"
+                            y="62">Cups</text><text x="385" y="104">Ladle</text>
+                    </g>
+                </svg>
+                <div class="diagram-caption">Fig 5.9 — Pens (dashed) overlap Books but also have a part outside Books.
+                    Books sit inside Cups. Ladle is outside Cups.</div>
+            </div>
+            <p><b>Step 1 — Decode.</b> "Only a few Pens are Books" gives: Some Pens are Books, Some Pens are not Books,
+                Some Books are Pens.</p>
+            <p><b>Step 2 — I.</b> Those Pens that are Books are inside Cups (All Books are Cups), so <b>Some Pens are
+                    Cups ✓ certain</b>.</p>
+            <p><b>Step 3 — II.</b> No Cup is a Ladle, and the Pens-that-are-Books are Cups, so those Pens are not
+                Ladles. <b>Some Pens are not Ladles ✓ certain</b>.</p>
+            <p><b>Step 4 — III and IV.</b> Pens must have a part outside Books, but Books may lie <i>entirely inside</i>
+                Pens or may stick out of Pens. So neither "Some Books are not Pens" nor "All Books are Pens" is certain
+                alone. Both have the same subject (Books) and predicate (Pens), and they are contradictories (O and A).
+                Neither follows individually, so the <b>Either–Or</b> rule applies.</p>
+            <p><b>Answer: I and II follow, and either III or IV follows.</b></p>
+        </div>
+    </div>
+
+    <div class="worked-example tier-2">
+        <div class="ex-header"><span class="badge badge-l2">Level 2</span><span class="badge badge-type">Series &amp;
+                Coding</span> <b>Example 5 — Difference of Differences, Alternation, Progressive Shift</b></div>
+        <div class="ex-problem">
+            <p>(a) In $2,3,6,11,18,\dots$ find the 6th term and the 10th term. <br>
+                (b) Find the next term of $5,10,8,16,14,28,\ ?$ <br>
+                (c) In a code, FIRE is written as GKUI. How is WATER written in that code?</p>
+        </div>
+        <div class="ex-solution">
+            <p><b>(a)</b> First differences: $1,3,5,7$. Second differences: $2,2,2$ (constant), so the series is
+                quadratic with $\Delta_1=1,\ \Delta_2=2$. The next difference is $9$, so $T_6=18+9=\mathbf{27}$. For
+                $T_{10}$: $T_{10}=2+9(1)+\binom92(2)=2+9+72=\mathbf{83}$.</p>
+            <p><i>Check with a closed form.</i> Fitting $T_n=n^2+bn+c$ to $T_1=2,T_2=3$ gives $b=-2,c=3$, so
+                $T_n=(n-1)^2+2$. Then $T_6=25+2=27$ ✓ and $T_{10}=81+2=83$ ✓.</p>
+            <p><b>(b)</b> Read adjacent terms in pairs: $5\to10$ ($\times2$), $10\to8$ ($-2$), $8\to16$ ($\times2$),
+                $16\to14$ ($-2$), $14\to28$ ($\times2$), so the next step is $-2$ and the next term is
+                $28-2=\mathbf{26}$.</p>
+            <p><b>(c)</b> FIRE: $F+1=G,\ I+2=K,\ R+3=U,\ E+4=I$. The shifts are $+1,+2,+3,+4$. For WATER (5 letters) use
+                $+1,+2,+3,+4,+5$:</p>
+            <p>$W(23)+1=24=X,\ A(1)+2=3=C,\ T(20)+3=23=W,\ E(5)+4=9=I,\ R(18)+5=23=W$.</p>
+            <p><b>Answers: (a) 27 and 83; (b) 26; (c) XCWIW.</b></p>
+        </div>
+    </div>
+
+    <div class="worked-example tier-2">
+        <div class="ex-header"><span class="badge badge-l2">Level 2</span><span class="badge badge-type">Non-Verbal
+                Matrix</span> <b>Example 6 — XOR Superposition</b></div>
+        <div class="ex-problem">
+            <p>Each row follows the same rule. Find the missing third figure of the third row. (Shaded cells are dark.)
+            </p>
+            <div class="diagram-box">
+                <svg viewBox="0 0 290 200" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-label="Three rows of 3x3 figures following an XOR rule">
+                    <g stroke="#64748b" stroke-width="1.5" fill="none">
+                        <g transform="translate(20,10)">
+                            <path d="M0 0h48v48h-48z M16 0v48 M32 0v48 M0 16h48 M0 32h48" />
+                        </g>
+                        <g transform="translate(120,10)">
+                            <path d="M0 0h48v48h-48z M16 0v48 M32 0v48 M0 16h48 M0 32h48" />
+                        </g>
+                        <g transform="translate(220,10)">
+                            <path d="M0 0h48v48h-48z M16 0v48 M32 0v48 M0 16h48 M0 32h48" />
+                        </g>
+                        <g transform="translate(20,76)">
+                            <path d="M0 0h48v48h-48z M16 0v48 M32 0v48 M0 16h48 M0 32h48" />
+                        </g>
+                        <g transform="translate(120,76)">
+                            <path d="M0 0h48v48h-48z M16 0v48 M32 0v48 M0 16h48 M0 32h48" />
+                        </g>
+                        <g transform="translate(220,76)">
+                            <path d="M0 0h48v48h-48z M16 0v48 M32 0v48 M0 16h48 M0 32h48" />
+                        </g>
+                        <g transform="translate(20,142)">
+                            <path d="M0 0h48v48h-48z M16 0v48 M32 0v48 M0 16h48 M0 32h48" />
+                        </g>
+                        <g transform="translate(120,142)">
+                            <path d="M0 0h48v48h-48z M16 0v48 M32 0v48 M0 16h48 M0 32h48" />
+                        </g>
+                        <g transform="translate(220,142)">
+                            <path d="M0 0h48v48h-48z M16 0v48 M32 0v48 M0 16h48 M0 32h48" />
+                        </g>
+                    </g>
+                    <g fill="#2563eb" fill-opacity=".85">
+                        <g transform="translate(20,10)">
+                            <rect x="0" y="0" width="16" height="16" />
+                            <rect x="16" y="16" width="16" height="16" />
+                            <rect x="32" y="32" width="16" height="16" />
+                        </g>
+                        <g transform="translate(120,10)">
+                            <rect x="32" y="0" width="16" height="16" />
+                            <rect x="16" y="16" width="16" height="16" />
+                            <rect x="0" y="32" width="16" height="16" />
+                        </g>
+                        <g transform="translate(220,10)">
+                            <rect x="0" y="0" width="16" height="16" />
+                            <rect x="32" y="0" width="16" height="16" />
+                            <rect x="0" y="32" width="16" height="16" />
+                            <rect x="32" y="32" width="16" height="16" />
+                        </g>
+                        <g transform="translate(20,76)">
+                            <rect x="0" y="0" width="16" height="16" />
+                            <rect x="16" y="0" width="16" height="16" />
+                            <rect x="32" y="0" width="16" height="16" />
+                        </g>
+                        <g transform="translate(120,76)">
+                            <rect x="16" y="0" width="16" height="16" />
+                            <rect x="16" y="16" width="16" height="16" />
+                            <rect x="16" y="32" width="16" height="16" />
+                        </g>
+                        <g transform="translate(220,76)">
+                            <rect x="0" y="0" width="16" height="16" />
+                            <rect x="32" y="0" width="16" height="16" />
+                            <rect x="16" y="16" width="16" height="16" />
+                            <rect x="16" y="32" width="16" height="16" />
+                        </g>
+                        <g transform="translate(20,142)">
+                            <rect x="0" y="0" width="16" height="16" />
+                            <rect x="0" y="16" width="16" height="16" />
+                            <rect x="0" y="32" width="16" height="16" />
+                        </g>
+                        <g transform="translate(120,142)">
+                            <rect x="0" y="32" width="16" height="16" />
+                            <rect x="16" y="32" width="16" height="16" />
+                            <rect x="32" y="32" width="16" height="16" />
+                        </g>
+                    </g>
+                    <g font-size="18" text-anchor="middle" fill="currentColor">
+                        <text x="94" y="40">+</text><text x="194" y="40">=</text>
+                        <text x="94" y="106">+</text><text x="194" y="106">=</text>
+                        <text x="94" y="172">+</text><text x="194" y="172">=</text>
+                        <text x="244" y="176" font-size="24">?</text>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="ex-solution">
+            <p><b>Step 1 — Hypothesis.</b> Row 1: both figures shade the centre, and the result has no centre but keeps
+                the four corners. So common cells vanish and non-common cells stay, which is <b>XOR</b>.</p>
+            <p><b>Step 2 — Test on Row 2.</b> Top row $\{(0,0),(0,1),(0,2)\}$ and middle column $\{(0,1),(1,1),(2,1)\}$
+                share $(0,1)$. XOR leaves $\{(0,0),(0,2),(1,1),(2,1)\}$, which is exactly the third figure of Row 2 ✓.
+                The rule holds on both rows.</p>
+            <p><b>Step 3 — Apply to Row 3.</b> Left column $\{(0,0),(1,0),(2,0)\}$ and bottom row
+                $\{(2,0),(2,1),(2,2)\}$ share $(2,0)$. Removing it leaves $\{(0,0),(1,0),(2,1),(2,2)\}$.</p>
+            <div class="diagram-box">
+                <svg viewBox="0 0 120 72" width="150" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-label="Answer figure">
+                    <g transform="translate(36,8)">
+                        <path d="M0 0h48v48h-48z M16 0v48 M32 0v48 M0 16h48 M0 32h48" stroke="#64748b"
+                            stroke-width="1.5" fill="none" />
+                        <g fill="#2563eb" fill-opacity=".85">
+                            <rect x="0" y="0" width="16" height="16" />
+                            <rect x="0" y="16" width="16" height="16" />
+                            <rect x="16" y="32" width="16" height="16" />
+                            <rect x="32" y="32" width="16" height="16" />
+                        </g>
+                    </g>
+                    <text x="60" y="68" text-anchor="middle" font-size="11" fill="currentColor">Answer</text>
+                </svg>
+            </div>
+            <p><b>Check by counting.</b> $|E\oplus F|=3+3-2(1)=4$ shaded cells ✓. The answer figure has 4.</p>
+            <p><b>Answer:</b> the figure with shaded cells top-left, middle-left, bottom-middle and bottom-right.</p>
+        </div>
+    </div>
+
+    <div class="level-banner l3">Level 3 · Rank-Booster — Full Derivation + 30-Second Shortcut</div>
+
+    <div class="worked-example tier-3">
+        <div class="ex-header"><span class="badge badge-l3">Level 3</span><span
+                class="badge badge-type">Cryptarithmetic</span> <b>Example 7 — SEND + MORE = MONEY</b></div>
+        <div class="ex-problem">
+            <p>Each letter is a different digit and $S,M\neq0$. Solve $\ SEND+MORE=MONEY$ completely and prove the
+                solution is unique.</p>
+        </div>
+        <div class="ex-solution">
+            <p>Let $c_2,c_3,c_4$ be the carries out of the units, tens and hundreds columns, and $c_5$ the carry out of
+                the thousands column.</p>
+            <p><b>1. Leading digit.</b> Two 4-digit numbers sum to at most $19998$, so $M=\mathbf1$.</p>
+            <p><b>2. Thousands column.</b> $S+M+c_4=O+10M\Rightarrow S+1+c_4=O+10\Rightarrow O=S+c_4-9\le 1$. Since
+                $M=1$, $O\neq1$, so <b>$O=0$</b> and $S+c_4=9$, i.e. $(S=9,c_4=0)$ or $(S=8,c_4=1)$.</p>
+            <p><b>3. Hundreds column.</b> $E+O+c_3=N+10c_4\Rightarrow E+c_3=N+10c_4$.</p>
+            <ul>
+                <li>If $c_4=1$: $E+c_3\ge10$ forces $E=9,c_3=1$, so $N=0=O$. Contradiction. So <b>$c_4=0$ and $S=9$</b>.
+                </li>
+                <li>With $c_4=0$: $N=E+c_3$. Since $N\ne E$, $c_3=1$ and <b>$N=E+1$</b>.</li>
+            </ul>
+            <p><b>4. Tens column.</b> $N+R+c_2=E+10c_3=E+10$. Substituting $N=E+1$: $R+c_2=9$. $R\ne9$ (since $S=9$), so
+                $c_2=1$ and <b>$R=8$</b>.</p>
+            <p><b>5. Units column.</b> $D+E=Y+10$ (carry $c_2=1$). Used digits so far: $M=1,O=0,S=9,R=8$. The pool for
+                $E,N,D,Y$ is $\{2,3,4,5,6,7\}$, with $N=E+1$ and $D+E\ge12$ (since $Y\ge2$).</p>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>$(E,N)$</th>
+                        <th>Need $D\ge 12-E$</th>
+                        <th>Verdict</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>(2,3)</td>
+                        <td>$D\ge10$</td>
+                        <td>impossible</td>
+                    </tr>
+                    <tr>
+                        <td>(3,4)</td>
+                        <td>$D\ge9$</td>
+                        <td>impossible</td>
+                    </tr>
+                    <tr>
+                        <td>(4,5)</td>
+                        <td>$D\ge8$</td>
+                        <td>impossible</td>
+                    </tr>
+                    <tr>
+                        <td>(5,6)</td>
+                        <td>$D\ge7$; free digits $\{2,3,4,7\}$ so $D=7$, $Y=7+5-10=2$ ✓ free</td>
+                        <td><b>works</b></td>
+                    </tr>
+                    <tr>
+                        <td>(6,7)</td>
+                        <td>$D\ge6$; free digits $\{2,3,4,5\}$</td>
+                        <td>impossible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Only one branch survives, so the solution is <b>unique</b>: $E=5,N=6,D=7,Y=2$.</p>
+            <p><b>Verification.</b> $9567+1085=10652$ ✓. The letters $S,E,N,D,M,O,R,Y=9,5,6,7,1,0,8,2$ are all
+                different. Mod 9 filter: $S+E+D+R-Y=9+5+7+8-2=27\equiv0\pmod9$ ✓.</p>
+            <p><b>Answer: $9567+1085=10652$.</b></p>
+            <div class="shortcut-box">
+                <b>⚡ 30-Second Shortcut:</b> three forced facts come at once: $M=1$ (carry), $O=0$ (the only digit left
+                once $M=1$), $S=9$ (because $c_4=0$). Then the hundreds and tens columns give $N=E+1$ and $R=8$ by the
+                cancelling argument. Only the units column remains: you need $D+E\ge12$ with $E,N$ consecutive in
+                $\{2,\dots,7\}$. Scan from the top: $(E,D)=(5,7)$ is the only pair that fits, which gives $Y=2$. Total
+                time: under 30 seconds, with no guessing.
+            </div>
+        </div>
+    </div>
+
+    <div class="worked-example tier-3">
+        <div class="ex-header"><span class="badge badge-l3">Level 3</span><span class="badge badge-type">Circular
+                Seating</span> <b>Example 8 — Facing Directions with Eight Persons</b></div>
+        <div class="ex-problem">
+            <p>Eight friends A, B, C, D, E, F, G, H sit around a circular table. Four face the centre and four face
+                outward, and <b>no two adjacent persons face the same direction</b>. Further:</p>
+            <ol>
+                <li>A faces the centre.</li>
+                <li>C sits second to the right of A.</li>
+                <li>B is the immediate left neighbour of A.</li>
+                <li>D sits exactly opposite C.</li>
+                <li>E sits to the immediate right of C.</li>
+                <li>H is an immediate neighbour of A.</li>
+                <li>G and H face opposite directions.</li>
+            </ol>
+            <p>(i) Who sits second to the left of F? &nbsp; (ii) Which direction does D face? &nbsp; (iii) Who sits to
+                the immediate right of H?</p>
+        </div>
+        <div class="ex-solution">
+            <p><b>Step 1 — Anchor and pattern.</b> Number the seats $P_1,\dots,P_8$ clockwise and place A at $P_1$
+                (rotational symmetry). A faces the centre and neighbours must differ, so directions alternate:
+                $P_1,P_3,P_5,P_7$ face <b>IN</b>; $P_2,P_4,P_6,P_8$ face <b>OUT</b>.</p>
+            <p><b>Step 2 — Left/right rule.</b> IN-facing: right $=$ anticlockwise ($P_{k-1}$), left $=$ clockwise
+                ($P_{k+1}$). OUT-facing: the reverse.</p>
+            <p><b>Step 3 — Place people.</b></p>
+            <ul>
+                <li>(2) A is IN, so "right" is anticlockwise: $P_1\to P_8\to P_7$. <b>C at $P_7$</b> (IN).</li>
+                <li>(3) Immediate left of A (clockwise): <b>B at $P_2$</b> (OUT).</li>
+                <li>(4) Opposite of $P_7$ is $P_3$: <b>D at $P_3$</b> (IN).</li>
+                <li>(5) C is IN, so its immediate right is anticlockwise: $P_6$. <b>E at $P_6$</b> (OUT).</li>
+                <li>(6) H neighbours A, so $P_2$ or $P_8$. $P_2$ is taken, so <b>H at $P_8$</b> (OUT).</li>
+                <li>(7) G faces opposite to H (OUT), so G faces IN. The only free IN seat is $P_5$, so <b>G at
+                        $P_5$</b>. F takes the last seat, <b>$P_4$</b> (OUT).</li>
+            </ul>
+            <p>Every step was forced, so the arrangement is <b>unique</b>.</p>
+            <div class="diagram-box">
+                <svg viewBox="0 0 260 260" width="300" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-label="Final circular seating arrangement">
+                    <defs>
+                        <marker id="ch5-ar5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                            orient="auto">
+                            <path d="M0 0 L10 5 L0 10 z" fill="#2563eb" />
+                        </marker>
+                    </defs>
+                    <circle cx="130" cy="130" r="80" fill="none" stroke="#cbd5e1" stroke-width="2" />
+                    <g stroke="#2563eb" stroke-width="2" marker-end="url(#ch5-ar5)">
+                        <line x1="130" y1="68" x2="130" y2="84" />
+                        <line x1="199.3" y1="60.7" x2="210.6" y2="49.4" />
+                        <line x1="192" y1="130" x2="176" y2="130" />
+                        <line x1="199.3" y1="199.3" x2="210.6" y2="210.6" />
+                        <line x1="130" y1="192" x2="130" y2="176" />
+                        <line x1="60.7" y1="199.3" x2="49.4" y2="210.6" />
+                        <line x1="68" y1="130" x2="84" y2="130" />
+                        <line x1="60.7" y1="60.7" x2="49.4" y2="49.4" />
+                    </g>
+                    <g fill="#e0e7ff" stroke="#4f46e5" stroke-width="2">
+                        <circle cx="130" cy="50" r="16" />
+                        <circle cx="186.6" cy="73.4" r="16" />
+                        <circle cx="210" cy="130" r="16" />
+                        <circle cx="186.6" cy="186.6" r="16" />
+                        <circle cx="130" cy="210" r="16" />
+                        <circle cx="73.4" cy="186.6" r="16" />
+                        <circle cx="50" cy="130" r="16" />
+                        <circle cx="73.4" cy="73.4" r="16" />
+                    </g>
+                    <g font-size="14" font-weight="bold" text-anchor="middle" fill="#1e1b4b">
+                        <text x="130" y="55">A</text><text x="186.6" y="78.4">B</text><text x="210"
+                            y="135">D</text><text x="186.6" y="191.6">F</text>
+                        <text x="130" y="215">G</text><text x="73.4" y="191.6">E</text><text x="50"
+                            y="135">C</text><text x="73.4" y="78.4">H</text>
+                    </g>
+                </svg>
+                <div class="diagram-caption">Fig 5.10 — Final arrangement, clockwise from the top: A, B, D, F, G, E, C,
+                    H. Arrows show facing direction: A, D, G, C face the centre, and B, F, E, H face outward.</div>
+            </div>
+            <p><b>Step 4 — Answer the questions.</b></p>
+            <ul>
+                <li>(i) F is at $P_4$ (OUT), so left is anticlockwise: first left $=P_3$ (D), second left $=P_2$.
+                    <b>B</b>.
+                </li>
+                <li>(ii) D is at $P_3$, an IN seat. <b>Centre</b>.</li>
+                <li>(iii) H is at $P_8$ (OUT), so right is clockwise: $P_1$. <b>A</b>.</li>
+            </ul>
+            <p><b>Verification.</b> All seven clues re-checked on Fig 5.10: ✓. Alternation: A(in) B(out) D(in) F(out)
+                G(in) E(out) C(in) H(out) ✓.</p>
+            <div class="shortcut-box">
+                <b>⚡ 30-Second Shortcut — the Direction Sign:</b> give each seat a sign $\sigma=+1$ if IN and
+                $\sigma=-1$ if OUT. Then the person $k$ places to the <b>left</b> of seat $p$ is at seat $p+k\sigma$
+                (wrap $9\to1$, $0\to8$), and to the <b>right</b> at $p-k\sigma$. Check (i):
+                $p=4,\sigma=-1,k=2\Rightarrow 4-2=2$ (B) ✓. Check (iii): right of $p=8$, $\sigma=-1$: $8-(1)(-1)=9\to1$
+                (A) ✓. Write the IN/OUT alternation first and never re-derive "left" again.
+            </div>
+        </div>
+    </div>
+
+    <div class="worked-example tier-3">
+        <div class="ex-header"><span class="badge badge-l3">Level 3</span><span
+                class="badge badge-type">Calendars</span> <b>Example 9 — Day of the Week and Repeating Calendar</b>
+        </div>
+        <div class="ex-problem">
+            <p>(a) Find the day of the week on 15 August 1947. <br>(b) In which year after 2026 will the calendar of
+                2026 repeat exactly?</p>
+        </div>
+        <div class="ex-solution">
+            <p><b>(a) Full odd-days derivation.</b> Completed years before 1947: $1946=1600+300+46$.</p>
+            <ul>
+                <li>$1600$ years $=4$ full 400-year cycles $\to0$ odd days.</li>
+                <li>$300$ years $\to1$ odd day.</li>
+                <li>Remaining $46$ years: $\lfloor46/4\rfloor=11$ leap and $35$ ordinary years, giving
+                    $11\cdot2+35=57=8\cdot7+1\to1$ odd day. (Formula: $(46+11)\bmod7=1$ ✓.)</li>
+                <li>Days of 1947 up to 15 August: $31+28+31+30+31+30+31=212$ for January–July, plus
+                    $15=227=32\cdot7+3\to3$ odd days. (1947 is not a leap year, since $1947$ is not divisible by 4.)
+                </li>
+            </ul>
+            <p>Total odd days $=0+1+1+3=5\to$ <b>Friday</b>.</p>
+            <p><b>(b) Repeat of 2026.</b> 2026 is an ordinary year. Add $1$ per ordinary year and $2$ per leap year
+                (2028, 2032, 2036 are leap), as a running total from the start of 2026:</p>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>After year</th>
+                        <th>2026</th>
+                        <th>2027</th>
+                        <th>2028</th>
+                        <th>2029</th>
+                        <th>2030</th>
+                        <th>2031</th>
+                        <th>2032</th>
+                        <th>2033</th>
+                        <th>2034</th>
+                        <th>2035</th>
+                        <th>2036</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Running odd days</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td><b>7</b></td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td><b>14</b></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>The total is a multiple of 7 after 2031, so the candidate is <b>2032</b>. But 2032 is a leap year, while
+                2026 is ordinary, so the calendars cannot match (February would differ). The next multiple of 7 is $14$,
+                after 2036, so the candidate is <b>2037</b>, an ordinary year ✓.</p>
+            <p><b>Answers: (a) Friday; (b) 2037.</b></p>
+            <div class="shortcut-box">
+                <b>⚡ 30-Second Shortcut:</b> (a) Use the <b>Doomsday method</b>. The century anchor for the 1900s is
+                Wednesday. For year $47$: $\lfloor47/12\rfloor=3$, remainder $11$, $\lfloor11/4\rfloor=2$, and
+                $3+11+2=16\equiv2$. So the doomsday of 1947 is Wednesday $+2=$ Friday. The date 8 August (8/8) is always
+                a doomsday, and $15$ August is exactly 7 days later, so <b>Friday</b>. (b) Memorise the gaps: an
+                ordinary year repeats after <b>6 or 11</b> years. Try $+6=2032$ (leap, so fail), then $+11=2037$ ✓. A
+                leap year repeats after 28 years.
+            </div>
+        </div>
+    </div>
+
+</article>
