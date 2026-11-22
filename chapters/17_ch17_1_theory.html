@@ -1,0 +1,1383 @@
+<article data-volume="Volume 3: Physics (Paper 2)"
+    data-title="Chapter 17: Rectilinear Motion, Non-Uniform Graphs &amp; Calculus Kinematics">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 3: Physics (Paper 2) &bull; Chapter 17 &bull; Part 1 of 3: Theory &amp; Worked
+            Examples</div>
+        <h1>Rectilinear Motion, Non-Uniform Graphs &amp; Calculus Kinematics</h1>
+        <p>From foundational one-dimensional kinematics to NSEJS, NTSE Stage-2, and Class 11 Resonance Foundation
+            traps—master velocity reversals, gravity symmetry, relative frames, non-uniform graph geometry, and
+            first-principles calculus kinematics.</p>
+        <div class="tag-row">
+            <span class="meta-pill">Target Study Time: 8 Hours</span>
+            <span class="meta-pill">Core + Olympiad Bridge</span>
+            <span class="meta-pill">9 Graded Worked Examples</span>
+            <span class="meta-pill">4 Precision Vector Diagrams</span>
+        </div>
+    </header>
+
+    <!-- ==================== SECTION 1 ==================== -->
+    <h2 class="section-heading">1. Frame of Reference, Distance vs. Displacement &amp; Average Kinematics</h2>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Foundation: Frame of Reference</span>
+        <p>Motion is never absolute; it exists only relative to a chosen <strong>Frame of Reference</strong>—a rigid
+            coordinate system (an origin $O$ and directional axes) paired with a synchronized clock. In
+            <strong>rectilinear (1D) motion</strong>, a particle is constrained to move along a single straight line
+            (typically the $x$-axis or vertical $y$-axis), so its entire vector character reduces to a single algebraic
+            sign ($+$ or $-$).
+        </p>
+        <ul>
+            <li><strong>Position ($x$):</strong> The signed coordinate of the particle relative to the origin $O$ at
+                instant $t$, written as $x(t)$.</li>
+            <li><strong>Displacement ($\Delta x$):</strong> The net change in position vector over $[t_1, t_2]$:
+                $$\Delta x = x(t_2) - x(t_1)$$
+                Displacement depends <em>solely</em> on endpoints, can be positive, negative, or zero, and is completely
+                blind to the path taken in between.</li>
+            <li><strong>Distance ($d$):</strong> The total actual path length traversed over $[t_1, t_2]$. Formally, $d
+                = \int_{t_1}^{t_2} |v(t)|\,dt$. Distance is a non-negative scalar that can never decrease with time.
+            </li>
+            <li><strong>Universal Inequality:</strong> For any interval of motion,
+                $$\text{Distance} \ge |\text{Displacement}| \qquad \text{and} \qquad \text{Average Speed} \ge
+                |\text{Average Velocity}|$$
+                Equality holds <strong>if and only if</strong> the particle moves along a straight line <em>without
+                    reversing direction</em> (i.e., $v(t)$ never changes sign in $(t_1, t_2)$).</li>
+        </ul>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Critical BEST Trap: The Velocity-Reversal (Turnaround) Protocol</span>
+        <p>Students routinely substitute endpoints $t_1$ and $t_2$ into a polynomial position function such as $x(t) =
+            2t^2 - 5t + 6$ and report $|x(t_2) - x(t_1)|$ as the distance. <strong>That gives only the magnitude of
+                displacement!</strong> Whenever velocity changes sign inside $(t_1, t_2)$, the particle turns around and
+            retraces ground.</p>
+        <p><strong>Mandatory 4-Step Distance Algorithm for any $x(t)$ over $[t_1, t_2]$:</strong></p>
+        <ol>
+            <li>Differentiate to find instantaneous velocity: $v(t) = \dfrac{dx}{dt}$.</li>
+            <li>Locate all turning instants $t_0$ by solving $v(t_0) = 0$.</li>
+            <li>Filter only those roots $t_0$ that lie strictly inside the open interval $(t_1, t_2)$.</li>
+            <li>Split the motion at each interior turning point and sum the absolute segment lengths:
+                $$d = |x(t_0) - x(t_1)| + |x(t_2) - x(t_0)|$$
+            </li>
+        </ol>
+        <p><em>Quick Verification on $x(t) = 2t^2 - 5t + 6$ over $t \in [0, 3]\text{ s}$:</em> Here $v(t) = 4t - 5 = 0
+            \implies t_0 = 1.25\text{ s} \in (0, 3)$. Computing positions: $x(0) = 6\text{ m}$, $x(1.25) = 2(1.5625) -
+            6.25 + 6 = 2.875\text{ m}$, and $x(3) = 18 - 15 + 6 = 9\text{ m}$. Thus $\Delta x = 9 - 6 = +3\text{ m}$,
+            whereas true distance $d = |2.875 - 6| + |9 - 2.875| = 3.125 + 6.125 = 9.25\text{ m}$ (more than triple the
+            displacement!).</p>
+    </div>
+
+    <h3>Average Velocity vs. Average Speed: Exact Derivations</h3>
+    <p>Over a finite time interval $\Delta t = t_2 - t_1$, average velocity and average speed are defined strictly from
+        totals—<strong>never</strong> by blindly averaging individual speeds:</p>
+    $$v_{\text{avg}} = \frac{\Delta x}{\Delta t} = \frac{x(t_2) - x(t_1)}{t_2 - t_1}, \qquad \langle \text{speed}
+    \rangle = \frac{\text{Total Distance}}{\text{Total Time}}$$
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Motion Regime (Unidirectional)</th>
+                <th>First-Principles Derivation</th>
+                <th>Exact Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Equal Time Intervals</strong><br>Speeds $v_1, v_2, \dots, v_n$ each maintained for equal
+                    duration $T$</td>
+                <td>Total distance $= v_1 T + v_2 T + \dots + v_n T$.<br>Total time $= nT$. Divide total distance by
+                    $nT$.</td>
+                <td><strong>Arithmetic Mean (AM):</strong><br>$$v_{\text{avg}} = \frac{v_1 + v_2 + \dots + v_n}{n}$$
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Equal Distance Intervals</strong><br>Speeds $v_1, v_2, \dots, v_n$ each maintained over
+                    equal distance $D$</td>
+                <td>Total distance $= nD$.<br>Total time $= \frac{D}{v_1} + \frac{D}{v_2} + \dots +
+                    \frac{D}{v_n}$.<br>Divide $nD$ by total time and cancel $D$.</td>
+                <td><strong>Harmonic Mean (HM):</strong><br>$$\frac{n}{v_{\text{avg}}} = \frac{1}{v_1} + \frac{1}{v_2} +
+                    \dots + \frac{1}{v_n}$$<br>For $n=2$: $v_{\text{avg}} = \dfrac{2v_1 v_2}{v_1 + v_2}$</td>
+            </tr>
+            <tr>
+                <td><strong>Resonance Hybrid Split</strong><br>First half of distance at $v_0$; remaining half covered
+                    in two equal time intervals at $v_1$ and $v_2$</td>
+                <td>Second half has equal times $\implies v_{12} = \frac{v_1 + v_2}{2}$. Now the full trip consists of
+                    two equal distances at $v_0$ and $v_{12}$; apply 2-term HM.</td>
+                <td>$$v_{\text{avg}} = \frac{2v_0\left(\frac{v_1+v_2}{2}\right)}{v_0 + \frac{v_1+v_2}{2}} =
+                    \frac{2v_0(v_1 + v_2)}{2v_0 + v_1 + v_2}$$</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: AM &ge; HM Inequality Check</span>
+        <p>For any positive distinct speeds $v_1, v_2$, the Arithmetic Mean always strictly exceeds the Harmonic Mean
+            ($\frac{v_1+v_2}{2} > \frac{2v_1v_2}{v_1+v_2}$). Physically, when covering equal <em>distances</em>, the
+            particle spends <strong>more time</strong> moving at the slower speed, dragging the time-weighted average
+            closer to the smaller speed. In fact, $v_{\text{avg}}$ for two equal distances can never exceed $2
+            v_{\min}$, even if the faster speed approaches infinity!</p>
+    </div>
+
+    <!-- ==================== SECTION 2 ==================== -->
+    <h2 class="section-heading">2. Uniformly Accelerated Motion (UAM), $n$-th Second Trap &amp; Reaction Time</h2>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Derivations of the 5 UAM Equations ($a = \text{constant}$)</span>
+        <p>Every standard kinematic equation rests on one strict prerequisite: <strong>acceleration $a$ must be strictly
+                constant in both magnitude and direction</strong> over the entire interval $[0, t]$. Let $u$ be initial
+            velocity at $t = 0$, $v$ be velocity at time $t$, and $s = x(t) - x(0)$ be displacement.</p>
+        <ol>
+            <li><strong>Velocity–Time Relation:</strong> From $a = \dfrac{dv}{dt}$, separate variables and integrate:
+                $$\int_u^v dv = \int_0^t a\,dt \implies v - u = at \implies \mathbf{v = u + at}$$
+            </li>
+            <li><strong>Displacement–Time Relation:</strong> Substitute $v = \dfrac{dx}{dt} = u + at$ and integrate:
+                $$\int_0^s dx = \int_0^t (u + at)\,dt \implies \mathbf{s = ut + \frac{1}{2}at^2}$$
+            </li>
+            <li><strong>Average-Velocity Displacement Form:</strong> Factor $t$ from $s = ut + \frac{1}{2}at^2 =
+                t\left(u + \frac{1}{2}at\right)$. Replacing $at = v - u$ yields:
+                $$s = t\left(u + \frac{v - u}{2}\right) \implies \mathbf{s = \left(\frac{u + v}{2}\right)t}$$
+                <em>Warning:</em> $v_{\text{avg}} = \frac{u+v}{2}$ is valid <strong>only</strong> for constant
+                acceleration (linear $v\text{-}t$ graph).
+            </li>
+            <li><strong>Velocity–Displacement Relation (Time-Independent):</strong> From $a = \dfrac{dv}{dt} =
+                \dfrac{dv}{dx}\cdot\dfrac{dx}{dt} = v\dfrac{dv}{dx}$:
+                $$\int_u^v v\,dv = \int_0^s a\,dx \implies \frac{v^2 - u^2}{2} = as \implies \mathbf{v^2 - u^2 = 2as}$$
+            </li>
+            <li><strong>Displacement in the $n$-th Second ($t = n-1$ to $t = n$):</strong>
+                $$s_n = s(n) - s(n-1) = \left[un + \frac{1}{2}an^2\right] - \left[u(n-1) + \frac{1}{2}a(n-1)^2\right]$$
+                Expanding $(n-1)^2 = n^2 - 2n + 1$:
+                $$s_n = u(n - n + 1) + \frac{1}{2}a\left(n^2 - n^2 + 2n - 1\right) \implies \mathbf{s_n = u +
+                \frac{a}{2}(2n - 1)}$$
+                <em>Dimensional Check:</em> Though $s_n = u + \frac{a}{2}(2n-1)$ looks dimensionally mismatched at first
+                glance, it carries a hidden unit time factor $\Delta t_0 = 1\text{ s}$: $s_n = u(1\text{ s}) +
+                \frac{a}{2}(2n-1)(1\text{ s})^2$, which strictly has dimensions $[L]$.
+            </li>
+        </ol>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Mid-Time vs. Mid-Point Velocity</span>
+        <p>For uniformly accelerated motion from speed $u$ to speed $v$ over distance $s$ and time $T$:</p>
+        <ul>
+            <li><strong>Velocity at Mid-Time ($t = T/2$):</strong> $v_{\text{mid-time}} = u + a\left(\dfrac{T}{2}\right)
+                = u + \dfrac{v - u}{2} = \dfrac{u + v}{2}$ (Arithmetic Mean).</li>
+            <li><strong>Velocity at Mid-Point ($x = s/2$):</strong> Apply $v^2 - u^2 = 2as$ separately to each half:
+                $$v_m^2 - u^2 = 2a\left(\frac{s}{2}\right) = as \quad \text{and} \quad v^2 - v_m^2 =
+                2a\left(\frac{s}{2}\right) = as$$
+                Equating the left sides gives $v_m^2 - u^2 = v^2 - v_m^2 \implies 2v_m^2 = u^2 + v^2 \implies
+                \mathbf{v_{\text{mid-point}} = \sqrt{\frac{u^2 + v^2}{2}}}$ (Root-Mean-Square).</li>
+        </ul>
+        <p>Because $\text{RMS} \ge \text{AM}$, we always have $v_{\text{mid-point}} \ge v_{\text{mid-time}}$ (valid for
+            both acceleration and constant retardation without reversal).</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Fatal Trap: Reversal INSIDE the $n$-th Second</span>
+        <p>When $u$ and $a$ have opposite signs, the particle momentarily stops at $t_0 = -\dfrac{u}{a}$. If $t_0$ falls
+            strictly inside the $n$-th second—meaning $n - 1 &lt; t_0 &lt; n$—then $s_n = u + \frac{a}{2}(2n-1)$ yields
+            the <strong>net displacement</strong>, NOT the distance travelled!</p>
+        <p><strong>Exact Distance During Reversal in the $n$-th Second:</strong> Split at $t_0$. Since the particle has
+            zero speed at $t_0$, the forward distance over $[n-1, t_0]$ is $\frac{1}{2}|a|(t_0 - n + 1)^2$ and the
+            backward distance over $[t_0, n]$ is $\frac{1}{2}|a|(n - t_0)^2$. Therefore:</p>
+        $$d_n = \frac{1}{2}|a|\left[(t_0 - n + 1)^2 + (n - t_0)^2\right]$$
+        <p><strong>Classic BEST Special Case:</strong> If the particle stops right at the midpoint of the $n$-th second
+            ($t_0 = n - 0.5$), its displacement in the $n$-th second is $s_n = 0$, while its true distance is $d_n =
+            \frac{1}{2}|a|\left(\frac{1}{4} + \frac{1}{4}\right) = \dfrac{|a|}{4}$.</p>
+    </div>
+
+    <h3>Stopping Distance &amp; Reaction-Time Mechanics</h3>
+    <p>When a driver spots an obstacle while travelling at speed $u$, two sequential phases govern stopping:</p>
+    <ol>
+        <li><strong>Reaction Phase (constant speed $u$ for reaction time $t_r$):</strong> The car travels $s_r = u t_r$
+            before the brake pads even engage.</li>
+        <li><strong>Braking Phase (constant retardation $a_r$ until $v = 0$):</strong> Using $0^2 - u^2 = -2a_r s_b$,
+            the braking distance is $s_b = \dfrac{u^2}{2a_r} \propto u^2$, and braking time is $t_b = \dfrac{u}{a_r}$.
+        </li>
+    </ol>
+    $$S_{\text{total}} = u t_r + \frac{u^2}{2a_r}$$
+    <p><strong>Exam Trap:</strong> Doubling initial speed $u$ quadruples the <em>braking distance</em> ($s_b \propto
+        u^2$), but it does <strong>not</strong> quadruple the <em>total stopping distance</em> when $t_r &gt; 0$ because
+        the reaction distance $u t_r$ only doubles.</p>
+
+    <!-- ==================== SECTION 3 ==================== -->
+    <h2 class="section-heading">3. Motion Under Gravity: Symmetry, Quadratic Identities &amp; Moving Platforms</h2>
+
+    <p>Near Earth's surface (neglecting air resistance and height variation of gravity), every freely falling
+        body—regardless of its mass—experiences the exact same downward acceleration $g$ ($9.8\text{ m/s}^2$ or
+        $10\text{ m/s}^2$, always check the problem statement). Unless solving a pure drop problem, lock your sign
+        convention as <strong>upward positive ($+y$)</strong>, so $a = -g$.</p>
+
+    <div class="concept-box">
+        <span class="box-label">Galileo's Odd-Number Law &amp; Equal-Height Time Ratios</span>
+        <p>For an object dropped from rest ($u = 0$, downward $+y$, $a = +g$):</p>
+        <ul>
+            <li><strong>Equal Time Intervals ($\tau$):</strong> Distances fallen in consecutive equal intervals $\tau$
+                follow $s_n = \frac{1}{2}g\tau^2(2n-1)$:
+                $$s_1 : s_2 : s_3 : s_4 : \dots = 1 : 3 : 5 : 7 : \dots$$
+                Cumulative distances from the drop point scale as squares: $y_1 : y_2 : y_3 : y_4 = 1 : 4 : 9 : 16$.
+            </li>
+            <li><strong>Equal Distance Segments ($h$):</strong> Time to fall cumulative distance $kh$ is $T_k =
+                \sqrt{\frac{2kh}{g}}$. Subtracting consecutive times gives the ratio of times to cross successive equal
+                heights $h$:
+                $$\Delta t_1 : \Delta t_2 : \Delta t_3 : \dots = 1 : (\sqrt{2} - 1) : (\sqrt{3} - \sqrt{2}) : (\sqrt{4}
+                - \sqrt{3}) : \dots$$
+            </li>
+            <li><strong>Leaking Tap Droplet Spacing:</strong> If water drops detach at regular time intervals $\tau$,
+                then at the instant the $N$-th drop is about to fall, the $k$-th drop ($k = 1, 2, \dots, N-1$) has
+                fallen for time $(N-k)\tau$, placing it at distance $y_k = \frac{1}{2}g\tau^2(N-k)^2$ below the nozzle.
+                Going from the tap downward, drop positions stand in the ratio $1 : 4 : 9 : 16$, and the gaps between
+                consecutive drops stand in the ratio $1 : 3 : 5 : 7$.</li>
+        </ul>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 340" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Vertical-throw symmetry timeline showing ascent and descent instants">
+            <defs>
+                <marker id="arr-vert-up" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#0f766e" />
+                </marker>
+                <marker id="arr-vert-down" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#b91c1c" />
+                </marker>
+                <marker id="arr-vert-axis" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+                </marker>
+            </defs>
+
+            <!-- Background & Title -->
+            <rect x="0" y="0" width="680" height="340" rx="8" fill="#f8fafc" />
+            <text x="20" y="26" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#0f172a">Vertical Projection Symmetry Timeline (Ascent &amp; Descent Separated for Clarity)</text>
+
+            <!-- Vertical Height Axis -->
+            <line x1="58" y1="295" x2="58" y2="48" stroke="#475569" stroke-width="1.6"
+                marker-end="url(#arr-vert-axis)" />
+            <text x="42" y="54" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#334155">+y</text>
+
+            <!-- Horizontal Reference Levels -->
+            <line x1="52" y1="290" x2="425" y2="290" stroke="#334155" stroke-width="2" />
+            <text x="16" y="294" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#334155">y =
+                0</text>
+
+            <line x1="52" y1="185" x2="425" y2="185" stroke="#64748b" stroke-width="1.2" stroke-dasharray="5,4" />
+            <text x="16" y="189" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#475569">y =
+                h</text>
+
+            <line x1="52" y1="70" x2="425" y2="70" stroke="#64748b" stroke-width="1.2" stroke-dasharray="5,4" />
+            <text x="14" y="74" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#475569">y =
+                H</text>
+
+            <!-- Ascent Path -->
+            <line x1="160" y1="290" x2="160" y2="85" stroke="#0f766e" stroke-width="2.5" />
+            <!-- Apex Arc -->
+            <path d="M 160 85 Q 250 42 340 85" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="4,3" />
+            <!-- Descent Path -->
+            <line x1="340" y1="85" x2="340" y2="285" stroke="#b91c1c" stroke-width="2.5" />
+
+            <!-- Velocity Arrows -->
+            <!-- Launch +u -->
+            <line x1="160" y1="290" x2="160" y2="236" stroke="#0f766e" stroke-width="3"
+                marker-end="url(#arr-vert-up)" />
+            <circle cx="160" cy="290" r="5" fill="#0f766e" />
+            <text x="90" y="275" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0f766e">v =
+                +u</text>
+            <text x="142" y="308" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#0f172a">t
+                = 0</text>
+
+            <!-- Ascent at h -->
+            <line x1="160" y1="185" x2="160" y2="142" stroke="#0f766e" stroke-width="3"
+                marker-end="url(#arr-vert-up)" />
+            <circle cx="160" cy="185" r="5" fill="#0f766e" />
+            <text x="86" y="176" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0f766e">v =
+                +v&#8320;(h)</text>
+            <text x="172" y="178" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0f172a">t
+                = t&#8321;</text>
+
+            <!-- Apex -->
+            <circle cx="250" cy="63" r="5.5" fill="#1d4ed8" />
+            <text x="210" y="47" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#1d4ed8">Apex: v = 0, t = u/g</text>
+            <text x="200" y="88" font-family="system-ui, sans-serif" font-size="10.5" fill="#475569">Last 1 s up = First
+                1 s down = g/2</text>
+
+            <!-- Descent at h -->
+            <line x1="340" y1="185" x2="340" y2="228" stroke="#b91c1c" stroke-width="3"
+                marker-end="url(#arr-vert-down)" />
+            <circle cx="340" cy="185" r="5" fill="#b91c1c" />
+            <text x="352" y="178" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0f172a">t
+                = t&#8322;</text>
+            <text x="352" y="216" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#b91c1c">v
+                = &minus;v&#8320;(h)</text>
+
+            <!-- Landing -u -->
+            <line x1="340" y1="242" x2="340" y2="284" stroke="#b91c1c" stroke-width="3"
+                marker-end="url(#arr-vert-down)" />
+            <circle cx="340" cy="290" r="5" fill="#b91c1c" />
+            <text x="352" y="276" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#b91c1c">v
+                = &minus;u</text>
+            <text x="315" y="308" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#0f172a">t
+                = T = 2u/g</text>
+
+            <!-- Gravity Indicator -->
+            <line x1="250" y1="120" x2="250" y2="162" stroke="#b91c1c" stroke-width="2"
+                marker-end="url(#arr-vert-down)" />
+            <text x="258" y="145" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#b91c1c">a
+                = &minus;g</text>
+            <text x="258" y="159" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">(always!)</text>
+
+            <!-- Right-side Symmetry Formula Panel -->
+            <rect x="444" y="48" width="220" height="254" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4" />
+            <text x="458" y="72" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1e293b">Quadratic Symmetry Vault</text>
+            <line x1="458" y1="80" x2="650" y2="80" stroke="#e2e8f0" stroke-width="1" />
+            <text x="458" y="102" font-family="system-ui, sans-serif" font-size="11" fill="#334155">Height eqn: g
+                t&#178; &minus; 2u t + 2h = 0</text>
+            <text x="458" y="130" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#0f766e">1) t&#8321; + t&#8322; = 2u / g = T</text>
+            <text x="458" y="148" font-family="system-ui, sans-serif" font-size="10.5" fill="#475569">&rarr; u = (1/2) g
+                (t&#8321; + t&#8322;)</text>
+            <text x="458" y="176" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#1d4ed8">2) t&#8321; &middot; t&#8322; = 2h / g</text>
+            <text x="458" y="194" font-family="system-ui, sans-serif" font-size="10.5" fill="#475569">&rarr; h = (1/2) g
+                t&#8321; t&#8322;</text>
+            <text x="458" y="222" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#7c3aed">3) H = (1/8) g (t&#8321; + t&#8322;)&#178;</text>
+            <text x="458" y="250" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#b91c1c">4) H &minus; h = (1/8) g (t&#8322; &minus; t&#8321;)&#178;</text>
+            <text x="458" y="282" font-family="system-ui, sans-serif" font-size="10.5" font-style="italic"
+                fill="#475569">At any level h: |v_up| = |v_down|</text>
+        </svg>
+        <div class="diagram-caption">Figure 17.1: Vertical projection exhibits exact kinematic symmetry across the apex
+            ($t = u/g$), yielding Vieta's quadratic identities directly from $h = ut - \frac{1}{2}gt^2$.</div>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Proof of the Height–Time Quadratic Identities</span>
+        <p>When a stone is projected vertically upward with initial velocity $u$ from ground ($y = 0$), its height $h$
+            at time $t$ satisfies:</p>
+        $$h = ut - \frac{1}{2}gt^2 \implies gt^2 - 2ut + 2h = 0$$
+        <p>For any height $h &lt; H = \dfrac{u^2}{2g}$, this quadratic has two distinct positive roots $t_1$ (during
+            ascent) and $t_2$ (during descent). Applying Vieta's formulas:</p>
+        <ul>
+            <li><strong>Sum of roots:</strong> $t_1 + t_2 = \dfrac{2u}{g} = T \implies u = \dfrac{g(t_1 + t_2)}{2}$.
+            </li>
+            <li><strong>Product of roots:</strong> $t_1 t_2 = \dfrac{2h}{g} \implies h = \dfrac{1}{2}g t_1 t_2$.</li>
+            <li><strong>Maximum height:</strong> $H = \dfrac{u^2}{2g} =
+                \dfrac{1}{2g}\left[\dfrac{g(t_1+t_2)}{2}\right]^2 = \dfrac{1}{8}g(t_1 + t_2)^2$.</li>
+            <li><strong>Height above $h$ to the apex:</strong> $H - h = \dfrac{1}{8}g(t_1 + t_2)^2 - \dfrac{1}{2}gt_1
+                t_2 = \dfrac{1}{8}g\left[(t_1+t_2)^2 - 4t_1 t_2\right] = \dfrac{1}{8}g(t_2 - t_1)^2$.</li>
+            <li><strong>Universal Last-Second Ascent Property:</strong> Regardless of initial velocity $u$ (provided $u
+                \ge g$), the distance travelled during the <em>last $1\text{ s}$ of ascent</em> equals the distance
+                fallen during the <em>first $1\text{ s}$ of descent</em>: $\Delta y = \frac{1}{2}g(1)^2 = \dfrac{g}{2}$
+                ($5\text{ m}$ if $g = 10\text{ m/s}^2$).</li>
+        </ul>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Moving-Platform Release Rule (Rising/Descending Balloon or Elevator)</span>
+        <p>When an object is "dropped" or "gently released" from a moving balloon, helicopter, or elevator at height $H$
+            above the ground:</p>
+        <ol>
+            <li><strong>Velocity IS inherited:</strong> At the instant of release, the object carries the exact
+                instantaneous velocity $v_0$ of the platform (upward $+v_0$ if rising, downward $-v_0$ if descending).
+            </li>
+            <li><strong>Acceleration is NOT inherited:</strong> Even if the balloon or elevator is accelerating upward
+                at $a_{\text{lift}}$, the very millisecond the object loses physical contact, the only force acting on
+                it is gravity, so its acceleration immediately becomes $a = -g$.</li>
+        </ol>
+        <p>With upward $+y$ and origin at the release point, the ground sits at $y = -H$. Therefore, the time of flight
+            $t$ is obtained in a <strong>single equation</strong> without splitting ascent and descent:
+            $$-H = v_0 t - \frac{1}{2}gt^2 \implies \frac{1}{2}gt^2 - v_0 t - H = 0$$
+        </p>
+    </div>
+
+    <!-- ==================== SECTION 4 ==================== -->
+    <h2 class="section-heading">4. One-Dimensional Relative Motion (Resonance / Olympiad Bridge)</h2>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Transforming Into a Moving Frame</span>
+        <p>Whenever two bodies A and B move along the same straight line, switching from the ground frame to the
+            reference frame of B collapses a two-body tracking problem into a single-body problem. Define relative
+            position, velocity, and acceleration of A <em>with respect to</em> B as:</p>
+        $$x_{AB} = x_A - x_B, \qquad v_{AB} = v_A - v_B, \qquad a_{AB} = a_A - a_B$$
+        <p>If both $a_A$ and $a_B$ are constant, then $a_{AB}$ is constant, and all UAM equations hold intact in
+            relative coordinates:</p>
+        $$v_{AB} = u_{AB} + a_{AB}t, \qquad s_{AB} = u_{AB}t + \frac{1}{2}a_{AB}t^2, \qquad v_{AB}^2 - u_{AB}^2 =
+        2a_{AB}s_{AB}$$
+    </div>
+
+    <h3>Three High-Yield BEST Applications of 1D Relative Motion</h3>
+    <ol>
+        <li><strong>Overtaking Extended Bodies (Trains / Convoys):</strong> For Train A (length $L_A$) to completely
+            overtake or cross Train B (length $L_B$), the rear of A must pass the front of B (same direction) or rear of
+            B (opposite direction). In both cases, total relative displacement needed is $s_{\text{rel}} = L_A + L_B$:
+            $$t_{\text{cross}} = \frac{L_A + L_B}{|v_A - v_B|} \text{ (same direction)}, \qquad t_{\text{cross}} =
+            \frac{L_A + L_B}{v_A + v_B} \text{ (opposite directions)}$$
+        </li>
+        <li><strong>Catching an Accelerating Bus (Minimum Velocity &amp; Minimum Separation):</strong> Suppose a runner
+            starts distance $d$ behind a stationary bus that accelerates forward at constant $a$, while the runner moves
+            at constant speed $u$. In the bus's frame: $u_{\text{rel}} = u$, $a_{\text{rel}} = -a$, and the runner must
+            cover $s_{\text{rel}} = d$.
+            <ul>
+                <li><strong>Condition to just catch:</strong> Relative velocity reaches zero right at $s_{\text{rel}} =
+                    d$:
+                    $$0^2 - u_{\min}^2 = 2(-a)d \implies \mathbf{u_{\min} = \sqrt{2ad}}$$
+                </li>
+                <li><strong>If $u &lt; \sqrt{2ad}$ (cannot catch):</strong> Separation shrinks as long as
+                    $v_{\text{rel}} &gt; 0$ and widens once $v_{\text{bus}} &gt; u$. Hence <strong>minimum separation
+                        occurs when $v_{\text{rel}} = 0$</strong> (i.e., $v_{\text{bus}} = u$ at $t = u/a$), giving:
+                    $$d_{\min} = d - \frac{u^2}{2a}$$
+                </li>
+                <li><strong>If $u &gt; \sqrt{2ad}$:</strong> The quadratic $\frac{1}{2}at^2 - ut + d = 0$ yields two
+                    positive roots $t_1 &lt; t_2$: the runner overtakes the bus at $t_1$, and if the runner keeps going
+                    without boarding, the faster-accelerating bus overtakes the runner back at $t_2$.</li>
+            </ul>
+        </li>
+        <li><strong>The Zero Relative-Acceleration Shortcut Under Gravity:</strong> Consider <em>any</em> two
+            projectiles A and B simultaneously in free fall along a vertical line. Since both share the exact same
+            gravitational acceleration $-g$:
+            $$a_{AB} = (-g) - (-g) = \mathbf{0}$$
+            Relative velocity $v_{AB} = u_A - u_B$ remains strictly <strong>constant</strong> throughout their
+            simultaneous flight! Hence, the meeting instant is simply:
+            $$t_{\text{meet}} = \frac{\text{Initial separation } s_{\text{rel},0}}{\text{Initial relative speed of
+            approach } v_{\text{approach}}}$$
+            <em>Mandatory Sanity Check:</em> Always verify that $t_{\text{meet}}$ is smaller than the ground-impact time
+            of both stones; otherwise they never meet in mid-air.
+        </li>
+    </ol>
+
+    <!-- ==================== SECTION 5 ==================== -->
+    <h2 class="section-heading">5. Graphical Representation of Motion &amp; Non-Uniform Graphs</h2>
+
+    <p>BEST Paper 2 heavily tests graph-literacy because graphs encode differential and integral relationships visually.
+        Every kinematic graph obeys two universal geometric laws: <strong>tangent slope equals rate of change</strong>,
+        and <strong>signed area under the curve equals net accumulation</strong>.</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Graph Type</th>
+                <th>Slope (Derivative)</th>
+                <th>Area Under Curve (Integral)</th>
+                <th>Key Physical Diagnostic</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>$x\text{-}t$</strong> (Position–Time)</td>
+                <td>$\dfrac{dx}{dt} = v$ (instantaneous velocity)</td>
+                <td>No standard kinematic meaning</td>
+                <td>Concave up ($\cup$) $\implies a &gt; 0$; concave down ($\cap$) $\implies a &lt; 0$; straight line
+                    $\implies a = 0$.</td>
+            </tr>
+            <tr>
+                <td><strong>$v\text{-}t$</strong> (Velocity–Time)</td>
+                <td>$\dfrac{dv}{dt} = a$ (instantaneous acceleration)</td>
+                <td>Signed area $= \Delta x = \int v\,dt$<br>Unsigned area $= \text{Distance} = \int |v|\,dt$</td>
+                <td>Crossing the $t$-axis ($v = 0$) marks a <strong>turning point</strong>. Moving away from $t$-axis
+                    $\implies$ speeding up.</td>
+            </tr>
+            <tr>
+                <td><strong>$a\text{-}t$</strong> (Accel.–Time)</td>
+                <td>$\dfrac{da}{dt} = j$ (jerk)</td>
+                <td>Signed area $= \Delta v = v_f - v_i = \int a\,dt$</td>
+                <td><em>Trap:</em> Area gives <strong>change</strong> in velocity $\Delta v$, NOT final velocity $v_f$
+                    unless $v_i = 0$.</td>
+            </tr>
+            <tr>
+                <td><strong>$v\text{-}x$</strong> (Bridge)</td>
+                <td>$\dfrac{dv}{dx} \implies a = v\left(\dfrac{dv}{dx}\right)$</td>
+                <td>Not directly $t$ (time is $\int \frac{dx}{v}$)</td>
+                <td>Subnormal length equals acceleration $a = v\,\tan\theta$.</td>
+            </tr>
+            <tr>
+                <td><strong>$v^2\text{-}x$</strong> (Bridge)</td>
+                <td>$\dfrac{d(v^2)}{dx} = 2a \implies a = \dfrac{\text{slope}}{2}$</td>
+                <td>No standard kinematic meaning</td>
+                <td>Straight line in $v^2\text{-}x$ confirms <strong>uniform acceleration</strong> ($v^2 = u^2 + 2ax$).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>$a\text{-}x$</strong> (Bridge)</td>
+                <td>$\dfrac{da}{dx}$</td>
+                <td>Signed area $= \int_{x_1}^{x_2} a\,dx = \dfrac{v_2^2 - v_1^2}{2}$</td>
+                <td>Instant energy-like shortcut: $v_2^2 = v_1^2 + 2(\text{Signed Area})$.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 490" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Vertically aligned x-t, v-t, and a-t kinematic graph triplet for uniform negative acceleration">
+            <defs>
+                <marker id="arr-tri-axis" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+                </marker>
+            </defs>
+
+            <rect x="0" y="0" width="680" height="490" rx="8" fill="#f8fafc" />
+            <text x="20" y="24" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#0f172a">Aligned Kinematic Triplet: x(t) = 12t &minus; 2t&#178;, v(t) = 12 &minus; 4t, a(t) =
+                &minus;4 m/s&#178;</text>
+
+            <!-- Vertical Alignment Guide at t = 3 s (X = 300) -->
+            <line x1="300" y1="36" x2="300" y2="465" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5,4" />
+            <rect x="255" y="466" width="90" height="18" rx="4" fill="#ede9fe" />
+            <text x="264" y="479" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#6d28d9">t = 3 s (Pivot)</text>
+
+            <!-- ===== PANEL 1: x-t ===== -->
+            <line x1="90" y1="145" x2="90" y2="38" stroke="#334155" stroke-width="1.5"
+                marker-end="url(#arr-tri-axis)" />
+            <line x1="85" y1="135" x2="535" y2="135" stroke="#334155" stroke-width="1.5"
+                marker-end="url(#arr-tri-axis)" />
+            <text x="34" y="48" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#0f172a">x
+                (m)</text>
+            <text x="540" y="139" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#334155">t
+                (s)</text>
+            <text x="72" y="139" font-family="system-ui, sans-serif" font-size="10" fill="#475569">0</text>
+            <line x1="86" y1="45" x2="94" y2="45" stroke="#334155" stroke-width="1.2" />
+            <text x="66" y="49" font-family="system-ui, sans-serif" font-size="10" fill="#475569">18</text>
+            <text x="506" y="150" font-family="system-ui, sans-serif" font-size="10" fill="#475569">6</text>
+
+            <!-- Exact Parabola: M 90,135 Q 300,-45 510,135 -->
+            <path d="M 90 135 Q 300 -45 510 135" fill="none" stroke="#1d4ed8" stroke-width="2.6" />
+            <!-- Horizontal Tangent at Peak -->
+            <line x1="255" y1="45" x2="345" y2="45" stroke="#7c3aed" stroke-width="1.6" />
+            <circle cx="300" cy="45" r="4.5" fill="#7c3aed" />
+            <text x="148" y="82" font-family="system-ui, sans-serif" font-size="10.5" fill="#1d4ed8">Slope &gt; 0 (v
+                &gt; 0)</text>
+            <text x="372" y="82" font-family="system-ui, sans-serif" font-size="10.5" fill="#1d4ed8">Slope &lt; 0 (v
+                &lt; 0)</text>
+            <text x="545" y="75" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#1d4ed8">Concave Down (&cap;)</text>
+            <text x="545" y="90" font-family="system-ui, sans-serif" font-size="10" fill="#475569">Peak has dx/dt =
+                0</text>
+            <text x="545" y="104" font-family="system-ui, sans-serif" font-size="10" fill="#475569">Returns to x = 0 at
+                6 s</text>
+
+            <!-- ===== PANEL 2: v-t ===== -->
+            <line x1="90" y1="312" x2="90" y2="180" stroke="#334155" stroke-width="1.5"
+                marker-end="url(#arr-tri-axis)" />
+            <line x1="85" y1="250" x2="535" y2="250" stroke="#334155" stroke-width="1.5"
+                marker-end="url(#arr-tri-axis)" />
+            <text x="24" y="190" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#0f172a">v
+                (m/s)</text>
+            <text x="540" y="254" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#334155">t
+                (s)</text>
+            <line x1="86" y1="202" x2="94" y2="202" stroke="#334155" stroke-width="1.2" />
+            <text x="61" y="206" font-family="system-ui, sans-serif" font-size="10" fill="#475569">+12</text>
+            <line x1="86" y1="298" x2="94" y2="298" stroke="#334155" stroke-width="1.2" />
+            <text x="61" y="302" font-family="system-ui, sans-serif" font-size="10" fill="#475569">&minus;12</text>
+
+            <!-- Shaded Areas in v-t -->
+            <polygon points="90,250 90,202 300,250" fill="#10b981" fill-opacity="0.20" />
+            <polygon points="300,250 510,250 510,298" fill="#ef4444" fill-opacity="0.20" />
+            <text x="128" y="238" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#047857">+18 m</text>
+            <text x="438" y="268" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#b91c1c">&minus;18 m</text>
+
+            <!-- v-t Line -->
+            <line x1="90" y1="202" x2="510" y2="298" stroke="#0f766e" stroke-width="2.6" />
+            <circle cx="300" cy="250" r="4.5" fill="#7c3aed" />
+            <text x="545" y="218" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#0f766e">Constant Slope = &minus;4</text>
+            <text x="545" y="233" font-family="system-ui, sans-serif" font-size="10" fill="#475569">0&ndash;3 s: Slowing
+                down</text>
+            <text x="545" y="247" font-family="system-ui, sans-serif" font-size="10" fill="#475569">3&ndash;6 s:
+                Speeding up (&minus;x)</text>
+            <text x="545" y="261" font-family="system-ui, sans-serif" font-size="10" fill="#475569">Net &Delta;x = 0,
+                Dist = 36 m</text>
+
+            <!-- ===== PANEL 3: a-t ===== -->
+            <line x1="90" y1="452" x2="90" y2="345" stroke="#334155" stroke-width="1.5"
+                marker-end="url(#arr-tri-axis)" />
+            <line x1="85" y1="382" x2="535" y2="382" stroke="#334155" stroke-width="1.5"
+                marker-end="url(#arr-tri-axis)" />
+            <text x="18" y="355" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#0f172a">a
+                (m/s&#178;)</text>
+            <text x="540" y="386" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#334155">t
+                (s)</text>
+            <line x1="86" y1="422" x2="94" y2="422" stroke="#334155" stroke-width="1.2" />
+            <text x="66" y="426" font-family="system-ui, sans-serif" font-size="10" fill="#475569">&minus;4</text>
+
+            <!-- Shaded Area in a-t -->
+            <rect x="90" y="382" width="420" height="40" fill="#f59e0b" fill-opacity="0.18" />
+            <line x1="90" y1="422" x2="510" y2="422" stroke="#d97706" stroke-width="2.6" />
+            <text x="200" y="407" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#b45309">Area = &Delta;v = (&minus;4)(6) = &minus;24 m/s</text>
+            <text x="545" y="405" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#b45309">Constant Negative a</text>
+            <text x="545" y="420" font-family="system-ui, sans-serif" font-size="10" fill="#475569">Note: a &lt; 0 does
+                NOT</text>
+            <text x="545" y="434" font-family="system-ui, sans-serif" font-size="10" fill="#475569">always mean
+                slowing!</text>
+        </svg>
+        <div class="diagram-caption">Figure 17.2: Vertically synchronized $x\text{-}t$, $v\text{-}t$, and $a\text{-}t$
+            triplet. Notice how the peak of $x(t)$ aligns with $v(t) = 0$ at $t = 3\text{ s}$, and how $a &lt; 0$ causes
+            slowing down on $[0, 3]\text{ s}$ ($va &lt; 0$) but speeding up on $[3, 6]\text{ s}$ ($va &gt; 0$).</div>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 295" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Velocity-time signed-area loop comparing displacement and total distance">
+            <defs>
+                <marker id="arr-loop-axis" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+                </marker>
+            </defs>
+
+            <rect x="0" y="0" width="680" height="295" rx="8" fill="#f8fafc" />
+            <text x="20" y="25" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#0f172a">Signed-Area Loop in a v&ndash;t Graph: Displacement vs. Total Distance</text>
+
+            <!-- Axes -->
+            <line x1="75" y1="265" x2="75" y2="45" stroke="#334155" stroke-width="1.6"
+                marker-end="url(#arr-loop-axis)" />
+            <line x1="65" y1="165" x2="515" y2="165" stroke="#334155" stroke-width="1.6"
+                marker-end="url(#arr-loop-axis)" />
+            <text x="22" y="54" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#0f172a">v
+                (m/s)</text>
+            <text x="520" y="169" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#334155">t
+                (s)</text>
+
+            <!-- Y Grid / Ticks -->
+            <line x1="70" y1="85" x2="80" y2="85" stroke="#334155" stroke-width="1.2" />
+            <text x="48" y="89" font-family="system-ui, sans-serif" font-size="10.5" fill="#475569">+8</text>
+            <line x1="75" y1="85" x2="255" y2="85" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3,3" />
+
+            <line x1="70" y1="225" x2="80" y2="225" stroke="#334155" stroke-width="1.2" />
+            <text x="48" y="229" font-family="system-ui, sans-serif" font-size="10.5" fill="#475569">&minus;6</text>
+            <line x1="75" y1="225" x2="405" y2="225" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3,3" />
+
+            <!-- X Ticks: 60 px/s -->
+            <text x="61" y="180" font-family="system-ui, sans-serif" font-size="10" fill="#475569">0</text>
+            <line x1="135" y1="161" x2="135" y2="169" stroke="#334155" stroke-width="1.2" />
+            <text x="132" y="183" font-family="system-ui, sans-serif" font-size="10" fill="#475569">1</text>
+            <line x1="255" y1="161" x2="255" y2="169" stroke="#334155" stroke-width="1.2" />
+            <text x="252" y="183" font-family="system-ui, sans-serif" font-size="10" fill="#475569">3</text>
+            <line x1="315" y1="161" x2="315" y2="169" stroke="#334155" stroke-width="1.2" />
+            <text x="311" y="183" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#7c3aed">4</text>
+            <line x1="405" y1="161" x2="405" y2="169" stroke="#334155" stroke-width="1.2" />
+            <text x="398" y="156" font-family="system-ui, sans-serif" font-size="10" fill="#475569">5.5</text>
+            <line x1="495" y1="161" x2="495" y2="169" stroke="#334155" stroke-width="1.2" />
+            <text x="492" y="183" font-family="system-ui, sans-serif" font-size="10" fill="#475569">7</text>
+
+            <!-- Positive Trapezoid A1 -->
+            <polygon points="75,165 135,85 255,85 315,165" fill="#10b981" fill-opacity="0.22" />
+            <!-- Negative Triangle A2 -->
+            <polygon points="315,165 405,225 495,165" fill="#ef4444" fill-opacity="0.22" />
+
+            <!-- Curve Outline -->
+            <polyline points="75,165 135,85 255,85 315,165 405,225 495,165" fill="none" stroke="#0f172a"
+                stroke-width="2.6" stroke-linejoin="round" />
+
+            <!-- Area Labels -->
+            <text x="150" y="128" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#047857">A&#8321; = +24 m</text>
+            <text x="142" y="144" font-family="system-ui, sans-serif" font-size="10" fill="#065f46">&frac12;(4 +
+                2)(8)</text>
+
+            <text x="372" y="196" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#b91c1c">A&#8322; = &minus;9 m</text>
+            <text x="372" y="211" font-family="system-ui, sans-serif" font-size="10"
+                fill="#991b1b">&minus;&frac12;(3)(6)</text>
+
+            <!-- Turnaround Marker -->
+            <circle cx="315" cy="165" r="5" fill="#7c3aed" />
+            <line x1="315" y1="160" x2="340" y2="112" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="3,2" />
+            <text x="322" y="106" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#6d28d9">Turnaround (v = 0)</text>
+
+            <!-- Computation Box -->
+            <rect x="530" y="58" width="136" height="190" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4" />
+            <text x="542" y="82" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#0f172a">Area Totals</text>
+            <line x1="542" y1="90" x2="654" y2="90" stroke="#e2e8f0" stroke-width="1" />
+            <text x="542" y="112" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#047857">A&#8321; = +24 m</text>
+            <text x="542" y="132" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#b91c1c">A&#8322; = &minus;9 m</text>
+            <line x1="542" y1="145" x2="654" y2="145" stroke="#e2e8f0" stroke-width="1" />
+            <text x="542" y="166" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#1d4ed8">Displacement:</text>
+            <text x="542" y="182" font-family="system-ui, sans-serif" font-size="11" fill="#1e293b">A&#8321; + A&#8322;
+                = +15 m</text>
+            <text x="542" y="212" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#7c3aed">Total Distance:</text>
+            <text x="542" y="228" font-family="system-ui, sans-serif" font-size="11" fill="#1e293b">|A&#8321;| +
+                |A&#8322;| = 33 m</text>
+        </svg>
+        <div class="diagram-caption">Figure 17.3: Computing signed vs. unsigned area under a $v\text{-}t$ curve.
+            Positive area ($A_1$) moves the particle forward; negative area ($A_2$) brings it backward after reversing
+            at $t = 4\text{ s}$.</div>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Five Impossible-Graph Traps (Frequent BEST MCQ Eliminators)</span>
+        <ul>
+            <li><strong>Double-Valued Time:</strong> Any $x\text{-}t$, $v\text{-}t$, or $a\text{-}t$ graph that folds
+                back on itself (fails the vertical line test, such as a circle or sideways parabola) is <em>physically
+                    impossible</em>—a single particle cannot occupy two positions or possess two velocities at the same
+                instant.</li>
+            <li><strong>Vertical Segment in $x\text{-}t$:</strong> Implies infinite slope ($\Delta x / \Delta t \to
+                \infty$), i.e., infinite speed / instantaneous teleportation—impossible.</li>
+            <li><strong>Decreasing Distance–Time Graph:</strong> While <em>position</em> $x(t)$ can rise and fall,
+                <em>total distance</em> $d(t)$ can never have a negative slope because $\frac{dd}{dt} = |v| \ge 0$.
+            </li>
+            <li><strong>Negative Speed–Time Graph:</strong> Velocity $v(t)$ can go below the time axis, but
+                <em>speed</em> $= |v(t)|$ can never be negative.
+            </li>
+            <li><strong>Sharp Kink (Corner) in Real $x\text{-}t$:</strong> A sharp corner implies an instantaneous jump
+                in slope ($v$), requiring infinite acceleration ($a \to \infty$). (Note: Idealized textbook
+                elastic-bounce models sometimes draw kinks, but strictly speaking a finite force always rounds the
+                corner over a tiny contact time.)</li>
+        </ul>
+    </div>
+
+    <h3>Trapezoidal &amp; Triangular $v\text{-}t$ Acceleration–Cruise–Retardation Profiles</h3>
+    <p>A signature BEST / Resonance problem describes a train or vehicle starting from rest, accelerating uniformly at
+        $\alpha$, optionally cruising at maximum speed $v_{\max}$, and decelerating uniformly at $\beta$ to rest. Always
+        sketch the $v\text{-}t$ trapezoid first!</p>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 300" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Trapezoidal velocity-time speed profile with acceleration, cruise, and retardation phases">
+            <defs>
+                <marker id="arr-trap-axis" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+                </marker>
+                <marker id="arr-trap-dim" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+                </marker>
+            </defs>
+
+            <rect x="0" y="0" width="680" height="300" rx="8" fill="#f8fafc" />
+            <text x="20" y="25" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#0f172a">Trapezoidal v&ndash;t Speed Profile (Acceleration &alpha; &rarr; Cruise v_max &rarr;
+                Retardation &beta;)</text>
+
+            <!-- Axes -->
+            <line x1="70" y1="242" x2="70" y2="42" stroke="#334155" stroke-width="1.6"
+                marker-end="url(#arr-trap-axis)" />
+            <line x1="62" y1="230" x2="530" y2="230" stroke="#334155" stroke-width="1.6"
+                marker-end="url(#arr-trap-axis)" />
+            <text x="46" y="52" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#0f172a">v</text>
+            <text x="536" y="234" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#0f172a">t</text>
+
+            <!-- Shaded Phase Polygons -->
+            <polygon points="70,230 190,90 190,230" fill="#3b82f6" fill-opacity="0.18" />
+            <rect x="190" y="90" width="200" height="140" fill="#10b981" fill-opacity="0.16" />
+            <polygon points="390,90 490,230 390,230" fill="#f97316" fill-opacity="0.20" />
+
+            <!-- Vertical Phase Dividers -->
+            <line x1="190" y1="90" x2="190" y2="230" stroke="#64748b" stroke-width="1.2" stroke-dasharray="4,3" />
+            <line x1="390" y1="90" x2="390" y2="230" stroke="#64748b" stroke-width="1.2" stroke-dasharray="4,3" />
+            <line x1="70" y1="90" x2="190" y2="90" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4,3" />
+
+            <!-- Profile Outline -->
+            <polyline points="70,230 190,90 390,90 490,230" fill="none" stroke="#0f172a" stroke-width="2.8"
+                stroke-linejoin="round" />
+
+            <!-- Labels on Graph -->
+            <text x="26" y="94" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#0f172a">v_max</text>
+            <text x="82" y="142" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#1d4ed8">Slope = +&alpha;</text>
+            <text x="255" y="79" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#047857">Slope = 0 (Cruise)</text>
+            <text x="444" y="142" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#c2410c">Slope = &minus;&beta;</text>
+
+            <!-- Area Labels -->
+            <text x="132" y="196" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#1d4ed8">S&#8321;</text>
+            <text x="282" y="168" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#047857">S&#8322; = v_max &middot; t&#8322;</text>
+            <text x="415" y="196" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#c2410c">S&#8323;</text>
+
+            <!-- Time Duration Dimension Lines -->
+            <line x1="74" y1="248" x2="186" y2="248" stroke="#475569" stroke-width="1.2"
+                marker-start="url(#arr-trap-dim)" marker-end="url(#arr-trap-dim)" />
+            <text x="108" y="263" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600"
+                fill="#1d4ed8">t&#8321; = v_m/&alpha;</text>
+
+            <line x1="194" y1="248" x2="386" y2="248" stroke="#475569" stroke-width="1.2"
+                marker-start="url(#arr-trap-dim)" marker-end="url(#arr-trap-dim)" />
+            <text x="282" y="263" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600"
+                fill="#047857">t&#8322;</text>
+
+            <line x1="394" y1="248" x2="486" y2="248" stroke="#475569" stroke-width="1.2"
+                marker-start="url(#arr-trap-dim)" marker-end="url(#arr-trap-dim)" />
+            <text x="418" y="263" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600"
+                fill="#c2410c">t&#8323; = v_m/&beta;</text>
+
+            <line x1="74" y1="278" x2="486" y2="278" stroke="#0f172a" stroke-width="1.4"
+                marker-start="url(#arr-trap-dim)" marker-end="url(#arr-trap-dim)" />
+            <text x="242" y="293" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#0f172a">Total Time T = t&#8321; + t&#8322; + t&#8323;</text>
+
+            <!-- Side Key Box -->
+            <rect x="542" y="54" width="126" height="196" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4" />
+            <text x="552" y="76" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#0f172a">Fast Shortcuts</text>
+            <line x1="552" y1="84" x2="658" y2="84" stroke="#e2e8f0" stroke-width="1" />
+            <text x="552" y="104" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#1d4ed8">If t&#8322; = 0 (Triangle):</text>
+            <text x="552" y="121" font-family="system-ui, sans-serif" font-size="10" fill="#334155">v_m =
+                [&alpha;&beta;/(&alpha;+&beta;)] T</text>
+            <text x="552" y="138" font-family="system-ui, sans-serif" font-size="10" fill="#334155">S =
+                &frac12;[&alpha;&beta;/(&alpha;+&beta;)] T&#178;</text>
+            <text x="552" y="155" font-family="system-ui, sans-serif" font-size="10" fill="#334155">S&#8321;/S&#8323; =
+                t&#8321;/t&#8323; = &beta;/&alpha;</text>
+            <line x1="552" y1="168" x2="658" y2="168" stroke="#e2e8f0" stroke-width="1" />
+            <text x="552" y="187" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#047857">If t&#8322; &gt; 0 (Trapezoid):</text>
+            <text x="552" y="204" font-family="system-ui, sans-serif" font-size="10" fill="#334155">S = &frac12;(T +
+                t&#8322;) v_m</text>
+            <text x="552" y="221" font-family="system-ui, sans-serif" font-size="10" fill="#334155">T = S/v_m +
+                &frac12;v_m(1/&alpha;+1/&beta;)</text>
+            <text x="552" y="238" font-family="system-ui, sans-serif" font-size="10" fill="#334155">v_avg/v_m =
+                &frac12;(1 + t&#8322;/T)</text>
+        </svg>
+        <div class="diagram-caption">Figure 17.4: Trapezoidal $v\text{-}t$ profile. Setting the cruise duration $t_2 =
+            0$ immediately collapses the trapezoid into the minimum-time triangular profile.</div>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Proof of the Triangular &amp; Trapezoidal Shortcuts</span>
+        <p><strong>Case A (Triangular Profile, $t_2 = 0$):</strong> Since the body reaches peak speed $v_{\max}$ from
+            rest at rate $\alpha$ and brakes to rest at rate $\beta$, we have $t_1 = \dfrac{v_{\max}}{\alpha}$ and $t_3
+            = \dfrac{v_{\max}}{\beta}$. Adding the two durations gives:</p>
+        $$T = t_1 + t_3 = v_{\max}\left(\frac{1}{\alpha} + \frac{1}{\beta}\right) = v_{\max}\left(\frac{\alpha +
+        \beta}{\alpha\beta}\right) \implies \mathbf{v_{\max} = \left(\frac{\alpha\beta}{\alpha + \beta}\right)T}$$
+        <p>Total distance $S$ equals the area of the triangle $\frac{1}{2} \times \text{base} \times \text{height} =
+            \frac{1}{2} T v_{\max}$:</p>
+        $$\mathbf{S = \frac{1}{2}\left(\frac{\alpha\beta}{\alpha + \beta}\right)T^2}$$
+        <p><strong>Case B (Trapezoidal Profile, $t_2 &gt; 0$):</strong> The area of the trapezoid with parallel bases
+            $T$ and $t_2$ is $S = \frac{1}{2}(T + t_2)v_{\max}$. Substituting $t_2 = T - t_1 - t_3 = T -
+            v_{\max}\left(\frac{1}{\alpha} + \frac{1}{\beta}\right)$ yields:</p>
+        $$S = v_{\max}T - \frac{v_{\max}^2}{2}\left(\frac{1}{\alpha} + \frac{1}{\beta}\right) \implies \mathbf{T =
+        \frac{S}{v_{\max}} + \frac{v_{\max}}{2}\left(\frac{1}{\alpha} + \frac{1}{\beta}\right)}$$
+    </div>
+
+    <!-- ==================== SECTION 6 ==================== -->
+    <h2 class="section-heading">6. Out-of-Portion Bridge: Calculus in 1D Kinematics</h2>
+
+    <p>Class 10 NCERT stops at constant acceleration, but BEST Rank-Booster problems routinely introduce variable
+        acceleration like $a(t) = 6t - 4$ or $a(x) = 4 - x$. With just <strong>two algebraic rules of
+            calculus</strong>—the Power Rule for Differentiation and the Power Rule for Integration—you unlock every
+        non-uniform kinematics problem cleanly.</p>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: The Two-Rule Calculus Primer</span>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Operation</th>
+                    <th>Geometric Meaning</th>
+                    <th>Power Rule Formula</th>
+                    <th>Worked Illustration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Differentiation</strong><br>$\dfrac{df}{dt}$</td>
+                    <td>Exact slope of the tangent line to $f(t)$ at instant $t$</td>
+                    <td>$$\frac{d}{dt}(c) = 0, \quad \frac{d}{dt}(t^n) = n\,t^{n-1}$$</td>
+                    <td>$\dfrac{d}{dt}(3t^4 - 5t^2 + 7) = 12t^3 - 10t$</td>
+                </tr>
+                <tr>
+                    <td><strong>Definite Integration</strong><br>$\int_{t_1}^{t_2} f(t)\,dt$</td>
+                    <td>Exact signed area under $f(t)$ from $t_1$ to $t_2$</td>
+                    <td>$$\int t^n\,dt = \frac{t^{n+1}}{n+1} + C \quad (n \neq -1)$$<br>$$\int_{t_1}^{t_2} f(t)\,dt =
+                        F(t_2) - F(t_1)$$</td>
+                    <td>$\displaystyle\int_0^2 6t^2\,dt = \left[\frac{6t^3}{3}\right]_0^2 = [2t^3]_0^2 = 16$</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>The Kinematic Calculus Chain:</strong></p>
+        <ul>
+            <li><strong>Differentiation (Forward):</strong> $\; v = \dfrac{dx}{dt} \quad \longrightarrow \quad a =
+                \dfrac{dv}{dt} = \dfrac{d^2 x}{dt^2}$.</li>
+            <li><strong>Chain-Rule Identity (Time-Free):</strong> $\; a = \dfrac{dv}{dt} =
+                \dfrac{dv}{dx}\cdot\dfrac{dx}{dt} = \mathbf{v\dfrac{dv}{dx}}$.</li>
+            <li><strong>Integration (Reverse):</strong>
+                $$v(t) - v(t_0) = \int_{t_0}^{t} a(t)\,dt, \qquad x(t) - x(t_0) = \int_{t_0}^{t} v(t)\,dt, \qquad
+                \frac{v^2 - v_0^2}{2} = \int_{x_0}^{x} a(x)\,dx$$
+            </li>
+            <li><strong>Finding Extrema (Turning Points &amp; Peaks):</strong> Position $x(t)$ reaches a local
+                maximum/minimum (turning point) when $v = \dfrac{dx}{dt} = 0$. Velocity $v(t)$ reaches a local
+                maximum/minimum when $a = \dfrac{dv}{dt} = 0$.</li>
+        </ul>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Olympiad Classic Derivation: Time Given as $t = \alpha x^2 + \beta x$</span>
+        <p>A famous NSEJS / Resonance Foundation problem states that time $t$ depends on position $x$ via $t = \alpha
+            x^2 + \beta x$ (where $\alpha, \beta$ are positive constants) and asks for the retardation in terms of
+            velocity $v$. Here is the complete first-principles derivation:</p>
+        <ol>
+            <li>Differentiate both sides with respect to $x$:
+                $$\frac{dt}{dx} = 2\alpha x + \beta$$
+            </li>
+            <li>Since $v = \dfrac{dx}{dt}$, we have $\dfrac{1}{v} = \dfrac{dt}{dx} = 2\alpha x + \beta$.</li>
+            <li>Now differentiate both sides with respect to time $t$ (using the Chain Rule $\frac{d}{dt}(v^{-1}) =
+                -v^{-2}\frac{dv}{dt}$):
+                $$-\frac{1}{v^2}\frac{dv}{dt} = 2\alpha \frac{dx}{dt} + 0$$
+            </li>
+            <li>Substitute $\dfrac{dv}{dt} = a$ and $\dfrac{dx}{dt} = v$:
+                $$-\frac{a}{v^2} = 2\alpha v \implies \mathbf{a = -2\alpha v^3}$$
+            </li>
+        </ol>
+        <p>Thus the retardation magnitude is $2\alpha v^3$—entirely independent of $\beta$!</p>
+    </div>
+
+    <!-- ==================== FORMULA VAULT ==================== -->
+    <div class="formula-vault">
+        <span class="box-label">Chapter 17 Formula Vault (High-Density Revision Grid)</span>
+        <ul>
+            <li><strong>Turnaround Distance:</strong> Solve $v(t_0) = 0$; if $t_1 &lt; t_0 &lt; t_2$, $d =
+                |x(t_0)-x(t_1)| + |x(t_2)-x(t_0)|$.</li>
+            <li><strong>Average Speeds:</strong> Equal times $\implies \frac{v_1+v_2}{2}$; Equal distances $\implies
+                \frac{2v_1v_2}{v_1+v_2}$; Hybrid $\implies \frac{2v_0(v_1+v_2)}{2v_0+v_1+v_2}$.</li>
+            <li><strong>UAM Core:</strong> $v = u + at$; $s = ut + \frac{1}{2}at^2$; $v^2 - u^2 = 2as$; $s =
+                \left(\frac{u+v}{2}\right)t$; $s_n = u + \frac{a}{2}(2n-1)$.</li>
+            <li><strong>Mid-Point vs. Mid-Time:</strong> $v_{\text{mid-point}} = \sqrt{\frac{u^2+v^2}{2}} \ge
+                \frac{u+v}{2} = v_{\text{mid-time}}$.</li>
+            <li><strong>Stopping Distance:</strong> $S_{\text{total}} = u t_r + \frac{u^2}{2a_r}$.</li>
+            <li><strong>Vertical Projection:</strong> $T = \frac{2u}{g}$; $H = \frac{u^2}{2g}$; $t_1+t_2 =
+                \frac{2u}{g}$; $h = \frac{1}{2}gt_1 t_2$; $H = \frac{1}{8}g(t_1+t_2)^2$; $H-h =
+                \frac{1}{8}g(t_2-t_1)^2$.</li>
+            <li><strong>Relative Motion:</strong> Catching bus $u_{\min} = \sqrt{2ad}$; $d_{\min} = d - \frac{u^2}{2a}$.
+                Free-fall pair: $a_{\text{rel}} = 0 \implies t_{\text{meet}} = s_{\text{rel},0}/v_{\text{approach}}$.
+            </li>
+            <li><strong>Triangular / Trapezoidal $v\text{-}t$:</strong> $v_{\max} = \frac{\alpha\beta}{\alpha+\beta}T$,
+                $S = \frac{1}{2}\frac{\alpha\beta}{\alpha+\beta}T^2$; Trapezoid $T = \frac{S}{v_{\max}} +
+                \frac{v_{\max}}{2}\left(\frac{1}{\alpha}+\frac{1}{\beta}\right)$.</li>
+            <li><strong>Calculus Kinematics:</strong> $v = \frac{dx}{dt}$, $a = \frac{dv}{dt} = v\frac{dv}{dx}$; $\Delta
+                v = \int a\,dt$; $\Delta x = \int v\,dt$; $\frac{v^2-u^2}{2} = \int a\,dx$.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== WORKED EXAMPLES ==================== -->
+    <h2 class="section-heading">7. Graded Worked Examples (9 Complete Step-by-Step Models)</h2>
+
+    <!-- LEVEL 1 BANNER -->
+    <div class="level-banner l1">Tier 1 &mdash; Level 1: Foundational Warmup &amp; Core Traps (Examples 1&ndash;3)</div>
+
+    <!-- Example 1 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Turnaround Distance &amp; Averages</span>
+            <strong>Worked Example 1: Polynomial Velocity Reversal</strong>
+        </div>
+        <div class="ex-problem">
+            A particle moves along the $x$-axis such that its position (in metres) as a function of time $t$ (in
+            seconds) is given by $x(t) = 2t^2 - 8t + 10$. Calculate (a) the displacement, (b) the total distance
+            travelled, (c) the average velocity, and (d) the average speed during the time interval from $t = 0\text{
+            s}$ to $t = 5\text{ s}$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; Check for a turning point inside $(0, 5)\text{ s}$:</strong></p>
+            <p>Differentiate $x(t)$ with respect to $t$ to get instantaneous velocity:</p>
+            $$v(t) = \frac{dx}{dt} = 4t - 8$$
+            <p>Set $v(t) = 0$: $4t - 8 = 0 \implies t_0 = 2\text{ s}$. Because $0 &lt; 2 &lt; 5$, the particle moves in
+                the $-x$ direction for $t \in [0, 2]\text{ s}$, stops momentarily at $t = 2\text{ s}$, and reverses into
+                the $+x$ direction for $t \in [2, 5]\text{ s}$.</p>
+
+            <p><strong>Step 2 &mdash; Evaluate positions at boundaries and the turning instant:</strong></p>
+            <ul>
+                <li>At $t = 0\text{ s}$: $x(0) = 2(0)^2 - 8(0) + 10 = 10\text{ m}$.</li>
+                <li>At $t = 2\text{ s}$: $x(2) = 2(2)^2 - 8(2) + 10 = 8 - 16 + 10 = 2\text{ m}$.</li>
+                <li>At $t = 5\text{ s}$: $x(5) = 2(5)^2 - 8(5) + 10 = 50 - 40 + 10 = 20\text{ m}$.</li>
+            </ul>
+
+            <p><strong>Step 3 &mdash; Compute all four required quantities:</strong></p>
+            <ol>
+                <li><strong>Displacement:</strong> $\Delta x = x(5) - x(0) = 20 - 10 = \mathbf{+10\text{ m}}$.</li>
+                <li><strong>Total Distance:</strong> $d = |x(2) - x(0)| + |x(5) - x(2)| = |2 - 10| + |20 - 2| = 8 + 18 =
+                    \mathbf{26\text{ m}}$.</li>
+                <li><strong>Average Velocity:</strong> $v_{\text{avg}} = \dfrac{\Delta x}{\Delta t} = \dfrac{+10\text{
+                    m}}{5\text{ s}} = \mathbf{+2\text{ m/s}}$.</li>
+                <li><strong>Average Speed:</strong> $\langle \text{speed} \rangle = \dfrac{d}{\Delta t} =
+                    \dfrac{26\text{ m}}{5\text{ s}} = \mathbf{5.2\text{ m/s}}$.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Example 2 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Stopping Distance &amp; Reaction Time</span>
+            <strong>Worked Example 2: Doubling Speed with Non-Zero Reaction Time</strong>
+        </div>
+        <div class="ex-problem">
+            A car driver has a reaction time of $t_r = 0.5\text{ s}$. Once the brakes are applied, the car decelerates
+            uniformly at $a_r = 6\text{ m/s}^2$. Calculate the total stopping distance when the car moves at $u_1 =
+            12\text{ m/s}$ and when its speed is doubled to $u_2 = 24\text{ m/s}$. By what exact factor does the total
+            stopping distance increase?
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; Recall the two-stage stopping distance relation:</strong></p>
+            $$S_{\text{total}} = s_{\text{reaction}} + s_{\text{braking}} = u t_r + \frac{u^2}{2a_r}$$
+
+            <p><strong>Step 2 &mdash; Compute for $u_1 = 12\text{ m/s}$:</strong></p>
+            $$s_{r1} = (12)(0.5) = 6\text{ m}, \qquad s_{b1} = \frac{12^2}{2(6)} = \frac{144}{12} = 12\text{ m}$$
+            $$S_1 = 6 + 12 = \mathbf{18\text{ m}}$$
+
+            <p><strong>Step 3 &mdash; Compute for $u_2 = 24\text{ m/s}$:</strong></p>
+            $$s_{r2} = (24)(0.5) = 12\text{ m}, \qquad s_{b2} = \frac{24^2}{2(6)} = \frac{576}{12} = 48\text{ m}$$
+            $$S_2 = 12 + 48 = \mathbf{60\text{ m}}$$
+
+            <p><strong>Step 4 &mdash; Ratio comparison:</strong></p>
+            $$\frac{S_2}{S_1} = \frac{60}{18} = \mathbf{\frac{10}{3}} \approx 3.33$$
+            <p>Notice that while the braking distance quadrupled ($12\text{ m} \to 48\text{ m}$), the reaction distance
+                only doubled ($6\text{ m} \to 12\text{ m}$), so the overall factor is $\frac{10}{3}$, not $4$.</p>
+        </div>
+    </div>
+
+    <!-- Example 3 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Gravity Symmetry</span>
+            <strong>Worked Example 3: Passing a Window Twice During Vertical Flight</strong>
+        </div>
+        <div class="ex-problem">
+            A stone is thrown vertically upward from the ground with initial speed $u$. It passes a window at height $h$
+            twice—at $t_1 = 2\text{ s}$ while rising and at $t_2 = 6\text{ s}$ while falling. Taking $g = 10\text{
+            m/s}^2$, find (a) the initial speed $u$, (b) the height $h$ of the window, and (c) the maximum height $H$
+            reached by the stone.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; Set up the vertical position quadratic (upward $+y$, ground $y = 0$):</strong></p>
+            $$h = ut - \frac{1}{2}gt^2 \implies 5t^2 - ut + h = 0$$
+            <p>The given instants $t_1 = 2\text{ s}$ and $t_2 = 6\text{ s}$ are the two roots of this quadratic
+                equation.</p>
+
+            <p><strong>Step 2 &mdash; Apply Vieta's Sum and Product of Roots:</strong></p>
+            <ul>
+                <li><strong>(a) Initial speed $u$:</strong>
+                    $$t_1 + t_2 = \frac{u}{5} \implies 2 + 6 = \frac{u}{5} \implies u = \mathbf{40\text{ m/s}}$$
+                </li>
+                <li><strong>(b) Window height $h$:</strong>
+                    $$t_1 t_2 = \frac{h}{5} \implies (2)(6) = \frac{h}{5} \implies h = \mathbf{60\text{ m}}$$
+                    <em>Verification:</em> At $t = 2\text{ s}$, $y = 40(2) - 5(2)^2 = 80 - 20 = 60\text{ m}$; at $t =
+                    6\text{ s}$, $y = 40(6) - 5(6)^2 = 240 - 180 = 60\text{ m}$. Confirmed!
+                </li>
+                <li><strong>(c) Maximum height $H$:</strong>
+                    $$H = \frac{u^2}{2g} = \frac{40^2}{2(10)} = \frac{1600}{20} = \mathbf{80\text{ m}}$$
+                    <em>Cross-check via identity:</em> $H = \frac{1}{8}g(t_1+t_2)^2 = \frac{10}{8}(8)^2 = 80\text{ m}$.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- LEVEL 2 BANNER -->
+    <div class="level-banner l2">Tier 2 &mdash; Level 2: Exam-Real BEST / NSEJS Applications (Examples 4&ndash;6)</div>
+
+    <!-- Example 4 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">$n$-th Second Reversal Trap</span>
+            <strong>Worked Example 4: Distance vs. Displacement Inside the 3rd Second</strong>
+        </div>
+        <div class="ex-problem">
+            A particle is projected along a straight line with an initial velocity $u = 25\text{ m/s}$ and undergoes a
+            constant opposing acceleration $a = -10\text{ m/s}^2$. Find (a) the net displacement and (b) the exact
+            distance travelled by the particle during the 3rd second of its motion ($t = 2\text{ s}$ to $t = 3\text{
+            s}$).
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; Locate the turning instant $t_0$:</strong></p>
+            $$v(t_0) = u + a t_0 = 0 \implies 25 - 10t_0 = 0 \implies t_0 = 2.5\text{ s}$$
+            <p>Since $2\text{ s} &lt; 2.5\text{ s} &lt; 3\text{ s}$, the particle reverses direction <em>exactly in the
+                    middle of the 3rd second</em>.</p>
+
+            <p><strong>Step 2 &mdash; (a) Net displacement during the 3rd second ($n = 3$):</strong></p>
+            $$s_3 = u + \frac{a}{2}(2n - 1) = 25 + \frac{-10}{2}\left(2(3) - 1\right) = 25 - 5(5) = \mathbf{0\text{
+            m}}$$
+            <p><em>Direct verification:</em> $x(2) = 25(2) - 5(2)^2 = 30\text{ m}$ and $x(3) = 25(3) - 5(3)^2 = 75 - 45
+                = 30\text{ m}$, confirming $\Delta x = 30 - 30 = 0\text{ m}$.</p>
+
+            <p><strong>Step 3 &mdash; (b) Exact distance during the 3rd second (split at $t_0 = 2.5\text{ s}$):</strong>
+            </p>
+            <ul>
+                <li>Position at $t_0 = 2.5\text{ s}$: $x(2.5) = 25(2.5) - 5(2.5)^2 = 62.5 - 31.25 = 31.25\text{ m}$.
+                </li>
+                <li>Forward leg ($t = 2\text{ s}$ to $2.5\text{ s}$): $d_1 = |x(2.5) - x(2)| = |31.25 - 30| = 1.25\text{
+                    m}$.</li>
+                <li>Backward leg ($t = 2.5\text{ s}$ to $3\text{ s}$): $d_2 = |x(3) - x(2.5)| = |30 - 31.25| =
+                    1.25\text{ m}$.</li>
+            </ul>
+            $$d_{\text{3rd sec}} = d_1 + d_2 = 1.25 + 1.25 = \mathbf{2.5\text{ m}}$$
+            <p><em>Formula check:</em> Because $t_0 = n - 0.5$, $d_n = \frac{|a|}{4} = \frac{10}{4} = 2.5\text{ m}$.
+                Never blindly report $0\text{ m}$ when the question asks for <em>distance</em>!</p>
+        </div>
+    </div>
+
+    <!-- Example 5 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Moving-Platform Gravity</span>
+            <strong>Worked Example 5: Sandbag Released from an Ascending Balloon</strong>
+        </div>
+        <div class="ex-problem">
+            A hot-air balloon is rising vertically at a constant velocity of $10\text{ m/s}$. When the balloon is
+            $75\text{ m}$ above the ground, a sandbag is gently released from it. Taking $g = 10\text{ m/s}^2$, find (a)
+            the maximum height above the ground attained by the sandbag, (b) the total time taken by the sandbag to
+            strike the ground, and (c) the height of the balloon above the ground at the moment the sandbag hits.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; Establish sign convention and initial state of the sandbag:</strong></p>
+            <p>Take upward as $+y$ and place the origin $y = 0$ at the release point ($75\text{ m}$ above ground). Thus
+                the ground is at $y = -75\text{ m}$. Upon release, the sandbag inherits the balloon's upward velocity:
+                $u = +10\text{ m/s}$, and immediately enters free fall: $a = -g = -10\text{ m/s}^2$.</p>
+
+            <p><strong>Step 2 &mdash; (a) Maximum height above ground:</strong></p>
+            <p>Additional height climbed above the release point until $v = 0$:</p>
+            $$\Delta h = \frac{u^2}{2g} = \frac{10^2}{2(10)} = 5\text{ m}$$
+            $$H_{\max} = 75\text{ m} + 5\text{ m} = \mathbf{80\text{ m}}$$
+
+            <p><strong>Step 3 &mdash; (b) Total time of flight to ground ($y = -75\text{ m}$):</strong></p>
+            <p>Apply $y = ut + \frac{1}{2}at^2$ directly for the entire trip:</p>
+            $$-75 = 10t - \frac{1}{2}(10)t^2 \implies 5t^2 - 10t - 75 = 0 \implies t^2 - 2t - 15 = 0$$
+            $$(t - 5)(t + 3) = 0$$
+            <p>Discarding the non-physical negative root $t = -3\text{ s}$, we get $t = \mathbf{5\text{ s}}$.</p>
+
+            <p><strong>Step 4 &mdash; (c) Height of the balloon at $t = 5\text{ s}$:</strong></p>
+            <p>The balloon continues ascending at constant speed $10\text{ m/s}$:</p>
+            $$H_{\text{balloon}} = 75 + (10)(5) = \mathbf{125\text{ m}}$$
+            <p><em>Relative-frame sanity check:</em> Relative to the balloon, $u_{\text{rel}} = 0$ and $a_{\text{rel}} =
+                g = 10\text{ m/s}^2$ downward, so after $5\text{ s}$ the sandbag is $\frac{1}{2}gt^2 =
+                \frac{1}{2}(10)(25) = 125\text{ m}$ below the balloon—which puts the balloon exactly $125\text{ m}$
+                above the ground!</p>
+        </div>
+    </div>
+
+    <!-- Example 6 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">1D Relative Motion</span>
+            <strong>Worked Example 6: Catching an Accelerating Bus &amp; Two-Root Physics</strong>
+        </div>
+        <div class="ex-problem">
+            A student stands $36\text{ m}$ behind the rear door of a stationary bus. At $t = 0$, the bus begins
+            accelerating forward uniformly at $a = 2\text{ m/s}^2$, and simultaneously the student runs toward the bus
+            at a constant speed $u$.<br>
+            (a) Find the minimum running speed $u_{\min}$ required for the student to just catch the bus.<br>
+            (b) If the student runs at $u = 10\text{ m/s}$, find the minimum distance between the student and the
+            bus.<br>
+            (c) If the student runs at $u = 13\text{ m/s}$, find the time when the student first catches the bus and
+            interpret the second mathematical root.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; Switch to the reference frame of the bus:</strong></p>
+            <p>Taking forward as $+x$: initial relative velocity of student w.r.t. bus is $u_{\text{rel}} = u - 0 = +u$;
+                relative acceleration is $a_{\text{rel}} = 0 - a = -2\text{ m/s}^2$; required relative displacement to
+                catch the bus is $s_{\text{rel}} = +36\text{ m}$.</p>
+
+            <p><strong>Step 2 &mdash; (a) Minimum speed $u_{\min}$:</strong></p>
+            <p>To <em>just</em> catch the bus, the student's relative velocity drops to zero right upon closing the
+                $36\text{ m}$ gap:</p>
+            $$v_{\text{rel}}^2 - u_{\min}^2 = 2 a_{\text{rel}} s_{\text{rel}} \implies 0 - u_{\min}^2 = 2(-2)(36) = -144
+            \implies u_{\min} = \mathbf{12\text{ m/s}}$$
+
+            <p><strong>Step 3 &mdash; (b) Closest approach for $u = 10\text{ m/s}$:</strong></p>
+            <p>Since $10\text{ m/s} &lt; 12\text{ m/s}$, the student cannot catch the bus. Closest approach occurs when
+                $v_{\text{rel}} = 0$ (i.e., $v_{\text{bus}} = 10\text{ m/s}$ at $t = 10/2 = 5\text{ s}$). Maximum
+                relative distance gained:</p>
+            $$s_{\text{rel, max}} = \frac{u^2}{2a} = \frac{10^2}{2(2)} = 25\text{ m}$$
+            $$d_{\min} = 36 - 25 = \mathbf{11\text{ m}}$$
+
+            <p><strong>Step 4 &mdash; (c) Catching instants for $u = 13\text{ m/s}$:</strong></p>
+            <p>Set $s_{\text{rel}} = u_{\text{rel}}t + \frac{1}{2}a_{\text{rel}}t^2 = 36$:</p>
+            $$13t + \frac{1}{2}(-2)t^2 = 36 \implies t^2 - 13t + 36 = 0 \implies (t - 4)(t - 9) = 0$$
+            <p>The student first catches the bus at $t_1 = \mathbf{4\text{ s}}$ (at $x = 52\text{ m}$, where the bus
+                speed is only $8\text{ m/s}$). <strong>Physical meaning of $t_2 = 9\text{ s}$:</strong> If the student
+                keeps sprinting past the bus without boarding, the continuously accelerating bus reaches $18\text{ m/s}$
+                and overtakes the student again at $t_2 = 9\text{ s}$ (at $x = 117\text{ m}$).</p>
+        </div>
+    </div>
+
+    <!-- LEVEL 3 BANNER -->
+    <div class="level-banner l3">Tier 3 &mdash; Level 3: Rank-Booster Problems &amp; 30-Second Shortcuts (Examples
+        7&ndash;9)</div>
+
+    <!-- Example 7 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Two-Body Gravity &amp; Relative Frame</span>
+            <strong>Worked Example 7: Simultaneous Drop &amp; Upward Launch</strong>
+        </div>
+        <div class="ex-problem">
+            From the top of a tower of height $H = 100\text{ m}$, Stone A is dropped from rest. At the exact same
+            instant, Stone B is projected vertically upward from the base of the tower with initial speed $u_B =
+            40\text{ m/s}$. Taking $g = 10\text{ m/s}^2$, find (a) the time $t$ when the two stones pass each other, (b)
+            the height above the ground where they meet, and (c) whether Stone B is rising or falling at that instant.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation (Ground Frame):</strong></p>
+            <p>Choose upward as $+y$ and ground level as $y = 0$. Both stones have $a = -10\text{ m/s}^2$.</p>
+            <ul>
+                <li>Position of Stone A ($y_{A0} = 100\text{ m}$, $u_A = 0$): $y_A(t) = 100 - \frac{1}{2}(10)t^2 = 100 -
+                    5t^2$.</li>
+                <li>Position of Stone B ($y_{B0} = 0$, $u_B = +40\text{ m/s}$): $y_B(t) = 40t - \frac{1}{2}(10)t^2 = 40t
+                    - 5t^2$.</li>
+            </ul>
+            <p><strong>(a) Meeting time:</strong> Equate $y_A(t) = y_B(t)$:</p>
+            $$100 - 5t^2 = 40t - 5t^2 \implies 40t = 100 \implies t = \mathbf{2.5\text{ s}}$$
+            <p><em>Validity check:</em> Stone A reaches ground at $t_A = \sqrt{200/10} = \sqrt{20} \approx 4.47\text{ s}
+                &gt; 2.5\text{ s}$, and Stone B's flight time is $T_B = 2(40)/10 = 8\text{ s} &gt; 2.5\text{ s}$, so
+                they genuinely meet in mid-air.</p>
+            <p><strong>(b) Height above ground:</strong></p>
+            $$y = 100 - 5(2.5)^2 = 100 - 5(6.25) = 100 - 31.25 = \mathbf{68.75\text{ m}}$$
+            <p><strong>(c) Direction of Stone B at $t = 2.5\text{ s}$:</strong></p>
+            $$v_B(2.5) = 40 - 10(2.5) = +15\text{ m/s} &gt; 0$$
+            <p>Since $v_B &gt; 0$, Stone B is still <strong>rising</strong> (it does not reach its apex until $t = 40/10
+                = 4\text{ s}$).</p>
+
+            <div class="shortcut-box">
+                <span class="box-label">30-Second BEST Exam Shortcut: Zero Relative Acceleration</span>
+                <p>Because both stones are in free fall simultaneously, $a_{BA} = (-g) - (-g) = 0$. Their relative speed
+                    of approach is strictly constant: $v_{\text{approach}} = u_B - u_A = 40 - 0 = 40\text{ m/s}$.</p>
+                <p>1) $t_{\text{meet}} = \dfrac{H}{v_{\text{approach}}} = \dfrac{100}{40} = \mathbf{2.5\text{ s}}$ (done
+                    in 5 seconds!).</p>
+                <p>2) Distance fallen by Stone A from top $= 5(2.5)^2 = 31.25\text{ m} \implies h_{\text{ground}} = 100
+                    - 31.25 = \mathbf{68.75\text{ m}}$.</p>
+                <p>3) Ascent time of B $= 40/10 = 4\text{ s} &gt; 2.5\text{ s} \implies$ B is <strong>rising</strong>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Example 8 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Trapezoidal $v\text{-}t$ Optimization</span>
+            <strong>Worked Example 8: Metro Train Uncapped vs. Speed-Capped Journey</strong>
+        </div>
+        <div class="ex-problem">
+            A metro train starts from rest at Station P, accelerates uniformly at $\alpha = 2\text{ m/s}^2$, optionally
+            cruises at constant speed, and decelerates uniformly at $\beta = 3\text{ m/s}^2$ to stop at Station Q,
+            located $S = 1500\text{ m}$ away.<br>
+            (a) With no speed limit, find the minimum possible journey time $T_{\min}$ and the peak speed $v_p$
+            reached.<br>
+            (b) If safety rules cap the speed at $v_{\max} = 30\text{ m/s}$, find the total journey time $T$ and the
+            ratio $v_{\text{avg}} / v_{\max}$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <p><strong>(a) Minimum time (triangular $v\text{-}t$ profile, zero cruise time):</strong> To minimize total
+                time for fixed area $S$, the train must accelerate up to peak speed $v_p$ for time $t_1$ and immediately
+                brake to rest for time $t_3$. Using $v_p = \alpha t_1 = \beta t_3$:</p>
+            $$t_1 = \frac{v_p}{2}, \qquad t_3 = \frac{v_p}{3} \implies T_{\min} = t_1 + t_3 = v_p\left(\frac{1}{2} +
+            \frac{1}{3}\right) = \frac{5}{6}v_p \implies v_p = \frac{6}{5}T_{\min}$$
+            <p>Equate the area of the $v\text{-}t$ triangle to $S = 1500\text{ m}$:</p>
+            $$S = \frac{1}{2} v_p T_{\min} = \frac{1}{2}\left(\frac{6}{5}T_{\min}\right)T_{\min} = \frac{3}{5}T_{\min}^2
+            = 1500 \implies T_{\min}^2 = 2500 \implies T_{\min} = \mathbf{50\text{ s}}$$
+            $$v_p = \frac{6}{5}(50) = \mathbf{60\text{ m/s}}$$
+
+            <p><strong>(b) Speed-capped journey ($v_{\max} = 30\text{ m/s}$, trapezoidal $v\text{-}t$ profile):</strong>
+            </p>
+            <ul>
+                <li><strong>Phase I (Acceleration at $2\text{ m/s}^2$):</strong> $t_1 = \dfrac{30}{2} = 15\text{ s}$;
+                    $S_1 = \frac{1}{2}(30)(15) = 225\text{ m}$.</li>
+                <li><strong>Phase III (Braking at $3\text{ m/s}^2$):</strong> $t_3 = \dfrac{30}{3} = 10\text{ s}$; $S_3
+                    = \frac{1}{2}(30)(10) = 150\text{ m}$.</li>
+                <li><strong>Phase II (Cruise at $30\text{ m/s}$):</strong> Remaining distance $S_2 = 1500 - (225 + 150)
+                    = 1125\text{ m}$, so $t_2 = \dfrac{1125}{30} = 37.5\text{ s}$.</li>
+            </ul>
+            <p>Total journey time: $T = 15 + 37.5 + 10 = \mathbf{62.5\text{ s}}$. Average speed: $v_{\text{avg}} =
+                \dfrac{1500}{62.5} = 24\text{ m/s}$, so $\dfrac{v_{\text{avg}}}{v_{\max}} = \dfrac{24}{30} =
+                \mathbf{\dfrac{4}{5}} = 0.8$.</p>
+
+            <div class="shortcut-box">
+                <span class="box-label">30-Second BEST Exam Shortcut: Direct Profile Formulas</span>
+                <p><strong>(a)</strong> Compute $\dfrac{\alpha\beta}{\alpha+\beta} = \dfrac{2 \times 3}{2 + 3} =
+                    \dfrac{6}{5}$. Then $S = \frac{1}{2}\left(\frac{6}{5}\right)T_{\min}^2 = 1500 \implies T_{\min} =
+                    \mathbf{50\text{ s}}$ and $v_p = \frac{6}{5}(50) = \mathbf{60\text{ m/s}}$.</p>
+                <p><strong>(b)</strong> Use the one-line trapezoid time formula:
+                    $$T = \frac{S}{v_{\max}} + \frac{v_{\max}}{2}\left(\frac{1}{\alpha} + \frac{1}{\beta}\right) =
+                    \frac{1500}{30} + \frac{30}{2}\left(\frac{5}{6}\right) = 50 + 12.5 = \mathbf{62.5\text{ s}}$$
+                    Then $v_{\text{avg}} / v_{\max} = \dfrac{S / T}{v_{\max}} = \dfrac{50}{62.5} = \mathbf{0.8}$.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Example 9 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Calculus Kinematics Bridge ($a(x)$)</span>
+            <strong>Worked Example 9: Position-Dependent Acceleration via $a = v\dfrac{dv}{dx}$</strong>
+        </div>
+        <div class="ex-problem">
+            A particle starts from the origin ($x = 0$) with an initial velocity $u = 3\text{ m/s}$ and moves along the
+            $+x$-axis under a position-dependent acceleration $a(x) = (4 - x)\text{ m/s}^2$, where $x$ is in metres.
+            Find:<br>
+            (a) the velocity $v$ as a function of position $x$,<br>
+            (b) the maximum velocity $v_{\max}$ attained and the coordinate where it occurs, and<br>
+            (c) the maximum positive coordinate $x_{\max}$ reached before the particle reverses direction.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation (Calculus Integration):</strong></p>
+            <p>Because acceleration is given as a function of $x$ (NOT $t$), standard UAM equations are completely
+                invalid. Use the chain-rule identity $a = v\dfrac{dv}{dx}$:</p>
+            $$v\frac{dv}{dx} = 4 - x \implies v\,dv = (4 - x)\,dx$$
+            <p><strong>(a) Velocity as a function of $x$:</strong> Integrate from the initial state $(x = 0, v = 3)$ to
+                an arbitrary state $(x, v)$:</p>
+            $$\int_3^v v\,dv = \int_0^x (4 - x)\,dx \implies \left[\frac{v^2}{2}\right]_3^v = \left[4x -
+            \frac{x^2}{2}\right]_0^x$$
+            $$\frac{v^2 - 9}{2} = 4x - \frac{x^2}{2} \implies v^2 = 9 + 8x - x^2 \implies \mathbf{v(x) = \sqrt{9 + 8x -
+            x^2}}$$
+
+            <p><strong>(b) Maximum velocity $v_{\max}$:</strong> Velocity peaks when $\dfrac{dv}{dx} = 0$, which (for $v
+                &gt; 0$) occurs precisely when $a(x) = 0$:</p>
+            $$4 - x = 0 \implies \mathbf{x = 4\text{ m}}$$
+            <p>Substitute $x = 4\text{ m}$ into $v^2 = 9 + 8x - x^2$:</p>
+            $$v_{\max}^2 = 9 + 8(4) - 4^2 = 9 + 32 - 16 = 25 \implies \mathbf{v_{\max} = 5\text{ m/s}}$$
+
+            <p><strong>(c) Maximum coordinate $x_{\max}$ (turning point where $v = 0$):</strong></p>
+            $$9 + 8x - x^2 = 0 \implies x^2 - 8x - 9 = 0 \implies (x - 9)(x + 1) = 0$$
+            <p>Since the particle starts at $x = 0$ moving in the $+x$ direction, it first stops and reverses at
+                $\mathbf{x_{\max} = 9\text{ m}}$.</p>
+
+            <div class="shortcut-box">
+                <span class="box-label">30-Second BEST Exam Shortcut: Signed Area Under the $a\text{-}x$ Graph</span>
+                <p>Recall $\dfrac{v^2 - u^2}{2} = \text{Signed Area under } a\text{-}x$. Plot the straight line $a(x) =
+                    4 - x$ (intercepts at $a = 4$ and $x = 4$, slope $-1$):</p>
+                <p>1) <strong>Peak velocity</strong> occurs at the $x$-intercept ($x = 4\text{ m}$). The positive
+                    triangle from $x = 0$ to $4$ has area $A_+ = \frac{1}{2}(4)(4) = +8\text{ m}^2/\text{s}^2$. Hence
+                    $v_{\max}^2 = u^2 + 2A_+ = 3^2 + 2(8) = 25 \implies \mathbf{v_{\max} = 5\text{ m/s}}$.</p>
+                <p>2) <strong>Turning point ($v = 0$)</strong> requires total net area $= \frac{0 - 3^2}{2} = -4.5$.
+                    Thus the negative triangle beyond $x = 4$ (with base $b = x_{\max} - 4$ and height $b$) must have
+                    area $\frac{1}{2}b^2 = 8 + 4.5 = 12.5 \implies b^2 = 25 \implies b = 5 \implies \mathbf{x_{\max} = 4
+                    + 5 = 9\text{ m}}$.</p>
+            </div>
+        </div>
+    </div>
+
+</article>

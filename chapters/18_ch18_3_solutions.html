@@ -1,0 +1,798 @@
+<article data-volume="Volume 3: Physics (Paper 2)"
+    data-title="Chapter 18: Newton's Laws of Motion, Multi-Pulleys, Wedges, Friction &amp; Pseudo-Force — Full Step-by-Step Solutions &amp; Error Forensics">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 3: Physics (Paper 2) &bull; Chapter 18 &bull; Part 3 of 3: Verified Solutions
+            &amp; Error Forensics</div>
+        <h1>Complete Step-by-Step Solutions &amp; Trap Forensics</h1>
+        <p>Zero-skip derivations, isolated FBD equations, independent sanity checks for all 30 problems from Part 2
+            (Q01&ndash;Q30), followed by 5 high-impact Trap &amp; Error Forensics autopsies designed to eliminate
+            classic BEST Physics errors.</p>
+        <div class="tag-row">
+            <span class="meta-pill">30 Verified Solutions</span>
+            <span class="meta-pill">100% Answer-Key Synced</span>
+            <span class="meta-pill">Zero-Skip FBD Proofs</span>
+            <span class="meta-pill">5 Error Forensics Cards</span>
+        </div>
+    </header>
+
+    <!-- ==================== LEVEL 1 SOLUTIONS ==================== -->
+    <div class="level-banner l1">Level 1 Solutions &mdash; Foundational Warmup &amp; Core Traps (Q01&ndash;Q09)</div>
+
+    <!-- S01 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q01</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p>Resolve the ball's velocity into components perpendicular (normal, $+x$ into the wall) and parallel ($+y$
+            along the wall) to the rigid vertical wall. The angle with the normal is $\theta = 60^\circ$:</p>
+        <ul>
+            <li><strong>Before collision:</strong> $u_x = +u\cos 60^\circ$, $\; u_y = +u\sin 60^\circ$.</li>
+            <li><strong>After elastic rebound:</strong> $v_x = -u\cos 60^\circ$, $\; v_y = +u\sin 60^\circ$ (tangential
+                component is unchanged).</li>
+        </ul>
+        <p>Hence $\Delta p_y = 0$, while the normal change in momentum is:</p>
+        $$\Delta p_x = m(v_x - u_x) = m\left(-u\cos 60^\circ - u\cos 60^\circ\right) = -2mu\cos 60^\circ$$
+        <p>Substitute $m = 0.5\text{ kg}$, $u = 20\text{ m/s}$, and $\cos 60^\circ = \frac{1}{2}$:</p>
+        $$|\Delta p| = 2(0.5)(20)\left(\frac{1}{2}\right) = 10\text{ kg}\cdot\text{m/s}$$
+        <p>Average force exerted by the wall over $\Delta t = 0.05\text{ s}$:</p>
+        $$F_{\text{avg}} = \frac{|\Delta p|}{\Delta t} = \frac{10}{0.05} = \mathbf{200\text{ N}}$$
+        <p>Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S02 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q02</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p>Label the 10 identical coins from bottom to top as Coin $1, 2, 3, \dots, 10$. The normal contact interface
+            between Coin 3 and Coin 4 supports the entire combined stack sitting strictly above Coin 3&mdash;namely
+            Coins $4, 5, 6, 7, 8, 9, 10$.</p>
+        <p>Count of coins in the upper sub-system (Coins 4 through 10 inclusive):</p>
+        $$n_{\text{above}} = 10 - 3 = 7\text{ coins}$$
+        <p>Isolating this 7-coin sub-system in vertical static equilibrium ($a = 0$), the upward normal force $N_{34}$
+            exerted by Coin 3 on Coin 4 balances their combined weight $7mg$. By Newton's Third Law, the downward normal
+            force exerted by Coin 4 on Coin 3 has the exact same magnitude:</p>
+        $$N_{43} = N_{34} = \mathbf{7mg}$$
+        <p>Hence <strong>(D)</strong> is correct.</p>
+    </div>
+
+    <!-- S03 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q03</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <ul>
+            <li><strong>Evaluating Statement I:</strong> Weight $mg$ (Earth pulling the book gravitationally) and normal
+                reaction $N$ (table pushing the book electromagnetically) act on the <strong>same body</strong> (the
+                book) and are of <strong>different physical natures</strong>. They cancel solely because the book is in
+                equilibrium ($a = 0$); they are <strong>not</strong> a Newton's Third-Law pair. Thus <strong>Statement I
+                    is false</strong>.</li>
+            <li><strong>Evaluating Statement II:</strong> By Newton's Third Law, during any interaction between two
+                bodies, $\vec{F}_{\text{truck on mosquito}} = -\vec{F}_{\text{mosquito on truck}}$ at every instant
+                regardless of their masses or speeds. (The mosquito suffers catastrophic acceleration only because its
+                mass $m$ is tiny, so $a = F/m$ is huge.) Thus <strong>Statement II is true</strong>.</li>
+        </ul>
+        <p>Hence <strong>(D)</strong> is correct.</p>
+    </div>
+
+    <!-- S04 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q04</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Compute Normal Reaction and Limiting Static Friction:</strong></p>
+        <p>Vertical equilibrium on the horizontal table gives $N = mg = 4 \times 10 = 40\text{ N}$.</p>
+        $$f_{s,\max} = \mu_s N = 0.6 \times 40 = 24\text{ N}$$
+        <p><strong>Step 2 &mdash; Compare Applied Pull Against $f_{s,\max}$:</strong></p>
+        <p>Because the applied horizontal pull $F_{\text{app}} = 18\text{ N}$ is strictly less than $f_{s,\max} =
+            24\text{ N}$, the block remains completely at rest ($a = \mathbf{0\text{ m/s}^2}$). Static friction
+            self-adjusts to match only the applied pull:</p>
+        $$f_s = F_{\text{app}} = \mathbf{18\text{ N}}$$
+        <p><em>Trap Check:</em> Reporting $24\text{ N}$ (Option B) or $20\text{ N}$ (Option C) violates equilibrium by
+            making friction larger than the pulling force. Hence <strong>(A)</strong> is correct.</p>
+    </div>
+
+    <!-- S05 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q05</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p>For the ideal vertical Atwood machine with $m_1 = 2\text{ kg}$, $m_2 = 6\text{ kg}$, and $g = 10\text{
+            m/s}^2$, write Newton's Second Law for each block ($m_2$ descending at $a$, $m_1$ ascending at $a$):</p>
+        $$m_2 g - T = m_2 a \implies 60 - T = 6a$$
+        $$T - m_1 g = m_1 a \implies T - 20 = 2a$$
+        <p>Add the two equations to eliminate $T$:</p>
+        $$40 = 8a \implies a = 5\text{ m/s}^2$$
+        <p>Substitute back to find string tension $T$:</p>
+        $$T = 20 + 2(5) = 30\text{ N} \qquad \left(\text{Check: } T = \frac{2m_1 m_2}{m_1 + m_2}g =
+        \frac{2(2)(6)}{8}(10) = 30\text{ N}\right)$$
+        <p><strong>FBD of the Fixed Pulley:</strong> Two vertical string segments pull downward on the pulley with total
+            force $2T$, balanced by the upward ceiling clamp force $R$:</p>
+        $$R = 2T = 2(30\text{ N}) = \mathbf{60\text{ N}}$$
+        <p><em>Trap Check:</em> Notice $R = 60\text{ N}$ is strictly less than the combined static weight $(2 + 6)(10) =
+            80\text{ N}$ (distractor D) because the system's center of mass accelerates downward. Hence
+            <strong>(C)</strong> is correct.
+        </p>
+    </div>
+
+    <!-- S06 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q06</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p>Sand lands vertically onto the horizontal belt with zero initial horizontal velocity ($v_{x,i} = 0$) and is
+            accelerated to the belt's constant horizontal speed $v = 3\text{ m/s}$ at a steady mass rate $\dfrac{dm}{dt}
+            = 4\text{ kg/s}$.</p>
+        <p>By Newton's Second Law in momentum-rate form ($\vec{F} = \frac{d\vec{p}}{dt}$), since belt speed $v$ is
+            constant ($\frac{dv}{dt} = 0$):</p>
+        $$F_{\text{motor}} = v\frac{dm}{dt} = (3\text{ m/s})(4\text{ kg/s}) = \mathbf{12\text{ N}}$$
+        <p>Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S07 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q07</span>
+            <span class="badge badge-l1">Level 1 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 26</span>
+        </div>
+        <p>By the Impulse&ndash;Momentum Theorem, total net impulse $J = \Delta p = m(v_f - u)$ equals the
+            <strong>signed area</strong> enclosed by the $F\text{-}t$ curve from $t = 0\text{ s}$ to $t = 11\text{ s}$:
+        </p>
+        <ul>
+            <li><strong>Positive Trapezoid ($t = 0\text{ s}$ to $7\text{ s}$):</strong> Bottom base $= 7 - 0 = 7\text{
+                s}$, top parallel side $= 5 - 2 = 3\text{ s}$, height $= +12\text{ N}$:
+                $$J_1 = \frac{1}{2}(7 + 3)(12) = \frac{1}{2}(10)(12) = +60\text{ N}\cdot\text{s}$$
+            </li>
+            <li><strong>Negative Triangle ($t = 7\text{ s}$ to $11\text{ s}$):</strong> Base $= 11 - 7 = 4\text{ s}$,
+                depth $= -8\text{ N}$:
+                $$J_2 = \frac{1}{2}(4)(-8) = -16\text{ N}\cdot\text{s}$$
+            </li>
+        </ul>
+        <p>Net impulse over $[0, 11]\text{ s}$:</p>
+        $$J_{\text{net}} = J_1 + J_2 = 60 - 16 = +44\text{ N}\cdot\text{s}$$
+        <p>Solve for final velocity $v_f$ using $m = 2\text{ kg}$ and $u = +4\text{ m/s}$:</p>
+        $$m(v_f - u) = J_{\text{net}} \implies 2(v_f - 4) = 44 \implies v_f - 4 = 22 \implies v_f = \mathbf{26\text{
+        m/s}}$$
+        <p>The exact NAT integer is <strong>26</strong>.</p>
+    </div>
+
+    <!-- S08 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q08</span>
+            <span class="badge badge-l1">Level 1 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 40</span>
+        </div>
+        <p><strong>Step 1 &mdash; System Acceleration:</strong> Treat $(A + B + C)$ as one combined body of total mass
+            $M_{\text{tot}} = 2 + 3 + 5 = 10\text{ kg}$. Taking rightward as $+x$:</p>
+        $$a = \frac{F - F'}{M_{\text{tot}}} = \frac{60 - 20}{10} = \frac{40}{10} = +4\text{ m/s}^2 \text{ (rightward)}$$
+        <p><strong>Step 2 &mdash; Isolated FBD of Block $C$ ($5\text{ kg}$):</strong> Horizontal forces on $C$ are
+            $N_{BC}$ pushing rightward (from $B$) and $F' = 20\text{ N}$ pushing leftward:</p>
+        $$N_{BC} - F' = m_C a \implies N_{BC} - 20 = (5)(4) = 20 \implies N_{BC} = \mathbf{40\text{ N}}$$
+        <p><em>Independent Check via FBD of $(A + B)$ ($5\text{ kg}$):</em> $60 - N_{BC} = (2 + 3)(4) = 20 \implies
+            N_{BC} = 40\text{ N}$. Confirmed! The exact NAT integer is <strong>40</strong>.</p>
+    </div>
+
+    <!-- S09 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q09</span>
+            <span class="badge badge-l1">Level 1 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 600</span>
+        </div>
+        <p><strong>Step 1 &mdash; Find Magnitude &amp; Direction of Lift Acceleration:</strong> The elevator is moving
+            <strong>downward</strong> ($u = 8\text{ m/s}$ downward) and <em>slowing down</em> to rest ($v = 0$) over $s
+            = 16\text{ m}$. Because velocity is downward and decreasing, the acceleration vector points strictly
+            <strong>upward</strong>! Find its magnitude via $v^2 - u^2 = 2(-a)s$:
+        </p>
+        $$0^2 - 8^2 = -2a(16) \implies 32a = 64 \implies a = 2\text{ m/s}^2 \text{ (upward)}$$
+        <p><strong>Step 2 &mdash; Isolated FBD of Student ($m = 50\text{ kg}$, upward $+y$):</strong> Weighing scale
+            reads Normal Reaction $N$:</p>
+        $$N - mg = ma \implies N = m(g + a) = 50(10 + 2) = 50 \times 12 = \mathbf{600\text{ N}}$$
+        <p><em>Trap Check:</em> Many students see "descending" and blindly write $m(g - a) = 400\text{ N}$. Remember:
+            <em>descending while braking</em> means upward acceleration! The exact NAT integer is <strong>600</strong>.
+        </p>
+    </div>
+
+    <!-- ==================== LEVEL 2 SOLUTIONS ==================== -->
+    <div class="level-banner l2">Level 2 Solutions &mdash; Exam-Real BEST / NSEJS Applications (Q10&ndash;Q21)</div>
+
+    <!-- S10 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q10</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Common Acceleration of Block + Massive Rope:</strong> Total mass $M_{\text{tot}} = m +
+            M = 4 + 6 = 10\text{ kg}$:</p>
+        $$a = \frac{F}{m + M} = \frac{80}{10} = 8\text{ m/s}^2$$
+        <p><strong>Step 2 &mdash; Cut Mentally at Point $P$ ($x = 1\text{ m}$ from the Pulled Right End):</strong></p>
+        <p>Linear mass density of the uniform rope is $\lambda = \dfrac{M}{L} = \dfrac{6\text{ kg}}{3\text{ m}} =
+            2\text{ kg/m}$.</p>
+        <ul>
+            <li><strong>Method A (Isolate Trailing Portion to the Left of $P$):</strong> Trailing rope length is $L - x
+                = 3 - 1 = 2\text{ m}$, whose mass is $2 \times 2 = 4\text{ kg}$. Together with the $4\text{ kg}$ block,
+                total trailing mass is $m_{\text{tail}} = 4 + 4 = 8\text{ kg}$. Tension $T_P$ is the sole horizontal
+                force pulling this trailing mass:
+                $$T_P = m_{\text{tail}} \cdot a = (8\text{ kg})(8\text{ m/s}^2) = \mathbf{64\text{ N}}$$
+            </li>
+            <li><strong>Method B (Isolate Front $1\text{ m}$ Rope Segment):</strong> Mass of front segment is
+                $m_{\text{front}} = 2 \times 1 = 2\text{ kg}$. Newton's 2nd Law gives $F - T_P = m_{\text{front}} a
+                \implies 80 - T_P = (2)(8) = 16 \implies T_P = \mathbf{64\text{ N}}$.</li>
+        </ul>
+        <p>Hence <strong>(C)</strong> is correct.</p>
+    </div>
+
+    <!-- S11 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q11</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p>The weight hanging from knot $O$ is $W = mg = 10 \times 10 = 100\text{ N}$ vertically downward.</p>
+        <p><strong>Method 1 &mdash; Lami's Theorem (Fastest):</strong> Because $37^\circ + 53^\circ = 90^\circ$, strings
+            $OA$ and $OB$ meet at a right angle ($90^\circ$) at knot $O$! The three angles opposite $W$, $T_A$, and
+            $T_B$ are:</p>
+        <ul>
+            <li>Angle opposite $W$ (between $T_A$ and $T_B$): $\gamma = 90^\circ$.</li>
+            <li>Angle opposite $T_A$ (between $T_B$ and $W$): $\alpha = 90^\circ + 53^\circ = 143^\circ \implies \sin
+                143^\circ = \cos 53^\circ = \frac{3}{5}$.</li>
+            <li>Angle opposite $T_B$ (between $T_A$ and $W$): $\beta = 90^\circ + 37^\circ = 127^\circ \implies \sin
+                127^\circ = \cos 37^\circ = \frac{4}{5}$.</li>
+        </ul>
+        $$\frac{T_A}{\sin 143^\circ} = \frac{T_B}{\sin 127^\circ} = \frac{100}{\sin 90^\circ} \implies T_A =
+        100\left(\frac{3}{5}\right) = \mathbf{60\text{ N}}, \qquad T_B = 100\left(\frac{4}{5}\right) = \mathbf{80\text{
+        N}}$$
+        <p><strong>Method 2 &mdash; Component Verification:</strong> Horizontal balance $T_A\cos 37^\circ = T_B\cos
+            53^\circ \implies 60(0.8) = 80(0.6) = 48\text{ N}$. Vertical balance $T_A\sin 37^\circ + T_B\sin 53^\circ =
+            60(0.6) + 80(0.8) = 36 + 64 = 100\text{ N}$. Exact! Hence <strong>(A)</strong> is correct.</p>
+    </div>
+
+    <!-- S12 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q12</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <ul>
+            <li><strong>Evaluating Statement I:</strong> Tension in an inextensible string is an instantaneous
+                constraint force that drops to zero immediately upon cutting, whereas a spring's restoring force $F_s =
+                kx$ depends on physical elongation $x$, which cannot change instantaneously for finite masses. Thus
+                <strong>Statement I is true</strong>.
+            </li>
+            <li><strong>Evaluating Statement II:</strong> Friction opposes <em>relative slipping</em> between contacting
+                surfaces, NOT necessarily motion relative to the ground! For example, when lower block $B$ is pulled
+                forward on a smooth floor, static friction on upper block $A$ points strictly <em>in the direction of
+                    $A$'s ground velocity</em>—it is the very force accelerating $A$ forward! Similarly, friction from
+                the road pushes a forward-walking person forward. Thus <strong>Statement II is false</strong>.</li>
+        </ul>
+        <p>Hence <strong>(C)</strong> is correct.</p>
+    </div>
+
+    <!-- S13 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q13</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p>Resolve weight $mg = 5 \times 10 = 50\text{ N}$ along and perpendicular to the fixed $37^\circ$ incline:</p>
+        <ul>
+            <li><strong>Down-incline driving component:</strong> $mg\sin 37^\circ = 50\left(\dfrac{3}{5}\right) =
+                30\text{ N}$.</li>
+            <li><strong>Normal reaction:</strong> $N = mg\cos 37^\circ = 50\left(\dfrac{4}{5}\right) = 40\text{ N}$.
+            </li>
+            <li><strong>Limiting static friction ceiling:</strong> $f_{s,\max} = \mu_s N = 0.8 \times 40 = 32\text{ N}$.
+            </li>
+        </ul>
+        <p>Compare the driving pull ($30\text{ N}$) against the limiting ceiling ($32\text{ N}$): since $30\text{ N}
+            &lt; 32\text{ N}$ (equivalently $\tan 37^\circ = 0.75 &lt; \mu_s = 0.8$, so $\theta &lt; \theta_r$), the
+            block <strong>remains completely at rest</strong>. Static friction self-adjusts strictly to balance gravity
+            down the slope:</p>
+        $$f_s = mg\sin 37^\circ = \mathbf{30\text{ N}\text{ up the incline}}$$
+        <p><em>Trap Check:</em> Option (A) ($32\text{ N}$) is the classic trap for students who blindly compute $\mu_s
+            mg\cos\theta$ without testing whether the block slips! Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S14 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q14</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Equilibrium Forces Before the Cut ($t = 0^-$):</strong></p>
+        <ul>
+            <li><strong>Spring 2</strong> supports Block $C$ ($3\text{ kg}$): $F_{s2} = m_C g = 30\text{ N}$.</li>
+            <li><strong>String ($A\text{--}B$)</strong> supports Blocks $(B + C)$ ($2 + 3 = 5\text{ kg}$): $T = (2 +
+                3)(10) = 50\text{ N}$.</li>
+            <li><strong>Spring 1</strong> supports Blocks $(A + B + C)$ ($1 + 2 + 3 = 6\text{ kg}$): $F_{s1} = (1 + 2 +
+                3)(10) = 60\text{ N}$.</li>
+        </ul>
+        <p><strong>Step 2 &mdash; Forces Immediately After Cutting the String ($t = 0^+$):</strong> String tension drops
+            instantaneously to $T = 0$, while BOTH ideal spring forces remain strictly unchanged: $F_{s1} = 60\text{ N}$
+            and $F_{s2} = 30\text{ N}$.</p>
+        <p><strong>Step 3 &mdash; Write Isolated FBDs at $t = 0^+$:</strong></p>
+        <ul>
+            <li><strong>Block $A$ ($1\text{ kg}$):</strong> $F_{s1} = 60\text{ N}$ upward, $m_A g = 10\text{ N}$
+                downward (and $T = 0$):
+                $$a_A = \frac{60 - 10}{1} = \mathbf{50\text{ m/s}^2\text{ upward}}$$
+            </li>
+            <li><strong>Block $B$ ($2\text{ kg}$):</strong> $T = 0$ upward; BOTH weight $m_B g = 20\text{ N}$ AND
+                stretched Spring 2 force $F_{s2} = 30\text{ N}$ pull <em>downward</em>:
+                $$a_B = \frac{20 + 30}{2} = \frac{50}{2} = \mathbf{25\text{ m/s}^2\text{ downward}}$$
+            </li>
+            <li><strong>Block $C$ ($3\text{ kg}$):</strong> $F_{s2} = 30\text{ N}$ upward balances $m_C g = 30\text{ N}$
+                downward:
+                $$a_C = \frac{30 - 30}{3} = \mathbf{0\text{ m/s}^2}$$
+            </li>
+        </ul>
+        <p><em>COM Check on Falling Sub-system $(B + C)$:</em> $a_{\text{COM}} = \frac{2(25) + 3(0)}{2 + 3} =
+            \frac{50}{5} = 10\text{ m/s}^2 = g$. Exact! Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S15 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q15</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p>When pulling a block of mass $m$ at upward angle $\theta$, $N = mg - F\sin\theta$, and impending slip
+            requires $F\cos\theta = \mu_s(mg - F\sin\theta) \implies F = \dfrac{\mu_s mg}{\cos\theta +
+            \mu_s\sin\theta}$. Minimizing $F$ maximizes the denominator to $\sqrt{1 + \mu_s^2}$, yielding:</p>
+        $$F_{\min} = \frac{\mu_s mg}{\sqrt{1 + \mu_s^2}}$$
+        <p>Substitute $m = 13\text{ kg}$, $g = 10\text{ m/s}^2$, and $\mu_s = \dfrac{5}{12}$ (noting the
+            $5\text{-}12\text{-}13$ Pythagorean triple):</p>
+        $$\sqrt{1 + \left(\frac{5}{12}\right)^2} = \sqrt{\frac{144 + 25}{144}} = \frac{13}{12}$$
+        $$F_{\min} = \frac{\left(\frac{5}{12}\right)(13 \times 10)}{\frac{13}{12}} = \frac{5 \times 130}{13} =
+        \mathbf{50\text{ N}}$$
+        <p><em>Notice:</em> Pulling purely horizontally would require $\mu_s mg = \frac{5}{12}(130) \approx 54.2\text{
+            N}$ (distractor C), whereas angling the pull upward at $\lambda = \tan^{-1}(5/12)$ saves $4.2\text{ N}$ by
+            lowering $N$. Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S16 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q16</span>
+            <span class="badge badge-l2">Level 2 &bull; Passage 1</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p>First compute the maximum friction force available at the $A\text{--}B$ interface ($N_1 = m_A g = 3 \times 10
+            = 30\text{ N}$):</p>
+        $$f_{\max} = \mu_1 N_1 = 0.4 \times 30 = 12\text{ N}$$
+        <p>Because the external pull $F$ acts on lower block $B$, <strong>upper block $A$ is the passive block</strong>
+            driven forward solely by interface friction $f$. Hence the maximum acceleration Block $A$ can ever achieve
+            is:</p>
+        $$a_{\max} = \frac{f_{\max}}{m_A} = \frac{12}{3} = 4\text{ m/s}^2$$
+        <p>On a smooth floor ($\mu_2 = 0$), both blocks move together at $a = \dfrac{F}{m_A + m_B}$ up to $a_{\max} =
+            4\text{ m/s}^2$. Therefore:</p>
+        $$F_{\max} = (m_A + m_B)a_{\max} = (3 + 7)(4) = \mathbf{40\text{ N}}$$
+        <p>Hence <strong>(C)</strong> is correct.</p>
+    </div>
+
+    <!-- S17 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q17</span>
+            <span class="badge badge-l2">Level 2 &bull; Passage 1</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p>Since $F = 25\text{ N} &lt; F_{\max} = 40\text{ N}$, there is <strong>no relative slipping</strong>; both
+            blocks accelerate together as one unit of mass $3 + 7 = 10\text{ kg}$:</p>
+        $$a_A = a_B = \frac{F}{m_A + m_B} = \frac{25}{10} = \mathbf{2.5\text{ m/s}^2}$$
+        <p>Isolating passive Block $A$ ($3\text{ kg}$), the self-adjusting static friction driving $A$ is:</p>
+        $$f = m_A a_A = 3 \times 2.5 = \mathbf{7.5\text{ N}} \quad (&lt; 12\text{ N, confirming no slip!})$$
+        <p>Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S18 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q18</span>
+            <span class="badge badge-l2">Level 2 &bull; Passage 1</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p>Since $F = 54\text{ N} &gt; F_{\max} = 40\text{ N}$, static lockup breaks and Block $B$ slips forward beneath
+            Block $A$. Kinetic friction locks at $f_k = \mu_k N_1 = 0.4(30) = 12\text{ N}$ (acting forward on $A$ and
+            backward on $B$):</p>
+        <ul>
+            <li><strong>Isolated FBD of Block $A$ ($3\text{ kg}$):</strong> $a_A = \dfrac{f_k}{m_A} = \dfrac{12}{3} =
+                \mathbf{4.0\text{ m/s}^2}$.</li>
+            <li><strong>Isolated FBD of Block $B$ ($7\text{ kg}$):</strong> $F - f_k = m_B a_B \implies 54 - 12 = 7a_B
+                \implies a_B = \dfrac{42}{7} = \mathbf{6.0\text{ m/s}^2}$.</li>
+        </ul>
+        <p>Since $a_B = 6.0 &gt; a_A = 4.0$, the assumed slipping direction is physically self-consistent. Thus $(a_A,
+            a_B) = (4.0\text{ m/s}^2, 6.0\text{ m/s}^2)$, making <strong>(C)</strong> correct.</p>
+    </div>
+
+    <!-- S19 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q19</span>
+            <span class="badge badge-l2">Level 2 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 40</span>
+        </div>
+        <p>Compare the opposing gravitational pulls along the string ($m_1 = m_2 = 5\text{ kg}$, $g = 10\text{ m/s}^2$):
+        </p>
+        <ul>
+            <li>Pull of hanging Block $B$: $m_2 g = 5 \times 10 = 50\text{ N}$.</li>
+            <li>Down-incline component of Block $A$: $m_1 g\sin 37^\circ = 50\left(\frac{3}{5}\right) = 30\text{ N}$.
+            </li>
+        </ul>
+        <p>Since $50\text{ N} &gt; 30\text{ N}$, Block $B$ accelerates downward and Block $A$ accelerates up the incline
+            with common magnitude $a$:</p>
+        $$50 - T = 5a \qquad \text{and} \qquad T - 30 = 5a$$
+        <p>Adding both equations gives $20 = 10a \implies a = 2\text{ m/s}^2$. Substitute into either FBD equation:</p>
+        $$T = 50 - 5(2) = \mathbf{40\text{ N}} \qquad (\text{Check: } 30 + 5(2) = 40\text{ N})$$
+        <p>The exact NAT integer is <strong>40</strong>.</p>
+    </div>
+
+    <!-- S20 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q20</span>
+            <span class="badge badge-l2">Level 2 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 50</span>
+        </div>
+        <p><strong>Method A &mdash; Inertial Ground Frame (FBD of $4\text{ kg}$ Bob):</strong> Only two real forces act
+            on the bob: string tension $T$ (at $37^\circ$ to the vertical) and gravity $mg = 4 \times 10 = 40\text{ N}$
+            vertically downward. Because the bob accelerates purely horizontally ($a_y = 0$, $a_x = a$):</p>
+        $$T\cos 37^\circ = mg \implies T\left(\frac{4}{5}\right) = 40 \implies T = 40 \times \frac{5}{4} =
+        \mathbf{50\text{ N}}$$
+        <p><strong>Method B &mdash; Non-Inertial Train Frame Check:</strong> Adding backward pseudo-force $ma$ gives
+            $\tan 37^\circ = \frac{a}{g} \implies a = 10\left(\frac{3}{4}\right) = 7.5\text{ m/s}^2$, so $T = m\sqrt{g^2
+            + a^2} = 4\sqrt{10^2 + 7.5^2} = 4(12.5) = \mathbf{50\text{ N}}$. The exact NAT integer is
+            <strong>50</strong>.
+        </p>
+    </div>
+
+    <!-- S21 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q21</span>
+            <span class="badge badge-l2">Level 2 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 144</span>
+        </div>
+        <p>Convert cross-sectional area to SI units: $A = 5\text{ cm}^2 = 5 \times 10^{-4}\text{ m}^2$. Mass of water
+            striking the plate every second:</p>
+        $$\frac{dm}{dt} = \rho A v = (1000\text{ kg/m}^3)(5 \times 10^{-4}\text{ m}^2)(12\text{ m/s}) = 6\text{ kg/s}$$
+        <p>Because the water rebounds <strong>straight backward</strong> with the exact same speed $12\text{ m/s}$, the
+            velocity change per unit mass is $\Delta v = (-12) - (+12) = -24\text{ m/s}$ (magnitude $2v = 24\text{
+            m/s}$). Hence the steady normal force exerted on the plate is:</p>
+        $$F = (2v)\frac{dm}{dt} = (24\text{ m/s})(6\text{ kg/s}) = \mathbf{144\text{ N}}$$
+        <p><em>Formula check:</em> $F = 2\rho A v^2 = 2(1000)(5 \times 10^{-4})(12^2) = 1 \times 144 = 144\text{ N}$.
+            The exact NAT integer is <strong>144</strong>.</p>
+    </div>
+
+    <!-- ==================== LEVEL 3 SOLUTIONS ==================== -->
+    <div class="level-banner l3">Level 3 Solutions &mdash; Rank-Booster &amp; Olympiad Bridge (Q22&ndash;Q30)</div>
+
+    <!-- S22 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q22</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <ul>
+            <li><strong>Evaluating Statement I:</strong> Pseudo-force $-m\vec{a}_{\text{frame}}$ arises purely from
+                observing motion from a non-inertial coordinate system, not from any physical interaction with another
+                body. Consequently, it has no Newton's Third-Law reaction partner anywhere in the universe. Thus
+                <strong>Statement I is true</strong>.
+            </li>
+            <li><strong>Evaluating Statement II:</strong> For an ideal Atwood machine with $m_1 \neq m_2$, the ceiling
+                clamping force is $R = 2T = \dfrac{4m_1 m_2}{m_1 + m_2}g$. Compare this with total weight $W = (m_1 +
+                m_2)g$:
+                $$W - R = g\left[(m_1 + m_2) - \frac{4m_1 m_2}{m_1 + m_2}\right] = g\frac{(m_1 + m_2)^2 - 4m_1 m_2}{m_1
+                + m_2} = g\frac{(m_1 - m_2)^2}{m_1 + m_2} &gt; 0$$
+                Because $(m_1 - m_2)^2 &gt; 0$ strictly whenever $m_1 \neq m_2$, we always have $R &lt; (m_1 + m_2)g$
+                (physically, the system's center of mass always accelerates downward). Thus <strong>Statement II is
+                    true</strong>.</li>
+        </ul>
+        <p>Hence <strong>(A)</strong> is correct.</p>
+    </div>
+
+    <!-- S23 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q23</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 &mdash; Wedge&ndash;Rod Normal-Contact Constraint:</strong> As the wedge slides rightward by
+            $\Delta x$, the vertical rod constrained inside the frictionless guides drops downward by $\Delta y = \Delta
+            x \tan 53^\circ$. Differentiating twice (or equating acceleration components perpendicular to the incline,
+            $a_R\cos 53^\circ = a_W\sin 53^\circ$):</p>
+        $$a_R = a_W \tan 53^\circ = \frac{4}{3}a_W$$
+        <p><strong>Step 2 &mdash; Isolated Newton's Second-Law Equations ($g = 10\text{ m/s}^2$):</strong> Let $N$ be
+            the normal contact force between the rod tip and the inclined wedge face (oriented at $53^\circ$ from
+            vertical).</p>
+        <ul>
+            <li><strong>FBD of Vertical Rod $R$ ($m = 3\text{ kg}$, downward positive):</strong> Gravity $mg = 30\text{
+                N}$ pulls down; upward vertical component of $N$ is $N\cos 53^\circ = \frac{3}{5}N$ (horizontal guide
+                forces balance $N\sin 53^\circ$):
+                $$30 - \frac{3}{5}N = m a_R = 3\left(\frac{4}{3}a_W\right) \implies 30 - \frac{3}{5}N = 4a_W \quad
+                \text{--- (Eq. 1)}$$
+            </li>
+            <li><strong>FBD of Smooth Wedge $W$ ($M = 8\text{ kg}$, rightward positive):</strong> Reaction $N$ pushes
+                down-right on the incline; its horizontal component $N\sin 53^\circ = \frac{4}{5}N$ accelerates the
+                wedge:
+                $$\frac{4}{5}N = M a_W = 8a_W \implies N = 10a_W \quad \text{--- (Eq. 2)}$$
+            </li>
+        </ul>
+        <p><strong>Step 3 &mdash; Solve Simultaneously:</strong> Substitute $N = 10a_W$ into (Eq. 1):</p>
+        $$30 - \frac{3}{5}(10a_W) = 4a_W \implies 30 - 6a_W = 4a_W \implies 10a_W = 30 \implies a_W = \mathbf{3.0\text{
+        m/s}^2}$$
+        <p><em>Check:</em> $a_R = 4.0\text{ m/s}^2$ and $N = 30\text{ N}$. Rod: $30 - 30(0.6) = 12 = 3(4)$. Wedge:
+            $30(0.8) = 24 = 8(3)$. Exact! Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S24 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q24</span>
+            <span class="badge badge-l3">Level 3 &bull; Passage 2</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Method 1 &mdash; String-Length Conservation:</strong> Measure vertical depths $y_B$ (for movable
+            pulley $P_1$/Block $B$) and $y_A$ (for Block $A$) downward from the fixed ceiling line. Total constant
+            string length is:</p>
+        $$y_B + (y_B - h_{P2}) + (y_A - h_{P2}) + \text{wraps} = L \implies 2y_B + y_A = \text{constant}$$
+        <p>Differentiating twice gives $2\ddot{y}_B + \ddot{y}_A = 0 \implies \ddot{y}_A = -2\ddot{y}_B$. Thus the
+            blocks move in opposite vertical directions with exact magnitude ratio:</p>
+        $$\mathbf{a_A = 2a_B}$$
+        <p><strong>Method 2 &mdash; Virtual Work Check:</strong> Two upward strands pull $B$ with $2T$, while one upward
+            strand pulls $A$ with $T$. Setting $\sum \vec{T}\cdot\vec{a} = 0$ immediately gives $(+T)(a_A) + (-2T)(a_B)
+            = 0 \implies a_A = 2a_B$. Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S25 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q25</span>
+            <span class="badge badge-l3">Level 3 &bull; Passage 2</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p>First test the direction of motion: if static, Block $A$ would set $T = m_1 g = 40\text{ N}$, giving $2T =
+            80\text{ N}$ upward on $B$. Because Block $B$'s weight is $m_2 g = 140\text{ N} &gt; 80\text{ N}$,
+            <strong>Block $B$ accelerates downward at $a_B$</strong> while <strong>Block $A$ accelerates upward at $a_A
+                = 2a_B$</strong>.
+        </p>
+        <ul>
+            <li><strong>FBD of Block $B$ ($14\text{ kg}$, downward positive):</strong> $140 - 2T = 14 a_B \quad
+                \text{--- (Eq. 1)}$</li>
+            <li><strong>FBD of Block $A$ ($4\text{ kg}$, upward positive):</strong> $T - 40 = 4a_A = 4(2a_B) = 8a_B
+                \implies T = 40 + 8a_B \quad \text{--- (Eq. 2)}$</li>
+        </ul>
+        <p>Substitute (Eq. 2) into (Eq. 1):</p>
+        $$140 - 2(40 + 8a_B) = 14a_B \implies 140 - 80 - 16a_B = 14a_B \implies 60 = 30a_B \implies \mathbf{a_B =
+        2\text{ m/s}^2}$$
+        $$\mathbf{a_A = 2a_B = 4\text{ m/s}^2}$$
+        <p>Thus $(a_A, a_B) = (4\text{ m/s}^2, 2\text{ m/s}^2)$, making <strong>(C)</strong> correct.</p>
+    </div>
+
+    <!-- S26 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q26</span>
+            <span class="badge badge-l3">Level 3 &bull; Passage 2</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p>From Q25, substitute $a_B = 2\text{ m/s}^2$ into $T = 40 + 8a_B$ to obtain the uniform string tension:</p>
+        $$T = 40 + 8(2) = 56\text{ N} \qquad (\text{Check on } B\text{: } 140 - 2(56) = 28 = 14 \times 2)$$
+        <p><strong>Isolated FBD of Fixed Pulley $P_2$:</strong> Two vertical string segments hang downward from the left
+            and right edges of $P_2$, each pulling down with tension $T = 56\text{ N}$. Because $P_2$ is stationary, the
+            upward support force from the ceiling rod balances both downward tensions:</p>
+        $$R_{P2} = 2T = 2(56\text{ N}) = \mathbf{112\text{ N}}$$
+        <p>Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S27 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q27</span>
+            <span class="badge badge-l3">Level 3 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 200</span>
+        </div>
+        <p>Work in the non-inertial frame of the smooth wedge accelerating horizontally rightward at $a$. On the
+            $3\text{ kg}$ block, add horizontal leftward pseudo-force $F_{\text{pseudo}} = ma$. For the block to remain
+            completely stationary on the smooth $53^\circ$ incline, resolve forces parallel to the slope:</p>
+        $$ma\cos 53^\circ = mg\sin 53^\circ \implies a = g\tan 53^\circ = 10\left(\frac{4}{3}\right) =
+        \frac{40}{3}\text{ m/s}^2$$
+        <p>Now treat the wedge ($M = 12\text{ kg}$) and block ($m = 3\text{ kg}$) as a single combined horizontal system
+            moving on the frictionless floor at common acceleration $a = \dfrac{40}{3}\text{ m/s}^2$:</p>
+        $$F = (M + m)a = (12 + 3)\left(\frac{40}{3}\right) = 15 \times \frac{40}{3} = 5 \times 40 = \mathbf{200\text{
+        N}}$$
+        <p><em>Ground-Frame Verification:</em> On $m$, $N\cos 53^\circ = mg = 30 \implies N = 50\text{ N}$, and $N\sin
+            53^\circ = 40 = 3a \implies a = 40/3\text{ m/s}^2$. On $M$, $F - N\sin 53^\circ = M a \implies F - 40 =
+            12(40/3) = 160 \implies F = 200\text{ N}$. The exact NAT integer is <strong>200</strong>.</p>
+    </div>
+
+    <!-- S28 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q28</span>
+            <span class="badge badge-l3">Level 3 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 70</span>
+        </div>
+        <p>Because <strong>both</strong> interfaces are rough, compute both limiting friction forces carefully:</p>
+        <ul>
+            <li><strong>Upper Interface ($A\text{--}B$):</strong> $N_1 = m_A g = 4 \times 10 = 40\text{ N} \implies
+                f_{1,\max} = \mu_1 N_1 = 0.5 \times 40 = 20\text{ N}$.</li>
+            <li><strong>Lower Interface ($B\text{--Floor}$):</strong> $N_2 = (m_A + m_B)g = (4 + 6)(10) = 100\text{ N}
+                \implies f_{2,\max} = \mu_2 N_2 = 0.2 \times 100 = 20\text{ N}$.</li>
+        </ul>
+        <p><strong>Step 1 &mdash; Maximum Common Acceleration Before $A$ Slips on $B$:</strong> Isolating passive upper
+            block $A$ ($4\text{ kg}$), the only horizontal force accelerating it is $f_1 \le 20\text{ N}$:</p>
+        $$a_{\max} = \frac{f_{1,\max}}{m_A} = \frac{20}{4} = 5\text{ m/s}^2$$
+        <p><strong>Step 2 &mdash; Apply Newton's 2nd Law to the Combined System $(A + B)$ ($10\text{ kg}$):</strong>
+            Since both blocks are moving across the rough floor at $a_{\max} = 5\text{ m/s}^2$, floor kinetic friction
+            acts backward with full magnitude $f_2 = 20\text{ N}$:</p>
+        $$F_{\max} - f_2 = (m_A + m_B)a_{\max} \implies F_{\max} - 20 = (10)(5) = 50 \implies F_{\max} =
+        \mathbf{70\text{ N}}$$
+        <p><em>Isolated FBD Check on Block $B$ ($6\text{ kg}$):</em> $F_{\max} - f_{1,\max} - f_2 = m_B a_{\max}
+            \implies F_{\max} - 20 - 20 = 6(5) = 30 \implies F_{\max} = 70\text{ N}$. Confirmed! The exact NAT integer
+            is <strong>70</strong>.</p>
+    </div>
+
+    <!-- S29 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q29</span>
+            <span class="badge badge-l3">Level 3 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 45</span>
+        </div>
+        <p><strong>Method 1 &mdash; Non-Inertial Elevator Frame ($g_{\text{eff}}$ Shortcut):</strong> Inside an elevator
+            accelerating upward at $a_0 = 2\text{ m/s}^2$, each mass experiences an additional downward pseudo-force
+            $ma_0$, replacing $g$ with effective gravity:</p>
+        $$g_{\text{eff}} = g + a_0 = 10 + 2 = 12\text{ m/s}^2$$
+        <p>Apply the standard Atwood tension formula directly with $m_1 = 3\text{ kg}$, $m_2 = 5\text{ kg}$, and
+            $g_{\text{eff}} = 12\text{ m/s}^2$:</p>
+        $$T = \frac{2m_1 m_2}{m_1 + m_2}g_{\text{eff}} = \frac{2(3)(5)}{3 + 5}(12) = \frac{30}{8}(12) = \frac{360}{8} =
+        \mathbf{45\text{ N}}$$
+        <p><strong>Method 2 &mdash; Ground-Frame Verification (No Pseudo-Force):</strong> Let $a_r$ be the acceleration
+            of $m_2$ downward (and $m_1$ upward) relative to the lift. Relative to ground, $m_1$ accelerates upward at
+            $(a_r + 2)$ and $m_2$ accelerates downward at $(a_r - 2)$:</p>
+        $$T - 30 = 3(a_r + 2) = 3a_r + 6 \quad \text{and} \quad 50 - T = 5(a_r - 2) = 5a_r - 10$$
+        <p>Adding both equations gives $20 = 8a_r - 4 \implies 8a_r = 24 \implies a_r = 3\text{ m/s}^2$, so $T = 30 +
+            3(3) + 6 = \mathbf{45\text{ N}}$. The exact NAT integer is <strong>45</strong>.</p>
+    </div>
+
+    <!-- S30 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q30</span>
+            <span class="badge badge-l3">Level 3 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 20</span>
+        </div>
+        <p>Work inside the non-inertial frame of the rough wedge accelerating rightward at $a_{\max}$. The block ($m =
+            2\text{ kg}$) experiences three forces: weight $mg$ vertically down, normal reaction $N$ perpendicular to
+            the slope, horizontal leftward pseudo-force $ma_{\max}$, plus static friction $f_s$ along the slope.</p>
+        <p><strong>Crucial Direction Audit:</strong> At the <em>maximum</em> acceleration $a_{\max}$, the strong
+            leftward pseudo-force threatens to push the block <strong>up</strong> the incline, so limiting static
+            friction $f_{s,\max} = \mu_s N$ acts strictly <strong>down</strong> the incline to prevent upward slip!</p>
+        <p>Resolve all forces perpendicular and parallel to the $37^\circ$ incline ($\sin 37^\circ = 0.6$, $\cos
+            37^\circ = 0.8$, $\mu_s = 0.5$, $g = 10\text{ m/s}^2$):</p>
+        <ul>
+            <li><strong>Perpendicular to incline (equilibrium):</strong>
+                $$N = mg\cos 37^\circ + ma_{\max}\sin 37^\circ$$
+            </li>
+            <li><strong>Parallel to incline (verge of upward slip):</strong>
+                $$ma_{\max}\cos 37^\circ = mg\sin 37^\circ + f_{s,\max} = mg\sin 37^\circ + \mu_s N$$
+            </li>
+        </ul>
+        <p>Substitute $N$ into the parallel equation and cancel mass $m$ from every term:</p>
+        $$a_{\max}\cos 37^\circ = g\sin 37^\circ + \mu_s\left(g\cos 37^\circ + a_{\max}\sin 37^\circ\right)$$
+        <p>Collect $a_{\max}$ terms on the left and $g$ terms on the right:</p>
+        $$a_{\max}\left(\cos 37^\circ - \mu_s\sin 37^\circ\right) = g\left(\sin 37^\circ + \mu_s\cos 37^\circ\right)$$
+        $$a_{\max} = g\left(\frac{\sin 37^\circ + \mu_s\cos 37^\circ}{\cos 37^\circ - \mu_s\sin 37^\circ}\right) =
+        10\left(\frac{0.6 + 0.5(0.8)}{0.8 - 0.5(0.6)}\right) = 10\left(\frac{0.6 + 0.4}{0.8 - 0.3}\right) =
+        10\left(\frac{1.0}{0.5}\right) = \mathbf{20\text{ m/s}^2}$$
+        <p><em>Numeric Force Verification ($m = 2\text{ kg}$):</em> $N = 20(0.8) + 40(0.6) = 16 + 24 = 40\text{ N}$;
+            $f_{s,\max} = 0.5(40) = 20\text{ N}$; up-slope pull $= 40(0.8) = 32\text{ N}$; down-slope hold $= 20(0.6) +
+            20 = 12 + 20 = 32\text{ N}$. Exact! The NAT integer is <strong>20</strong>.</p>
+    </div>
+
+    <!-- ==================== TRAP & ERROR FORENSICS ==================== -->
+    <h2 class="section-heading">Trap &amp; Error Forensics &mdash; Chapter 18 Post-Mortem</h2>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 1 &mdash; Blindly Plugging $f_s = \mu_s N$ When Applied Force Is Below
+            Limiting Friction</span>
+        <p><strong>Where It Strikes:</strong> Q04, Q13, and Q17.</p>
+        <p><strong>The Fatal Mistake:</strong> Treating $\mu_s N$ as the actual friction force rather than its
+            <em>maximum possible ceiling</em>. In Q04, plugging $\mu_s N = 24\text{ N}$ when the pull is only $18\text{
+            N}$ implies friction pushes the block backward; in Q13, writing $f = \mu_s mg\cos 37^\circ = 32\text{ N}$
+            when gravity only pulls down with $30\text{ N}$ makes the block spontaneously slide uphill; in Q17, plugging
+            $f = 12\text{ N}$ instead of $m_A a = 7.5\text{ N}$ breaks the two-block system completely.
+        </p>
+        <p><strong>Bulletproof Protocol:</strong> Static friction is an inequality ($0 \le f_s \le \mu_s N$), never an
+            equality until verified. Always compute $f_{\text{req}}$ (for rest or moving together) first, and compare it
+            against $f_{s,\max}$. If $f_{\text{req}} \le f_{s,\max}$, then $f_s = f_{\text{req}}$ strictly!</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 2 &mdash; Forgetting the Sign Flip in Rebound Momentum ($\Delta p = m(v -
+            (-u)) = m(v + u)$)</span>
+        <p><strong>Where It Strikes:</strong> Q01 and Q21 (and all wall-rebound / bat-hit / bouncing-jet impulse
+            problems).</p>
+        <p><strong>The Fatal Mistake:</strong> Subtracting speeds algebraically without signs ($m|v| - m|u| = 0$ for an
+            elastic bounce!) or failing to project momentum strictly along the normal when an oblique angle is given. In
+            Q21, dropping the factor of $2$ for elastic rebound yields $72\text{ N}$ instead of the true $144\text{ N}$;
+            in Q01, mixing up $\cos 60^\circ$ with $\sin 60^\circ$ (which applies only when the angle is measured from
+            the <em>wall</em>, not the <em>normal</em>) produces distractor (C) $200\sqrt{3}\text{ N}$.</p>
+        <p><strong>Bulletproof Protocol:</strong> Draw an explicit $+x$-axis pointing into the surface before writing a
+            single number. Write $\vec{p}_i = (+mu_{\perp})\hat{i}$ and $\vec{p}_f = (-mv_{\perp})\hat{i}$, so $\Delta
+            p_x = -m(v_{\perp} + u_{\perp})$ automatically adds the normal speeds every time.</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 3 &mdash; Reflexively Setting $N = mg$ on Inclines, Accelerating Wedges,
+            or Angled Pulls</span>
+        <p><strong>Where It Strikes:</strong> Q09, Q13, Q15, Q27, and Q30.</p>
+        <p><strong>The Fatal Mistake:</strong> Memorizing "$N = mg$" from elementary horizontal-table problems and
+            carrying it into tilted or accelerated systems. Every single vertical acceleration, incline angle, angled
+            external pull/push, or horizontal pseudo-force alters $N$: in Q15, the upward pull reduces $N$ to $mg -
+            F\sin\theta$ (lowering friction below horizontal $\mu_s mg$); in Q30, the horizontal pseudo-force adds
+            $ma\sin\theta$ <em>into</em> the incline, raising $N$ from $mg\cos\theta$ to $mg\cos\theta + ma\sin\theta$
+            (which is $40\text{ N}$, more than double $mg\cos 37^\circ = 16\text{ N}$!).</p>
+        <p><strong>Bulletproof Protocol:</strong> Never assume a canned formula for $N$. Always derive $N$ fresh from
+            $\sum F_{\perp} = m a_{\perp}$ perpendicular to the contacting surface on an isolated FBD.</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 4 &mdash; Double-Counting Pseudo-Force Inside an Inertial Ground
+            Frame</span>
+        <p><strong>Where It Strikes:</strong> Q20, Q27, Q29, and Q30.</p>
+        <p><strong>The Fatal Mistake:</strong> Putting the pseudo-force $-m\vec{a}_{\text{frame}}$ on the left-hand side
+            of $\sum F = ma$ <em>while simultaneously keeping</em> $m\vec{a}_{\text{ground}}$ on the right-hand side!
+            That counts $m\vec{a}$ twice and ruins the answer (for instance, in Q20 it yields $\tan\theta = 2a/g$
+            instead of $a/g$). A twin mistake is applying $F_{\text{pseudo}} = m_{\text{wedge}} a$ instead of
+            $m_{\text{block}} a$.</p>
+        <p><strong>Bulletproof Protocol:</strong> Declare your reference frame at line 1 and obey one strict rule:
+        <ul>
+            <li><strong>Inertial Ground Frame:</strong> Real forces ONLY on LHS; true ground acceleration
+                $m\vec{a}_{\text{ground}}$ on RHS.</li>
+            <li><strong>Non-Inertial Accelerating Frame:</strong> Real forces $+$
+                $(-m_{\text{body}}\vec{a}_{\text{frame}})$ on LHS; <em>relative</em> acceleration
+                $m\vec{a}_{\text{rel}}$ on RHS (which is $0$ whenever the body sits stationary inside the car/wedge!).
+            </li>
+        </ul>
+        </p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 5 &mdash; Treating Springs Like Strings Across Cuts &amp; Ignoring
+            Movable-Pulley Constraints</span>
+        <p><strong>Where It Strikes:</strong> Q12, Q14, and Q24&ndash;Q26.</p>
+        <p><strong>The Fatal Mistake:</strong> (1) In Q14, assuming that cutting the string between $A$ and $B$ makes
+            both $B$ and $C$ immediately fall together at $g = 10\text{ m/s}^2$ (distractor A), forgetting that
+            stretched Spring 2 still pulls $C$ upward with $30\text{ N}$ (giving $a_C = 0$) and yanks $B$ downward with
+            an extra $30\text{ N}$ (giving $a_B = 25\text{ m/s}^2 &gt; g$!). (2) In Passage 2 (Q24&ndash;Q26), setting
+            $a_A = a_B$ across a movable pulley instead of deriving $a_A = 2a_B$ via string conservation or $\sum
+            \vec{T}\cdot\vec{a} = 0$.</p>
+        <p><strong>Bulletproof Protocol:</strong> Before solving any spring&ndash;string cut, list every spring force at
+            $t = 0^-$ and freeze those numbers at $t = 0^+$ while zeroing only the cut string. Before solving any pulley
+            problem, count the strands on every movable pulley and lock in $\sum \vec{T}_i\cdot\vec{a}_i = 0$ first.</p>
+    </div>
+
+</article>

@@ -1,0 +1,1477 @@
+<article data-volume="Volume 3: Physics (Paper 2)"
+    data-title="Chapter 18: Newton's Laws of Motion, Multi-Pulleys, Wedges, Friction &amp; Pseudo-Force">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 3: Physics (Paper 2) &bull; Chapter 18 &bull; Part 1 of 3: Theory &amp; Worked
+            Examples</div>
+        <h1>Newton's Laws of Motion, Multi-Pulleys, Wedges, Friction &amp; Pseudo-Force</h1>
+        <p>Master the engine of classical mechanics from first principles to NSEJS, NTSE Stage-2, and Class 11 Resonance
+            Foundation depth&mdash;conquer impulse sign-reversal traps, massive ropes, spring-vs-string cuts,
+            multi-pulley virtual work, self-adjusting static friction, two-block slipping limits, and non-inertial
+            pseudo-forces.</p>
+        <div class="tag-row">
+            <span class="meta-pill">Target Study Time: 9 Hours</span>
+            <span class="meta-pill">Core + Olympiad Bridge</span>
+            <span class="meta-pill">9 Graded Worked Examples</span>
+            <span class="meta-pill">5 Precision Vector Diagrams</span>
+        </div>
+    </header>
+
+    <!-- ==================== SECTION 1 ==================== -->
+    <h2 class="section-heading">1. Newton's Three Laws, Linear Momentum, Impulse &amp; Variable-Mass Thrust</h2>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Foundation: Newton's Three Laws of Motion</span>
+        <ol>
+            <li><strong>First Law (Law of Inertia &amp; Definition of Inertial Frames):</strong> Every body preserves
+                its state of rest or uniform motion in a straight line ($\vec{v} = \text{constant}$) unless acted upon
+                by a non-zero net external force. <em>Deep Physical Role:</em> The First Law is <strong>not</strong>
+                merely a special case ($F = 0$) of the Second Law; it defines <strong>Inertial Reference
+                    Frames</strong>&mdash;frames in which unforced particles have zero acceleration. Mass ($m$) is the
+                quantitative measure of translational inertia.</li>
+            <li><strong>Second Law (Momentum Rate Law):</strong> In an inertial frame, the net external force acting on
+                a system equals the instantaneous rate of change of its linear momentum $\vec{p} = m\vec{v}$:
+                $$\vec{F}_{\text{net}} = \frac{d\vec{p}}{dt} = \frac{d(m\vec{v})}{dt} = m\frac{d\vec{v}}{dt} +
+                \vec{v}\frac{dm}{dt}$$
+                For a system of <strong>constant mass</strong> ($\frac{dm}{dt} = 0$), this reduces to
+                $\vec{F}_{\text{net}} = m\vec{a}$. Crucially, acceleration $\vec{a}$ is an <em>instantaneous</em>
+                effect: it depends solely on the net force acting at that exact instant, carrying zero memory of past
+                forces.</li>
+            <li><strong>Third Law (Action&ndash;Reaction Law):</strong> Whenever Body A exerts a force $\vec{F}_{BA}$ on
+                Body B, Body B simultaneously exerts an equal and opposite force $\vec{F}_{AB} = -\vec{F}_{BA}$ on Body
+                A.</li>
+        </ol>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Critical BEST Trap: Why Action&ndash;Reaction Pairs NEVER Cancel</span>
+        <p>A true Newton Third-Law pair must satisfy <strong>four strict criteria</strong> simultaneously:</p>
+        <ol>
+            <li><strong>Different Bodies:</strong> $\vec{F}_{BA}$ acts on B while $\vec{F}_{AB}$ acts on A. Because
+                forces can only cancel when summed on the <em>same</em> Free Body Diagram, an action&ndash;reaction pair
+                can never cancel each other to prevent motion.</li>
+            <li><strong>Equal Magnitude &amp; Opposite Direction:</strong> $|\vec{F}_{AB}| = |\vec{F}_{BA}|$ at every
+                instant, even when one body is accelerating or vastly more massive than the other (a mosquito hitting a
+                speeding truck experiences the exact same force magnitude as the truck!).</li>
+            <li><strong>Simultaneous Existence:</strong> Neither force precedes the other; both appear and vanish at the
+                exact same instant.</li>
+            <li><strong>Same Physical Nature:</strong> Gravitational pairs with gravitational; normal contact pairs with
+                normal contact; friction pairs with friction. <em>Classic MCQ Trap:</em> For a book resting on a table,
+                its weight $mg$ (Earth pulling book gravitationally) and the normal force $N$ (table pushing book
+                electromagnetically) are equal and opposite on the <strong>same</strong> body&mdash;they are an
+                <em>equilibrium pair</em>, <strong>NOT</strong> a Third-Law pair! The Third-Law partner of $mg$ is the
+                book pulling Earth upward; the partner of $N$ is the book pressing down on the table.
+            </li>
+        </ol>
+    </div>
+
+    <h3>Impulse&ndash;Momentum Theorem &amp; Rebound Sign-Reversal Trap</h3>
+    <p>Integrating Newton's Second Law $\vec{F}_{\text{net}} = \frac{d\vec{p}}{dt}$ over a finite collision interval
+        $[t_1, t_2]$ defines <strong>Impulse ($\vec{J}$)</strong>:</p>
+    $$\vec{J} = \int_{t_1}^{t_2} \vec{F}_{\text{net}}\,dt = \vec{p}_f - \vec{p}_i = \Delta \vec{p} = \text{Signed Area
+    under the } F\text{-}t \text{ graph}$$
+    <p>The average force during contact duration $\Delta t$ is $\vec{F}_{\text{avg}} = \dfrac{\vec{J}}{\Delta t} =
+        \dfrac{\Delta \vec{p}}{\Delta t}$. This explains why cricketers pull their hands backward while catching:
+        $\Delta \vec{p}$ is fixed, so increasing $\Delta t$ lowers $F_{\text{avg}}$ proportionally.</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Collision Scenario (Initial velocity $+u$ toward wall)</th>
+                <th>Final Velocity $v$</th>
+                <th>Impulse Magnitude $|\Delta p| = |m(v - u)|$</th>
+                <th>Exam Trap Alert</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Inelastic Stop (Clay / Catching)</strong></td>
+                <td>$v = 0$</td>
+                <td>$|\Delta p| = mu$</td>
+                <td>Baseline change in momentum.</td>
+            </tr>
+            <tr>
+                <td><strong>Normal Rebound at Speed $v_r$</strong></td>
+                <td>$v = -v_r$</td>
+                <td>$|\Delta p| = m(v_r + u)$</td>
+                <td><em>Fatal error:</em> Writing $m(u - v_r)$ instead of $m(u + v_r)$! Opposite direction forces
+                    addition of speeds.</td>
+            </tr>
+            <tr>
+                <td><strong>Elastic Normal Bounce ($v_r = u$)</strong></td>
+                <td>$v = -u$</td>
+                <td>$|\Delta p| = 2mu$</td>
+                <td>Double the impulse of stopping!</td>
+            </tr>
+            <tr>
+                <td><strong>Oblique Elastic Bounce (Angle $\theta$ with normal)</strong></td>
+                <td>$v_{\perp} = -u\cos\theta$, $v_{\parallel} = u\sin\theta$</td>
+                <td>$|\Delta p| = 2mu\cos\theta$ (strictly normal to wall)</td>
+                <td>Tangential component $u\sin\theta$ is unchanged; if angle $\alpha$ is given with the <em>wall</em>,
+                    use $2mu\sin\alpha$.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Variable-Mass Thrust ($F_{\text{thrust}} =
+            v_{\text{rel}}\dfrac{dm}{dt}$)</span>
+        <p>When mass enters or leaves a system continuously at rate $\mu_m = \dfrac{dm}{dt}$ with relative speed
+            $v_{\text{rel}}$, the momentum transferred per unit time generates a continuous <strong>thrust
+                force</strong>:</p>
+        $$F_{\text{thrust}} = v_{\text{rel}}\left|\frac{dm}{dt}\right|$$
+        <ul>
+            <li><strong>Water Jet Striking a Stationary Wall Normally:</strong> A jet of density $\rho$, cross-section
+                $A$, and speed $v$ delivers mass at rate $\dfrac{dm}{dt} = \rho A v$.
+                <ul>
+                    <li>If water splashes parallel to the wall (zero normal rebound): $F_{\text{wall}} = v\dfrac{dm}{dt}
+                        = \mathbf{\rho A v^2}$.</li>
+                    <li>If water rebounds straight back at speed $v$: $F_{\text{wall}} = (2v)\dfrac{dm}{dt} =
+                        \mathbf{2\rho A v^2}$.</li>
+                </ul>
+            </li>
+            <li><strong>Sand Falling Vertically onto a Moving Conveyor Belt:</strong> Sand drops gently ($v_x = 0$) at
+                rate $\dfrac{dm}{dt}$ onto a horizontal belt moving at constant velocity $v$. Each kilogram of sand must
+                gain horizontal momentum $+v$, requiring the motor to supply an extra horizontal force:
+                $$F_{\text{belt}} = v\frac{dm}{dt}$$
+                (Notice the power delivered by the motor is $P = Fv = v^2\frac{dm}{dt}$, which is <em>twice</em> the
+                rate of kinetic energy gain $\frac{1}{2}v^2\frac{dm}{dt}$&mdash;the missing half dissipates as friction
+                heat when sand accelerates up to belt speed!)</li>
+        </ul>
+    </div>
+
+    <!-- ==================== SECTION 2 ==================== -->
+    <h2 class="section-heading">2. Free Body Diagrams (FBD), Normal Reaction, Massive Ropes &amp; Spring&ndash;String
+        Cuts</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Systematic 5-Step FBD Isolation Protocol</span>
+        <ol>
+            <li><strong>Isolate the Body:</strong> Mentally draw a closed boundary around the <em>single</em> object (or
+                chosen sub-system) of interest.</li>
+            <li><strong>Insert Field Forces First:</strong> Draw weight $m\vec{g}$ vertically downward from the center
+                of mass (and $\vec{F}_{\text{pseudo}}$ if working in an accelerating frame).</li>
+            <li><strong>Walk Around the Boundary for Contact Forces:</strong> Every physical touch produces a force:
+                surfaces exert a pushing <strong>Normal Reaction ($N$)</strong> perpendicular to the interface and
+                <strong>Friction ($f$)</strong> tangent to it; taut strings exert a pulling <strong>Tension
+                    ($T$)</strong> strictly <em>away</em> from the body along the string; springs exert $kx$ opposing
+                stretch/compression.
+            </li>
+            <li><strong>NEVER Draw Forces Exerted BY the Body on Others:</strong> Only forces acting <em>ON</em> the
+                isolated body belong on its FBD. Never draw "$ma$" as a real force alongside real forces in an inertial
+                frame.</li>
+            <li><strong>Resolve &amp; Write Equations:</strong> Align one axis along the direction of acceleration
+                $\vec{a}$ and the other perpendicular to it, then write $\sum F_{\parallel} = ma$ and $\sum F_{\perp} =
+                0$.</li>
+        </ol>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 280" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="System view and isolated free body diagrams of stacked blocks A and B">
+            <defs>
+                <marker id="arr-fbd-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#b91c1c" />
+                </marker>
+                <marker id="arr-fbd-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#1d4ed8" />
+                </marker>
+                <marker id="arr-fbd-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#0f766e" />
+                </marker>
+                <marker id="arr-fbd-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#7c3aed" />
+                </marker>
+            </defs>
+
+            <rect x="0" y="0" width="680" height="280" rx="8" fill="#f8fafc" />
+            <text x="18" y="24" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#0f172a">Isolated FBDs of Stacked Blocks (Action&ndash;Reaction Normal Pair N&#8321;
+                Highlighted)</text>
+
+            <!-- Panel 1: Physical System -->
+            <rect x="14" y="38" width="194" height="228" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="58" y="58" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#334155">Physical System</text>
+            <!-- Floor -->
+            <line x1="34" y1="220" x2="188" y2="220" stroke="#334155" stroke-width="2.2" />
+            <line x1="44" y1="220" x2="36" y2="230" stroke="#64748b" stroke-width="1.2" />
+            <line x1="66" y1="220" x2="58" y2="230" stroke="#64748b" stroke-width="1.2" />
+            <line x1="88" y1="220" x2="80" y2="230" stroke="#64748b" stroke-width="1.2" />
+            <line x1="110" y1="220" x2="102" y2="230" stroke="#64748b" stroke-width="1.2" />
+            <line x1="132" y1="220" x2="124" y2="230" stroke="#64748b" stroke-width="1.2" />
+            <line x1="154" y1="220" x2="146" y2="230" stroke="#64748b" stroke-width="1.2" />
+            <line x1="176" y1="220" x2="168" y2="230" stroke="#64748b" stroke-width="1.2" />
+            <!-- Block B -->
+            <rect x="56" y="156" width="110" height="64" rx="4" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2" />
+            <text x="86" y="193" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1e3a8a">B
+                (m&#8322;)</text>
+            <!-- Block A -->
+            <rect x="74" y="102" width="74" height="54" rx="4" fill="#ccfbf1" stroke="#0f766e" stroke-width="2" />
+            <text x="90" y="134" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#134e4a">A
+                (m&#8321;)</text>
+            <!-- Lift Acceleration Arrow -->
+            <line x1="184" y1="150" x2="184" y2="100" stroke="#7c3aed" stroke-width="2.4"
+                marker-end="url(#arr-fbd-purple)" />
+            <text x="158" y="92" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6d28d9">a
+                (up)</text>
+            <text x="42" y="252" font-family="system-ui, sans-serif" font-size="10" fill="#475569">Elevator accelerating
+                at +a</text>
+
+            <!-- Panel 2: FBD of Block A -->
+            <rect x="224" y="38" width="206" height="228" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="276" y="58" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#0f766e">Isolated FBD: Block A</text>
+            <rect x="290" y="122" width="74" height="50" rx="4" fill="#ccfbf1" stroke="#0f766e" stroke-width="2" />
+            <text x="315" y="152" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#134e4a">m&#8321;</text>
+            <!-- N1 upward -->
+            <line x1="327" y1="122" x2="327" y2="76" stroke="#1d4ed8" stroke-width="2.8"
+                marker-end="url(#arr-fbd-blue)" />
+            <text x="336" y="96" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#1d4ed8">N&#8321; (from B)</text>
+            <!-- m1g downward -->
+            <line x1="327" y1="172" x2="327" y2="218" stroke="#b91c1c" stroke-width="2.8"
+                marker-end="url(#arr-fbd-red)" />
+            <text x="336" y="206" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#b91c1c">m&#8321;g</text>
+            <text x="250" y="248" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#0f172a">N&#8321; &minus; m&#8321;g = m&#8321;a</text>
+            <text x="258" y="261" font-family="system-ui, sans-serif" font-size="10" fill="#475569">&rArr; N&#8321; =
+                m&#8321;(g + a)</text>
+
+            <!-- Panel 3: FBD of Block B -->
+            <rect x="446" y="38" width="220" height="228" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="504" y="58" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#1d4ed8">Isolated FBD: Block B</text>
+            <rect x="506" y="122" width="100" height="50" rx="4" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2" />
+            <text x="546" y="152" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#1e3a8a">m&#8322;</text>
+            <!-- N2 upward (from floor) -->
+            <line x1="556" y1="122" x2="556" y2="74" stroke="#0f766e" stroke-width="2.8"
+                marker-end="url(#arr-fbd-teal)" />
+            <text x="565" y="92" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#0f766e">N&#8322; (Floor)</text>
+            <!-- N1 downward (reaction from A) -->
+            <line x1="534" y1="172" x2="534" y2="216" stroke="#1d4ed8" stroke-width="2.6"
+                marker-end="url(#arr-fbd-blue)" />
+            <text x="462" y="206" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#1d4ed8">N&#8321; (from A)</text>
+            <!-- m2g downward -->
+            <line x1="578" y1="172" x2="578" y2="216" stroke="#b91c1c" stroke-width="2.6"
+                marker-end="url(#arr-fbd-red)" />
+            <text x="586" y="206" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#b91c1c">m&#8322;g</text>
+            <text x="466" y="248" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#0f172a">N&#8322; &minus; N&#8321; &minus; m&#8322;g = m&#8322;a</text>
+            <text x="478" y="261" font-family="system-ui, sans-serif" font-size="10" fill="#475569">&rArr; N&#8322; =
+                (m&#8321; + m&#8322;)(g + a)</text>
+        </svg>
+        <div class="diagram-caption">Figure 18.1: Isolating each block reveals why $N_1$ (blue) appears upward on A and
+            downward on B (Action&ndash;Reaction pair), while $N_2$ supports the combined effective weight of both
+            blocks.</div>
+    </div>
+
+    <h3>Apparent Weight in Elevators &amp; Stacked Coins</h3>
+    <p>A weighing machine does <strong>not</strong> measure gravitational weight $mg$; it strictly reads the
+        <strong>Normal Reaction ($N$)</strong> exerted on the person standing on its pan (often displayed in
+        $\text{kg-wt}$ as $N/g$). For a passenger of mass $m$ in a lift:
+    </p>
+    <ul>
+        <li><strong>Stationary or Constant Velocity ($a = 0$):</strong> $N = mg$.</li>
+        <li><strong>Accelerating Upward OR Decelerating while Moving Downward ($\vec{a}$ upward):</strong> $N - mg = ma
+            \implies \mathbf{N = m(g + a)}$ (heavier).</li>
+        <li><strong>Accelerating Downward OR Decelerating while Moving Upward ($\vec{a}$ downward):</strong> $mg - N =
+            ma \implies \mathbf{N = m(g - a)}$ (lighter).</li>
+        <li><strong>Free Fall (Broken Cable, $a = g$ downward):</strong> $N = m(g - g) = \mathbf{0}$ (true apparent
+            weightlessness).</li>
+        <li><strong>Stacked Coins Rule:</strong> In a stationary stack of $n$ identical coins of mass $m$ each, the
+            normal force on the $k$-th coin from the <em>bottom</em> exerted by the $(k+1)$-th coin above it equals the
+            total weight of all $(n - k)$ coins resting strictly above that interface: $N = (n - k)mg$.</li>
+    </ul>
+
+    <h3>Massless Strings vs. Massive Ropes ($T(x)$ Distribution)</h3>
+    <p>In an <strong>ideal massless string</strong> ($m_{\text{string}} = 0$) passing over frictionless massless
+        pulleys, $T_{\text{right}} - T_{\text{left}} = 0 \cdot a = 0$, so tension $T$ is strictly
+        <strong>uniform</strong> everywhere along a continuous segment.
+    </p>
+    <p>In a <strong>uniform massive rope</strong> of total mass $M$ and length $L$ pulled along a smooth horizontal
+        surface by force $F$ at one end ($x = 0$), tension is <strong>NOT</strong> constant! First find the common
+        acceleration $a = \dfrac{F}{M}$ (or $a = \dfrac{F}{M+m}$ if attached to a trailing block $m$). Next, make an
+        imaginary cut at distance $x$ from the pulled end. The trailing segment of length $(L - x)$ has mass
+        $m_{\text{tail}} = M\left(\dfrac{L - x}{L}\right)$ and is pulled forward solely by internal tension $T(x)$:</p>
+    $$T(x) = m_{\text{tail}} \cdot a = M\left(\frac{L - x}{L}\right)\left(\frac{F}{M}\right) \implies \mathbf{T(x) =
+    F\left(1 - \frac{x}{L}\right)}$$
+    <p>Tension drops linearly from $T(0) = F$ at the pulled end to $T(L) = 0$ at the free tail. Similarly, for a uniform
+        heavy rope of mass $M$ and length $L$ hanging vertically from a ceiling, tension at distance $y$ above the
+        <em>bottom free end</em> supports the weight below it: $T(y) = \left(\dfrac{M}{L}y\right)g$.
+    </p>
+
+    <div class="concept-box">
+        <span class="box-label">Lami's Theorem (3-Force Concurrent Equilibrium)</span>
+        <p>When a particle is in static equilibrium ($\sum \vec{F} = \vec{0}$) under exactly <strong>three coplanar,
+                concurrent forces</strong> $\vec{F}_1, \vec{F}_2, \vec{F}_3$ forming a closed vector triangle, the Law
+            of Sines yields <strong>Lami's Theorem</strong>:</p>
+        $$\frac{F_1}{\sin\alpha} = \frac{F_2}{\sin\beta} = \frac{F_3}{\sin\gamma}$$
+        <p>where $\alpha$ is the angle strictly between $\vec{F}_2$ and $\vec{F}_3$, $\beta$ is between $\vec{F}_3$ and
+            $\vec{F}_1$, and $\gamma$ is between $\vec{F}_1$ and $\vec{F}_2$ ($\alpha + \beta + \gamma = 360^\circ$).
+            Use Lami's Theorem whenever a bob hangs from two asymmetric angled strings to solve for both tensions in two
+            lines without simultaneous $x,y$ algebra.</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Signature Olympiad Trap: Spring Cutting vs. String Cutting</span>
+        <p>When a support is abruptly snipped at $t = 0$, ideal strings and ideal springs obey <strong>opposite
+                continuity laws</strong> during the infinitesimal instant $t = 0^+$:</p>
+        <ul>
+            <li><strong>Inextensible String Tension ($T$) &rarr; Discontinuous:</strong> String tension is a rigid
+                constraint force requiring zero macroscopic stretch. The instant a string is cut (or goes slack), its
+                tension collapses instantaneously to <strong>zero</strong> ($T \to 0$)—and tensions in other connected
+                strings can jump discontinuously to satisfy the new constraints.</li>
+            <li><strong>Ideal Spring Force ($F_s = kx$) &rarr; Continuous:</strong> A spring's force depends solely on
+                its physical elongation $x$. Because a body of finite mass cannot teleport instantaneously ($\Delta x =
+                0$ over $\Delta t \to 0$), the spring's extension $x$—and therefore its force $kx$—remains
+                <strong>strictly unchanged</strong> immediately after cutting another string or support!
+            </li>
+        </ul>
+    </div>
+
+    <!-- ==================== SECTION 3 ==================== -->
+    <h2 class="section-heading">3. Connected Bodies, Atwood Machines &amp; Multi-Pulley Constraints (Olympiad Bridge)
+    </h2>
+
+    <h3>Standard Connected-Body Systems (First-Principles System Method)</h3>
+    <p>Whenever connected blocks share the exact same acceleration magnitude $a$, treat the entire assembly as a single
+        1D "stretched-out chain" first to grab $a$ in 5 seconds, then isolate one block to extract internal Normal ($N$)
+        or Tension ($T$):</p>
+    <ul>
+        <li><strong>Blocks in Contact on Smooth Floor:</strong> Force $F$ pushes $m_1$ against $m_2$:
+            $$a = \frac{F}{m_1 + m_2}, \qquad N_{12} = m_2 a = \left(\frac{m_2}{m_1 + m_2}\right)F$$
+            <em>Notice:</em> Swapping which side $F$ pushes changes $N_{12}$ even though $a$ stays identical!
+        </li>
+        <li><strong>Simple Vertical Atwood Machine ($m_2 &gt; m_1$ over fixed massless pulley):</strong>
+            $$m_2 g - T = m_2 a, \quad T - m_1 g = m_1 a \implies \mathbf{a = \left(\frac{m_2 - m_1}{m_2 +
+            m_1}\right)g}, \qquad \mathbf{T = \frac{2m_1 m_2}{m_1 + m_2}g}$$
+            <em>Ceiling Hook Clamp Force:</em> Two downward string segments pull on the pulley axle, so the ceiling
+            support force is $R = 2T = \dfrac{4m_1 m_2}{m_1 + m_2}g$ (always strictly <em>less</em> than $(m_1 + m_2)g$
+            whenever $m_1 \neq m_2$ because the center of mass accelerates downward!).
+        </li>
+        <li><strong>Inclined Atwood Machine ($m_1$ on smooth incline $\theta$, $m_2$ hanging vertically):</strong>
+            $$a = \frac{m_2 g - m_1 g\sin\theta}{m_1 + m_2}, \qquad T = \frac{m_1 m_2 g(1 + \sin\theta)}{m_1 + m_2}$$
+        </li>
+    </ul>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Multi-Pulley Constraints (2 Rigorous Methods)</span>
+        <p>When a pulley itself moves (a <strong>movable pulley</strong>), connected blocks no longer share the same
+            acceleration! You must derive the kinematic link between $a_1$ and $a_2$ before writing Newton's Second Law.
+        </p>
+        <p><strong>Method 1 &mdash; String-Length Conservation ($\sum l_i = L = \text{const}$):</strong> Measure every
+            block's coordinate from fixed stationary anchors (ceiling or fixed pulley axle), express total string length
+            $L$ in terms of those coordinates, and differentiate twice with respect to time ($d^2 L/dt^2 = 0$). For a
+            movable pulley with one fixed end and two parallel segments pulling mass $B$ while one segment pulls mass
+            $A$ (Figure 18.2):</p>
+        $$L = (x_{\text{edge}} - x_A) + y_B + (y_B - y_{\text{ceil}}) + \text{wrap} = \text{const} \implies -x_A + 2y_B
+        = \text{const}$$
+        $$\text{Differentiate twice: } -\ddot{x}_A + 2\ddot{y}_B = 0 \implies \mathbf{a_A = 2a_B}$$
+        <p><strong>Method 2 &mdash; The Virtual Work Shortcut ($\sum \vec{T}\cdot\vec{a} = 0$):</strong> Because an
+            ideal inextensible string neither stores nor dissipates mechanical energy, the net total work done by all
+            internal string tensions across the system is identically zero: $\sum \vec{T}_i \cdot d\vec{r}_i = 0$.
+            Differentiating gives $\sum \vec{T}_i \cdot \vec{v}_i = 0$, and for straight-line motion:</p>
+        $$\mathbf{\sum \vec{T}_i \cdot \vec{a}_i = 0}$$
+        <p><em>Instant Check on Figure 18.2:</em> Block A feels tension $T$ parallel to $a_A$ ($+T a_A$); movable
+            pulley/Block B feels upward tension $2T$ opposite to downward $a_B$ ($-2T a_B$). Summing to zero: $T a_A -
+            2T a_B = 0 \implies a_A = 2a_B$ in 3 seconds!</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 305" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Movable multi-pulley constraint system with string length and virtual work annotations">
+            <defs>
+                <marker id="arr-pul-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#b91c1c" />
+                </marker>
+                <marker id="arr-pul-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#1d4ed8" />
+                </marker>
+                <marker id="arr-pul-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#0f766e" />
+                </marker>
+            </defs>
+
+            <rect x="0" y="0" width="680" height="305" rx="8" fill="#f8fafc" />
+            <text x="18" y="24" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#0f172a">Movable Multi-Pulley Constraint: String Conservation &amp; Virtual Work (&sum; T&middot;a
+                = 0)</text>
+
+            <!-- Table -->
+            <rect x="26" y="138" width="234" height="145" fill="#e2e8f0" stroke="#64748b" stroke-width="1.6" />
+            <text x="72" y="218" font-family="system-ui, sans-serif" font-size="12" font-weight="600"
+                fill="#475569">Smooth Horizontal Table</text>
+
+            <!-- Ceiling Anchor above Movable Pulley -->
+            <line x1="330" y1="48" x2="430" y2="48" stroke="#334155" stroke-width="3" />
+            <line x1="342" y1="48" x2="350" y2="38" stroke="#64748b" stroke-width="1.2" />
+            <line x1="362" y1="48" x2="370" y2="38" stroke="#64748b" stroke-width="1.2" />
+            <line x1="382" y1="48" x2="390" y2="38" stroke="#64748b" stroke-width="1.2" />
+            <line x1="402" y1="48" x2="410" y2="38" stroke="#64748b" stroke-width="1.2" />
+            <text x="342" y="34" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#334155">Fixed Ceiling Anchor</text>
+
+            <!-- Block A on Table -->
+            <rect x="76" y="88" width="76" height="50" rx="4" fill="#ccfbf1" stroke="#0f766e" stroke-width="2" />
+            <text x="93" y="118" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#134e4a">A
+                (m&#8321;)</text>
+
+            <!-- Fixed Corner Pulley P1 -->
+            <line x1="256" y1="142" x2="274" y2="124" stroke="#475569" stroke-width="3" />
+            <circle cx="274" cy="124" r="16" fill="#ffffff" stroke="#334155" stroke-width="2.2" />
+            <circle cx="274" cy="124" r="3" fill="#334155" />
+            <text x="276" y="96" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#334155">Fixed P&#8321;</text>
+
+            <!-- Movable Pulley P2 (center at x=314, y=184, r=24) -->
+            <circle cx="314" cy="184" r="24" fill="#fef3c7" stroke="#b45309" stroke-width="2.2" />
+            <circle cx="314" cy="184" r="3.5" fill="#b45309" />
+            <text x="345" y="180" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#b45309">Movable P&#8322;</text>
+
+            <!-- Continuous String Path -->
+            <!-- From A to top of P1 -->
+            <line x1="152" y1="108" x2="274" y2="108" stroke="#0f172a" stroke-width="2.2" />
+            <!-- Down from right of P1 (x=290) to left of P2 (x=290) -->
+            <line x1="290" y1="124" x2="290" y2="184" stroke="#0f172a" stroke-width="2.2" />
+            <!-- Up from right of P2 (x=338) to ceiling (y=48) -->
+            <line x1="338" y1="184" x2="338" y2="48" stroke="#0f172a" stroke-width="2.2" />
+
+            <!-- Hanger Rod & Block B -->
+            <line x1="314" y1="184" x2="314" y2="232" stroke="#b45309" stroke-width="2.6" />
+            <rect x="278" y="232" width="72" height="50" rx="4" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2" />
+            <text x="294" y="262" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1e3a8a">B
+                (m&#8322;)</text>
+
+            <!-- Tension & Acceleration Vectors -->
+            <!-- T on A -->
+            <line x1="152" y1="108" x2="204" y2="108" stroke="#b91c1c" stroke-width="2.8"
+                marker-end="url(#arr-pul-red)" />
+            <text x="172" y="99" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#b91c1c">T</text>
+            <!-- a_A arrow -->
+            <line x1="86" y1="74" x2="146" y2="74" stroke="#0f766e" stroke-width="2.4"
+                marker-end="url(#arr-pul-teal)" />
+            <text x="98" y="66" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0f766e">a_A
+                = 2a_B</text>
+
+            <!-- Two upward T arrows on P2 -->
+            <line x1="290" y1="164" x2="290" y2="132" stroke="#b91c1c" stroke-width="2.4"
+                marker-end="url(#arr-pul-red)" />
+            <text x="272" y="156" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#b91c1c">T</text>
+            <line x1="338" y1="164" x2="338" y2="132" stroke="#b91c1c" stroke-width="2.4"
+                marker-end="url(#arr-pul-red)" />
+            <text x="346" y="154" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#b91c1c">T</text>
+            <!-- 2T on B -->
+            <line x1="314" y1="232" x2="314" y2="202" stroke="#b91c1c" stroke-width="2.4"
+                marker-end="url(#arr-pul-red)" />
+            <text x="322" y="224" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#b91c1c">2T</text>
+            <!-- a_B arrow -->
+            <line x1="364" y1="236" x2="364" y2="278" stroke="#1d4ed8" stroke-width="2.4"
+                marker-end="url(#arr-pul-blue)" />
+            <text x="372" y="262" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#1d4ed8">a_B (down)</text>
+
+            <!-- Right-side Constraint Box -->
+            <rect x="442" y="46" width="224" height="236" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4" />
+            <text x="454" y="70" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#0f172a">Two-Method Constraint Proof</text>
+            <line x1="454" y1="78" x2="654" y2="78" stroke="#e2e8f0" stroke-width="1" />
+            <text x="454" y="100" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0f766e">1.
+                String Conservation:</text>
+            <text x="454" y="118" font-family="system-ui, sans-serif" font-size="10.5" fill="#334155">If P&#8322; drops
+                by &Delta;y, BOTH vertical</text>
+            <text x="454" y="133" font-family="system-ui, sans-serif" font-size="10.5" fill="#334155">strands lengthen
+                by &Delta;y &rarr; 2&Delta;y</text>
+            <text x="454" y="148" font-family="system-ui, sans-serif" font-size="10.5" fill="#334155">must feed off the
+                table:</text>
+            <text x="454" y="166" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#0f172a">&Delta;x_A = 2&Delta;y_B &rArr; a_A = 2a_B</text>
+            <line x1="454" y1="180" x2="654" y2="180" stroke="#e2e8f0" stroke-width="1" />
+            <text x="454" y="200" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1d4ed8">2.
+                Virtual Work (&sum; T&middot;a = 0):</text>
+            <text x="454" y="218" font-family="system-ui, sans-serif" font-size="10.5" fill="#334155">(+T)(a_A) +
+                (&minus;2T)(a_B) = 0</text>
+            <text x="454" y="236" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#b91c1c">&rArr; a_A = 2a_B</text>
+            <text x="454" y="262" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600"
+                fill="#475569">Result: a_B = m&#8322;g / (m&#8322; + 4m&#8321;)</text>
+        </svg>
+        <div class="diagram-caption">Figure 18.2: Movable-pulley system showing why a $2:1$ tension advantage always
+            enforces an exact $1:2$ acceleration ratio ($a_A = 2a_B$).</div>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Wedge&ndash;Block Normal-Contact Constraint</span>
+        <p>Whenever two rigid bodies remain in flush surface contact without digging into each other or separating,
+            their velocity and acceleration components <strong>perpendicular to the contact surface must be
+                identical</strong>:</p>
+        $$a_{\text{block},\perp} = a_{\text{wedge},\perp}$$
+        <p><strong>Classic Application:</strong> A vertical rod (constrained to move purely downward at $a_y$) rests on
+            a smooth triangular wedge of inclination $\theta$ sliding horizontally to the right at $a_x$. Projecting
+            both accelerations along the normal to the incline:</p>
+        $$a_y \cos\theta = a_x \sin\theta \implies \mathbf{a_y = a_x \tan\theta}$$
+        <p>Notice that the exact same constraint follows immediately from geometry: as the wedge shifts right by $\Delta
+            x$, the point under the rod drops by $\Delta y = \Delta x \tan\theta$.</p>
+    </div>
+
+    <!-- ==================== SECTION 4 ==================== -->
+    <h2 class="section-heading">4. Friction, Limiting Cases, Minimum Pull &amp; Two-Block Slipping</h2>
+
+    <p>Friction is the electromagnetic contact force acting <em>tangentially</em> along an interface to oppose
+        <strong>relative slipping</strong> (or the <em>tendency</em> of relative slipping) between two touching
+        surfaces. Crucially, friction opposes <em>relative motion</em>&mdash;not necessarily absolute motion! (When you
+        walk forward or when a lower block carries an upper block forward, static friction points strictly in the
+        direction of motion!)
+    </p>
+
+    <div class="concept-box">
+        <span class="box-label">Static vs. Kinetic Friction &amp; The Self-Adjusting Law</span>
+        <ul>
+            <li><strong>Static Friction ($f_s$) &mdash; No Relative Slipping:</strong> Static friction is a
+                <strong>self-adjusting constraint force</strong> whose magnitude matches whatever tangential push tries
+                to initiate slipping, strictly up to a maximum ceiling called <strong>Limiting Friction
+                    ($f_{s,\max}$)</strong>:
+                $$0 \le f_s \le f_{s,\max} = \mu_s N$$
+                <em>Deadly Exam Trap:</em> <strong>NEVER</strong> write $f_s = \mu_s N$ automatically! First compute
+                $f_{\text{req}}$ needed to keep the block stationary; only if $f_{\text{req}} &gt; \mu_s N$ does
+                slipping begin.
+            </li>
+            <li><strong>Kinetic Friction ($f_k$) &mdash; Active Relative Slipping:</strong> Once slipping starts,
+                microscopic cold-welds shear continuously and friction drops slightly to a nearly constant value
+                independent of relative speed (at moderate speeds):
+                $$f_k = \mu_k N \qquad (\text{typically } \mu_k &lt; \mu_s)$$
+                (If a problem states only a single coefficient $\mu$, take $\mu_s = \mu_k = \mu$.)</li>
+        </ul>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 265" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Graph of friction force versus applied horizontal force showing static linear zone, limiting peak, and kinetic plateau">
+            <defs>
+                <marker id="arr-fric-axis" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+                </marker>
+            </defs>
+
+            <rect x="0" y="0" width="680" height="265" rx="8" fill="#f8fafc" />
+            <text x="18" y="24" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#0f172a">Friction Force (f) vs. Applied Tangential Force (F_app): Static Lockup &rarr; Kinetic
+                Slip</text>
+
+            <!-- Axes -->
+            <line x1="82" y1="230" x2="82" y2="44" stroke="#334155" stroke-width="1.6"
+                marker-end="url(#arr-fric-axis)" />
+            <line x1="72" y1="220" x2="495" y2="220" stroke="#334155" stroke-width="1.6"
+                marker-end="url(#arr-fric-axis)" />
+            <text x="16" y="54" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#0f172a">Friction f</text>
+            <text x="500" y="224" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#0f172a">F_app</text>
+
+            <!-- Shaded Regions -->
+            <rect x="82" y="56" width="160" height="164" fill="#10b981" fill-opacity="0.09" />
+            <rect x="242" y="56" width="234" height="164" fill="#f97316" fill-opacity="0.09" />
+            <line x1="242" y1="56" x2="242" y2="220" stroke="#64748b" stroke-width="1.3" stroke-dasharray="5,4" />
+
+            <!-- Horizontal Reference Guides -->
+            <line x1="82" y1="74" x2="242" y2="74" stroke="#94a3b8" stroke-width="1.1" stroke-dasharray="4,3" />
+            <line x1="82" y1="104" x2="242" y2="104" stroke="#94a3b8" stroke-width="1.1" stroke-dasharray="4,3" />
+
+            <!-- Friction Curve -->
+            <line x1="82" y1="220" x2="242" y2="74" stroke="#0f766e" stroke-width="3" />
+            <path d="M 242 74 Q 248 104 260 104 L 468 104" fill="none" stroke="#c2410c" stroke-width="3" />
+
+            <!-- Peak Marker -->
+            <circle cx="242" cy="74" r="5" fill="#b91c1c" />
+            <text x="16" y="78" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#b91c1c">f_s,max</text>
+            <text x="18" y="92" font-family="system-ui, sans-serif" font-size="10" fill="#b91c1c">= &mu;_s N</text>
+
+            <text x="18" y="108" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#c2410c">f_k
+                = &mu;_k N</text>
+
+            <!-- Angle 45 deg Arc -->
+            <path d="M 118 220 A 36 36 0 0 0 109 195" fill="none" stroke="#0f766e" stroke-width="1.5" />
+            <text x="122" y="210" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#0f766e">45&deg;</text>
+
+            <!-- Annotations -->
+            <text x="94" y="66" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#047857">STATIC ZONE (Rest, a = 0)</text>
+            <text x="108" y="148" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#0f766e"
+                transform="rotate(-42, 108, 148)">f_s = F_app (slope = 1)</text>
+
+            <text x="274" y="66" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#c2410c">KINETIC ZONE (Sliding, a &gt; 0)</text>
+            <text x="278" y="124" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600"
+                fill="#9a3412">Constant f_k; a = (F_app &minus; f_k) / m</text>
+            <text x="220" y="238" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#b91c1c">F = &mu;_s N</text>
+
+            <!-- Side Key Box -->
+            <rect x="518" y="48" width="148" height="176" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.3" />
+            <text x="528" y="70" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#0f172a">3-Step Friction Test</text>
+            <line x1="528" y1="78" x2="656" y2="78" stroke="#e2e8f0" stroke-width="1" />
+            <text x="528" y="98" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#0f766e">1.
+                Compute f_s,max</text>
+            <text x="528" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#475569">from exact Normal
+                N.</text>
+            <text x="528" y="134" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#1d4ed8">2.
+                Compare F_app:</text>
+            <text x="528" y="148" font-family="system-ui, sans-serif" font-size="10" fill="#475569">If F_app &le;
+                f_s,max:</text>
+            <text x="528" y="162" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#0f172a">a
+                = 0, f = F_app.</text>
+            <text x="528" y="184" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#c2410c">3.
+                If F_app &gt; f_s,max:</text>
+            <text x="528" y="198" font-family="system-ui, sans-serif" font-size="10" fill="#475569">Body slips &rarr;
+                switch</text>
+            <text x="528" y="212" font-family="system-ui, sans-serif" font-size="10" font-weight="700"
+                fill="#c2410c">immediately to f_k!</text>
+        </svg>
+        <div class="diagram-caption">Figure 18.3: Classic friction response curve. In the static zone ($F_{\text{app}}
+            \le \mu_s N$), $f_s = F_{\text{app}}$ along a $45^\circ$ line; beyond the limiting peak, friction drops to
+            $f_k = \mu_k N$.</div>
+    </div>
+
+    <h3>Angle of Friction, Angle of Repose &amp; Minimum Force to Move a Block</h3>
+    <ul>
+        <li><strong>Total Contact Force ($R$) &amp; Angle of Friction ($\lambda$):</strong> The surface exerts both
+            normal $N$ and friction $f$, whose vector resultant is $R = \sqrt{N^2 + f^2}$. At the verge of slipping ($f
+            = \mu_s N$), the maximum angle $\lambda$ made by $R$ with the normal is the <strong>Angle of
+                Friction</strong>:
+            $$\tan\lambda = \frac{f_{s,\max}}{N} = \mathbf{\mu_s}, \qquad R_{\max} = N\sqrt{1 + \mu_s^2}$$
+        </li>
+        <li><strong>Angle of Repose ($\theta_r$):</strong> The steepest incline angle at which a block remains at rest
+            without sliding down. Balancing components along/normal to the incline ($mg\sin\theta_r = f_{s,\max} = \mu_s
+            mg\cos\theta_r$) yields:
+            $$\tan\theta_r = \mu_s \implies \mathbf{\theta_r = \lambda}$$
+            On a rough incline of angle $\theta$:
+            <ul>
+                <li>If $\theta \le \theta_r$ ($\tan\theta \le \mu_s$): Block stays at rest ($a = 0$), and $f_s =
+                    mg\sin\theta$ (NOT $\mu_s mg\cos\theta$!).</li>
+                <li>If $\theta &gt; \theta_r$: Block slides downward with $a_{\text{down}} = g(\sin\theta -
+                    \mu_k\cos\theta)$. If projected <em>up</em> the incline, both gravity and friction oppose motion:
+                    $a_{\text{up}} = -g(\sin\theta + \mu_k\cos\theta)$.</li>
+            </ul>
+        </li>
+        <li><strong>Pulling vs. Pushing a Lawn-Roller &amp; Minimum Force $F_{\min}$:</strong> Suppose force $F$ acts at
+            angle $\theta$ with the horizontal on a block of mass $m$:
+            <ul>
+                <li><strong>Pulling upward at angle $\theta$:</strong> Vertical lift reduces normal force to $N = mg -
+                    F\sin\theta$. Impending motion requires $F\cos\theta = \mu_s(mg - F\sin\theta)$, giving:
+                    $$F_{\text{pull}}(\theta) = \frac{\mu_s mg}{\cos\theta + \mu_s\sin\theta}$$
+                    Since the denominator $D(\theta) = \cos\theta + \mu_s\sin\theta$ has maximum value $\sqrt{1 +
+                    \mu_s^2}$ at $\tan\theta = \mu_s$ (angle of friction!), the <strong>exact minimum force</strong>
+                    needed to move the block is:
+                    $$\mathbf{F_{\min} = \frac{\mu_s mg}{\sqrt{1 + \mu_s^2}} = mg\sin\lambda} \qquad \text{at } \theta =
+                    \lambda = \tan^{-1}(\mu_s)$$
+                </li>
+                <li><strong>Pushing downward at angle $\theta$:</strong> Downward component increases normal force to $N
+                    = mg + F\sin\theta$, giving:
+                    $$F_{\text{push}}(\theta) = \frac{\mu_s mg}{\cos\theta - \mu_s\sin\theta}$$
+                    Clearly $F_{\text{pull}} &lt; F_{\text{push}}$ for every $\theta &gt; 0$ (pulling is always easier
+                    than pushing!). Even more dramatically, if $\cos\theta \le \mu_s\sin\theta$ (i.e., $\cot\theta \le
+                    \mu_s$, or $\theta \ge 90^\circ - \lambda$), the denominator turns zero or negative&mdash;the block
+                    <strong>self-locks</strong> and cannot be moved by any finite push!
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Two-Block Stacked Friction Protocol</span>
+        <p>Consider Block A ($m_A$) stacked on top of Block B ($m_B$), with friction $\mu_1$ between A and B and a
+            smooth floor ($\mu_2 = 0$) below B. An external horizontal force $F$ pulls one of the blocks. To find the
+            maximum force $F_{\max}$ before relative slipping begins:</p>
+        <ol>
+            <li><strong>Assume "Moving Together" First:</strong> Compute the common acceleration $a_{\text{common}} =
+                \dfrac{F}{m_A + m_B}$.</li>
+            <li><strong>Isolate the Passive (Unpulled) Block:</strong> Identify which block has <em>no</em> external
+                force $F$ acting directly on it&mdash;it is accelerated strictly by the interface friction $f$!</li>
+            <li><strong>Enforce the Friction Ceiling:</strong> Require $f_{\text{req}} =
+                m_{\text{passive}}\,a_{\text{common}} \le f_{\max} = \mu_1 m_A g$. Hence the critical common
+                acceleration and critical force are:
+                $$a_{\text{crit}} = \frac{\mu_1 m_A g}{m_{\text{passive}}}, \qquad \mathbf{F_{\max} = (m_A +
+                m_B)\,a_{\text{crit}}}$$
+            </li>
+            <li><strong>If $F &gt; F_{\max}$ (Relative Slipping):</strong> Friction locks at $f_k = \mu_k m_A g$. Solve
+                each block's FBD independently: $a_{\text{passive}} = f_k / m_{\text{passive}}$ and $a_{\text{pulled}} =
+                (F - f_k) / m_{\text{pulled}}$.</li>
+        </ol>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 250" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Two-block stacked friction setup and isolated free body diagrams">
+            <defs>
+                <marker id="arr-2b-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#b91c1c" />
+                </marker>
+                <marker id="arr-2b-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#1d4ed8" />
+                </marker>
+                <marker id="arr-2b-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#c2410c" />
+                </marker>
+            </defs>
+
+            <rect x="0" y="0" width="680" height="250" rx="8" fill="#f8fafc" />
+            <text x="18" y="24" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#0f172a">Two-Block Stacked Friction (Lower Block B Pulled by F on Smooth Floor)</text>
+
+            <!-- Panel 1: Setup -->
+            <rect x="14" y="38" width="222" height="198" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="58" y="56" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#334155">Stacked System</text>
+            <line x1="28" y1="186" x2="222" y2="186" stroke="#334155" stroke-width="2" />
+            <text x="64" y="204" font-family="system-ui, sans-serif" font-size="10.5" fill="#475569">Smooth Floor
+                (&mu;&#8322; = 0)</text>
+            <!-- Block B -->
+            <rect x="46" y="136" width="112" height="50" rx="4" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2" />
+            <text x="74" y="166" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#1e3a8a">B
+                (m_B)</text>
+            <!-- Rough interface zigzag cue -->
+            <line x1="62" y1="136" x2="142" y2="136" stroke="#c2410c" stroke-width="3" stroke-dasharray="4,2" />
+            <text x="150" y="128" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#c2410c">Rough &mu;&#8321;</text>
+            <!-- Block A -->
+            <rect x="66" y="88" width="72" height="46" rx="4" fill="#ccfbf1" stroke="#0f766e" stroke-width="2" />
+            <text x="80" y="116" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#134e4a">A
+                (m_A)</text>
+            <!-- Pull F on B -->
+            <line x1="158" y1="162" x2="218" y2="162" stroke="#1d4ed8" stroke-width="2.8"
+                marker-end="url(#arr-2b-blue)" />
+            <text x="184" y="154" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1d4ed8">F</text>
+
+            <!-- Panel 2: FBD of Top Block A (Passive) -->
+            <rect x="250" y="38" width="194" height="198" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="266" y="56" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#0f766e">FBD: Passive Block A</text>
+            <rect x="296" y="108" width="74" height="46" rx="4" fill="#ccfbf1" stroke="#0f766e" stroke-width="2" />
+            <text x="318" y="136" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700"
+                fill="#134e4a">m_A</text>
+            <!-- Friction f FORWARD -->
+            <line x1="370" y1="146" x2="424" y2="146" stroke="#c2410c" stroke-width="2.8"
+                marker-end="url(#arr-2b-orange)" />
+            <text x="380" y="138" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#c2410c">f
+                (drives A!)</text>
+            <!-- N1 up, mAg down -->
+            <line x1="333" y1="108" x2="333" y2="70" stroke="#1d4ed8" stroke-width="2.2"
+                marker-end="url(#arr-2b-blue)" />
+            <text x="342" y="84" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#1d4ed8">N&#8321;</text>
+            <line x1="333" y1="154" x2="333" y2="192" stroke="#b91c1c" stroke-width="2.2"
+                marker-end="url(#arr-2b-red)" />
+            <text x="342" y="186" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#b91c1c">m_A g</text>
+            <text x="266" y="216" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#0f172a">a_A,max = f_max / m_A = &mu;&#8321;g</text>
+
+            <!-- Panel 3: FBD of Bottom Block B (Pulled) -->
+            <rect x="458" y="38" width="208" height="198" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="478" y="56" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#1d4ed8">FBD: Pulled Block B</text>
+            <rect x="514" y="108" width="90" height="46" rx="4" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2" />
+            <text x="546" y="136" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700"
+                fill="#1e3a8a">m_B</text>
+            <!-- F right -->
+            <line x1="604" y1="131" x2="652" y2="131" stroke="#1d4ed8" stroke-width="2.8"
+                marker-end="url(#arr-2b-blue)" />
+            <text x="628" y="123" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#1d4ed8">F</text>
+            <!-- Reaction f LEFT -->
+            <line x1="514" y1="116" x2="468" y2="116" stroke="#c2410c" stroke-width="2.8"
+                marker-end="url(#arr-2b-orange)" />
+            <text x="476" y="106" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#c2410c">f
+                (opposes)</text>
+            <!-- N2 up, N1+mBg down -->
+            <line x1="559" y1="108" x2="559" y2="70" stroke="#1d4ed8" stroke-width="2.2"
+                marker-end="url(#arr-2b-blue)" />
+            <text x="568" y="84" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#1d4ed8">N&#8322;</text>
+            <line x1="559" y1="154" x2="559" y2="192" stroke="#b91c1c" stroke-width="2.2"
+                marker-end="url(#arr-2b-red)" />
+            <text x="568" y="186" font-family="system-ui, sans-serif" font-size="10" font-weight="700"
+                fill="#b91c1c">N&#8321; + m_B g</text>
+            <text x="478" y="216" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#0f172a">F &minus; f = m_B a_B</text>
+        </svg>
+        <div class="diagram-caption">Figure 18.4: Static friction $f$ is the sole horizontal driver accelerating upper
+            block A forward, while its equal-and-opposite reaction opposes lower block B.</div>
+    </div>
+
+    <!-- ==================== SECTION 5 ==================== -->
+    <h2 class="section-heading">5. Out-of-Portion Bridge: Non-Inertial Frames &amp; Pseudo-Force</h2>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Deriving $\vec{F}_{\text{pseudo}} =
+            -m\vec{a}_{\text{frame}}$</span>
+        <p>Consider a particle of mass $m$ observed from a <strong>non-inertial reference frame</strong> (such as an
+            accelerating car, lift, or sliding wedge) whose acceleration relative to the ground (inertial frame) is
+            $\vec{a}_{\text{frame}}$. By kinematics of relative acceleration:</p>
+        $$\vec{a}_{\text{ground}} = \vec{a}_{\text{rel}} + \vec{a}_{\text{frame}}$$
+        <p>Multiply both sides by $m$ and recall Newton's Second Law in the inertial ground frame
+            ($\vec{F}_{\text{real}} = m\vec{a}_{\text{ground}}$):</p>
+        $$\vec{F}_{\text{real}} = m\vec{a}_{\text{rel}} + m\vec{a}_{\text{frame}} \implies \mathbf{\vec{F}_{\text{real}}
+        + (-m\vec{a}_{\text{frame}}) = m\vec{a}_{\text{rel}}}$$
+        <p>Thus, Newton's Second Law can still be used inside an accelerating frame <em>provided</em> we add one
+            fictitious bookkeeping vector&mdash;the <strong>Pseudo-Force</strong>:</p>
+        $$\mathbf{\vec{F}_{\text{pseudo}} = -m\vec{a}_{\text{frame}}}$$
+        <ul>
+            <li><strong>Magnitude:</strong> Mass of the <em>observed object</em> ($m$) times acceleration of the
+                <em>reference frame</em> ($a_{\text{frame}}$).
+            </li>
+            <li><strong>Direction:</strong> Strictly <strong>opposite</strong> to $\vec{a}_{\text{frame}}$.</li>
+            <li><strong>No Third-Law Partner:</strong> Pseudo-force is an artifact of non-inertial observation, NOT a
+                physical interaction between two bodies, so it has no Newton Third-Law reaction pair.</li>
+        </ul>
+    </div>
+
+    <h3>Three Signature Non-Inertial Applications</h3>
+    <ol>
+        <li><strong>Pendulum / Plumb Bob Inside a Horizontally Accelerating Vehicle:</strong> In the car's frame
+            (accelerating forward at $\vec{a}$), the hanging bob experiences real weight $mg$ downward, string tension
+            $T$ along the tilted cord, and horizontal backward pseudo-force $ma$. For equilibrium at tilt angle $\theta$
+            backward from vertical:
+            $$T\sin\theta = ma, \qquad T\cos\theta = mg \implies \mathbf{\tan\theta = \frac{a}{g}}, \qquad \mathbf{T =
+            m\sqrt{g^2 + a^2}}$$
+            <em>Effective Gravity Shortcut:</em> Combine gravity and pseudo-force into $\vec{g}_{\text{eff}} = \vec{g} -
+            \vec{a}_{\text{frame}}$, tilted backward by $\theta = \tan^{-1}(a/g)$ with magnitude $g_{\text{eff}} =
+            \sqrt{g^2 + a^2}$. The pendulum simply aligns along $\vec{g}_{\text{eff}}$!
+        </li>
+        <li><strong>Effective Gravity Inside Vertical Elevators:</strong> For a lift accelerating vertically at $a$,
+            $\vec{g}_{\text{eff}} = \vec{g} - \vec{a}_{\text{lift}}$ gives $g_{\text{eff}} = g + a$ (lift accelerating
+            upward) or $g_{\text{eff}} = g - a$ (lift accelerating downward). <em>Exam Superpower:</em> Inside a lift,
+            every standard gravity formula (apparent weight $N = m g_{\text{eff}}$, Atwood tension $T = \frac{2m_1
+            m_2}{m_1+m_2}g_{\text{eff}}$, simple pendulum period $2\pi\sqrt{L/g_{\text{eff}}}$) works immediately by
+            replacing $g \to g_{\text{eff}}$!</li>
+        <li><strong>Smooth Accelerating Wedge Keeping a Block Stationary (Figure 18.5):</strong> For a block $m$ to stay
+            at rest relative to a smooth wedge of inclination $\theta$ accelerating horizontally to the right at $a$,
+            resolve $\vec{F}_{\text{pseudo}} = ma$ (to the left) and $mg$ (downward) along and perpendicular to the
+            incline:
+            <ul>
+                <li><strong>Along incline (zero slip):</strong> $ma\cos\theta = mg\sin\theta \implies \mathbf{a =
+                    g\tan\theta}$.</li>
+                <li><strong>Perpendicular to incline:</strong> $N = mg\cos\theta + ma\sin\theta = mg\cos\theta +
+                    mg\dfrac{\sin^2\theta}{\cos\theta} = \mathbf{\dfrac{mg}{\cos\theta} = mg\sec\theta}$.</li>
+                <li><strong>Required external horizontal push on wedge ($M$) + block ($m$):</strong> $\mathbf{F = (M +
+                    m)g\tan\theta}$.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 680 285" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Block kept stationary on an accelerating smooth wedge with pseudo-force free body diagram">
+            <defs>
+                <marker id="arr-wdg-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#b91c1c" />
+                </marker>
+                <marker id="arr-wdg-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#1d4ed8" />
+                </marker>
+                <marker id="arr-wdg-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#7c3aed" />
+                </marker>
+                <marker id="arr-wdg-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#0f766e" />
+                </marker>
+            </defs>
+
+            <rect x="0" y="0" width="680" height="285" rx="8" fill="#f8fafc" />
+            <text x="18" y="24" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#0f172a">Smooth Accelerating Wedge: Non-Inertial Frame FBD with Pseudo-Force (&minus;ma)</text>
+
+            <!-- LEFT: Wedge + Block Physical Setup -->
+            <line x1="20" y1="242" x2="345" y2="242" stroke="#334155" stroke-width="2.2" />
+            <!-- Wedge Triangle: (90,242), (310,242), (90,94) -> rise=148, run=220 (~34 deg) -->
+            <polygon points="90,242 310,242 90,94" fill="#e2e8f0" stroke="#475569" stroke-width="2.2"
+                stroke-linejoin="round" />
+            <text x="122" y="218" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700"
+                fill="#334155">Wedge M</text>
+            <!-- Angle theta arc -->
+            <path d="M 268 242 A 42 42 0 0 1 275 218" fill="none" stroke="#334155" stroke-width="1.5" />
+            <text x="252" y="233" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#0f172a">&theta;</text>
+
+            <!-- Block m sitting on incline -->
+            <g transform="translate(200,168) rotate(33.9)">
+                <rect x="-24" y="-34" width="48" height="34" rx="3" fill="#ccfbf1" stroke="#0f766e"
+                    stroke-width="2.2" />
+                <text x="-7" y="-12" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                    fill="#134e4a">m</text>
+            </g>
+
+            <!-- Push Force F and Acceleration a on Wedge -->
+            <line x1="26" y1="184" x2="84" y2="184" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr-wdg-blue)" />
+            <text x="42" y="174" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1d4ed8">F</text>
+            <line x1="150" y1="62" x2="232" y2="62" stroke="#0f766e" stroke-width="2.6"
+                marker-end="url(#arr-wdg-teal)" />
+            <text x="148" y="53" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#0f766e">a_wedge (right)</text>
+            <text x="92" y="264" font-family="system-ui, sans-serif" font-size="10.5" fill="#475569">All surfaces
+                smooth; block stationary on wedge</text>
+
+            <!-- RIGHT: Enlarged FBD of Block m in Wedge Frame -->
+            <rect x="364" y="38" width="302" height="234" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4" />
+            <text x="380" y="58" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#0f172a">FBD of m (Inside Wedge Frame: a_rel = 0)</text>
+
+            <!-- Inclined Axes (dashed) centered at (515, 152) -->
+            <line x1="422" y1="90" x2="608" y2="214" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4,3" />
+            <line x1="466" y1="226" x2="564" y2="78" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4,3" />
+
+            <!-- Center Dot -->
+            <circle cx="515" cy="152" r="5" fill="#0f766e" />
+
+            <!-- Normal Force N (up-right perpendicular to incline: angle -56 deg from +x -> dx=46, dy=-68) -->
+            <line x1="515" y1="152" x2="561" y2="84" stroke="#1d4ed8" stroke-width="3"
+                marker-end="url(#arr-wdg-blue)" />
+            <text x="568" y="88" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1d4ed8">N</text>
+
+            <!-- Weight mg (straight down) -->
+            <line x1="515" y1="152" x2="515" y2="236" stroke="#b91c1c" stroke-width="3"
+                marker-end="url(#arr-wdg-red)" />
+            <text x="522" y="234" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#b91c1c">mg</text>
+
+            <!-- Pseudo-Force F_p = ma (strictly LEFT) -->
+            <line x1="515" y1="152" x2="425" y2="152" stroke="#7c3aed" stroke-width="3"
+                marker-end="url(#arr-wdg-purple)" />
+            <text x="378" y="144" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#6d28d9">F_pseudo = ma</text>
+            <text x="380" y="168" font-family="system-ui, sans-serif" font-size="9.5" fill="#6d28d9">(opposite to
+                a_wedge)</text>
+
+            <!-- Angle labels -->
+            <text x="498" y="196" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#b91c1c">&theta;</text>
+            <text x="466" y="146" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#6d28d9">&theta;</text>
+
+            <!-- Bottom Equations inside FBD box -->
+            <text x="378" y="256" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#0f172a">Along: ma cos&theta; = mg sin&theta; &rArr; a = g tan&theta;</text>
+            <text x="556" y="162" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#475569">N
+                = mg sec&theta;</text>
+        </svg>
+        <div class="diagram-caption">Figure 18.5: Inside the wedge's non-inertial frame, adding $\vec{F}_{\text{pseudo}}
+            = -m\vec{a}$ reduces the dynamic wedge problem to simple static equilibrium ($ma\cos\theta = mg\sin\theta$).
+        </div>
+    </div>
+
+    <!-- ==================== FORMULA VAULT ==================== -->
+    <div class="formula-vault">
+        <span class="box-label">Chapter 18 Formula Vault (High-Density Revision Grid)</span>
+        <ul>
+            <li><strong>Impulse &amp; Variable Mass:</strong> $\vec{J} = \Delta \vec{p} = \int \vec{F}\,dt$; normal
+                rebound $|\Delta p| = m(u + v_r)$; water jet $F = \rho A v^2$ (splash) or $2\rho A v^2$ (elastic
+                rebound); conveyor belt $F = v\frac{dm}{dt}$.</li>
+            <li><strong>Apparent Weight &amp; Massive Rope:</strong> Lift $N = m(g \pm a)$; horizontal rope $T(x) =
+                F\left(1 - \frac{x}{L}\right)$; Lami's Theorem $\frac{F_1}{\sin\alpha} = \frac{F_2}{\sin\beta} =
+                \frac{F_3}{\sin\gamma}$.</li>
+            <li><strong>Spring vs. String Cut:</strong> String tension drops/jumps instantaneously ($T \to 0$ when cut);
+                spring force $kx$ is strictly continuous across $t = 0^+$.</li>
+            <li><strong>Atwood &amp; Constraints:</strong> Vertical Atwood $a = \frac{m_2-m_1}{m_2+m_1}g$, $T =
+                \frac{2m_1 m_2}{m_1+m_2}g$, hook force $= 2T$; Multi-pulley Virtual Work $\sum \vec{T}_i\cdot\vec{a}_i =
+                0$; Wedge normal constraint $a_y = a_x\tan\theta$.</li>
+            <li><strong>Friction Laws:</strong> $0 \le f_s \le \mu_s N$; $f_k = \mu_k N$; Angle of Friction $=$ Angle of
+                Repose: $\tan\lambda = \tan\theta_r = \mu_s$; Minimum pulling force $F_{\min} = \frac{\mu_s
+                mg}{\sqrt{1+\mu_s^2}}$ at $\theta = \lambda$; Two-block slip limit $F_{\max} =
+                (m_A+m_B)\frac{f_{\max}}{m_{\text{passive}}}$.</li>
+            <li><strong>Non-Inertial Bridge:</strong> $\vec{F}_{\text{pseudo}} = -m\vec{a}_{\text{frame}}$; tilted bob
+                $\tan\theta = \frac{a}{g}$, $T = m\sqrt{g^2+a^2}$; smooth wedge $a = g\tan\theta$, $N = mg\sec\theta$,
+                $F = (M+m)g\tan\theta$.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== WORKED EXAMPLES ==================== -->
+    <h2 class="section-heading">6. Graded Worked Examples (9 Complete Step-by-Step Models)</h2>
+
+    <!-- LEVEL 1 BANNER -->
+    <div class="level-banner l1">Tier 1 &mdash; Level 1: Foundational Warmup &amp; Core Traps (Examples 1&ndash;3)</div>
+
+    <!-- Example 1 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Impulse Rebound &amp; Water Jet Thrust</span>
+            <strong>Worked Example 1: Sign-Reversal Impulse &amp; Continuous Fluid Impact</strong>
+        </div>
+        <div class="ex-problem">
+            (a) A $0.4\text{ kg}$ cricket ball moving horizontally at $15\text{ m/s}$ strikes a rigid vertical wall
+            normally and rebounds directly backward at $10\text{ m/s}$. If the ball remains in contact with the wall for
+            $\Delta t = 0.02\text{ s}$, find the magnitude of the impulse imparted by the wall and the average force
+            exerted by the wall.<br>
+            (b) A horizontal water jet of cross-sectional area $A = 4\text{ cm}^2$ and speed $v = 10\text{ m/s}$ strikes
+            a vertical wall normally and splashes downward parallel to the wall without rebounding. Taking water density
+            $\rho = 1000\text{ kg/m}^3$, find the steady horizontal force exerted on the wall.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) &mdash; Rebounding Ball (Watch the Sign Reversal!):</strong></p>
+            <p>Lock the sign convention: take the initial velocity direction (toward the wall) as $+x$. Then $u =
+                +15\text{ m/s}$ and $v = -10\text{ m/s}$.</p>
+            $$\Delta p = m(v - u) = 0.4(-10 - 15) = 0.4(-25) = -10\text{ kg}\cdot\text{m/s}$$
+            <p>The negative sign confirms the impulse acts <em>away</em> from the wall. Its magnitude is $J = |\Delta p|
+                = \mathbf{10\text{ N}\cdot\text{s}}$.</p>
+            <p>Average force exerted by the wall during $\Delta t = 0.02\text{ s}$:</p>
+            $$F_{\text{avg}} = \frac{J}{\Delta t} = \frac{10}{0.02} = \mathbf{500\text{ N}}$$
+            <p><em>Trap Check:</em> Dropping the negative sign on $v$ would produce $0.4(15 - 10) = 2\text{
+                N}\cdot\text{s}$ and $100\text{ N}$&mdash;five times too small!</p>
+
+            <p><strong>Part (b) &mdash; Continuous Water Jet:</strong></p>
+            <p>Convert area to SI units: $A = 4\text{ cm}^2 = 4 \times 10^{-4}\text{ m}^2$. Mass of water hitting the
+                wall per second:</p>
+            $$\frac{dm}{dt} = \rho A v = (1000)(4 \times 10^{-4})(10) = 4\text{ kg/s}$$
+            <p>Since water loses its entire normal velocity ($v \to 0$) with no rebound, the normal force on the wall
+                is:</p>
+            $$F = v\frac{dm}{dt} = (10)(4) = \mathbf{40\text{ N}}$$
+        </div>
+    </div>
+
+    <!-- Example 2 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Stacked Blocks &amp; Elevator Apparent Weight</span>
+            <strong>Worked Example 2: Three-Block Stack Inside an Accelerating Lift</strong>
+        </div>
+        <div class="ex-problem">
+            Three blocks $A$ ($2\text{ kg}$, top), $B$ ($3\text{ kg}$, middle), and $C$ ($5\text{ kg}$, bottom) are
+            stacked vertically on the floor of an elevator accelerating upward at $a = 2\text{ m/s}^2$. Taking $g =
+            10\text{ m/s}^2$, find (a) the normal reaction $N_{AB}$ between $A$ and $B$, (b) the normal reaction
+            $N_{BC}$ between $B$ and $C$, (c) the normal reaction $N_{\text{floor}}$ exerted by the elevator floor on
+            $C$, and (d) all three normal reactions if the elevator cable snaps into free fall.
+        </div>
+        <div class="ex-solution">
+            <p>Take upward as $+y$. Because all three blocks stay in contact with the lift, each accelerates upward at
+                $a = +2\text{ m/s}^2$.</p>
+            <ul>
+                <li><strong>(a) Isolated FBD of Block $A$ ($2\text{ kg}$):</strong> Forces are $N_{AB}$ upward and $m_A
+                    g = 20\text{ N}$ downward:
+                    $$N_{AB} - 20 = (2)(2) \implies N_{AB} = 20 + 4 = \mathbf{24\text{ N}}$$
+                </li>
+                <li><strong>(b) Isolated FBD of Block $B$ ($3\text{ kg}$):</strong> Forces are $N_{BC}$ upward, reaction
+                    $N_{AB} = 24\text{ N}$ downward, and $m_B g = 30\text{ N}$ downward:
+                    $$N_{BC} - 24 - 30 = (3)(2) \implies N_{BC} = 54 + 6 = \mathbf{60\text{ N}}$$
+                    <em>Combined-system check on $(A + B)$:</em> $N_{BC} = (m_A + m_B)(g + a) = (2 + 3)(10 + 2) =
+                    60\text{ N}$.
+                </li>
+                <li><strong>(c) Isolated FBD of Block $C$ ($5\text{ kg}$):</strong> Forces are $N_{\text{floor}}$
+                    upward, reaction $N_{BC} = 60\text{ N}$ downward, and $m_C g = 50\text{ N}$ downward:
+                    $$N_{\text{floor}} - 60 - 50 = (5)(2) \implies N_{\text{floor}} = 110 + 10 = \mathbf{120\text{ N}}$$
+                    <em>Combined-system check on $(A + B + C)$:</em> $N_{\text{floor}} = 10(12) = 120\text{ N}$.
+                </li>
+                <li><strong>(d) Free-Fall Cable Snap ($a = -g = -10\text{ m/s}^2$):</strong> Effective gravity drops to
+                    $g_{\text{eff}} = g - g = 0$, so:
+                    $$N_{AB} = N_{BC} = N_{\text{floor}} = \mathbf{0\text{ N}}$$
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Example 3 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Self-Adjusting Static Friction Trap</span>
+            <strong>Worked Example 3: Testing Below, At, and Above Limiting Friction</strong>
+        </div>
+        <div class="ex-problem">
+            A $5\text{ kg}$ wooden block rests on a rough horizontal floor where $\mu_s = 0.5$ and $\mu_k = 0.4$ ($g =
+            10\text{ m/s}^2$). Determine the friction force $f$ and acceleration $a$ of the block when a horizontal
+            pulling force $F$ is applied with magnitude: (a) $F = 18\text{ N}$, (b) $F = 25\text{ N}$, and (c) $F =
+            35\text{ N}$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; Compute Normal Reaction and Both Friction Thresholds:</strong></p>
+            <p>Vertical equilibrium gives $N = mg = 5 \times 10 = 50\text{ N}$.</p>
+            $$f_{s,\max} = \mu_s N = 0.5 \times 50 = 25\text{ N}, \qquad f_k = \mu_k N = 0.4 \times 50 = 20\text{ N}$$
+
+            <p><strong>Step 2 &mdash; Evaluate Each Case Strictly Against $f_{s,\max} = 25\text{ N}$:</strong></p>
+            <ul>
+                <li><strong>(a) $F = 18\text{ N}$:</strong> Since $18\text{ N} &lt; f_{s,\max} = 25\text{ N}$, the block
+                    <strong>does not move</strong>. Static friction self-adjusts to cancel $F$ exactly:
+                    $$f = \mathbf{18\text{ N}}, \qquad a = \mathbf{0\text{ m/s}^2}$$
+                    <em>(Never report $25\text{ N}$&mdash;that would imply the block accelerates backward!)</em>
+                </li>
+                <li><strong>(b) $F = 25\text{ N}$:</strong> Applied force matches $f_{s,\max}$ exactly (verge of
+                    slipping):
+                    $$f = \mathbf{25\text{ N}}, \qquad a = \mathbf{0\text{ m/s}^2}$$
+                </li>
+                <li><strong>(c) $F = 35\text{ N}$:</strong> Since $35\text{ N} &gt; 25\text{ N}$, static lockup breaks
+                    and the block slides. Friction drops instantaneously to kinetic friction $f_k = 20\text{ N}$:
+                    $$f = \mathbf{20\text{ N}}, \qquad a = \frac{F - f_k}{m} = \frac{35 - 20}{5} = \mathbf{3\text{
+                    m/s}^2}$$
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- LEVEL 2 BANNER -->
+    <div class="level-banner l2">Tier 2 &mdash; Level 2: Exam-Real BEST / NSEJS Applications (Examples 4&ndash;6)</div>
+
+    <!-- Example 4 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Massive Rope Tension Distribution</span>
+            <strong>Worked Example 4: Heavy Rope Pulling a Block Along a Smooth Floor</strong>
+        </div>
+        <div class="ex-problem">
+            A block of mass $m = 6\text{ kg}$ resting on a smooth horizontal floor is connected to a uniform heavy rope
+            of mass $M = 4\text{ kg}$ and length $L = 2\text{ m}$. A constant horizontal pulling force $F = 50\text{ N}$
+            is applied to the free right end of the rope. Find (a) the acceleration of the system, (b) the tension at
+            the point where the rope attaches to the block, (c) the tension at the midpoint of the rope, and (d) the
+            tension at a distance $y = 0.5\text{ m}$ from the pulled right end.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 &mdash; (a) System Acceleration:</strong></p>
+            <p>Treat the block + entire rope as one rigid 1D system of total mass $M_{\text{total}} = m + M = 6 + 4 =
+                10\text{ kg}$:</p>
+            $$a = \frac{F}{m + M} = \frac{50}{10} = \mathbf{5\text{ m/s}^2}$$
+
+            <p><strong>Step 2 &mdash; (b) Tension at the Block&ndash;Rope Junction:</strong></p>
+            <p>Isolate the $6\text{ kg}$ block alone. The sole horizontal force pulling it forward is
+                $T_{\text{block}}$:</p>
+            $$T_{\text{block}} = m a = 6 \times 5 = \mathbf{30\text{ N}}$$
+
+            <p><strong>Step 3 &mdash; (c) Tension at the Midpoint ($1\text{ m}$ from either end):</strong></p>
+            <p>Make a mental cut at the midpoint. The mass trailing behind the cut consists of the $6\text{ kg}$ block
+                plus half the rope ($2\text{ kg}$), totalling $8\text{ kg}$:</p>
+            $$T_{\text{mid}} = (6 + 2)(5) = \mathbf{40\text{ N}}$$
+
+            <p><strong>Step 4 &mdash; (d) Tension at $y = 0.5\text{ m}$ from the Pulled End:</strong></p>
+            <p>The linear mass density of the rope is $\lambda = \frac{M}{L} = \frac{4}{2} = 2\text{ kg/m}$. The front
+                segment of length $0.5\text{ m}$ has mass $m_{\text{front}} = 2 \times 0.5 = 1\text{ kg}$, while the
+                trailing mass (block + $1.5\text{ m}$ of rope) is $6 + 3 = 9\text{ kg}$.</p>
+            <ul>
+                <li><em>From trailing side:</em> $T = m_{\text{tail}} a = 9 \times 5 = \mathbf{45\text{ N}}$.</li>
+                <li><em>Independent check from front segment:</em> $F - T = m_{\text{front}} a \implies 50 - T = (1)(5)
+                    \implies T = \mathbf{45\text{ N}}$. Confirmed!</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Example 5 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Spring vs. String Cutting Trap</span>
+            <strong>Worked Example 5: Instantaneous Accelerations After Cutting a String</strong>
+        </div>
+        <div class="ex-problem">
+            Two blocks $A$ ($m_1 = 2\text{ kg}$, upper) and $B$ ($m_2 = 4\text{ kg}$, lower) hang vertically in
+            equilibrium from a rigid ceiling ($g = 10\text{ m/s}^2$). Find the instantaneous accelerations (magnitude
+            and direction) of both $A$ and $B$ immediately after the string is cut in each setup:<br>
+            <strong>Case I:</strong> Ceiling &mdash; <em>Spring</em> &mdash; Block $A$ &mdash; <em>String</em> &mdash;
+            Block $B$ (cut the lower string).<br>
+            <strong>Case II:</strong> Ceiling &mdash; <em>String</em> &mdash; Block $A$ &mdash; <em>Spring</em> &mdash;
+            Block $B$ (cut the upper string).
+        </div>
+        <div class="ex-solution">
+            <p><strong>Case I (Ceiling &mdash; Spring &mdash; $A$ &mdash; String &mdash; $B$; Cut Lower
+                    String):</strong></p>
+            <ol>
+                <li><em>Before cut (equilibrium):</em> Lower string holds $B$ alone $\implies T = m_2 g = 40\text{ N}$.
+                    Upper spring holds $(A + B)$ $\implies F_s = (m_1 + m_2)g = 60\text{ N}$.</li>
+                <li><em>Immediately after cut ($t = 0^+$):</em> String tension drops instantaneously to $T = 0$, while
+                    spring force stays unchanged at $F_s = 60\text{ N}$.</li>
+                <li><em>New FBDs at $t = 0^+$:</em>
+                    <ul>
+                        <li><strong>Block $B$:</strong> Only weight $m_2 g = 40\text{ N}$ acts downward $\implies a_B =
+                            \dfrac{40}{4} = \mathbf{10\text{ m/s}^2\text{ downward}}$.</li>
+                        <li><strong>Block $A$:</strong> Spring pulls up with $60\text{ N}$, weight pulls down with $m_1
+                            g = 20\text{ N}$:
+                            $$60 - 20 = 2 a_A \implies a_A = \frac{40}{2} = \mathbf{20\text{ m/s}^2\text{ upward}}$$
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+
+            <p><strong>Case II (Ceiling &mdash; String &mdash; $A$ &mdash; Spring &mdash; $B$; Cut Upper
+                    String):</strong></p>
+            <ol>
+                <li><em>Before cut (equilibrium):</em> Lower spring holds $B$ alone $\implies F_s = m_2 g = 40\text{
+                    N}$. Upper string holds $(A + B)$ $\implies T = 60\text{ N}$.</li>
+                <li><em>Immediately after cut ($t = 0^+$):</em> Upper string tension vanishes ($T = 0$), while the
+                    stretched lower spring still pulls $B$ upward with $40\text{ N}$ and pulls $A$
+                    <strong>downward</strong> with $40\text{ N}$!
+                </li>
+                <li><em>New FBDs at $t = 0^+$:</em>
+                    <ul>
+                        <li><strong>Block $B$:</strong> Upward $F_s = 40\text{ N}$ balances downward $m_2 g = 40\text{
+                            N} \implies a_B = \mathbf{0\text{ m/s}^2}$ (momentarily suspended in mid-air!).</li>
+                        <li><strong>Block $A$:</strong> Both weight ($20\text{ N}$) and spring force ($40\text{ N}$)
+                            pull <em>downward</em>:
+                            $$20 + 40 = 2 a_A \implies a_A = \frac{60}{2} = \mathbf{30\text{ m/s}^2\text{ downward}}$$
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            <p><em>Center-of-Mass Sanity Check for Case II:</em> With the ceiling string cut, the entire system is in
+                free fall, so $a_{\text{COM}} = \dfrac{m_1 a_A + m_2 a_B}{m_1 + m_2} = \dfrac{2(30) + 4(0)}{6} =
+                10\text{ m/s}^2 = g$. Exact!</p>
+        </div>
+    </div>
+
+    <!-- Example 6 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Minimum Pulling Force &amp; Self-Locking Push</span>
+            <strong>Worked Example 6: Pulling vs. Pushing a Heavy Crate at an Angle</strong>
+        </div>
+        <div class="ex-problem">
+            A heavy crate of mass $m = 10\text{ kg}$ rests on a rough horizontal floor with $\mu_s = \dfrac{3}{4} =
+            0.75$ ($g = 10\text{ m/s}^2$; recall the $3\text{-}4\text{-}5$ triangle: $\sin 37^\circ = \frac{3}{5}$,
+            $\cos 37^\circ = \frac{4}{5}$, $\tan 37^\circ = \frac{3}{4}$).<br>
+            (a) Find the minimum pulling force $F_{\min}$ required to just start moving the crate, and the angle
+            $\theta$ above the horizontal at which it must be applied.<br>
+            (b) Find the pushing force required to just move the crate if pushed downward at the same angle $37^\circ$
+            below the horizontal.<br>
+            (c) Above what downward pushing angle $\theta_{\text{lock}}$ does it become physically impossible to move
+            the crate, no matter how large the push?
+        </div>
+        <div class="ex-solution">
+            <p><strong>(a) Minimum Pulling Force:</strong></p>
+            <p>When pulling at angle $\theta$ above the horizontal, vertical equilibrium gives $N = mg - F\sin\theta$,
+                and impending horizontal motion requires $F\cos\theta = \mu_s N = \mu_s(mg - F\sin\theta)$:</p>
+            $$F(\cos\theta + \mu_s\sin\theta) = \mu_s mg \implies F = \frac{\mu_s mg}{\cos\theta + \mu_s\sin\theta}$$
+            <p>Minimizing $F$ requires maximizing $\cos\theta + \mu_s\sin\theta$, whose maximum is $\sqrt{1 + \mu_s^2}$
+                attained at $\tan\theta = \mu_s$:</p>
+            $$\tan\theta = \frac{3}{4} \implies \theta = \mathbf{37^\circ}, \qquad \sqrt{1 + \mu_s^2} = \sqrt{1 +
+            \frac{9}{16}} = \frac{5}{4}$$
+            $$F_{\min} = \frac{\mu_s mg}{\sqrt{1 + \mu_s^2}} = \frac{(3/4)(100)}{5/4} = \frac{75}{5/4} =
+            \mathbf{60\text{ N}}$$
+            <p><em>Check:</em> $N = 100 - 60(0.6) = 64\text{ N}$; $f_{s,\max} = 0.75(64) = 48\text{ N}$; horizontal pull
+                $= 60(0.8) = 48\text{ N}$. Exact!</p>
+
+            <p><strong>(b) Pushing at $37^\circ$ Below Horizontal:</strong></p>
+            <p>Now $N = mg + F\sin 37^\circ$, so $F\cos 37^\circ = \mu_s(mg + F\sin 37^\circ)$:</p>
+            $$F_{\text{push}} = \frac{\mu_s mg}{\cos 37^\circ - \mu_s\sin 37^\circ} = \frac{75}{0.8 - 0.75(0.6)} =
+            \frac{75}{0.8 - 0.45} = \frac{75}{0.35} = \mathbf{\frac{1500}{7}\text{ N} \approx 214.3\text{ N}}$$
+            <p>Pushing at $37^\circ$ requires more than 3.5 times the minimum pulling force!</p>
+
+            <p><strong>(c) Self-Locking Angle:</strong></p>
+            <p>Motion becomes impossible whenever the denominator $\cos\theta - \mu_s\sin\theta \le 0$:</p>
+            $$\tan\theta \ge \frac{1}{\mu_s} = \frac{4}{3} \implies \theta_{\text{lock}} = \mathbf{53^\circ}$$
+            <p>Any push steeper than $53^\circ$ below horizontal increases limiting friction faster than it increases
+                forward push, locking the crate permanently.</p>
+        </div>
+    </div>
+
+    <!-- LEVEL 3 BANNER -->
+    <div class="level-banner l3">Tier 3 &mdash; Level 3: Rank-Booster Problems &amp; 30-Second Shortcuts (Examples
+        7&ndash;9)</div>
+
+    <!-- Example 7 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Movable Multi-Pulley Constraint</span>
+            <strong>Worked Example 7: Table Block Coupled to a Hanging Movable Pulley</strong>
+        </div>
+        <div class="ex-problem">
+            In the movable multi-pulley setup of Figure 18.2, Block $A$ ($m_1 = 2\text{ kg}$) rests on a smooth
+            horizontal table and is connected by a light inextensible string passing over a fixed edge pulley $P_1$ and
+            around a light frictionless movable pulley $P_2$ to a fixed ceiling anchor. Block $B$ ($m_2 = 12\text{ kg}$)
+            hangs from the axle of $P_2$. Released from rest with $g = 10\text{ m/s}^2$, find (a) the acceleration $a_B$
+            of Block $B$, (b) the acceleration $a_A$ of Block $A$, and (c) the string tension $T$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <p><strong>Step 1 &mdash; Constraint Relation (String-Length Conservation):</strong> Let $x_A$ measure Block
+                $A$'s distance from the left wall (so table string length is $L_0 - x_A$) and $y_B$ measure movable
+                pulley $P_2$'s vertical depth below the table/ceiling line. Total constant string length is:</p>
+            $$(L_0 - x_A) + y_B + y_B + \text{const} = L \implies 2y_B - x_A = \text{const}$$
+            <p>Differentiating twice with respect to time gives the exact kinematic link:</p>
+            $$a_A = 2a_B$$
+            <p><strong>Step 2 &mdash; Isolated Newton Second-Law Equations:</strong> Since the string and pulleys are
+                massless and frictionless, the same tension $T$ acts throughout the string.</p>
+            <ul>
+                <li><strong>FBD of Block $A$ (horizontal):</strong> $T = m_1 a_A = 2a_A$. Substituting $a_A = 2a_B$
+                    gives $T = 4a_B$.</li>
+                <li><strong>FBD of Movable Pulley $P_2$ + Block $B$ (vertical, downward positive):</strong> Two vertical
+                    string strands pull upward with total force $2T$, while weight $m_2 g = 120\text{ N}$ pulls
+                    downward:
+                    $$m_2 g - 2T = m_2 a_B \implies 120 - 2T = 12a_B$$
+                </li>
+            </ul>
+            <p><strong>Step 3 &mdash; Solve Simultaneously:</strong> Substitute $T = 4a_B$ into the equation for $B$:
+            </p>
+            $$120 - 2(4a_B) = 12a_B \implies 120 = 20a_B \implies \mathbf{a_B = 6\text{ m/s}^2}$$
+            $$\mathbf{a_A = 2a_B = 12\text{ m/s}^2}, \qquad \mathbf{T = 4a_B = 24\text{ N}}$$
+            <p><em>Verification:</em> On $B$, net force $= 120 - 2(24) = 72\text{ N} = 12 \times 6$. On $A$, net force
+                $= 24\text{ N} = 2 \times 12$. Exact!</p>
+
+            <div class="shortcut-box">
+                <span class="box-label">30-Second BEST Exam Shortcut: Virtual Work + Inertia Reflection</span>
+                <p>1) Read tension ratio directly from the diagram: $T$ pulls $A$, $2T$ pulls $B$. By Virtual Work
+                    ($\sum \vec{T}\cdot\vec{a} = 0$), acceleration ratio is inverted: $a_A = 2a_B$ (multiplier $n = 2$).
+                </p>
+                <p>2) Reflecting any mass moving at $n\times$ the speed of the target block multiplies its effective
+                    inertia by $n^2$ ($2^2 = 4$):</p>
+                $$a_B = \frac{\text{Net Driving Force}}{m_2 + n^2 m_1} = \frac{120}{12 + 4(2)} = \frac{120}{20} =
+                \mathbf{6\text{ m/s}^2}$$
+                <p>Immediately $a_A = 2(6) = \mathbf{12\text{ m/s}^2}$ and $T = 2(12) = \mathbf{24\text{ N}}$.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Example 8 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Two-Block Stacked Friction</span>
+            <strong>Worked Example 8: Slipping Thresholds &amp; Post-Slip Accelerations</strong>
+        </div>
+        <div class="ex-problem">
+            Block $A$ ($m_A = 2\text{ kg}$) rests on top of Block $B$ ($m_B = 4\text{ kg}$), which rests on a
+            <strong>smooth</strong> horizontal floor (as in Figure 18.4). The coefficient of friction between $A$ and
+            $B$ is $\mu_s = \mu_k = 0.5$ ($g = 10\text{ m/s}^2$).<br>
+            (a) A horizontal force $F$ pulls the <strong>lower block $B$</strong>. Find the maximum force $F_{\max}$ for
+            which both blocks move together without slipping.<br>
+            (b) If $F = 38\text{ N}$ is applied to the lower block $B$, find the individual accelerations $a_A$ and
+            $a_B$.<br>
+            (c) Now remove the force from $B$ and apply a horizontal pull $F'$ to the <strong>upper block $A$</strong>
+            instead. Find the new maximum force $F'_{\max}$ before relative slipping begins.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <p>First compute the maximum possible friction force between $A$ and $B$. From vertical equilibrium of $A$,
+                $N_1 = m_A g = 2 \times 10 = 20\text{ N}$:</p>
+            $$f_{\max} = \mu N_1 = 0.5 \times 20 = 10\text{ N}$$
+
+            <p><strong>(a) Force $F$ Applied to Lower Block $B$:</strong></p>
+            <p>Suppose both blocks move together with common acceleration $a = \dfrac{F}{m_A + m_B} = \dfrac{F}{6}$.
+                Isolating upper block $A$, the <em>only</em> horizontal force acting on $A$ is static friction $f$
+                directed forward:</p>
+            $$f = m_A a = 2a \le f_{\max} = 10\text{ N} \implies a_{\max} = \frac{10}{2} = 5\text{ m/s}^2$$
+            <p>Therefore, the maximum pull on $B$ without slipping is:</p>
+            $$F_{\max} = (m_A + m_B)a_{\max} = (2 + 4)(5) = \mathbf{30\text{ N}}$$
+
+            <p><strong>(b) When $F = 38\text{ N}$ on Lower Block $B$:</strong></p>
+            <p>Because $38\text{ N} &gt; 30\text{ N}$, the blocks <strong>slip relative to each other</strong> and
+                friction saturates at $f = f_k = 10\text{ N}$ (forward on $A$, backward on $B$):</p>
+            <ul>
+                <li>For Block $A$: $a_A = \dfrac{f_k}{m_A} = \dfrac{10}{2} = \mathbf{5\text{ m/s}^2}$.</li>
+                <li>For Block $B$: $F - f_k = m_B a_B \implies 38 - 10 = 4a_B \implies a_B = \dfrac{28}{4} =
+                    \mathbf{7\text{ m/s}^2}$.</li>
+            </ul>
+            <p><em>Physical Consistency Check:</em> Lower block $B$ accelerates faster ($7\text{ m/s}^2 &gt; 5\text{
+                m/s}^2$), so $B$ slides forward beneath $A$, confirming that friction indeed opposes $B$ backward and
+                drives $A$ forward!</p>
+
+            <p><strong>(c) Force $F'$ Applied to Upper Block $A$:</strong></p>
+            <p>If both move together at $a = \frac{F'}{6}$, now <strong>lower block $B$</strong> is driven forward
+                solely by interface friction $f \le 10\text{ N}$:</p>
+            $$f = m_B a = 4a \le 10\text{ N} \implies a'_{\max} = \frac{10}{4} = 2.5\text{ m/s}^2$$
+            $$F'_{\max} = (m_A + m_B)a'_{\max} = (6)(2.5) = \mathbf{15\text{ N}}$$
+
+            <div class="shortcut-box">
+                <span class="box-label">30-Second BEST Exam Shortcut: The "Passive-Block" Formula</span>
+                <p>On a smooth floor, always spot the <strong>unpulled (passive) block</strong>&mdash;it sets the
+                    ceiling acceleration $a_{\text{crit}} = f_{\max} / m_{\text{passive}}$:</p>
+                <ul>
+                    <li>Pull $B$ $\implies$ passive is $A$ ($2\text{ kg}$): $F_{\max} = (2+4)\times\frac{10}{2} =
+                        \mathbf{30\text{ N}}$.</li>
+                    <li>Pull $A$ $\implies$ passive is $B$ ($4\text{ kg}$): $F'_{\max} = (2+4)\times\frac{10}{4} =
+                        \mathbf{15\text{ N}}$.</li>
+                </ul>
+                <p>Notice the exact ratio: $F_{\max} / F'_{\max} = m_B / m_A = 4/2 = 2$!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Example 9 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Non-Inertial Wedge &amp; Pseudo-Force</span>
+            <strong>Worked Example 9: Keeping a Block Stationary on a Smooth Accelerating Wedge</strong>
+        </div>
+        <div class="ex-problem">
+            A smooth triangular wedge of mass $M = 8\text{ kg}$ and inclination $\theta = 37^\circ$ ($\sin 37^\circ =
+            \frac{3}{5}$, $\cos 37^\circ = \frac{4}{5}$, $\tan 37^\circ = \frac{3}{4}$) rests on a smooth horizontal
+            floor. A small block of mass $m = 2\text{ kg}$ is placed on its inclined face ($g = 10\text{ m/s}^2$).
+            Find:<br>
+            (a) the horizontal acceleration $a$ required for the wedge so that the block remains completely stationary
+            relative to the wedge,<br>
+            (b) the normal reaction $N$ exerted by the wedge on the block, and<br>
+            (c) the horizontal external force $F$ that must be pushed onto the wedge.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation (Inertial Ground Frame &amp; Non-Inertial
+                    Verification):</strong></p>
+            <p><strong>Method A &mdash; Inertial Ground Frame (FBD of Block $m$):</strong> Only two real forces act on
+                $m$: gravity $mg = 20\text{ N}$ vertically downward and normal reaction $N$ perpendicular to the incline
+                (making angle $37^\circ$ with the vertical). Because the block rides along horizontally with the wedge,
+                $a_x = a$ and $a_y = 0$:</p>
+            <ul>
+                <li><strong>Vertical Equilibrium ($a_y = 0$):</strong>
+                    $$N\cos 37^\circ = mg \implies N\left(\frac{4}{5}\right) = 20 \implies \mathbf{N = 25\text{ N}}$$
+                </li>
+                <li><strong>Horizontal Newton's 2nd Law ($a_x = a$):</strong>
+                    $$N\sin 37^\circ = ma \implies 25\left(\frac{3}{5}\right) = 2a \implies 15 = 2a \implies \mathbf{a =
+                    7.5\text{ m/s}^2}$$
+                </li>
+            </ul>
+            <p><strong>Method B &mdash; Non-Inertial Wedge Frame (Pseudo-Force Check):</strong> Add
+                $\vec{F}_{\text{pseudo}} = ma$ horizontally to the left (Figure 18.5). Balancing components along and
+                perpendicular to the incline:</p>
+            $$ma\cos 37^\circ = mg\sin 37^\circ \implies a = g\tan 37^\circ = 10\left(\frac{3}{4}\right) =
+            \mathbf{7.5\text{ m/s}^2}$$
+            $$N = mg\cos 37^\circ + ma\sin 37^\circ = 20(0.8) + 2(7.5)(0.6) = 16 + 9 = \mathbf{25\text{ N}}$$
+            <p><strong>(c) External Horizontal Force $F$ on Wedge:</strong> Since $M$ and $m$ move together horizontally
+                at $a = 7.5\text{ m/s}^2$ on a frictionless floor:</p>
+            $$F = (M + m)a = (8 + 2)(7.5) = \mathbf{75\text{ N}}$$
+            <p><em>Isolated Wedge FBD Check:</em> Wedge feels $F$ right and horizontal reaction $N\sin 37^\circ =
+                15\text{ N}$ left, so $F - 15 = M a = 8(7.5) = 60 \implies F = 75\text{ N}$. Confirmed!</p>
+
+            <div class="shortcut-box">
+                <span class="box-label">30-Second BEST Exam Shortcut: Tilted Effective Gravity
+                    $\vec{g}_{\text{eff}}$</span>
+                <p>Inside the accelerating wedge, effective gravity $\vec{g}_{\text{eff}} = \vec{g} - \vec{a}$ must
+                    point strictly <strong>perpendicular</strong> to the smooth slope so no tangential component pulls
+                    the block. Immediately:</p>
+                <p>1) $a = g\tan\theta = 10\left(\frac{3}{4}\right) = \mathbf{7.5\text{ m/s}^2}$.<br>
+                    2) $g_{\text{eff}} = g\sec\theta = 10\left(\frac{5}{4}\right) = 12.5\text{ m/s}^2 \implies N = m
+                    g_{\text{eff}} = 2(12.5) = \mathbf{25\text{ N}}$.<br>
+                    3) $F = (M + m)g\tan\theta = 10(7.5) = \mathbf{75\text{ N}}$.</p>
+            </div>
+        </div>
+    </div>
+
+</article>

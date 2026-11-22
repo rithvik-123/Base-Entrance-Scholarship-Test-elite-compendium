@@ -1,0 +1,816 @@
+<article data-volume="Volume 3: Physics (Paper 2)"
+    data-title="Chapter 17: Rectilinear Motion, Non-Uniform Graphs &amp; Calculus Kinematics — Full Step-by-Step Solutions &amp; Error Forensics">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 3: Physics (Paper 2) &bull; Chapter 17 &bull; Part 3 of 3: Verified Solutions
+            &amp; Error Forensics</div>
+        <h1>Complete Step-by-Step Solutions &amp; Trap Forensics</h1>
+        <p>Zero-skip derivations, strict sign conventions, independent verification checks for all 30 problems from Part
+            2 (Q01&ndash;Q30), followed by 5 high-impact Trap &amp; Error Forensics autopsies designed to eliminate
+            rank-costing BEST Physics mistakes.</p>
+        <div class="tag-row">
+            <span class="meta-pill">30 Verified Solutions</span>
+            <span class="meta-pill">100% Answer-Key Synced</span>
+            <span class="meta-pill">Zero-Skip Derivations</span>
+            <span class="meta-pill">5 Error Forensics Cards</span>
+        </div>
+    </header>
+
+    <!-- ==================== LEVEL 1 SOLUTIONS ==================== -->
+    <div class="level-banner l1">Level 1 Solutions &mdash; Foundational Warmup &amp; Core Traps (Q01&ndash;Q09)</div>
+
+    <!-- S01 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q01</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p>Take due east as the $+x$-direction and the starting point as $x = 0$.</p>
+        <ul>
+            <li><strong>Total Distance:</strong> $d = 24\text{ m} + 8\text{ m} = 32\text{ m}$.</li>
+            <li><strong>Net Displacement:</strong> $\Delta x = (+24\text{ m}) + (-8\text{ m}) = +16\text{ m}$.</li>
+            <li><strong>Total Time:</strong> $\Delta t = 4\text{ s} + 4\text{ s} = 8\text{ s}$.</li>
+        </ul>
+        <p>Compute both averages over the $8\text{ s}$ interval:</p>
+        $$\langle \text{speed} \rangle = \frac{d}{\Delta t} = \frac{32}{8} = 4\text{ m/s}, \qquad |v_{\text{avg}}| =
+        \frac{|\Delta x|}{\Delta t} = \frac{16}{8} = 2\text{ m/s}$$
+        <p>Taking the ratio:</p>
+        $$\frac{\langle \text{speed} \rangle}{|v_{\text{avg}}|} = \frac{4}{2} = \frac{2}{1} = \mathbf{2 : 1}$$
+        <p>Notice that because $\Delta t$ cancels in the ratio, $\dfrac{\langle \text{speed} \rangle}{|v_{\text{avg}}|}
+            = \dfrac{d}{|\Delta x|} = \dfrac{32}{16} = 2 : 1$ directly. Hence <strong>(C)</strong> is correct.</p>
+    </div>
+
+    <!-- S02 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q02</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p>Let the one-way distance between Town A and Town B be $D$.</p>
+        <ul>
+            <li><strong>Time A $\to$ B:</strong> $t_1 = \dfrac{D}{30}\text{ h}$.</li>
+            <li><strong>Time B $\to$ A:</strong> $t_2 = \dfrac{D}{60}\text{ h}$.</li>
+            <li><strong>Total Distance:</strong> $d = D + D = 2D$.</li>
+            <li><strong>Total Time:</strong> $T = t_1 + t_2 = D\left(\dfrac{1}{30} + \dfrac{1}{60}\right) =
+                D\left(\dfrac{2 + 1}{60}\right) = \dfrac{D}{20}\text{ h}$.</li>
+        </ul>
+        <p><strong>Average Speed (Harmonic Mean):</strong></p>
+        $$v_{\text{avg, speed}} = \frac{2D}{D/20} = \mathbf{40\text{ km/h}} \quad \left(\text{Check: }
+        \frac{2(30)(60)}{30 + 60} = \frac{3600}{90} = 40\text{ km/h}\right)$$
+        <p><strong>Average Velocity:</strong> Because the cyclist returns to the exact starting point (Town A), the net
+            displacement is $\Delta x = 0$, so:</p>
+        $$|v_{\text{avg}}| = \frac{0}{T} = \mathbf{0\text{ km/h}}$$
+        <p>Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S03 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q03</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <ul>
+            <li><strong>Evaluating Statement I:</strong> Consider a stone thrown vertically upward. At its highest point
+                (apex), its instantaneous velocity is strictly $v = 0$, yet gravity acts uninterruptedly so its
+                instantaneous acceleration is $a = -g \neq 0$. Thus <strong>Statement I is true</strong>.</li>
+            <li><strong>Evaluating Statement II:</strong> By geometric necessity, the shortest path between any two
+                points is the straight line connecting them, so for every physical trajectory $\text{Distance} \ge
+                |\text{Displacement}|$. Dividing by $|\text{Displacement}| &gt; 0$ gives
+                $\dfrac{\text{Distance}}{|\text{Displacement}|} \ge 1$, which can never be less than $1$. Thus
+                <strong>Statement II is true</strong>.
+            </li>
+        </ul>
+        <p>Both statements are true, so <strong>(A)</strong> is correct.</p>
+    </div>
+
+    <!-- S04 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q04</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p>Convert both speeds to SI units ($\text{m/s}$) by multiplying by $\dfrac{5}{18}$:</p>
+        $$u_1 = 54 \times \frac{5}{18} = 15\text{ m/s}, \qquad u_2 = 108 \times \frac{5}{18} = 30\text{ m/s}$$
+        <p>Under constant braking retardation $a_r$ (with $v = 0$ and zero reaction time), apply $v^2 - u^2 = 2(-a_r)s$:
+        </p>
+        $$s = \frac{u^2}{2a_r}$$
+        <p><strong>Direct Calculation:</strong> From Case 1, $a_r = \dfrac{u_1^2}{2s_1} = \dfrac{15^2}{2(15)} =
+            7.5\text{ m/s}^2$. For Case 2:</p>
+        $$s_2 = \frac{u_2^2}{2a_r} = \frac{30^2}{2(7.5)} = \frac{900}{15} = \mathbf{60\text{ m}}$$
+        <p><em>Scaling Check:</em> Since $s \propto u^2$ and speed doubles ($u_2 = 2u_1$), braking distance quadruples:
+            $s_2 = 2^2 \times 15 = 60\text{ m}$. Hence <strong>(C)</strong> is correct.</p>
+    </div>
+
+    <!-- S05 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q05</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <p>Audit each graph against the physical laws of one-dimensional kinematics:</p>
+        <ul>
+            <li><strong>Graph I ($x\text{-}t$ circle):</strong> Fails the vertical line test—a single instant $t$
+                corresponds to two distinct positions $x$. Physically <strong>impossible</strong>.</li>
+            <li><strong>Graph II (Speed&ndash;$t$ sinusoid dipping below axis):</strong> Speed $= |v| \ge 0$ can never
+                take negative values. Physically <strong>impossible</strong>.</li>
+            <li><strong>Graph III (Distance&ndash;$t$ arch):</strong> Total path length covered by a moving particle is
+                monotonically non-decreasing ($\frac{dd}{dt} = |v| \ge 0$); it can never decrease back toward zero.
+                Physically <strong>impossible</strong>.</li>
+            <li><strong>Graph IV (Linear $v\text{-}t$ crossing the $t$-axis):</strong> Represents constant negative
+                acceleration where a particle starts with positive velocity, slows linearly to rest ($v = 0$), and
+                speeds up in the negative direction (e.g., vertical upward throw under gravity). Completely
+                <strong>physically possible</strong>.
+            </li>
+        </ul>
+        <p>Hence <strong>(D)</strong> is correct.</p>
+    </div>
+
+    <!-- S06 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q06</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p>Let the constant time interval between consecutive drops detaching from the tap be $\tau$, and measure
+            distance $y$ downward from the tap ($u = 0$, $a = +g = 10\text{ m/s}^2$).</p>
+        <p>At the instant the 4th drop is about to detach ($t_4 = 0$):</p>
+        <ul>
+            <li>3rd drop has fallen for time $1\tau$.</li>
+            <li>2nd drop has fallen for time $2\tau$.</li>
+            <li>1st drop has fallen for time $3\tau$ and reaches the floor ($y_1 = 18\text{ m}$).</li>
+        </ul>
+        <p>Using $y = \frac{1}{2}gt^2$ for the 1st drop:</p>
+        $$y_1 = \frac{1}{2}g(3\tau)^2 = 9\left(\frac{1}{2}g\tau^2\right) = 18\text{ m} \implies \frac{1}{2}g\tau^2 =
+        2\text{ m}$$
+        <p>Distance fallen by the 2nd drop <em>below the tap</em>:</p>
+        $$y_2 = \frac{1}{2}g(2\tau)^2 = 4\left(\frac{1}{2}g\tau^2\right) = 4(2\text{ m}) = 8\text{ m}$$
+        <p><strong>Watch the wording:</strong> The question asks for the height of the 2nd drop <strong>above the
+                floor</strong>, NOT below the tap:</p>
+        $$h_{\text{floor}} = 18\text{ m} - 8\text{ m} = \mathbf{10\text{ m}}$$
+        <p>Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S07 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q07</span>
+            <span class="badge badge-l1">Level 1 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 39</span>
+        </div>
+        <p>Given $x(t) = 3t^2 - 18t + 15$, apply the 4-step turnaround distance protocol over $t \in [0, 5]\text{ s}$:
+        </p>
+        <ol>
+            <li><strong>Instantaneous velocity:</strong> $v(t) = \dfrac{dx}{dt} = 6t - 18$.</li>
+            <li><strong>Find turning instant ($v = 0$):</strong> $6t_0 - 18 = 0 \implies t_0 = 3\text{ s}$. Since $0
+                &lt; 3 &lt; 5$, velocity reverses sign at $t = 3\text{ s}$.</li>
+            <li><strong>Evaluate positions at $t = 0, 3, 5\text{ s}$:</strong>
+                <ul>
+                    <li>$x(0) = 3(0)^2 - 18(0) + 15 = +15\text{ m}$</li>
+                    <li>$x(3) = 3(3)^2 - 18(3) + 15 = 27 - 54 + 15 = -12\text{ m}$</li>
+                    <li>$x(5) = 3(5)^2 - 18(5) + 15 = 75 - 90 + 15 = 0\text{ m}$</li>
+                </ul>
+            </li>
+            <li><strong>Sum absolute segment lengths:</strong>
+                $$d = |x(3) - x(0)| + |x(5) - x(3)| = |-12 - 15| + |0 - (-12)| = 27 + 12 = \mathbf{39\text{ m}}$$
+            </li>
+        </ol>
+        <p><em>Trap Check:</em> Computing $|x(5) - x(0)| = |0 - 15| = 15\text{ m}$ yields only displacement magnitude,
+            missing the $24\text{ m}$ of retraced motion. The exact NAT integer is <strong>39</strong>.</p>
+    </div>
+
+    <!-- S08 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q08</span>
+            <span class="badge badge-l1">Level 1 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 180</span>
+        </div>
+        <p>Taking upward as $+y$, ground as $y = 0$, and $g = 10\text{ m/s}^2$, the ball satisfies $h = ut -
+            \frac{1}{2}gt^2 \implies 5t^2 - ut + h = 0$ with roots $t_1 = 3\text{ s}$ and $t_2 = 9\text{ s}$.</p>
+        <p>By Vieta's sum of roots (total time of flight $T = t_1 + t_2$):</p>
+        $$\frac{2u}{g} = t_1 + t_2 = 3 + 9 = 12\text{ s} \implies u = \frac{10 \times 12}{2} = 60\text{ m/s}$$
+        <p>Maximum height above the ground:</p>
+        $$H = \frac{u^2}{2g} = \frac{60^2}{2(10)} = \frac{3600}{20} = \mathbf{180\text{ m}}$$
+        <p><em>Direct Shortcut Check:</em> $H = \frac{1}{8}g(t_1 + t_2)^2 = \frac{10}{8}(12)^2 = \frac{10 \times 144}{8}
+            = 180\text{ m}$. The exact NAT integer is <strong>180</strong>.</p>
+    </div>
+
+    <!-- S09 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q09</span>
+            <span class="badge badge-l1">Level 1 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 57</span>
+        </div>
+        <p>Total distance equals the sum of the <strong>absolute (unsigned) areas</strong> enclosed between the
+            $v\text{-}t$ graph and the time axis:</p>
+        <ul>
+            <li><strong>Positive Trapezoid ($t = 0\text{ s}$ to $t = 6\text{ s}$):</strong> Bottom base $= 6 - 0 =
+                6\text{ s}$, top parallel side $= 5 - 2 = 3\text{ s}$, height $= +10\text{ m/s}$:
+                $$A_1 = \frac{1}{2}(6 + 3)(10) = \frac{1}{2}(9)(10) = +45\text{ m}$$
+                <em>Piece-by-piece check:</em> Triangle $[0,2] = \frac{1}{2}(2)(10) = 10\text{ m}$; Rectangle $[2,5] =
+                (3)(10) = 30\text{ m}$; Triangle $[5,6] = \frac{1}{2}(1)(10) = 5\text{ m}$; sum $= 45\text{ m}$.
+            </li>
+            <li><strong>Negative Triangle ($t = 6\text{ s}$ to $t = 10\text{ s}$):</strong> Base $= 10 - 6 = 4\text{
+                s}$, depth $= -6\text{ m/s}$:
+                $$A_2 = \frac{1}{2}(4)(-6) = -12\text{ m}$$
+            </li>
+        </ul>
+        <p>Summing magnitudes for total distance (do NOT subtract $12$—that gives displacement $+33\text{ m}$!):</p>
+        $$d = |A_1| + |A_2| = 45 + 12 = \mathbf{57\text{ m}}$$
+        <p>The exact NAT integer is <strong>57</strong>.</p>
+    </div>
+
+    <!-- ==================== LEVEL 2 SOLUTIONS ==================== -->
+    <div class="level-banner l2">Level 2 Solutions &mdash; Exam-Real BEST / NSEJS Applications (Q10&ndash;Q21)</div>
+
+    <!-- S10 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q10</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p>Let the total distance from P to Q be $2D$, split into two equal halves of length $D$ each.</p>
+        <ul>
+            <li><strong>First Half (distance $D$ at $v_0 = 30\text{ m/s}$):</strong> Time taken is $t_1 =
+                \dfrac{D}{30}$.</li>
+            <li><strong>Second Half (distance $D$ split into two equal times $\tau$ each at $10\text{ m/s}$ and
+                    $20\text{ m/s}$):</strong>
+                $$D = 10\tau + 20\tau = 30\tau \implies \tau = \frac{D}{30}$$
+                Total time for the second half is $t_2 = 2\tau = \dfrac{2D}{30} = \dfrac{D}{15}$ (equivalent to an
+                average speed of $\frac{10+20}{2} = 15\text{ m/s}$ over the second half).</li>
+        </ul>
+        <p>Total average speed over the full trip:</p>
+        $$v_{\text{avg}} = \frac{2D}{t_1 + t_2} = \frac{2D}{\frac{D}{30} + \frac{D}{15}} = \frac{2}{\frac{1 + 2}{30}} =
+        \frac{2 \times 30}{3} = \mathbf{20\text{ m/s}}$$
+        <p><em>Shortcut check:</em> $v_{\text{avg}} = \dfrac{2v_0(v_1+v_2)}{2v_0 + v_1 + v_2} = \dfrac{2(30)(30)}{60 +
+            30} = \dfrac{1800}{90} = 20\text{ m/s}$. Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S11 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q11</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p>Given $u = +16\text{ m/s}$ and $a = -5\text{ m/s}^2$, first test whether the particle reverses direction
+            during the 4th second ($t \in [3, 4]\text{ s}$):</p>
+        $$v(t_0) = u + at_0 = 0 \implies 16 - 5t_0 = 0 \implies t_0 = 3.2\text{ s}$$
+        <p>Because $3\text{ s} &lt; 3.2\text{ s} &lt; 4\text{ s}$, the particle reverses strictly inside the 4th second!
+            (Warning: $s_4 = 16 - \frac{5}{2}(7) = -1.50\text{ m}$ gives net displacement, NOT distance—distractor B is
+            a deliberate trap!)</p>
+        <p>Split the 4th second at $t_0 = 3.2\text{ s}$ where $v = 0$:</p>
+        <ul>
+            <li><strong>Forward leg ($t = 3\text{ s}$ to $3.2\text{ s}$, duration $\Delta t_1 = 0.2\text{ s}$):</strong>
+                By time-reversal symmetry from $v = 0$,
+                $$d_1 = \frac{1}{2}|a|(\Delta t_1)^2 = \frac{1}{2}(5)(0.2)^2 = 2.5(0.04) = 0.10\text{ m}$$
+            </li>
+            <li><strong>Backward leg ($t = 3.2\text{ s}$ to $4\text{ s}$, duration $\Delta t_2 = 0.8\text{
+                    s}$):</strong>
+                $$d_2 = \frac{1}{2}|a|(\Delta t_2)^2 = \frac{1}{2}(5)(0.8)^2 = 2.5(0.64) = 1.60\text{ m}$$
+            </li>
+        </ul>
+        <p>Total distance travelled in the 4th second:</p>
+        $$d_{\text{4th sec}} = d_1 + d_2 = 0.10 + 1.60 = \mathbf{1.70\text{ m}}$$
+        <p><em>Coordinate check:</em> Using $x(t) = 16t - 2.5t^2$, we get $x(3) = 25.5\text{ m}$, $x(3.2) = 25.6\text{
+            m}$, $x(4) = 24.0\text{ m}$, so $|25.6 - 25.5| + |24.0 - 25.6| = 0.1 + 1.6 = 1.70\text{ m}$. Hence
+            <strong>(C)</strong> is correct.
+        </p>
+    </div>
+
+    <!-- S12 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q12</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (D)</span>
+        </div>
+        <ul>
+            <li><strong>Evaluating Statement I:</strong> Speed increases whenever velocity and acceleration share the
+                same sign ($va &gt; 0$), and decreases only when they oppose each other ($va &lt; 0$). If a particle is
+                moving in the $-x$-direction ($v &lt; 0$) with $a &lt; 0$ (for example, a falling stone with upward
+                $+y$), its speed is <em>increasing</em>. Therefore, <strong>Statement I is false</strong>.</li>
+            <li><strong>Evaluating Statement II:</strong> By definition, $a = \dfrac{dv}{dt} \implies \int_{t_1}^{t_2}
+                a\,dt = v(t_2) - v(t_1) = \Delta v$. Thus $v(t_2) = v(t_1) + \text{Area}$, which equals the area only in
+                the special case $v(t_1) = 0$. Therefore, <strong>Statement II is true</strong>.</li>
+        </ul>
+        <p>Hence <strong>(D)</strong> is correct.</p>
+    </div>
+
+    <!-- S13 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q13</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p><strong>Stage 1 &mdash; Balloon Ascent ($t = 0\text{ s}$ to $t = 10\text{ s}$, $a_{\text{balloon}} = +2\text{
+                m/s}^2$):</strong></p>
+        <ul>
+            <li>Height of balloon at release ($t = 10\text{ s}$):
+                $$h_0 = u_0 t + \frac{1}{2}a_{\text{balloon}}t^2 = 0 + \frac{1}{2}(2)(10)^2 = 100\text{ m}$$
+            </li>
+            <li>Upward velocity of balloon at release:
+                $$v_0 = 0 + (2)(10) = +20\text{ m/s}$$
+            </li>
+        </ul>
+        <p><strong>Stage 2 &mdash; Free Fall of Released Stone:</strong> At release, the stone <em>inherits</em> the
+            upward velocity $u_{\text{stone}} = +20\text{ m/s}$, while its acceleration immediately switches to gravity
+            ($a = -g = -10\text{ m/s}^2$). Additional vertical climb above the release point until $v = 0$:</p>
+        $$\Delta h = \frac{u_{\text{stone}}^2}{2g} = \frac{20^2}{2(10)} = \frac{400}{20} = 20\text{ m}$$
+        <p>Total maximum height above the ground:</p>
+        $$H_{\max} = h_0 + \Delta h = 100\text{ m} + 20\text{ m} = \mathbf{120\text{ m}}$$
+        <p>Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S14 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q14</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p>Convert both train speeds to $\text{m/s}$:</p>
+        $$v_A = 72 \times \frac{5}{18} = 20\text{ m/s}, \qquad v_B = 36 \times \frac{5}{18} = 10\text{ m/s}$$
+        <p>For complete crossing or overtaking, the required relative displacement equals the sum of both lengths:</p>
+        $$s_{\text{rel}} = L_A + L_B = 120\text{ m} + 180\text{ m} = 300\text{ m}$$
+        <ul>
+            <li><strong>Opposite Directions:</strong> $v_{\text{rel, opp}} = v_A + v_B = 20 + 10 = 30\text{ m/s}$,
+                giving:
+                $$t_1 = \frac{300}{30} = \mathbf{10\text{ s}}$$
+            </li>
+            <li><strong>Same Direction:</strong> $v_{\text{rel, same}} = v_A - v_B = 20 - 10 = 10\text{ m/s}$, giving:
+                $$t_2 = \frac{300}{10} = \mathbf{30\text{ s}}$$
+            </li>
+        </ul>
+        <p>Thus $(t_1, t_2) = (10\text{ s}, 30\text{ s})$, making <strong>(A)</strong> correct.</p>
+    </div>
+
+    <!-- S15 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q15</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p>The acceleration $a(t)$ is the exact slope $\dfrac{dv}{dt}$ of each linear segment in the given $v\text{-}t$
+            graph:</p>
+        <ol>
+            <li><strong>Interval $t \in [0, 2]\text{ s}$:</strong> Line rises from $(0, 0)$ to $(2, +8)$:
+                $$a_1 = \frac{8 - 0}{2 - 0} = \mathbf{+4\text{ m/s}^2} \text{ (constant horizontal step)}$$
+            </li>
+            <li><strong>Interval $t \in [2, 5]\text{ s}$:</strong> Horizontal plateau at $v = +8\text{ m/s}$:
+                $$a_2 = \frac{8 - 8}{5 - 2} = \mathbf{0\text{ m/s}^2}$$
+            </li>
+            <li><strong>Interval $t \in [5, 7]\text{ s}$:</strong> One unbroken straight line descending from $(5, +8)$
+                through $(6, 0)$ to $(7, -8)$:
+                $$a_3 = \frac{-8 - 8}{7 - 5} = \frac{-16}{2} = \mathbf{-8\text{ m/s}^2} \text{ (constant across } t =
+                6\text{ s!)}$$
+            </li>
+        </ol>
+        <p><em>Distractor Audit:</em> Option (B) mistakenly plots $v = +8$ instead of slope $0$ on $[2,5]$; Option (C)
+            falls into the classic trap of flipping acceleration to $+8$ after $t = 6\text{ s}$ just because speed
+            starts increasing; Option (D) draws slanted ramps instead of constant steps. Only <strong>Graph (A)</strong>
+            matches all three constant slopes. Hence <strong>(A)</strong> is correct.</p>
+    </div>
+
+    <!-- S16 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q16</span>
+            <span class="badge badge-l2">Level 2 &bull; Passage 1</span>
+            <span class="badge badge-type">Correct Answer: (A)</span>
+        </div>
+        <p>From the trapezoidal $v\text{-}t$ graph, $v_{\max} = 24\text{ m/s}$, acceleration duration $t_1 = 12 - 0 =
+            12\text{ s}$, cruise duration $t_2 = 42 - 12 = 30\text{ s}$, and retardation duration $t_3 = 50 - 42 =
+            8\text{ s}$.</p>
+        $$\alpha = \frac{v_{\max} - 0}{t_1} = \frac{24}{12} = \mathbf{2\text{ m/s}^2}, \qquad \beta = \left|\frac{0 -
+        v_{\max}}{t_3}\right| = \frac{24}{8} = \mathbf{3\text{ m/s}^2}$$
+        <p>Hence <strong>(A)</strong> is correct.</p>
+    </div>
+
+    <!-- S17 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q17</span>
+            <span class="badge badge-l2">Level 2 &bull; Passage 1</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p>Total distance $S$ equals the area of the $v\text{-}t$ trapezoid with parallel horizontal bases $T = 50\text{
+            s}$ and $t_2 = 30\text{ s}$ and height $v_{\max} = 24\text{ m/s}$:</p>
+        $$S = \frac{1}{2}(T + t_2)v_{\max} = \frac{1}{2}(50 + 30)(24) = 40 \times 24 = \mathbf{960\text{ m}}$$
+        <p><em>Phase-by-phase check:</em> $S_1 = \frac{1}{2}(12)(24) = 144\text{ m}$, $S_2 = (30)(24) = 720\text{ m}$,
+            $S_3 = \frac{1}{2}(8)(24) = 96\text{ m}$; sum $= 144 + 720 + 96 = 960\text{ m}$.</p>
+        <p>Average speed over the $50\text{ s}$ journey:</p>
+        $$v_{\text{avg}} = \frac{S}{T} = \frac{960}{50} = \mathbf{19.2\text{ m/s}}$$
+        <p>Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S18 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q18</span>
+            <span class="badge badge-l2">Level 2 &bull; Passage 1</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p>Removing the speed cap eliminates cruising ($t_2 = 0$), collapsing the $v\text{-}t$ profile into a triangle
+            of area $S = 960\text{ m}$ with slopes $+\alpha = +2\text{ m/s}^2$ and $-\beta = -3\text{ m/s}^2$. Using the
+            triangular profile identity derived in Part 1:</p>
+        $$S = \frac{1}{2}\left(\frac{\alpha\beta}{\alpha + \beta}\right)T_{\min}^2$$
+        <p>Substitute $S = 960$, $\alpha = 2$, and $\beta = 3$:</p>
+        $$960 = \frac{1}{2}\left(\frac{2 \times 3}{2 + 3}\right)T_{\min}^2 = \frac{3}{5}T_{\min}^2 \implies T_{\min}^2 =
+        \frac{960 \times 5}{3} = 1600 \implies T_{\min} = \mathbf{40\text{ s}}$$
+        <p><em>Verification:</em> Peak speed reached is $v_p = \frac{6}{5}(40) = 48\text{ m/s}$, giving $t_1 = 24\text{
+            s}$, $t_3 = 16\text{ s}$, $T = 40\text{ s}$, and area $\frac{1}{2}(40)(48) = 960\text{ m}$. Hence
+            <strong>(C)</strong> is correct.
+        </p>
+    </div>
+
+    <!-- S19 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q19</span>
+            <span class="badge badge-l2">Level 2 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 14</span>
+        </div>
+        <p>Work in the reference frame of the bus (forward $+x$): initial separation $d = 50\text{ m}$, passenger's
+            relative velocity $u_{\text{rel}} = +12\text{ m/s}$, and relative acceleration $a_{\text{rel}} = 0 - 2 =
+            -2\text{ m/s}^2$.</p>
+        <p>First check whether the passenger can catch the bus: $u_{\min} = \sqrt{2ad} = \sqrt{2(2)(50)} = \sqrt{200}
+            \approx 14.14\text{ m/s}$. Since $12\text{ m/s} &lt; 14.14\text{ m/s}$, the passenger cannot catch the bus.
+        </p>
+        <p>Minimum separation occurs at the instant $v_{\text{rel}} = 0$ (when the bus matches the passenger's speed of
+            $12\text{ m/s}$, at $t = 12/2 = 6\text{ s}$). Maximum relative distance closed:</p>
+        $$0^2 - 12^2 = 2(-2)s_{\text{rel, max}} \implies s_{\text{rel, max}} = \frac{144}{4} = 36\text{ m}$$
+        <p>Minimum distance between passenger and bus:</p>
+        $$d_{\min} = d - s_{\text{rel, max}} = 50 - 36 = \mathbf{14\text{ m}}$$
+        <p><em>Ground-frame check at $t = 6\text{ s}$:</em> Passenger position $= 12(6) = 72\text{ m}$; Bus position $=
+            50 + \frac{1}{2}(2)(6)^2 = 50 + 36 = 86\text{ m}$; gap $= 86 - 72 = 14\text{ m}$. The exact NAT integer is
+            <strong>14</strong>.
+        </p>
+    </div>
+
+    <!-- S20 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q20</span>
+            <span class="badge badge-l2">Level 2 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 195</span>
+        </div>
+        <p>Total stopping distance follows $S(u) = u t_r + k u^2$, where $k = \dfrac{1}{2a_r}$ is a constant.</p>
+        <p>Substitute the two given operating conditions:</p>
+        <ul>
+            <li>At $u = 10\text{ m/s}$: $\; 10 t_r + 100k = 25 \quad \text{--- (Eq. 1)}$</li>
+            <li>At $u = 20\text{ m/s}$: $\; 20 t_r + 400k = 90 \quad \text{--- (Eq. 2)}$</li>
+        </ul>
+        <p>Multiply (Eq. 1) by $2$: $\; 20 t_r + 200k = 50$, and subtract from (Eq. 2):</p>
+        $$200k = 40 \implies k = \frac{40}{200} = 0.2\text{ s}^2/\text{m} \quad (\text{i.e., } a_r = 2.5\text{ m/s}^2)$$
+        <p>Substitute $k = 0.2$ back into (Eq. 1):</p>
+        $$10 t_r + 100(0.2) = 25 \implies 10 t_r = 5 \implies t_r = 0.5\text{ s}$$
+        <p>Now compute total stopping distance at $u = 30\text{ m/s}$:</p>
+        $$S(30) = 30(0.5) + (0.2)(30)^2 = 15 + 0.2(900) = 15 + 180 = \mathbf{195\text{ m}}$$
+        <p>The exact NAT integer is <strong>195</strong>.</p>
+    </div>
+
+    <!-- S21 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q21</span>
+            <span class="badge badge-l2">Level 2 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 16</span>
+        </div>
+        <p>The signed area under the $a\text{-}t$ graph equals the <strong>change in velocity</strong> $\Delta v = v(12)
+            - v(0)$:</p>
+        <ul>
+            <li><strong>Positive Trapezoid ($t = 0\text{ s}$ to $t = 6\text{ s}$):</strong> Bottom base $= 6\text{ s}$,
+                top parallel side $= 4\text{ s}$, height $= +5\text{ m/s}^2$:
+                $$A_+ = \frac{1}{2}(6 + 4)(5) = +25\text{ m/s}$$
+            </li>
+            <li><strong>Negative Triangle ($t = 6\text{ s}$ to $t = 12\text{ s}$):</strong> Base $= 12 - 6 = 6\text{
+                s}$, depth $= -5\text{ m/s}^2$:
+                $$A_- = \frac{1}{2}(6)(-5) = -15\text{ m/s}$$
+            </li>
+        </ul>
+        <p>Net velocity change over $[0, 12]\text{ s}$:</p>
+        $$\Delta v = A_+ + A_- = 25 - 15 = +10\text{ m/s}$$
+        <p>Do <strong>not</strong> forget to add the initial velocity $u = +6\text{ m/s}$:</p>
+        $$v(12) = u + \Delta v = 6 + 10 = \mathbf{16\text{ m/s}}$$
+        <p>The exact NAT integer is <strong>16</strong>.</p>
+    </div>
+
+    <!-- ==================== LEVEL 3 SOLUTIONS ==================== -->
+    <div class="level-banner l3">Level 3 Solutions &mdash; Rank-Booster &amp; Olympiad / Calculus Bridge (Q22&ndash;Q30)
+    </div>
+
+    <!-- S22 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q22</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <ul>
+            <li><strong>Evaluating Statement I:</strong> Under constant acceleration from $u$ to $v$ ($u \neq v$), we
+                derived in Part 1 that $v_{\text{mid-point}} = \sqrt{\frac{u^2+v^2}{2}}$ and $v_{\text{mid-time}} =
+                \frac{u+v}{2}$. Subtract their squares:
+                $$v_{\text{mid-point}}^2 - v_{\text{mid-time}}^2 = \frac{u^2 + v^2}{2} - \frac{u^2 + 2uv + v^2}{4} =
+                \frac{(v - u)^2}{4} &gt; 0$$
+                Because $u \neq v$, $v_{\text{mid-point}} &gt; v_{\text{mid-time}}$ strictly. Thus <strong>Statement I
+                    is true</strong>.</li>
+            <li><strong>Evaluating Statement II:</strong> Connect the endpoints $(t_1, v(t_1))$ and $(t_2, v(t_2))$ with
+                a straight secant chord. The area beneath that straight chord equals the trapezoid area $\frac{v(t_1) +
+                v(t_2)}{2}(t_2 - t_1)$. If the $v\text{-}t$ curve is <strong>strictly concave upward ($\cup$)</strong>,
+                the entire curve sags strictly <em>below</em> its secant chord! Therefore, its true area $\Delta x =
+                \int_{t_1}^{t_2} v(t)\,dt$ is strictly <em>smaller</em> than the trapezoid area, yielding:
+                $$v_{\text{avg}} = \frac{\Delta x}{t_2 - t_1} &lt; \frac{v(t_1) + v(t_2)}{2}$$
+                (For example, $v(t) = t^2$ on $[0, 1]$ has $v_{\text{avg}} = \frac{1}{3} &lt; \frac{0+1}{2} =
+                \frac{1}{2}$.) Statement II claims "strictly greater", so <strong>Statement II is false</strong>.</li>
+        </ul>
+        <p>Hence <strong>(C)</strong> is correct.</p>
+    </div>
+
+    <!-- S23 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q23</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p>Given $t = 4x^2 + x$, differentiate both sides with respect to $x$:</p>
+        $$\frac{dt}{dx} = 8x + 1$$
+        <p>Since $v = \dfrac{dx}{dt}$, rewrite this as:</p>
+        $$v^{-1} = \frac{1}{v} = 8x + 1$$
+        <p>Now differentiate both sides with respect to time $t$ using the Chain Rule ($\frac{d}{dt}(v^{-1}) =
+            -v^{-2}\frac{dv}{dt}$):</p>
+        $$-\frac{1}{v^2}\frac{dv}{dt} = 8\frac{dx}{dt} + 0$$
+        <p>Substitute $a = \dfrac{dv}{dt}$ and $v = \dfrac{dx}{dt}$:</p>
+        $$-\frac{a}{v^2} = 8v \implies a = -8v^3$$
+        <p>Evaluate at $v = 0.5\text{ m/s} = \dfrac{1}{2}\text{ m/s}$:</p>
+        $$a = -8\left(\frac{1}{2}\right)^3 = -8\left(\frac{1}{8}\right) = \mathbf{-1.0\text{ m/s}^2}$$
+        <p><em>Bridge Shortcut Check:</em> Comparing with $t = \alpha x^2 + \beta x$ gives $\alpha = 4$, so $a =
+            -2\alpha v^3 = -8(0.5)^3 = -1.0\text{ m/s}^2$. Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S24 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q24</span>
+            <span class="badge badge-l3">Level 3 &bull; Passage 2</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p>From the straight line passing through $(0, +8)$ and $(8, 0)$, the acceleration function is:</p>
+        $$a(x) = 8 - x$$
+        <p>Velocity increases as long as $a(x) &gt; 0$ (i.e., $0 \le x &lt; 8\text{ m}$) and decreases once $a(x) &lt;
+            0$ ($x &gt; 8\text{ m}$). Hence maximum velocity occurs strictly at $a = 0 \implies \mathbf{x = 8\text{
+            m}}$.</p>
+        <p>Apply $v\dfrac{dv}{dx} = a(x) \implies \dfrac{v^2 - u^2}{2} = \displaystyle\int_0^x a(x')\,dx'$ from $x = 0$
+            ($u = 6\text{ m/s}$) to $x = 8\text{ m}$:</p>
+        $$\frac{v_{\max}^2 - 6^2}{2} = \int_0^8 (8 - x)\,dx = \left[8x - \frac{x^2}{2}\right]_0^8 = 64 - 32 = 32\text{
+        m}^2/\text{s}^2$$
+        <p><em>Geometric Area Check:</em> The positive triangle on $[0, 8]$ has area $\frac{1}{2}(8)(8) = 32\text{
+            m}^2/\text{s}^2$.</p>
+        $$v_{\max}^2 = 36 + 2(32) = 36 + 64 = 100 \implies v_{\max} = \mathbf{10\text{ m/s}} \text{ at } x = 8\text{
+        m}$$
+        <p>Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S25 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q25</span>
+            <span class="badge badge-l3">Level 3 &bull; Passage 2</span>
+            <span class="badge badge-type">Correct Answer: (C)</span>
+        </div>
+        <p>Integrating $v\,dv = (8 - x)\,dx$ from $(0, 6)$ to $(x, v)$ yields the general $v^2(x)$ law:</p>
+        $$\frac{v^2 - 36}{2} = 8x - \frac{x^2}{2} \implies v^2 = 36 + 16x - x^2$$
+        <p>At the maximum positive coordinate $x_{\max}$ (turning point), $v = 0$:</p>
+        $$36 + 16x - x^2 = 0 \implies x^2 - 16x - 36 = 0 \implies (x - 18)(x + 2) = 0$$
+        <p>Since the particle moves along $+x$ from $x = 0$, it first comes to momentary rest at $\mathbf{x_{\max} =
+            18\text{ m}}$.</p>
+        <p><em>Area-Balance Shortcut:</em> Starting from $x = 8\text{ m}$ where $v_{\max} = 10\text{ m/s}$, stopping
+            requires a negative $a\text{-}x$ triangle area equal to $-\frac{v_{\max}^2}{2} = -50$. With slope $-1$, a
+            triangle of base $b$ and depth $b$ has area $\frac{1}{2}b^2 = 50 \implies b = 10\text{ m} \implies x_{\max}
+            = 8 + 10 = 18\text{ m}$. Hence <strong>(C)</strong> is correct.</p>
+    </div>
+
+    <!-- S26 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q26</span>
+            <span class="badge badge-l3">Level 3 &bull; Passage 2</span>
+            <span class="badge badge-type">Correct Answer: (B)</span>
+        </div>
+        <p>Recall the chain-rule identity $a = v\dfrac{dv}{dx}$, so the slope of the $v\text{-}x$ graph is strictly
+            $\dfrac{dv}{dx} = \dfrac{a}{v}$ (NOT $a$!).</p>
+        <ul>
+            <li><strong>Acceleration at $x = 14\text{ m}$:</strong> $a(14) = 8 - 14 = -6\text{ m/s}^2$.</li>
+            <li><strong>Velocity at $x = 14\text{ m}$ (outward leg, $v &gt; 0$):</strong> From $v^2 = 36 + 16x - x^2$:
+                $$v^2(14) = 36 + 16(14) - 14^2 = 36 + 224 - 196 = 64 \implies v(14) = +8\text{ m/s}$$
+            </li>
+        </ul>
+        <p>Divide $a$ by $v$:</p>
+        $$\left.\frac{dv}{dx}\right|_{x=14} = \frac{a(14)}{v(14)} = \frac{-6\text{ m/s}^2}{+8\text{ m/s}} =
+        \mathbf{-0.75\text{ s}^{-1}}$$
+        <p>Hence <strong>(B)</strong> is correct.</p>
+    </div>
+
+    <!-- S27 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q27</span>
+            <span class="badge badge-l3">Level 3 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 40</span>
+        </div>
+        <p>Choose upward as $+y$ and the base of the cliff as $y = 0$, with $g = 10\text{ m/s}^2$.</p>
+        <ul>
+            <li><strong>Stone A (cliff top, $y_{A0} = 160\text{ m}$, $u_A = -10\text{ m/s}$):</strong> $y_A(t) = 160 -
+                10t - 5t^2$.</li>
+            <li><strong>Stone B (cliff base, $y_{B0} = 0$, $u_B = +30\text{ m/s}$):</strong> $y_B(t) = 30t - 5t^2$.</li>
+        </ul>
+        <p><strong>Step 1 &mdash; Meeting instant (Zero Relative-Acceleration Shortcut):</strong> Since $a_{BA} = (-g) -
+            (-g) = 0$, the relative speed of approach is constant at $v_{\text{approach}} = 30 - (-10) = 40\text{ m/s}$.
+            Setting $y_A(t) = y_B(t)$ cancels $-5t^2$ immediately:</p>
+        $$160 - 10t = 30t \implies 40t = 160 \implies t = 4\text{ s}$$
+        <p><strong>Step 2 &mdash; Mid-air validity check:</strong> Stone B's total flight time is $T_B =
+            \frac{2(30)}{10} = 6\text{ s} &gt; 4\text{ s}$, and Stone A reaches the ground when $5t^2 + 10t - 160 = 0
+            \implies t = -1 + \sqrt{33} \approx 4.74\text{ s} &gt; 4\text{ s}$. Both stones are indeed in mid-air at $t
+            = 4\text{ s}$.</p>
+        <p><strong>Step 3 &mdash; Collision height above the base:</strong></p>
+        $$y = y_B(4) = 30(4) - 5(4)^2 = 120 - 80 = \mathbf{40\text{ m}}$$
+        <p><em>Cross-check via Stone A:</em> $y_A(4) = 160 - 10(4) - 5(16) = 160 - 40 - 80 = 40\text{ m}$. The exact NAT
+            integer is <strong>40</strong>.</p>
+    </div>
+
+    <!-- S28 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q28</span>
+            <span class="badge badge-l3">Level 3 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 125</span>
+        </div>
+        <p>Let total fall time from rest be $T$ (with downward $+y$, $u = 0$, $g = 10\text{ m/s}^2$). Total height is $H
+            = \frac{1}{2}gT^2$.</p>
+        <p>Because the stone covers $\dfrac{9}{25}H$ during the <strong>last $1\text{ s}$</strong> (from $t = T - 1$ to
+            $t = T$), it must have covered the remaining fraction $1 - \dfrac{9}{25} = \dfrac{16}{25}H$ during the first
+            $(T - 1)$ seconds:</p>
+        $$y(T - 1) = \frac{1}{2}g(T - 1)^2 = \frac{16}{25}H = \frac{16}{25}\left(\frac{1}{2}gT^2\right)$$
+        <p>Cancel $\frac{1}{2}g$ and take the positive square root (since $T &gt; 1$):</p>
+        $$\left(\frac{T - 1}{T}\right)^2 = \frac{16}{25} \implies \frac{T - 1}{T} = \frac{4}{5} \implies 5T - 5 = 4T
+        \implies T = 5\text{ s}$$
+        <p>Calculate total tower height:</p>
+        $$H = \frac{1}{2}(10)(5)^2 = 5 \times 25 = \mathbf{125\text{ m}}$$
+        <p><em>Verification:</em> Distance in first $4\text{ s} = 5(4)^2 = 80\text{ m}$; distance in 5th second $= 125 -
+            80 = 45\text{ m}$; fraction $= \frac{45}{125} = \frac{9}{25}$. Exact! The NAT integer is
+            <strong>125</strong>.
+        </p>
+    </div>
+
+    <!-- S29 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q29</span>
+            <span class="badge badge-l3">Level 3 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 12</span>
+        </div>
+        <p>Acceleration $a(t) = 6t - 12$ is time-varying, so constant-acceleration UAM equations are invalid. Integrate
+            step by step from first principles:</p>
+        <p><strong>Step 1 &mdash; Velocity $v(t)$ via integration from $v(0) = +9\text{ m/s}$:</strong></p>
+        $$v(t) - 9 = \int_0^t (6t' - 12)\,dt' = \left[3t'^2 - 12t'\right]_0^t = 3t^2 - 12t$$
+        $$v(t) = 3t^2 - 12t + 9 = 3(t^2 - 4t + 3) = 3(t - 1)(t - 3)$$
+        <p><strong>Step 2 &mdash; Locate ALL turning instants inside $(0, 4)\text{ s}$:</strong> Setting $v(t) = 0$
+            reveals <strong>two</strong> velocity reversals: $t_1 = 1\text{ s}$ and $t_2 = 3\text{ s}$, both strictly
+            inside $(0, 4)\text{ s}$! (Sign of $v$: positive on $[0,1)$, negative on $(1,3)$, positive on $(3,4]$.)</p>
+        <p><strong>Step 3 &mdash; Position $x(t)$ via integration from $x(0) = 0$:</strong></p>
+        $$x(t) = \int_0^t (3t'^2 - 12t' + 9)\,dt' = \left[t'^3 - 6t'^2 + 9t'\right]_0^t = t^3 - 6t^2 + 9t$$
+        <p><strong>Step 4 &mdash; Evaluate $x(t)$ at boundaries and both turning points:</strong></p>
+        <ul>
+            <li>$x(0) = 0\text{ m}$</li>
+            <li>$x(1) = 1^3 - 6(1)^2 + 9(1) = +4\text{ m}$</li>
+            <li>$x(3) = 3^3 - 6(3)^2 + 9(3) = 27 - 54 + 27 = 0\text{ m}$</li>
+            <li>$x(4) = 4^3 - 6(4)^2 + 9(4) = 64 - 96 + 36 = +4\text{ m}$</li>
+        </ul>
+        <p><strong>Step 5 &mdash; Sum the three segment lengths:</strong></p>
+        $$d = |x(1) - x(0)| + |x(3) - x(1)| + |x(4) - x(3)| = |4 - 0| + |0 - 4| + |4 - 0| = 4 + 4 + 4 = \mathbf{12\text{
+        m}}$$
+        <p>The exact NAT integer is <strong>12</strong>.</p>
+    </div>
+
+    <!-- S30 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q30</span>
+            <span class="badge badge-l3">Level 3 &bull; NAT</span>
+            <span class="badge badge-type">Verified Answer: 21</span>
+        </div>
+        <p>Recall from $v^2 = u^2 + 2ax$ that any straight-line segment on a $v^2\text{-}x$ graph represents
+            <strong>uniform acceleration</strong> with $a = \dfrac{1}{2}\left(\text{slope of } v^2\text{-}x\right)$.
+            Since the particle moves strictly along $+x$ ($v \ge 0$), take positive square roots for velocities at the
+            vertices:
+        </p>
+        <ul>
+            <li>At $x = 0\text{ m}$: $v_0 = \sqrt{36} = 6\text{ m/s}$.</li>
+            <li>At $x = 36\text{ m}$: $v_1 = \sqrt{324} = 18\text{ m/s}$.</li>
+            <li>At $x = 198\text{ m}$: $v_2 = \sqrt{0} = 0\text{ m/s}$.</li>
+        </ul>
+        <p><strong>Segment 1 ($x = 0\text{ m}$ to $36\text{ m}$, $\Delta x_1 = 36\text{ m}$):</strong></p>
+        $$a_1 = \frac{1}{2}\left(\frac{324 - 36}{36 - 0}\right) = \frac{1}{2}\left(\frac{288}{36}\right) = +4\text{
+        m/s}^2 \implies t_1 = \frac{v_1 - v_0}{a_1} = \frac{18 - 6}{4} = 3\text{ s}$$
+        <p><em>Alternative check via average velocity:</em> $t_1 = \dfrac{\Delta x_1}{(v_0 + v_1)/2} = \dfrac{36}{(6 +
+            18)/2} = \dfrac{36}{12} = 3\text{ s}$.</p>
+        <p><strong>Segment 2 ($x = 36\text{ m}$ to $198\text{ m}$, $\Delta x_2 = 162\text{ m}$):</strong></p>
+        $$a_2 = \frac{1}{2}\left(\frac{0 - 324}{198 - 36}\right) = \frac{1}{2}\left(\frac{-324}{162}\right) = -1\text{
+        m/s}^2 \implies t_2 = \frac{v_2 - v_1}{a_2} = \frac{0 - 18}{-1} = 18\text{ s}$$
+        <p><em>Alternative check via average velocity:</em> $t_2 = \dfrac{\Delta x_2}{(v_1 + v_2)/2} = \dfrac{162}{(18 +
+            0)/2} = \dfrac{162}{9} = 18\text{ s}$.</p>
+        <p><strong>Total Travel Time:</strong></p>
+        $$T = t_1 + t_2 = 3\text{ s} + 18\text{ s} = \mathbf{21\text{ s}}$$
+        <p>The exact NAT integer is <strong>21</strong>.</p>
+    </div>
+
+    <!-- ==================== TRAP & ERROR FORENSICS ==================== -->
+    <h2 class="section-heading">Trap &amp; Error Forensics &mdash; Chapter 17 Post-Mortem</h2>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 1 &mdash; Confusing Displacement with Total Distance After a Velocity
+            Reversal ($v = 0$)</span>
+        <p><strong>Where It Strikes:</strong> Q07, Q09, Q11, and Q29.</p>
+        <p><strong>The Fatal Mistake:</strong> Plugging endpoints directly into $x(t_2) - x(t_1)$, using $s_n = u +
+            \frac{a}{2}(2n-1)$ blindly when $u$ and $a$ have opposite signs, or adding signed areas $A_1 + A_2$ on a
+            $v\text{-}t$ graph when the question specifically asks for <strong>distance</strong> (or average speed). In
+            Q29, $x(4) - x(0)$ gives only $4\text{ m}$, missing the double turnaround at $t = 1\text{ s}$ and $t =
+            3\text{ s}$ that triples the true path length to $12\text{ m}$; in Q11, $s_4 = -1.50\text{ m}$ is planted
+            directly as Option (B) to trap anyone who skips checking $t_0 = 3.2\text{ s}$.</p>
+        <p><strong>Bulletproof Protocol:</strong> Before answering ANY distance or average-speed question, run a
+            3-second <em>Zero-Velocity Audit</em>: solve $v(t) = 0$. Every root lying strictly inside $(t_1, t_2)$
+            forces you to split the trajectory and sum absolute segment lengths.</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 2 &mdash; Blindly Applying Constant-Acceleration Equations to Variable
+            $a(t)$ or $a(x)$</span>
+        <p><strong>Where It Strikes:</strong> Q23, Q24&ndash;Q26, and Q29.</p>
+        <p><strong>The Fatal Mistake:</strong> Computing an instantaneous acceleration value—such as $a(4) = 6(4) - 12 =
+            12\text{ m/s}^2$ in Q29 or $a(0) = 8\text{ m/s}^2$ in Q24—and plugging it into $s = ut + \frac{1}{2}at^2$ or
+            $v^2 = u^2 + 2ax$. Those equations are algebraic consequences of <em>constant</em> $a$ and fail completely
+            the moment $a$ depends on $t$, $x$, or $v$.</p>
+        <p><strong>Bulletproof Protocol:</strong> Scan the acceleration expression first. If $a$ is a function of $t$,
+            integrate $\Delta v = \int a(t)\,dt$ and $\Delta x = \int v(t)\,dt$. If $a$ is a function of $x$,
+            immediately switch to $\frac{v^2 - u^2}{2} = \int a(x)\,dx$ (or the signed area under the $a\text{-}x$
+            curve). Reserve UAM equations strictly for verified constant-$a$ segments (such as each individual straight
+            line of a $v^2\text{-}x$ graph in Q30).</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 3 &mdash; Forgetting Initial Platform Velocity When an Object Is
+            "Dropped"</span>
+        <p><strong>Where It Strikes:</strong> Q13 (and all rising/descending balloon, helicopter, and elevator
+            problems).</p>
+        <p><strong>The Fatal Mistake:</strong> Reading the words "gently released" or "dropped" and reflexively setting
+            $u = 0$ in the ground frame—yielding $H_{\max} = 100\text{ m}$ (distractor A in Q13) instead of $120\text{
+            m}$. A second twin error is keeping the balloon's upward acceleration $a_{\text{balloon}} = +2\text{ m/s}^2$
+            attached to the stone after release.</p>
+        <p><strong>Bulletproof Protocol:</strong> Memorize the <strong>Split-Inheritance Law</strong>: at the exact
+            instant of release, the object <em>inherits 100% of the platform's instantaneous velocity</em>
+            ($u_{\text{object}} = v_{\text{platform}}$), but <em>inherits 0% of the platform's acceleration</em>—its
+            acceleration snaps instantaneously to $-g$.</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 4 &mdash; Misreading the Slope of a $v\text{-}x$ Graph as $a$ Instead of
+            $a/v$</span>
+        <p><strong>Where It Strikes:</strong> Q26 and non-standard Olympiad phase-space graphs ($v\text{-}x$ and
+            $v^2\text{-}x$).</p>
+        <p><strong>The Fatal Mistake:</strong> Habitually equating "slope of a velocity graph" with acceleration $a$.
+            That rule holds <em>only</em> when the horizontal axis is time $t$ ($\frac{dv}{dt} = a$). When the
+            horizontal axis is position $x$, the slope is $\frac{dv}{dx}$, which has units of $\text{s}^{-1}$—NOT
+            $\text{m/s}^2$!</p>
+        <p><strong>Bulletproof Protocol:</strong> Always check the horizontal axis label before differentiating or
+            integrating! Use the Chain Rule $a = v\left(\dfrac{dv}{dx}\right) \implies \text{slope}_{v\text{-}x} =
+            \dfrac{a}{v}$. Likewise, on a $v^2\text{-}x$ graph (Q30), remember the factor of $2$:
+            $\text{slope}_{v^2\text{-}x} = \dfrac{d(v^2)}{dx} = 2a \implies a = \dfrac{\text{slope}}{2}$.</p>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 5 &mdash; Treating $a\text{-}t$ Area as Final Velocity &amp; Equating $a
+            &lt; 0$ with Slowing Down</span>
+        <p><strong>Where It Strikes:</strong> Q12, Q15, Q21, and Q22.</p>
+        <p><strong>The Fatal Mistake:</strong> (1) In Q21, reporting the net $a\text{-}t$ area ($+10\text{ m/s}$) as the
+            final velocity while ignoring the initial velocity $u = +6\text{ m/s}$ (missing the true answer $16\text{
+            m/s}$). (2) In Q15, flipping the acceleration sign at $t = 6\text{ s}$ when the $v\text{-}t$ line crosses
+            below the time axis, falsely believing that "speeding up" requires positive acceleration.</p>
+        <p><strong>Bulletproof Protocol:</strong> Lock in two non-negotiable equations: (i) $v_f = v_i + \text{Signed
+            Area}(a\text{-}t)$—always add $v_i$ explicitly; and (ii) speeding up vs. slowing down depends on the
+            <em>product</em> $v \cdot a$, never on the sign of $a$ alone ($va &gt; 0 \implies$ speeding up; $va &lt; 0
+            \implies$ slowing down).
+        </p>
+    </div>
+
+</article>
