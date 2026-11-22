@@ -1,0 +1,1115 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 16: Statistics (Grouped Mean, Median, Mode, Ogives &amp; Dispersion Bridge)">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 2: Mathematics (Paper 1) &bull; Chapter 16 &bull; Target Study Time: 5 Hours
+        </div>
+        <h1>Statistics (Grouped Mean, Median, Mode, Ogives &amp; Dispersion Bridge)</h1>
+        <p>Mastering central tendency from first-principles geometric interpolation on Histograms and Ogives, double
+            missing-frequency tables, Karl Pearson's skewness geometry, linear origin-scale invariance, and Class
+            11/Olympiad dispersion weapons.</p>
+        <div class="tag-row">
+            <span class="meta-pill">BEST Paper 1 Core</span>
+            <span class="meta-pill">NTSE Stage 2 &bull; IOQM-Lite</span>
+            <span class="meta-pill">Class 11 Dispersion Bridge</span>
+            <span class="meta-pill">Part 1 of 3: Theory &amp; Worked Examples</span>
+        </div>
+    </header>
+
+    <!-- =========================================================
+       SECTION 16.1: GROUPED & UNGROUPED MEAN
+       ========================================================= -->
+    <h2 class="section-heading">16.1 Grouped &amp; Ungrouped Mean: Deviation Methods, Combined Means &amp; Corrections
+    </h2>
+
+    <div class="concept-box">
+        <span class="box-label">Core Engine &bull; Direct, Assumed Mean &amp; Step-Deviation Derivations</span>
+        <p>For grouped data with class intervals having midpoints (<strong>class marks</strong>) $x_i =
+            \dfrac{\text{Lower Limit} + \text{Upper Limit}}{2}$ and frequencies $f_i$ summing to $N = \sum_{i=1}^{k}
+            f_i$, all grouped-mean calculations assume observations are uniformly distributed inside each interval so
+            every observation in class $i$ is represented by its class mark $x_i$.</p>
+        <ol>
+            <li><strong>Direct Method:</strong>
+                $$ \bar{x} = \frac{\sum_{i=1}^{k} f_i x_i}{\sum_{i=1}^{k} f_i} = \frac{\sum f_i x_i}{N} $$</li>
+            <li><strong>Assumed Mean Method (Change of Origin):</strong> Choose a convenient central class mark $a$ and
+                define deviations $d_i = x_i - a$, so $x_i = a + d_i$. Substitute directly into the Direct Method:
+                $$ \bar{x} = \frac{\sum f_i(a + d_i)}{N} = \frac{a\sum f_i + \sum f_i d_i}{N} = \mathbf{a + \frac{\sum
+                f_i d_i}{N}} $$</li>
+            <li><strong>Step-Deviation Method (Change of Origin &amp; Scale):</strong> When all classes share a common
+                width $h \gt 0$ (or a common factor $h$ dividing every $d_i$), define dimensionless coded steps $u_i =
+                \dfrac{x_i - a}{h}$, so $x_i = a + hu_i$:
+                $$ \bar{x} = \frac{\sum f_i(a + hu_i)}{N} = \frac{a\sum f_i + h\sum f_i u_i}{N} = \mathbf{a +
+                h\left(\frac{\sum f_i u_i}{N}\right)} $$</li>
+        </ol>
+        <p><strong>Zero-Sum Deviation Property (Fundamental Invariant):</strong> Subtracting $\bar{x}$ from every
+            observation always yields a net signed deviation of exactly zero:</p>
+        $$ \sum_{i=1}^{k} f_i(x_i - \bar{x}) = \sum f_i x_i - \bar{x}\sum f_i = N\bar{x} - N\bar{x} = \mathbf{0} $$
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">High-Frequency Exam Weapons &bull; Weighted Mean, Double Missing Frequencies &amp; Error
+            Corrections</span>
+        <ul>
+            <li><strong>Weighted &amp; Combined Mean:</strong> If $m$ disjoint groups of sizes $n_1, n_2, \dots, n_m$
+                have means $\bar{x}_1, \bar{x}_2, \dots, \bar{x}_m$, the pooled mean is:
+                $$ \bar{x}_{\text{comb}} = \frac{n_1\bar{x}_1 + n_2\bar{x}_2 + \cdots + n_m\bar{x}_m}{n_1 + n_2 + \cdots
+                + n_m} $$
+                <em>Lever-Balance Shortcut (2 Groups):</em> From $n_1\bar{x}_1 + n_2\bar{x}_2 = (n_1 +
+                n_2)\bar{x}_{12}$, rearranging gives $\mathbf{n_1(\bar{x}_{12} - \bar{x}_1) = n_2(\bar{x}_2 -
+                \bar{x}_{12})}$, meaning group sizes are inversely proportional to their distances from the combined
+                mean!
+            </li>
+            <li><strong>Solving Double Missing-Frequency Tables ($f_1, f_2$):</strong> Always build a clean $2 \times 2$
+                linear system from the two givens:
+                <ol>
+                    <li><em>Total Frequency Equation:</em> $(\text{sum of known } f_i) + f_1 + f_2 = N$.</li>
+                    <li><em>Mean (or Step-Deviation) Equation:</em> Choose the assumed mean $a$ at the class mark of one
+                        missing frequency (say $f_1$) so $u_1 = 0$! That immediately eliminates $f_1$ from $\sum f_i
+                        u_i$, solving for $f_2$ in a single line!</li>
+                </ol>
+            </li>
+            <li><strong>Misread / Replaced Observation Correction Shortcut:</strong> If an old mean
+                $\bar{x}_{\text{old}}$ was computed from $N$ values, and misread values $W_1, W_2, \dots$ are replaced
+                by their true values $C_1, C_2, \dots$:
+                $$ \bar{x}_{\text{new}} = \bar{x}_{\text{old}} + \frac{\sum C_j - \sum W_j}{N} $$
+                If a value $W$ is <em>deleted</em> entirely (so count drops to $N - 1$), use $\bar{x}_{\text{new}} =
+                \dfrac{N\bar{x}_{\text{old}} - W}{N - 1}$.</li>
+        </ul>
+    </div>
+
+    <!-- =========================================================
+       SECTION 16.2: MEDIAN OF GROUPED DATA & OGIVES
+       ========================================================= -->
+    <h2 class="section-heading">16.2 Median of Grouped Data, Continuity Correction &amp; Ogive Geometry</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Mandatory Pre-Check &bull; Inclusive (Discontinuous) to Exclusive (Continuous)
+            Conversion</span>
+        <p>Before applying <em>any</em> grouped Median or Mode formula, inspect whether consecutive class boundaries
+            match:</p>
+        <ul>
+            <li><strong>Exclusive (Continuous) Form:</strong> `10–20, 20–30, 30–40` (upper limit of one class equals
+                lower limit of the next; by convention, boundary value $20$ belongs to `20–30`). Ready to use directly.
+            </li>
+            <li><strong>Inclusive (Discontinuous) Form:</strong> `11–20, 21–30, 31–40`. Here there is a dead gap $g = 21
+                - 20 = 1$ between classes. You <strong>MUST</strong> apply the continuity correction $\delta =
+                \dfrac{g}{2} = 0.5$: subtract $\delta$ from every lower limit and add $\delta$ to every upper limit,
+                turning `11–20, 21–30` into `10.5–20.5, 20.5–30.5`. Notice that the true class width is $h = 20.5 - 10.5
+                = \mathbf{10}$, <em>NOT</em> $20 - 11 = 9$!</li>
+        </ul>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">First-Principles Geometric Derivation &bull; Grouped Median via Similar Triangles on the
+            Less-Than Ogive</span>
+        <p>Plot the <strong>Less-Than Ogive</strong> by connecting points $(U_i, CF_i)$ where $U_i$ is the true upper
+            boundary of class $i$ and $CF_i$ is its cumulative frequency (starting at $(L_1, 0)$). Locate the
+            <strong>median class</strong> $[l, l+h)$ as the first class whose cumulative frequency satisfies $CF \ge
+            \dfrac{N}{2}$, with frequency $f$ and preceding cumulative frequency $cf$.
+        </p>
+        <p>On the median interval $[l, l+h]$, the Less-Than Ogive is a straight line segment joining $A(l, cf)$ to $B(l
+            + h, cf + f)$. The exact Median $M$ is the $x$-coordinate of point $P\left(M, \frac{N}{2}\right)$ on segment
+            $AB$. Drop verticals to the horizontal line $y = cf$ at $Q(M, cf)$ and $C(l + h, cf)$. Because $\triangle
+            AQP \sim \triangle ACB$ (AA similarity):</p>
+        $$ \frac{AQ}{AC} = \frac{PQ}{BC} \implies \frac{M - l}{(l + h) - l} = \frac{\frac{N}{2} - cf}{(cf + f) - cf}
+        \implies \frac{M - l}{h} = \frac{\frac{N}{2} - cf}{f} $$
+        $$ \mathbf{M = l + \left(\frac{\frac{N}{2} - cf}{f}\right)h} $$
+        <p><strong>Intersecting Less-Than &amp; More-Than Ogives:</strong> The Less-Than Ogive rises from $(L_1, 0)$ to
+            $(U_k, N)$, while the More-Than Ogive falls from $(L_1, N)$ to $(U_k, 0)$ by plotting $(L_i, CF_{\ge L_i})$.
+            At any point $x$, $(\text{Less-Than } y) + (\text{More-Than } y) = N$. At their unique intersection point
+            $(x^*, y^*)$, both curves have equal height $y^* = N - y^* \implies y^* = \dfrac{N}{2}$, and therefore the
+            abscissa is identically the exact Median: $\mathbf{(x^*, y^*) = \left(M,\; \frac{N}{2}\right)}$!</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 600 270" width="100%" role="img"
+            aria-label="Intersecting Less-Than and More-Than Ogives pinpointing the exact Median at (50, 40) with similar triangles highlighted">
+            <defs>
+                <marker id="og-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+                </marker>
+            </defs>
+
+            <!-- Grid lines -->
+            <line x1="65" y1="45" x2="365" y2="45" stroke="#f1f5f9" stroke-width="1" />
+            <line x1="65" y1="90" x2="365" y2="90" stroke="#f1f5f9" stroke-width="1" />
+            <line x1="65" y1="135" x2="365" y2="135" stroke="#e2e8f0" stroke-width="1.2" stroke-dasharray="4,3" />
+            <line x1="65" y1="180" x2="365" y2="180" stroke="#f1f5f9" stroke-width="1" />
+
+            <!-- Axes -->
+            <line x1="55" y1="225" x2="385" y2="225" stroke="#334155" stroke-width="2" marker-end="url(#og-arrow)" />
+            <line x1="65" y1="235" x2="65" y2="26" stroke="#334155" stroke-width="2" marker-end="url(#og-arrow)" />
+            <text x="385" y="242" text-anchor="end" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#334155">Class Boundary (x)</text>
+            <text x="72" y="34" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#334155">Cumulative Freq (y)</text>
+
+            <!-- Shaded similar triangles on median class [40, 60]: A(185,168.75), B(245,101.25), C(245,168.75), P(215,135), Q(215,168.75) -->
+            <polygon points="185,168.75 245,168.75 245,101.25" fill="#dbeafe" opacity="0.65" />
+            <polygon points="185,168.75 215,168.75 215,135" fill="#93c5fd" opacity="0.75" />
+            <line x1="185" y1="168.75" x2="245" y2="168.75" stroke="#1d4ed8" stroke-width="1.3"
+                stroke-dasharray="3,2" />
+            <line x1="245" y1="168.75" x2="245" y2="101.25" stroke="#1d4ed8" stroke-width="1.3"
+                stroke-dasharray="3,2" />
+
+            <!-- Less-Than Ogive: (65,225),(125,202.5),(185,168.75),(245,101.25),(305,60.75),(365,45) -->
+            <polyline points="65,225 125,202.5 185,168.75 245,101.25 305,60.75 365,45" fill="none" stroke="#2563eb"
+                stroke-width="2.5" />
+            <!-- More-Than Ogive: (65,45),(125,67.5),(185,101.25),(245,168.75),(305,209.25),(365,225) -->
+            <polyline points="65,45 125,67.5 185,101.25 245,168.75 305,209.25 365,225" fill="none" stroke="#dc2626"
+                stroke-width="2.5" />
+
+            <!-- Drop vertical from intersection P(215,135) to Median on x-axis -->
+            <line x1="215" y1="135" x2="215" y2="225" stroke="#059669" stroke-width="2" stroke-dasharray="5,3" />
+            <line x1="65" y1="135" x2="215" y2="135" stroke="#059669" stroke-width="1.8" stroke-dasharray="5,3" />
+
+            <!-- Key points -->
+            <circle cx="185" cy="168.75" r="3.5" fill="#1d4ed8" />
+            <circle cx="245" cy="101.25" r="3.5" fill="#1d4ed8" />
+            <circle cx="215" cy="135" r="4.8" fill="#059669" stroke="#ffffff" stroke-width="1.5" />
+
+            <!-- Labels on graph -->
+            <text x="292" y="52" font-family="system-ui, sans-serif" font-size="11" font-weight="800"
+                fill="#2563eb">Less-Than Ogive</text>
+            <text x="275" y="198" font-family="system-ui, sans-serif" font-size="11" font-weight="800"
+                fill="#dc2626">More-Than Ogive</text>
+            <text x="223" y="131" font-family="system-ui, sans-serif" font-size="11" font-weight="800"
+                fill="#065f46">P(M, N/2)</text>
+            <text x="174" y="167" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#1e40af">A</text>
+            <text x="249" y="99" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#1e40af">B</text>
+            <text x="250" y="176" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#1e40af">C</text>
+            <text x="206" y="180" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#1e40af">Q</text>
+
+            <!-- Axis tick labels -->
+            <text x="65" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                fill="#475569">0</text>
+            <text x="125" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                fill="#475569">20</text>
+            <text x="185" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                font-weight="700" fill="#1e40af">l=40</text>
+            <text x="215" y="253" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="800" fill="#059669">M = 50</text>
+            <text x="245" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                font-weight="700" fill="#1e40af">60</text>
+            <text x="305" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                fill="#475569">80</text>
+            <text x="365" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                fill="#475569">100</text>
+
+            <text x="58" y="49" text-anchor="end" font-family="system-ui, sans-serif" font-size="10" font-weight="700"
+                fill="#334155">N=80</text>
+            <text x="58" y="139" text-anchor="end" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="800" fill="#059669">N/2=40</text>
+            <text x="58" y="172" text-anchor="end" font-family="system-ui, sans-serif" font-size="10" font-weight="700"
+                fill="#1e40af">cf=25</text>
+
+            <!-- Right explanation box -->
+            <rect x="404" y="34" width="184" height="192" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4" />
+            <text x="496" y="56" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="800" fill="#1e293b">Ogive Proof &amp; Rule</text>
+            <line x1="416" y1="65" x2="576" y2="65" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="418" y="86" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#065f46">1.
+                Curves meet at (M, N/2)</text>
+            <text x="418" y="106" font-family="system-ui, sans-serif" font-size="10.5" fill="#334155">x-coord = exact
+                Median M</text>
+            <text x="418" y="123" font-family="system-ui, sans-serif" font-size="10.5" fill="#334155">y-coord = half
+                total N/2</text>
+            <line x1="416" y1="136" x2="576" y2="136" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="418" y="156" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1e40af">2.
+                △AQP ~ △ACB (AA):</text>
+            <text x="496" y="178" text-anchor="middle" font-family="Georgia, serif" font-size="11.5" font-weight="bold"
+                fill="#1e293b">(M − l) / h = (N/2 − cf) / f</text>
+            <text x="496" y="204" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#059669">⇒ M = l + [(N/2 − cf)/f]·h</text>
+        </svg>
+        <div class="diagram-caption">Figure 16.1: Intersecting Less-Than and More-Than Ogives meet strictly at $(M,
+            N/2)$; AA similarity in $\triangle AQP \sim \triangle ACB$ proves the grouped Median formula.</div>
+    </div>
+
+    <h3>Converting "Less Than" &amp; "More Than" Cumulative Tables Back to Frequency Tables</h3>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Cumulative Table Type</th>
+                <th>Given Boundary Column</th>
+                <th>Recovery Rule for Class Frequency $f_i$</th>
+                <th>Quick Sanity Check</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Less Than ($&lt; U_i$)</strong></td>
+                <td>Upper limits $U_1, U_2, \dots, U_k$ with rising $CF_1 \le \dots \le CF_k = N$</td>
+                <td>$f_1 = CF_1$, and for $i \ge 2$: $\mathbf{f_i = CF_i - CF_{i-1}}$ (subtract upward)</td>
+                <td>Last $CF_k$ equals total $N$; first class matches uniform width $U_1 - h$ to $U_1$.</td>
+            </tr>
+            <tr>
+                <td><strong>More Than ($\ge L_i$)</strong></td>
+                <td>Lower limits $L_1, L_2, \dots, L_k$ with falling $N = M_1 \ge \dots \ge M_k$</td>
+                <td>For $i \lt k$: $\mathbf{f_i = M_i - M_{i+1}}$ (subtract downward); $f_k = M_k$</td>
+                <td>First entry $M_1$ equals total $N$; $\sum f_i$ must telescope back to $M_1$.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- =========================================================
+       SECTION 16.3: MODE & SKEWNESS
+       ========================================================= -->
+    <h2 class="section-heading">16.3 Mode of Grouped Data, Histogram Derivation &amp; Skewness Geometry</h2>
+
+    <div class="bridge-box">
+        <span class="box-label">First-Principles Geometric Derivation &bull; Grouped Mode via Histogram Crossed
+            Diagonals</span>
+        <p>In a continuous equal-width Histogram, let the <strong>modal class</strong> $[l, l+h)$ have the highest
+            frequency $f_1$, flanked by the preceding class ($f_0$) and succeeding class ($f_2$). Plot the top corners
+            of the modal rectangle as $A(l, f_1)$ and $B(l+h, f_1)$, the top-right corner of the left neighbor as $C(l,
+            f_0)$, and the top-left corner of the right neighbor as $D(l+h, f_2)$.</p>
+        <p>Draw the two crossed diagonals $AD$ and $BC$, intersecting at $P(Z, y_P)$, and drop the vertical line from
+            $P$ to meet the horizontal axis at the exact Mode $Z$. Consider the horizontal segments from $P$ to the left
+            wall $AC$ (length $Z - l$) and to the right wall $BD$ (length $l + h - Z$). Because vertical walls $AC
+            \parallel BD$, $\triangle APC \sim \triangle DPB$ (AA similarity), so their altitudes are strictly
+            proportional to their vertical bases:</p>
+        $$ \frac{Z - l}{(l + h) - Z} = \frac{AC}{BD} = \frac{f_1 - f_0}{f_1 - f_2} $$
+        <p>Solve for $Z - l$ using componendo ($\frac{u}{v} = \frac{p}{q} \implies \frac{u}{u+v} = \frac{p}{p+q}$):</p>
+        $$ \frac{Z - l}{(Z - l) + (l + h - Z)} = \frac{f_1 - f_0}{(f_1 - f_0) + (f_1 - f_2)} \implies \frac{Z - l}{h} =
+        \frac{f_1 - f_0}{2f_1 - f_0 - f_2} $$
+        $$ \mathbf{Z = l + \left(\frac{f_1 - f_0}{2f_1 - f_0 - f_2}\right)h} $$
+        <p><strong>Unequal Class-Width Frequency Density Rule (Olympiad Trap):</strong> In a true Histogram, rectangle
+            <em>area</em> represents frequency, so rectangle <em>height</em> equals <strong>Frequency Density</strong>
+            $D_i = \dfrac{f_i}{w_i}$. When class widths $w_i$ are unequal, the modal class is the class with the
+            <strong>maximum frequency density $D_i$</strong> (NOT maximum raw frequency!), and the Mode formula MUST use
+            densities $D_0, D_1, D_2$ (or adjusted frequencies scaled to common width $h$) in place of raw $f_0, f_1,
+            f_2$!
+        </p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 600 255" width="100%" role="img"
+            aria-label="Histogram illustrating graphical mode interpolation using crossed diagonals of the modal rectangle">
+            <defs>
+                <marker id="hist-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+                </marker>
+            </defs>
+
+            <!-- Axes -->
+            <line x1="40" y1="210" x2="418" y2="210" stroke="#334155" stroke-width="2" marker-end="url(#hist-arrow)" />
+            <line x1="48" y1="218" x2="48" y2="28" stroke="#334155" stroke-width="2" marker-end="url(#hist-arrow)" />
+            <text x="55" y="34" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#334155">Frequency (f)</text>
+
+            <!-- Histogram bars (width = 70px, baseline y=210, 5px/unit) -->
+            <!-- Bar 1: 10-20, f=10 (y=160) -->
+            <rect x="50" y="160" width="70" height="50" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5" />
+            <!-- Bar 2: 20-30, f0=16 (y=130) -->
+            <rect x="120" y="130" width="70" height="80" fill="#dbeafe" stroke="#2563eb" stroke-width="1.6" />
+            <!-- Bar 3 (Modal): 30-40, f1=28 (y=70) -->
+            <rect x="190" y="70" width="70" height="140" fill="#fef3c7" stroke="#d97706" stroke-width="2" />
+            <!-- Bar 4: 40-50, f2=20 (y=110) -->
+            <rect x="260" y="110" width="70" height="100" fill="#dbeafe" stroke="#2563eb" stroke-width="1.6" />
+            <!-- Bar 5: 50-60, f=8 (y=170) -->
+            <rect x="330" y="170" width="70" height="40" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5" />
+
+            <!-- Crossed Diagonals: A(190,70) to D(260,110) and B(260,70) to C(190,130); intersect at P(232,94) -->
+            <line x1="190" y1="70" x2="260" y2="110" stroke="#dc2626" stroke-width="2.2" />
+            <line x1="260" y1="70" x2="190" y2="130" stroke="#dc2626" stroke-width="2.2" />
+
+            <!-- Highlight segments AC (f1-f0) and BD (f1-f2) -->
+            <line x1="190" y1="70" x2="190" y2="130" stroke="#059669" stroke-width="3" />
+            <line x1="260" y1="70" x2="260" y2="110" stroke="#059669" stroke-width="3" />
+
+            <!-- Vertical drop from P(232,94) to x-axis at (232,210) -->
+            <line x1="232" y1="94" x2="232" y2="210" stroke="#059669" stroke-width="2.2" stroke-dasharray="5,3" />
+            <circle cx="232" cy="94" r="4.5" fill="#059669" stroke="#ffffff" stroke-width="1.4" />
+
+            <!-- Corner dots -->
+            <circle cx="190" cy="70" r="3" fill="#b45309" />
+            <circle cx="260" cy="70" r="3" fill="#b45309" />
+            <circle cx="190" cy="130" r="3" fill="#2563eb" />
+            <circle cx="260" cy="110" r="3" fill="#2563eb" />
+
+            <!-- Corner & Bar labels -->
+            <text x="180" y="65" font-family="system-ui, sans-serif" font-size="11" font-weight="800"
+                fill="#b45309">A</text>
+            <text x="263" y="65" font-family="system-ui, sans-serif" font-size="11" font-weight="800"
+                fill="#b45309">B</text>
+            <text x="177" y="128" font-family="system-ui, sans-serif" font-size="11" font-weight="800"
+                fill="#1d4ed8">C</text>
+            <text x="266" y="109" font-family="system-ui, sans-serif" font-size="11" font-weight="800"
+                fill="#1d4ed8">D</text>
+            <text x="225" y="88" font-family="system-ui, sans-serif" font-size="11" font-weight="800"
+                fill="#065f46">P</text>
+
+            <text x="155" y="152" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#1e40af">f₀=16</text>
+            <text x="225" y="62" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="800" fill="#b45309">f₁=28</text>
+            <text x="295" y="132" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#1e40af">f₂=20</text>
+
+            <!-- X-axis ticks -->
+            <text x="50" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                fill="#475569">10</text>
+            <text x="120" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                fill="#475569">20</text>
+            <text x="190" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#b45309">l=30</text>
+            <text x="232" y="241" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="800" fill="#059669">Z = 36</text>
+            <text x="260" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#b45309">40</text>
+            <text x="330" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                fill="#475569">50</text>
+            <text x="400" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                fill="#475569">60</text>
+
+            <!-- Right info panel -->
+            <rect x="424" y="36" width="166" height="176" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4" />
+            <text x="507" y="58" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="800" fill="#1e293b">Histogram Proof</text>
+            <line x1="436" y1="67" x2="578" y2="67" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="438" y="88" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#065f46">AC
+                = f₁ − f₀ = 12</text>
+            <text x="438" y="108" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#065f46">BD
+                = f₁ − f₂ = 8</text>
+            <text x="438" y="130" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#dc2626">△APC ~ △DPB (AA)</text>
+            <line x1="436" y1="142" x2="578" y2="142" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="507" y="164" text-anchor="middle" font-family="Georgia, serif" font-size="11.5" font-weight="bold"
+                fill="#1e293b">(Z−l)/(l+h−Z) = (f₁−f₀)/(f₁−f₂)</text>
+            <text x="507" y="191" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="800" fill="#059669">Z = 30 + (12/20)×10 = 36</text>
+        </svg>
+        <div class="diagram-caption">Figure 16.2: Crossed diagonals $AD$ and $BC$ in the modal bar form similar
+            triangles $\triangle APC \sim \triangle DPB$, projecting vertically onto the exact grouped Mode $Z$.</div>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Karl Pearson's Empirical Formula &amp; Skewness Ordering</span>
+        <p>For any moderately asymmetric (unimodal) distribution, the three measures of central tendency satisfy
+            <strong>Karl Pearson's Empirical Relation</strong>:
+        </p>
+        $$ \mathbf{\text{Mode} = 3\,\text{Median} - 2\,\text{Mean}} \qquad \Longleftrightarrow \qquad \text{Median} -
+        \text{Mode} = 2(\text{Mean} - \text{Median}) $$
+        <p><strong>Geometric Meaning:</strong> The Median <em>always</em> lies strictly between the Mean and the Mode,
+            dividing the line segment joining Mode to Mean internally in the exact ratio $\mathbf{2 : 1}$ (closer to the
+            Mean, which gets pulled furthest toward the long tail by extreme outliers):</p>
+        <ul>
+            <li><strong>Symmetric (Zero Skew):</strong> $\text{Mean} = \text{Median} = \text{Mode}$.</li>
+            <li><strong>Positively (Right) Skewed:</strong> Long tail extends to the right $\implies \mathbf{\text{Mode}
+                \lt \text{Median} \lt \text{Mean}}$.</li>
+            <li><strong>Negatively (Left) Skewed:</strong> Long tail extends to the left $\implies \mathbf{\text{Mean}
+                \lt \text{Median} \lt \text{Mode}}$.</li>
+        </ul>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 600 215" width="100%" role="img"
+            aria-label="Comparison of negatively skewed, symmetric, and positively skewed distributions showing exact Mean, Median, and Mode ordering">
+            <!-- PANEL 1: NEGATIVELY SKEWED (Left-skewed: Mean < Median < Mode) -->
+            <rect x="8" y="10" width="186" height="195" rx="7" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2" />
+            <text x="101" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="800" fill="#92400e">Negatively Skewed (Left Tail)</text>
+            <line x1="20" y1="158" x2="182" y2="158" stroke="#475569" stroke-width="1.5" />
+            <!-- Curve: long left tail, peak near x=142 -->
+            <path d="M 22,157 C 55,156 80,140 105,98 C 122,68 135,52 144,54 C 155,56 164,108 178,157" fill="#fef3c7"
+                stroke="#d97706" stroke-width="2.2" />
+            <!-- Mode=144, Median=124 (gap 20), Mean=114 (gap 10) -> exact 2:1 ratio -->
+            <line x1="144" y1="54" x2="144" y2="158" stroke="#dc2626" stroke-width="1.8" />
+            <line x1="124" y1="73" x2="124" y2="158" stroke="#059669" stroke-width="1.8" stroke-dasharray="4,2" />
+            <line x1="114" y1="84" x2="114" y2="158" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="2,2" />
+            <text x="148" y="172" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5"
+                font-weight="800" fill="#dc2626">Z</text>
+            <text x="124" y="172" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5"
+                font-weight="800" fill="#059669">M</text>
+            <text x="107" y="172" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5"
+                font-weight="800" fill="#2563eb">x̄</text>
+            <text x="101" y="193" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="800" fill="#78350f">Mean &lt; Median &lt; Mode</text>
+
+            <!-- PANEL 2: SYMMETRIC (Zero Skew: Mean = Median = Mode) -->
+            <rect x="207" y="10" width="186" height="195" rx="7" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.2" />
+            <text x="300" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="800" fill="#065f46">Symmetric (Zero Skew)</text>
+            <line x1="219" y1="158" x2="381" y2="158" stroke="#475569" stroke-width="1.5" />
+            <!-- Symmetric Bell Curve centered at x=300 -->
+            <path
+                d="M 222,157 C 248,155 266,110 282,74 C 290,56 295,52 300,52 C 305,52 310,56 318,74 C 334,110 352,155 378,157"
+                fill="#d1fae5" stroke="#059669" stroke-width="2.2" />
+            <line x1="300" y1="52" x2="300" y2="158" stroke="#065f46" stroke-width="2" stroke-dasharray="4,2" />
+            <text x="300" y="172" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                font-weight="800" fill="#065f46">x̄ = M = Z</text>
+            <text x="300" y="193" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="800" fill="#065f46">Mean = Median = Mode</text>
+
+            <!-- PANEL 3: POSITIVELY SKEWED (Right-skewed: Mode < Median < Mean) -->
+            <rect x="406" y="10" width="186" height="195" rx="7" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2" />
+            <text x="499" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="800" fill="#1e40af">Positively Skewed (Right Tail)</text>
+            <line x1="418" y1="158" x2="580" y2="158" stroke="#475569" stroke-width="1.5" />
+            <!-- Curve: peak near x=456, long right tail -->
+            <path d="M 422,157 C 436,108 445,56 456,54 C 465,52 478,68 495,98 C 520,140 545,156 578,157" fill="#dbeafe"
+                stroke="#2563eb" stroke-width="2.2" />
+            <!-- Mode=456, Median=476 (gap 20), Mean=486 (gap 10) -> exact 2:1 ratio -->
+            <line x1="456" y1="54" x2="456" y2="158" stroke="#dc2626" stroke-width="1.8" />
+            <line x1="476" y1="73" x2="476" y2="158" stroke="#059669" stroke-width="1.8" stroke-dasharray="4,2" />
+            <line x1="486" y1="84" x2="486" y2="158" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="2,2" />
+            <text x="453" y="172" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5"
+                font-weight="800" fill="#dc2626">Z</text>
+            <text x="476" y="172" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5"
+                font-weight="800" fill="#059669">M</text>
+            <text x="492" y="172" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5"
+                font-weight="800" fill="#2563eb">x̄</text>
+            <text x="499" y="193" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="800" fill="#1e40af">Mode &lt; Median &lt; Mean</text>
+        </svg>
+        <div class="diagram-caption">Figure 16.3: Skewness pulls the Mean furthest toward the long tail; Karl Pearson's
+            law spaces Mode–Median at twice the Median–Mean gap.</div>
+    </div>
+
+    <!-- =========================================================
+       SECTION 16.4: CHANGE OF ORIGIN & SCALE (BRIDGE)
+       ========================================================= -->
+    <h2 class="section-heading">16.4 Out-of-Portion Bridge: Linear Transformation (Change of Origin &amp; Scale)</h2>
+
+    <div class="bridge-box">
+        <span class="box-label">Exact Algebraic Proofs &bull; Transformation $y_i = ax_i + b$ ($a \neq 0$)</span>
+        <p>Suppose every observation $x_1, x_2, \dots, x_n$ is linearly transformed to $y_i = ax_i + b$ (scaling by $a$
+            and shifting origin by $+b$). Every statistical measure obeys one of two rigid laws:</p>
+        <ol>
+            <li><strong>Location Measures (Affected by BOTH Origin $+b$ and Scale $a$):</strong>
+                $$ \bar{y} = \frac{1}{n}\sum_{i=1}^{n}(ax_i + b) = a\left(\frac{1}{n}\sum_{i=1}^{n}x_i\right) +
+                \frac{nb}{n} = \mathbf{a\bar{x} + b} $$
+                Because a strictly monotonic linear map preserves order (or reverses it cleanly if $a \lt 0$, leaving
+                the middle rank and peak value intact), Median and Mode obey the exact same rule: $\mathbf{M_y = aM_x +
+                b}$ and $\mathbf{Z_y = aZ_x + b}$.</li>
+            <li><strong>Spread / Dispersion Measures (COMPLETELY INVARIANT Under Shift $+b$; Scaled ONLY by $|a|$ or
+                    $a^2$):</strong>
+                Compute the centered deviation $y_i - \bar{y}$:
+                $$ y_i - \bar{y} = (ax_i + b) - (a\bar{x} + b) = \mathbf{a(x_i - \bar{x})} $$
+                Notice how the shift constant $+b$ <strong>cancels identically</strong>! Substituting $y_i - \bar{y} =
+                a(x_i - \bar{x})$ directly into Variance, Standard Deviation, Mean Deviation, and Range proves:
+                $$ \sigma_y^2 = \frac{1}{n}\sum_{i=1}^{n}(y_i - \bar{y})^2 = \frac{1}{n}\sum_{i=1}^{n}a^2(x_i -
+                \bar{x})^2 = \mathbf{a^2\sigma_x^2} $$
+                $$ \sigma_y = \sqrt{\sigma_y^2} = \sqrt{a^2\sigma_x^2} = \mathbf{|a|\sigma_x} \qquad (\text{NEVER }
+                a\sigma_x \text{ when } a \lt 0!) $$
+                $$ \text{MD}_y = \frac{1}{n}\sum |y_i - A_y| = \mathbf{|a|\,\text{MD}_x}, \qquad \text{Range}_y =
+                \mathbf{|a|\,\text{Range}_x} $$</li>
+        </ol>
+    </div>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Statistical Measure</th>
+                <th>Original Data ($x_i$)</th>
+                <th>Shifted Data ($x_i + b$)</th>
+                <th>Scaled &amp; Shifted ($ax_i + b$)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Mean / Median / Mode</strong></td>
+                <td>$\bar{x},\; M_x,\; Z_x$</td>
+                <td>$\bar{x} + b,\; M_x + b,\; Z_x + b$</td>
+                <td>$a\bar{x} + b,\; aM_x + b,\; aZ_x + b$</td>
+            </tr>
+            <tr>
+                <td><strong>Range &amp; Mean Deviation</strong></td>
+                <td>$R_x,\; \text{MD}_x$</td>
+                <td>$R_x,\; \text{MD}_x$ (Unchanged!)</td>
+                <td>$|a|R_x,\; |a|\,\text{MD}_x$</td>
+            </tr>
+            <tr>
+                <td><strong>Standard Deviation ($\sigma$)</strong></td>
+                <td>$\sigma_x$</td>
+                <td>$\sigma_x$ (Unchanged!)</td>
+                <td>$|a|\sigma_x$</td>
+            </tr>
+            <tr>
+                <td><strong>Variance ($\sigma^2$)</strong></td>
+                <td>$\sigma_x^2$</td>
+                <td>$\sigma_x^2$ (Unchanged!)</td>
+                <td>$a^2\sigma_x^2$</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- =========================================================
+       SECTION 16.5: MEASURES OF DISPERSION & OLYMPIAD SHORTCUTS
+       ========================================================= -->
+    <h2 class="section-heading">16.5 Out-of-Portion Bridge: Measures of Dispersion &amp; AP Olympiad Shortcuts</h2>
+
+    <div class="bridge-box">
+        <span class="box-label">Class 11 / Olympiad Dispersion Toolkit &bull; First-Principles Proofs</span>
+        <p>Central tendency alone cannot distinguish $\{49, 50, 51\}$ from $\{0, 50, 100\}$—both have Mean $= 50$.
+            <strong>Measures of Dispersion</strong> quantify spread around the center:
+        </p>
+        <ol>
+            <li><strong>Mean Deviation (MD) about a Reference $A$:</strong> $\text{MD}(A) = \dfrac{1}{N}\sum f_i |x_i -
+                A|$.<br />
+                <strong>Crucial Minimization Theorem:</strong> $\sum |x_i - A|$ (and hence $\text{MD}(A)$) is
+                <strong>strictly minimized when $A = \text{Median}$</strong>! (Proof: Pair sorted observations
+                symmetrically from outside in; by the triangle inequality $|A - x_k| + |A - x_{n+1-k}| \ge x_{n+1-k} -
+                x_k$, achieving equality simultaneously for all pairs if and only if $A$ lies at the Median.)
+            </li>
+            <li><strong>Variance ($\sigma^2$) — Computational Expansion Proof:</strong> Starting from the definition
+                $\sigma^2 = \dfrac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2$:
+                $$ \sigma^2 = \frac{1}{n}\sum_{i=1}^{n}\left(x_i^2 - 2\bar{x}x_i + \bar{x}^2\right) = \frac{\sum
+                x_i^2}{n} - 2\bar{x}\left(\frac{\sum x_i}{n}\right) + \frac{n\bar{x}^2}{n} = \frac{\sum x_i^2}{n} -
+                2\bar{x}^2 + \bar{x}^2 = \mathbf{\frac{\sum x_i^2}{n} - \bar{x}^2} $$
+                <em>("Mean of Squares minus Square of Mean" — guaranteed $\sigma^2 \ge 0$, with $\sigma^2 = 0$ iff all
+                    observations are identical! Also, $\sum(x_i - A)^2$ is strictly minimized at $A = \bar{x}$.)</em>
+            </li>
+            <li><strong>Standard Deviation ($\sigma$) &amp; Coefficient of Variation (CV):</strong>
+                $$ \sigma = \sqrt{\sigma^2} = \sqrt{\frac{\sum f_i x_i^2}{N} - \bar{x}^2}, \qquad \mathbf{\text{CV} =
+                \frac{\sigma}{\bar{x}} \times 100\%} \quad (\bar{x} \gt 0) $$
+                CV is a dimensionless relative spread measure: a <strong>lower CV</strong> means the dataset is
+                <strong>more consistent / stable</strong>.
+            </li>
+        </ol>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Olympiad Closed-Form Speed Formulas &bull; First $n$ Natural Numbers &amp; General
+            AP</span>
+        <p><strong>1. First $n$ Natural Numbers $\{1, 2, 3, \dots, n\}$:</strong> Recall $\sum_{k=1}^{n} k =
+            \dfrac{n(n+1)}{2}$ and $\sum_{k=1}^{n} k^2 = \dfrac{n(n+1)(2n+1)}{6}$. Therefore:</p>
+        $$ \bar{x} = \frac{n + 1}{2} $$
+        $$ \sigma^2 = \frac{\sum k^2}{n} - \bar{x}^2 = \frac{(n + 1)(2n + 1)}{6} - \frac{(n + 1)^2}{4} = (n +
+        1)\left[\frac{2(2n + 1) - 3(n + 1)}{12}\right] = (n + 1)\left(\frac{n - 1}{12}\right) = \mathbf{\frac{n^2 -
+        1}{12}} $$
+        <p><strong>2. Any $n$-Term Arithmetic Progression $\{a,\; a+d,\; a+2d,\; \dots,\; a+(n-1)d\}$:</strong> Notice
+            that $x_k = d \cdot k + (a - d)$ for $k = 1, 2, \dots, n$ is simply a linear change of scale ($d$) and
+            origin ($a - d$) applied to $\{1, 2, \dots, n\}$! Applying our Transformation Law immediately yields:</p>
+        $$ \bar{x}_{\text{AP}} = \frac{\text{First} + \text{Last}}{2} = a + \frac{(n - 1)d}{2}, \qquad
+        \mathbf{\sigma_{\text{AP}}^2 = \frac{d^2(n^2 - 1)}{12}}, \qquad \mathbf{\sigma_{\text{AP}} = |d|\sqrt{\frac{n^2
+        - 1}{12}}} $$
+        <p><em>Notice:</em> The variance of an AP depends <strong>ONLY</strong> on the term count $n$ and common
+            difference $d$—the starting term $a$ is completely irrelevant!</p>
+    </div>
+
+    <!-- =========================================================
+       SECTION 16.6: HIGH-DENSITY FORMULA VAULT
+       ========================================================= -->
+    <h2 class="section-heading">16.6 High-Density Formula Vault</h2>
+
+    <div class="formula-vault">
+        <span class="box-label">Master Formula Vault &bull; Chapter 16 Quick-Retrieval Sheet</span>
+        <ul>
+            <li><strong>Grouped Mean:</strong> Direct $\bar{x} = \dfrac{\sum f_i x_i}{N}$ &nbsp;|&nbsp; Assumed $\bar{x}
+                = a + \dfrac{\sum f_i d_i}{N}$ &nbsp;|&nbsp; Step-Dev $\bar{x} = a + h\dfrac{\sum f_i u_i}{N}$</li>
+            <li><strong>Combined Mean &amp; Correction:</strong> $\bar{x}_{12} = \dfrac{n_1\bar{x}_1 +
+                n_2\bar{x}_2}{n_1+n_2}$ &nbsp;|&nbsp; $\bar{x}_{\text{new}} = \bar{x}_{\text{old}} +
+                \dfrac{\text{Correct} - \text{Wrong}}{N}$</li>
+            <li><strong>Grouped Median:</strong> $M = l + \left(\dfrac{\frac{N}{2} - cf}{f}\right)h$ (ALWAYS convert
+                inclusive classes via $\pm 0.5$ first!) &nbsp;|&nbsp; Ogives intersect at $\left(M, \dfrac{N}{2}\right)$
+            </li>
+            <li><strong>Grouped Mode:</strong> $Z = l + \left(\dfrac{f_1 - f_0}{2f_1 - f_0 - f_2}\right)h$ (for unequal
+                widths, replace $f_i$ by frequency density $D_i = f_i/w_i$)</li>
+            <li><strong>Empirical Skewness:</strong> $\text{Mode} = 3\text{Median} - 2\text{Mean}$ &nbsp;|&nbsp;
+                Right-skew: $Z \lt M \lt \bar{x}$; Left-skew: $\bar{x} \lt M \lt Z$</li>
+            <li><strong>Origin &amp; Scale ($y_i = ax_i + b$):</strong> $\bar{y} = a\bar{x}+b$ &nbsp;|&nbsp; $M_y =
+                aM_x+b$ &nbsp;|&nbsp; $\sigma_y = |a|\sigma_x$ &nbsp;|&nbsp; $\sigma_y^2 = a^2\sigma_x^2$ (shift $b$
+                does NOT affect spread!)</li>
+            <li><strong>Dispersion Core:</strong> $\text{MD}(A) = \dfrac{\sum f_i|x_i - A|}{N}$ (min at $A = M$)
+                &nbsp;|&nbsp; $\sigma^2 = \dfrac{\sum f_i x_i^2}{N} - \bar{x}^2$ &nbsp;|&nbsp; $\text{CV} =
+                \dfrac{\sigma}{\bar{x}} \times 100\%$</li>
+            <li><strong>AP Speed Formulas:</strong> First $n$ naturals: $\bar{x} = \dfrac{n+1}{2},\; \sigma^2 =
+                \dfrac{n^2-1}{12}$ &nbsp;|&nbsp; General AP (step $d$): $\sigma^2 = \dfrac{d^2(n^2-1)}{12}$</li>
+        </ul>
+    </div>
+
+    <!-- =========================================================
+       SECTION 16.7: GRADED WORKED EXAMPLES (9 COMPLETE EXAMPLES)
+       ========================================================= -->
+    <h2 class="section-heading">16.7 Graded Worked Examples</h2>
+
+    <!-- LEVEL 1 BANNER -->
+    <div class="level-banner l1">Level 1: Warmup &mdash; Step-Deviation Mean, Continuity-Corrected Median &amp;
+        Empirical Mode</div>
+
+    <!-- WORKED EXAMPLE 1 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Worked Example 1 &bull; Step-Deviation Mean &amp; Error Correction</span>
+        </div>
+        <div class="ex-problem">
+            <strong>(a)</strong> Compute the exact arithmetic mean of the following grouped distribution using the
+            Step-Deviation Method:<br />
+            Classes: `10–20`, `20–30`, `30–40`, `40–50`, `50–60` &nbsp; with corresponding frequencies `8, 12, 20, 24,
+            16`.<br />
+            <strong>(b)</strong> In a separate test of $40$ students, the mean mark was calculated as $64.5$, but two
+            marks were misread: $82$ was read as $28$, and $54$ was read as $72$. Find the exact corrected mean.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Step-Deviation Table:</strong> Every class has uniform width $h = 10$. Choose the
+                central class mark $a = 35$, and compute $u_i = \dfrac{x_i - 35}{10}$:</p>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Class Interval</th>
+                        <th>Class Mark ($x_i$)</th>
+                        <th>Frequency ($f_i$)</th>
+                        <th>$u_i = (x_i - 35)/10$</th>
+                        <th>$f_i u_i$</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>$10\text{–}20$</td>
+                        <td>$15$</td>
+                        <td>$8$</td>
+                        <td>$-2$</td>
+                        <td>$-16$</td>
+                    </tr>
+                    <tr>
+                        <td>$20\text{–}30$</td>
+                        <td>$25$</td>
+                        <td>$12$</td>
+                        <td>$-1$</td>
+                        <td>$-12$</td>
+                    </tr>
+                    <tr>
+                        <td>$30\text{–}40$</td>
+                        <td>$35$</td>
+                        <td>$20$</td>
+                        <td>$0$</td>
+                        <td>$0$</td>
+                    </tr>
+                    <tr>
+                        <td>$40\text{–}50$</td>
+                        <td>$45$</td>
+                        <td>$24$</td>
+                        <td>$+1$</td>
+                        <td>$+24$</td>
+                    </tr>
+                    <tr>
+                        <td>$50\text{–}60$</td>
+                        <td>$55$</td>
+                        <td>$16$</td>
+                        <td>$+2$</td>
+                        <td>$+32$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td>&mdash;</td>
+                        <td>$N = 80$</td>
+                        <td>&mdash;</td>
+                        <td>$\sum f_i u_i = +28$</td>
+                    </tr>
+                </tbody>
+            </table>
+            $$ \bar{x} = a + h\left(\frac{\sum f_i u_i}{N}\right) = 35 + 10\left(\frac{28}{80}\right) = 35 +
+            \frac{28}{8} = 35 + 3.5 = \mathbf{38.5} $$
+            <p><strong>Part (b) — Misread Observation Correction Shortcut:</strong> Net sum adjustment $\Delta S =
+                (\text{Correct}) - (\text{Wrong}) = (82 + 54) - (28 + 72) = 136 - 100 = +36$:</p>
+            $$ \bar{x}_{\text{new}} = \bar{x}_{\text{old}} + \frac{\Delta S}{N} = 64.5 + \frac{36}{40} = 64.5 + 0.9 =
+            \mathbf{65.4} $$
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 2 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Worked Example 2 &bull; Inclusive-to-Exclusive Continuity Correction &amp;
+                Median</span>
+        </div>
+        <div class="ex-problem">
+            Find the exact Median of the following inclusive (discontinuous) frequency distribution:<br />
+            Inclusive Classes: `11–20`, `21–30`, `31–40`, `41–50`, `51–60` &nbsp; with frequencies `7, 13, 25, 19, 16`.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Apply the Continuity Correction ($\delta = \frac{21 - 20}{2} = 0.5$):</strong> Subtract
+                $0.5$ from every lower limit and add $0.5$ to every upper limit, then compute cumulative frequencies:
+            </p>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Inclusive Class</th>
+                        <th>True Exclusive Class</th>
+                        <th>Frequency ($f_i$)</th>
+                        <th>Cumulative Frequency ($CF$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>$11\text{–}20$</td>
+                        <td>$10.5\text{–}20.5$</td>
+                        <td>$7$</td>
+                        <td>$7$</td>
+                    </tr>
+                    <tr>
+                        <td>$21\text{–}30$</td>
+                        <td>$20.5\text{–}30.5$</td>
+                        <td>$13$</td>
+                        <td>$20$</td>
+                    </tr>
+                    <tr>
+                        <td>$31\text{–}40$</td>
+                        <td><strong>$30.5\text{–}40.5$ (Median)</strong></td>
+                        <td><strong>$25$</strong></td>
+                        <td><strong>$45$</strong></td>
+                    </tr>
+                    <tr>
+                        <td>$41\text{–}50$</td>
+                        <td>$40.5\text{–}50.5$</td>
+                        <td>$19$</td>
+                        <td>$64$</td>
+                    </tr>
+                    <tr>
+                        <td>$51\text{–}60$</td>
+                        <td>$50.5\text{–}60.5$</td>
+                        <td>$16$</td>
+                        <td>$80$</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Step 2 — Interpolate Within the Median Class:</strong> Total $N = 80 \implies \dfrac{N}{2} = 40$.
+                The first $CF \ge 40$ is $45$, so the median class is `30.5–40.5`, giving $l = 30.5$, true width $h =
+                40.5 - 30.5 = 10$, preceding $cf = 20$, and $f = 25$:</p>
+            $$ M = l + \left(\frac{\frac{N}{2} - cf}{f}\right)h = 30.5 + \left(\frac{40 - 20}{25}\right)\times 10 = 30.5
+            + \frac{20}{25}\times 10 = 30.5 + 8 = \mathbf{38.5} $$
+            <p><em>Trap Avoided:</em> Skipping the $\pm 0.5$ correction would wrongly plug $l = 31, h = 9$ and output
+                $38.2$.</p>
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 3 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Worked Example 3 &bull; Grouped Mode &amp; Empirical Relation</span>
+        </div>
+        <div class="ex-problem">
+            For the continuous distribution `20–30` ($f=4$), `30–40` ($f=7$), `40–50` ($f=19$), `50–60` ($f=11$),
+            `60–70` ($f=9$):<br />
+            <strong>(a)</strong> Find the exact Mode $Z$.<br />
+            <strong>(b)</strong> Given that the exact Mean of this distribution is $\bar{x} = 47.8$, estimate the Median
+            using Karl Pearson's empirical formula and state the direction of skewness.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Identify Modal Class &amp; Compute Mode:</strong> All classes share uniform width $h =
+                10$. The maximum frequency is $f_1 = 19$ in class `40–50`, giving $l = 40$, $f_0 = 7$, $f_1 = 19$, and
+                $f_2 = 11$:</p>
+            $$ Z = l + \left(\frac{f_1 - f_0}{2f_1 - f_0 - f_2}\right)h = 40 + \left(\frac{19 - 7}{2(19) - 7 -
+            11}\right)\times 10 = 40 + \left(\frac{12}{20}\right)\times 10 = 40 + 6 = \mathbf{46} $$
+            <p><strong>Part (b) — Apply Karl Pearson's Empirical Formula:</strong></p>
+            $$ \text{Mode} = 3\,\text{Median} - 2\,\text{Mean} \implies 46 = 3M - 2(47.8) = 3M - 95.6 $$
+            $$ 3M = 46 + 95.6 = 141.6 \implies \mathbf{M = 47.2} $$
+            <p>Since $\text{Mode}\;(46) \lt \text{Median}\;(47.2) \lt \text{Mean}\;(47.8)$, the distribution is
+                <strong>positively (right) skewed</strong>.
+            </p>
+        </div>
+    </div>
+
+    <!-- LEVEL 2 BANNER -->
+    <div class="level-banner l2">Level 2: Exam-Real &mdash; Missing Frequencies, Ogive Conversion, Combined Mean &amp;
+        Origin-Scale Laws</div>
+
+    <!-- WORKED EXAMPLE 4 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Worked Example 4 &bull; Double Missing Frequencies in a Median Table</span>
+        </div>
+        <div class="ex-problem">
+            The median of the following continuous distribution is $47.5$ and the total frequency is $N = 80$. Find the
+            exact values of the missing frequencies $x$ and $y$:<br />
+            Classes: `20–30`, `30–40`, `40–50`, `50–60`, `60–70`, `70–80` &nbsp; with frequencies `8, x, 24, 18, y, 6`.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Total Frequency Constraint:</strong></p>
+            $$ 8 + x + 24 + 18 + y + 6 = 80 \implies 56 + x + y = 80 \implies x + y = 24 \quad \cdots \text{(1)} $$
+            <p><strong>Step 2 — Pinpoint the Median Class Directly from $M = 47.5$:</strong> Because $47.5 \in [40,
+                50)$, the median class is unequivocally `40–50`, giving $l = 40$, $h = 10$, and $f = 24$. The cumulative
+                frequency strictly preceding `40–50` is $cf = 8 + x$, and $\dfrac{N}{2} = 40$.</p>
+            <p><strong>Step 3 — Solve the Median Equation for $x$, then $y$:</strong></p>
+            $$ 47.5 = 40 + \left(\frac{40 - (8 + x)}{24}\right)\times 10 \implies 7.5 = \frac{32 - x}{2.4} $$
+            $$ 32 - x = 7.5 \times 2.4 = 18 \implies \mathbf{x = 14} $$
+            <p>Substituting $x = 14$ into Equation (1): $y = 24 - 14 = \mathbf{10}$.<br />
+                <em>Consistency Check:</em> Preceding $cf = 8 + 14 = 22 \lt 40$, and $cf$ at `40–50` is $22 + 24 = 46
+                \ge 40$, confirming `40–50` is indeed the exact median class.
+            </p>
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 5 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Worked Example 5 &bull; Cumulative Table Conversion, Ogives &amp; Combined
+                Mean</span>
+        </div>
+        <div class="ex-problem">
+            <strong>(a)</strong> A "Less-Than" cumulative distribution gives: Marks $&lt; 20$: $10$; $&lt; 40$: $25$;
+            $&lt; 60$: $55$; $&lt; 80$: $73$; $&lt; 100$: $80$. Recover the exact frequency table, find the Median, and
+            state the exact coordinates $(x^*, y^*)$ where its Less-Than and More-Than Ogives intersect.<br />
+            <strong>(b)</strong> Section A has $45$ students with mean score $68$, and Section B has $n_2$ students with
+            mean score $76$. If the combined mean of both sections is $71.2$, find $n_2$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Recovering Individual Class Frequencies:</strong> Subtract consecutive cumulative
+                frequencies upward (uniform width $h = 20$):</p>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Class Interval</th>
+                        <th>Less-Than $CF$</th>
+                        <th>Class Frequency ($f_i$)</th>
+                        <th>More-Than ($\ge L_i$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>$0\text{–}20$</td>
+                        <td>$10$</td>
+                        <td>$10$</td>
+                        <td>$80$</td>
+                    </tr>
+                    <tr>
+                        <td>$20\text{–}40$</td>
+                        <td>$25$</td>
+                        <td>$25 - 10 = 15$</td>
+                        <td>$70$</td>
+                    </tr>
+                    <tr>
+                        <td>$40\text{–}60$</td>
+                        <td>$55$</td>
+                        <td>$55 - 25 = 30$</td>
+                        <td>$55$</td>
+                    </tr>
+                    <tr>
+                        <td>$60\text{–}80$</td>
+                        <td>$73$</td>
+                        <td>$73 - 55 = 18$</td>
+                        <td>$25$</td>
+                    </tr>
+                    <tr>
+                        <td>$80\text{–}100$</td>
+                        <td>$80$</td>
+                        <td>$80 - 73 = 7$</td>
+                        <td>$7$</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Total $N = 80 \implies \frac{N}{2} = 40$, so the median class is `40–60` ($l = 40, h = 20, cf = 25, f =
+                30$):</p>
+            $$ M = 40 + \left(\frac{40 - 25}{30}\right)\times 20 = 40 + \frac{15}{30}\times 20 = 40 + 10 = \mathbf{50}
+            $$
+            <p>Therefore, the Less-Than and More-Than Ogives intersect strictly at $\left(M,\; \frac{N}{2}\right) =
+                \mathbf{(50,\; 40)}$ (illustrated in Figure 16.1).</p>
+            <p><strong>Part (b) — Combined Mean via Lever-Balance Equation:</strong></p>
+            $$ 45(71.2 - 68) = n_2(76 - 71.2) \implies 45(3.2) = n_2(4.8) \implies n_2 = 45 \times \frac{3.2}{4.8} = 45
+            \times \frac{2}{3} = \mathbf{30} $$
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 6 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Worked Example 6 &bull; Change of Origin &amp; Negative Scale Factor</span>
+        </div>
+        <div class="ex-problem">
+            A dataset $x_1, x_2, \dots, x_n$ has Mean $\bar{x} = 15$, Median $M_x = 14$, Range $R_x = 11$, and Variance
+            $\sigma_x^2 = 9$. Each value is transformed via $y_i = -2x_i + 55$. Find the exact Mean, Median, Range,
+            Variance, Standard Deviation, and Coefficient of Variation of the transformed dataset $y_i$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Identify Scale $a = -2$ and Origin Shift $b = +55$:</strong></p>
+            <ul>
+                <li><strong>Mean:</strong> $\bar{y} = a\bar{x} + b = (-2)(15) + 55 = -30 + 55 = \mathbf{25}$.</li>
+                <li><strong>Median:</strong> Multiplying by $-2$ reverses the sorted order but maps the middle element
+                    directly to the new middle element: $M_y = (-2)(14) + 55 = \mathbf{27}$.</li>
+            </ul>
+            <p><strong>Step 2 — Apply Scale-Only Laws to Spread Measures (Shift $+55$ Drops Out!):</strong></p>
+            <ul>
+                <li><strong>Range:</strong> $R_y = |a|R_x = |-2|\times 11 = \mathbf{22}$.</li>
+                <li><strong>Variance:</strong> $\sigma_y^2 = a^2\sigma_x^2 = (-2)^2 \times 9 = 4 \times 9 =
+                    \mathbf{36}$.</li>
+                <li><strong>Standard Deviation:</strong> $\sigma_y = |a|\sigma_x = |-2| \times \sqrt{9} = 2 \times 3 =
+                    \mathbf{6}$ (always non-negative—NEVER $-6$!).</li>
+            </ul>
+            <p><strong>Step 3 — Compute Coefficient of Variation:</strong></p>
+            $$ \text{CV}_y = \frac{\sigma_y}{\bar{y}} \times 100\% = \frac{6}{25} \times 100\% = \mathbf{24\%} $$
+        </div>
+    </div>
+
+    <!-- LEVEL 3 BANNER -->
+    <div class="level-banner l3">Level 3: Rank-Booster &mdash; Unequal-Width Mode Density, AP Variance &amp;
+        Mean-Deviation Optimization</div>
+
+    <!-- WORKED EXAMPLE 7 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Worked Example 7 &bull; Unequal Class-Width Frequency Density Mode</span>
+        </div>
+        <div class="ex-problem">
+            Consider the continuous grouped distribution with <strong>unequal class widths</strong>:<br />
+            `0–10` ($f = 12$), `10–20` ($f = 18$), `20–25` ($f = 15$), `25–30` ($f = 11$), `30–50` ($f = 24$).<br />
+            <strong>(a)</strong> Identify the true modal class (explaining why `30–50` is a distractor trap).<br />
+            <strong>(b)</strong> Calculate the exact Mode $Z$ using histogram frequency densities.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <p><strong>Step 1 — Compute Frequency Density $D_i = f_i / w_i$ for Every Class:</strong></p>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Class Interval</th>
+                        <th>Width ($w_i$)</th>
+                        <th>Raw Freq ($f_i$)</th>
+                        <th>Frequency Density ($D_i = f_i/w_i$)</th>
+                        <th>Adjusted Freq (per $h=5$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>$0\text{–}10$</td>
+                        <td>$10$</td>
+                        <td>$12$</td>
+                        <td>$1.2$</td>
+                        <td>$6$</td>
+                    </tr>
+                    <tr>
+                        <td>$10\text{–}20$</td>
+                        <td>$10$</td>
+                        <td>$18$</td>
+                        <td>$1.8$ ($D_0$)</td>
+                        <td>$9$ ($f_0^*$)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>$20\text{–}25$</strong></td>
+                        <td><strong>$5$</strong></td>
+                        <td>$15$</td>
+                        <td><strong>$3.0$ ($D_1$, Max!)</strong></td>
+                        <td><strong>$15$ ($f_1^*$)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>$25\text{–}30$</td>
+                        <td>$5$</td>
+                        <td>$11$</td>
+                        <td>$2.2$ ($D_2$)</td>
+                        <td>$11$ ($f_2^*$)</td>
+                    </tr>
+                    <tr>
+                        <td>$30\text{–}50$</td>
+                        <td>$20$</td>
+                        <td>$24$</td>
+                        <td>$1.2$</td>
+                        <td>$6$</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Part (a):</strong> Class `30–50` has the largest raw count ($24$) only because it is $4\times$
+                wider than `20–25`; its average concentration is just $1.2$ observations per unit, whereas `20–25` packs
+                $3.0$ observations per unit. Thus the true modal class is <strong>`20–25`</strong> ($l = 20, h = 5$).
+            </p>
+            <p><strong>Part (b) — Apply Histogram Diagonal Interpolation to Rectangle Heights ($D_i$):</strong></p>
+            $$ Z = l + \left(\frac{D_1 - D_0}{2D_1 - D_0 - D_2}\right)h = 20 + \left(\frac{3.0 - 1.8}{2(3.0) - 1.8 -
+            2.2}\right)\times 5 = 20 + \left(\frac{1.2}{2.0}\right)\times 5 = 20 + 3 = \mathbf{23} $$
+            <div class="shortcut-box">
+                <strong>30-Second BEST Exam Shortcut:</strong> Whenever class widths differ, immediately scale every
+                frequency to the modal class width $h$ via $f_i^* = f_i \cdot \frac{h}{w_i}$ (here $f_0^* = 18 \cdot
+                \frac{5}{10} = 9$, $f_1^* = 15$, $f_2^* = 11$). Plug straight into the standard Mode formula: $Z = 20 +
+                \frac{15 - 9}{30 - 9 - 11}\times 5 = 20 + 3 = \mathbf{23}$ without decimals!
+            </div>
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 8 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Worked Example 8 &bull; AP Variance &amp; Misread Variance Correction</span>
+        </div>
+        <div class="ex-problem">
+            <strong>(a)</strong> Find the exact Mean, Variance, and Standard Deviation of the $13$-term arithmetic
+            progression $7, 13, 19, 25, \dots, 79$.<br />
+            <strong>(b)</strong> For $10$ observations, the mean and standard deviation were computed as $20$ and $4$,
+            respectively. Later it was found that one value was wrongly recorded as $12$ instead of $22$. Find the exact
+            corrected Standard Deviation.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Full First-Principles Derivation via Centered Coding:</strong></p>
+            <p>Here $a_1 = 7$, $d = 6$, and $n = \dfrac{79 - 7}{6} + 1 = 13$. The Mean of any AP equals the average of
+                its endpoints: $\bar{x} = \dfrac{7 + 79}{2} = \mathbf{43}$. Define the centered scaled variable $u_k =
+                \dfrac{x_k - 43}{6}$, which maps the $13$ terms symmetrically onto $\{-6, -5, -4, -3, -2, -1, 0, 1, 2,
+                3, 4, 5, 6\}$ with $\bar{u} = 0$:</p>
+            $$ \sum u_k^2 = 2\left(1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2\right) = 2 \cdot \frac{6(7)(13)}{6} = 182 \implies
+            \sigma_u^2 = \frac{182}{13} = 14 $$
+            <p>Since $x_k = 6u_k + 43$, by the scaling law ($\sigma_x^2 = a^2\sigma_u^2$):</p>
+            $$ \sigma_x^2 = 6^2 \times 14 = 36 \times 14 = \mathbf{504}, \qquad \sigma_x = \sqrt{504} =
+            \mathbf{6\sqrt{14}} $$
+            <p><strong>Part (b) — Exact Variance Correction Engine:</strong> Recover both the incorrect sum $\sum x_i$
+                and incorrect sum of squares $\sum x_i^2$:</p>
+            $$ \text{Old } \sum x_i = 10 \times 20 = 200, \qquad 4^2 = \frac{\text{Old } \sum x_i^2}{10} - 20^2 \implies
+            \text{Old } \sum x_i^2 = 10(16 + 400) = 4160 $$
+            <p>Remove the wrong entry ($12$, square $144$) and insert the correct entry ($22$, square $484$):</p>
+            $$ \text{New } \sum x_i = 200 - 12 + 22 = 210 \implies \bar{x}_{\text{new}} = \frac{210}{10} = 21 $$
+            $$ \text{New } \sum x_i^2 = 4160 - 12^2 + 22^2 = 4160 - 144 + 484 = 4500 $$
+            $$ \sigma_{\text{new}}^2 = \frac{4500}{10} - 21^2 = 450 - 441 = 9 \implies \mathbf{\sigma_{\text{new}} = 3}
+            $$
+            <div class="shortcut-box">
+                <strong>30-Second BEST Exam Shortcut:</strong><br />
+                <strong>For Part (a):</strong> Never list all $13$ terms! Plug $n = 13, d = 6$ directly into
+                $\sigma_{\text{AP}}^2 = \dfrac{d^2(n^2 - 1)}{12} = \dfrac{36(168)}{12} = 3 \times 168 = \mathbf{504}
+                \implies \sigma = \mathbf{6\sqrt{14}}$.<br />
+                <strong>For Part (b):</strong> Always track the <em>sum of squares</em> $\sum x_i^2 = n(\sigma^2 +
+                \bar{x}^2)$—NEVER try to add $(22 - 12)$ directly to $\sigma$!
+            </div>
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 9 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Worked Example 9 &bull; Mean-Deviation Minimization Theorem</span>
+        </div>
+        <div class="ex-problem">
+            Find the real value of $k$ that minimizes the sum of absolute deviations
+            $$ S(k) = |k - 3| + |k - 7| + |k - 10| + |k - 14| + |k - 19| + |k - 26| + |k - 31| $$
+            and compute both $S_{\min}$ and the Mean Deviation about the Median ($\text{MD}(M)$). Also determine all
+            optimal real values of $k$ if the observation $31$ is removed.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Proof (Zero Calculus — Pure Triangle Inequality):</strong></p>
+            <p>Recall that for any two real numbers $a \lt b$, $|k - a| + |k - b| \ge |(k - a) - (k - b)| = b - a$, with
+                equality <strong>if and only if</strong> $k \in [a, b]$. Pair the $7$ sorted points symmetrically from
+                the outside in:</p>
+            <ul>
+                <li>$|k - 3| + |k - 31| \ge 31 - 3 = 28$ &nbsp; (equality iff $k \in [3, 31]$)</li>
+                <li>$|k - 7| + |k - 26| \ge 26 - 7 = 19$ &nbsp; (equality iff $k \in [7, 26]$)</li>
+                <li>$|k - 10| + |k - 19| \ge 19 - 10 = 9$ &nbsp; (equality iff $k \in [10, 19]$)</li>
+                <li>Unpaired center term: $|k - 14| \ge 0$ &nbsp; (equality iff $k = 14$)</li>
+            </ul>
+            <p>Adding all four inequalities gives $S(k) \ge 28 + 19 + 9 + 0 = \mathbf{56}$. Because $k = 14$
+                simultaneously belongs to $[3, 31]$, $[7, 26]$, $[10, 19]$, and $\{14\}$, equality is achieved uniquely
+                at the Median $\mathbf{k = 14}$, yielding:</p>
+            $$ S_{\min} = \mathbf{56}, \qquad \text{MD}(M) = \frac{56}{7} = \mathbf{8} $$
+            <p><strong>If $31$ Is Removed ($n = 6$ Even Case):</strong> Pairing $\{3, 7, 10, 14, 19, 26\}$ yields
+                $(26-3) + (19-7) + (14-10) = 23 + 12 + 4 = 39$, attained simultaneously for <em>every</em> real number
+                in the closed middle interval $\mathbf{k \in [10, 14]}$ (giving $\text{MD}(M) = \frac{39}{6} = 6.5$).
+            </p>
+            <div class="shortcut-box">
+                <strong>30-Second BEST Exam Shortcut:</strong> To minimize $\sum_{i=1}^{n}|k - x_i|$ for sorted data,
+                NEVER open absolute values case-by-case! Set $k$ equal to the <strong>Median</strong> (unique middle
+                value if $n$ is odd; entire closed interval $[x_{n/2},\; x_{n/2+1}]$ if $n$ is even), and compute
+                $S_{\min}$ instantly as $(\text{Sum of upper half}) - (\text{Sum of lower half})$: $(19 + 26 + 31) - (3
+                + 7 + 10) = 76 - 20 = \mathbf{56}$!
+            </div>
+        </div>
+    </div>
+
+</article>

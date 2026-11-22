@@ -1,0 +1,1323 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 14: Trigonometry, Identities, Compound Angles &amp; Max/Min Bounds">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 2: Mathematics (Paper 1) &bull; Chapter 14 &bull; Target Study Time: 7 Hours
+        </div>
+        <h1>Trigonometry, Identities, Compound Angles &amp; Max/Min Bounds</h1>
+        <p>From Euclidean AA-similarity foundations and Pythagorean power-identities to Resonance/Olympiad bridges:
+            unit-circle allied reductions, compound and double-angle cascades, auxiliary-angle bounds, and AM-GM
+            extrema.</p>
+        <div class="tag-row">
+            <span class="meta-pill">BEST Paper 1 Core</span>
+            <span class="meta-pill">NTSE Stage 2 &bull; IOQM-Lite</span>
+            <span class="meta-pill">Resonance Class 11 Bridge</span>
+            <span class="meta-pill">Part 1 of 3: Theory &amp; Worked Examples</span>
+        </div>
+    </header>
+
+    <!-- =========================================================
+       SECTION 14.1: TRIGONOMETRIC RATIOS OF ACUTE ANGLES
+       ========================================================= -->
+    <h2 class="section-heading">14.1 Trigonometric Ratios of Acute Angles: First Principles &amp; Standard Values</h2>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Proof &bull; Well-Definedness via AA Similarity</span>
+        <p>Why does $\sin 30^\circ$ equal $\frac{1}{2}$ in <em>every</em> right-angled triangle containing a $30^\circ$
+            angle, regardless of whether the hypotenuse is $2\text{ cm}$ or $200\text{ km}$? Trigonometry exists as a
+            consistent function of an angle $\theta \in (0^\circ, 90^\circ)$ strictly because of <strong>AA
+                Similarity</strong>.</p>
+        <p><strong>Proof:</strong> Let $\angle XOY = \theta$ be any acute angle. Pick any three distinct points $B, D,
+            F$ on the terminal ray $OY$, and drop perpendiculars $BA \perp OX$, $DC \perp OX$, and $FE \perp OX$.
+            Consider $\triangle OAB$, $\triangle OCD$, and $\triangle OEF$:</p>
+        <ol>
+            <li>$\angle AOB = \angle COD = \angle EOF = \theta$ (common acute angle).</li>
+            <li>$\angle OAB = \angle OCD = \angle OEF = 90^\circ$ (by construction).</li>
+        </ol>
+        <p>By the <strong>AA Similarity Criterion</strong>, $\triangle OAB \sim \triangle OCD \sim \triangle OEF$.
+            Therefore, the ratios of corresponding sides are invariant across all triangle sizes:</p>
+        $$ \frac{BA}{OB} = \frac{DC}{OD} = \frac{FE}{OF} = \sin\theta, \qquad \frac{OA}{OB} = \frac{OC}{OD} =
+        \frac{OE}{OF} = \cos\theta, \qquad \frac{BA}{OA} = \frac{DC}{OC} = \frac{FE}{OE} = \tan\theta $$
+        <p>Thus, every trigonometric ratio depends <strong>solely on the angle $\theta$</strong> and is completely
+            independent of the scale of the right triangle.</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 540 250" width="100%" role="img"
+            aria-label="Nested right triangles illustrating AA similarity for trigonometric ratios">
+            <defs>
+                <marker id="arrow-axis" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b" />
+                </marker>
+            </defs>
+            <!-- Shaded nested triangles -->
+            <polygon points="50,210 470,210 470,21" fill="#eff6ff" opacity="0.65" />
+            <polygon points="50,210 330,210 330,84" fill="#dbeafe" opacity="0.7" />
+            <polygon points="50,210 190,210 190,147" fill="#bfdbfe" opacity="0.75" />
+
+            <!-- Rays OX and OY -->
+            <line x1="50" y1="210" x2="512" y2="210" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow-axis)" />
+            <line x1="50" y1="210" x2="495" y2="10" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow-axis)" />
+
+            <!-- Perpendiculars -->
+            <line x1="190" y1="210" x2="190" y2="147" stroke="#2563eb" stroke-width="2" />
+            <line x1="330" y1="210" x2="330" y2="84" stroke="#059669" stroke-width="2" />
+            <line x1="470" y1="210" x2="470" y2="21" stroke="#dc2626" stroke-width="2" />
+
+            <!-- Right angle squares -->
+            <polyline points="178,210 178,198 190,198" fill="none" stroke="#2563eb" stroke-width="1.5" />
+            <polyline points="318,210 318,198 330,198" fill="none" stroke="#059669" stroke-width="1.5" />
+            <polyline points="458,210 458,198 470,198" fill="none" stroke="#dc2626" stroke-width="1.5" />
+
+            <!-- Angle arc at O -->
+            <path d="M 102,210 A 52,52 0 0 0 97.4,188.7" fill="none" stroke="#d97706" stroke-width="2.2" />
+            <text x="111" y="201" font-family="Georgia, serif" font-style="italic" font-size="16" font-weight="bold"
+                fill="#b45309">θ</text>
+
+            <!-- Vertex points -->
+            <circle cx="50" cy="210" r="3.5" fill="#1e293b" />
+            <circle cx="190" cy="147" r="3.5" fill="#2563eb" />
+            <circle cx="330" cy="84" r="3.5" fill="#059669" />
+            <circle cx="470" cy="21" r="3.5" fill="#dc2626" />
+
+            <!-- Vertex labels -->
+            <text x="34" y="218" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#1e293b">O</text>
+            <text x="517" y="214" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#1e293b">X</text>
+            <text x="500" y="16" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#1e293b">Y</text>
+
+            <text x="185" y="229" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#2563eb">A</text>
+            <text x="176" y="139" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#2563eb">B</text>
+
+            <text x="325" y="229" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#059669">C</text>
+            <text x="316" y="75" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#059669">D</text>
+
+            <text x="465" y="229" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#dc2626">E</text>
+            <text x="454" y="15" font-family="system-ui, sans-serif" font-size="13" font-weight="700"
+                fill="#dc2626">F</text>
+
+            <!-- Callout box -->
+            <rect x="26" y="22" width="218" height="62" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="38" y="42" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#1e293b">△OAB ~ △OCD ~ △OEF (AA)</text>
+            <text x="38" y="61" font-family="system-ui, sans-serif" font-size="11.5" fill="#334155">BA / OB = DC / OD =
+                FE / OF = sin θ</text>
+            <text x="38" y="76" font-family="system-ui, sans-serif" font-size="10.5" fill="#64748b">Ratio depends ONLY
+                on angle θ</text>
+        </svg>
+        <div class="diagram-caption">Figure 14.1: AA similarity guarantees that trigonometric ratios are scale-invariant
+            functions of the acute angle $\theta$.</div>
+    </div>
+
+    <h3>The Six Trigonometric Ratios &amp; Strict Acute-Angle Bounds</h3>
+    <p>In a right-angled triangle with respect to acute angle $\theta$, let $p$ denote the <strong>perpendicular
+            (opposite)</strong>, $b$ the <strong>base (adjacent)</strong>, and $h$ the <strong>hypotenuse</strong>,
+        where $h = \sqrt{p^2 + b^2} \gt p \gt 0$ and $h \gt b \gt 0$:</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Ratio</th>
+                <th>Side Definition</th>
+                <th>Reciprocal / Quotient Form</th>
+                <th>Strict Acute-Angle Range ($0^\circ \lt \theta \lt 90^\circ$)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$\sin\theta$</td>
+                <td>$\dfrac{p}{h}$</td>
+                <td>$\dfrac{1}{\csc\theta}$</td>
+                <td>$0 \lt \sin\theta \lt 1$ (strictly increasing)</td>
+            </tr>
+            <tr>
+                <td>$\cos\theta$</td>
+                <td>$\dfrac{b}{h}$</td>
+                <td>$\dfrac{1}{\sec\theta}$</td>
+                <td>$0 \lt \cos\theta \lt 1$ (strictly decreasing)</td>
+            </tr>
+            <tr>
+                <td>$\tan\theta$</td>
+                <td>$\dfrac{p}{b}$</td>
+                <td>$\dfrac{\sin\theta}{\cos\theta} = \dfrac{1}{\cot\theta}$</td>
+                <td>$0 \lt \tan\theta \lt \infty$ (strictly increasing)</td>
+            </tr>
+            <tr>
+                <td>$\csc\theta$</td>
+                <td>$\dfrac{h}{p}$</td>
+                <td>$\dfrac{1}{\sin\theta}$</td>
+                <td>$1 \lt \csc\theta \lt \infty$ (strictly decreasing)</td>
+            </tr>
+            <tr>
+                <td>$\sec\theta$</td>
+                <td>$\dfrac{h}{b}$</td>
+                <td>$\dfrac{1}{\cos\theta}$</td>
+                <td>$1 \lt \sec\theta \lt \infty$ (strictly increasing)</td>
+            </tr>
+            <tr>
+                <td>$\cot\theta$</td>
+                <td>$\dfrac{b}{p}$</td>
+                <td>$\dfrac{\cos\theta}{\sin\theta} = \dfrac{1}{\tan\theta}$</td>
+                <td>$0 \lt \cot\theta \lt \infty$ (strictly decreasing)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <span class="box-label">Critical Exam Filter &bull; Impossible Acute Values</span>
+        <p>Because the hypotenuse is strictly the longest side ($h \gt p$ and $h \gt b$), for any real acute angle
+            $\theta$: $\sin\theta$ and $\cos\theta$ can <strong>never</strong> exceed $1$, while $\sec\theta$ and
+            $\csc\theta$ can <strong>never</strong> lie strictly between $0$ and $1$. For example, if a quadratic yields
+            $\sin\theta = \frac{5}{4}$ or $\sec\theta = \frac{2}{3}$, that root is immediately extraneous and must be
+            rejected. Also note: $\sin\theta$ is a function of $\theta$, <strong>not</strong> a product $\sin \times
+            \theta$, and $\sin^2\theta$ means $(\sin\theta)^2$, whereas $\sin\theta^2$ means $\sin(\theta^2)$.</p>
+    </div>
+
+    <h3>First-Principles Derivation of Standard Reference Angles ($0^\circ, 30^\circ, 45^\circ, 60^\circ, 90^\circ$)
+    </h3>
+    <ul>
+        <li><strong>$30^\circ$ and $60^\circ$ (Bisected Equilateral Triangle):</strong> Take an equilateral $\triangle
+            PQR$ of side $2a$ ($a \gt 0$). Drop the altitude $PM \perp QR$. By RHS congruence, $M$ bisects $QR$ (so $MR
+            = a$) and $PM$ bisects $\angle QPR$ (so $\angle MPR = 30^\circ$, $\angle MRP = 60^\circ$). By Pythagoras,
+            $PM = \sqrt{(2a)^2 - a^2} = a\sqrt{3}$. Reading directly off $\triangle PMR$ gives $\sin 30^\circ =
+            \frac{a}{2a} = \frac{1}{2}$, $\cos 30^\circ = \frac{a\sqrt{3}}{2a} = \frac{\sqrt{3}}{2}$, $\sin 60^\circ =
+            \frac{\sqrt{3}}{2}$, and $\cos 60^\circ = \frac{1}{2}$.</li>
+        <li><strong>$45^\circ$ (Isosceles Right Triangle):</strong> Take right $\triangle ABC$ right-angled at $C$ with
+            $AC = BC = a$. Then $\angle A = \angle B = 45^\circ$ and $AB = \sqrt{a^2 + a^2} = a\sqrt{2}$. Hence $\sin
+            45^\circ = \cos 45^\circ = \frac{a}{a\sqrt{2}} = \frac{1}{\sqrt{2}}$ and $\tan 45^\circ = 1$.</li>
+        <li><strong>Boundary Angles $0^\circ$ and $90^\circ$ (Limiting Degeneracy):</strong> Keeping hypotenuse $h$
+            fixed: as $\theta \to 0^\circ$, $p \to 0$ and $b \to h$, giving $\sin 0^\circ = 0$, $\cos 0^\circ = 1$,
+            $\tan 0^\circ = 0$, while $\csc 0^\circ = \frac{h}{0}$ and $\cot 0^\circ = \frac{b}{0}$ are
+            <strong>undefined</strong>. Conversely, as $\theta \to 90^\circ$, $b \to 0$ and $p \to h$, giving $\sin
+            90^\circ = 1$, $\cos 90^\circ = 0$, $\cot 90^\circ = 0$, while $\tan 90^\circ = \frac{p}{0}$ and $\sec
+            90^\circ = \frac{h}{0}$ are <strong>undefined</strong>.
+        </li>
+    </ul>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 600 250" width="100%" role="img"
+            aria-label="30-60-90 and 45-45-90 standard reference triangles">
+            <!-- Left: 30-60-90 from Equilateral Triangle -->
+            <text x="150" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13"
+                font-weight="700" fill="#1e293b">30°–60°–90° Reference (Bisected Equilateral)</text>
+            <!-- Left dashed half -->
+            <polygon points="150,42 60,198 150,198" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"
+                stroke-dasharray="5,4" />
+            <!-- Right highlighted half -->
+            <polygon points="150,42 150,198 240,198" fill="#dbeafe" stroke="#2563eb" stroke-width="2.2" />
+            <!-- Right angle marker at M -->
+            <polyline points="150,185 163,185 163,198" fill="none" stroke="#2563eb" stroke-width="1.5" />
+            <!-- Angle arcs -->
+            <path d="M 150,74 A 32,32 0 0 0 166,69.7" fill="none" stroke="#d97706" stroke-width="1.8" />
+            <text x="155" y="90" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#b45309">30°</text>
+            <path d="M 214,198 A 26,26 0 0 1 227,175.5" fill="none" stroke="#dc2626" stroke-width="1.8" />
+            <text x="196" y="184" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#dc2626">60°</text>
+            <!-- Vertices -->
+            <text x="146" y="36" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1e293b">P</text>
+            <text x="47" y="208" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#64748b">Q</text>
+            <text x="145" y="216" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#2563eb">M</text>
+            <text x="245" y="208" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#2563eb">R</text>
+            <!-- Side lengths -->
+            <text x="137" y="132" text-anchor="end" font-family="Georgia, serif" font-size="13" font-weight="bold"
+                fill="#1e40af">a√3</text>
+            <text x="195" y="216" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold"
+                fill="#1e40af">a</text>
+            <text x="206" y="114" font-family="Georgia, serif" font-size="13" font-weight="bold"
+                fill="#1e40af">2a</text>
+            <text x="90" y="114" font-family="Georgia, serif" font-size="12" fill="#64748b">2a</text>
+            <text x="105" y="214" text-anchor="middle" font-family="Georgia, serif" font-size="12"
+                fill="#64748b">a</text>
+            <!-- Ratio summary -->
+            <text x="150" y="238" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="600" fill="#475569">Sides opposite (30° : 60° : 90°) = 1 : √3 : 2</text>
+
+            <!-- Divider -->
+            <line x1="305" y1="22" x2="305" y2="236" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4,4" />
+
+            <!-- Right: 45-45-90 Isosceles Right Triangle -->
+            <text x="455" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13"
+                font-weight="700" fill="#1e293b">45°–45°–90° Reference (Isosceles Right)</text>
+            <polygon points="375,48 375,198 525,198" fill="#d1fae5" stroke="#059669" stroke-width="2.2" />
+            <!-- Right angle marker at C -->
+            <polyline points="375,184 389,184 389,198" fill="none" stroke="#059669" stroke-width="1.5" />
+            <!-- Angle arcs -->
+            <path d="M 375,80 A 32,32 0 0 0 397.6,70.6" fill="none" stroke="#d97706" stroke-width="1.8" />
+            <text x="383" y="96" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#b45309">45°</text>
+            <path d="M 493,198 A 32,32 0 0 1 502.4,175.4" fill="none" stroke="#d97706" stroke-width="1.8" />
+            <text x="470" y="187" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#b45309">45°</text>
+            <!-- Vertices -->
+            <text x="366" y="42" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#065f46">A</text>
+            <text x="360" y="210" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#065f46">C</text>
+            <text x="530" y="208" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#065f46">B</text>
+            <!-- Side lengths -->
+            <text x="362" y="128" text-anchor="end" font-family="Georgia, serif" font-size="13" font-weight="bold"
+                fill="#065f46">a</text>
+            <text x="450" y="216" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold"
+                fill="#065f46">a</text>
+            <text x="462" y="114" font-family="Georgia, serif" font-size="13" font-weight="bold"
+                fill="#065f46">a√2</text>
+            <!-- Equal side ticks -->
+            <line x1="369" y1="123" x2="381" y2="123" stroke="#059669" stroke-width="1.6" />
+            <line x1="450" y1="192" x2="450" y2="204" stroke="#059669" stroke-width="1.6" />
+            <!-- Ratio summary -->
+            <text x="455" y="238" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="600" fill="#475569">Sides opposite (45° : 45° : 90°) = 1 : 1 : √2</text>
+        </svg>
+        <div class="diagram-caption">Figure 14.2: Exact side-ratio triangles generating all standard Class 10
+            trigonometric values without memorization errors.</div>
+    </div>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Ratio $\backslash$ Angle</th>
+                <th>$0^\circ$ ($0$)</th>
+                <th>$30^\circ$ ($\frac{\pi}{6}$)</th>
+                <th>$45^\circ$ ($\frac{\pi}{4}$)</th>
+                <th>$60^\circ$ ($\frac{\pi}{3}$)</th>
+                <th>$90^\circ$ ($\frac{\pi}{2}$)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$\sin\theta$</td>
+                <td>$0$</td>
+                <td>$\dfrac{1}{2}$</td>
+                <td>$\dfrac{1}{\sqrt{2}}$</td>
+                <td>$\dfrac{\sqrt{3}}{2}$</td>
+                <td>$1$</td>
+            </tr>
+            <tr>
+                <td>$\cos\theta$</td>
+                <td>$1$</td>
+                <td>$\dfrac{\sqrt{3}}{2}$</td>
+                <td>$\dfrac{1}{\sqrt{2}}$</td>
+                <td>$\dfrac{1}{2}$</td>
+                <td>$0$</td>
+            </tr>
+            <tr>
+                <td>$\tan\theta$</td>
+                <td>$0$</td>
+                <td>$\dfrac{1}{\sqrt{3}}$</td>
+                <td>$1$</td>
+                <td>$\sqrt{3}$</td>
+                <td>Undefined</td>
+            </tr>
+            <tr>
+                <td>$\csc\theta$</td>
+                <td>Undefined</td>
+                <td>$2$</td>
+                <td>$\sqrt{2}$</td>
+                <td>$\dfrac{2}{\sqrt{3}}$</td>
+                <td>$1$</td>
+            </tr>
+            <tr>
+                <td>$\sec\theta$</td>
+                <td>$1$</td>
+                <td>$\dfrac{2}{\sqrt{3}}$</td>
+                <td>$\sqrt{2}$</td>
+                <td>$2$</td>
+                <td>Undefined</td>
+            </tr>
+            <tr>
+                <td>$\cot\theta$</td>
+                <td>Undefined</td>
+                <td>$\sqrt{3}$</td>
+                <td>$1$</td>
+                <td>$\dfrac{1}{\sqrt{3}}$</td>
+                <td>$0$</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Complementary Angle Identities &amp; Converting Between Ratios</h3>
+    <p>In right $\triangle ABC$ with $\angle B = 90^\circ$ and $\angle A = \theta$, the remaining acute angle is $\angle
+        C = 90^\circ - \theta$. The side opposite to $\theta$ ($BC$) is automatically the side adjacent to $90^\circ -
+        \theta$, and vice versa. This directly yields the <strong>three co-function pairs</strong>:</p>
+    $$ \sin(90^\circ - \theta) = \cos\theta, \qquad \cos(90^\circ - \theta) = \sin\theta $$
+    $$ \tan(90^\circ - \theta) = \cot\theta, \qquad \cot(90^\circ - \theta) = \tan\theta $$
+    $$ \sec(90^\circ - \theta) = \csc\theta, \qquad \csc(90^\circ - \theta) = \sec\theta $$
+
+    <div class="concept-box">
+        <span class="box-label">Core Technique &bull; Expressing Any Ratio in Terms of Another</span>
+        <p><strong>Standard Problem Pattern:</strong> Given $\cos\theta = \dfrac{a}{b}$ (where $0 \lt a \lt b$ and
+            $\theta$ is acute), find $\csc\theta + \cot\theta$.</p>
+        <p><strong>Method (Scale-Factor Right Triangle):</strong> Set base $B = ak$ and hypotenuse $H = bk$ ($k \gt 0$).
+            By Pythagoras, the perpendicular is $P = \sqrt{b^2k^2 - a^2k^2} = k\sqrt{b^2 - a^2}$. Then:</p>
+        $$ \csc\theta + \cot\theta = \frac{H}{P} + \frac{B}{P} = \frac{bk + ak}{k\sqrt{b^2 - a^2}} = \frac{b +
+        a}{\sqrt{(b - a)(b + a)}} = \sqrt{\frac{b + a}{b - a}} $$
+        <p><em>Always</em> simplify radicals by factoring differences of squares ($b^2 - a^2 = (b-a)(b+a)$) and verify
+            $b - a \gt 0$ so the denominator is strictly positive.</p>
+    </div>
+
+    <!-- =========================================================
+       SECTION 14.2: FUNDAMENTAL IDENTITIES & ALGEBRAIC WEAPONS
+       ========================================================= -->
+    <h2 class="section-heading">14.2 Fundamental Identities &amp; Algebraic Power Weapons</h2>
+
+    <div class="concept-box">
+        <span class="box-label">The Three Pythagorean Identities &amp; Exact Domain Restrictions</span>
+        <p>In any right triangle with sides $p, b, h$, Pythagoras gives $p^2 + b^2 = h^2$. Dividing sequentially by
+            $h^2$, $b^2$, and $p^2$ yields:</p>
+        <ol>
+            <li><strong>Divide by $h^2$:</strong> $\left(\frac{p}{h}\right)^2 + \left(\frac{b}{h}\right)^2 = 1 \implies
+                \mathbf{\sin^2\theta + \cos^2\theta = 1}$ &nbsp; (valid for <em>all</em> $\theta \in \mathbb{R}$).</li>
+            <li><strong>Divide by $b^2$ ($\cos\theta \neq 0$):</strong> $\left(\frac{p}{b}\right)^2 + 1 =
+                \left(\frac{h}{b}\right)^2 \implies \mathbf{1 + \tan^2\theta = \sec^2\theta \iff \sec^2\theta -
+                \tan^2\theta = 1}$ &nbsp; (valid for $\theta \neq (2n+1)90^\circ$).</li>
+            <li><strong>Divide by $p^2$ ($\sin\theta \neq 0$):</strong> $1 + \left(\frac{b}{p}\right)^2 =
+                \left(\frac{h}{p}\right)^2 \implies \mathbf{1 + \cot^2\theta = \csc^2\theta \iff \csc^2\theta -
+                \cot^2\theta = 1}$ &nbsp; (valid for $\theta \neq n \cdot 180^\circ$).</li>
+        </ol>
+        <p><strong>Immediate Higher-Order Power Weapons (derived via $x^2+y^2 = (x+y)^2 - 2xy$ and $x^3+y^3 = (x+y)^3 -
+                3xy(x+y)$ with $x = \sin^2\theta, y = \cos^2\theta$):</strong></p>
+        $$ \sin^4\theta + \cos^4\theta = 1 - 2\sin^2\theta\cos^2\theta, \qquad \sin^6\theta + \cos^6\theta = 1 -
+        3\sin^2\theta\cos^2\theta $$
+        $$ \sec^4\theta - \tan^4\theta = (\sec^2\theta - \tan^2\theta)(\sec^2\theta + \tan^2\theta) = \sec^2\theta +
+        \tan^2\theta = 1 + 2\tan^2\theta $$
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance Weapon 1 &bull; The Reciprocal Conjugate Pair Shortcut</span>
+        <p>Because $\sec^2\theta - \tan^2\theta = 1$ factors as $(\sec\theta + \tan\theta)(\sec\theta - \tan\theta) =
+            1$, the two quantities $\sec\theta + \tan\theta$ and $\sec\theta - \tan\theta$ are <strong>exact
+                multiplicative reciprocals</strong> (whenever $\cos\theta \neq 0$):</p>
+        $$ \sec\theta + \tan\theta = p \iff \sec\theta - \tan\theta = \frac{1}{p} \qquad (p \neq 0) $$
+        <p>Adding and subtracting these two linear equations solves for every trigonometric ratio in two lines:</p>
+        $$ \sec\theta = \frac{p^2 + 1}{2p}, \qquad \tan\theta = \frac{p^2 - 1}{2p}, \qquad \cos\theta = \frac{2p}{p^2 +
+        1}, \qquad \sin\theta = \frac{\tan\theta}{\sec\theta} = \frac{p^2 - 1}{p^2 + 1} $$
+        <p><strong>Twin Identity for Cosecant–Cotangent</strong> (whenever $\sin\theta \neq 0$): Since $(\csc\theta +
+            \cot\theta)(\csc\theta - \cot\theta) = 1$,</p>
+        $$ \csc\theta + \cot\theta = q \iff \csc\theta - \cot\theta = \frac{1}{q} \implies \csc\theta = \frac{q^2 +
+        1}{2q}, \quad \cot\theta = \frac{q^2 - 1}{2q}, \quad \cos\theta = \frac{q^2 - 1}{q^2 + 1} $$
+        <p><em>Olympiad Sightline:</em> Whenever an exam problem shows $p^2 - 1$, $p^2 + 1$, and $2p$, recognize the
+            Pythagorean triple $(p^2 - 1,\; 2p,\; p^2 + 1)$ immediately!</p>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance Weapon 2 &bull; The Orthogonal Pair Identity</span>
+        <p><strong>Theorem:</strong> If $a\sin\theta + b\cos\theta = c$, then swapping coefficients and flipping the
+            interior sign produces:</p>
+        $$ a\cos\theta - b\sin\theta = \pm\sqrt{a^2 + b^2 - c^2} $$
+        <p><strong>First-Principles Proof:</strong> Let $k = a\cos\theta - b\sin\theta$. Square both equations and add:
+        </p>
+        $$ (a\sin\theta + b\cos\theta)^2 + (a\cos\theta - b\sin\theta)^2 = c^2 + k^2 $$
+        $$ \left(a^2\sin^2\theta + b^2\cos^2\theta + 2ab\sin\theta\cos\theta\right) + \left(a^2\cos^2\theta +
+        b^2\sin^2\theta - 2ab\sin\theta\cos\theta\right) = c^2 + k^2 $$
+        <p>The cross-terms $\pm 2ab\sin\theta\cos\theta$ annihilate identically, leaving:</p>
+        $$ a^2(\sin^2\theta + \cos^2\theta) + b^2(\cos^2\theta + \sin^2\theta) = c^2 + k^2 \implies a^2 + b^2 = c^2 +
+        k^2 \implies k = \pm\sqrt{a^2 + b^2 - c^2} $$
+        <p><strong>Hidden Bonus:</strong> Because $k^2 = a^2 + b^2 - c^2 \ge 0$ for every real $\theta$, this single
+            proof simultaneously proves $c^2 \le a^2 + b^2$, i.e., $|a\sin\theta + b\cos\theta| \le \sqrt{a^2 + b^2}$!
+        </p>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Weapons 3 &amp; 4 &bull; Eliminating $\theta$ (Eliminants) &amp; MCQ Value-Substitution
+            Protocol</span>
+        <p><strong>Weapon 3 — Eliminating $\theta$ from Two Equations:</strong> To produce an algebraic relation free of
+            $\theta$, isolate two ratios linked by a Pythagorean identity and substitute:</p>
+        <ul>
+            <li><strong>Template A ($\sin/\cos$):</strong> $x = h + a\cos\theta,\; y = k + b\sin\theta \implies
+                \left(\dfrac{x-h}{a}\right)^2 + \left(\dfrac{y-k}{b}\right)^2 = 1$.</li>
+            <li><strong>Template B ($\sec/\tan$):</strong> $x = a\sec\theta + b\tan\theta,\; y = a\tan\theta +
+                b\sec\theta \implies x^2 - y^2 = a^2 - b^2$.</li>
+            <li><strong>Template C ($\cot\pm\cos$ classic NTSE/IOQM):</strong> If $\cot\theta + \cos\theta = m$ and
+                $\cot\theta - \cos\theta = n$, then $m^2 - n^2 = (m+n)(m-n) = (2\cot\theta)(2\cos\theta) =
+                4\cot\theta\cos\theta$, while $mn = \cot^2\theta - \cos^2\theta =
+                \cos^2\theta\left(\frac{1}{\sin^2\theta} - 1\right) = \cos^2\theta\cot^2\theta$. Therefore $\mathbf{(m^2
+                - n^2)^2 = 16mn}$.</li>
+        </ul>
+        <p><strong>Weapon 4 — Strategic Value-Substitution Checks (MCQs Only):</strong> When an MCQ asks to simplify an
+            identity valid for all $\theta$ in its domain, test a clean non-singular angle:</p>
+        <ol>
+            <li><strong>First choice: $\theta = 45^\circ$</strong> (since $\tan 45^\circ = \cot 45^\circ = 1$, $\sin
+                45^\circ = \cos 45^\circ = \frac{1}{\sqrt{2}}$, $\sec 45^\circ = \csc 45^\circ = \sqrt{2}$).</li>
+            <li><strong>Domain Guard:</strong> NEVER plug in an angle that makes any denominator zero! For example, if
+                $(1 - \tan\theta)$ or $(\sin\theta - \cos\theta)$ appears in a denominator, $\theta = 45^\circ$ is
+                illegal—switch to $\theta = 30^\circ$ or $\theta = 60^\circ$.</li>
+            <li><strong>Tie-Breaker Rule:</strong> If two MCQ options give the same numerical value at $\theta =
+                45^\circ$ (e.g., $\sin^2\theta$ and $\cos^2\theta$ both give $\frac{1}{2}$), immediately run a second
+                check at $\theta = 30^\circ$ to split them.</li>
+        </ol>
+    </div>
+
+    <!-- =========================================================
+       SECTION 14.3: RADIAN MEASURE, UNIT CIRCLE & ALLIED ANGLES
+       ========================================================= -->
+    <h2 class="section-heading">14.3 Out-of-Portion Bridge: Radian Measure, Unit Circle &amp; Allied Angles</h2>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance Bridge &bull; Radian Measure &amp; Unit Circle Coordinates</span>
+        <p><strong>Radian Definition:</strong> One radian ($1\text{ rad}$) is the angle subtended at the center of a
+            circle of radius $r$ by an arc of length $\ell = r$. In general, $\theta\text{ (in radians)} =
+            \dfrac{\ell}{r}$. Since a full circle has circumference $2\pi r$, one complete revolution is $2\pi\text{
+            rad} = 360^\circ$, giving the master conversion bridge:</p>
+        $$ \pi\text{ rad} = 180^\circ \implies 1^\circ = \frac{\pi}{180}\text{ rad}, \qquad 1\text{ rad} =
+        \frac{180^\circ}{\pi} \approx 57.2958^\circ $$
+        <p><strong>Unit Circle Extension Beyond $90^\circ$:</strong> Place a circle of radius $r = 1$ centered at the
+            origin $O(0,0)$. Rotate the positive $x$-axis counterclockwise by any real angle $\theta$ (clockwise if
+            $\theta \lt 0$) to locate a unique terminal point $P(x, y)$ on the circle $x^2 + y^2 = 1$. We
+            <strong>define</strong>:
+        </p>
+        $$ \cos\theta = x, \qquad \sin\theta = y, \qquad \tan\theta = \frac{y}{x} \; (x \neq 0) $$
+        <p>This seamlessly extends trigonometry to all real angles $\theta \in (-\infty, +\infty)$, preserves
+            $\cos^2\theta + \sin^2\theta = x^2 + y^2 = 1$ everywhere, and establishes the <strong>ASTC Quadrant Sign
+                Rule</strong> from the signs of $(x, y)$ in each quadrant.</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 580 330" width="100%" role="img"
+            aria-label="Unit circle showing coordinates (cos theta, sin theta) and ASTC quadrant sign chart">
+            <defs>
+                <marker id="uc-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+                </marker>
+            </defs>
+
+            <!-- LEFT PANEL: UNIT CIRCLE -->
+            <text x="165" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13"
+                font-weight="700" fill="#1e293b">Unit Circle: P(θ) = (cos θ, sin θ)</text>
+
+            <!-- Axes -->
+            <line x1="25" y1="175" x2="305" y2="175" stroke="#64748b" stroke-width="1.5" marker-end="url(#uc-arrow)" />
+            <line x1="165" y1="315" x2="165" y2="35" stroke="#64748b" stroke-width="1.5" marker-end="url(#uc-arrow)" />
+            <text x="311" y="179" font-family="Georgia, serif" font-style="italic" font-size="13"
+                fill="#475569">x</text>
+            <text x="172" y="39" font-family="Georgia, serif" font-style="italic" font-size="13" fill="#475569">y</text>
+
+            <!-- Circle (r = 108) -->
+            <circle cx="165" cy="175" r="108" fill="#f8fafc" fill-opacity="0.45" stroke="#2563eb" stroke-width="2" />
+
+            <!-- Shaded triangle for theta = 38 deg: cos=0.788 -> +85.1, sin=0.616 -> -66.5 -->
+            <polygon points="165,175 250,175 250,108.5" fill="#dbeafe" opacity="0.8" />
+            <line x1="165" y1="175" x2="250" y2="108.5" stroke="#1e293b" stroke-width="2.2" />
+            <line x1="250" y1="175" x2="250" y2="108.5" stroke="#dc2626" stroke-width="2" />
+            <line x1="165" y1="175" x2="250" y2="175" stroke="#059669" stroke-width="2.2" />
+            <polyline points="239,175 239,164 250,164" fill="none" stroke="#475569" stroke-width="1.2" />
+
+            <!-- Angle arc -->
+            <path d="M 200,175 A 35,35 0 0 0 192.6,153.4" fill="none" stroke="#d97706" stroke-width="2" />
+            <text x="204" y="166" font-family="Georgia, serif" font-style="italic" font-size="14" font-weight="bold"
+                fill="#b45309">θ</text>
+
+            <!-- Point P -->
+            <circle cx="250" cy="108.5" r="4" fill="#dc2626" />
+            <text x="255" y="100" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#1e293b">P(cos θ, sin θ)</text>
+            <text x="200" y="135" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#1e293b">r = 1</text>
+            <text x="207" y="191" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#059669">cos θ</text>
+            <text x="256" y="146" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#dc2626">sin θ</text>
+
+            <!-- Cardinal coordinates -->
+            <circle cx="273" cy="175" r="3" fill="#2563eb" />
+            <text x="278" y="168" font-family="system-ui, sans-serif" font-size="10" fill="#334155">(1, 0)</text>
+            <circle cx="165" cy="67" r="3" fill="#2563eb" />
+            <text x="172" y="61" font-family="system-ui, sans-serif" font-size="10" fill="#334155">(0, 1) • 90°</text>
+            <circle cx="57" cy="175" r="3" fill="#2563eb" />
+            <text x="12" y="166" font-family="system-ui, sans-serif" font-size="10" fill="#334155">(−1, 0)</text>
+            <text x="20" y="191" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">180° (π)</text>
+            <circle cx="165" cy="283" r="3" fill="#2563eb" />
+            <text x="172" y="297" font-family="system-ui, sans-serif" font-size="10" fill="#334155">(0, −1) •
+                270°</text>
+
+            <!-- Divider -->
+            <line x1="334" y1="22" x2="334" y2="314" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4,4" />
+
+            <!-- RIGHT PANEL: ASTC CHART -->
+            <text x="458" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13"
+                font-weight="700" fill="#1e293b">ASTC Quadrant Sign Chart</text>
+
+            <!-- Quadrant Boxes -->
+            <!-- Q-II (top-left) -->
+            <rect x="352" y="45" width="102" height="118" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.4" />
+            <text x="403" y="67" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="800" fill="#b45309">Q-II (90°–180°)</text>
+            <text x="403" y="96" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22"
+                font-weight="800" fill="#d97706">S</text>
+            <text x="403" y="117" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#78350f">sin, csc &gt; 0</text>
+            <text x="403" y="135" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                fill="#92400e">x &lt; 0, y &gt; 0</text>
+            <text x="403" y="152" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="600" fill="#b45309">180° − θ</text>
+
+            <!-- Q-I (top-right) -->
+            <rect x="462" y="45" width="102" height="118" rx="6" fill="#d1fae5" stroke="#10b981" stroke-width="1.4" />
+            <text x="513" y="67" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="800" fill="#065f46">Q-I (0°–90°)</text>
+            <text x="513" y="96" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22"
+                font-weight="800" fill="#059669">A</text>
+            <text x="513" y="117" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#064e3b">All 6 ratios &gt; 0</text>
+            <text x="513" y="135" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                fill="#047857">x &gt; 0, y &gt; 0</text>
+            <text x="513" y="152" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="600" fill="#065f46">θ</text>
+
+            <!-- Q-III (bottom-left) -->
+            <rect x="352" y="171" width="102" height="118" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.4" />
+            <text x="403" y="193" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="800" fill="#1e40af">Q-III (180°–270°)</text>
+            <text x="403" y="222" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22"
+                font-weight="800" fill="#2563eb">T</text>
+            <text x="403" y="243" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#1e3a8a">tan, cot &gt; 0</text>
+            <text x="403" y="261" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                fill="#1d4ed8">x &lt; 0, y &lt; 0</text>
+            <text x="403" y="278" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="600" fill="#1e40af">180° + θ</text>
+
+            <!-- Q-IV (bottom-right) -->
+            <rect x="462" y="171" width="102" height="118" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="1.4" />
+            <text x="513" y="193" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="800" fill="#991b1b">Q-IV (270°–360°)</text>
+            <text x="513" y="222" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22"
+                font-weight="800" fill="#dc2626">C</text>
+            <text x="513" y="243" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#7f1d1d">cos, sec &gt; 0</text>
+            <text x="513" y="261" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                fill="#b91c1c">x &gt; 0, y &lt; 0</text>
+            <text x="513" y="278" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="600" fill="#991b1b">360° − θ (or −θ)</text>
+
+            <text x="458" y="310" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="600" fill="#475569">Mnemonic: "All Silver Tea Cups"</text>
+        </svg>
+        <div class="diagram-caption">Figure 14.3: Unit circle coordinates extend trigonometry to all quadrants; the ASTC
+            chart locks in exact signs instantaneously.</div>
+    </div>
+
+    <h3>The 2-Step Allied Angle Reduction Protocol</h3>
+    <p>To reduce any expression $f(k \cdot 90^\circ \pm \theta)$ (assuming $\theta$ is acute for sign determination,
+        though the resulting identity holds for all real $\theta$):</p>
+    <ol>
+        <li><strong>Step 1 — Function Check (Parity of $k$):</strong>
+            <ul>
+                <li>If $k$ is <strong>EVEN</strong> ($180^\circ \pm \theta$, $360^\circ \pm \theta$, or $-\theta$): the
+                    function <strong>stays the same</strong> ($\sin \to \sin$, $\cos \to \cos$, $\tan \to \tan$).</li>
+                <li>If $k$ is <strong>ODD</strong> ($90^\circ \pm \theta$, $270^\circ \pm \theta$): the function
+                    <strong>switches to its co-function</strong> ($\sin \leftrightarrow \cos$, $\tan \leftrightarrow
+                    \cot$, $\sec \leftrightarrow \csc$).
+                </li>
+            </ul>
+        </li>
+        <li><strong>Step 2 — Sign Check (ASTC on the ORIGINAL Function):</strong> Identify which quadrant $k \cdot
+            90^\circ \pm \theta$ falls into (treating $\theta$ as acute), and assign the sign ($+$ or $-$) of the
+            <strong>original</strong> function $f$ in that quadrant. Never check the sign of the converted co-function!
+        </li>
+    </ol>
+    <p><strong>Even/Odd Symmetry (Negative Angles, Q-IV):</strong> $\cos(-\theta) = +\cos\theta$ and $\sec(-\theta) =
+        +\sec\theta$ (even functions), while $\sin(-\theta) = -\sin\theta$, $\tan(-\theta) = -\tan\theta$,
+        $\csc(-\theta) = -\csc\theta$, and $\cot(-\theta) = -\cot\theta$ (odd functions).</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Angle (Deg / Rad)</th>
+                <th>Quadrant &amp; Best Split</th>
+                <th>$\sin$</th>
+                <th>$\cos$</th>
+                <th>$\tan$</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$120^\circ \; (\frac{2\pi}{3})$</td>
+                <td>Q-II: $180^\circ - 60^\circ$</td>
+                <td>$+\dfrac{\sqrt{3}}{2}$</td>
+                <td>$-\dfrac{1}{2}$</td>
+                <td>$-\sqrt{3}$</td>
+            </tr>
+            <tr>
+                <td>$135^\circ \; (\frac{3\pi}{4})$</td>
+                <td>Q-II: $180^\circ - 45^\circ$</td>
+                <td>$+\dfrac{1}{\sqrt{2}}$</td>
+                <td>$-\dfrac{1}{\sqrt{2}}$</td>
+                <td>$-1$</td>
+            </tr>
+            <tr>
+                <td>$150^\circ \; (\frac{5\pi}{6})$</td>
+                <td>Q-II: $180^\circ - 30^\circ$</td>
+                <td>$+\dfrac{1}{2}$</td>
+                <td>$-\dfrac{\sqrt{3}}{2}$</td>
+                <td>$-\dfrac{1}{\sqrt{3}}$</td>
+            </tr>
+            <tr>
+                <td>$210^\circ \; (\frac{7\pi}{6})$</td>
+                <td>Q-III: $180^\circ + 30^\circ$</td>
+                <td>$-\dfrac{1}{2}$</td>
+                <td>$-\dfrac{\sqrt{3}}{2}$</td>
+                <td>$+\dfrac{1}{\sqrt{3}}$</td>
+            </tr>
+            <tr>
+                <td>$225^\circ \; (\frac{5\pi}{4})$</td>
+                <td>Q-III: $180^\circ + 45^\circ$</td>
+                <td>$-\dfrac{1}{\sqrt{2}}$</td>
+                <td>$-\dfrac{1}{\sqrt{2}}$</td>
+                <td>$+1$</td>
+            </tr>
+            <tr>
+                <td>$315^\circ \; (\frac{7\pi}{4})$</td>
+                <td>Q-IV: $360^\circ - 45^\circ$</td>
+                <td>$-\dfrac{1}{\sqrt{2}}$</td>
+                <td>$+\dfrac{1}{\sqrt{2}}$</td>
+                <td>$-1$</td>
+            </tr>
+            <tr>
+                <td>$330^\circ \; (\frac{11\pi}{6})$</td>
+                <td>Q-IV: $360^\circ - 30^\circ$</td>
+                <td>$-\dfrac{1}{2}$</td>
+                <td>$+\dfrac{\sqrt{3}}{2}$</td>
+                <td>$-\dfrac{1}{\sqrt{3}}$</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- =========================================================
+       SECTION 14.4: COMPOUND & MULTIPLE ANGLES
+       ========================================================= -->
+    <h2 class="section-heading">14.4 Out-of-Portion Bridge: Compound Angles, Multiple Angles &amp; Telescopic Cascades
+    </h2>
+
+    <div class="bridge-box">
+        <span class="box-label">First-Principles Derivation &bull; The Master $\cos(A - B)$ Identity</span>
+        <p><strong>Proof via Unit-Circle Chord Invariance:</strong> Place points $P(\cos A, \sin A)$ and $Q(\cos B, \sin
+            B)$ on the unit circle. The central angle between radii $OP$ and $OQ$ is $|A - B|$. Rotating the entire
+            chord $PQ$ rigidly by angle $-B$ around the origin maps $Q$ to $S(1, 0)$ and $P$ to $R(\cos(A - B), \sin(A -
+            B))$. Since rotation preserves distance, $PQ^2 = RS^2$:</p>
+        $$ (\cos A - \cos B)^2 + (\sin A - \sin B)^2 = (\cos(A - B) - 1)^2 + (\sin(A - B) - 0)^2 $$
+        <p>Expand both sides and apply $\cos^2\phi + \sin^2\phi = 1$:</p>
+        $$ (1 + 1 - 2\cos A\cos B - 2\sin A\sin B) = (1 + 1 - 2\cos(A - B)) $$
+        <p>Canceling $2$ and dividing by $-2$ gives the <strong>Master Identity</strong>:</p>
+        $$ \cos(A - B) = \cos A\cos B + \sin A\sin B $$
+        <p>Every other compound-angle formula follows deductively in one line:</p>
+        <ul>
+            <li>Replace $B$ by $-B$: &nbsp; $\mathbf{\cos(A + B) = \cos A\cos B - \sin A\sin B}$.</li>
+            <li>Replace $A$ by $90^\circ - A$ in $\cos(A - B)$: &nbsp; $\cos((90^\circ - A) - B) = \sin(A + B) =
+                \mathbf{\sin A\cos B + \cos A\sin B}$.</li>
+            <li>Replace $B$ by $-B$: &nbsp; $\mathbf{\sin(A - B) = \sin A\cos B - \cos A\sin B}$.</li>
+            <li>Divide $\sin(A \pm B)$ by $\cos(A \pm B)$ and divide numerator &amp; denominator by $\cos A\cos B$:</li>
+        </ul>
+        $$ \tan(A + B) = \frac{\tan A + \tan B}{1 - \tan A\tan B}, \qquad \tan(A - B) = \frac{\tan A - \tan B}{1 + \tan
+        A\tan B} $$
+        <p><em>Domain Note:</em> $\tan(A\pm B)$ requires $A, B, A\pm B \neq (2n+1)90^\circ$.</p>
+    </div>
+
+    <h3>Exact Surd Values of $15^\circ$ and $75^\circ$</h3>
+    <p>Writing $15^\circ = 45^\circ - 30^\circ$ and $75^\circ = 45^\circ + 30^\circ$ directly yields four high-frequency
+        Olympiad constants:</p>
+    $$ \sin 15^\circ = \cos 75^\circ = \sin 45^\circ\cos 30^\circ - \cos 45^\circ\sin 30^\circ =
+    \frac{1}{\sqrt{2}}\cdot\frac{\sqrt{3}}{2} - \frac{1}{\sqrt{2}}\cdot\frac{1}{2} = \frac{\sqrt{3} - 1}{2\sqrt{2}} =
+    \frac{\sqrt{6} - \sqrt{2}}{4} $$
+    $$ \cos 15^\circ = \sin 75^\circ = \cos 45^\circ\cos 30^\circ + \sin 45^\circ\sin 30^\circ = \frac{\sqrt{3} +
+    1}{2\sqrt{2}} = \frac{\sqrt{6} + \sqrt{2}}{4} $$
+    $$ \tan 15^\circ = \cot 75^\circ = \frac{\tan 45^\circ - \tan 30^\circ}{1 + \tan 45^\circ\tan 30^\circ} = \frac{1 -
+    \frac{1}{\sqrt{3}}}{1 + \frac{1}{\sqrt{3}}} = \frac{\sqrt{3} - 1}{\sqrt{3} + 1} = \frac{(\sqrt{3} - 1)^2}{3 - 1} =
+    \mathbf{2 - \sqrt{3}} $$
+    $$ \tan 75^\circ = \cot 15^\circ = \frac{1}{\tan 15^\circ} = \frac{1}{2 - \sqrt{3}} = \mathbf{2 + \sqrt{3}} $$
+
+    <div class="bridge-box">
+        <span class="box-label">Olympiad Signature Identity &bull; The $A + B = 45^\circ$ Theorem</span>
+        <p><strong>Theorem:</strong> Whenever $A + B = 45^\circ$ (or $225^\circ$, where $\tan(A+B) = 1$, with $A, B \neq
+            90^\circ$):</p>
+        $$ \mathbf{(1 + \tan A)(1 + \tan B) = 2} \qquad \text{and equivalently} \qquad \mathbf{(\cot A - 1)(\cot B - 1)
+        = 2} $$
+        <p><strong>Proof:</strong></p>
+        $$ \tan(A + B) = \tan 45^\circ = 1 \implies \frac{\tan A + \tan B}{1 - \tan A\tan B} = 1 \implies \tan A + \tan
+        B + \tan A\tan B = 1 $$
+        <p>Add $1$ to both sides and factor by grouping:</p>
+        $$ 1 + \tan A + \tan B + \tan A\tan B = 2 \implies (1 + \tan A)(1 + \tan B) = 2 $$
+        <p>Dividing both sides by $\tan A\tan B$ yields $(\cot A + 1)(\cot B + 1) = 2\cot A\cot B \iff \cot A\cot B -
+            \cot A - \cot B + 1 = 2 \iff (\cot A - 1)(\cot B - 1) = 2$.<br />
+            <strong>Companion Difference Identity:</strong> If $A - B = 45^\circ$, then $\mathbf{(1 + \tan A)(1 - \tan
+            B) = 2}$.
+        </p>
+    </div>
+
+    <h3>Double-Angle &amp; Power-Reduction Identities</h3>
+    <p>Setting $A = B = \theta$ in the compound-angle formulas yields the <strong>Double-Angle Engine</strong> (critical
+        for simplifying quadratic trig terms and telescoping products):</p>
+    $$ \sin 2\theta = 2\sin\theta\cos\theta = \frac{2\tan\theta}{1 + \tan^2\theta} $$
+    $$ \cos 2\theta = \cos^2\theta - \sin^2\theta = 1 - 2\sin^2\theta = 2\cos^2\theta - 1 = \frac{1 - \tan^2\theta}{1 +
+    \tan^2\theta} $$
+    $$ \tan 2\theta = \frac{2\tan\theta}{1 - \tan^2\theta} \qquad (\theta \neq 45^\circ, 90^\circ) $$
+    <p>Rearranging $\cos 2\theta = 1 - 2\sin^2\theta = 2\cos^2\theta - 1$ gives the <strong>Power-Reduction
+            Formulas</strong>:</p>
+    $$ \sin^2\theta = \frac{1 - \cos 2\theta}{2}, \qquad \cos^2\theta = \frac{1 + \cos 2\theta}{2}, \qquad \tan^2\theta
+    = \frac{1 - \cos 2\theta}{1 + \cos 2\theta} $$
+
+    <div class="bridge-box">
+        <span class="box-label">Olympiad Cascade Engine &bull; Telescopic Trig Products &amp; Sums</span>
+        <p><strong>1. Doubling-Angle Cosine Product Cascade:</strong> Whenever a product has angles in geometric
+            progression with common ratio $2$, multiply and divide by $2\sin\theta$ ($\sin\theta \neq 0$) to trigger a
+            domino collapse of $\sin 2\alpha = 2\sin\alpha\cos\alpha$:</p>
+        $$ \cos\theta \cdot \cos 2\theta \cdot \cos 4\theta \cdots \cos(2^{n-1}\theta) =
+        \frac{\sin(2^n\theta)}{2^n\sin\theta} $$
+        <p><strong>Classic Prototype ($\cos 20^\circ \cos 40^\circ \cos 80^\circ$):</strong> Here $\theta = 20^\circ$
+            and $n = 3$. Multiply and divide by $2\sin 20^\circ$:</p>
+        $$ \frac{(2\sin 20^\circ \cos 20^\circ)\cos 40^\circ \cos 80^\circ}{2\sin 20^\circ} = \frac{(2\sin 40^\circ \cos
+        40^\circ)\cos 80^\circ}{4\sin 20^\circ} = \frac{2\sin 80^\circ \cos 80^\circ}{8\sin 20^\circ} = \frac{\sin
+        160^\circ}{8\sin 20^\circ} = \frac{\sin 20^\circ}{8\sin 20^\circ} = \mathbf{\frac{1}{8}} $$
+        <p><strong>2. Symmetric Triple-Angle Product Shortcuts</strong> (proved by expanding $\cos(60^\circ \pm \theta)
+            = \frac{1}{2}\cos\theta \mp \frac{\sqrt{3}}{2}\sin\theta$):</p>
+        $$ \sin\theta\sin(60^\circ - \theta)\sin(60^\circ + \theta) = \frac{1}{4}\sin 3\theta, \qquad
+        \cos\theta\cos(60^\circ - \theta)\cos(60^\circ + \theta) = \frac{1}{4}\cos 3\theta, \qquad
+        \tan\theta\tan(60^\circ - \theta)\tan(60^\circ + \theta) = \tan 3\theta $$
+        <p><strong>3. Telescopic Sum Identities:</strong></p>
+        $$ \csc 2\theta = \cot\theta - \cot 2\theta \qquad \text{and} \qquad \tan\theta = \cot\theta - 2\cot 2\theta $$
+        <p><em>Proof of first:</em> $\cot\theta - \cot 2\theta = \dfrac{\cos\theta}{\sin\theta} - \dfrac{2\cos^2\theta -
+            1}{2\sin\theta\cos\theta} = \dfrac{2\cos^2\theta - 2\cos^2\theta + 1}{\sin 2\theta} = \dfrac{1}{\sin
+            2\theta} = \csc 2\theta$. Hence $\sum_{k=1}^{n}\csc(2^k\theta) = \cot\theta - \cot(2^n\theta)$ telescopes
+            cleanly!</p>
+    </div>
+
+    <!-- =========================================================
+       SECTION 14.5: MAXIMUM & MINIMUM VALUES (OLYMPIAD BRIDGE)
+       ========================================================= -->
+    <h2 class="section-heading">14.5 Olympiad Bridge: Maximum &amp; Minimum Values</h2>
+
+    <div class="bridge-box">
+        <span class="box-label">Auxiliary-Angle Proof &bull; Exact Range of $a\sin\theta + b\cos\theta$</span>
+        <p><strong>Theorem:</strong> For any real constants $a, b$ (not both zero) and all $\theta \in \mathbb{R}$,</p>
+        $$ -\sqrt{a^2 + b^2} \;\le\; a\sin\theta + b\cos\theta \;\le\; +\sqrt{a^2 + b^2} $$
+        <p><strong>First-Principles Proof (The $R$-Formula):</strong> Define the strictly positive hypotenuse $R =
+            \sqrt{a^2 + b^2} \gt 0$. Then the ordered pair $\left(\dfrac{a}{R},\; \dfrac{b}{R}\right)$ satisfies
+            $\left(\dfrac{a}{R}\right)^2 + \left(\dfrac{b}{R}\right)^2 = \dfrac{a^2+b^2}{a^2+b^2} = 1$, so it lies on
+            the unit circle. Therefore, there exists a unique angle $\alpha \in [0, 2\pi)$ such that:</p>
+        $$ \cos\alpha = \frac{a}{R}, \qquad \sin\alpha = \frac{b}{R} $$
+        <p>Factor $R$ out of $a\sin\theta + b\cos\theta$:</p>
+        $$ a\sin\theta + b\cos\theta = R\left(\frac{a}{R}\sin\theta + \frac{b}{R}\cos\theta\right) =
+        R(\sin\theta\cos\alpha + \cos\theta\sin\alpha) = \mathbf{R\sin(\theta + \alpha)} $$
+        <p>Since $\sin(\theta + \alpha)$ ranges continuously over $[-1, +1]$ as $\theta$ varies over $\mathbb{R}$,
+            multiplying by $R \gt 0$ proves:</p>
+        $$ -R \le a\sin\theta + b\cos\theta \le +R \iff -\sqrt{a^2 + b^2} \le a\sin\theta + b\cos\theta \le +\sqrt{a^2 +
+        b^2} $$
+        <p><strong>Shift Rule:</strong> Adding a constant $c$ shifts the entire interval rigidly: $c - \sqrt{a^2+b^2}
+            \le a\sin\theta + b\cos\theta + c \le c + \sqrt{a^2+b^2}$.<br />
+            <strong>Caution:</strong> You CANNOT claim $\max(a\sin\theta + b\cos\theta) = |a| + |b|$ because
+            $\sin\theta$ and $\cos\theta$ can <em>never</em> equal $1$ simultaneously!
+        </p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 540 230" width="100%" role="img"
+            aria-label="Geometric auxiliary-angle right triangle with legs a, b and hypotenuse R equals square root of a squared plus b squared">
+            <!-- Right Triangle -->
+            <polygon points="65,190 295,190 295,60" fill="#eff6ff" stroke="#2563eb" stroke-width="2.2" />
+            <!-- Right angle marker -->
+            <polyline points="281,190 281,176 295,176" fill="none" stroke="#2563eb" stroke-width="1.6" />
+            <!-- Angle arc alpha -->
+            <path d="M 118,190 A 53,53 0 0 0 111.1,163.9" fill="none" stroke="#d97706" stroke-width="2.2" />
+            <text x="128" y="180" font-family="Georgia, serif" font-style="italic" font-size="16" font-weight="bold"
+                fill="#b45309">α</text>
+
+            <!-- Side labels -->
+            <text x="180" y="212" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="15"
+                font-weight="bold" fill="#059669">a (adjacent)</text>
+            <text x="307" y="130" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="bold"
+                fill="#dc2626">b</text>
+            <text x="165" y="108" text-anchor="middle" transform="rotate(-29.5 165,108)" font-family="Georgia, serif"
+                font-size="14.5" font-weight="bold" fill="#1e40af">R = √(a² + b²)</text>
+
+            <!-- Formula panel -->
+            <rect x="336" y="26" width="188" height="176" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4" />
+            <text x="430" y="49" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="800" fill="#1e293b">Auxiliary Angle Relations</text>
+            <line x1="350" y1="58" x2="510" y2="58" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="352" y="82" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#059669">cos
+                α = a / √(a² + b²)</text>
+            <text x="352" y="106" font-family="system-ui, sans-serif" font-size="12" font-weight="600"
+                fill="#dc2626">sin α = b / √(a² + b²)</text>
+            <text x="352" y="130" font-family="system-ui, sans-serif" font-size="12" font-weight="600"
+                fill="#b45309">tan α = b / a</text>
+            <line x1="350" y1="144" x2="510" y2="144" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="430" y="166" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#1e40af">a sin θ + b cos θ = R sin(θ + α)</text>
+            <text x="430" y="187" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#1e293b">Range: [ −R , +R ]</text>
+        </svg>
+        <div class="diagram-caption">Figure 14.4: The auxiliary right triangle geometrically collapses a linear
+            combination $a\sin\theta + b\cos\theta$ into a single sine wave of amplitude $R = \sqrt{a^2+b^2}$.</div>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">AM-GM Extreme Bounds &amp; The Boundary-Attainability Trap</span>
+        <p>For any positive real numbers $x, y \gt 0$, the AM-GM inequality states $x + y \ge 2\sqrt{xy}$, with equality
+            if and only if $x = y$. Applying this to squared trigonometric ratios (with constants $a, b \gt 0$ and
+            $\theta$ in the domain):</p>
+        <ol>
+            <li><strong>Tangent–Cotangent Bound:</strong> Since $\tan^2\theta \cdot \cot^2\theta = 1$,
+                $$ a\tan^2\theta + b\cot^2\theta \ge 2\sqrt{ab\tan^2\theta\cot^2\theta} = \mathbf{2\sqrt{ab}} $$
+                Equality is <strong>always attainable</strong> because $\tan^2\theta$ takes all values in $(0, \infty)$;
+                set $\tan^2\theta = \sqrt{b/a}$.</li>
+            <li><strong>Secant–Cosecant Bound:</strong> Rewrite using $\sec^2\theta = 1 + \tan^2\theta$ and
+                $\csc^2\theta = 1 + \cot^2\theta$:
+                $$ a\sec^2\theta + b\csc^2\theta = (a + b) + \left(a\tan^2\theta + b\cot^2\theta\right) \ge a + b +
+                2\sqrt{ab} = \mathbf{(\sqrt{a} + \sqrt{b})^2} $$
+                Again, equality is <strong>always attainable</strong> at $\tan^2\theta = \sqrt{b/a}$.</li>
+            <li><strong>THE IOQM BOUNDARY TRAP ($a\sin^2\theta + b\csc^2\theta$):</strong> Naive AM-GM gives
+                $2\sqrt{ab}$, requiring $a\sin^2\theta = b\csc^2\theta \iff \sin^2\theta = \sqrt{\frac{b}{a}}$. Because
+                $0 \lt \sin^2\theta \le 1$, check whether $\sqrt{\frac{b}{a}} \le 1$:
+                <ul>
+                    <li>If $b \le a$: $\sin^2\theta = \sqrt{b/a} \le 1$ is valid $\implies \mathbf{\min = 2\sqrt{ab}}$.
+                    </li>
+                    <li>If $b \gt a$: $\sqrt{b/a} \gt 1$ is <strong>impossible</strong>! Letting $t = \sin^2\theta \in
+                        (0, 1]$, the function $h(t) = at + \frac{b}{t}$ satisfies $h(t) - (a+b) = \frac{(1-t)(b -
+                        at)}{t} \ge 0$ since $b \gt a \ge at$. Thus the true minimum occurs at the boundary $t =
+                        \sin^2\theta = 1$, giving $\mathbf{\min = a + b}$ (strictly greater than $2\sqrt{ab}$)!</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Bounds on Higher Power Sums: $\sin^n\theta + \cos^n\theta$</span>
+        <p><strong>Case 1 — Even Powers $S_{2k}(\theta) = \sin^{2k}\theta + \cos^{2k}\theta$ ($k \in
+                \mathbb{Z}^+$):</strong> Let $x = \sin^2\theta \in [0, 1]$, so $\cos^2\theta = 1 - x$.</p>
+        <ul>
+            <li><strong>Upper Bound:</strong> Because $0 \le x \le 1$ and $k \ge 1$, raising to power $k$ never
+                increases a number in $[0,1]$: $x^k \le x$ and $(1-x)^k \le 1-x$. Adding gives $x^k + (1-x)^k \le x +
+                (1-x) = 1$, attained at $\theta = 0^\circ$ or $90^\circ$.</li>
+            <li><strong>Lower Bound (Explicit for $k = 2, 3$):</strong>
+                $$ \sin^4\theta + \cos^4\theta = 1 - 2\sin^2\theta\cos^2\theta = 1 - \frac{1}{2}\sin^2 2\theta \in
+                \left[\mathbf{\frac{1}{2}},\; 1\right] $$
+                $$ \sin^6\theta + \cos^6\theta = 1 - 3\sin^2\theta\cos^2\theta = 1 - \frac{3}{4}\sin^2 2\theta \in
+                \left[\mathbf{\frac{1}{4}},\; 1\right] $$
+                In general, by the Power-Mean inequality, $\left(\frac{x^k + (1-x)^k}{2}\right)^{1/k} \ge \frac{x +
+                (1-x)}{2} = \frac{1}{2} \implies \mathbf{\dfrac{1}{2^{k-1}} \le \sin^{2k}\theta + \cos^{2k}\theta \le
+                1}$, with the minimum achieved at $x = \frac{1}{2}$ ($\theta = 45^\circ$).</li>
+        </ul>
+        <p><strong>Case 2 — Odd Powers $S_{2k+1}(\theta) = \sin^{2k+1}\theta + \cos^{2k+1}\theta$ ($k \ge 1$, e.g.,
+                $\sin^3\theta + \cos^3\theta$):</strong></p>
+        <ul>
+            <li>Over all $\theta \in \mathbb{R}$: $|\sin^{2k+1}\theta + \cos^{2k+1}\theta| \le \sin^2\theta|\sin\theta|
+                + \cos^2\theta|\cos\theta| \le \sin^2\theta + \cos^2\theta = 1$, attained at $\theta = 0^\circ$ ($+1$)
+                and $\theta = 180^\circ$ ($-1$). Hence range is $\mathbf{[-1, 1]}$.</li>
+            <li>Restricted to acute angles $\theta \in [0^\circ, 90^\circ]$: for $\sin^3\theta + \cos^3\theta =
+                (\sin\theta + \cos\theta)(1 - \sin\theta\cos\theta)$, letting $u = \sin\theta + \cos\theta \in [1,
+                \sqrt{2}]$ gives $\sin\theta\cos\theta = \frac{u^2-1}{2}$ and $\sin^3\theta + \cos^3\theta = \frac{u(3 -
+                u^2)}{2}$, which decreases strictly on $[1, \sqrt{2}]$. Hence on $[0^\circ, 90^\circ]$,
+                $\mathbf{\dfrac{1}{\sqrt{2}} \le \sin^3\theta + \cos^3\theta \le 1}$.</li>
+        </ul>
+    </div>
+
+    <!-- =========================================================
+       SECTION 14.6: THE FORMULA VAULT
+       ========================================================= -->
+    <h2 class="section-heading">14.6 High-Density Formula Vault</h2>
+
+    <div class="formula-vault">
+        <span class="box-label">Master Formula Vault &bull; Chapter 14 Quick-Retrieval Sheet</span>
+        <ul>
+            <li><strong>Pythagorean Core:</strong> $\sin^2\theta + \cos^2\theta = 1$ &nbsp;|&nbsp; $\sec^2\theta -
+                \tan^2\theta = 1$ &nbsp;|&nbsp; $\csc^2\theta - \cot^2\theta = 1$</li>
+            <li><strong>Power Reductions:</strong> $\sin^4\theta + \cos^4\theta = 1 - 2\sin^2\theta\cos^2\theta = 1 -
+                \frac{1}{2}\sin^2 2\theta$ &nbsp;|&nbsp; $\sin^6\theta + \cos^6\theta = 1 - 3\sin^2\theta\cos^2\theta =
+                1 - \frac{3}{4}\sin^2 2\theta$</li>
+            <li><strong>Conjugate Pairs:</strong> $\sec\theta + \tan\theta = p \iff \sec\theta - \tan\theta =
+                \frac{1}{p} \implies \sec\theta = \frac{p^2+1}{2p},\; \tan\theta = \frac{p^2-1}{2p},\; \sin\theta =
+                \frac{p^2-1}{p^2+1}$</li>
+            <li><strong>Orthogonal Pair:</strong> $a\sin\theta + b\cos\theta = c \implies a\cos\theta - b\sin\theta =
+                \pm\sqrt{a^2 + b^2 - c^2}$</li>
+            <li><strong>Radians &amp; ASTC:</strong> $\pi\text{ rad} = 180^\circ$ &nbsp;|&nbsp; Even $90^\circ$: keep
+                function; Odd $90^\circ$: swap co-function; Sign from <em>original</em> function in ASTC.</li>
+            <li><strong>Compound Angles:</strong> $\sin(A \pm B) = \sin A\cos B \pm \cos A\sin B$ &nbsp;|&nbsp; $\cos(A
+                \pm B) = \cos A\cos B \mp \sin A\sin B$ &nbsp;|&nbsp; $\tan(A \pm B) = \dfrac{\tan A \pm \tan B}{1 \mp
+                \tan A\tan B}$</li>
+            <li><strong>Exact $15^\circ / 75^\circ$:</strong> $\sin 15^\circ = \cos 75^\circ =
+                \dfrac{\sqrt{6}-\sqrt{2}}{4}$ &nbsp;|&nbsp; $\cos 15^\circ = \sin 75^\circ =
+                \dfrac{\sqrt{6}+\sqrt{2}}{4}$ &nbsp;|&nbsp; $\tan 15^\circ = 2 - \sqrt{3}$ &nbsp;|&nbsp; $\tan 75^\circ
+                = 2 + \sqrt{3}$</li>
+            <li><strong>$45^\circ$ Identity:</strong> $A + B = 45^\circ \implies (1+\tan A)(1+\tan B) = 2$ &nbsp;|&nbsp;
+                $A - B = 45^\circ \implies (1+\tan A)(1-\tan B) = 2$</li>
+            <li><strong>Double Angles:</strong> $\sin 2\theta = 2\sin\theta\cos\theta =
+                \dfrac{2\tan\theta}{1+\tan^2\theta}$ &nbsp;|&nbsp; $\cos 2\theta = 1 - 2\sin^2\theta = 2\cos^2\theta - 1
+                = \dfrac{1-\tan^2\theta}{1+\tan^2\theta}$ &nbsp;|&nbsp; $\tan 2\theta =
+                \dfrac{2\tan\theta}{1-\tan^2\theta}$</li>
+            <li><strong>Cascades:</strong> $\displaystyle\prod_{k=0}^{n-1}\cos(2^k\theta) =
+                \frac{\sin(2^n\theta)}{2^n\sin\theta}$ &nbsp;|&nbsp;
+                $\cos\theta\cos(60^\circ-\theta)\cos(60^\circ+\theta) = \frac{1}{4}\cos 3\theta$ &nbsp;|&nbsp; $\csc
+                2\theta = \cot\theta - \cot 2\theta$</li>
+            <li><strong>Max/Min Bounds:</strong> $|a\sin\theta + b\cos\theta| \le \sqrt{a^2+b^2}$ &nbsp;|&nbsp;
+                $a\tan^2\theta + b\cot^2\theta \ge 2\sqrt{ab}$ &nbsp;|&nbsp; $a\sec^2\theta + b\csc^2\theta \ge
+                (\sqrt{a}+\sqrt{b})^2$ &nbsp;|&nbsp; $\dfrac{1}{2^{k-1}} \le \sin^{2k}\theta + \cos^{2k}\theta \le 1$
+            </li>
+        </ul>
+    </div>
+
+    <!-- =========================================================
+       SECTION 14.7: GRADED WORKED EXAMPLES (9 COMPLETE EXAMPLES)
+       ========================================================= -->
+    <h2 class="section-heading">14.7 Graded Worked Examples</h2>
+
+    <!-- LEVEL 1 BANNER -->
+    <div class="level-banner l1">Level 1: Warmup &mdash; Core Ratios, Standard Angles &amp; Identity Foundations</div>
+
+    <!-- WORKED EXAMPLE 1 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Worked Example 1 &bull; Ratio Construction</span>
+        </div>
+        <div class="ex-problem">
+            If $\theta$ is an acute angle such that $17\cos\theta = 8$, find the exact value of:
+            $$ E = \frac{15(\csc\theta + \cot\theta)}{17\sin\theta + 8\tan\theta} + \sec^2\theta - \tan^2\theta $$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Construct the Reference Right Triangle:</strong> From $17\cos\theta = 8$, we obtain
+                $\cos\theta = \dfrac{8}{17} = \dfrac{\text{base}}{\text{hypotenuse}}$. Let base $b = 8k$ and hypotenuse
+                $h = 17k$ for some scale factor $k \gt 0$. By Pythagoras' theorem:</p>
+            $$ p = \sqrt{h^2 - b^2} = \sqrt{(17k)^2 - (8k)^2} = k\sqrt{289 - 64} = k\sqrt{225} = 15k $$
+            <p>Since $\theta$ is acute, all six trigonometric ratios are well-defined and strictly positive:</p>
+            $$ \sin\theta = \frac{15}{17}, \qquad \tan\theta = \frac{15}{8}, \qquad \csc\theta = \frac{17}{15}, \qquad
+            \cot\theta = \frac{8}{15} $$
+            <p><strong>Step 2 — Evaluate Each Block Separately:</strong></p>
+            $$ 15(\csc\theta + \cot\theta) = 15\left(\frac{17}{15} + \frac{8}{15}\right) = 17 + 8 = 25 $$
+            $$ 17\sin\theta + 8\tan\theta = 17\left(\frac{15}{17}\right) + 8\left(\frac{15}{8}\right) = 15 + 15 = 30 $$
+            <p>Also, by the fundamental identity (valid since $\theta \neq 90^\circ$), $\sec^2\theta - \tan^2\theta = 1$
+                (no need to square $\frac{17}{8}$ and $\frac{15}{8}$ manually!).</p>
+            <p><strong>Step 3 — Combine:</strong></p>
+            $$ E = \frac{25}{30} + 1 = \frac{5}{6} + 1 = \mathbf{\frac{11}{6}} $$
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 2 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Worked Example 2 &bull; Standard &amp; Complementary Angles</span>
+        </div>
+        <div class="ex-problem">
+            Compute the exact numerical value of:
+            $$ K = \frac{4\sin^2 60^\circ + 3\tan^2 30^\circ - 2\sin 45^\circ\cos 45^\circ}{\sec^2 30^\circ - \cot^2
+            60^\circ} + \left(\tan 12^\circ \tan 38^\circ \tan 52^\circ \tan 78^\circ\right) + \frac{\sin 23^\circ}{\cos
+            67^\circ} $$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Evaluate the Standard-Angle Fraction:</strong> Substitute exact values from the
+                reference triangles: $\sin 60^\circ = \frac{\sqrt{3}}{2}$, $\tan 30^\circ = \frac{1}{\sqrt{3}}$, $\sin
+                45^\circ = \cos 45^\circ = \frac{1}{\sqrt{2}}$, $\sec 30^\circ = \frac{2}{\sqrt{3}}$, and $\cot 60^\circ
+                = \frac{1}{\sqrt{3}}$:</p>
+            $$ \text{Numerator} = 4\left(\frac{\sqrt{3}}{2}\right)^2 + 3\left(\frac{1}{\sqrt{3}}\right)^2 -
+            2\left(\frac{1}{\sqrt{2}}\right)\left(\frac{1}{\sqrt{2}}\right) = 4\left(\frac{3}{4}\right) +
+            3\left(\frac{1}{3}\right) - 2\left(\frac{1}{2}\right) = 3 + 1 - 1 = 3 $$
+            $$ \text{Denominator} = \left(\frac{2}{\sqrt{3}}\right)^2 - \left(\frac{1}{\sqrt{3}}\right)^2 = \frac{4}{3}
+            - \frac{1}{3} = 1 $$
+            <p>Thus the first fraction equals $\dfrac{3}{1} = 3$.</p>
+            <p><strong>Step 2 — Pair Complementary Angles:</strong> Notice $12^\circ + 78^\circ = 90^\circ$ and
+                $38^\circ + 52^\circ = 90^\circ$. Using $\tan(90^\circ - \theta) = \cot\theta = \frac{1}{\tan\theta}$:
+            </p>
+            $$ \tan 12^\circ \tan 38^\circ \tan 52^\circ \tan 78^\circ = \left(\tan 12^\circ \cdot \cot
+            12^\circ\right)\left(\tan 38^\circ \cdot \cot 38^\circ\right) = 1 \cdot 1 = 1 $$
+            <p>Similarly, since $23^\circ + 67^\circ = 90^\circ$, $\cos 67^\circ = \cos(90^\circ - 23^\circ) = \sin
+                23^\circ \neq 0$, so:</p>
+            $$ \frac{\sin 23^\circ}{\cos 67^\circ} = \frac{\sin 23^\circ}{\sin 23^\circ} = 1 $$
+            <p><strong>Step 3 — Sum All Three Terms:</strong></p>
+            $$ K = 3 + 1 + 1 = \mathbf{5} $$
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 3 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Worked Example 3 &bull; Radical Identity &amp; Domain Check</span>
+        </div>
+        <div class="ex-problem">
+            For an acute angle $\theta \in (0^\circ, 90^\circ)$, prove that:
+            $$ \sqrt{\frac{1 + \sin\theta}{1 - \sin\theta}} + \sqrt{\frac{1 - \sin\theta}{1 + \sin\theta}} = 2\sec\theta
+            $$
+            Hence evaluate the left-hand side when $\cos\theta = \dfrac{3}{5}$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Verify Strict Positivity Inside Radicals:</strong> Since $0^\circ \lt \theta \lt
+                90^\circ$, we have $0 \lt \sin\theta \lt 1$ and $\cos\theta \gt 0$. Therefore, $1 + \sin\theta \gt 0$
+                and $1 - \sin\theta \gt 0$, so both denominators are non-zero and both radicands are strictly positive.
+            </p>
+            <p><strong>Step 2 — Rationalize Each Radical Using $\cos^2\theta = 1 - \sin^2\theta$:</strong></p>
+            $$ \sqrt{\frac{1 + \sin\theta}{1 - \sin\theta}} = \sqrt{\frac{(1 + \sin\theta)^2}{(1 - \sin\theta)(1 +
+            \sin\theta)}} = \sqrt{\frac{(1 + \sin\theta)^2}{1 - \sin^2\theta}} = \sqrt{\frac{(1 +
+            \sin\theta)^2}{\cos^2\theta}} = \frac{|1 + \sin\theta|}{|\cos\theta|} = \frac{1 + \sin\theta}{\cos\theta} $$
+            <p>where removing the absolute value bars without a minus sign is justified <em>strictly</em> because $1 +
+                \sin\theta \gt 0$ and $\cos\theta \gt 0$. Identically:</p>
+            $$ \sqrt{\frac{1 - \sin\theta}{1 + \sin\theta}} = \sqrt{\frac{(1 - \sin\theta)^2}{1 - \sin^2\theta}} =
+            \frac{|1 - \sin\theta|}{|\cos\theta|} = \frac{1 - \sin\theta}{\cos\theta} $$
+            <p><strong>Step 3 — Add &amp; Substitute $\cos\theta = \frac{3}{5}$:</strong></p>
+            $$ \text{LHS} = \frac{1 + \sin\theta}{\cos\theta} + \frac{1 - \sin\theta}{\cos\theta} = \frac{2}{\cos\theta}
+            = 2\sec\theta \quad (\text{Proved}) $$
+            <p>At $\cos\theta = \dfrac{3}{5}$, we have $\sec\theta = \dfrac{5}{3}$, so the expression evaluates to $2
+                \cdot \dfrac{5}{3} = \mathbf{\dfrac{10}{3}}$.</p>
+        </div>
+    </div>
+
+    <!-- LEVEL 2 BANNER -->
+    <div class="level-banner l2">Level 2: Exam-Real &mdash; Conjugate Pairs, Eliminants &amp; Allied-Angle Reductions
+    </div>
+
+    <!-- WORKED EXAMPLE 4 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Worked Example 4 &bull; Conjugate Pair Weapon</span>
+        </div>
+        <div class="ex-problem">
+            If $\theta$ is an acute angle satisfying $\sec\theta + \tan\theta = 5$, find the exact value of:
+            $$ V = \frac{13\sin\theta + 10\tan\theta}{13\cos\theta - 1} $$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Invoke the Reciprocal Conjugate Pair:</strong> Since $\theta$ is acute, $\cos\theta \neq
+                0$, so $\sec^2\theta - \tan^2\theta = 1$ gives:</p>
+            $$ (\sec\theta - \tan\theta)(\sec\theta + \tan\theta) = 1 \implies \sec\theta - \tan\theta = \frac{1}{5} $$
+            <p><strong>Step 2 — Solve the $2 \times 2$ Linear System:</strong></p>
+            <ul>
+                <li>Adding $(\sec\theta + \tan\theta = 5)$ and $\left(\sec\theta - \tan\theta = \frac{1}{5}\right)$:
+                    $$ 2\sec\theta = 5 + \frac{1}{5} = \frac{26}{5} \implies \sec\theta = \frac{13}{5} \implies
+                    \cos\theta = \frac{5}{13} $$</li>
+                <li>Subtracting the second equation from the first:
+                    $$ 2\tan\theta = 5 - \frac{1}{5} = \frac{24}{5} \implies \tan\theta = \frac{12}{5} $$</li>
+                <li>Hence $\sin\theta = \tan\theta \cdot \cos\theta = \dfrac{12}{5} \cdot \dfrac{5}{13} =
+                    \dfrac{12}{13}$. (Quick sanity check: $5^2 + 12^2 = 13^2$, and both $\sin\theta, \cos\theta \in
+                    (0,1)$, confirming $\theta$ is a valid acute angle.)</li>
+            </ul>
+            <p><strong>Step 3 — Substitute into $V$:</strong></p>
+            $$ V = \frac{13\left(\frac{12}{13}\right) + 10\left(\frac{12}{5}\right)}{13\left(\frac{5}{13}\right) - 1} =
+            \frac{12 + 24}{5 - 1} = \frac{36}{4} = \mathbf{9} $$
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 5 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Worked Example 5 &bull; Orthogonal Pair &amp; Eliminant</span>
+        </div>
+        <div class="ex-problem">
+            <strong>(a)</strong> If $3\sin\theta + 5\cos\theta = 5$, find all possible real values of $5\sin\theta -
+            3\cos\theta$, and verify that each value is actually attained by a real angle $\theta$.<br />
+            <strong>(b)</strong> Eliminate $\theta$ from the pair of equations $x = a\sec\theta + b\tan\theta$ and $y =
+            a\tan\theta + b\sec\theta$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Squaring &amp; Adding Orthogonal Combinations:</strong> Let $k = 5\sin\theta -
+                3\cos\theta$. Square both equations:</p>
+            $$ (3\sin\theta + 5\cos\theta)^2 = 25 \implies 9\sin^2\theta + 25\cos^2\theta + 30\sin\theta\cos\theta = 25
+            $$
+            $$ (5\sin\theta - 3\cos\theta)^2 = k^2 \implies 25\sin^2\theta + 9\cos^2\theta - 30\sin\theta\cos\theta =
+            k^2 $$
+            <p>Add both equations so the cross-terms $\pm 30\sin\theta\cos\theta$ cancel identically:</p>
+            $$ 34(\sin^2\theta + \cos^2\theta) = 25 + k^2 \implies 34(1) = 25 + k^2 \implies k^2 = 9 \implies k =
+            \mathbf{\pm 3} $$
+            <p><strong>Attainability Verification:</strong> Solving $3\sin\theta + 5\cos\theta = 5$ with $5\sin\theta -
+                3\cos\theta = k$ gives $34\sin\theta = 15 + 5k$:</p>
+            <ul>
+                <li>For $k = -3$: $\sin\theta = 0,\; \cos\theta = 1$ (attained at $\theta = 0^\circ$).</li>
+                <li>For $k = +3$: $\sin\theta = \frac{15}{17},\; \cos\theta = \frac{8}{17}$ (since $(\frac{15}{17})^2 +
+                    (\frac{8}{17})^2 = 1$, attained at an acute angle $\theta$). Both $+3$ and $-3$ are genuine
+                    solutions.</li>
+            </ul>
+            <p><strong>Part (b) — Eliminating $\theta$ via $\sec^2\theta - \tan^2\theta = 1$:</strong> Square both given
+                equations:</p>
+            $$ x^2 = a^2\sec^2\theta + b^2\tan^2\theta + 2ab\sec\theta\tan\theta $$
+            $$ y^2 = a^2\tan^2\theta + b^2\sec^2\theta + 2ab\sec\theta\tan\theta $$
+            <p>Subtract the second equation from the first to eliminate the cross-term $2ab\sec\theta\tan\theta$:</p>
+            $$ x^2 - y^2 = a^2(\sec^2\theta - \tan^2\theta) - b^2(\sec^2\theta - \tan^2\theta) = a^2(1) - b^2(1)
+            \implies \mathbf{x^2 - y^2 = a^2 - b^2} $$
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 6 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Worked Example 6 &bull; Allied Angles &amp; $75^\circ$ Surds</span>
+        </div>
+        <div class="ex-problem">
+            Evaluate the exact value of:
+            $$ M = \frac{\sin 150^\circ \cdot \cos 210^\circ \cdot \tan 120^\circ}{\cos 135^\circ \cdot \sin 315^\circ
+            \cdot \sin 330^\circ} + \tan 75^\circ + \cot 75^\circ $$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Reduce Every Allied Angle Using Even Multiples of $90^\circ$ + ASTC:</strong></p>
+            <ul>
+                <li>$\sin 150^\circ = \sin(180^\circ - 30^\circ) = +\sin 30^\circ = \dfrac{1}{2}$ &nbsp; (Q-II: $\sin
+                    \gt 0$)</li>
+                <li>$\cos 210^\circ = \cos(180^\circ + 30^\circ) = -\cos 30^\circ = -\dfrac{\sqrt{3}}{2}$ &nbsp; (Q-III:
+                    $\cos \lt 0$)</li>
+                <li>$\tan 120^\circ = \tan(180^\circ - 60^\circ) = -\tan 60^\circ = -\sqrt{3}$ &nbsp; (Q-II: $\tan \lt
+                    0$)</li>
+                <li>$\cos 135^\circ = \cos(180^\circ - 45^\circ) = -\cos 45^\circ = -\dfrac{1}{\sqrt{2}}$ &nbsp; (Q-II:
+                    $\cos \lt 0$)</li>
+                <li>$\sin 315^\circ = \sin(360^\circ - 45^\circ) = -\sin 45^\circ = -\dfrac{1}{\sqrt{2}}$ &nbsp; (Q-IV:
+                    $\sin \lt 0$)</li>
+                <li>$\sin 330^\circ = \sin(360^\circ - 30^\circ) = -\sin 30^\circ = -\dfrac{1}{2}$ &nbsp; (Q-IV: $\sin
+                    \lt 0$)</li>
+            </ul>
+            <p><strong>Step 2 — Evaluate the Fraction:</strong></p>
+            $$
+            \frac{\left(\frac{1}{2}\right)\left(-\frac{\sqrt{3}}{2}\right)(-\sqrt{3})}{\left(-\frac{1}{\sqrt{2}}\right)\left(-\frac{1}{\sqrt{2}}\right)\left(-\frac{1}{2}\right)}
+            = \frac{+\frac{3}{4}}{\left(+\frac{1}{2}\right)\left(-\frac{1}{2}\right)} = \frac{3/4}{-1/4} = -3 $$
+            <p><strong>Step 3 — Evaluate $\tan 75^\circ + \cot 75^\circ$ via Compound Angles:</strong></p>
+            $$ \tan 75^\circ = \tan(45^\circ + 30^\circ) = \frac{1 + \frac{1}{\sqrt{3}}}{1 - \frac{1}{\sqrt{3}}} =
+            \frac{\sqrt{3} + 1}{\sqrt{3} - 1} = \frac{(\sqrt{3}+1)^2}{2} = 2 + \sqrt{3} $$
+            $$ \cot 75^\circ = \frac{1}{2 + \sqrt{3}} = 2 - \sqrt{3} \implies \tan 75^\circ + \cot 75^\circ = (2 +
+            \sqrt{3}) + (2 - \sqrt{3}) = 4 $$
+            <p><strong>Step 4 — Combine:</strong> $M = -3 + 4 = \mathbf{1}$.</p>
+        </div>
+    </div>
+
+    <!-- LEVEL 3 BANNER -->
+    <div class="level-banner l3">Level 3: Rank-Booster &mdash; Olympiad Cascades, Compound Identities &amp; Max/Min
+        Extrema</div>
+
+    <!-- WORKED EXAMPLE 7 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Worked Example 7 &bull; $A + B = 45^\circ$ Product Cascade</span>
+        </div>
+        <div class="ex-problem">
+            If the trigonometric product
+            $$ P = (1 + \tan 1^\circ)(1 + \tan 2^\circ)(1 + \tan 3^\circ)\cdots(1 + \tan 44^\circ)(1 + \tan 45^\circ) $$
+            equals $2^n$, find the exact integer value of $n$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <p><strong>Step 1 — Prove the Pairing Lemma:</strong> For any two acute angles $A, B$ satisfying $A + B =
+                45^\circ$, take the tangent of both sides (all angles lie in $[1^\circ, 44^\circ]$, safely away from
+                $90^\circ$):</p>
+            $$ \tan(A + B) = \tan 45^\circ = 1 \implies \frac{\tan A + \tan B}{1 - \tan A\tan B} = 1 \implies \tan A +
+            \tan B = 1 - \tan A\tan B $$
+            <p>Move $-\tan A\tan B$ to the left and add $1$ to both sides:</p>
+            $$ 1 + \tan A + \tan B + \tan A\tan B = 2 \implies (1 + \tan A)(1 + \tan B) = 2 $$
+            <p><strong>Step 2 — Partition the 45 Factors into Complementary $45^\circ$-Pairs:</strong> Isolate the final
+                factor $(1 + \tan 45^\circ) = 1 + 1 = 2$. Pair the remaining $44$ factors from the outside in:</p>
+            $$ P = \Big[(1+\tan 1^\circ)(1+\tan 44^\circ)\Big]\Big[(1+\tan 2^\circ)(1+\tan
+            43^\circ)\Big]\cdots\Big[(1+\tan 22^\circ)(1+\tan 23^\circ)\Big]\cdot(1+\tan 45^\circ) $$
+            <p><strong>Step 3 — Count Factors &amp; Collapse:</strong> There are exactly $\dfrac{44}{2} = 22$ bracketed
+                pairs, each equal to $2$, multiplied by the standalone factor $(1 + \tan 45^\circ) = 2$:</p>
+            $$ P = \underbrace{2 \times 2 \times \cdots \times 2}_{22\text{ pairs}} \times 2 = 2^{22} \times 2^1 =
+            2^{23} \implies n = \mathbf{23} $$
+            <div class="shortcut-box">
+                <strong>30-Second BEST Exam Shortcut:</strong> Whenever you see $\prod_{k=1}^{45}(1 + \tan k^\circ)$,
+                never expand! Every pair summing to $45^\circ$ contributes a factor of $2$, and $45^\circ$ itself
+                contributes $(1 + 1) = 2$. Count $= \frac{44}{2} + 1 = 23 \implies 2^{23}$. (Watch for the trap: if the
+                product starts at $0^\circ$, $(1 + \tan 0^\circ) = 1$, which does <em>not</em> change the power of $2$;
+                if it stops at $44^\circ$, the answer drops to $22$.)
+            </div>
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 8 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Worked Example 8 &bull; Telescopic Double-Angle Product</span>
+        </div>
+        <div class="ex-problem">
+            Evaluate the exact value of:
+            $$ Q = 16\cos 20^\circ \cos 40^\circ \cos 60^\circ \cos 80^\circ $$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <p><strong>Step 1 — Extract Known Exact Constants:</strong> Factor out $\cos 60^\circ = \dfrac{1}{2}$,
+                leaving $Q = 8S$, where $S = \cos 20^\circ \cos 40^\circ \cos 80^\circ$.</p>
+            <p><strong>Step 2 — Ignite the Double-Angle Domino Chain:</strong> Observe that the angles double
+                sequentially ($20^\circ \to 40^\circ \to 80^\circ$). Since $\sin 20^\circ \neq 0$, multiply and divide
+                $S$ by $2\sin 20^\circ$ and apply $2\sin\alpha\cos\alpha = \sin 2\alpha$ three times:</p>
+            $$ S = \frac{(2\sin 20^\circ \cos 20^\circ)\cos 40^\circ \cos 80^\circ}{2\sin 20^\circ} = \frac{\sin
+            40^\circ \cos 40^\circ \cos 80^\circ}{2\sin 20^\circ} $$
+            $$ S = \frac{(2\sin 40^\circ \cos 40^\circ)\cos 80^\circ}{4\sin 20^\circ} = \frac{\sin 80^\circ \cos
+            80^\circ}{4\sin 20^\circ} = \frac{2\sin 80^\circ \cos 80^\circ}{8\sin 20^\circ} = \frac{\sin
+            160^\circ}{8\sin 20^\circ} $$
+            <p><strong>Step 3 — Allied-Angle Cancellation:</strong> Because $160^\circ = 180^\circ - 20^\circ$ lies in
+                Q-II where sine is positive, $\sin 160^\circ = \sin 20^\circ$. Canceling $\sin 20^\circ \neq 0$ gives:
+            </p>
+            $$ S = \frac{\sin 20^\circ}{8\sin 20^\circ} = \frac{1}{8} \implies Q = 16 \cdot \frac{1}{2} \cdot
+            \frac{1}{8} = \mathbf{1} $$
+            <div class="shortcut-box">
+                <strong>30-Second BEST Exam Shortcut (Two Independent 1-Liners):</strong><br />
+                <strong>Route A (Doubling Formula):</strong> $\prod_{k=0}^{n-1}\cos(2^k\theta) =
+                \dfrac{\sin(2^n\theta)}{2^n\sin\theta}$ with $\theta=20^\circ, n=3 \implies \dfrac{\sin 160^\circ}{8\sin
+                20^\circ} = \dfrac{1}{8}$.<br />
+                <strong>Route B (Triple-Angle Symmetry):</strong> $\cos\theta\cos(60^\circ-\theta)\cos(60^\circ+\theta)
+                = \dfrac{1}{4}\cos 3\theta$ with $\theta=20^\circ \implies \dfrac{1}{4}\cos 60^\circ = \dfrac{1}{8}$.
+                Multiply by $16\cos 60^\circ = 8$ to get $\mathbf{1}$ in 10 seconds!
+            </div>
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 9 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Worked Example 9 &bull; Auxiliary-Angle &amp; AM-GM Extrema</span>
+        </div>
+        <div class="ex-problem">
+            <strong>(a)</strong> Find the exact maximum and minimum values of $f(\theta) = 5\cos\theta +
+            3\cos\!\left(\theta + \dfrac{\pi}{3}\right) + 4$ for all $\theta \in \mathbb{R}$.<br />
+            <strong>(b)</strong> Find the minimum value of $g(\theta) = 9\sec^2\theta + 16\csc^2\theta$ for $\theta \in
+            \left(0, \dfrac{\pi}{2}\right)$, and state the exact value of $\tan\theta$ at which this minimum occurs.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Compound Expansion + Auxiliary-Angle $R$-Formula:</strong></p>
+            <p>Expand $\cos\left(\theta + \frac{\pi}{3}\right)$ using $\cos\frac{\pi}{3} = \frac{1}{2}$ and
+                $\sin\frac{\pi}{3} = \frac{\sqrt{3}}{2}$:</p>
+            $$ \cos\!\left(\theta + \frac{\pi}{3}\right) = \cos\theta\cos\frac{\pi}{3} - \sin\theta\sin\frac{\pi}{3} =
+            \frac{1}{2}\cos\theta - \frac{\sqrt{3}}{2}\sin\theta $$
+            <p>Substitute into $f(\theta)$ and group $\cos\theta$ and $\sin\theta$ terms:</p>
+            $$ f(\theta) = 5\cos\theta + 3\left(\frac{1}{2}\cos\theta - \frac{\sqrt{3}}{2}\sin\theta\right) + 4 =
+            \frac{13}{2}\cos\theta - \frac{3\sqrt{3}}{2}\sin\theta + 4 $$
+            <p>Compute the resultant amplitude $R = \sqrt{a^2 + b^2}$ with $a = -\dfrac{3\sqrt{3}}{2}$ and $b =
+                \dfrac{13}{2}$:</p>
+            $$ R = \sqrt{\left(-\frac{3\sqrt{3}}{2}\right)^2 + \left(\frac{13}{2}\right)^2} = \sqrt{\frac{27}{4} +
+            \frac{169}{4}} = \sqrt{\frac{196}{4}} = \sqrt{49} = 7 $$
+            <p>Since $-R \le \frac{13}{2}\cos\theta - \frac{3\sqrt{3}}{2}\sin\theta \le +R$, shifting by $+4$ yields $-7
+                + 4 \le f(\theta) \le 7 + 4$, so $\mathbf{f_{\max} = 11}$ and $\mathbf{f_{\min} = -3}$.</p>
+            <p><strong>Part (b) — Pythagorean Decomposition + AM-GM:</strong></p>
+            <p>Convert both terms into reciprocal squared functions $\tan^2\theta$ and $\cot^2\theta$:</p>
+            $$ g(\theta) = 9(1 + \tan^2\theta) + 16(1 + \cot^2\theta) = 25 + 9\tan^2\theta + 16\cot^2\theta $$
+            <p>Because $\theta \in (0, \pi/2)$, both $9\tan^2\theta \gt 0$ and $16\cot^2\theta \gt 0$. Apply AM-GM:</p>
+            $$ 9\tan^2\theta + 16\cot^2\theta \ge 2\sqrt{(9\tan^2\theta)(16\cot^2\theta)} = 2\sqrt{144} = 24 $$
+            <p>Therefore $g(\theta) \ge 25 + 24 = \mathbf{49}$. Check equality attainability:</p>
+            $$ 9\tan^2\theta = 16\cot^2\theta = \frac{16}{\tan^2\theta} \implies \tan^4\theta = \frac{16}{9} \implies
+            \tan^2\theta = \frac{4}{3} \implies \tan\theta = \mathbf{\frac{2}{\sqrt{3}}} $$
+            <p>(Positive root selected since $\theta \in (0, \pi/2)$; check directly: $9\left(1+\frac{4}{3}\right) +
+                16\left(1+\frac{3}{4}\right) = 21 + 28 = 49$.)</p>
+            <div class="shortcut-box">
+                <strong>30-Second BEST Exam Shortcut:</strong><br />
+                <strong>For Part (a):</strong> Treat $p\cos\theta + q\cos(\theta + \phi)$ as two vectors of magnitudes
+                $p = 5$, $q = 3$ separated by angle $\phi = 60^\circ$. Their resultant magnitude is $R = \sqrt{p^2 + q^2
+                + 2pq\cos\phi} = \sqrt{25 + 9 + 30(1/2)} = \sqrt{49} = 7$, giving range $[4 - 7,\; 4 + 7] =
+                \mathbf{[-3,\; 11]}$.<br />
+                <strong>For Part (b):</strong> $\min(a\sec^2\theta + b\csc^2\theta) = (\sqrt{a} + \sqrt{b})^2 =
+                (\sqrt{9} + \sqrt{16})^2 = 7^2 = \mathbf{49}$, attained at $\tan\theta = \left(\dfrac{b}{a}\right)^{1/4}
+                = \left(\dfrac{16}{9}\right)^{1/4} = \mathbf{\dfrac{2}{\sqrt{3}}}$.
+            </div>
+        </div>
+    </div>
+
+</article>

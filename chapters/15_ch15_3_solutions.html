@@ -1,0 +1,682 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 15: Heights &amp; Distances — Solutions &amp; Error Forensics">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 2: Mathematics (Paper 1) &bull; Chapter 15 &bull; Part 3 of 3: Verified
+            Solutions &amp; Error Forensics</div>
+        <h1>Heights &amp; Distances (2D Static, Moving Objects &amp; Multi-Observer Bridges)</h1>
+        <p>Complete, zero-skip step-by-step solutions for all 28 Graded Practice Arena problems (Q1&ndash;Q28), audited
+            100% against the Chapter 15 Answer Key Grid, followed by five targeted Trap &amp; Error Forensics diagnostic
+            cards.</p>
+        <div class="tag-row">
+            <span class="meta-pill">28 Verified Solutions</span>
+            <span class="meta-pill">Zero Algebraic Skips</span>
+            <span class="meta-pill">5 Error Forensics Cards</span>
+            <span class="meta-pill">BEST Paper 1 Audit</span>
+        </div>
+    </header>
+
+    <!-- =========================================================
+       LEVEL 1 SOLUTIONS (Q1 – Q8)
+       ========================================================= -->
+    <div class="level-banner l1">Level 1 Solutions: Warmup (Q1 &ndash; Q8)</div>
+
+    <!-- SOL Q1 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q1</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 — Write Both Shadow Lengths in Terms of Pole Height $h$:</strong> Let $h$ be the height of the
+            vertical pole. At altitude $30^\circ$, the shadow length is $x_1 = h\cot 30^\circ = h\sqrt{3}$. At altitude
+            $60^\circ$, the shorter shadow length is $x_2 = h\cot 60^\circ = \dfrac{h}{\sqrt{3}}$.</p>
+        <p><strong>Step 2 — Equate Shadow Decrease to $24\text{ m}$:</strong></p>
+        $$ x_1 - x_2 = 24 \implies h\sqrt{3} - \frac{h}{\sqrt{3}} = 24 \implies h\left(\frac{3 - 1}{\sqrt{3}}\right) =
+        24 \implies \frac{2h}{\sqrt{3}} = 24 \implies h = \mathbf{12\sqrt{3}\text{ m}} $$
+        <p><em>10-Second Ratio-Ladder Check:</em> In the $30^\circ\text{–}60^\circ$ ladder, set $h = \sqrt{3}u$. Then
+            the gap is $2u = 24 \implies u = 12 \implies h = 12\sqrt{3}\text{ m}$. Therefore, the correct option is
+            <strong>(B)</strong>.
+        </p>
+    </div>
+
+    <!-- SOL Q2 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q2</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Answer: 120</span>
+        </div>
+        <p><strong>Step 1 — Convert Depressions to Equal Elevations (Z-Angle Rule):</strong> By parallel horizontal
+            lines, the angles of elevation of the lighthouse top from boats $A$ and $B$ are $60^\circ$ and $30^\circ$,
+            respectively. Let $h = 30\sqrt{3}\text{ m}$ and foot be $O$.</p>
+        <p><strong>Step 2 — Compute Both Horizontal Distances Using Exact Surds:</strong></p>
+        $$ OA = h\cot 60^\circ = 30\sqrt{3} \cdot \frac{1}{\sqrt{3}} = 30\text{ m} $$
+        $$ OB = h\cot 30^\circ = 30\sqrt{3} \cdot \sqrt{3} = 30 \times 3 = 90\text{ m} $$
+        <p><strong>Step 3 — Add Distances (Opposite Sides):</strong> Since $A$ and $B$ lie on opposite sides of $O$:</p>
+        $$ AB = OA + OB = 30 + 90 = \mathbf{120\text{ m}} $$
+        <p>Therefore, the NAT answer is <strong>120</strong>.</p>
+    </div>
+
+    <!-- SOL Q3 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q3</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 — Use the Lower Right Triangle $\triangle AED$:</strong> Since $ABDE$ is a rectangle, $ED = AB
+            = 15\text{ m}$. The angle of depression from $A$ to $D$ is $\angle EAD = 30^\circ$:</p>
+        $$ \tan 30^\circ = \frac{ED}{AE} \implies \frac{1}{\sqrt{3}} = \frac{15}{AE} \implies AE = 15\sqrt{3}\text{ m}
+        $$
+        <p><strong>Step 2 — Use the Upper Right Triangle $\triangle AEC$:</strong> Given $\angle CAE = 60^\circ$:</p>
+        $$ \tan 60^\circ = \frac{CE}{AE} \implies \sqrt{3} = \frac{CE}{15\sqrt{3}} \implies CE = 15\sqrt{3} \cdot
+        \sqrt{3} = 45\text{ m} $$
+        <p><strong>Step 3 — Total Height of Cable Tower:</strong></p>
+        $$ CD = CE + ED = 45 + 15 = \mathbf{60\text{ m}} $$
+        <p>Therefore, the correct option is <strong>(C)</strong>.</p>
+    </div>
+
+    <!-- SOL Q4 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q4</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 — Read the Angle Reference Carefully:</strong> Let $O$ be the foot, $B$ the break point
+            (vertical stump $OB = h_1$), and $A$ the point on the ground ($OA = 10\text{ m}$). The problem states the
+            leaning segment $AB = L$ makes $30^\circ$ with the <strong>vertical standing trunk $OB$</strong>, so $\angle
+            OBA = 30^\circ$ (and therefore $\angle OAB = 60^\circ$).</p>
+        <p><strong>Step 2 — Solve Right $\triangle AOB$ with $OA = 10\text{ m}$ Opposite $30^\circ$:</strong></p>
+        $$ \tan 30^\circ = \frac{OA}{OB} \implies \frac{1}{\sqrt{3}} = \frac{10}{h_1} \implies h_1 = 10\sqrt{3}\text{ m}
+        $$
+        $$ \sin 30^\circ = \frac{OA}{AB} \implies \frac{1}{2} = \frac{10}{L} \implies L = 20\text{ m} $$
+        <p><strong>Step 3 — Sum Stump + Leaning Top:</strong></p>
+        $$ H_{\text{orig}} = h_1 + L = 10\sqrt{3} + 20 = \mathbf{10(2 + \sqrt{3})\text{ m}} $$
+        <p>Therefore, the correct option is <strong>(A)</strong>.</p>
+    </div>
+
+    <!-- SOL Q5 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q5</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Answer: 072</span>
+        </div>
+        <p><strong>Step 1 — Compute Tower Height ($h$) and Total Height ($H$):</strong> Given horizontal base $x =
+            36\sqrt{3}\text{ m}$:</p>
+        $$ h = x\tan 30^\circ = 36\sqrt{3} \cdot \frac{1}{\sqrt{3}} = 36\text{ m} $$
+        $$ H = x\tan 60^\circ = 36\sqrt{3} \cdot \sqrt{3} = 36 \times 3 = 108\text{ m} $$
+        <p><strong>Step 2 — Subtract to Isolate Flagstaff Height:</strong></p>
+        $$ f = H - h = 108 - 36 = \mathbf{72\text{ m}} $$
+        <p>Therefore, the NAT answer is <strong>072</strong>.</p>
+    </div>
+
+    <!-- SOL Q6 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q6</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 — Set Up the Same-Side Equation:</strong> Let the monument height be $h$. The farther observer
+            ($30^\circ$) is at distance $h\cot 30^\circ = h\sqrt{3}$, and the closer observer ($45^\circ$) is at
+            distance $h\cot 45^\circ = h$:</p>
+        $$ h\sqrt{3} - h = 40 \implies h(\sqrt{3} - 1) = 40 $$
+        <p><strong>Step 2 — Rationalize the Denominator:</strong></p>
+        $$ h = \frac{40}{\sqrt{3} - 1} \cdot \frac{\sqrt{3} + 1}{\sqrt{3} + 1} = \frac{40(\sqrt{3} + 1)}{3 - 1} =
+        \frac{40(\sqrt{3} + 1)}{2} = \mathbf{20(\sqrt{3} + 1)\text{ m}} $$
+        <p>Therefore, the correct option is <strong>(D)</strong>.</p>
+    </div>
+
+    <!-- SOL Q7 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q7</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Answer: 045</span>
+        </div>
+        <p><strong>Step 1 — Write Tangent Relations for Complementary Angles $\alpha$ and $90^\circ - \alpha$:</strong>
+            Let $h$ be the chimney height. Since both $27\text{ m}$ and $75\text{ m}$ are measured from the
+            <em>foot</em> $O$:
+        </p>
+        $$ \tan\alpha = \frac{h}{75}, \qquad \tan(90^\circ - \alpha) = \cot\alpha = \frac{h}{27} $$
+        <p><strong>Step 2 — Multiply to Eliminate $\alpha$:</strong></p>
+        $$ \tan\alpha \cdot \cot\alpha = 1 \implies \frac{h}{75} \cdot \frac{h}{27} = 1 \implies h^2 = 75 \times 27 =
+        (25 \times 3)(3 \times 9) = 25 \times 9 \times 9 $$
+        $$ h = 5 \times 3 \times 3 = \mathbf{45\text{ m}} $$
+        <p>Therefore, the NAT answer is <strong>045</strong>.</p>
+    </div>
+
+    <!-- SOL Q8 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q8</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 — Find Vertical Height Above the Surveyor's Eye Level:</strong> In the right triangle formed
+            above the horizontal eye line (base $x = 24\sqrt{3}\text{ m}$, elevation $30^\circ$):</p>
+        $$ h_{\text{above eye}} = 24\sqrt{3}\tan 30^\circ = 24\sqrt{3} \cdot \frac{1}{\sqrt{3}} = 24\text{ m} $$
+        <p><strong>Step 2 — Add the Surveyor's Eye Height:</strong></p>
+        $$ H_{\text{total}} = 24 + 1.8 = \mathbf{25.8\text{ m}} $$
+        <p>Therefore, the correct option is <strong>(C)</strong>.</p>
+    </div>
+
+    <!-- =========================================================
+       LEVEL 2 SOLUTIONS (Q9 – Q19)
+       ========================================================= -->
+    <div class="level-banner l2">Level 2 Solutions: Exam-Real (Q9 &ndash; Q19)</div>
+
+    <!-- SOL Q9 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q9</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 070</span>
+        </div>
+        <p><strong>Step 1 — Set Up Mirror-Symmetry Vertical Displacements:</strong> Let $H$ be the height of cloud $C$
+            above the lake surface ($CN = H$). By plane-mirror reflection, $NC' = H$. Since observer $A$ is at $h =
+            35\text{ m}$ above the lake, horizontal line $AD$ divides $CC'$ such that:</p>
+        <ul>
+            <li>Cloud height above eye level: $CD = H - 35$.</li>
+            <li>Reflection depth below eye level: $DC' = DN + NC' = 35 + H = H + 35$.</li>
+        </ul>
+        <p><strong>Step 2 — Equate Horizontal Distance $x = AD$ from $\triangle ADC$ and $\triangle ADC'$:</strong></p>
+        $$ \tan 30^\circ = \frac{H - 35}{x} \implies x = (H - 35)\sqrt{3} $$
+        $$ \tan 60^\circ = \frac{H + 35}{x} \implies H + 35 = x\sqrt{3} = \big((H - 35)\sqrt{3}\big)\sqrt{3} = 3(H - 35)
+        $$
+        $$ H + 35 = 3H - 105 \implies 2H = 140 \implies \mathbf{H = 70\text{ m}} $$
+        <p>Therefore, the NAT answer is <strong>070</strong>.</p>
+    </div>
+
+    <!-- SOL Q10 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q10</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 — Relate $H$, $h$, and Horizontal Distance $x$:</strong> From the upper triangle $\triangle
+            ADC$ and lower reflection triangle $\triangle ADC'$:</p>
+        $$ H - h = x\tan\alpha, \qquad H + h = x\tan\beta $$
+        <p><strong>Step 2 — Subtract to Eliminate $H$ and Solve for $x$:</strong></p>
+        $$ (H + h) - (H - h) = x(\tan\beta - \tan\alpha) \implies 2h = x\left(\frac{\sin\beta}{\cos\beta} -
+        \frac{\sin\alpha}{\cos\alpha}\right) = x\left(\frac{\sin\beta\cos\alpha -
+        \cos\beta\sin\alpha}{\cos\alpha\cos\beta}\right) $$
+        $$ 2h = x\frac{\sin(\beta - \alpha)}{\cos\alpha\cos\beta} \implies x = \frac{2h\cos\alpha\cos\beta}{\sin(\beta -
+        \alpha)} $$
+        <p><strong>Step 3 — Find Straight-Line Distance $AC$ from Window to Cloud:</strong> In upper right $\triangle
+            ADC$, $\cos\alpha = \dfrac{x}{AC}$, so:</p>
+        $$ AC = \frac{x}{\cos\alpha} = \mathbf{\frac{2h\cos\beta}{\sin(\beta - \alpha)}} $$
+        <p>Therefore, the correct option is <strong>(B)</strong>.</p>
+    </div>
+
+    <!-- SOL Q11 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q11</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 042</span>
+        </div>
+        <p><strong>Step 1 — Express Segment Distances via Ratio Ladder:</strong> Let $h$ be the watchtower height. By
+            alternate interior angles, the car's positions $A$ ($30^\circ$) and $B$ ($60^\circ$) lie at distances $OA =
+            h\sqrt{3}$ and $OB = \dfrac{h}{\sqrt{3}}$ from foot $O$. The distance covered in $28\text{ s}$ is:</p>
+        $$ AB = OA - OB = h\sqrt{3} - \frac{h}{\sqrt{3}} = \frac{2h}{\sqrt{3}} = 2 \cdot OB $$
+        <p><strong>Step 2 — Compute Remaining Time &amp; Total Time:</strong> Because the car moves at uniform speed
+            $v$, covering $OB = \dfrac{1}{2}AB$ takes half the elapsed time:</p>
+        $$ t_{\text{rem}} = \frac{28}{2} = 14\text{ seconds} $$
+        <p>Read the prompt carefully: it asks for the <strong>total</strong> time starting from the $30^\circ$ instant:
+        </p>
+        $$ t_{\text{total}} = 28 + 14 = \mathbf{42\text{ seconds}} $$
+        <p>Therefore, the NAT answer is <strong>042</strong>.</p>
+    </div>
+
+    <!-- SOL Q12 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q12</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 — Compare Covered Distance $AB$ and Remaining Distance $BO$:</strong> For tower height $h$,
+            $OA = h\cot 30^\circ = h\sqrt{3}$ and $OB = h\cot 45^\circ = h$, so $AB = h(\sqrt{3} - 1)$.</p>
+        <p><strong>Step 2 — Apply Uniform-Speed Proportionality:</strong></p>
+        $$ \frac{t_{\text{rem}}}{10} = \frac{BO}{AB} = \frac{h}{h(\sqrt{3} - 1)} = \frac{1}{\sqrt{3} - 1} $$
+        <p>Rationalize the denominator:</p>
+        $$ t_{\text{rem}} = \frac{10}{\sqrt{3} - 1} \cdot \frac{\sqrt{3} + 1}{\sqrt{3} + 1} = \frac{10(\sqrt{3} + 1)}{2}
+        = \mathbf{5(\sqrt{3} + 1)\text{ min}} $$
+        <p>Therefore, the correct option is <strong>(D)</strong>.</p>
+    </div>
+
+    <!-- SOL Q13 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q13</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 720</span>
+        </div>
+        <p><strong>Step 1 — Find Horizontal Distances Before and After Overhead Pass:</strong> At constant altitude $H =
+            1500\sqrt{3}\text{ m}$:</p>
+        $$ x_1 = H\cot 60^\circ = 1500\sqrt{3} \cdot \frac{1}{\sqrt{3}} = 1500\text{ m} $$
+        $$ x_2 = H\cot 30^\circ = 1500\sqrt{3} \cdot \sqrt{3} = 4500\text{ m} $$
+        <p><strong>Step 2 — Add Displacements (Opposite Sides of Observer):</strong> Because the aircraft flies directly
+            overhead between the two sightings, total horizontal distance traveled is the <em>sum</em>:</p>
+        $$ \Delta x = x_1 + x_2 = 1500 + 4500 = 6000\text{ m} $$
+        <p><strong>Step 3 — Compute Speed &amp; Convert to $\text{km/h}$:</strong></p>
+        $$ v = \frac{6000\text{ m}}{30\text{ s}} = 200\text{ m/s} = 200 \times \frac{18}{5}\text{ km/h} = 40 \times 18 =
+        \mathbf{720\text{ km/h}} $$
+        <p>Therefore, the NAT answer is <strong>720</strong>.</p>
+    </div>
+
+    <!-- SOL Q14 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q14</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 — Express Both Base Segments in Terms of $x$:</strong> Let $x$ be the distance of point $P$
+            from the closer pole (which subtends the larger angle $60^\circ$). Then the distance from the farther pole
+            ($30^\circ$) is $120 - x$:</p>
+        $$ \tan 60^\circ = \frac{h}{x} \implies h = x\sqrt{3} $$
+        $$ \tan 30^\circ = \frac{h}{120 - x} \implies 120 - x = h\sqrt{3} = (x\sqrt{3})\sqrt{3} = 3x $$
+        <p><strong>Step 2 — Solve for $x$ and $h$:</strong></p>
+        $$ 4x = 120 \implies \mathbf{x = 30\text{ m}}, \qquad h = 30\sqrt{3}\text{ m} $$
+        <p>Therefore, the correct option is <strong>(A)</strong>.</p>
+    </div>
+
+    <!-- SOL Q15 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q15</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 — Convert the Gap $AB$ into Distance from Foot $O$:</strong> Point $A$ is at $OA = 16\text{
+            m}$ from foot $O$. Since $B$ lies farther from $O$ on the same side with $AB = 20\text{ m}$:</p>
+        $$ OB = OA + AB = 16 + 20 = 36\text{ m} $$
+        <p><em>Trap Avoided:</em> Plugging $20$ instead of $36$ into $\sqrt{ab}$ yields the false distractor $\sqrt{16
+            \times 20} = 8\sqrt{5}\text{ m}$ (Option A).</p>
+        <p><strong>Step 2 — Apply the Complementary Geometric Mean Theorem:</strong></p>
+        $$ h = \sqrt{OA \cdot OB} = \sqrt{16 \times 36} = 4 \times 6 = \mathbf{24\text{ m}} $$
+        <p>Therefore, the correct option is <strong>(C)</strong>.</p>
+    </div>
+
+    <!-- SOL Q16 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q16</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 054</span>
+        </div>
+        <p><strong>Step 1 — Find Eye-to-Center Distance $OP$:</strong> Let tangents from eye $P$ touch the spherical
+            balloon of radius $R = 18\sqrt{3}\text{ m}$ at $A$ and $B$. Since $\angle APB = 60^\circ$, line $OP$ bisects
+            it into $\angle APO = 30^\circ$, with $OA \perp PA$. In right $\triangle OAP$:</p>
+        $$ \sin 30^\circ = \frac{OA}{OP} \implies \frac{1}{2} = \frac{18\sqrt{3}}{OP} \implies OP = 36\sqrt{3}\text{ m}
+        $$
+        <p><strong>Step 2 — Find Vertical Height $h$ of Center $O$:</strong> Given center elevation $\phi = 60^\circ$:
+        </p>
+        $$ h = OP\sin 60^\circ = 36\sqrt{3} \cdot \frac{\sqrt{3}}{2} = 18 \times 3 = \mathbf{54\text{ m}} $$
+        <p>Therefore, the NAT answer is <strong>054</strong>.</p>
+    </div>
+
+    <!-- SOL Q17 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q17</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 — Compute $\cot 15^\circ$ from $\tan 15^\circ = 2 - \sqrt{3}$:</strong></p>
+        $$ \cot 15^\circ = \frac{1}{2 - \sqrt{3}} \cdot \frac{2 + \sqrt{3}}{2 + \sqrt{3}} = \frac{2 + \sqrt{3}}{4 - 3} =
+        2 + \sqrt{3} $$
+        <p><strong>Step 2 — Equate Shadow Difference to $20(\sqrt{3} + 1)$:</strong></p>
+        $$ h(\cot 15^\circ - \cot 45^\circ) = 20(\sqrt{3} + 1) \implies h\big((2 + \sqrt{3}) - 1\big) = 20(\sqrt{3} + 1)
+        $$
+        $$ h(\sqrt{3} + 1) = 20(\sqrt{3} + 1) \implies \mathbf{h = 20\text{ m}} $$
+        <p>Therefore, the correct option is <strong>(D)</strong>.</p>
+    </div>
+
+    <!-- SOL Q18 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q18</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Passage 1 &bull; Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 — Solve Right $\triangle AEC$:</strong> Horizontal segment $AE = BD = 60\sqrt{3}\text{ m}$,
+            $ED = AB = 60\text{ m}$, and $\angle CAE = 30^\circ$:</p>
+        $$ CE = AE\tan 30^\circ = 60\sqrt{3} \cdot \frac{1}{\sqrt{3}} = 60\text{ m} $$
+        <p><strong>Step 2 — Compute $h_2$ and Rooftop Span $AC$:</strong></p>
+        $$ h_2 = CD = CE + ED = 60 + 60 = \mathbf{120\text{ m}} $$
+        $$ \sin 30^\circ = \frac{CE}{AC} \implies \frac{1}{2} = \frac{60}{AC} \implies \mathbf{AC = 120\text{ m}} $$
+        <p>Therefore, the correct option is <strong>(B)</strong>.</p>
+    </div>
+
+    <!-- SOL Q19 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q19</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Passage 1 &bull; Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 — Locate Pedestrian $P$ Along $BD$:</strong> In right $\triangle ABP$ with $AB = 60\text{ m}$
+            and $\angle APB = 60^\circ$:</p>
+        $$ BP = AB\cot 60^\circ = \frac{60}{\sqrt{3}} = 20\sqrt{3}\text{ m} $$
+        <p>Hence the remaining distance to skyscraper $CD$ is:</p>
+        $$ PD = BD - BP = 60\sqrt{3} - 20\sqrt{3} = 40\sqrt{3}\text{ m} $$
+        <p><strong>Step 2 — Find $\angle CPD$ and $\angle APC$:</strong> Using $CD = 120\text{ m}$ from Q18 in right
+            $\triangle CDP$:</p>
+        $$ \tan(\angle CPD) = \frac{CD}{PD} = \frac{120}{40\sqrt{3}} = \frac{3}{\sqrt{3}} = \sqrt{3} \implies
+        \mathbf{\angle CPD = 60^\circ} $$
+        <p>Since $B, P, D$ lie on a straight horizontal line ($\angle BPD = 180^\circ$):</p>
+        $$ \angle APC = 180^\circ - \angle APB - \angle CPD = 180^\circ - 60^\circ - 60^\circ = \mathbf{60^\circ} $$
+        <p>Therefore, the correct option is <strong>(C)</strong>.</p>
+    </div>
+
+    <!-- =========================================================
+       LEVEL 3 SOLUTIONS (Q20 – Q28)
+       ========================================================= -->
+    <div class="level-banner l3">Level 3 Solutions: Rank-Booster (Q20 &ndash; Q28)</div>
+
+    <!-- SOL Q20 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q20</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 — Project the $60\text{ m}$ Slope onto Horizontal and Vertical Axes:</strong> In right
+            $\triangle PMB$ with hypotenuse $PB = 60\text{ m}$ and hill slope $\angle BPM = 15^\circ$:</p>
+        $$ PM = 60\cos 15^\circ, \qquad BM = 60\sin 15^\circ $$
+        <p><strong>Step 2 — Apply the $45^\circ$ Elevation in Right $\triangle TPM$:</strong> Since $T, B, M$ are
+            collinear vertically, $TM = h + BM = h + 60\sin 15^\circ$. Because $\angle TPM = 45^\circ$, $\tan 45^\circ =
+            1 \implies TM = PM$:</p>
+        $$ h + 60\sin 15^\circ = 60\cos 15^\circ \implies h = 60(\cos 15^\circ - \sin 15^\circ) $$
+        <p><strong>Step 3 — Substitute Exact Surds for $15^\circ$:</strong> Using $\cos 15^\circ =
+            \dfrac{\sqrt{6}+\sqrt{2}}{4}$ and $\sin 15^\circ = \dfrac{\sqrt{6}-\sqrt{2}}{4}$:</p>
+        $$ \cos 15^\circ - \sin 15^\circ = \frac{(\sqrt{6} + \sqrt{2}) - (\sqrt{6} - \sqrt{2})}{4} = \frac{2\sqrt{2}}{4}
+        = \frac{\sqrt{2}}{2} $$
+        $$ h = 60 \cdot \frac{\sqrt{2}}{2} = \mathbf{30\sqrt{2}\text{ m}} $$
+        <p><em>10-Second Law-of-Sines Cross-Check:</em> $h = d\dfrac{\sin(\alpha - \gamma)}{\cos\alpha} =
+            60\dfrac{\sin(45^\circ - 15^\circ)}{\cos 45^\circ} = 60\dfrac{1/2}{1/\sqrt{2}} = 30\sqrt{2}\text{ m}$.
+            Therefore, the correct option is <strong>(A)</strong>.</p>
+    </div>
+
+    <!-- SOL Q21 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q21</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Answer: 084</span>
+        </div>
+        <p><strong>Step 1 — Express Ground Legs $OA$ and $OB$ in Terms of $h$:</strong></p>
+        <ul>
+            <li>In vertical right $\triangle POA$: $\tan\alpha = \dfrac{12}{5} \implies \cot\alpha = \dfrac{5}{12}
+                \implies OA = h\cot\alpha = \dfrac{5}{12}h$.</li>
+            <li>In vertical right $\triangle POB$: $\beta = 45^\circ \implies OB = h\cot 45^\circ = h$.</li>
+        </ul>
+        <p><strong>Step 2 — Apply Pythagoras on the Horizontal Ground Plane (North $\perp$ East):</strong> Since $\angle
+            AOB = 90^\circ$:</p>
+        $$ AB^2 = OA^2 + OB^2 \implies 91^2 = \left(\frac{5}{12}h\right)^2 + h^2 = h^2\left(\frac{25 + 144}{144}\right)
+        = \frac{169}{144}h^2 $$
+        <p>Taking positive square roots of both sides:</p>
+        $$ 91 = \frac{13}{12}h \implies h = \frac{91 \times 12}{13} = 7 \times 12 = \mathbf{84\text{ m}} $$
+        <p>Therefore, the NAT answer is <strong>084</strong>.</p>
+    </div>
+
+    <!-- SOL Q22 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q22</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 — Project All Three Sightlines onto the Horizontal Ground Plane:</strong> From the three
+            vertical right triangles $\triangle POA$, $\triangle POB$, and $\triangle POC$:</p>
+        $$ OA = h\cot 30^\circ = h\sqrt{3}, \qquad OB = h\cot 45^\circ = h, \qquad OC = h\cot 60^\circ =
+        \frac{h}{\sqrt{3}} $$
+        <p><strong>Step 2 — Apply Apollonius's Median Theorem to Ground Triangle $\triangle OAC$:</strong> Since $B$ is
+            the midpoint of segment $AC$ with $AB = BC = d$, segment $OB$ is a median of $\triangle OAC$. By
+            Apollonius's Theorem ($OA^2 + OC^2 = 2(OB^2 + AB^2)$):</p>
+        $$ (h\sqrt{3})^2 + \left(\frac{h}{\sqrt{3}}\right)^2 = 2(h^2 + d^2) \implies 3h^2 + \frac{h^2}{3} = 2h^2 + 2d^2
+        $$
+        $$ \frac{10}{3}h^2 - 2h^2 = 2d^2 \implies \frac{4}{3}h^2 = 2d^2 \implies h^2 = \frac{3}{2}d^2 \implies \mathbf{h
+        = d\sqrt{\frac{3}{2}}} $$
+        <p>Therefore, the correct option is <strong>(D)</strong>.</p>
+    </div>
+
+    <!-- SOL Q23 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q23</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Answer: 108</span>
+        </div>
+        <p><strong>Step 1 — Write Flagstaff Height Using Shared Base $x = 18\sqrt{3}\text{ m}$:</strong></p>
+        $$ f = x(\tan 75^\circ - \tan 15^\circ) $$
+        <p><strong>Step 2 — Substitute Exact Surds ($\tan 75^\circ = 2 + \sqrt{3}$, $\tan 15^\circ = 2 -
+                \sqrt{3}$):</strong></p>
+        $$ f = 18\sqrt{3}\Big((2 + \sqrt{3}) - (2 - \sqrt{3})\Big) = 18\sqrt{3}\big(2\sqrt{3}\big) = 36 \times 3 =
+        \mathbf{108\text{ m}} $$
+        <p>Therefore, the NAT answer is <strong>108</strong>.</p>
+    </div>
+
+    <!-- SOL Q24 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q24</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 — Express $\tan\theta$ via Compound-Angle Subtraction:</strong> Let the observer stand at
+            distance $x \gt 0$ from the wall. The bottom edge of the billboard is $4\text{ m}$ above eye level
+            (elevation $\alpha$, $\tan\alpha = \frac{4}{x}$) and the top edge is $4 + 12 = 16\text{ m}$ above eye level
+            (elevation $\beta$, $\tan\beta = \frac{16}{x}$). The subtended angle is $\theta = \beta - \alpha \in
+            (0^\circ, 90^\circ)$:</p>
+        $$ \tan\theta = \tan(\beta - \alpha) = \frac{\tan\beta - \tan\alpha}{1 + \tan\beta\tan\alpha} =
+        \frac{\frac{16}{x} - \frac{4}{x}}{1 + \frac{64}{x^2}} = \frac{12/x}{(x^2 + 64)/x^2} = \frac{12}{x +
+        \dfrac{64}{x}} $$
+        <p><strong>Step 2 — Maximize $\tan\theta$ via AM-GM (Zero Calculus Required):</strong> Because $\tan\theta$
+            increases strictly on $(0^\circ, 90^\circ)$, $\theta$ is maximized precisely when the positive denominator
+            $x + \dfrac{64}{x}$ is <strong>minimized</strong>. By AM-GM:</p>
+        $$ x + \frac{64}{x} \ge 2\sqrt{x \cdot \frac{64}{x}} = 2\sqrt{64} = 16 $$
+        <p>Equality occurs uniquely when $x = \dfrac{64}{x} \implies x^2 = 64 \implies \mathbf{x = 8\text{ m}}$ (giving
+            $\tan\theta_{\max} = \frac{12}{16} = \frac{3}{4}$). Note the general geometric-mean rule: $x_{\text{opt}} =
+            \sqrt{h_{\text{bottom}} \cdot h_{\text{top}}} = \sqrt{4 \times 16} = 8\text{ m}$. Therefore, the correct
+            option is <strong>(B)</strong>.</p>
+    </div>
+
+    <!-- SOL Q25 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q25</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Answer: 090</span>
+        </div>
+        <p><strong>Step 1 — Convert Speed &amp; Find Distance Covered $AB$:</strong></p>
+        $$ v = 36\text{ km/h} = 36 \times \frac{5}{18}\text{ m/s} = 10\text{ m/s} \implies AB = v \cdot t = 10 \times 18
+        = 180\text{ m} $$
+        <p><strong>Step 2 — Solve for Tower Height $h$ (Two Independent Zero-Surd Routes):</strong></p>
+        <ul>
+            <li><strong>Route A (Exterior-Angle Isosceles Trick):</strong> In $\triangle TAB$, exterior angle $\angle
+                TBO = 30^\circ = \angle TAB + \angle ATB = 15^\circ + \angle ATB \implies \angle ATB = 15^\circ$. Hence
+                $\triangle TAB$ is isosceles with $BT = AB = 180\text{ m}$. In right $\triangle TBO$:
+                $$ h = BT\sin 30^\circ = 180 \cdot \frac{1}{2} = \mathbf{90\text{ m}} $$</li>
+            <li><strong>Route B (Exact Cotangent Difference):</strong> $AB = h(\cot 15^\circ - \cot 30^\circ) = h\big((2
+                + \sqrt{3}) - \sqrt{3}\big) = 2h \implies 2h = 180 \implies \mathbf{h = 90\text{ m}}$.</li>
+        </ul>
+        <p>Therefore, the NAT answer is <strong>090</strong>.</p>
+    </div>
+
+    <!-- SOL Q26 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q26</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 — Expose Two Nested Isosceles Triangles via Exterior Angles:</strong></p>
+        <ul>
+            <li>In $\triangle TAB$: exterior angle $2\theta = \theta + \angle ATB \implies \angle ATB = \theta$. Thus
+                $\triangle TAB$ is isosceles with $\mathbf{BT = AB = 200\text{ m}}$.</li>
+            <li>In $\triangle TBC$: exterior angle $4\theta = 2\theta + \angle BTC \implies \angle BTC = 2\theta$. Thus
+                $\triangle TBC$ is isosceles with $\mathbf{CT = BC = 125\text{ m}}$.</li>
+        </ul>
+        <p><strong>Step 2 — Solve Isosceles $\triangle TBC$ by Dropping Altitude $CM \perp BT$:</strong> In isosceles
+            $\triangle TBC$, the equal legs are $CB = CT = 125\text{ m}$ and the base is $BT = 200\text{ m}$. Altitude
+            $CM$ bisects base $BT$ at $M$, so $BM = \dfrac{200}{2} = 100\text{ m}$. In right $\triangle CMB$:</p>
+        $$ \cos 2\theta = \frac{BM}{BC} = \frac{100}{125} = \frac{4}{5} $$
+        <p>Since $4\theta \lt 90^\circ \implies 0^\circ \lt 2\theta \lt 45^\circ$, we have $\sin 2\theta = \sqrt{1 -
+            \left(\dfrac{4}{5}\right)^2} = \dfrac{3}{5}$.</p>
+        <p><strong>Step 3 — Compute Tower Height $h$ from Right $\triangle TBO$:</strong></p>
+        $$ h = BT\sin 2\theta = 200 \cdot \frac{3}{5} = \mathbf{120\text{ m}} $$
+        <p><em>Consistency Audit:</em> $OB = 200\cos 2\theta = 160\text{ m} \implies OC = 160 - 125 = 35\text{ m}$, and
+            $\sqrt{35^2 + 120^2} = \sqrt{15625} = 125 = CT$, confirming exactness. Therefore, the correct option is
+            <strong>(C)</strong>.
+        </p>
+    </div>
+
+    <!-- SOL Q27 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q27</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Passage 2 &bull; Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 — Express Ground Legs $OA$ and $OB$ in Terms of $h$:</strong></p>
+        $$ OA = h\cot\alpha = \frac{4}{3}h, \qquad OB = h\cot 45^\circ = h $$
+        <p><strong>Step 2 — Apply Pythagoras in Horizontal Right $\triangle AOB$ ($\angle AOB = 90^\circ$):</strong></p>
+        $$ AB^2 = OA^2 + OB^2 \implies 100^2 = \left(\frac{4}{3}h\right)^2 + h^2 = h^2\left(\frac{16 + 9}{9}\right) =
+        \frac{25}{9}h^2 $$
+        $$ 100 = \frac{5}{3}h \implies \mathbf{h = 60\text{ m}} $$
+        <p><strong>Step 3 — Find 3D Distance $PA$:</strong> Substitute $h = 60\text{ m}$ to get $OA = \dfrac{4}{3}(60) =
+            80\text{ m}$ and $OB = 60\text{ m}$. In vertical right $\triangle POA$:</p>
+        $$ PA = \sqrt{OA^2 + OP^2} = \sqrt{80^2 + 60^2} = \sqrt{6400 + 3600} = \sqrt{10000} = \mathbf{100\text{ m}} $$
+        <p>Therefore, the correct option is <strong>(B)</strong>.</p>
+    </div>
+
+    <!-- SOL Q28 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q28</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Passage 2 &bull; Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 — Locate the Point $C$ of Maximum Elevation:</strong> For any point $C$ on road $AB$,
+            $\tan\theta = \dfrac{h}{OC}$. To maximize $\theta$, we minimize the horizontal distance $OC$, which occurs
+            at the foot of the perpendicular $OC \perp AB$.</p>
+        <p><strong>Step 2 — Compute $OC_{\min}$ and $\tan\theta_{\max}$:</strong> From Q27, horizontal right $\triangle
+            AOB$ has legs $OA = 80\text{ m}$, $OB = 60\text{ m}$, and hypotenuse $AB = 100\text{ m}$. Equating area
+            $\frac{1}{2}OA \cdot OB = \frac{1}{2}AB \cdot OC_{\min}$:</p>
+        $$ OC_{\min} = \frac{80 \times 60}{100} = 48\text{ m} \implies \tan\theta_{\max} = \frac{h}{OC_{\min}} =
+        \frac{60}{48} = \mathbf{\frac{5}{4}} $$
+        <p>(Shortcut check: $\tan\theta_{\max} = \sqrt{\tan^2\alpha + \tan^2\beta} = \sqrt{\frac{9}{16} + 1} =
+            \frac{5}{4}$.) </p>
+        <p><strong>Step 3 — Compute Distance $AC$ Along Road $AB$:</strong> In horizontal right $\triangle ACO$ (with
+            right angle at $C$):</p>
+        $$ AC = \sqrt{OA^2 - OC_{\min}^2} = \sqrt{80^2 - 48^2} = \sqrt{(80 - 48)(80 + 48)} = \sqrt{32 \times 128} =
+        \sqrt{4096} = \mathbf{64\text{ m}} $$
+        <p>(Alternatively, by right-triangle leg projection: $AC = \dfrac{OA^2}{AB} = \dfrac{6400}{100} = 64\text{ m}$.)
+            Therefore, the correct option is <strong>(A)</strong>.</p>
+    </div>
+
+    <!-- =========================================================
+       TRAP & ERROR FORENSICS CARDS
+       ========================================================= -->
+    <h2 class="section-heading">Chapter 15 Trap &amp; Error Forensics</h2>
+
+    <!-- TRAP 1 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #1 &bull; Measuring Angle of Depression from the Vertical Wall Instead of
+            the Horizontal</span>
+        <p><strong>The Fatal Error:</strong> When a problem states "from the top of a building, the angle of depression
+            of the foot of a tower is $30^\circ$" (as in Q3), students place $30^\circ$ inside the triangle against the
+            <strong>vertical building wall $AB$</strong> instead of against the <strong>upper horizontal ray
+                $AE$</strong>.
+        </p>
+        <p><strong>Why It Fails:</strong> Swapping the horizontal for the vertical replaces $\theta$ with its complement
+            $90^\circ - \theta$ (turning $\tan 30^\circ = \frac{1}{\sqrt{3}}$ into $\tan 60^\circ = \sqrt{3}$). In Q3,
+            this miscomputes $AE = \frac{15}{\sqrt{3}}$ and destroys $CD$ from $60\text{ m}$ to $30\text{ m}$.
+            Conversely, in Q4, the prompt <em>explicitly</em> says "makes $30^\circ$ with the vertical standing
+            trunk"—students who reflexively put $30^\circ$ on the ground fall into the mirror-image trap!</p>
+        <p><strong>The Antidote:</strong> Draw a dashed <strong>horizontal ray</strong> through every observer's eye
+            before labeling a single angle. Depression and elevation ALWAYS hug the dashed horizontal—unless the wording
+            explicitly specifies "with the vertical."</p>
+    </div>
+
+    <!-- TRAP 2 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #2 &bull; The Cloud–Lake Mirror-Symmetry Offset Error ($DC' = H$ vs. $DC'
+            = H + h$)</span>
+        <p><strong>The Fatal Error:</strong> In Q9 and Q10, students write $\tan\alpha = \dfrac{H - h}{x}$ correctly for
+            the cloud, then mistakenly write $\tan\beta = \dfrac{H}{x}$ (or $\dfrac{H - h}{x}$) for its reflection,
+            forgetting that the observer stands $h$ meters above the water.</p>
+        <p><strong>Why It Fails:</strong> The lake surface—NOT the observer's eye—is the plane mirror! Because the cloud
+            sits at height $H$ above the water, its virtual reflection sits at depth $H$ <em>below the water</em>.
+            Dropping from the observer's eye level to the reflection crosses <strong>first</strong> the cliff height $h$
+            to reach the lake, and <strong>then</strong> the full depth $H$ below the lake, totaling $H + h$. Writing
+            $H$ instead of $H + h$ in Q9 yields $H = 3(H - 35) \implies H = 52.5\text{ m}$ instead of the true integer
+            $70\text{ m}$.</p>
+        <p><strong>The Antidote:</strong> Always draw <em>two</em> horizontal reference lines in reflection diagrams: a
+            solid blue line for the <strong>water surface</strong> (mirror) and a dashed black line $h$ units higher for
+            <strong>eye level</strong>. Mark $H$ symmetrically above and below the blue water line before writing a
+            single equation.
+        </p>
+    </div>
+
+    <!-- TRAP 3 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #3 &bull; Confusing "Distance Moved / Remaining Time" with "Distance to
+            Foot / Total Time"</span>
+        <p><strong>The Fatal Error:</strong> Three closely related misreads cost easy marks in Q11, Q12, and Q15: (1)
+            stopping at the remaining time $14\text{ s}$ in Q11 when the question asks for the <strong>total</strong>
+            time ($28 + 14 = 42\text{ s}$); (2) plugging the gap $AB = 20\text{ m}$ directly into $h = \sqrt{ab}$ in Q15
+            instead of $OB = 16 + 20 = 36\text{ m}$; and (3) subtracting $x_2 - x_1$ instead of adding $x_1 + x_2$ when
+            an airplane crosses <em>overhead</em> in Q13.</p>
+        <p><strong>Why It Fails:</strong> Formulas like $h = \sqrt{ab}$ and $d = h(\cot\alpha \mp \cot\beta)$ encode
+            strict geometric endpoints. Mixing up the segment $AB$ with the full base $OB$ produces clean-looking
+            distractors planted specifically by BEST paper-setters (e.g., $8\sqrt{5}$ in Q15).</p>
+        <p><strong>The Antidote:</strong> Underline the exact <strong>target phrase</strong> before boxing your answer:
+            <em>"additional/remaining time"</em> vs. <em>"total time"</em>; <em>"distance from foot"</em> vs.
+            <em>"distance between points"</em>; <em>"same side"</em> vs. <em>"flies directly overhead"</em>.
+        </p>
+    </div>
+
+    <!-- TRAP 4 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #4 &bull; Prematurely Rounding $\sqrt{3} \approx 1.73$ or $\sqrt{2}
+            \approx 1.41$ in NAT Integer Problems</span>
+        <p><strong>The Fatal Error:</strong> Seeing $30\sqrt{3}\text{ m}$ in Q2, $1500\sqrt{3}\text{ m}$ in Q13, or
+            $18\sqrt{3}\text{ m}$ in Q16 and Q23, students immediately replace $\sqrt{3}$ with $1.73$ at Step 1,
+            creating ugly decimals ($31.14 \times 2 \times 0.866 = 53.93\dots$) and losing both speed and exact integer
+            precision.</p>
+        <p><strong>Why It Fails:</strong> Every NAT integer question in BEST Paper 1 is engineered so that irrational
+            radicals ($\sqrt{3}$, $\sqrt{2}$, $2 \pm \sqrt{3}$) <strong>cancel algebraically</strong> at the final
+            multiplication or division (e.g., $\sqrt{3} \cdot \sqrt{3} = 3$ in Q2, Q5, Q13, Q16, Q23). Early decimal
+            rounding introduces truncation drift that can easily shift a NAT answer off by $\pm 1$—which scores zero.
+        </p>
+        <p><strong>The Antidote:</strong> Carry exact symbolic surds ($\sqrt{2}, \sqrt{3}, 2\pm\sqrt{3}$) all the way to
+            the very last line. Never convert a radical to a decimal unless the question explicitly provides a constant
+            like "(Take $\sqrt{3} = 1.732$)".</p>
+    </div>
+
+    <!-- TRAP 5 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #5 &bull; Flattening 3D Orthogonal Bearings (North &amp; East) into a 2D
+            Collinear Line</span>
+        <p><strong>The Fatal Error:</strong> In Q21 and Q27, students see two ground observers $A$ (Due North) and $B$
+            (Due East) separated by $AB = d$ and apply the 2D opposite-side formula $d = h(\cot\alpha + \cot\beta)$
+            instead of the 3D ground-plane Pythagoras relation $d^2 = h^2(\cot^2\alpha + \cot^2\beta)$.</p>
+        <p><strong>Why It Fails:</strong> Due North and Due East meet at $90^\circ$, NOT $180^\circ$! Using $OA + OB =
+            100$ in Q27 gives $\frac{7}{3}h = 100 \implies h = \frac{300}{7}\text{ m}$ instead of the clean exact
+            integer $h = 60\text{ m}$.</p>
+        <p><strong>The Antidote:</strong> Whenever compass bearings appear (North, South, East, West) or a road "does
+            not pass through the foot $O$" (Q22), draw a separate top-down <strong>Ground-Plane Map</strong> of
+            $\triangle AOB$ showing $OA = h\cot\alpha$ and $OB = h\cot\beta$, then solve the ground triangle via
+            Pythagoras, Law of Cosines, or Apollonius's Theorem.</p>
+    </div>
+
+</article>

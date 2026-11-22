@@ -1,0 +1,1021 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 16: Statistics — Solutions &amp; Error Forensics">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 2: Mathematics (Paper 1) &bull; Chapter 16 &bull; Part 3 of 3: Verified
+            Solutions &amp; Error Forensics</div>
+        <h1>Statistics (Grouped Mean, Median, Mode, Ogives &amp; Dispersion Bridge)</h1>
+        <p>Complete, zero-skip step-by-step solutions for all 30 Graded Practice Arena problems (Q1&ndash;Q30), audited
+            100% against the Chapter 16 Answer Key Grid, followed by five targeted Trap &amp; Error Forensics diagnostic
+            cards.</p>
+        <div class="tag-row">
+            <span class="meta-pill">30 Verified Solutions</span>
+            <span class="meta-pill">Zero Tabular Skips</span>
+            <span class="meta-pill">5 Error Forensics Cards</span>
+            <span class="meta-pill">BEST Paper 1 Audit</span>
+        </div>
+    </header>
+
+    <!-- =========================================================
+       LEVEL 1 SOLUTIONS (Q1 – Q9)
+       ========================================================= -->
+    <div class="level-banner l1">Level 1 Solutions: Warmup (Q1 &ndash; Q9)</div>
+
+    <!-- SOL Q1 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q1</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 — Build the Step-Deviation Table:</strong> The uniform class width is $h = 10$. Take the
+            central class mark $a = 25$ and define $u_i = \dfrac{x_i - 25}{10}$:</p>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Class Interval</th>
+                    <th>Class Mark ($x_i$)</th>
+                    <th>Frequency ($f_i$)</th>
+                    <th>$u_i = (x_i - 25)/10$</th>
+                    <th>$f_i u_i$</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$0\text{–}10$</td>
+                    <td>$5$</td>
+                    <td>$4$</td>
+                    <td>$-2$</td>
+                    <td>$-8$</td>
+                </tr>
+                <tr>
+                    <td>$10\text{–}20$</td>
+                    <td>$15$</td>
+                    <td>$9$</td>
+                    <td>$-1$</td>
+                    <td>$-9$</td>
+                </tr>
+                <tr>
+                    <td>$20\text{–}30$</td>
+                    <td>$25$</td>
+                    <td>$15$</td>
+                    <td>$0$</td>
+                    <td>$0$</td>
+                </tr>
+                <tr>
+                    <td>$30\text{–}40$</td>
+                    <td>$35$</td>
+                    <td>$14$</td>
+                    <td>$+1$</td>
+                    <td>$+14$</td>
+                </tr>
+                <tr>
+                    <td>$40\text{–}50$</td>
+                    <td>$45$</td>
+                    <td>$8$</td>
+                    <td>$+2$</td>
+                    <td>$+16$</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td>&mdash;</td>
+                    <td>$N = 50$</td>
+                    <td>&mdash;</td>
+                    <td>$\sum f_i u_i = +13$</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Step 2 — Apply the Step-Deviation Formula:</strong></p>
+        $$ \bar{x} = a + h\left(\frac{\sum f_i u_i}{N}\right) = 25 + 10\left(\frac{13}{50}\right) = 25 + \frac{13}{5} =
+        25 + 2.6 = \mathbf{27.6} $$
+        <p>Therefore, the correct option is <strong>(C)</strong>.</p>
+    </div>
+
+    <!-- SOL Q2 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q2</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Answer: 071</span>
+        </div>
+        <p><strong>Step 1 — Compute Net Sum Adjustment ($\Delta S$):</strong></p>
+        $$ \sum \text{Wrong} = 39 + 48 + 63 = 150, \qquad \sum \text{Correct} = 93 + 84 + 48 = 225 $$
+        $$ \Delta S = 225 - 150 = +75 $$
+        <p><strong>Step 2 — Apply the Correction Shortcut for $N = 25$:</strong></p>
+        $$ \bar{x}_{\text{new}} = \bar{x}_{\text{old}} + \frac{\Delta S}{N} = 68 + \frac{75}{25} = 68 + 3 = \mathbf{71}
+        $$
+        <p>Therefore, the NAT answer is <strong>071</strong>.</p>
+    </div>
+
+    <!-- SOL Q3 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q3</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 — Convert Inclusive Intervals to Exclusive Boundaries ($\delta = \frac{11 - 10}{2} =
+                0.5$):</strong></p>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Inclusive Class</th>
+                    <th>True Exclusive Class</th>
+                    <th>Frequency ($f_i$)</th>
+                    <th>Cumulative Freq ($CF$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$1\text{–}10$</td>
+                    <td>$0.5\text{–}10.5$</td>
+                    <td>$7$</td>
+                    <td>$7$</td>
+                </tr>
+                <tr>
+                    <td>$11\text{–}20$</td>
+                    <td>$10.5\text{–}20.5$</td>
+                    <td>$13$</td>
+                    <td>$20$</td>
+                </tr>
+                <tr>
+                    <td>$21\text{–}30$</td>
+                    <td><strong>$20.5\text{–}30.5$ (Median)</strong></td>
+                    <td><strong>$25$</strong></td>
+                    <td><strong>$45$</strong></td>
+                </tr>
+                <tr>
+                    <td>$31\text{–}40$</td>
+                    <td>$30.5\text{–}40.5$</td>
+                    <td>$11$</td>
+                    <td>$56$</td>
+                </tr>
+                <tr>
+                    <td>$41\text{–}50$</td>
+                    <td>$40.5\text{–}50.5$</td>
+                    <td>$4$</td>
+                    <td>$60$</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Step 2 — Interpolate Within the Median Class:</strong> Total $N = 60 \implies \dfrac{N}{2} = 30$. The
+            first $CF \ge 30$ is $45$, so the median class is `20.5–30.5` with $l = 20.5$, true width $h = 30.5 - 20.5 =
+            10$, preceding $cf = 20$, and $f = 25$:</p>
+        $$ M = l + \left(\frac{\frac{N}{2} - cf}{f}\right)h = 20.5 + \left(\frac{30 - 20}{25}\right)\times 10 = 20.5 +
+        \frac{100}{25} = 20.5 + 4 = \mathbf{24.5} $$
+        <p>Therefore, the correct option is <strong>(A)</strong>.</p>
+    </div>
+
+    <!-- SOL Q4 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q4</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Answer: 072</span>
+        </div>
+        <p><strong>Step 1 — Read Modal Class Parameters Directly from the Histogram:</strong> All bars share equal width
+            $h = 20$. The tallest bar is `60–80` with frequency $f_1 = 32$, flanked by $f_0 = 17$ (class `40–60`) and
+            $f_2 = 22$ (class `80–100`), with lower limit $l = 60$.</p>
+        <p><strong>Step 2 — Apply the Grouped Mode Formula:</strong></p>
+        $$ Z = l + \left(\frac{f_1 - f_0}{2f_1 - f_0 - f_2}\right)h = 60 + \left(\frac{32 - 17}{2(32) - 17 -
+        22}\right)\times 20 = 60 + \left(\frac{15}{64 - 39}\right)\times 20 $$
+        $$ Z = 60 + \frac{15}{25}\times 20 = 60 + \frac{3}{5}\times 20 = 60 + 12 = \mathbf{72} $$
+        <p>Therefore, the NAT answer is <strong>072</strong>.</p>
+    </div>
+
+    <!-- SOL Q5 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q5</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 — Link $(\bar{x} - Z)$ to $(\bar{x} - M)$ via Karl Pearson's Formula:</strong> Starting from
+            $Z = 3M - 2\bar{x}$, subtract both sides from $\bar{x}$:</p>
+        $$ \bar{x} - Z = \bar{x} - (3M - 2\bar{x}) = 3\bar{x} - 3M = 3(\bar{x} - M) $$
+        <p><strong>Step 2 — Solve for $\bar{x}$ and Check Skewness:</strong> Substitute $\bar{x} - Z = 9.6$ and $M =
+            42.8$:</p>
+        $$ 9.6 = 3(\bar{x} - 42.8) \implies \bar{x} - 42.8 = 3.2 \implies \mathbf{\bar{x} = 46.0} $$
+        <p>Consequently, $Z = 46.0 - 9.6 = 36.4$. Since $\text{Mode}\;(36.4) \lt \text{Median}\;(42.8) \lt
+            \text{Mean}\;(46.0)$, the distribution has a longer right tail and is <strong>positively skewed</strong>.
+            Therefore, the correct option is <strong>(B)</strong>.</p>
+    </div>
+
+    <!-- SOL Q6 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q6</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Answer: 094</span>
+        </div>
+        <p><strong>Step 1 — Equate Pooled Total Sum to Individual Batch Sums:</strong> Let $\bar{x}_3$ be the mean score
+            of batch C ($n_3 = 50$). Total students $N = 30 + 40 + 50 = 120$:</p>
+        $$ 30(74) + 40(82) + 50\bar{x}_3 = 120(85) $$
+        $$ 2220 + 3280 + 50\bar{x}_3 = 10200 \implies 5500 + 50\bar{x}_3 = 10200 $$
+        <p><strong>Step 2 — Solve for $\bar{x}_3$:</strong></p>
+        $$ 50\bar{x}_3 = 10200 - 5500 = 4700 \implies \bar{x}_3 = \frac{4700}{50} = \mathbf{94} $$
+        <p><em>Deviation-Balance Check:</em> $30(74-85) + 40(82-85) + 50(\bar{x}_3-85) = 0 \implies -330 - 120 +
+            50(\bar{x}_3-85) = 0 \implies \bar{x}_3 = 85 + 9 = 94$. Therefore, the NAT answer is <strong>094</strong>.
+        </p>
+    </div>
+
+    <!-- SOL Q7 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q7</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 — Solve for $x$ Using the Even-$n$ Median Definition:</strong> For $n = 10$ ascending
+            observations, the median is the mean of the $5\text{th}$ term ($x + 6$) and the $6\text{th}$ term ($2x -
+            7$):</p>
+        $$ \frac{(x + 6) + (2x - 7)}{2} = 26.5 \implies 3x - 1 = 53 \implies 3x = 54 \implies x = 18 $$
+        <p>Substitute $x = 18$: the $5\text{th}$ term is $18 + 6 = 24$ and the $6\text{th}$ term is $2(18) - 7 = 29$.
+            (Ordering check: $22 \lt 24 \lt 29 \lt 34$ holds strictly.)</p>
+        <p><strong>Step 2 — Compute the Exact Mean of All 10 Terms:</strong></p>
+        $$ \sum_{i=1}^{10} x_i = 12 + 15 + 18 + 22 + 24 + 29 + 34 + 37 + 41 + 45 = 277 $$
+        $$ \bar{x} = \frac{277}{10} = \mathbf{27.7} $$
+        <p>Therefore, the correct option is <strong>(C)</strong>.</p>
+    </div>
+
+    <!-- SOL Q8 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q8</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Answer: 026</span>
+        </div>
+        <p><strong>Step 1 — Recover Individual Class Frequencies from the Less-Than Column:</strong> Subtract
+            consecutive $CF$ values upward ($f_i = CF_i - CF_{i-1}$):</p>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Class Interval</th>
+                    <th>Less-Than $CF$</th>
+                    <th>Class Frequency ($f_i$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$0\text{–}10$</td>
+                    <td>$6$</td>
+                    <td>$6$</td>
+                </tr>
+                <tr>
+                    <td>$10\text{–}20$</td>
+                    <td>$18$</td>
+                    <td>$18 - 6 = 12$</td>
+                </tr>
+                <tr>
+                    <td><strong>$20\text{–}30$ (Median)</strong></td>
+                    <td><strong>$38$</strong></td>
+                    <td><strong>$38 - 18 = 20$</strong></td>
+                </tr>
+                <tr>
+                    <td>$30\text{–}40$</td>
+                    <td>$52$</td>
+                    <td>$52 - 38 = 14$</td>
+                </tr>
+                <tr>
+                    <td>$40\text{–}50$</td>
+                    <td>$60$</td>
+                    <td>$60 - 52 = 8$</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Step 2 — Interpolate the Median:</strong> Here $N = 60 \implies \dfrac{N}{2} = 30$. The first $CF \ge
+            30$ is $38$, giving median class `20–30` with $l = 20$, $h = 10$, preceding $cf = 18$, and true class
+            frequency $f = 20$ (NOT $38$!):</p>
+        $$ M = 20 + \left(\frac{30 - 18}{20}\right)\times 10 = 20 + \frac{12}{2} = 20 + 6 = \mathbf{26} $$
+        <p>Therefore, the NAT answer is <strong>026</strong>.</p>
+    </div>
+
+    <!-- SOL Q9 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q9</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 — Recover the Exact Mean $\bar{x}$:</strong> Using $\bar{x} = a + h\dfrac{\sum f_i u_i}{N}$
+            with $a = 47.5$, $h = 15$, $N = 80$, and $\sum f_i u_i = -24$:</p>
+        $$ \bar{x} = 47.5 + 15\left(\frac{-24}{80}\right) = 47.5 + 15(-0.3) = 47.5 - 4.5 = 43 $$
+        <p><strong>Step 2 — Evaluate $\sum f_i(x_i - 40)$ via Linearity of Summation:</strong></p>
+        $$ \sum f_i(x_i - 40) = \sum f_i x_i - 40\sum f_i = N\bar{x} - 40N = N(\bar{x} - 40) = 80(43 - 40) = 80 \times 3
+        = \mathbf{240} $$
+        <p>Therefore, the correct option is <strong>(C)</strong>.</p>
+    </div>
+
+    <!-- =========================================================
+       LEVEL 2 SOLUTIONS (Q10 – Q21)
+       ========================================================= -->
+    <div class="level-banner l2">Level 2 Solutions: Exam-Real (Q10 &ndash; Q21)</div>
+
+    <!-- SOL Q10 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q10</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 102</span>
+        </div>
+        <p><strong>Step 1 — Total Frequency Constraint:</strong></p>
+        $$ 12 + f_1 + 32 + f_2 + 10 = 100 \implies 54 + f_1 + f_2 = 100 \implies f_1 + f_2 = 46 \quad \cdots \text{(1)}
+        $$
+        <p><strong>Step 2 — Strategic Assumed Mean at $f_1$'s Class Mark ($a = 40, h = 20$):</strong> Choosing $a = 40$
+            forces $u = 0$ on the `30–50` class, eliminating $f_1$ completely from $\sum f_i u_i$:</p>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Class Interval</th>
+                    <th>$x_i$</th>
+                    <th>$f_i$</th>
+                    <th>$u_i = (x_i - 40)/20$</th>
+                    <th>$f_i u_i$</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$10\text{–}30$</td>
+                    <td>$20$</td>
+                    <td>$12$</td>
+                    <td>$-1$</td>
+                    <td>$-12$</td>
+                </tr>
+                <tr>
+                    <td>$30\text{–}50$</td>
+                    <td>$40$</td>
+                    <td>$f_1$</td>
+                    <td>$0$</td>
+                    <td>$0$</td>
+                </tr>
+                <tr>
+                    <td>$50\text{–}70$</td>
+                    <td>$60$</td>
+                    <td>$32$</td>
+                    <td>$+1$</td>
+                    <td>$+32$</td>
+                </tr>
+                <tr>
+                    <td>$70\text{–}90$</td>
+                    <td>$80$</td>
+                    <td>$f_2$</td>
+                    <td>$+2$</td>
+                    <td>$+2f_2$</td>
+                </tr>
+                <tr>
+                    <td>$90\text{–}110$</td>
+                    <td>$100$</td>
+                    <td>$10$</td>
+                    <td>$+3$</td>
+                    <td>$+30$</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Summing the last column gives $\sum f_i u_i = -12 + 32 + 2f_2 + 30 = 50 + 2f_2$. Substitute $\bar{x} = 54$:
+        </p>
+        $$ 54 = 40 + 20\left(\frac{50 + 2f_2}{100}\right) \implies 14 = \frac{50 + 2f_2}{5} \implies 70 = 50 + 2f_2
+        \implies 2f_2 = 20 \implies f_2 = 10 $$
+        <p>From Equation (1), $f_1 = 46 - 10 = 36$. Finally:</p>
+        $$ 2f_1 + 3f_2 = 2(36) + 3(10) = 72 + 30 = \mathbf{102} $$
+        <p>Therefore, the NAT answer is <strong>102</strong>.</p>
+    </div>
+
+    <!-- SOL Q11 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q11</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 — Total Frequency Equation:</strong></p>
+        $$ 8 + 10 + x + 20 + y + 15 + 7 = 100 \implies 60 + x + y = 100 \implies x + y = 40 \quad \cdots \text{(1)} $$
+        <p><strong>Step 2 — Pinpoint Median Class from $M = 34.5$:</strong> Since $34.5 \in [30, 40)$, the median class
+            is `30–40`, giving $l = 30$, $h = 10$, $f = 20$, $\dfrac{N}{2} = 50$, and preceding cumulative frequency $cf
+            = 8 + 10 + x = 18 + x$:</p>
+        $$ 34.5 = 30 + \left(\frac{50 - (18 + x)}{20}\right)\times 10 \implies 4.5 = \frac{32 - x}{2} \implies 32 - x =
+        9 \implies \mathbf{x = 23} $$
+        <p>Substituting $x = 23$ into Equation (1) gives $y = 40 - 23 = \mathbf{17}$. (Sanity check: $cf = 18 + 23 = 41
+            \lt 50$, and $41 + 20 = 61 \ge 50$.) Therefore, $(x, y) = \mathbf{(23, 17)}$, which is option
+            <strong>(A)</strong>.
+        </p>
+    </div>
+
+    <!-- SOL Q12 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q12</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 108</span>
+        </div>
+        <p><strong>Step 1 — Determine $y^*$ Immediately from Ogive Symmetry:</strong> At the intersection $P(M, y^*)$ of
+            the Less-Than and More-Than Ogives, both ordinates equal half the total frequency:</p>
+        $$ y^* = \frac{N}{2} = \frac{120}{2} = \mathbf{60} $$
+        <p><strong>Step 2 — Interpolate $M$ Along the Median Segment $[40, 60]$:</strong> On the Less-Than Ogive, the
+            straight segment joins $(40, 42)$ to $(60, 87)$. Therefore, for the median class `40–60`, $l = 40$, $h =
+            20$, preceding $cf = 42$, and class frequency $f = 87 - 42 = 45$:</p>
+        $$ M = 40 + \left(\frac{60 - 42}{45}\right)\times 20 = 40 + \frac{18}{45}\times 20 = 40 + \frac{2}{5}\times 20 =
+        40 + 8 = \mathbf{48} $$
+        <p><em>Double-Check on the More-Than Ogive Segment $(40, 78) \to (60, 33)$:</em> At $x = 48$, $y = 78 +
+            \dfrac{33 - 78}{20}(48 - 40) = 78 - 18 = 60 = y^*$. Exact!</p>
+        <p><strong>Step 3 — Compute $M + y^*$:</strong> $M + y^* = 48 + 60 = \mathbf{108}$. Therefore, the NAT answer is
+            <strong>108</strong>.
+        </p>
+    </div>
+
+    <!-- SOL Q13 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q13</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 — Identify Origin Shift $b = 100$ and Scale Factor $a = -3$ in $y_i = -3x_i + 100$:</strong>
+        </p>
+        <ul>
+            <li><strong>Transformed Mean:</strong> $\bar{y} = -3\bar{x} + 100 = -3(22) + 100 = -66 + 100 = \mathbf{34}$.
+            </li>
+            <li><strong>Transformed Median:</strong> $M_y = -3M_x + 100 = -3(20) + 100 = -60 + 100 = \mathbf{40}$.</li>
+            <li><strong>Transformed Variance:</strong> Origin shift $+100$ has <em>zero</em> effect on variance, and
+                scale $a = -3$ scales variance by $a^2$:
+                $$ \sigma_y^2 = a^2\sigma_x^2 = (-3)^2 \times 5^2 = 9 \times 25 = \mathbf{225} $$</li>
+        </ul>
+        <p>Therefore, the correct option is <strong>(C)</strong>.</p>
+    </div>
+
+    <!-- SOL Q14 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q14</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 018</span>
+        </div>
+        <p><strong>Step 1 — Substitute Modal Class Parameters (`50–60`):</strong> Here $Z = 56$, $l = 50$, $h = 10$,
+            $f_1 = 30$, $f_2 = 22$, and $f_0$ is unknown:</p>
+        $$ 56 = 50 + \left(\frac{30 - f_0}{2(30) - f_0 - 22}\right)\times 10 \implies 6 = \frac{10(30 - f_0)}{38 - f_0}
+        $$
+        <p><strong>Step 2 — Cross-Multiply &amp; Solve:</strong> Divide both sides by $2$ first to keep numbers clean:
+        </p>
+        $$ 3(38 - f_0) = 5(30 - f_0) \implies 114 - 3f_0 = 150 - 5f_0 \implies 2f_0 = 36 \implies \mathbf{f_0 = 18} $$
+        <p>(Domain check: $f_0 = 18 \lt 30$, confirming `50–60` is indeed the unique modal class.) Therefore, the NAT
+            answer is <strong>018</strong>.</p>
+    </div>
+
+    <!-- SOL Q15 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q15</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 — Sort the $8$ Observations &amp; Find the Median:</strong></p>
+        $$ 6,\; 10,\; 12,\; 14,\; 18,\; 22,\; 24,\; 28 $$
+        <p>For $n = 8$, the median is the mean of the $4\text{th}$ and $5\text{th}$ values: $M = \dfrac{14 + 18}{2} =
+            16$.</p>
+        <p><strong>Step 2 — Sum Absolute Deviations $|x_i - 16|$:</strong></p>
+        $$ |6-16| + |10-16| + |12-16| + |14-16| + |18-16| + |22-16| + |24-16| + |28-16| $$
+        $$ = 10 + 6 + 4 + 2 + 2 + 6 + 8 + 12 = 50 $$
+        <p><em>Shortcut Verification:</em> $(\text{Upper half sum}) - (\text{Lower half sum}) = (18+22+24+28) -
+            (6+10+12+14) = 92 - 42 = 50$.</p>
+        $$ \text{MD}(M) = \frac{50}{8} = \mathbf{6.25} $$
+        <p>Therefore, the correct option is <strong>(B)</strong>.</p>
+    </div>
+
+    <!-- SOL Q16 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q16</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 — Convert the "More-Than" Cumulative Table Back to Class Frequencies ($f_i = M_i -
+                M_{i+1}$):</strong></p>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Wage Class (₹)</th>
+                    <th>More-Than ($\ge L_i$)</th>
+                    <th>Class Frequency ($f_i$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$100\text{–}120$</td>
+                    <td>$100$</td>
+                    <td>$100 - 88 = 12$</td>
+                </tr>
+                <tr>
+                    <td>$120\text{–}140$</td>
+                    <td>$88$</td>
+                    <td>$88 - 64 = 24$ ($f_0$)</td>
+                </tr>
+                <tr>
+                    <td><strong>$140\text{–}160$ (Modal)</strong></td>
+                    <td>$64$</td>
+                    <td><strong>$64 - 28 = 36$ ($f_1$)</strong></td>
+                </tr>
+                <tr>
+                    <td>$160\text{–}180$</td>
+                    <td>$28$</td>
+                    <td>$28 - 12 = 16$ ($f_2$)</td>
+                </tr>
+                <tr>
+                    <td>$180\text{–}200$</td>
+                    <td>$12$</td>
+                    <td>$12 - 0 = 12$</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Step 2 — Apply the Mode Formula to Modal Class `140–160` ($l = 140, h = 20$):</strong></p>
+        $$ Z = 140 + \left(\frac{36 - 24}{2(36) - 24 - 16}\right)\times 20 = 140 + \left(\frac{12}{72 - 40}\right)\times
+        20 = 140 + \frac{12}{32}\times 20 = 140 + 7.5 = \mathbf{147.5} $$
+        <p>Therefore, the correct option is <strong>(D)</strong>.</p>
+    </div>
+
+    <!-- SOL Q17 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q17</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 224</span>
+        </div>
+        <p><strong>Step 1 — Identify AP Parameters:</strong> The sequence $\{12, 16, 20, \dots, 60\}$ has first term $a
+            = 12$, common difference $d = 4$, and count $n = \dfrac{60 - 12}{4} + 1 = 13$.</p>
+        <p><strong>Step 2 — Apply the AP Variance Formula (Origin-Independent):</strong></p>
+        $$ \sigma^2 = \frac{d^2(n^2 - 1)}{12} = \frac{4^2(13^2 - 1)}{12} = \frac{16 \times 168}{12} = 16 \times 14 =
+        \mathbf{224} $$
+        <p>Therefore, the NAT answer is <strong>224</strong>.</p>
+    </div>
+
+    <!-- SOL Q18 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q18</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 — Extract Standard Deviations Carefully:</strong></p>
+        <ul>
+            <li><strong>Arjun:</strong> Given <em>Variance</em> $\sigma_A^2 = 144 \implies \sigma_A = \sqrt{144} = 12$,
+                with $\bar{x}_A = 80$:
+                $$ \text{CV}_A = \frac{\sigma_A}{\bar{x}_A} \times 100\% = \frac{12}{80} \times 100\% = \mathbf{15\%} $$
+            </li>
+            <li><strong>Bhavya:</strong> Given <em>Standard Deviation</em> $\sigma_B = 9$, with $\bar{x}_B = 75$:
+                $$ \text{CV}_B = \frac{\sigma_B}{\bar{x}_B} \times 100\% = \frac{9}{75} \times 100\% = \frac{3}{25}
+                \times 100\% = \mathbf{12\%} $$</li>
+        </ul>
+        <p><strong>Step 2 — Interpret Consistency:</strong> A <em>lower</em> Coefficient of Variation signifies smaller
+            relative spread and therefore higher consistency. Since $12\% \lt 15\%$, <strong>Bhavya is more
+                consistent</strong>. Therefore, the correct option is <strong>(B)</strong>.</p>
+    </div>
+
+    <!-- SOL Q19 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q19</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 — Build Two Equations in the Unknown Observations $a$ and $b$:</strong> Given $n = 5$,
+            $\bar{x} = 8$, and $\sigma^2 = 14$:</p>
+        <ul>
+            <li><strong>Sum Equation:</strong> $\sum x_i = n\bar{x} = 5(8) = 40 \implies 3 + 7 + 10 + a + b = 40
+                \implies \mathbf{a + b = 20}$.</li>
+            <li><strong>Sum-of-Squares Equation:</strong> From $\sigma^2 = \dfrac{\sum x_i^2}{n} - \bar{x}^2$,
+                $$ \sum x_i^2 = n(\sigma^2 + \bar{x}^2) = 5(14 + 64) = 5 \times 78 = 390 $$
+                Subtract $3^2 + 7^2 + 10^2 = 9 + 49 + 100 = 158$:
+                $$ \mathbf{a^2 + b^2 = 390 - 158 = 232} $$</li>
+        </ul>
+        <p><strong>Step 2 — Solve for $(a, b)$:</strong></p>
+        $$ 2ab = (a + b)^2 - (a^2 + b^2) = 400 - 232 = 168 \implies ab = 84 $$
+        $$ (a - b)^2 = (a + b)^2 - 4ab = 400 - 336 = 64 \implies |a - b| = 8 $$
+        <p>Solving $a + b = 20$ and $a - b = 8$ gives $2a = 28 \implies a = 14$ and $b = 6$. Therefore, the remaining
+            two observations are $\mathbf{6 \text{ and } 14}$, which is option <strong>(D)</strong>.</p>
+    </div>
+
+    <!-- SOL Q20 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q20</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Passage 1 &bull; Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 — Complete Step-Deviation &amp; Cumulative Frequency Table ($a = 50, h = 20$):</strong></p>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Marks Class</th>
+                    <th>$x_i$</th>
+                    <th>$f_i$</th>
+                    <th>$u_i = (x_i - 50)/20$</th>
+                    <th>$f_i u_i$</th>
+                    <th>$CF$</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$0\text{–}20$</td>
+                    <td>$10$</td>
+                    <td>$10$</td>
+                    <td>$-2$</td>
+                    <td>$-20$</td>
+                    <td>$10$</td>
+                </tr>
+                <tr>
+                    <td>$20\text{–}40$</td>
+                    <td>$30$</td>
+                    <td>$15$</td>
+                    <td>$-1$</td>
+                    <td>$-15$</td>
+                    <td>$25$</td>
+                </tr>
+                <tr>
+                    <td><strong>$40\text{–}60$</strong></td>
+                    <td>$50$</td>
+                    <td><strong>$30$</strong></td>
+                    <td>$0$</td>
+                    <td>$0$</td>
+                    <td><strong>$55$</strong></td>
+                </tr>
+                <tr>
+                    <td>$60\text{–}80$</td>
+                    <td>$70$</td>
+                    <td>$20$</td>
+                    <td>$+1$</td>
+                    <td>$+20$</td>
+                    <td>$75$</td>
+                </tr>
+                <tr>
+                    <td>$80\text{–}100$</td>
+                    <td>$90$</td>
+                    <td>$5$</td>
+                    <td>$+2$</td>
+                    <td>$+10$</td>
+                    <td>$80$</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td>&mdash;</td>
+                    <td>$N = 80$</td>
+                    <td>&mdash;</td>
+                    <td>$\sum f_i u_i = -5$</td>
+                    <td>&mdash;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Step 2 — Compute Exact Mean &amp; Exact Median:</strong></p>
+        $$ \bar{x} = 50 + 20\left(\frac{-5}{80}\right) = 50 - \frac{5}{4} = 50 - 1.25 = \mathbf{48.75} $$
+        <p>For the Median, $\dfrac{N}{2} = 40$, placing the median class at `40–60` ($l = 40, h = 20, cf = 25, f = 30$):
+        </p>
+        $$ M = 40 + \left(\frac{40 - 25}{30}\right)\times 20 = 40 + \frac{15}{30}\times 20 = 40 + 10 = \mathbf{50} $$
+        <p>Therefore, the correct option is <strong>(D)</strong>.</p>
+    </div>
+
+    <!-- SOL Q21 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q21</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Passage 1 &bull; Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 — Compute Exact Grouped Mode $Z$:</strong> The modal class is `40–60` ($l = 40, h = 20, f_0 =
+            15, f_1 = 30, f_2 = 20$):</p>
+        $$ Z = 40 + \left(\frac{30 - 15}{2(30) - 15 - 20}\right)\times 20 = 40 + \left(\frac{15}{25}\right)\times 20 =
+        40 + 12 = \mathbf{52} $$
+        <p><strong>Step 2 — Compute Empirical Estimate &amp; Discrepancy:</strong> Using $\bar{x} = 48.75$ and $M = 50$
+            from Q20:</p>
+        $$ Z_{\text{emp}} = 3M - 2\bar{x} = 3(50) - 2(48.75) = 150 - 97.5 = 52.5 $$
+        $$ |Z_{\text{emp}} - Z| = |52.5 - 52| = \mathbf{0.5} $$
+        <p>Therefore, the correct option is <strong>(A)</strong>.</p>
+    </div>
+
+    <!-- =========================================================
+       LEVEL 3 SOLUTIONS (Q22 – Q30)
+       ========================================================= -->
+    <div class="level-banner l3">Level 3 Solutions: Rank-Booster (Q22 &ndash; Q30)</div>
+
+    <!-- SOL Q22 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q22</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Answer: 036</span>
+        </div>
+        <p><strong>Step 1 — Compute Frequency Density $D_i = f_i / w_i$ for Every Class:</strong></p>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Class Interval</th>
+                    <th>Width ($w_i$)</th>
+                    <th>Raw Freq ($f_i$)</th>
+                    <th>Frequency Density ($D_i = f_i/w_i$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$0\text{–}20$</td>
+                    <td>$20$</td>
+                    <td>$20$</td>
+                    <td>$1.0$</td>
+                </tr>
+                <tr>
+                    <td>$20\text{–}30$</td>
+                    <td>$10$</td>
+                    <td>$21$</td>
+                    <td>$2.1$ ($D_0$)</td>
+                </tr>
+                <tr>
+                    <td><strong>$30\text{–}40$ (True Modal)</strong></td>
+                    <td><strong>$10$</strong></td>
+                    <td>$39$</td>
+                    <td><strong>$3.9$ ($D_1$, Max!)</strong></td>
+                </tr>
+                <tr>
+                    <td>$40\text{–}60$</td>
+                    <td>$20$</td>
+                    <td>$54$</td>
+                    <td>$2.7$ ($D_2$)</td>
+                </tr>
+                <tr>
+                    <td>$60\text{–}100$</td>
+                    <td>$40$</td>
+                    <td>$44$</td>
+                    <td>$1.1$</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><em>Trap Avoided:</em> Class `40–60` has the largest raw frequency ($54$) only because its width is $20$,
+            giving density $2.7 \lt 3.9$. The true modal class is `30–40` ($l = 30, h = 10$).</p>
+        <p><strong>Step 2 — Interpolate Using Histogram Heights ($D_0, D_1, D_2$):</strong></p>
+        $$ Z = l + \left(\frac{D_1 - D_0}{2D_1 - D_0 - D_2}\right)h = 30 + \left(\frac{3.9 - 2.1}{2(3.9) - 2.1 -
+        2.7}\right)\times 10 = 30 + \left(\frac{1.8}{7.8 - 4.8}\right)\times 10 = 30 + \frac{1.8}{3.0}\times 10 =
+        \mathbf{36} $$
+        <p>Therefore, the NAT answer is <strong>036</strong>.</p>
+    </div>
+
+    <!-- SOL Q23 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q23</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 — Write Both Closed-Form AP Equations:</strong> For an $n$-term AP with $a = 5$ and step $d
+            \gt 0$:</p>
+        <ul>
+            <li><strong>Mean Equation:</strong> $\bar{x} = a + \dfrac{(n - 1)d}{2} \implies 29 = 5 + \dfrac{(n - 1)d}{2}
+                \implies \mathbf{(n - 1)d = 48} \quad \cdots \text{(1)}$</li>
+            <li><strong>Variance Equation:</strong> $\sigma^2 = \dfrac{d^2(n^2 - 1)}{12} = 240 \implies d^2(n - 1)(n +
+                1) = 2880 \quad \cdots \text{(2)}$</li>
+        </ul>
+        <p><strong>Step 2 — Factor $(n - 1)d$ Inside Equation (2):</strong> Rewrite Equation (2) as $\big[(n -
+            1)d\big]\cdot\big[(n + 1)d\big] = 2880$ and substitute Equation (1):</p>
+        $$ 48 \cdot (n + 1)d = 2880 \implies (n + 1)d = \frac{2880}{48} = 60 \quad \cdots \text{(3)} $$
+        <p><strong>Step 3 — Subtract Equation (1) from Equation (3):</strong></p>
+        $$ (n + 1)d - (n - 1)d = 60 - 48 \implies 2d = 12 \implies \mathbf{d = 6} $$
+        <p>Plug $d = 6$ into Equation (1): $(n - 1)(6) = 48 \implies n - 1 = 8 \implies \mathbf{n = 9}$. Therefore, the
+            correct option is <strong>(B)</strong>.</p>
+    </div>
+
+    <!-- SOL Q24 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q24</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Answer: 018</span>
+        </div>
+        <p><strong>Step 1 — Recover Old $\sum x_i$ and Old $\sum x_i^2$:</strong> Given $n = 20$, $\bar{x}_{\text{old}}
+            = 15$, and $\sigma_{\text{old}}^2 = 9$:</p>
+        $$ \text{Old } \sum x_i = 20 \times 15 = 300 $$
+        $$ \text{Old } \sum x_i^2 = n\left(\sigma_{\text{old}}^2 + \bar{x}_{\text{old}}^2\right) = 20(9 + 225) = 20
+        \times 234 = 4680 $$
+        <p><strong>Step 2 — Adjust Both Sums for the Two Replaced Entries:</strong> Wrong entries $\{11, 19\}$ are
+            replaced by true entries $\{21, 29\}$:</p>
+        $$ \text{New } \sum x_i = 300 - (11 + 19) + (21 + 29) = 300 - 30 + 50 = 320 \implies \bar{x}_{\text{new}} =
+        \frac{320}{20} = 16 $$
+        $$ \text{New } \sum x_i^2 = 4680 - (11^2 + 19^2) + (21^2 + 29^2) = 4680 - (121 + 361) + (441 + 841) = 4680 - 482
+        + 1282 = 5480 $$
+        <p><strong>Step 3 — Compute Corrected Variance:</strong></p>
+        $$ \sigma_{\text{new}}^2 = \frac{5480}{20} - 16^2 = 274 - 256 = \mathbf{18} $$
+        <p>Therefore, the NAT answer is <strong>018</strong>.</p>
+    </div>
+
+    <!-- SOL Q25 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q25</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 — Invoke the Two Fundamental Minimization Theorems:</strong> For sorted dataset $\{2, 5, 8,
+            11, 16, 23, 33\}$ ($n = 7$):</p>
+        <ul>
+            <li><strong>$L_1$ Minimizer ($p$):</strong> $\sum_{i=1}^{7}|k - x_i|$ is strictly minimized at the
+                <strong>Median</strong> ($4\text{th}$ sorted value): $\mathbf{p = 11}$.
+            </li>
+            <li><strong>$L_2$ Minimizer ($q$):</strong> Expand $G(k) = \sum(k - x_i)^2 = \sum\big((k - \bar{x}) +
+                (\bar{x} - x_i)\big)^2 = 7(k - \bar{x})^2 + \sum(x_i - \bar{x})^2$ (since $\sum(\bar{x} - x_i) = 0$).
+                Hence $G(k)$ is strictly minimized at the <strong>Mean</strong>:
+                $$ q = \bar{x} = \frac{2 + 5 + 8 + 11 + 16 + 23 + 33}{7} = \frac{98}{7} = \mathbf{14} $$</li>
+        </ul>
+        <p>Thus $p + q = 11 + 14 = \mathbf{25}$.</p>
+        <p><strong>Step 2 — Compute $F(p) = F(11)$:</strong></p>
+        $$ F(11) = (11 - 2) + (11 - 5) + (11 - 8) + 0 + (16 - 11) + (23 - 11) + (33 - 11) = 9 + 6 + 3 + 0 + 5 + 12 + 22
+        = \mathbf{57} $$
+        <p>Therefore, the correct option is <strong>(D)</strong>.</p>
+    </div>
+
+    <!-- SOL Q26 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q26</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Answer: 046</span>
+        </div>
+        <p><strong>Step 1 — Find the Combined Mean $\bar{x}_{12}$:</strong></p>
+        $$ \bar{x}_{12} = \frac{n_1\bar{x}_1 + n_2\bar{x}_2}{n_1 + n_2} = \frac{20(30) + 30(40)}{20 + 30} = \frac{600 +
+        1200}{50} = \frac{1800}{50} = 36 $$
+        <p><strong>Step 2 — Derive &amp; Apply the Combined Variance Formula:</strong> For each group $k \in \{1, 2\}$,
+            let $d_k = \bar{x}_k - \bar{x}_{12}$. Because $\sum_{i \in G_k}(x_i - \bar{x}_{12})^2 = \sum_{i \in
+            G_k}\big((x_i - \bar{x}_k) + d_k\big)^2 = n_k\sigma_k^2 + n_k d_k^2$ (the cross-term vanishes since
+            $\sum(x_i - \bar{x}_k) = 0$), pooling both groups gives:</p>
+        $$ \sigma_{12}^2 = \frac{n_1(\sigma_1^2 + d_1^2) + n_2(\sigma_2^2 + d_2^2)}{n_1 + n_2} $$
+        <p>Here $d_1 = 30 - 36 = -6$ ($d_1^2 = 36$) and $d_2 = 40 - 36 = +4$ ($d_2^2 = 16$):</p>
+        $$ \sigma_{12}^2 = \frac{20(16 + 36) + 30(26 + 16)}{50} = \frac{20(52) + 30(42)}{50} = \frac{1040 + 1260}{50} =
+        \frac{2300}{50} = \mathbf{46} $$
+        <p><em>First-Principles Sum-of-Squares Audit:</em> $\sum x_A^2 = 20(16 + 900) = 18320$, $\sum x_B^2 = 30(26 +
+            1600) = 48780 \implies \sigma_{12}^2 = \frac{67100}{50} - 36^2 = 1342 - 1296 = 46$. Therefore, the NAT
+            answer is <strong>046</strong>.</p>
+    </div>
+
+    <!-- SOL Q27 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q27</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 — Shift the Origin to $5$ by Defining $d_i = x_i - 5$:</strong> By the origin-shift law for
+            Mean:</p>
+        $$ \bar{d} = \bar{x} - 5 = 7 - 5 = 2 $$
+        <p>Since $\sum_{i=1}^{n} d_i = n\bar{d}$, substituting $\sum d_i = 18$ gives:</p>
+        $$ 2n = 18 \implies \mathbf{n = 9} $$
+        <p><strong>Step 2 — Use Origin-Shift Invariance of Variance ($\sigma_x^2 = \sigma_d^2$):</strong></p>
+        $$ \sigma_x^2 = \sigma_d^2 = \frac{\sum_{i=1}^{n} d_i^2}{n} - \bar{d}^2 = \frac{117}{9} - 2^2 = 13 - 4 =
+        \mathbf{9} $$
+        <p>Therefore, the correct option is <strong>(B)</strong>.</p>
+    </div>
+
+    <!-- SOL Q28 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q28</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Answer: 192</span>
+        </div>
+        <p><strong>Step 1 — Extract $(y - x)$ Directly from the Median Condition ($M = 27$):</strong> Total frequency is
+            $N = 4 + x + 20 + y + 8 = 32 + x + y$. Because $M = 27 \in [20, 30)$, the median class is `20–30` ($l = 20,
+            h = 10, f = 20, cf = 4 + x$):</p>
+        $$ 27 = 20 + \left(\frac{\frac{32 + x + y}{2} - (4 + x)}{20}\right)\times 10 \implies 7 = \frac{32 + x + y - 8 -
+        2x}{4} $$
+        $$ 28 = 24 + y - x \implies \mathbf{y - x = 4} \quad \cdots \text{(1)} $$
+        <p><strong>Step 2 — Unlock Total Frequency $N$ via Step-Deviation Mean ($a = 25, h = 10$):</strong> Class marks
+            are $5, 15, 25, 35, 45$, giving coded steps $u_i = -2, -1, 0, +1, +2$:</p>
+        $$ \sum f_i u_i = 4(-2) + x(-1) + 20(0) + y(+1) + 8(+2) = 8 + (y - x) $$
+        <p>Substitute $y - x = 4$ from Equation (1): $\sum f_i u_i = 8 + 4 = 12$! Now plug into $\bar{x} = 27$:</p>
+        $$ 27 = 25 + 10\left(\frac{12}{N}\right) \implies 2 = \frac{120}{N} \implies N = 60 $$
+        <p><strong>Step 3 — Solve for $x$, $y$, and $x \cdot y$:</strong> From $32 + x + y = 60$, we get $x + y = 28$.
+            Solving $x + y = 28$ with $y - x = 4$ gives $y = 16$ and $x = 12$. (Check: $cf = 16 \lt 30 \le 36$, valid.)
+            Therefore:</p>
+        $$ x \cdot y = 12 \times 16 = \mathbf{192} $$
+        <p>Therefore, the NAT answer is <strong>192</strong>.</p>
+    </div>
+
+    <!-- SOL Q29 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q29</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Passage 2 &bull; Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 — Compute Mean and Standard Deviation of $X$:</strong> Dataset $X = \{1, 3, 5, 7, 9, 11, 13\}$
+            is a $7$-term AP with common difference $d = 2$:</p>
+        $$ \bar{x} = \frac{1 + 13}{2} = 7, \qquad \sigma_x^2 = \frac{d^2(n^2 - 1)}{12} = \frac{2^2(7^2 - 1)}{12} =
+        \frac{4 \times 48}{12} = 16 \implies \sigma_x = 4 $$
+        <p><strong>Step 2 — Transform $X \to Y$ via $y_i = 3x_i + 4$:</strong></p>
+        $$ \bar{y} = 3\bar{x} + 4 = 3(7) + 4 = 25, \qquad \sigma_y = |3|\sigma_x = 3(4) = \mathbf{12} $$
+        <p><strong>Step 3 — Compute $\text{CV}_y$:</strong></p>
+        $$ \text{CV}_y = \frac{\sigma_y}{\bar{y}} \times 100\% = \frac{12}{25} \times 100\% = \mathbf{48\%} $$
+        <p>Therefore, the correct option is <strong>(A)</strong>.</p>
+    </div>
+
+    <!-- SOL Q30 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q30</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Passage 2 &bull; Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 — Pool the Equal-Sized Datasets $X$ and $Y$ ($n_1 = n_2 = 7$):</strong> From Q29, we have
+            $\bar{x} = 7,\; \sigma_x^2 = 16$ and $\bar{y} = 25,\; \sigma_y^2 = 12^2 = 144$. Since both groups have
+            identical size $7$, the pooled mean is simply the average of their means:</p>
+        $$ \bar{z} = \frac{7 + 25}{2} = 16 $$
+        <p>Compute the mean shifts $d_1 = 7 - 16 = -9$ ($d_1^2 = 81$) and $d_2 = 25 - 16 = +9$ ($d_2^2 = 81$).</p>
+        <p><strong>Step 2 — Apply the Combined Variance Formula:</strong></p>
+        $$ \sigma_z^2 = \frac{7(\sigma_x^2 + d_1^2) + 7(\sigma_y^2 + d_2^2)}{14} = \frac{(16 + 81) + (144 + 81)}{2} =
+        \frac{97 + 225}{2} = \frac{322}{2} = \mathbf{161} $$
+        <p><em>Trap Check:</em> Simply averaging the two variances $\frac{16 + 144}{2} = 80$ (Option A) completely
+            misses the huge between-group spread $d^2 = 81$! Therefore, the correct option is <strong>(C)</strong>.</p>
+    </div>
+
+    <!-- =========================================================
+       TRAP & ERROR FORENSICS CARDS
+       ========================================================= -->
+    <h2 class="section-heading">Chapter 16 Trap &amp; Error Forensics</h2>
+
+    <!-- TRAP 1 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #1 &bull; Forgetting the $\pm 0.5$ Continuity Correction on Inclusive
+            Class Intervals</span>
+        <p><strong>The Fatal Error:</strong> Given discontinuous classes like `1–10, 11–20, 21–30` in Q3, students
+            immediately plug $l = 21$ and $h = 30 - 21 = 9$ into the Median or Mode formula without bridging the
+            $1$-unit gap between classes.</p>
+        <p><strong>Why It Fails:</strong> Skipping continuity correction introduces a <em>double</em> error: both the
+            lower boundary $l$ is shifted upward by $+0.5$ AND the true class width $h = 10$ is shrunk falsely to $9$.
+            In Q3, this produces $21 + \frac{10}{25}(9) = 24.6$ (planted as distractor Option B) instead of the exact
+            Median $24.5$.</p>
+        <p><strong>The Antidote:</strong> Run a 2-second <strong>Boundary Check</strong> on every table: does the upper
+            limit of Row 1 equal the lower limit of Row 2? If not, compute $\delta = \frac{\text{gap}}{2}$, shift every
+            class to $[L - \delta,\; U + \delta]$, and compute $h$ strictly as the difference between consecutive lower
+            limits ($20.5 - 10.5 = 10$).</p>
+    </div>
+
+    <!-- TRAP 2 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #2 &bull; Reading a "Less Than" or "More Than" Cumulative Column as Raw
+            Frequencies</span>
+        <p><strong>The Fatal Error:</strong> Seeing a table labeled "Less than $10$: $6$; Less than $20$: $18$; Less
+            than $30$: $38$" (Q8) or "$\ge 100$: $100$; $\ge 120$: $88$" (Q16), students treat the given numbers as
+            individual class frequencies $f_i$, sum them to get a bogus total $N = 6+18+38+52+60 = 174$, or plug $f =
+            38$ directly into the Median denominator.</p>
+        <p><strong>Why It Fails:</strong> A "Less-Than" column is already a <em>running total</em> ($CF$), and a
+            "More-Than" column is a <em>reverse running total</em>. Every observation gets double-, triple-, and
+            quintuple-counted if you sum cumulative entries! In Q8, plugging $f = 38$ instead of $f = 38 - 18 = 20$
+            destroys the Median from $26$ to $23.16$.</p>
+        <p><strong>The Antidote:</strong> Whenever the words <em>"Less than," "Below," "Up to," "More than,"</em> or
+            <em>"Above"</em> appear in the class header, immediately add a dedicated rightmost column for true class
+            frequencies $f_i$ by subtracting adjacent rows before computing any statistic.
+        </p>
+    </div>
+
+    <!-- TRAP 3 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #3 &bull; Plugging the Median Class's Own $CF$ into $cf$ Instead of the
+            <em>Preceding</em> Class</span>
+        <p><strong>The Fatal Error:</strong> After locating the median class (the first row with $CF \ge \frac{N}{2}$),
+            students substitute <em>that same row's</em> cumulative frequency into $M = l + \left(\frac{\frac{N}{2} -
+            cf}{f}\right)h$.</p>
+        <p><strong>Why It Fails:</strong> Since the median class itself satisfies $CF_{\text{median}} \ge \frac{N}{2}$,
+            plugging it into $\left(\frac{N}{2} - cf\right)$ produces a <strong>negative</strong> numerator and pulls
+            your computed Median strictly <em>below</em> $l$ (outside the median class itself—mathematically
+            impossible!).</p>
+        <p><strong>The Antidote:</strong> Remember the geometric meaning on the Ogive: you already crossed $cf$
+            observations <em>before</em> entering the median class, and need $\left(\frac{N}{2} - cf\right) \ge 0$
+            additional observations inside the class. Always perform the 1-second sanity check: your final Median $M$
+            MUST satisfy $l \le M \le l + h$.</p>
+    </div>
+
+    <!-- TRAP 4 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #4 &bull; Adding $+b$ to Standard Deviation / Variance (or Dropping
+            $|a|$) Under $y_i = ax_i + b$</span>
+        <p><strong>The Fatal Error:</strong> Given $y_i = 100 - 3x_i$ in Q13 (with $\sigma_x = 5$), students compute
+            $\sigma_y = 100 - 3(5) = 85$, or $\sigma_y^2 = 100 + 9(25) = 325$ (distractor Option B), or write a negative
+            Standard Deviation $\sigma_y = -15$.</p>
+        <p><strong>Why It Fails:</strong> Adding a constant $+b$ slides the entire data cloud rigidly along the number
+            line without stretching or squeezing the gaps between points: $(x_i + b) - (\bar{x} + b) = x_i - \bar{x}$.
+            Spread measures (Range, MD, $\sigma$, $\sigma^2$) are <strong>100% blind to origin shift $+b$</strong>, and
+            $\sigma_y = \sqrt{a^2\sigma_x^2} = |a|\sigma_x$ is <em>always non-negative</em>.</p>
+        <p><strong>The Antidote:</strong> Split every linear transformation $y_i = ax_i + b$ into two mental buckets:
+            <strong>Location</strong> ($\bar{x}, M, Z$) keeps <em>both</em> $a$ and $+b$; <strong>Spread</strong>
+            ($\sigma, \text{MD}, \text{Range}$) deletes $+b$ and multiplies solely by $|a|$ (and by $a^2$ for Variance).
+        </p>
+    </div>
+
+    <!-- TRAP 5 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #5 &bull; Ignoring Frequency Density on Unequal Widths &amp; Naive
+            Variance Averaging</span>
+        <p><strong>The Fatal Error:</strong> Two classic Level 3 traps: (1) picking `40–60` ($f = 54$) as the modal
+            class in Q22 without dividing by class width $w_i$, and (2) computing the pooled variance in Q26 or Q30 by
+            simply taking the weighted average $\frac{n_1\sigma_1^2 + n_2\sigma_2^2}{n_1+n_2}$ (producing Option A $=
+            80$ instead of $161$ in Q30).</p>
+        <p><strong>Why It Fails:</strong> First, wider bins artificially collect more raw counts; histogram height is
+            strictly <em>frequency density</em> $D_i = f_i / w_i$. Second, when two groups have <em>different means</em>
+            ($\bar{x}_1 \neq \bar{x}_2$), pooling them creates additional spread around the new combined mean
+            $\bar{x}_{12}$, captured precisely by the shift terms $d_k^2 = (\bar{x}_k - \bar{x}_{12})^2$.</p>
+        <p><strong>The Antidote:</strong> Always scan class widths before finding a Mode, and NEVER average variances
+            unless $\bar{x}_1 = \bar{x}_2$; otherwise always include $+ d_k^2$ inside $\sigma_{12}^2 =
+            \dfrac{n_1(\sigma_1^2 + d_1^2) + n_2(\sigma_2^2 + d_2^2)}{n_1 + n_2}$.</p>
+    </div>
+
+</article>

@@ -1,0 +1,756 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 14: Trigonometry, Identities, Compound Angles &amp; Max/Min Bounds — Solutions &amp; Error Forensics">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 2: Mathematics (Paper 1) &bull; Chapter 14 &bull; Part 3 of 3: Verified
+            Solutions &amp; Error Forensics</div>
+        <h1>Trigonometry, Identities, Compound Angles &amp; Max/Min Bounds</h1>
+        <p>Complete, zero-skip step-by-step solutions for all 28 Graded Practice Arena problems (Q1&ndash;Q28), audited
+            100% against the Chapter 14 Answer Key Grid, followed by five high-yield Trap &amp; Error Forensics
+            diagnostic cards.</p>
+        <div class="tag-row">
+            <span class="meta-pill">28 Verified Solutions</span>
+            <span class="meta-pill">Zero Algebraic Skips</span>
+            <span class="meta-pill">5 Error Forensics Cards</span>
+            <span class="meta-pill">BEST Paper 1 Audit</span>
+        </div>
+    </header>
+
+    <!-- =========================================================
+       LEVEL 1 SOLUTIONS (Q1 – Q8)
+       ========================================================= -->
+    <div class="level-banner l1">Level 1 Solutions: Warmup (Q1 &ndash; Q8)</div>
+
+    <!-- SOL Q1 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q1</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 — Construct the Right Triangle:</strong> From $24\cot\theta = 7$, we get $\cot\theta =
+            \dfrac{7}{24} = \dfrac{\text{base}}{\text{perpendicular}}$. Let base $b = 7k$ and perpendicular $p = 24k$
+            ($k \gt 0$). By Pythagoras:</p>
+        $$ h = \sqrt{b^2 + p^2} = k\sqrt{7^2 + 24^2} = k\sqrt{49 + 576} = k\sqrt{625} = 25k $$
+        <p>Since $\theta$ is acute, $\cos\theta = \dfrac{7}{25}$ and $\tan\theta = \dfrac{24}{7}$.</p>
+        <p><strong>Step 2 — Substitute &amp; Simplify:</strong></p>
+        $$ \left(\frac{1 - \cos\theta}{1 + \cos\theta}\right)\tan\theta = \left(\frac{1 - \frac{7}{25}}{1 +
+        \frac{7}{25}}\right)\cdot\frac{24}{7} = \left(\frac{18/25}{32/25}\right)\cdot\frac{24}{7} =
+        \frac{18}{32}\cdot\frac{24}{7} = \frac{9}{16}\cdot\frac{24}{7} = \frac{9 \cdot 3}{2 \cdot 7} =
+        \mathbf{\frac{27}{14}} $$
+        <p>Therefore, the correct option is <strong>(B)</strong>.</p>
+    </div>
+
+    <!-- SOL Q2 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q2</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 — Evaluate the Numerator:</strong> Substitute $\cos 60^\circ = \frac{1}{2}$, $\sec 30^\circ =
+            \frac{2}{\sqrt{3}}$, and $\tan 45^\circ = 1$:</p>
+        $$ \text{Numerator} = 5\left(\frac{1}{2}\right)^2 + 4\left(\frac{2}{\sqrt{3}}\right)^2 - 1^2 = \frac{5}{4} +
+        \frac{16}{3} - 1 = \frac{15 + 64 - 12}{12} = \frac{67}{12} $$
+        <p><strong>Step 2 — Evaluate the Denominator:</strong> By the fundamental identity, $\sin^2 30^\circ + \cos^2
+            30^\circ = 1$, and $\cot 60^\circ = \frac{1}{\sqrt{3}}$:</p>
+        $$ \text{Denominator} = 1 + \left(\frac{1}{\sqrt{3}}\right)^2 = 1 + \frac{1}{3} = \frac{4}{3} $$
+        <p><strong>Step 3 — Divide:</strong></p>
+        $$ E = \frac{67/12}{4/3} = \frac{67}{12} \cdot \frac{3}{4} = \mathbf{\frac{67}{16}} $$
+        <p>Therefore, the correct option is <strong>(C)</strong>.</p>
+    </div>
+
+    <!-- SOL Q3 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q3</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Answer: 045</span>
+        </div>
+        <p><strong>Step 1 — Count the Terms:</strong> The angles $1^\circ, 3^\circ, 5^\circ, \dots, 89^\circ$ form an
+            arithmetic progression with $a = 1$, $d = 2$, and last term $89$. The total number of terms is:</p>
+        $$ n = \frac{89 - 1}{2} + 1 = 44 + 1 = 45 $$
+        <p><strong>Step 2 — Pair Complementary Angles:</strong> The unique middle term is $\sin^2 45^\circ =
+            \left(\frac{1}{\sqrt{2}}\right)^2 = \frac{1}{2}$. The remaining $44$ terms split into $22$ complementary
+            pairs $(1^\circ, 89^\circ), (3^\circ, 87^\circ), \dots, (43^\circ, 47^\circ)$. For each pair:</p>
+        $$ \sin^2\theta + \sin^2(90^\circ - \theta) = \sin^2\theta + \cos^2\theta = 1 $$
+        <p><strong>Step 3 — Sum &amp; Scale:</strong></p>
+        $$ S = 2\left(22 \times 1 + \frac{1}{2}\right) = 2\left(\frac{45}{2}\right) = \mathbf{45} $$
+        <p>Therefore, the NAT answer is <strong>045</strong>.</p>
+    </div>
+
+    <!-- SOL Q4 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q4</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 — Determine the Base via Pythagoras:</strong> Given $\sin\theta = \dfrac{m^2 - n^2}{m^2 +
+            n^2}$ with $m \gt n \gt 0$, take perpendicular $p = (m^2 - n^2)k$ and hypotenuse $h = (m^2 + n^2)k$ ($k \gt
+            0$). Then:</p>
+        $$ b = \sqrt{h^2 - p^2} = k\sqrt{(m^2 + n^2)^2 - (m^2 - n^2)^2} = k\sqrt{4m^2n^2} = 2mnk \qquad (\text{since }
+        m, n \gt 0) $$
+        <p><strong>Step 2 — Compute $\sec\theta + \tan\theta$:</strong></p>
+        $$ \sec\theta + \tan\theta = \frac{h}{b} + \frac{p}{b} = \frac{(m^2 + n^2)k + (m^2 - n^2)k}{2mnk} =
+        \frac{2m^2}{2mn} = \mathbf{\frac{m}{n}} $$
+        <p>Therefore, the correct option is <strong>(A)</strong>.</p>
+    </div>
+
+    <!-- SOL Q5 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q5</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Answer: 165</span>
+        </div>
+        <p><strong>Step 1 — Establish Angle Bounds:</strong> Since $0^\circ \lt B \lt A \lt 90^\circ$, we have $0^\circ
+            \lt A + B \lt 180^\circ$ and $0^\circ \lt A - B \lt 90^\circ$.</p>
+        <p><strong>Step 2 — Invert the Standard Ratios Uniquely:</strong></p>
+        <ul>
+            <li>On $(0^\circ, 180^\circ)$, $\cos(A + B) = \dfrac{1}{2}$ holds uniquely at $A + B = 60^\circ$.</li>
+            <li>On $(0^\circ, 90^\circ)$, $\tan(A - B) = \dfrac{1}{\sqrt{3}}$ holds uniquely at $A - B = 30^\circ$.</li>
+        </ul>
+        <p><strong>Step 3 — Solve for $A$ and $B$:</strong></p>
+        $$ 2A = 60^\circ + 30^\circ = 90^\circ \implies A = 45^\circ, \qquad 2B = 60^\circ - 30^\circ = 30^\circ
+        \implies B = 15^\circ $$
+        <p>(Verify domain: $0^\circ \lt 15^\circ \lt 45^\circ \lt 90^\circ$ holds.)</p>
+        $$ 3A + 2B = 3(45) + 2(15) = 135 + 30 = \mathbf{165} $$
+        <p>Therefore, the NAT answer is <strong>165</strong>.</p>
+    </div>
+
+    <!-- SOL Q6 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q6</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 — Convert to a Single Variable $t = \tan\theta$:</strong> Since $\theta \in (0^\circ,
+            90^\circ)$ and $\theta \neq 45^\circ$, we have $t \gt 0$ and $t \neq 1$, with $\cot\theta = \frac{1}{t}$:
+        </p>
+        $$ \frac{\tan\theta}{1 - \cot\theta} + \frac{\cot\theta}{1 - \tan\theta} = \frac{t}{1 - \frac{1}{t}} +
+        \frac{\frac{1}{t}}{1 - t} = \frac{t^2}{t - 1} - \frac{1}{t(t - 1)} = \frac{t^3 - 1}{t(t - 1)} $$
+        <p><strong>Step 2 — Factor the Difference of Cubes &amp; Cancel $(t - 1) \neq 0$:</strong></p>
+        $$ \frac{(t - 1)(t^2 + t + 1)}{t(t - 1)} = \frac{t^2 + t + 1}{t} = t + 1 + \frac{1}{t} = 1 + \tan\theta +
+        \cot\theta $$
+        <p><strong>Step 3 — Convert Back to $\sin\theta$ and $\cos\theta$:</strong></p>
+        $$ 1 + \frac{\sin\theta}{\cos\theta} + \frac{\cos\theta}{\sin\theta} = 1 + \frac{\sin^2\theta +
+        \cos^2\theta}{\sin\theta\cos\theta} = 1 + \frac{1}{\sin\theta\cos\theta} = \mathbf{1 + \sec\theta\csc\theta} $$
+        <p><em>MCQ Verification Check (Domain-Safe $\theta = 30^\circ$; note $\theta = 45^\circ$ is illegal because $1 -
+                \tan 45^\circ = 0$):</em> LHS $= \frac{1/\sqrt{3}}{1 - \sqrt{3}} + \frac{\sqrt{3}}{1 - 1/\sqrt{3}} =
+            \frac{1}{\sqrt{3}(1-\sqrt{3})} + \frac{3}{\sqrt{3}-1} = \frac{3\sqrt{3}-1}{\sqrt{3}(\sqrt{3}-1)} = \frac{9 -
+            \sqrt{3} + 3\sqrt{3} - 1}{3(2)} \dots$ wait: $\frac{3\sqrt{3}-1}{3-\sqrt{3}} =
+            \frac{(3\sqrt{3}-1)(3+\sqrt{3})}{6} = \frac{9\sqrt{3}+9-3-\sqrt{3}}{6} = 1 + \frac{4}{\sqrt{3}}$, matching
+            $1 + \sec 30^\circ\csc 30^\circ = 1 + \frac{2}{\sqrt{3}}\cdot 2 = 1 + \frac{4}{\sqrt{3}}$. Therefore, the
+            correct option is <strong>(D)</strong>.</p>
+    </div>
+
+    <!-- SOL Q7 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q7</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">NAT Answer: 016</span>
+        </div>
+        <p><strong>Evaluate Each of the Four Terms Separately:</strong></p>
+        <ol>
+            <li>$\cos 52^\circ = \cos(90^\circ - 38^\circ) = \sin 38^\circ \implies \dfrac{5\cos 52^\circ}{\sin
+                38^\circ} = 5$.</li>
+            <li>In the numerator, $\cos 70^\circ \csc 20^\circ = \sin(90^\circ - 70^\circ)\csc 20^\circ = \sin 20^\circ
+                \cdot \dfrac{1}{\sin 20^\circ} = 1$. In the denominator, pair $(5^\circ, 85^\circ)$ and $(25^\circ,
+                65^\circ)$:
+                $$ (\tan 5^\circ \cot 5^\circ)(\tan 25^\circ \cot 25^\circ)(\tan 45^\circ) = 1 \cdot 1 \cdot 1 = 1 $$
+                Hence the second term equals $\dfrac{8(1)}{1} = 8$.</li>
+            <li>$6\sec^2 45^\circ = 6(\sqrt{2})^2 = 6(2) = 12$.</li>
+            <li>$-3\cot^2 30^\circ = -3(\sqrt{3})^2 = -3(3) = -9$.</li>
+        </ol>
+        <p><strong>Sum:</strong> $W = 5 + 8 + 12 - 9 = \mathbf{16}$. Therefore, the NAT answer is <strong>016</strong>.
+        </p>
+    </div>
+
+    <!-- SOL Q8 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q8</span>
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 — Expand Higher-Order Powers in Terms of $u = \sin^2\theta\cos^2\theta$:</strong> Using $x =
+            \sin^2\theta$, $y = \cos^2\theta$ with $x + y = 1$ and $xy = u$:</p>
+        $$ \sin^4\theta + \cos^4\theta = (x + y)^2 - 2xy = 1 - 2u $$
+        $$ \sin^6\theta + \cos^6\theta = (x + y)^3 - 3xy(x + y) = 1 - 3u $$
+        <p><strong>Step 2 — Substitute into the Expression:</strong></p>
+        $$ 2(1 - 3u) - 3(1 - 2u) + 5 = (2 - 6u) - (3 - 6u) + 5 = 2 - 3 + 5 = \mathbf{4} $$
+        <p>Notice the $\pm 6u$ terms annihilate identically for all $\theta \in \mathbb{R}$. Therefore, the correct
+            option is <strong>(B)</strong>.</p>
+    </div>
+
+    <!-- =========================================================
+       LEVEL 2 SOLUTIONS (Q9 – Q19)
+       ========================================================= -->
+    <div class="level-banner l2">Level 2 Solutions: Exam-Real (Q9 &ndash; Q19)</div>
+
+    <!-- SOL Q9 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q9</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 — Apply the Conjugate Pair Identity:</strong> Since $\sec\theta + \tan\theta = p$, its
+            reciprocal conjugate is $\sec\theta - \tan\theta = \dfrac{1}{p}$. Adding and subtracting gives:</p>
+        $$ \sec\theta = \frac{p + \frac{1}{p}}{2} = \frac{p^2 + 1}{2p}, \qquad \tan\theta = \frac{p - \frac{1}{p}}{2} =
+        \frac{p^2 - 1}{2p} $$
+        <p><strong>Step 2 — Compute $\csc\theta$:</strong></p>
+        $$ \sin\theta = \frac{\tan\theta}{\sec\theta} = \frac{p^2 - 1}{p^2 + 1} \implies \csc\theta =
+        \frac{1}{\sin\theta} = \frac{p^2 + 1}{p^2 - 1} $$
+        <p><strong>Step 3 — Apply Componendo and Dividendo:</strong></p>
+        $$ \frac{\csc\theta + 1}{\csc\theta - 1} = \frac{\frac{p^2 + 1}{p^2 - 1} + 1}{\frac{p^2 + 1}{p^2 - 1} - 1} =
+        \frac{(p^2 + 1) + (p^2 - 1)}{(p^2 + 1) - (p^2 - 1)} = \frac{2p^2}{2} = \mathbf{p^2} $$
+        <p><em>Alternative 10-Second Route:</em> $\dfrac{\csc\theta + 1}{\csc\theta - 1} = \dfrac{1 + \sin\theta}{1 -
+            \sin\theta} = \dfrac{(1 + \sin\theta)^2}{\cos^2\theta} = (\sec\theta + \tan\theta)^2 = p^2$. Therefore, the
+            correct option is <strong>(C)</strong>.</p>
+    </div>
+
+    <!-- SOL Q10 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q10</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 110</span>
+        </div>
+        <p><strong>Step 1 — Use the Cosecant–Cotangent Conjugate Pair:</strong> Since $\csc^2\theta - \cot^2\theta = 1$
+            and $\csc\theta + \cot\theta = 7$:</p>
+        $$ \csc\theta - \cot\theta = \frac{1}{7} $$
+        <p><strong>Step 2 — Solve for $\csc\theta$ and $\cot\theta$:</strong></p>
+        $$ 2\csc\theta = 7 + \frac{1}{7} = \frac{50}{7} \implies \csc\theta = \frac{25}{7} \implies \sin\theta =
+        \frac{7}{25} $$
+        $$ 2\cot\theta = 7 - \frac{1}{7} = \frac{48}{7} \implies \cot\theta = \frac{24}{7} \implies \tan\theta =
+        \frac{7}{24} $$
+        <p>Hence $\cos\theta = \sin\theta\cot\theta = \dfrac{7}{25} \cdot \dfrac{24}{7} = \dfrac{24}{25}$.</p>
+        <p><strong>Step 3 — Evaluate the Target Expression:</strong></p>
+        $$ 100\cos\theta + 48\tan\theta = 100\left(\frac{24}{25}\right) + 48\left(\frac{7}{24}\right) = 4(24) + 2(7) =
+        96 + 14 = \mathbf{110} $$
+        <p>Therefore, the NAT answer is <strong>110</strong>.</p>
+    </div>
+
+    <!-- SOL Q11 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q11</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Answer: (A)</span>
+        </div>
+        <p><strong>Direct Algebraic Rationalization (Sign-Exact):</strong> Rearrange the given equation $\sin\theta +
+            \cos\theta = \sqrt{2}\cos\theta$:</p>
+        $$ \sin\theta = (\sqrt{2} - 1)\cos\theta $$
+        <p>Multiply both sides by the radical conjugate $(\sqrt{2} + 1)$:</p>
+        $$ (\sqrt{2} + 1)\sin\theta = (\sqrt{2} + 1)(\sqrt{2} - 1)\cos\theta = (2 - 1)\cos\theta = \cos\theta $$
+        $$ \sqrt{2}\sin\theta + \sin\theta = \cos\theta \implies \mathbf{\cos\theta - \sin\theta = \sqrt{2}\sin\theta}
+        $$
+        <p><em>Why this beats blindly using the orthogonal pair formula:</em> Squaring gives $(\cos\theta -
+            \sin\theta)^2 = 2 - 2\cos^2\theta = 2\sin^2\theta$, which leaves an ambiguous $\pm\sqrt{2}\sin\theta$,
+            whereas rationalizing proves the exact sign is always $+$. Therefore, the correct option is
+            <strong>(A)</strong>.
+        </p>
+    </div>
+
+    <!-- SOL Q12 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q12</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 — Evaluate $x^2 + y^2$:</strong></p>
+        $$ x^2 + y^2 = (a\sin\theta + b\cos\theta)^2 + (a\cos\theta - b\sin\theta)^2 $$
+        $$ = (a^2\sin^2\theta + b^2\cos^2\theta + 2ab\sin\theta\cos\theta) + (a^2\cos^2\theta + b^2\sin^2\theta -
+        2ab\sin\theta\cos\theta) = a^2 + b^2 $$
+        <p><strong>Step 2 — Evaluate $p^2 - q^2$:</strong></p>
+        $$ p^2 - q^2 = (a\sec\theta - b\tan\theta)^2 - (a\tan\theta - b\sec\theta)^2 $$
+        $$ = (a^2\sec^2\theta + b^2\tan^2\theta - 2ab\sec\theta\tan\theta) - (a^2\tan^2\theta + b^2\sec^2\theta -
+        2ab\sec\theta\tan\theta) $$
+        $$ = a^2(\sec^2\theta - \tan^2\theta) - b^2(\sec^2\theta - \tan^2\theta) = a^2(1) - b^2(1) = a^2 - b^2 $$
+        <p><strong>Step 3 — Subtract:</strong></p>
+        $$ (x^2 + y^2) - (p^2 - q^2) = (a^2 + b^2) - (a^2 - b^2) = \mathbf{2b^2} $$
+        <p>Therefore, the correct option is <strong>(C)</strong>.</p>
+    </div>
+
+    <!-- SOL Q13 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q13</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 049</span>
+        </div>
+        <p><strong>Step 1 — Convert Every Radian Angle &amp; Reduce via ASTC:</strong></p>
+        <ul>
+            <li>$\sin\frac{5\pi}{6} = \sin 150^\circ = \sin(180^\circ - 30^\circ) = +\sin 30^\circ = \dfrac{1}{2}$
+                (Q-II).</li>
+            <li>$\cos\frac{4\pi}{3} = \cos 240^\circ = \cos(180^\circ + 60^\circ) = -\cos 60^\circ = -\dfrac{1}{2}$
+                (Q-III).</li>
+            <li>$\tan\frac{3\pi}{4} = \tan 135^\circ = \tan(180^\circ - 45^\circ) = -\tan 45^\circ = -1$ (Q-II).</li>
+            <li>$\cos\frac{11\pi}{6} = \cos 330^\circ = \cos(360^\circ - 30^\circ) = +\cos 30^\circ =
+                \dfrac{\sqrt{3}}{2}$ (Q-IV).</li>
+            <li>$\sin\frac{2\pi}{3} = \sin 120^\circ = \sin(180^\circ - 60^\circ) = +\sin 60^\circ =
+                \dfrac{\sqrt{3}}{2}$ (Q-II).</li>
+            <li>$\sin\frac{5\pi}{4} = \sin 225^\circ = -\dfrac{1}{\sqrt{2}} \implies \sin^2\frac{5\pi}{4} =
+                \dfrac{1}{2}$ (Q-III).</li>
+            <li>$\tan\frac{5\pi}{3} = \tan 300^\circ = -\sqrt{3} \implies \tan^2\frac{5\pi}{3} = 3$ (Q-IV).</li>
+        </ul>
+        <p><strong>Step 2 — Substitute &amp; Combine:</strong></p>
+        $$ R = 12\left[\left(\frac{1}{2}\right)\left(-\frac{1}{2}\right)(-1) +
+        \left(\frac{\sqrt{3}}{2}\right)\left(\frac{\sqrt{3}}{2}\right)\right] + 20\left(\frac{1}{2}\right) + 9(3) $$
+        $$ R = 12\left(\frac{1}{4} + \frac{3}{4}\right) + 10 + 27 = 12(1) + 10 + 27 = \mathbf{49} $$
+        <p>Therefore, the NAT answer is <strong>049</strong>.</p>
+    </div>
+
+    <!-- SOL Q14 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q14</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 — Reduce the Allied Angles Symbolically First:</strong></p>
+        <ul>
+            <li>$\sin(180^\circ - \theta) = +\sin\theta$ (even multiple of $90^\circ$; Q-II has $\sin \gt 0$).</li>
+            <li>$\cos(270^\circ + \theta) = +\sin\theta$ (odd multiple swaps $\cos \to \sin$; Q-IV has original $\cos
+                \gt 0$).</li>
+            <li>$\sec(360^\circ - \theta) = +\sec\theta$ (even multiple; Q-IV has $\sec \gt 0$).</li>
+            <li>$\cot(90^\circ + \theta) = -\tan\theta$ (odd multiple swaps $\cot \to \tan$; Q-II has original $\cot \lt
+                0$).</li>
+        </ul>
+        <p>Hence the target fraction simplifies identically to:</p>
+        $$ \frac{\sin\theta + \sin\theta}{\sec\theta - (-\tan\theta)} = \frac{2\sin\theta}{\sec\theta + \tan\theta} $$
+        <p><strong>Step 2 — Extract Quadrant-II Values for $\theta$:</strong> Given $\tan\theta = -\dfrac{5}{12}$ and
+            $\theta \in \text{Q-II}$, the reference triangle is $5\text{–}12\text{–}13$, with $\sin\theta \gt 0$ and
+            $\cos\theta, \sec\theta \lt 0$:</p>
+        $$ \sin\theta = +\frac{5}{13}, \qquad \cos\theta = -\frac{12}{13}, \qquad \sec\theta = -\frac{13}{12} $$
+        <p><strong>Step 3 — Compute the Fraction:</strong></p>
+        $$ \frac{2\left(\frac{5}{13}\right)}{-\frac{13}{12} + \left(-\frac{5}{12}\right)} = \frac{10/13}{-18/12} =
+        \frac{10/13}{-3/2} = \mathbf{-\frac{20}{39}} $$
+        <p>Therefore, the correct option is <strong>(B)</strong>.</p>
+    </div>
+
+    <!-- SOL Q15 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q15</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 032</span>
+        </div>
+        <p><strong>Step 1 — Recall Exact Surds for $15^\circ$ and $75^\circ$:</strong></p>
+        $$ \tan 75^\circ = 2 + \sqrt{3}, \qquad \cot 75^\circ = \tan 15^\circ = 2 - \sqrt{3} $$
+        <p><strong>Step 2 — Evaluate Each Term:</strong></p>
+        <ul>
+            <li>$(\tan 75^\circ + \cot 75^\circ)^2 = \big((2 + \sqrt{3}) + (2 - \sqrt{3})\big)^2 = 4^2 = 16$.</li>
+            <li>$(\tan 75^\circ - \tan 15^\circ)^2 = \big((2 + \sqrt{3}) - (2 - \sqrt{3})\big)^2 = (2\sqrt{3})^2 = 12$.
+            </li>
+            <li>$16\sin 15^\circ \cos 15^\circ = 8(2\sin 15^\circ \cos 15^\circ) = 8\sin 30^\circ =
+                8\left(\frac{1}{2}\right) = 4$.</li>
+        </ul>
+        <p><strong>Step 3 — Sum:</strong> $T = 16 + 12 + 4 = \mathbf{32}$. Therefore, the NAT answer is
+            <strong>032</strong>.
+        </p>
+    </div>
+
+    <!-- SOL Q16 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q16</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 — Use the Tangent Double-Angle Identities with $t = \tan\theta = \dfrac{1}{3}$:</strong></p>
+        $$ \sin 2\theta = \frac{2t}{1 + t^2} = \frac{2\left(\frac{1}{3}\right)}{1 + \frac{1}{9}} = \frac{2/3}{10/9} =
+        \frac{3}{5} $$
+        $$ \cos 2\theta = \frac{1 - t^2}{1 + t^2} = \frac{1 - \frac{1}{9}}{1 + \frac{1}{9}} = \frac{8/9}{10/9} =
+        \frac{4}{5} $$
+        $$ \tan 2\theta = \frac{\sin 2\theta}{\cos 2\theta} = \frac{3/5}{4/5} = \frac{3}{4} $$
+        <p><strong>Step 2 — Add the Three Values:</strong></p>
+        $$ \sin 2\theta + \cos 2\theta + \tan 2\theta = \frac{3}{5} + \frac{4}{5} + \frac{3}{4} = \frac{7}{5} +
+        \frac{3}{4} = \frac{28 + 15}{20} = \mathbf{\frac{43}{20}} $$
+        <p>Therefore, the correct option is <strong>(D)</strong>.</p>
+    </div>
+
+    <!-- SOL Q17 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q17</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">NAT Answer: 275</span>
+        </div>
+        <p><strong>Step 1 — Compute the Auxiliary-Angle Amplitude $R$:</strong> For $a\sin\theta + b\cos\theta + c$ with
+            $a = 7$, $b = -24$, and $c = 30$:</p>
+        $$ R = \sqrt{a^2 + b^2} = \sqrt{7^2 + (-24)^2} = \sqrt{49 + 576} = \sqrt{625} = 25 $$
+        <p><strong>Step 2 — Determine Exact Extrema &amp; Product:</strong> Since $-25 \le 7\sin\theta - 24\cos\theta
+            \le +25$, adding $30$ yields:</p>
+        $$ M = 30 + 25 = 55, \qquad m = 30 - 25 = 5 $$
+        $$ M \cdot m = 55 \times 5 = \mathbf{275} $$
+        <p>Therefore, the NAT answer is <strong>275</strong>.</p>
+    </div>
+
+    <!-- SOL Q18 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q18</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Passage 1 &bull; Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 — Find the Missing Acute Ratios:</strong> Since $\alpha, \beta \in (0^\circ, 90^\circ)$, all
+            ratios are strictly positive:</p>
+        <ul>
+            <li>$\sin\alpha = \dfrac{3}{5} \implies \cos\alpha = \sqrt{1 - \frac{9}{25}} = \dfrac{4}{5}$ and $\tan\alpha
+                = \dfrac{3}{4}$.</li>
+            <li>$\cos\beta = \dfrac{5}{13} \implies \sin\beta = \sqrt{1 - \frac{25}{169}} = \dfrac{12}{13}$ and
+                $\tan\beta = \dfrac{12}{5}$.</li>
+        </ul>
+        <p><strong>Step 2 — Expand $\cos(\alpha - \beta)$:</strong></p>
+        $$ \cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta =
+        \left(\frac{4}{5}\right)\left(\frac{5}{13}\right) + \left(\frac{3}{5}\right)\left(\frac{12}{13}\right) =
+        \frac{20}{65} + \frac{36}{65} = \mathbf{\frac{56}{65}} $$
+        <p>Therefore, the correct option is <strong>(B)</strong>.</p>
+    </div>
+
+    <!-- SOL Q19 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q19</span>
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Passage 1 &bull; Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 — Apply the $\tan(\alpha + \beta)$ Formula:</strong> Using $\tan\alpha = \frac{3}{4}$ and
+            $\tan\beta = \frac{12}{5}$ from Q18:</p>
+        $$ \tan(\alpha + \beta) = \frac{\tan\alpha + \tan\beta}{1 - \tan\alpha\tan\beta} = \frac{\frac{3}{4} +
+        \frac{12}{5}}{1 - \left(\frac{3}{4}\right)\left(\frac{12}{5}\right)} = \frac{\frac{15 + 48}{20}}{1 -
+        \frac{36}{20}} = \frac{63/20}{-16/20} = \mathbf{-\frac{63}{16}} $$
+        <p><strong>Step 2 — Lock in the Exact Quadrant:</strong> Since $0^\circ \lt \alpha \lt 90^\circ$ and $0^\circ
+            \lt \beta \lt 90^\circ$, adding both inequalities guarantees $0^\circ \lt \alpha + \beta \lt 180^\circ$
+            (either Quadrant I or Quadrant II—Quadrant IV is impossible!). Because $\tan(\alpha + \beta) =
+            -\dfrac{63}{16} \lt 0$ (confirmed also by $\cos(\alpha+\beta) = \frac{20 - 36}{65} = -\frac{16}{65} \lt 0$),
+            $\alpha + \beta$ must lie strictly in <strong>Quadrant II</strong>.</p>
+        <p>Therefore, the correct option is <strong>(A)</strong>.</p>
+    </div>
+
+    <!-- =========================================================
+       LEVEL 3 SOLUTIONS (Q20 – Q28)
+       ========================================================= -->
+    <div class="level-banner l3">Level 3 Solutions: Rank-Booster (Q20 &ndash; Q28)</div>
+
+    <!-- SOL Q20 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q20</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 — Identify Three $45^\circ$-Identity Blocks:</strong></p>
+        <ol>
+            <li><strong>Sum $= 45^\circ$ (Cotangent form):</strong> Since $11^\circ + 34^\circ = 45^\circ$, the Olympiad
+                identity $(\cot A - 1)(\cot B - 1) = 2$ gives:
+                $$ (\cot 11^\circ - 1)(\cot 34^\circ - 1) = 2 $$</li>
+            <li><strong>Difference $= 45^\circ$ (Tangent form):</strong> Since $68^\circ - 23^\circ = 45^\circ$,
+                $\tan(68^\circ - 23^\circ) = 1 \implies \tan 68^\circ - \tan 23^\circ = 1 + \tan 68^\circ\tan 23^\circ
+                \implies 1 + \tan 68^\circ - \tan 23^\circ - \tan 68^\circ\tan 23^\circ = 2$, which factors cleanly as:
+                $$ (1 + \tan 68^\circ)(1 - \tan 23^\circ) = 2 $$</li>
+            <li><strong>Self-Paired $45^\circ$ Sum:</strong> Since $22.5^\circ + 22.5^\circ = 45^\circ$, setting $A = B
+                = 22.5^\circ$ in $(1 + \tan A)(1 + \tan B) = 2$ gives:
+                $$ (1 + \tan 22.5^\circ)^2 = 2 $$
+                (Cross-check: $\tan 22.5^\circ = \sqrt{2} - 1 \implies (1 + \sqrt{2} - 1)^2 = (\sqrt{2})^2 = 2$.)</li>
+        </ol>
+        <p><strong>Step 2 — Combine:</strong> $E = (2)(2) + 2 = 4 + 2 = \mathbf{6}$. Therefore, the correct option is
+            <strong>(D)</strong>.
+        </p>
+    </div>
+
+    <!-- SOL Q21 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q21</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Answer: 023</span>
+        </div>
+        <p><strong>Step 1 — Evaluate $P_1 = \cos 12^\circ \cos 24^\circ \cos 48^\circ \cos 84^\circ$ via Doubling
+                Cascade:</strong> Observe that the doubling sequence starting at $12^\circ$ is $12^\circ, 24^\circ,
+            48^\circ, 96^\circ$. Replace $\cos 84^\circ$ using the supplementary identity $\cos 84^\circ =
+            \cos(180^\circ - 96^\circ) = -\cos 96^\circ$:</p>
+        $$ P_1 = -\left(\cos 12^\circ \cos 24^\circ \cos 48^\circ \cos 96^\circ\right) $$
+        <p>Multiply and divide by $16\sin 12^\circ$ ($\sin 12^\circ \neq 0$) to trigger the 4-step double-angle domino
+            chain:</p>
+        $$ P_1 = -\frac{(2\sin 12^\circ \cos 12^\circ)\cos 24^\circ \cos 48^\circ \cos 96^\circ}{2\sin 12^\circ} =
+        -\frac{(2\sin 24^\circ \cos 24^\circ)\cos 48^\circ \cos 96^\circ}{4\sin 12^\circ} $$
+        $$ = -\frac{(2\sin 48^\circ \cos 48^\circ)\cos 96^\circ}{8\sin 12^\circ} = -\frac{2\sin 96^\circ \cos
+        96^\circ}{16\sin 12^\circ} = -\frac{\sin 192^\circ}{16\sin 12^\circ} $$
+        <p>Now reduce $\sin 192^\circ = \sin(180^\circ + 12^\circ) = -\sin 12^\circ$ (Q-III: $\sin \lt 0$):</p>
+        $$ P_1 = -\frac{-\sin 12^\circ}{16\sin 12^\circ} = +\frac{1}{16} \implies 240 P_1 = \frac{240}{16} = 15 $$
+        <p>(Sanity check: all four cosines in $P_1$ are acute, so $P_1$ MUST be positive—confirming $+1/16$!)</p>
+        <p><strong>Step 2 — Evaluate $P_2 = \sin 10^\circ \sin 50^\circ \sin 70^\circ$:</strong> Apply
+            $\sin\theta\sin(60^\circ-\theta)\sin(60^\circ+\theta) = \dfrac{1}{4}\sin 3\theta$ with $\theta = 10^\circ$:
+        </p>
+        $$ P_2 = \sin 10^\circ \sin(60^\circ - 10^\circ)\sin(60^\circ + 10^\circ) = \frac{1}{4}\sin 30^\circ =
+        \frac{1}{4}\cdot\frac{1}{2} = \frac{1}{8} \implies 64 P_2 = \frac{64}{8} = 8 $$
+        <p><strong>Step 3 — Add Both Parts:</strong> $N = 15 + 8 = \mathbf{23}$. Therefore, the NAT answer is
+            <strong>023</strong>.
+        </p>
+    </div>
+
+    <!-- SOL Q22 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q22</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Answer: (B)</span>
+        </div>
+        <p><strong>Step 1 — Rewrite Each Cosecant Using $\csc 2\alpha = \cot\alpha - \cot 2\alpha$:</strong> First
+            verify the identity: $\cot\alpha - \cot 2\alpha = \dfrac{\cos\alpha}{\sin\alpha} - \dfrac{2\cos^2\alpha -
+            1}{2\sin\alpha\cos\alpha} = \dfrac{2\cos^2\alpha - (2\cos^2\alpha - 1)}{2\sin\alpha\cos\alpha} =
+            \dfrac{1}{\sin 2\alpha} = \csc 2\alpha$. Applying this sequentially to $15^\circ, 30^\circ, 60^\circ,
+            120^\circ$:</p>
+        $$ \csc 15^\circ = \cot 7.5^\circ - \cot 15^\circ $$
+        $$ \csc 30^\circ = \cot 15^\circ - \cot 30^\circ $$
+        $$ \csc 60^\circ = \cot 30^\circ - \cot 60^\circ $$
+        $$ \csc 120^\circ = \cot 60^\circ - \cot 120^\circ $$
+        <p><strong>Step 2 — Telescope the Sum:</strong> Adding all four equations cancels every interior term ($\cot
+            15^\circ, \cot 30^\circ, \cot 60^\circ$), leaving:</p>
+        $$ \csc 15^\circ + \csc 30^\circ + \csc 60^\circ + \csc 120^\circ = \cot 7.5^\circ - \cot 120^\circ $$
+        <p><strong>Step 3 — Subtract $\cot 7.5^\circ$ &amp; Evaluate $-\cot 120^\circ$:</strong></p>
+        $$ S = (\cot 7.5^\circ - \cot 120^\circ) - \cot 7.5^\circ = -\cot 120^\circ = -\cot(180^\circ - 60^\circ) =
+        -(-\cot 60^\circ) = +\cot 60^\circ = \mathbf{\frac{1}{\sqrt{3}}} $$
+        <p>Therefore, the correct option is <strong>(B)</strong>.</p>
+    </div>
+
+    <!-- SOL Q23 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q23</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Answer: 075</span>
+        </div>
+        <p><strong>Step 1 — Unify All Terms into $\tan^2\theta$ and $\cot^2\theta$:</strong> Substitute $\sec^2\theta =
+            1 + \tan^2\theta$ and $\csc^2\theta = 1 + \cot^2\theta$:</p>
+        $$ f(\theta) = 9(1 + \tan^2\theta) + 16(1 + \cot^2\theta) + 16\tan^2\theta + 9\cot^2\theta $$
+        $$ f(\theta) = (9 + 16) + (9 + 16)\tan^2\theta + (16 + 9)\cot^2\theta = 25 + 25(\tan^2\theta + \cot^2\theta) $$
+        <p><strong>Step 2 — Apply AM-GM &amp; Verify Attainability:</strong> Since $\theta \in (0^\circ, 90^\circ)$,
+            $\tan^2\theta \gt 0$ and $\cot^2\theta \gt 0$:</p>
+        $$ \tan^2\theta + \cot^2\theta \ge 2\sqrt{\tan^2\theta \cdot \cot^2\theta} = 2\sqrt{1} = 2 $$
+        <p>Equality holds when $\tan^2\theta = \cot^2\theta \implies \tan\theta = 1 \implies \theta = 45^\circ \in
+            (0^\circ, 90^\circ)$, which is genuinely attained. Therefore:</p>
+        $$ f_{\min} = 25 + 25(2) = \mathbf{75} $$
+        <p><em>Warning against splitting AM-GM prematurely:</em> Minimizing $9\sec^2\theta + 16\csc^2\theta \ge 49$ (at
+            $\tan^2\theta = \frac{4}{3}$) and $16\tan^2\theta + 9\cot^2\theta \ge 24$ (at $\tan^2\theta = \frac{3}{4}$)
+            separately would falsely predict $49 + 24 = 73$, because the two minima occur at <em>different</em> angles!
+            Always combine like terms first. Therefore, the NAT answer is <strong>075</strong>.</p>
+    </div>
+
+    <!-- SOL Q24 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q24</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 — Expose the Naive AM-GM Trap:</strong> Applying AM-GM blindly to $4\sin^2\theta +
+            9\csc^2\theta$ yields $2\sqrt{36} = 12$. Checking the equality condition gives:</p>
+        $$ 4\sin^2\theta = \frac{9}{\sin^2\theta} \implies \sin^4\theta = \frac{9}{4} \implies \sin^2\theta =
+        \frac{3}{2} \gt 1 \quad (\textbf{IMPOSSIBLE!}) $$
+        <p>Because $\sin^2\theta$ is strictly capped at $1$, the value $12$ can <em>never</em> be reached by any real
+            angle $\theta$.</p>
+        <p><strong>Step 2 — Exact Algebraic Proof of the Boundary Minimum:</strong> Set $t = \sin^2\theta$, so $t \in
+            (0, 1]$, and $h(t) = 4t + \dfrac{9}{t}$. Compare $h(t)$ directly against its boundary value $h(1) = 4(1) +
+            \frac{9}{1} = 13$:</p>
+        $$ h(t) - 13 = 4t + \frac{9}{t} - 13 = \frac{4t^2 - 13t + 9}{t} = \frac{(1 - t)(9 - 4t)}{t} $$
+        <p>For every $t \in (0, 1]$, we have $1 - t \ge 0$, $9 - 4t \ge 9 - 4(1) = 5 \gt 0$, and $t \gt 0$. Hence
+            $\dfrac{(1 - t)(9 - 4t)}{t} \ge 0 \implies h(t) \ge 13$ for all valid $\theta$, with equality attained at $t
+            = 1$ (e.g., $\theta = 90^\circ$).</p>
+        <p>Therefore, the exact minimum value is $\mathbf{13}$, and the correct option is <strong>(C)</strong>.</p>
+    </div>
+
+    <!-- SOL Q25 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q25</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">NAT Answer: 070</span>
+        </div>
+        <p><strong>Step 1 — Find $m_4, m_6, m_8$ Explicitly via $u = \sin^2\theta\cos^2\theta$:</strong> Since $u =
+            \frac{1}{4}\sin^2 2\theta$, as $\theta$ varies over $\mathbb{R}$, $u$ ranges over $\left[0,
+            \frac{1}{4}\right]$ (attaining $u = \frac{1}{4}$ at $\theta = 45^\circ$):</p>
+        <ul>
+            <li>$\sin^4\theta + \cos^4\theta = 1 - 2u \ge 1 - 2\left(\frac{1}{4}\right) = \dfrac{1}{2} \implies m_4 =
+                \dfrac{1}{2}$.</li>
+            <li>$\sin^6\theta + \cos^6\theta = 1 - 3u \ge 1 - 3\left(\frac{1}{4}\right) = \dfrac{1}{4} \implies m_6 =
+                \dfrac{1}{4}$.</li>
+            <li>$\sin^8\theta + \cos^8\theta = (\sin^4\theta + \cos^4\theta)^2 - 2\sin^4\theta\cos^4\theta = (1 - 2u)^2
+                - 2u^2 = 1 - 4u + 2u^2 = 2(1 - u)^2 - 1$.<br />
+                Since $0 \le u \le \frac{1}{4} \implies \frac{3}{4} \le 1 - u \le 1$, minimizing $(1 - u)^2$ at $u =
+                \frac{1}{4}$ gives:
+                $$ m_8 = 2\left(\frac{3}{4}\right)^2 - 1 = 2\left(\frac{9}{16}\right) - 1 = \frac{9}{8} - 1 =
+                \dfrac{1}{8} $$</li>
+        </ul>
+        <p><strong>Step 2 — Substitute into $K$:</strong></p>
+        $$ K = \left(\frac{1}{1/2} + \frac{1}{1/4} + \frac{1}{1/8}\right) + 64\left(\frac{1}{2} + \frac{1}{4} +
+        \frac{1}{8}\right) = (2 + 4 + 8) + 64\left(\frac{7}{8}\right) = 14 + 56 = \mathbf{70} $$
+        <p>Therefore, the NAT answer is <strong>070</strong>.</p>
+    </div>
+
+    <!-- SOL Q26 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q26</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Answer: (A)</span>
+        </div>
+        <p><strong>Step 1 — Transform the Condition into Cosines:</strong> From $\sin\theta + \sin^2\theta = 1$, isolate
+            $\sin\theta$:</p>
+        $$ \sin\theta = 1 - \sin^2\theta = \cos^2\theta $$
+        <p>Square both sides: $\sin^2\theta = \cos^4\theta$. Substitute both back into $\sin^2\theta + \sin\theta = 1$
+            to obtain the master polynomial relation:</p>
+        $$ \cos^4\theta + \cos^2\theta = 1 $$
+        <p><strong>Step 2 — Recognize the Binomial Cube Inside the Target Expression:</strong> Group the first four
+            terms and factor the remaining two:</p>
+        $$ \left(\cos^{12}\theta + 3\cos^{10}\theta + 3\cos^8\theta + \cos^6\theta\right) + 2\left(\cos^4\theta +
+        \cos^2\theta\right) - 2 $$
+        <p>By $(A + B)^3 = A^3 + 3A^2B + 3AB^2 + B^3$ with $A = \cos^4\theta$ and $B = \cos^2\theta$, the first
+            parenthesis collapses identically to $(\cos^4\theta + \cos^2\theta)^3$:</p>
+        $$ = (\cos^4\theta + \cos^2\theta)^3 + 2(\cos^4\theta + \cos^2\theta) - 2 = 1^3 + 2(1) - 2 = \mathbf{1} $$
+        <p>Therefore, the correct option is <strong>(A)</strong>.</p>
+    </div>
+
+    <!-- SOL Q27 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q27</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Passage 2 &bull; Answer: (C)</span>
+        </div>
+        <p><strong>Step 1 — Expand $\cos\left(\theta - \frac{\pi}{6}\right)$:</strong> Using $\cos\frac{\pi}{6} =
+            \frac{\sqrt{3}}{2}$ and $\sin\frac{\pi}{6} = \frac{1}{2}$:</p>
+        $$ 8\cos\!\left(\theta - \frac{\pi}{6}\right) = 8\left(\cos\theta\cos\frac{\pi}{6} +
+        \sin\theta\sin\frac{\pi}{6}\right) = 8\left(\frac{\sqrt{3}}{2}\cos\theta + \frac{1}{2}\sin\theta\right) =
+        4\sqrt{3}\cos\theta + 4\sin\theta $$
+        <p><strong>Step 2 — Combine Terms &amp; Compute $R = \sqrt{a^2 + b^2}$:</strong></p>
+        $$ F(\theta) = 7\sin\theta + \left(4\sin\theta + 4\sqrt{3}\cos\theta\right) + 15 = 11\sin\theta +
+        4\sqrt{3}\cos\theta + 15 $$
+        $$ R = \sqrt{11^2 + (4\sqrt{3})^2} = \sqrt{121 + 48} = \sqrt{169} = 13 $$
+        <p><strong>Step 3 — Shift by $+15$:</strong> Since $-13 \le 11\sin\theta + 4\sqrt{3}\cos\theta \le +13$, adding
+            $15$ gives:</p>
+        $$ 15 - 13 \le F(\theta) \le 15 + 13 \implies F(\theta) \in \mathbf{[2,\; 28]} $$
+        <p>Therefore, the correct option is <strong>(C)</strong>.</p>
+    </div>
+
+    <!-- SOL Q28 -->
+    <div class="solution-card">
+        <div class="q-meta">
+            <span class="q-num">Q28</span>
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Passage 2 &bull; Answer: (D)</span>
+        </div>
+        <p><strong>Step 1 — Set $t = F(\theta)$ over Its Exact Domain:</strong> From Q27, as $\theta$ varies over
+            $\mathbb{R}$, $t = F(\theta)$ takes every value in the strictly positive closed interval $[2, 28]$, and
+            $G(\theta) = t + \dfrac{56}{t}$.</p>
+        <p><strong>Step 2 — Prove the Exact Upper Bound Algebraically (Zero Calculus Needed):</strong> Because $2 \le t
+            \le 28$, both $(t - 2) \ge 0$ and $(28 - t) \ge 0$. Multiplying these two non-negative factors yields:</p>
+        $$ (t - 2)(28 - t) \ge 0 \iff 28t - t^2 - 56 + 2t \ge 0 \iff t^2 + 56 \le 30t $$
+        <p>Divide both sides by $t \gt 0$ (inequality direction is preserved):</p>
+        $$ t + \frac{56}{t} \le 30 $$
+        <p><strong>Step 3 — Verify Attainability:</strong> Equality holds precisely when $(t - 2)(28 - t) = 0$, i.e., at
+            $t = 2$ (where $2 + \frac{56}{2} = 30$) or at $t = 28$ (where $28 + \frac{56}{28} = 30$). Both endpoints lie
+            in the range of $F(\theta)$.</p>
+        <p><em>Trap Check:</em> Option (A) $4\sqrt{14} = 2\sqrt{56}$ is the <strong>minimum</strong> value (by AM-GM at
+            $t = 2\sqrt{14} \in [2, 28]$), whereas the question explicitly asks for the <strong>maximum</strong> value
+            $\mathbf{30}$. Therefore, the correct option is <strong>(D)</strong>.</p>
+    </div>
+
+    <!-- =========================================================
+       TRAP & ERROR FORENSICS CARDS
+       ========================================================= -->
+    <h2 class="section-heading">Chapter 14 Trap &amp; Error Forensics</h2>
+
+    <!-- TRAP 1 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #1 &bull; The "Independent Max" Fallacy: $\max(a\sin\theta + b\cos\theta)
+            \neq |a| + |b|$</span>
+        <p><strong>The Fatal Error:</strong> Seeing $3\sin\theta + 4\cos\theta$, students substitute $\sin\theta = 1$
+            and $\cos\theta = 1$ simultaneously and write $\max = 3(1) + 4(1) = 7$ (or in Q17, $7(1) - 24(-1) + 30 =
+            61$).</p>
+        <p><strong>Why It Fails:</strong> $\sin\theta$ and $\cos\theta$ are locked together by $\sin^2\theta +
+            \cos^2\theta = 1$. Whenever $\sin\theta = 1$, $\cos\theta$ is <em>forced</em> to be $0$, never $1$ or $-1$.
+        </p>
+        <p><strong>The Antidote:</strong> Always collapse same-angle linear combinations into a single wave using the
+            auxiliary-angle amplitude $R = \sqrt{a^2 + b^2}$. For $3\sin\theta + 4\cos\theta$, the true maximum is
+            $\sqrt{3^2 + 4^2} = \mathbf{5}$ (attained at $\sin\theta = \frac{3}{5}, \cos\theta = \frac{4}{5}$), and in
+            Q17, $R = \sqrt{7^2 + (-24)^2} = \mathbf{25}$, giving $[5, 55]$.</p>
+    </div>
+
+    <!-- TRAP 2 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #2 &bull; Illegal Value Substitution at Boundary Singularities ($\theta =
+            0^\circ, 45^\circ, 90^\circ$)</span>
+        <p><strong>The Fatal Error:</strong> To shortcut an MCQ identity containing $\tan\theta, \cot\theta,
+            \sec\theta,$ or $\csc\theta$ (such as Q6: $\dfrac{\tan\theta}{1-\cot\theta} +
+            \dfrac{\cot\theta}{1-\tan\theta}$), students reflexively plug in $\theta = 0^\circ$, $\theta = 90^\circ$, or
+            $\theta = 45^\circ$, producing $\frac{0}{0}$ or $\infty - \infty$ and mis-evaluating the expression.</p>
+        <p><strong>Why It Fails:</strong> $\tan 90^\circ$ and $\sec 90^\circ$ divide by $\cos 90^\circ = 0$; $\cot
+            0^\circ$ and $\csc 0^\circ$ divide by $\sin 0^\circ = 0$; and in Q6, $\theta = 45^\circ$ makes $1 - \tan
+            45^\circ = 0$ in the denominator.</p>
+        <p><strong>The Antidote:</strong> Run a 2-second <strong>Denominator Audit</strong> before substituting any test
+            angle. Never plug $\theta = 0^\circ$ or $90^\circ$ when any of $\{\tan, \cot, \sec, \csc\}$ appears. Default
+            to $\theta = 45^\circ$ only when neither $(1 - \tan\theta)$ nor $(\sin\theta - \cos\theta)$ sits in a
+            denominator; otherwise immediately use $\theta = 30^\circ$.</p>
+    </div>
+
+    <!-- TRAP 3 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #3 &bull; The Cosine Compound-Angle Sign Inversion Error</span>
+        <p><strong>The Fatal Error:</strong> Writing $\cos(A + B) = \cos A\cos B + \sin A\sin B$ or $\cos(A - B) = \cos
+            A\cos B - \sin A\sin B$ by blindly copying the "same-sign" pattern of $\sin(A \pm B)$ (a classic killer in
+            Q18, Q19, and Q27).</p>
+        <p><strong>Why It Fails:</strong> In Q27, expanding $\cos(\theta - \frac{\pi}{6})$ with a minus sign turns
+            $11\sin\theta + 4\sqrt{3}\cos\theta$ into $3\sin\theta + 4\sqrt{3}\cos\theta$, wrecking the amplitude from
+            $13$ to $\sqrt{57}$. Similarly, in $\cos(45^\circ + 45^\circ) = \cos 90^\circ = 0$, the wrong sign gives
+            $\frac{1}{2} + \frac{1}{2} = 1 \neq 0$.</p>
+        <p><strong>The Antidote:</strong> Lock in the mnemonic: <strong>"Sine Keeps, Cosine Flips"</strong> — $\sin(A
+            \pm B)$ keeps the $\pm$ sign, while $\cos(A \pm B) = \cos A\cos B \mp \sin A\sin B$ <em>flips</em> it. Under
+            exam pressure, sanity-check with $A = B = 45^\circ$: $\cos(45^\circ + 45^\circ) = 0$ forces the minus sign.
+        </p>
+    </div>
+
+    <!-- TRAP 4 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #4 &bull; Dropping Absolute Value Bars on $\sqrt{\sin^2\theta} =
+            |\sin\theta|$ Outside Quadrant I</span>
+        <p><strong>The Fatal Error:</strong> Simplifying $\sqrt{1 - \cos^2\theta} = \sin\theta$ or $\sqrt{1 -
+            \sin^2\theta} = \cos\theta$ blindly across all quadrants, or claiming
+            $\sqrt{\frac{1+\sin\theta}{1-\sin\theta}} = \sec\theta + \tan\theta$ when $\theta \in (90^\circ,
+            270^\circ)$.</p>
+        <p><strong>Why It Fails:</strong> The principal square root $\sqrt{x^2}$ is <strong>always
+                non-negative</strong>, so $\sqrt{\sin^2\theta} = |\sin\theta|$ and $\sqrt{\cos^2\theta} = |\cos\theta|$.
+            In Quadrant II (like Q14), $\cos\theta \lt 0$, so $\sqrt{\cos^2\theta} = -\cos\theta$, NOT $+\cos\theta$! In
+            Q14, ignoring the Quadrant-II sign of $\cos\theta$ flips the answer from $-\frac{20}{39}$ to
+            $+\frac{20}{39}$ (distractor A).</p>
+        <p><strong>The Antidote:</strong> Write explicit absolute value bars $\sqrt{\cos^2\theta} = |\cos\theta|$ first,
+            then consult the <strong>ASTC Chart</strong> for the exact quadrant of $\theta$ before removing the bars.
+        </p>
+    </div>
+
+    <!-- TRAP 5 -->
+    <div class="trap-box">
+        <span class="box-label">Trap Forensics #5 &bull; Blind AM-GM Without Checking Domain Attainability (The Q24
+            &amp; Q23 Killers)</span>
+        <p><strong>The Fatal Error:</strong> Writing $\min(4\sin^2\theta + 9\csc^2\theta) = 2\sqrt{36} = 12$ (Q24
+            distractor A), or applying AM-GM separately to two coupled expressions in Q23 ($49 + 24 = 73$ instead of
+            $75$).</p>
+        <p><strong>Why It Fails:</strong> An AM-GM lower bound $x + y \ge 2\sqrt{xy}$ is the <em>true</em> minimum
+            <strong>only if</strong> there exists a real angle $\theta$ where $x = y$ holds simultaneously across every
+            term. For $4\sin^2\theta + 9\csc^2\theta$, equality demands $\sin^2\theta = \frac{3}{2} \gt 1$, which is
+            impossible.
+        </p>
+        <p><strong>The Antidote:</strong> Every AM-GM calculation has a mandatory 2-step checklist: (1) combine all like
+            trigonometric terms into a single expression first, and (2) solve the equality equation $x = y$ to confirm
+            $\sin^2\theta, \cos^2\theta \in (0, 1]$ (or $\tan^2\theta \gt 0$). Whenever equality lies outside $(0, 1]$,
+            the true minimum shifts to the boundary $\sin^2\theta = 1$ (giving $a + b$).</p>
+    </div>
+
+</article>

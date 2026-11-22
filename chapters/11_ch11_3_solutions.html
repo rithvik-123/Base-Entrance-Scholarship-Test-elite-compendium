@@ -1,0 +1,704 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 11: Coordinate Geometry, Straight Lines &amp; Triangle Centers — Solutions &amp; Error Forensics">
+
+    <!-- ==================== CHAPTER HERO ==================== -->
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 2: Mathematics (Paper 1) &bull; Chapter 11 &bull; Part 3: Step-by-Step
+            Solutions &amp; Error Forensics</div>
+        <h1>Complete Verified Solutions &amp; Trap Forensics: Chapter 11</h1>
+        <p>
+            Zero-skip algebraic derivations for all <strong>28 problems</strong> from the Chapter 11 Practice Arena,
+            verified line-by-line against the official Answer Key. Study the five <strong>Trap &amp; Error
+                Forensics</strong> cards at the end to eliminate every high-frequency Paper 1 coordinate-geometry error.
+        </p>
+        <div class="tag-row">
+            <span class="meta-pill">28 Zero-Skip Solutions</span>
+            <span class="meta-pill">100% Answer Key Verified</span>
+            <span class="meta-pill">5 Olympiad Trap Forensics Cards</span>
+            <span class="meta-pill">Part 3 of 3</span>
+        </div>
+    </header>
+
+    <!-- ==================== LEVEL 1 SOLUTIONS ==================== -->
+    <div class="level-banner l1">Level 1 Solutions: Warmup &amp; Structural Calibration (Q1–Q8)</div>
+
+    <!-- S1 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l1">Q1 &bull; Level 1</span>
+            <span class="badge badge-type">Distance &bull; Quadrilateral Classification</span>
+            <strong>Correct Answer: (B) A rhombus that is not a square</strong>
+        </p>
+        <p>Given cyclic vertices $A(2, -1)$, $B(3, 4)$, $C(-2, 3)$, and $D(-3, -2)$, first compute all four squared side
+            lengths:</p>
+        $$
+        \begin{aligned}
+        AB^2 &= (3 - 2)^2 + \bigl(4 - (-1)\bigr)^2 = 1^2 + 5^2 = 26, \\
+        BC^2 &= (-2 - 3)^2 + (3 - 4)^2 = (-5)^2 + (-1)^2 = 26, \\
+        CD^2 &= \bigl(-3 - (-2)\bigr)^2 + (-2 - 3)^2 = (-1)^2 + (-5)^2 = 26, \\
+        DA^2 &= \bigl(2 - (-3)\bigr)^2 + \bigl(-1 - (-2)\bigr)^2 = 5^2 + 1^2 = 26.
+        \end{aligned}
+        $$
+        <p>All four sides equal $\sqrt{26}$, so $ABCD$ is either a rhombus or a square. Next test the two diagonals:</p>
+        $$AC^2 = (-2 - 2)^2 + \bigl(3 - (-1)\bigr)^2 = (-4)^2 + 4^2 = 32 \implies AC = 4\sqrt{2},$$
+        $$BD^2 = (-3 - 3)^2 + (-2 - 4)^2 = (-6)^2 + (-6)^2 = 72 \implies BD = 6\sqrt{2}.$$
+        <p>Because $AB = BC = CD = DA$ while $AC \neq BD$, quadrilateral $ABCD$ is strictly <strong>a rhombus that is
+                not a square</strong>.</p>
+    </div>
+
+    <!-- S2 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l1">Q2 &bull; Level 1</span>
+            <span class="badge badge-type">Collinearity &bull; Vertical-Line Trap</span>
+            <strong>Correct Answer: (C) $3$</strong>
+        </p>
+        <p>
+            Use the <strong>Zero-Area Determinant Test</strong> so we do not divide by zero and accidentally drop a
+            vertical-line solution. For $A(1, -1)$, $B(k, 2)$, and $C(k^2, 8)$ to be collinear:
+        </p>
+        $$x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2) = 0.$$
+        <p>Substitute the coordinates carefully:</p>
+        $$1(2 - 8) + k\bigl(8 - (-1)\bigr) + k^2(-1 - 2) = 0 \implies -6 + 9k - 3k^2 = 0.$$
+        <p>Divide through by $-3$ and factor:</p>
+        $$k^2 - 3k + 2 = 0 \implies (k - 1)(k - 2) = 0 \implies k = 1 \;\text{ or }\; k = 2.$$
+        <p><strong>Verify both roots explicitly:</strong></p>
+        <ul>
+            <li>At $k = 1$: $A(1, -1)$, $B(1, 2)$, $C(1, 8)$ all lie on the vertical line $x = 1$ (valid!).</li>
+            <li>At $k = 2$: $A(1, -1)$, $B(2, 2)$, $C(4, 8)$ satisfy $m_{AB} = \dfrac{3}{1} = 3 = \dfrac{6}{2} = m_{BC}$
+                (valid!).</li>
+        </ul>
+        <p>Sum of all real values of $k = 1 + 2 = \mathbf{3}$.</p>
+    </div>
+
+    <!-- S3 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l1">Q3 &bull; Level 1</span>
+            <span class="badge badge-type">Section Formula &bull; External Division</span>
+            <strong>Correct Answer: (A) $(-3, 10)$</strong>
+        </p>
+        <p>
+            Point $Q$ divides segment $AB$ with $A(x_1, y_1) = (3, -2)$ and $B(x_2, y_2) = (-1, 6)$ externally in the
+            ratio $m : n = 3 : 1$ ($QA : QB = 3 : 1$). Apply the external section formula:
+        </p>
+        $$x_Q = \frac{mx_2 - nx_1}{m - n} = \frac{3(-1) - 1(3)}{3 - 1} = \frac{-3 - 3}{2} = \frac{-6}{2} = -3,$$
+        $$y_Q = \frac{my_2 - ny_1}{m - n} = \frac{3(6) - 1(-2)}{3 - 1} = \frac{18 + 2}{2} = \frac{20}{2} = 10.$$
+        <p>Thus $\mathbf{Q = (-3, 10)}$.</p>
+        <p><em>Verification:</em> $QA = \sqrt{(-6)^2 + 12^2} = 6\sqrt{5}$ and $QB = \sqrt{(-2)^2 + 4^2} = 2\sqrt{5}
+            \implies QA : QB = 3 : 1$.</p>
+    </div>
+
+    <!-- S4 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l1">Q4 &bull; Level 1</span>
+            <span class="badge badge-type">Straight Lines &bull; Perpendicularity</span>
+            <strong>Correct Answer: (C) $2$</strong>
+        </p>
+        <p>Rewrite $3x - 2y + 8 = 0$ as $y = \dfrac{3}{2}x + 4$, giving slope $m_1 = \dfrac{3}{2}$. Since the required
+            line is perpendicular ($m_1 m_2 = -1$):</p>
+        $$m_2 = -\frac{2}{3}.$$
+        <p>Use Point-Slope Form through $(5, -2)$:</p>
+        $$y - (-2) = -\frac{2}{3}(x - 5) \implies 3y + 6 = -2x + 10 \implies 2x + 3y - 4 = 0.$$
+        <p>To find the $x$-intercept, set $y = 0$:</p>
+        $$2x + 3(0) - 4 = 0 \implies 2x = 4 \implies \mathbf{x = 2}.$$
+    </div>
+
+    <!-- S5 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l1">Q5 &bull; Level 1</span>
+            <span class="badge badge-type">Triangle Centers &bull; Right-Triangle Shortcut</span>
+            <strong>Correct Answer: (D) $5$</strong>
+        </p>
+        <p>Inspect the coordinates of $A(2, 1)$, $B(8, 1)$, and $C(2, 9)$ before doing any heavy algebra:</p>
+        <ul>
+            <li>Segment $AB$ lies on the horizontal line $y = 1$ (length $AB = 8 - 2 = 6$).</li>
+            <li>Segment $AC$ lies on the vertical line $x = 2$ (length $AC = 9 - 1 = 8$).</li>
+        </ul>
+        <p>Hence $AB \perp AC$, so $\triangle ABC$ is <strong>right-angled at $A(2, 1)$</strong> with hypotenuse $BC$ of
+            length $\sqrt{6^2 + 8^2} = 10$.</p>
+        <ul>
+            <li><strong>Orthocenter $H$:</strong> The right-angled vertex itself $\implies H = A(2, 1)$.</li>
+            <li><strong>Circumcenter $O$:</strong> The midpoint of hypotenuse $BC \implies O = \left(\dfrac{8 + 2}{2},\;
+                \dfrac{1 + 9}{2}\right) = (5, 5)$.</li>
+        </ul>
+        <p>Compute distance $OH$:</p>
+        $$OH = \sqrt{(5 - 2)^2 + (5 - 1)^2} = \sqrt{3^2 + 4^2} = \sqrt{25} = \mathbf{5}.$$
+        <p><em>Geometric Check:</em> In any right triangle, $O$ is equidistant from all three vertices ($OA = OB = OC =
+            R$), and since $H = A$, $OH = OA = R = \dfrac{\text{hypotenuse}}{2} = \dfrac{10}{2} = 5$.</p>
+    </div>
+
+    <!-- S6 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l1">Q6 &bull; Level 1</span>
+            <span class="badge badge-type">NAT &bull; Origin-Shift Triangle Area</span>
+            <strong>Correct Answer: 068</strong>
+        </p>
+        <p>Translate all three vertices by subtracting $A(-3, 5)$ so that $A$ moves to the origin $(0, 0)$:</p>
+        $$A' = (0, 0), \qquad B' = \bigl(5 - (-3),\; -1 - 5\bigr) = (8, -6), \qquad C' = \bigl(9 - (-3),\; 13 - 5\bigr)
+        = (12, 8).$$
+        <p>Apply the $2 \times 2$ cross-product area formula:</p>
+        $$\Delta = \frac{1}{2}\bigl|X_1 Y_2 - X_2 Y_1\bigr| = \frac{1}{2}\bigl|(8)(8) - (12)(-6)\bigr| =
+        \frac{1}{2}\bigl|64 + 72\bigr| = \frac{136}{2} = \mathbf{68} \quad (\text{NAT code: } \mathbf{068}).$$
+    </div>
+
+    <!-- S7 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l1">Q7 &bull; Level 1</span>
+            <span class="badge badge-type">NAT &bull; Axis Division Ratios</span>
+            <strong>Correct Answer: 100</strong>
+        </p>
+        <p>Given $A(-4, 9)$ and $B(12, -3)$:</p>
+        <p><strong>Step 1 — Find $P(p, 0)$ on the $x$-axis ($y = 0$):</strong></p>
+        <p>The $x$-axis divides $AB$ in the ratio $k_1 : 1 = -\dfrac{y_1}{y_2} = -\dfrac{9}{-3} = 3 : 1$ internally. By
+            the section formula:</p>
+        $$p = \frac{3(12) + 1(-4)}{3 + 1} = \frac{36 - 4}{4} = \frac{32}{4} = 8.$$
+        <p><strong>Step 2 — Find $Q(0, q)$ on the $y$-axis ($x = 0$):</strong></p>
+        <p>The $y$-axis divides $AB$ in the ratio $k_2 : 1 = -\dfrac{x_1}{x_2} = -\dfrac{-4}{12} = 1 : 3$ internally. By
+            the section formula:</p>
+        $$q = \frac{1(-3) + 3(9)}{1 + 3} = \frac{-3 + 27}{4} = \frac{24}{4} = 6.$$
+        <p><strong>Step 3 — Compute $p^2 + q^2$:</strong></p>
+        $$p^2 + q^2 = 8^2 + 6^2 = 64 + 36 = \mathbf{100}.$$
+    </div>
+
+    <!-- S8 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l1">Q8 &bull; Level 1</span>
+            <span class="badge badge-type">NAT &bull; Perpendicular Distance</span>
+            <strong>Correct Answer: 014</strong>
+        </p>
+        <p>Apply $d = \dfrac{|ax_1 + by_1 + c|}{\sqrt{a^2 + b^2}}$ for $P(-4, 10)$ and $8x - 15y - 56 = 0$ ($a = 8,\; b
+            = -15,\; c = -56$):</p>
+        $$d = \frac{|8(-4) - 15(10) - 56|}{\sqrt{8^2 + (-15)^2}} = \frac{|-32 - 150 - 56|}{\sqrt{64 + 225}} =
+        \frac{|-238|}{\sqrt{289}} = \frac{238}{17} = \mathbf{14} \quad (\text{NAT code: } \mathbf{014}).$$
+    </div>
+
+    <!-- ==================== LEVEL 2 SOLUTIONS ==================== -->
+    <div class="level-banner l2">Level 2 Solutions: Exam-Real BEST / NTSE Stage 2 Standard (Q9–Q19)</div>
+
+    <!-- S9 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q9 &bull; Level 2</span>
+            <span class="badge badge-type">Section Bridge &bull; Line Division Ratio</span>
+            <strong>Correct Answer: (D) $3 : 2$ externally</strong>
+        </p>
+        <p>Set $L(x, y) = 2x - 3y + 7$. Evaluate $L$ at $A(1, 5)$ and $B(5, 7)$:</p>
+        $$L(A) = 2(1) - 3(5) + 7 = 2 - 15 + 7 = -6,$$
+        $$L(B) = 2(5) - 3(7) + 7 = 10 - 21 + 7 = -4.$$
+        <p>Apply the line-division ratio formula $k = -\dfrac{L(A)}{L(B)}$:</p>
+        $$k = -\frac{-6}{-4} = -\frac{3}{2}.$$
+        <p>Because $L(A)$ and $L(B)$ have the <em>same sign</em> (making $k \lt 0$), $A$ and $B$ lie on the same side of
+            the line. Hence the line divides segment $AB$ in the ratio <strong>$3 : 2$ externally</strong>.</p>
+    </div>
+
+    <!-- S10 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q10 &bull; Level 2</span>
+            <span class="badge badge-type">Straight Lines &bull; Angle Between Lines</span>
+            <strong>Correct Answer: (B) $-\dfrac{3}{2}$</strong>
+        </p>
+        <p>The reference line $3x - y + 5 = 0 \implies y = 3x + 5$ has slope $m_0 = 3$. Let $m$ be the slope of either
+            line making an acute angle $\theta = 45^\circ$ with it. Apply the angle formula:</p>
+        $$\tan 45^\circ = \left|\frac{m - 3}{1 + 3m}\right| \implies \left|\frac{m - 3}{1 + 3m}\right| = 1.$$
+        <p>Solve both branches of the absolute value:</p>
+        <ul>
+            <li><strong>Branch 1 ($+1$):</strong> $\dfrac{m - 3}{1 + 3m} = 1 \implies m - 3 = 1 + 3m \implies -2m = 4
+                \implies m_1 = -2$.</li>
+            <li><strong>Branch 2 ($-1$):</strong> $\dfrac{m - 3}{1 + 3m} = -1 \implies m - 3 = -1 - 3m \implies 4m = 2
+                \implies m_2 = \dfrac{1}{2}$.</li>
+        </ul>
+        <p>Notice $m_1 m_2 = (-2)\left(\frac{1}{2}\right) = -1$ (as expected geometrically: two lines making $45^\circ$
+            on opposite sides of a line are always perpendicular to each other!). Their sum is:</p>
+        $$m_1 + m_2 = -2 + \frac{1}{2} = \mathbf{-\frac{3}{2}}.$$
+    </div>
+
+    <!-- S11 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q11 &bull; Level 2</span>
+            <span class="badge badge-type">Straight Lines &bull; Parallel Distance</span>
+            <strong>Correct Answer: (C) $2$</strong>
+        </p>
+        <p>
+            The two lines are $5x - 12y + 14 = 0$ and $15x - 36y - 36 = 0$. <strong>Match the $(a, b)$ coefficients
+                before subtracting constants!</strong> Divide the second equation by $3$:
+        </p>
+        $$L_1: 5x - 12y + 14 = 0 \quad (c_1 = 14), \qquad L_2: 5x - 12y - 12 = 0 \quad (c_2 = -12).$$
+        <p>Now apply $d_{\parallel} = \dfrac{|c_1 - c_2|}{\sqrt{a^2 + b^2}}$ with $a = 5,\; b = -12$:</p>
+        $$d_{\parallel} = \frac{|14 - (-12)|}{\sqrt{5^2 + (-12)^2}} = \frac{26}{\sqrt{25 + 144}} = \frac{26}{13} =
+        \mathbf{2}.$$
+    </div>
+
+    <!-- S12 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q12 &bull; Level 2</span>
+            <span class="badge badge-type">Triangle Centers &bull; Incenter Formula</span>
+            <strong>Correct Answer: (A) $\left(2,\; \dfrac{13}{3}\right)$</strong>
+        </p>
+        <p>Compute the three side lengths opposite $A(2, 13)$, $B(-3, 1)$, and $C(7, 1)$:</p>
+        $$
+        \begin{aligned}
+        a &= BC = \sqrt{\bigl(7 - (-3)\bigr)^2 + (1 - 1)^2} = \sqrt{10^2 + 0} = 10, \\
+        b &= CA = \sqrt{(7 - 2)^2 + (1 - 13)^2} = \sqrt{5^2 + (-12)^2} = \sqrt{169} = 13, \\
+        c &= AB = \sqrt{(-3 - 2)^2 + (1 - 13)^2} = \sqrt{(-5)^2 + (-12)^2} = \sqrt{169} = 13.
+        \end{aligned}
+        $$
+        <p>Perimeter $a + b + c = 10 + 13 + 13 = 36$. Apply the Incenter formula (weighting each vertex by its
+            <em>opposite</em> side):
+        </p>
+        $$x_I = \frac{a x_A + b x_B + c x_C}{a + b + c} = \frac{10(2) + 13(-3) + 13(7)}{36} = \frac{20 - 39 + 91}{36} =
+        \frac{72}{36} = 2,$$
+        $$y_I = \frac{a y_A + b y_B + c y_C}{a + b + c} = \frac{10(13) + 13(1) + 13(1)}{36} = \frac{130 + 13 + 13}{36} =
+        \frac{156}{36} = \frac{13}{3}.$$
+        <p>Hence $\mathbf{I = \left(2,\; \dfrac{13}{3}\right)}$.</p>
+    </div>
+
+    <!-- S13 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q13 &bull; Level 2</span>
+            <span class="badge badge-type">Euler Line Theorem</span>
+            <strong>Correct Answer: (A) $(4, 1)$</strong>
+        </p>
+        <p>On the Euler Line of every non-equilateral triangle, Centroid $G$ divides segment $OH$ internally in the
+            exact ratio $OG : GH = 1 : 2$. Thus $H = 3G - 2O \implies G = \dfrac{2O + H}{3}$:</p>
+        $$x_G = \frac{2(2) + 1(8)}{3} = \frac{12}{3} = 4, \qquad y_G = \frac{2(-3) + 1(9)}{3} = \frac{3}{3} = 1.$$
+        <p>Therefore $\mathbf{G = (4, 1)}$.</p>
+    </div>
+
+    <!-- S14 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q14 &bull; Level 2</span>
+            <span class="badge badge-type">NAT &bull; Shoelace Formula &amp; Cyclic Sorting</span>
+            <strong>Correct Answer: 066</strong>
+        </p>
+        <p>
+            <strong>Step 1 — Sort the five vertices strictly into cyclic order!</strong> Notice the given order $(0,0)
+            \to (4,8) \to (6,-2) \to (-2,5) \to (9,3)$ zigzags across the interior! Plotting rough positions around the
+            interior center $(\approx 3.4, 2.8)$ places them in clean <strong>counter-clockwise</strong> order:
+        </p>
+        $$P_1(0, 0) \;\longrightarrow\; P_2(6, -2) \;\longrightarrow\; P_3(9, 3) \;\longrightarrow\; P_4(4, 8)
+        \;\longrightarrow\; P_5(-2, 5) \;\longrightarrow\; P_1(0, 0).$$
+        <p><strong>Step 2 — Apply the Shoelace Formula to the sorted cycle:</strong></p>
+        <ul>
+            <li><strong>Downward products ($\sum x_i y_{i+1}$):</strong>
+                $$(0)(-2) + (6)(3) + (9)(8) + (4)(5) + (-2)(0) = 0 + 18 + 72 + 20 + 0 = 110.$$
+            </li>
+            <li><strong>Upward products ($\sum y_i x_{i+1}$):</strong>
+                $$(0)(6) + (-2)(9) + (3)(4) + (8)(-2) + (5)(0) = 0 - 18 + 12 - 16 + 0 = -22.$$
+            </li>
+        </ul>
+        <p>Compute the area:</p>
+        $$\text{Area} = \frac{1}{2}\bigl|110 - (-22)\bigr| = \frac{132}{2} = \mathbf{66} \quad (\text{NAT code: }
+        \mathbf{066}).$$
+    </div>
+
+    <!-- S15 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q15 &bull; Level 2</span>
+            <span class="badge badge-type">NAT &bull; Foot of Perpendicular</span>
+            <strong>Correct Answer: 145</strong>
+        </p>
+        <p>Apply the Foot of Perpendicular formula $\dfrac{h - x_1}{a} = \dfrac{k - y_1}{b} = -\dfrac{ax_1 + by_1 +
+            c}{a^2 + b^2}$ for $P(15, 0)$ and $3x - 4y + 5 = 0$ ($a = 3,\; b = -4,\; c = 5$):</p>
+        $$\frac{h - 15}{3} = \frac{k - 0}{-4} = -\frac{3(15) - 4(0) + 5}{3^2 + (-4)^2} = -\frac{50}{25} = -2.$$
+        <p>Solve for $h$ and $k$:</p>
+        $$h = 15 + 3(-2) = 9, \qquad k = 0 + (-4)(-2) = 8.$$
+        <p><em>Verification:</em> $3(9) - 4(8) + 5 = 27 - 32 + 5 = 0$ (lies on $L$!), and slope of $PM = \frac{8 - 0}{9
+            - 15} = -\frac{4}{3}$ is perpendicular to $m_L = \frac{3}{4}$.</p>
+        <p>Finally compute $h^2 + k^2$:</p>
+        $$h^2 + k^2 = 9^2 + 8^2 = 81 + 64 = \mathbf{145}.$$
+    </div>
+
+    <!-- S16 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q16 &bull; Level 2</span>
+            <span class="badge badge-type">NAT &bull; Intercept Form</span>
+            <strong>Correct Answer: 056</strong>
+        </p>
+        <p>Let the positive $x$- and $y$-intercepts be $a$ and $b = 16 - a$ ($0 \lt a \lt 16$). The line in Intercept
+            Form is $\dfrac{x}{a} + \dfrac{y}{16 - a} = 1$. Since it passes through $(2, 6)$:</p>
+        $$\frac{2}{a} + \frac{6}{16 - a} = 1 \implies 2(16 - a) + 6a = a(16 - a) \implies 32 + 4a = 16a - a^2.$$
+        <p>Rearrange and factor:</p>
+        $$a^2 - 12a + 32 = 0 \implies (a - 4)(a - 8) = 0 \implies a = 4 \;\text{ or }\; a = 8.$$
+        <p>Both roots lie strictly inside $(0, 16)$ and produce two distinct right triangles with the axes:</p>
+        <ul>
+            <li><strong>Line 1 ($a = 4,\; b = 12$):</strong> $\text{Area}_1 = \dfrac{1}{2}ab = \dfrac{1}{2}(4)(12) =
+                24\text{ sq. units}$.</li>
+            <li><strong>Line 2 ($a = 8,\; b = 8$):</strong> $\text{Area}_2 = \dfrac{1}{2}ab = \dfrac{1}{2}(8)(8) =
+                32\text{ sq. units}$.</li>
+        </ul>
+        <p>Sum of areas $= 24 + 32 = \mathbf{56}$ (NAT code: $\mathbf{056}$).</p>
+    </div>
+
+    <!-- S17 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q17 &bull; Level 2</span>
+            <span class="badge badge-type">NAT &bull; Recovering Vertices from Midpoints</span>
+            <strong>Correct Answer: 115</strong>
+        </p>
+        <p>Since $D(4, 1)$, $E(2, 5)$, and $F(-1, 2)$ are the midpoints of $BC$, $CA$, and $AB$ respectively:</p>
+        $$B + C = 2D, \qquad C + A = 2E, \qquad A + B = 2F.$$
+        <p>Adding all three equations gives $A + B + C = D + E + F$. Subtracting each pairwise equation isolates each
+            vertex cleanly:</p>
+        <ul>
+            <li>$A = E + F - D = \bigl(2 + (-1) - 4,\; 5 + 2 - 1\bigr) = (-3, 6) \implies OA^2 = (-3)^2 + 6^2 = 9 + 36 =
+                45$.</li>
+            <li>$B = D + F - E = \bigl(4 + (-1) - 2,\; 1 + 2 - 5\bigr) = (1, -2) \implies OB^2 = 1^2 + (-2)^2 = 1 + 4 =
+                5$.</li>
+            <li>$C = D + E - F = \bigl(4 + 2 - (-1),\; 1 + 5 - 2\bigr) = (7, 4) \implies OC^2 = 7^2 + 4^2 = 49 + 16 =
+                65$.</li>
+        </ul>
+        <p>Add all three squared distances from the origin:</p>
+        $$OA^2 + OB^2 + OC^2 = 45 + 5 + 65 = \mathbf{115}.$$
+    </div>
+
+    <!-- S18 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q18 &bull; Level 2</span>
+            <span class="badge badge-type">Passage 1 &bull; Optical Mirror Reflection</span>
+            <strong>Correct Answer: (C) $(7, 5)$</strong>
+        </p>
+        <p>
+            <strong>Step 1 — Verify $A(2, 5)$ and $B(13, 13)$ lie on the same side of $L: x - 2y + 3 = 0$:</strong>
+            $L(A) = 2 - 2(5) + 3 = -5 \lt 0$ and $L(B) = 13 - 2(13) + 3 = -10 \lt 0$. Same sign confirms both lie on the
+            reflective side of the mirror!
+        </p>
+        <p><strong>Step 2 — Reflect $A(2, 5)$ across $L: x - 2y + 3 = 0$ ($a = 1,\; b = -2,\; c = 3$):</strong></p>
+        $$\frac{\alpha - 2}{1} = \frac{\beta - 5}{-2} = -\frac{2(2 - 10 + 3)}{1^2 + (-2)^2} = -\frac{2(-5)}{5} = +2.$$
+        $$\alpha = 2 + 1(2) = 4, \qquad \beta = 5 + (-2)(2) = 1 \implies A' = (4, 1).$$
+        <p><strong>Step 3 — Find the equation of the straight line $A'B$ joining $A'(4, 1)$ and $B(13, 13)$:</strong>
+        </p>
+        $$m_{A'B} = \frac{13 - 1}{13 - 4} = \frac{12}{9} = \frac{4}{3} \implies y - 1 = \frac{4}{3}(x - 4) \implies 4x -
+        3y - 13 = 0.$$
+        <p><strong>Step 4 — Intersect $A'B$ with mirror $L$ ($x = 2y - 3$):</strong></p>
+        $$4(2y - 3) - 3y - 13 = 0 \implies 8y - 12 - 3y - 13 = 0 \implies 5y = 25 \implies y = 5, \quad x = 2(5) - 3 =
+        7.$$
+        <p>Hence the reflection point is $\mathbf{R = (7, 5)}$.</p>
+    </div>
+
+    <!-- S19 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l2">Q19 &bull; Level 2</span>
+            <span class="badge badge-type">Passage 1 &bull; Shortest Reflected Path</span>
+            <strong>Correct Answer: (D) $15$</strong>
+        </p>
+        <p>By symmetry of reflection across $L$, $AR = A'R$. Because $A', R, B$ are strictly collinear with $R$ between
+            $A'$ and $B$:</p>
+        $$AR + RB = A'R + RB = A'B = \sqrt{(13 - 4)^2 + (13 - 1)^2} = \sqrt{9^2 + 12^2} = \sqrt{81 + 144} = \sqrt{225} =
+        \mathbf{15}.$$
+        <p><em>Direct Segment Check using $R(7, 5)$:</em> $AR = \sqrt{(7 - 2)^2 + (5 - 5)^2} = 5$ and $RB = \sqrt{(13 -
+            7)^2 + (13 - 5)^2} = \sqrt{36 + 64} = 10 \implies 5 + 10 = 15$.</p>
+    </div>
+
+    <!-- ==================== LEVEL 3 SOLUTIONS ==================== -->
+    <div class="level-banner l3">Level 3 Solutions: Rank-Booster / IOQM-Lite &amp; Resonance Olympiad Tier (Q20–Q28)
+    </div>
+
+    <!-- S20 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q20 &bull; Level 3</span>
+            <span class="badge badge-type">Triangle Centers &bull; General Orthocenter</span>
+            <strong>Correct Answer: (A) $(2, 1)$</strong>
+        </p>
+        <p>For $\triangle ABC$ with $A(5, 4)$, $B(-1, 7)$, and $C(3, 3)$, intersect any two altitudes:</p>
+        <p><strong>Altitude 1 (from $A(5, 4)$ perpendicular to $BC$):</strong></p>
+        $$m_{BC} = \frac{3 - 7}{3 - (-1)} = \frac{-4}{4} = -1 \implies m_{\text{alt } A} = +1.$$
+        $$y - 4 = 1(x - 5) \implies y = x - 1.$$
+        <p><strong>Altitude 2 (from $B(-1, 7)$ perpendicular to $AC$):</strong></p>
+        $$m_{AC} = \frac{3 - 4}{3 - 5} = \frac{-1}{-2} = \frac{1}{2} \implies m_{\text{alt } B} = -2.$$
+        $$y - 7 = -2\bigl(x - (-1)\bigr) \implies y - 7 = -2x - 2 \implies 2x + y = 5.$$
+        <p><strong>Solve simultaneously:</strong> Substitute $y = x - 1$ into $2x + y = 5$:</p>
+        $$2x + (x - 1) = 5 \implies 3x = 6 \implies x = 2, \qquad y = 2 - 1 = 1 \implies \mathbf{H = (2, 1)}.$$
+        <p><em>Third-Altitude Verification:</em> $m_{AB} = \frac{7 - 4}{-1 - 5} = -\frac{1}{2}$ and $m_{CH} = \frac{1 -
+            3}{2 - 3} = +2 \implies m_{AB} m_{CH} = -1$.</p>
+    </div>
+
+    <!-- S21 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q21 &bull; Level 3</span>
+            <span class="badge badge-type">Lines &amp; Centers &bull; Hidden Right Triangle</span>
+            <strong>Correct Answer: (B) $(0, 3)$</strong>
+        </p>
+        <p>Before computing all three vertices, <strong>always inspect the slopes of the three bounding lines
+                first!</strong></p>
+        $$L_1: x + y = 2 \;(m_1 = -1), \qquad L_2: x - y = 0 \;(m_2 = +1), \qquad L_3: x + 2y = 6 \;\left(m_3 =
+        -\frac{1}{2}\right).$$
+        <p>Immediately, $m_1 m_2 = (-1)(+1) = -1 \implies L_1 \perp L_2$! Thus the triangle is
+            <strong>right-angled</strong>, and its hypotenuse lies on $L_3: x + 2y = 6$.
+        </p>
+        <p>Find the two endpoints of the hypotenuse ($B = L_1 \cap L_3$ and $C = L_2 \cap L_3$):</p>
+        <ul>
+            <li><strong>$B = L_1 \cap L_3$:</strong> Subtract $x + y = 2$ from $x + 2y = 6 \implies y = 4$, then $x = 2
+                - 4 = -2 \implies B(-2, 4)$.</li>
+            <li><strong>$C = L_2 \cap L_3$:</strong> Substitute $x = y$ into $x + 2y = 6 \implies 3y = 6 \implies y =
+                2,\; x = 2 \implies C(2, 2)$.</li>
+        </ul>
+        <p>The Circumcenter $O$ of any right triangle is the midpoint of its hypotenuse $BC$:</p>
+        $$O = \left(\frac{-2 + 2}{2},\; \frac{4 + 2}{2}\right) = \mathbf{(0, 3)}.$$
+    </div>
+
+    <!-- S22 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q22 &bull; Level 3</span>
+            <span class="badge badge-type">Straight Lines &bull; Image of a Line Across a Line</span>
+            <strong>Correct Answer: (C) $x - 2y + 5 = 0$</strong>
+        </p>
+        <p><strong>Method 1 — General Point-Mapping Formula (Fastest for slope $\pm 1$ mirrors):</strong></p>
+        <p>Let $(x', y')$ be the mirror image of an arbitrary point $(x, y)$ across the mirror $x + y - 4 = 0$ ($a =
+            1,\; b = 1,\; c = -4$):</p>
+        $$\frac{x' - x}{1} = \frac{y' - y}{1} = -\frac{2(x + y - 4)}{1^2 + 1^2} = -(x + y - 4).$$
+        <p>Simplify both equations:</p>
+        $$x' = x - x - y + 4 = 4 - y, \qquad y' = y - x - y + 4 = 4 - x.$$
+        <p>Invert to express $(x, y)$ in terms of $(x', y')$: $x = 4 - y'$ and $y = 4 - x'$. Since $(x, y)$ lies on the
+            original line $2x - y + 1 = 0$, substitute directly:</p>
+        $$2(4 - y') - (4 - x') + 1 = 0 \implies 8 - 2y' - 4 + x' + 1 = 0 \implies x' - 2y' + 5 = 0.$$
+        <p>Dropping primes, the reflected line is $\mathbf{x - 2y + 5 = 0}$.</p>
+        <p>
+            <em>Two-Point Check:</em> (1) Intersection of $2x - y + 1 = 0$ and mirror $x + y = 4$ is $(1, 3)$, which
+            stays fixed: $1 - 2(3) + 5 = 0$. (2) Point $(0, 1)$ on $2x - y + 1 = 0$ reflects to $(4 - 1, 4 - 0) = (3,
+            4)$, which satisfies $3 - 2(4) + 5 = 0$.
+        </p>
+    </div>
+
+    <!-- S23 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q23 &bull; Level 3</span>
+            <span class="badge badge-type">Orthocentric System &bull; Inverse Problem</span>
+            <strong>Correct Answer: (D) $(3, 5)$</strong>
+        </p>
+        <p>
+            <strong>Key Geometric Insight (Orthocentric Symmetry):</strong> In any triangle $\triangle ABC$ with
+            orthocenter $H$, the four points $\{A, B, C, H\}$ form an <em>orthocentric system</em>—meaning each point is
+            the orthocenter of the triangle formed by the other three! Specifically, $C$ is the exact orthocenter of
+            $\triangle ABH$:
+        </p>
+        <ul>
+            <li>$CH \perp AB$: Slope of $AB = \dfrac{1 - (-1)}{7 - 1} = \dfrac{2}{6} = \dfrac{1}{3} \implies m_{CH} =
+                -3$. Line $CH$ passes through $H(4, 2)$:
+                $$y - 2 = -3(x - 4) \implies 3x + y = 14.$$
+            </li>
+            <li>$BC \perp AH$: Slope of $AH = \dfrac{2 - (-1)}{4 - 1} = \dfrac{3}{3} = 1 \implies m_{BC} = -1$. Line
+                $BC$ passes through $B(7, 1)$:
+                $$y - 1 = -1(x - 7) \implies x + y = 8.$$
+            </li>
+        </ul>
+        <p>Subtract $x + y = 8$ from $3x + y = 14$:</p>
+        $$2x = 6 \implies x = 3, \qquad y = 8 - 3 = 5 \implies \mathbf{C = (3, 5)}.$$
+        <p><em>Verification:</em> $m_{AC} = \frac{5 - (-1)}{3 - 1} = 3$ and $m_{BH} = \frac{2 - 1}{4 - 7} = -\frac{1}{3}
+            \implies AC \perp BH$.</p>
+    </div>
+
+    <!-- S24 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q24 &bull; Level 3</span>
+            <span class="badge badge-type">NAT &bull; Distance &amp; Square Geometry</span>
+            <strong>Correct Answer: 144</strong>
+        </p>
+        <p>
+            The center $C(7, 3)$ of a square is equidistant from all four sides, and the perpendicular distance $d$ from
+            the center to any side equals exactly <strong>half the side length</strong> ($d = \dfrac{s}{2}$).
+        </p>
+        <p>Compute $d$ from $C(7, 3)$ to $5x + 12y + 7 = 0$:</p>
+        $$d = \frac{|5(7) + 12(3) + 7|}{\sqrt{5^2 + 12^2}} = \frac{|35 + 36 + 7|}{\sqrt{25 + 144}} = \frac{78}{13} =
+        6.$$
+        <p>Therefore the side length is $s = 2d = 12$, and the area of the square is:</p>
+        $$\text{Area} = s^2 = 12^2 = \mathbf{144}.$$
+    </div>
+
+    <!-- S25 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q25 &bull; Level 3</span>
+            <span class="badge badge-type">NAT &bull; All Four Centers &amp; Euler Line</span>
+            <strong>Correct Answer: 059</strong>
+        </p>
+        <p>Inspect $A(0, 32)$, $B(24, 0)$, and $C(48, 32)$. Notice that $AC$ is horizontal ($y = 32$) and symmetric
+            about the vertical line $x = 24$, on which $B(24, 0)$ sits! Compute side lengths:</p>
+        $$b = AC = 48, \qquad c = AB = \sqrt{24^2 + 32^2} = 40, \qquad a = BC = \sqrt{24^2 + 32^2} = 40.$$
+        <p>By isosceles symmetry, all four centers ($O, G, H, I$) lie strictly on the symmetry axis $x = 24$.</p>
+        <p><strong>1. Incenter $y_I$ ($a + b + c = 40 + 48 + 40 = 128$):</strong></p>
+        $$y_I = \frac{a y_A + b y_B + c y_C}{a + b + c} = \frac{40(32) + 48(0) + 40(32)}{128} = \frac{2560}{128} = 20.$$
+        <p><strong>2. Circumcenter $y_O$ ($O = (24, y_O)$ satisfies $OA^2 = OB^2$):</strong></p>
+        $$(24 - 0)^2 + (y_O - 32)^2 = (24 - 24)^2 + (y_O - 0)^2 \implies 576 + y_O^2 - 64y_O + 1024 = y_O^2.$$
+        $$64y_O = 1600 \implies y_O = 25.$$
+        <p><strong>3. Orthocenter $y_H$ via Euler Line $y_H = 3y_G - 2y_O$:</strong></p>
+        $$y_G = \frac{32 + 0 + 32}{3} = \frac{64}{3} \implies y_H = 3\left(\frac{64}{3}\right) - 2(25) = 64 - 50 = 14.$$
+        <p><em>Direct Altitude Check:</em> $m_{BC} = \frac{32}{24} = \frac{4}{3} \implies$ altitude from $A(0, 32)$ is
+            $y - 32 = -\frac{3}{4}x$, which at $x = 24$ gives $y_H = 32 - 18 = 14$.</p>
+        <p><strong>4. Final Sum:</strong></p>
+        $$y_O + y_H + y_I = 25 + 14 + 20 = \mathbf{59} \quad (\text{NAT code: } \mathbf{059}).$$
+    </div>
+
+    <!-- S26 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q26 &bull; Level 3</span>
+            <span class="badge badge-type">NAT &bull; Double Reflection &amp; Perpendicular Mirrors</span>
+            <strong>Correct Answer: 090</strong>
+        </p>
+        <p><strong>Step 1 — Reflect $P(1, 3)$ across $L_1: 2x + y - 20 = 0$ to find $Q$:</strong></p>
+        $$\frac{x_Q - 1}{2} = \frac{y_Q - 3}{1} = -\frac{2\bigl(2(1) + 3 - 20\bigr)}{2^2 + 1^2} = -\frac{2(-15)}{5} =
+        +6.$$
+        $$x_Q = 1 + 2(6) = 13, \qquad y_Q = 3 + 1(6) = 9 \implies Q = (13, 9).$$
+        <p><strong>Step 2 — Reflect $Q(13, 9)$ across $L_2: x - 2y + 20 = 0$ to find $R$:</strong></p>
+        $$\frac{x_R - 13}{1} = \frac{y_R - 9}{-2} = -\frac{2\bigl(13 - 2(9) + 20\bigr)}{1^2 + (-2)^2} = -\frac{2(15)}{5}
+        = -6.$$
+        $$x_R = 13 + 1(-6) = 7, \qquad y_R = 9 + (-2)(-6) = 21 \implies R = (7, 21).$$
+        <p><strong>Step 3 — Compute Area of $\triangle PQR$:</strong></p>
+        <p>Shift $Q(13, 9)$ to the origin: $P' = P - Q = (-12, -6)$ and $R' = R - Q = (-6, 12)$. Notice $L_1 \perp L_2$,
+            so $QP \perp QR$! Applying the cross-product area formula:</p>
+        $$\text{Area}(\triangle PQR) = \frac{1}{2}\bigl|(-12)(12) - (-6)(-6)\bigr| = \frac{1}{2}\bigl|-144 - 36\bigr| =
+        \frac{180}{2} = \mathbf{90} \quad (\text{NAT code: } \mathbf{090}).$$
+        <div class="shortcut-box">
+            <span class="box-label">Zero-Coordinate Olympiad Shortcut</span>
+            <p>
+                Since $L_1 \perp L_2$, we automatically have $PQ \perp QR$, so $\triangle PQR$ is right-angled at $Q$!
+                Moreover, $PQ = 2 d(P, L_1) = 2\cdot\frac{15}{\sqrt{5}} = 6\sqrt{5}$ and $QR = 2 d(Q, L_2) = 2 d(P,
+                L_2)$ (because $PQ \parallel L_2$!) $= 2\cdot\frac{|1 - 6 + 20|}{\sqrt{5}} = 6\sqrt{5}$. Hence
+                $\text{Area} = \frac{1}{2}(6\sqrt{5})(6\sqrt{5}) = 90$ without ever computing $Q$ or $R$!
+            </p>
+        </div>
+    </div>
+
+    <!-- S27 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q27 &bull; Level 3</span>
+            <span class="badge badge-type">Passage 2 &bull; Obtuse Triangle Centers</span>
+            <strong>Correct Answer: (B) $O(3, -3)$ and $H(0, 12)$</strong>
+        </p>
+        <p>Given $A(0, 6)$, $B(-6, 0)$, and $C(12, 0)$:</p>
+        <p><strong>Step 1 — Circumcenter $O$:</strong></p>
+        <p>Segment $BC$ lies along the $x$-axis with midpoint $\left(\dfrac{-6 + 12}{2}, 0\right) = (3, 0)$, so its
+            perpendicular bisector is the vertical line $x = 3$. Setting $O = (3, y_O)$ and equating $OA^2 = OB^2$:</p>
+        $$(3 - 0)^2 + (y_O - 6)^2 = \bigl(3 - (-6)\bigr)^2 + (y_O - 0)^2 \implies 9 + y_O^2 - 12y_O + 36 = 81 + y_O^2.$$
+        $$-12y_O = 36 \implies y_O = -3 \implies \mathbf{O = (3, -3)}.$$
+        <p><strong>Step 2 — Centroid $G$ and Orthocenter $H$ via Euler Line:</strong></p>
+        $$G = \left(\frac{0 - 6 + 12}{3},\; \frac{6 + 0 + 0}{3}\right) = (2, 2).$$
+        $$H = 3G - 2O = 3(2, 2) - 2(3, -3) = (6 - 6,\; 6 + 6) = \mathbf{(0, 12)}.$$
+        <p><em>Direct Altitude Verification:</em> Altitude from $A(0, 6)$ to $BC$ ($y = 0$) is $x = 0$. Slope of $AC =
+            \frac{0 - 6}{12 - 0} = -\frac{1}{2}$, so altitude from $B(-6, 0)$ has slope $+2$: $y = 2(x + 6)$,
+            intersecting $x = 0$ at $H(0, 12)$.</p>
+    </div>
+
+    <!-- S28 -->
+    <div class="solution-card">
+        <p>
+            <span class="badge badge-l3">Q28 &bull; Level 3</span>
+            <span class="badge badge-type">Passage 2 &bull; Euler Line Equation &amp; Distance</span>
+            <strong>Correct Answer: (A) $5x + y - 12 = 0$, distance $\dfrac{12}{\sqrt{26}}$</strong>
+        </p>
+        <p>From Q27, the Euler Line passes through $H(0, 12)$, $G(2, 2)$, and $O(3, -3)$. Compute its slope:</p>
+        $$m = \frac{2 - 12}{2 - 0} = -5 \qquad \left(\text{check } G \to O: \frac{-3 - 2}{3 - 2} = -5\right).$$
+        <p>Since the line crosses the $y$-axis at $H(0, 12)$, its $y$-intercept is $c = 12$. By Slope-Intercept Form:
+        </p>
+        $$y = -5x + 12 \implies \mathbf{5x + y - 12 = 0}.$$
+        <p>Compute its perpendicular distance from the origin $(0, 0)$:</p>
+        $$d = \frac{|5(0) + 1(0) - 12|}{\sqrt{5^2 + 1^2}} = \mathbf{\frac{12}{\sqrt{26}}}.$$
+    </div>
+
+    <!-- ==================== TRAP & ERROR FORENSICS ==================== -->
+    <h2 class="section-heading">Trap &amp; Error Forensics — Five Lethal Coordinate Geometry Point-Drains</h2>
+
+    <!-- TRAP 1 -->
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 1 &bull; The Shoelace Vertex-Ordering Trap ($n \ge 4$) (See Q14)</span>
+        <p><strong>The Fatal Mistake:</strong> Copying polygon vertices into the Shoelace table in the exact order they
+            are printed in the question statement. For Q14, running Shoelace directly on $(0,0) \to (4,8) \to (6,-2) \to
+            (-2,5) \to (9,3)$ traces a self-intersecting star and outputs a completely fabricated number instead of
+            $66$.</p>
+        <p><strong>Why It Breaks:</strong> The Shoelace Formula sums <em>signed</em> triangle areas around the boundary.
+            Any crossing edges flip orientation from counter-clockwise ($+$) to clockwise ($-$), causing interior
+            sub-regions to cancel one another out.</p>
+        <p><strong>Exam Immunity Rule:</strong> Whenever $n \ge 4$ and the question does <em>not</em> explicitly state
+            "taken in cyclic order," spend 10 seconds plotting the points roughly on a quick scratch $x$-$y$ cross and
+            trace the outer perimeter strictly counter-clockwise before writing a single Shoelace product.</p>
+    </div>
+
+    <!-- TRAP 2 -->
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 2 &bull; The Unmatched-Coefficient Trap in Parallel-Line Distance (See
+            Q11)</span>
+        <p><strong>The Fatal Mistake:</strong> Given $5x - 12y + 14 = 0$ and $15x - 36y - 36 = 0$, immediately plugging
+            $c_1 = 14$ and $c_2 = -36$ into $\dfrac{|c_1 - c_2|}{\sqrt{a^2 + b^2}}$ to get the wrong distractor
+            $\dfrac{50}{13}$ (Option B) or $\dfrac{50}{39}$.</p>
+        <p><strong>Why It Breaks:</strong> The derivation of $d_{\parallel} = \dfrac{|c_1 - c_2|}{\sqrt{a^2 + b^2}}$
+            requires that a point $(x_1, y_1)$ on $L_1$ satisfies $ax_1 + by_1 = -c_1$ for the <em>exact same</em> $(a,
+            b)$ used in $L_2$. Multiplying a line equation by $3$ scales its constant term by $3$ without moving the
+            line!</p>
+        <p><strong>Exam Immunity Rule:</strong> Before touching $|c_1 - c_2|$, physically write the two parallel
+            equations one directly above the other and verify that <strong>both $x$-coefficients and both
+                $y$-coefficients are 100% identical (including signs!)</strong>.</p>
+    </div>
+
+    <!-- TRAP 3 -->
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 3 &bull; Swapping $m : n$ Weights in Section Formula &amp; Incenter (See
+            Q3, Q7, Q12)</span>
+        <p><strong>The Fatal Mistake:</strong> Pairing $m$ with $x_1$ and $n$ with $x_2$ (writing $\frac{mx_1 + nx_2}{m
+            + n}$ instead of $\frac{mx_2 + nx_1}{m + n}$), or weighting vertex $A$ in the Incenter formula by an
+            adjacent side instead of its <em>opposite</em> side $a = BC$.</p>
+        <p><strong>Why It Breaks:</strong> Think of a physical seesaw (center of mass): if point $P$ is closer to $A$
+            ($AP : PB = 1 : 3$, so $m = 1,\; n = 3$), $P$ must pull heavily toward $A(x_1, y_1)$—meaning the
+            <em>larger</em> weight $n = 3$ multiplies $A$, while $m = 1$ multiplies $B$! Cross-multiplication is
+            mandatory.
+        </p>
+        <p><strong>Exam Immunity Rule:</strong> Always draw a quick 2-second bar <code>A ---(m)--- P ---(n)--- B</code>
+            and cross-multiply diagonally ($m \to B$, $n \to A$). For Incenter $I$, write the label table $a = BC
+            \leftrightarrow A$, $b = CA \leftrightarrow B$, $c = AB \leftrightarrow C$ before substituting.</p>
+    </div>
+
+    <!-- TRAP 4 -->
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 4 &bull; Brute-Forcing Circumcenter/Orthocenter on Hidden Right Triangles
+            (See Q5, Q21)</span>
+        <p><strong>The Fatal Mistake:</strong> Jumping immediately into expanding $OA^2 = OB^2 = OC^2$ or finding all
+            three vertices and two perpendicular altitude equations on a problem like Q21 ($x + y = 2$, $x - y = 0$, $x
+            + 2y = 6$), burning 4 minutes and risking sign slips.</p>
+        <p><strong>Why It Breaks Your Time Budget:</strong> BEST Paper 1 rewards geometric recognition over brute-force
+            algebra. In Q5, $AB$ is horizontal and $AC$ is vertical; in Q21, $m_1 m_2 = (-1)(+1) = -1$. In both cases, a
+            3-second perpendicularity check collapses the entire problem to a single midpoint calculation.</p>
+        <p><strong>Exam Immunity Rule:</strong> Make the <strong>Right-Triangle Pre-Scan</strong> automatic on every
+            Circumcenter/Orthocenter question: (1) If lines are given, check pairwise products $m_i m_j = -1$ first; (2)
+            If vertices are given, check for shared $x$/$y$ coordinates or $a^2 + b^2 = c^2$ first. When right-angled at
+            $A$: <strong>$H = A$</strong> and <strong>$O = \text{midpoint}(\text{hypotenuse})$</strong> instantly.</p>
+    </div>
+
+    <!-- TRAP 5 -->
+    <div class="trap-box">
+        <span class="box-label">Forensics Card 5 &bull; Dropping Vertical-Line Roots &amp; Misreading External Ratio
+            Signs (See Q2, Q9)</span>
+        <p><strong>Trap 5A — Dividing by Zero in Slope Collinearity (Q2):</strong> Equating slopes $\dfrac{2 - (-1)}{k -
+            1} = \dfrac{8 - 2}{k^2 - k}$ and canceling $(k - 1)$ silently deletes the valid vertical-line solution $k =
+            1$ (where $A, B, C$ all sit on $x = 1$). <em>Fix:</em> Always use the <strong>Zero-Area Determinant
+                Test</strong> for parametric collinearity!</p>
+        <p><strong>Trap 5B — Sign Reversal in $k = -\dfrac{L(A)}{L(B)}$ (Q9):</strong> Forgetting the leading minus sign
+            flips internal division into external division (and vice versa). <em>Fix:</em> Use the physical half-plane
+            test instead of pure memory—if $L(A)$ and $L(B)$ have the <strong>same sign</strong>, $A$ and $B$ lie on the
+            same side of the line, so the line <em>cannot</em> pass between them ($\implies$ strictly
+            <strong>external</strong> division); if they have <strong>opposite signs</strong>, the line slices directly
+            through segment $AB$ ($\implies$ strictly <strong>internal</strong> division).
+        </p>
+    </div>
+
+</article>

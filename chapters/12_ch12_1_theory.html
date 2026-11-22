@@ -1,0 +1,975 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 12: Similar Triangles &amp; Olympiad Geometry (Ceva, Menelaus &amp; Stewart)">
+
+    <section class="chapter-hero">
+        <div class="chapter-meta">Volume 2 · Mathematics (Paper 1) · Chapter 12 · Part 1 of 3 — Theory &amp; Worked
+            Examples</div>
+        <h1>Similar Triangles &amp; Olympiad Geometry</h1>
+        <p>One idea powers this chapter: <em>parallel lines and equal angles force equal ratios</em>. We start from
+            areas, derive Thales, the similarity criteria, the right-triangle altitude relations and the angle-bisector
+            theorems, then climb to Stewart, Ceva, Menelaus and Mass Points. Every shortcut is proved before it is used.
+        </p>
+        <div class="tag-row">
+            <span class="meta-pill">Target time: 7 hours (whole chapter)</span>
+            <span class="meta-pill">Level 1 → Level 3</span>
+            <span class="meta-pill">NTSE Stage 2 · PRMO-lite</span>
+            <span class="meta-pill">8 diagrams · 9 worked examples</span>
+        </div>
+    </section>
+
+    <div class="concept-box">
+        <span class="box-label">Chapter Map &amp; Notation</span>
+        <p><strong>Time split:</strong> Part 1 (this file) ≈ 2.5 h · Part 2 practice ≈ 3 h · Part 3 solutions &amp;
+            error forensics ≈ 1.5 h.</p>
+        <p><strong>Notation:</strong> $[XYZ]$ = area of $\triangle XYZ$; $a=BC,\ b=CA,\ c=AB$ (side opposite each
+            vertex); $s=\tfrac{a+b+c}{2}$; $k$ = similarity ratio; a <em>cevian</em> is a segment from a vertex to a
+            point on the opposite side (or its extension).</p>
+        <p><strong>Engine of the chapter:</strong> every ratio problem is solved by one of three tools — (i) similar
+            triangles / BPT, (ii) area ratios, (iii) mass points. Learn to switch between them.</p>
+    </div>
+
+    <h2 class="section-heading">1 · Basic Proportionality Theorem, Midpoint Theorem &amp; Trapezium Traps</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 1.1 — Basic Proportionality Theorem (Thales / BPT)</span>
+        <p>A line parallel to one side of a triangle, meeting the other two sides at distinct points, divides those
+            sides in the same ratio.</p>
+        $$DE \parallel BC \;\Longrightarrow\; \dfrac{AD}{DB}=\dfrac{AE}{EC}$$
+    </div>
+
+    <p><strong>Proof (areas only).</strong> Join $BE$ and $CD$.</p>
+    <ol>
+        <li>$\triangle ADE$ and $\triangle BDE$ have the same height (from $E$ to line $AB$), so
+            $\dfrac{[ADE]}{[BDE]}=\dfrac{AD}{DB}$.</li>
+        <li>$\triangle ADE$ and $\triangle CED$ have the same height (from $D$ to line $AC$), so
+            $\dfrac{[ADE]}{[CED]}=\dfrac{AE}{EC}$.</li>
+        <li>$\triangle BDE$ and $\triangle CED$ share base $DE$ and lie between the parallels $DE$ and $BC$, so their
+            heights are equal and $[BDE]=[CED]$.</li>
+        <li>The right-hand sides of steps 1 and 2 have equal numerators-over-denominators, so
+            $\dfrac{AD}{DB}=\dfrac{AE}{EC}$. $\blacksquare$</li>
+    </ol>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 340 235" width="380" role="img"
+            aria-label="Triangle ABC with DE parallel to BC, AD:DB = AE:EC = 2:3">
+            <g stroke="#1b2a49" stroke-width="2" fill="none" stroke-linejoin="round">
+                <polygon points="160,20 40,200 300,200" fill="#eef4fb" />
+                <line x1="112" y1="92" x2="216" y2="92" stroke="#c0392b" />
+                <path d="M158,86 L165,92 L158,98 M164,194 L171,200 L164,206" stroke="#c0392b" stroke-width="1.6" />
+            </g>
+            <g fill="#1b2a49">
+                <circle cx="112" cy="92" r="3" />
+                <circle cx="216" cy="92" r="3" />
+            </g>
+            <g font-family="serif" font-size="16" font-style="italic" fill="#1b2a49" text-anchor="middle">
+                <text x="160" y="13">A</text><text x="28" y="216">B</text><text x="312" y="216">C</text>
+                <text x="96" y="96">D</text><text x="230" y="96">E</text>
+            </g>
+            <g font-family="sans-serif" font-size="13" fill="#444" text-anchor="middle">
+                <text x="124" y="52">2k</text><text x="58" y="148">3k</text><text x="206" y="54">2m</text><text x="277"
+                    y="148">3m</text>
+            </g>
+        </svg>
+        <div class="diagram-caption">Fig. 1.1 — Thales configuration ("A-pattern"). $DE\parallel BC$ with
+            $AD:DB=AE:EC=2:3$, hence $DE=\tfrac25\,BC$ (Section 2).</div>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 1.2 — Converse of BPT</span>
+        <p>If a line meets two sides of a triangle and divides them in the same ratio ($\tfrac{AD}{DB}=\tfrac{AE}{EC}$),
+            it is parallel to the third side.</p>
+    </div>
+    <p><strong>Proof.</strong> Suppose not. Draw through $D$ the line $DE'\parallel BC$ meeting $AC$ at $E'$. By Theorem
+        1.1, $\tfrac{AD}{DB}=\tfrac{AE'}{E'C}$, so $\tfrac{AE'}{E'C}=\tfrac{AE}{EC}$. Add $1$ to both sides:
+        $\tfrac{AE'+E'C}{E'C}=\tfrac{AE+EC}{EC}$, i.e. $\tfrac{AC}{E'C}=\tfrac{AC}{EC}$, so $E'C=EC$ and $E'=E$. Hence
+        $DE\parallel BC$. $\blacksquare$</p>
+    <p><strong>Equivalent forms</strong> (add 1 to both sides): $\dfrac{AB}{DB}=\dfrac{AC}{EC}$ and
+        $\dfrac{AD}{AB}=\dfrac{AE}{AC}$ — use whichever has the unknown.</p>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 1.3 — Midpoint Theorem and its converse</span>
+        <p>The segment joining the midpoints $D,E$ of $AB,AC$ is parallel to $BC$ and $DE=\tfrac12 BC$. Conversely, a
+            line through the midpoint of one side parallel to a second side bisects the third side.</p>
+    </div>
+    <p><strong>Proof.</strong> $\tfrac{AD}{DB}=1=\tfrac{AE}{EC}$, so $DE\parallel BC$ (Theorem 1.2). Then $\angle
+        ADE=\angle ABC$ (corresponding) and $\angle A$ is common, so $\triangle ADE\sim\triangle ABC$ (AA, proved in
+        Section 2) with ratio $\tfrac{AD}{AB}=\tfrac12$; hence $DE=\tfrac12BC$. Converse: if $DE\parallel BC$ and
+        $AD=DB$, Theorem 1.1 gives $AE=EC$. $\blacksquare$</p>
+
+    <div class="trap-box">
+        <strong>Trap Alert — BPT</strong>
+        <ul>
+            <li>$\dfrac{DE}{BC}=\dfrac{AD}{AB}$ (part-to-<em>whole</em>), never $\dfrac{AD}{DB}$ (part-to-part).</li>
+            <li>Ratios are measured from the same vertex on both sides: $\tfrac{AD}{DB}=\tfrac{AE}{EC}$. The mixture
+                $\tfrac{AD}{EC}$ means nothing.</li>
+            <li>The converse needs both ratios in the same orientation. $\tfrac{AD}{DB}=\tfrac{EC}{AE}$ does
+                <em>not</em> imply $DE\parallel BC$.
+            </li>
+        </ul>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 1.4 — Diagonals of a Trapezium</span>
+        <p>In trapezium $ABCD$ with $AB\parallel CD$, $AB=p$, $CD=q$, diagonals meeting at $O$:</p>
+        <ol>
+            <li>$\dfrac{AO}{OC}=\dfrac{BO}{OD}=\dfrac{p}{q}$</li>
+            <li>$\dfrac{[AOB]}{[COD]}=\dfrac{p^2}{q^2}$, $\;[AOD]=[BOC]$, $\;[AOD]^2=[AOB]\cdot[COD]$</li>
+            <li>The line through $O$ parallel to the bases meets legs $AD,BC$ at $P,Q$ with $PO=OQ$ and
+                $PQ=\dfrac{2pq}{p+q}$ (harmonic mean).</li>
+        </ol>
+    </div>
+    <p><strong>Proof.</strong> (1) $\angle OAB=\angle OCD$ and $\angle OBA=\angle ODC$ (alternate angles), so $\triangle
+        OAB\sim\triangle OCD$ (AA) with ratio $\tfrac pq$.</p>
+    <p>(2) Areas of similar triangles scale as $k^2$ (Theorem 2.5). $\triangle ABD$ and $\triangle ABC$ have the same
+        base $AB$ and lie between the same parallels, so $[ABD]=[ABC]$; subtracting $[AOB]$ gives $[AOD]=[BOC]$. Also
+        $\tfrac{[AOD]}{[AOB]}=\tfrac{OD}{OB}=\tfrac{[COD]}{[BOC]}$ (same apex, bases on $BD$), so
+        $[AOD]\cdot[BOC]=[AOB]\cdot[COD]$, and with $[AOD]=[BOC]$ the third relation follows.</p>
+    <p>(3) $\tfrac{AO}{AC}=\tfrac{p}{p+q}$. In $\triangle ADC$, $PO\parallel DC$, so $\tfrac{PO}{DC}=\tfrac{AO}{AC}$,
+        giving $PO=\tfrac{pq}{p+q}$. In $\triangle BCD$, $OQ\parallel DC$, so
+        $\tfrac{OQ}{DC}=\tfrac{BO}{BD}=\tfrac{p}{p+q}$, giving $OQ=\tfrac{pq}{p+q}$. $\blacksquare$</p>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 300 210" width="340" role="img"
+            aria-label="Trapezium ABCD with AB parallel to CD, diagonals meeting at O, and PQ through O parallel to the bases">
+            <g stroke="#1b2a49" stroke-width="2" fill="none" stroke-linejoin="round">
+                <polygon points="60,30 210,30 210,170 110,170" fill="#eef4fb" />
+                <line x1="60" y1="30" x2="210" y2="170" />
+                <line x1="210" y1="30" x2="110" y2="170" />
+                <line x1="90" y1="114" x2="210" y2="114" stroke="#c0392b" />
+                <path d="M129,24 L136,30 L129,36 M154,164 L161,170 L154,176 M174,108 L181,114 L174,120" stroke="#c0392b"
+                    stroke-width="1.5" />
+            </g>
+            <g fill="#1b2a49">
+                <circle cx="150" cy="114" r="3" />
+                <circle cx="90" cy="114" r="3" />
+                <circle cx="210" cy="114" r="3" />
+            </g>
+            <g font-family="serif" font-size="16" font-style="italic" fill="#1b2a49" text-anchor="middle">
+                <text x="48" y="26">A</text><text x="222" y="26">B</text><text x="224" y="186">C</text><text x="98"
+                    y="186">D</text>
+                <text x="160" y="106">O</text><text x="76" y="118">P</text><text x="226" y="110">Q</text>
+            </g>
+            <g font-family="sans-serif" font-size="13" fill="#444" text-anchor="middle"><text x="135" y="18">AB =
+                    p</text><text x="160" y="198">CD = q</text></g>
+        </svg>
+        <div class="diagram-caption">Fig. 1.2 — Trapezium $ABCD$, $AB=p$, $CD=q$. $PQ\parallel AB$ passes through $O$;
+            $PO=OQ=\tfrac{pq}{p+q}$.</div>
+    </div>
+
+    <div class="trap-box">
+        <strong>Trap Alert — Trapezium</strong>
+        <ul>
+            <li>$AO:OC=AB:CD$ (the <em>bases</em>), not $AD:BC$ (the legs).</li>
+            <li>Segment ratio is $k$, but area ratio of the "base triangles" is $k^2$. The two "side triangles"
+                $AOD,BOC$ are always <em>equal</em> in area.</li>
+            <li>The parallel through $O$ has length equal to the <em>harmonic</em> mean $\tfrac{2pq}{p+q}$, not the
+                arithmetic mean $\tfrac{p+q}{2}$ (that one is the mid-line).</li>
+        </ul>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge — Intercept Theorem</span>
+        <p>BPT generalises: <em>three or more parallel lines cut every transversal in proportional segments.</em> If
+            parallels $\ell_1,\ell_2,\ell_3$ cut one transversal in $x:y$ they cut every transversal in $x:y$. In NTSE
+            problems, spotting "parallel + two transversals" instantly gives a ratio without any construction. When no
+            parallel is given, <em>draw one</em> — through a point on a cevian, parallel to the base — and BPT does the
+            rest.</p>
+    </div>
+
+    <h2 class="section-heading">2 · Similarity Criteria, Correspondence &amp; Ratios of Linear Elements and Areas</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Definition &amp; Theorems 2.1–2.3 — Similarity Criteria</span>
+        <p>$\triangle ABC\sim\triangle PQR$ means $\angle A=\angle P,\ \angle B=\angle Q,\ \angle C=\angle R$
+            <em>and</em> $\tfrac{AB}{PQ}=\tfrac{BC}{QR}=\tfrac{CA}{RP}=k$. For triangles either half implies the other:
+        </p>
+        <ul>
+            <li><strong>AA:</strong> two pairs of equal angles.</li>
+            <li><strong>SAS:</strong> $\angle A=\angle P$ and $\tfrac{AB}{PQ}=\tfrac{AC}{PR}$ (the equal angle is
+                <em>included</em>).
+            </li>
+            <li><strong>SSS:</strong> $\tfrac{AB}{PQ}=\tfrac{BC}{QR}=\tfrac{CA}{RP}$.</li>
+        </ul>
+    </div>
+
+    <p><strong>Common construction.</strong> Mark $D$ on ray $PQ$ with $PD=AB$ and $E$ on ray $PR$ with $PE=AC$.</p>
+    <p><strong>Proof of AA.</strong> Since $\angle P=\angle A$, $\triangle PDE\cong\triangle ABC$ by SAS, so $\angle
+        PDE=\angle B=\angle Q$. Corresponding angles are equal, so $DE\parallel QR$. By BPT (in $\triangle PQR$ if $D,E$
+        fall inside the sides, in $\triangle PDE$ with line $QR$ if they fall outside), $\tfrac{PD}{PQ}=\tfrac{PE}{PR}$,
+        i.e. $\tfrac{AB}{PQ}=\tfrac{AC}{PR}$. Repeating at vertex $Q$ gives $\tfrac{AB}{PQ}=\tfrac{BC}{QR}$.
+        $\blacksquare$</p>
+    <p><strong>Proof of SAS.</strong> With the same $D,E$: $\tfrac{PD}{PQ}=\tfrac{AB}{PQ}=\tfrac{AC}{PR}=\tfrac{PE}{PR}$
+        (given). Both points lie inside or both outside, so the converse of BPT gives $DE\parallel QR$, hence $\angle
+        PDE=\angle Q$ and $\angle PED=\angle R$. But $\triangle PDE\cong\triangle ABC$ (SAS), so $\angle B=\angle Q$,
+        $\angle C=\angle R$: AA applies. $\blacksquare$</p>
+    <p><strong>Proof of SSS.</strong> The same ratio equality gives $DE\parallel QR$, so $\triangle PDE\sim\triangle
+        PQR$ (AA) and $\tfrac{DE}{QR}=\tfrac{PD}{PQ}=\tfrac{AB}{PQ}=\tfrac{BC}{QR}$ (given). Hence $DE=BC$, so
+        $\triangle PDE\cong\triangle ABC$ (SSS), giving $\angle A=\angle P$ and $\angle B=\angle PDE=\angle Q$: AA
+        applies. $\blacksquare$</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Criterion</th>
+                <th>What you must verify</th>
+                <th>Typical exam disguise</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AA</td>
+                <td>Two angles (third is automatic)</td>
+                <td>Common angle + parallel lines; two right angles + shared acute angle</td>
+            </tr>
+            <tr>
+                <td>SAS</td>
+                <td>One angle + the <em>two sides enclosing it</em> in the same ratio</td>
+                <td>$AB\cdot AC$ type products; overlapping triangles sharing an angle</td>
+            </tr>
+            <tr>
+                <td>SSS</td>
+                <td>All three side ratios</td>
+                <td>Numbers given as lists; check smallest↔smallest, largest↔largest</td>
+            </tr>
+            <tr>
+                <td>SSA</td>
+                <td><strong>Does not work</strong> in general</td>
+                <td>"Two sides and a non-included angle are proportional" (a trap)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="trap-box">
+        <strong>Counter-example — why SSA fails</strong>
+        <p>Fix $\angle A=30^\circ$ and $AB=8$. The distance from $B$ to the other ray from $A$ is $8\sin30^\circ=4$.
+            Choose $BC=5$ with $4<5<8$: the circle of radius $5$ about $B$ cuts that ray at <em>two</em> points
+                $C_1,C_2$ (here $AC=4\sqrt3\pm3$). Triangles $ABC_1$ and $ABC_2$ share $\angle A$, $AB$ and $BC$ (the
+                "SSA" data), but $AC_1\ne AC_2$. Any similarity matching $AB\leftrightarrow AB$ and $BC\leftrightarrow
+                BC$ would have $k=1$, i.e. congruence — contradiction. <strong>Safe cases:</strong> the angle is right
+                (RHS) or the side opposite it is at least as long as the other given side.</p>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Correspondence Rule</span>
+        <p>$\triangle ABC\sim\triangle PQR$ pairs $A\!\leftrightarrow\!P,\ B\!\leftrightarrow\!Q,\
+            C\!\leftrightarrow\!R$ <em>in the order written</em>. So $AB\!\leftrightarrow\!PQ$,
+            $BC\!\leftrightarrow\!QR$, $CA\!\leftrightarrow\!RP$. Sides opposite equal angles correspond. Writing
+            $\triangle ABC\sim\triangle QPR$ is a different statement. In overlapping figures, identify the equal angles
+            first, then write the names — never copy names from the picture.</p>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 2.4 — Corresponding Linear Elements</span>
+        <p>If $\triangle ABC\sim\triangle PQR$ with ratio $k$, then <em>every</em> pair of corresponding linear elements
+            has ratio $k$: sides, perimeters, altitudes, medians, angle bisectors, inradii, circumradii.</p>
+    </div>
+    <p><strong>Proof.</strong> <em>Altitudes:</em> with $AD\perp BC$, $PS\perp QR$: $\triangle ABD\sim\triangle PQS$
+        (AA: $\angle B=\angle Q$, right angles), so $\tfrac{AD}{PS}=\tfrac{AB}{PQ}=k$. <em>Medians</em> $AM,PN$: $\angle
+        B=\angle Q$ and $\tfrac{AB}{PQ}=\tfrac{BC/2}{QR/2}=\tfrac{BM}{QN}$, so $\triangle ABM\sim\triangle PQN$ (SAS)
+        and $\tfrac{AM}{PN}=k$. <em>Angle bisectors:</em> $\angle B=\angle Q$ and $\angle BAD=\tfrac12\angle
+        A=\tfrac12\angle P=\angle QPS$ (AA), ratio $k$. <em>Perimeter:</em> sum of three sides each scaled by $k$.
+        <em>Inradius, circumradius:</em> $r=\tfrac{[ABC]}{s}$ and $R=\tfrac{abc}{4[ABC]}$; with areas scaling by $k^2$
+        (below) we get $\tfrac{k^2}{k}=k$ and $\tfrac{k^3}{k^2}=k$. $\blacksquare$
+    </p>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 2.5 — Ratio of Areas</span>
+        $$\dfrac{[ABC]}{[PQR]}=\left(\dfrac{AB}{PQ}\right)^2=k^2$$
+        <p>Proof: $[ABC]=\tfrac12\,BC\cdot AD$ and $[PQR]=\tfrac12\,QR\cdot PS$, so the ratio is
+            $\tfrac{BC}{QR}\cdot\tfrac{AD}{PS}=k\cdot k$. $\blacksquare$ (Same-height triangles: areas ∝ bases.
+            Same-base triangles: areas ∝ heights.)</p>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 2.6 — Triangles Sharing an Angle</span>
+        <p>If $D\in AB$, $E\in AC$ then $\dfrac{[ADE]}{[ABC]}=\dfrac{AD}{AB}\cdot\dfrac{AE}{AC}$.</p>
+        <p>Proof: $\tfrac{[ADE]}{[ABE]}=\tfrac{AD}{AB}$ (same apex $E$) and $\tfrac{[ABE]}{[ABC]}=\tfrac{AE}{AC}$ (same
+            apex $B$); multiply. $\blacksquare$</p>
+    </div>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Quantity (ratio of $\triangle ABC$ to $\triangle PQR$)</th>
+                <th>Ratio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sides, perimeter, semi-perimeter</td>
+                <td>$k$</td>
+            </tr>
+            <tr>
+                <td>Altitudes, medians, angle bisectors</td>
+                <td>$k$</td>
+            </tr>
+            <tr>
+                <td>Inradius $r$, circumradius $R$</td>
+                <td>$k$</td>
+            </tr>
+            <tr>
+                <td>Area</td>
+                <td>$k^2$</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge — Two Reflex Patterns</span>
+        <p><strong>A-pattern:</strong> $DE\parallel BC$ inside $\triangle ABC$ gives $\triangle ADE\sim\triangle ABC$
+            (common angle + corresponding angles). <strong>X-pattern:</strong> two parallel segments $AB\parallel CD$
+            joined by crossing lines through $O$ give $\triangle OAB\sim\triangle OCD$ (alternate + vertical angles).
+            Whenever a problem hands you a ratio of lengths and asks for a ratio of areas (or vice versa), square or
+            root it — and check that the ratio is of <em>corresponding</em> elements.</p>
+    </div>
+
+    <h2 class="section-heading">3 · Right-Triangle Altitude Theorem, Pythagoras &amp; Crossing Poles</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 3.1 — Altitude on the Hypotenuse</span>
+        <p>In right $\triangle ABC$ with $\angle C=90^\circ$, $CD\perp AB$, let $a=BC$, $b=CA$, $c=AB$, $h=CD$, $x=BD$,
+            $y=AD$ (so $x+y=c$). Then</p>
+        $$h^2=xy,\qquad a^2=cx,\qquad b^2=cy,\qquad h=\dfrac{ab}{c},\qquad \dfrac1{h^2}=\dfrac1{a^2}+\dfrac1{b^2}$$
+        <p>Each leg is the geometric mean of the hypotenuse and the part of it adjacent to that leg.</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 340 235" width="400" role="img"
+            aria-label="Right triangle ABC with right angle at C and altitude CD to hypotenuse AB">
+            <g stroke="#1b2a49" stroke-width="2" fill="none" stroke-linejoin="round">
+                <polygon points="30,190 310,190 130,55.84" fill="#eef4fb" />
+                <line x1="130" y1="55.84" x2="130" y2="190" stroke="#c0392b" />
+                <path
+                    d="M122.83,65.46 L132.45,72.63 L139.62,63.01 M130,178 L142,178 L142,190 M130,178 L118,178 L118,190"
+                    stroke-width="1.4" />
+            </g>
+            <g fill="#1b2a49">
+                <circle cx="130" cy="190" r="3" />
+            </g>
+            <g font-family="serif" font-size="16" font-style="italic" fill="#1b2a49" text-anchor="middle">
+                <text x="16" y="208">A</text><text x="324" y="208">B</text><text x="130" y="46">C</text><text x="130"
+                    y="208">D</text>
+                <text x="66" y="120">b</text><text x="232" y="116">a</text><text x="140" y="130">h</text>
+                <text x="78" y="208">y</text><text x="222" y="208">x</text><text x="170" y="228">c = x + y</text>
+            </g>
+        </svg>
+        <div class="diagram-caption">Fig. 3.1 — $\angle C=90^\circ$, $CD\perp AB$. $x=BD$ (touches leg $a$), $y=AD$
+            (touches leg $b$). Three similar triangles: $\triangle ABC\sim\triangle CBD\sim\triangle ACD$.</div>
+    </div>
+
+    <p><strong>Proof.</strong> <em>(i)</em> $\triangle CBD$ and $\triangle ABC$: $\angle B$ common, $\angle CDB=\angle
+        ACB=90^\circ$ ⇒ AA, so $\tfrac{BC}{AB}=\tfrac{BD}{BC}$, i.e. $a^2=cx$. <em>(ii)</em> $\triangle ACD\sim\triangle
+        ABC$ (common $\angle A$, right angles) gives $\tfrac{AC}{AB}=\tfrac{AD}{AC}$, i.e. $b^2=cy$. <em>(iii)</em>
+        $\angle BCD=90^\circ-\angle B=\angle A$ and $\angle ACD=\angle B$, so $\triangle BCD\sim\triangle CAD$ (with
+        $B\to C,\ C\to A,\ D\to D$), giving $\tfrac{BD}{CD}=\tfrac{CD}{AD}$, i.e. $h^2=xy$. <em>(iv)</em> Area two ways:
+        $\tfrac12ab=\tfrac12ch$, so $h=\tfrac{ab}{c}$, then
+        $\tfrac1{h^2}=\tfrac{c^2}{a^2b^2}=\tfrac{a^2+b^2}{a^2b^2}=\tfrac1{a^2}+\tfrac1{b^2}$ (using Pythagoras below).
+        $\blacksquare$</p>
+    <p><strong>Pythagoras for free:</strong> adding (i) and (ii): $a^2+b^2=c(x+y)=c^2$.</p>
+    <p><strong>Converse of Pythagoras.</strong> If $a^2+b^2=c^2$, build a right triangle with legs $a,b$; its hypotenuse
+        is $\sqrt{a^2+b^2}=c$. The two triangles are congruent by SSS, so the original has a right angle opposite $c$.
+        $\blacksquare$ Useful triples: $(3,4,5),(5,12,13),(8,15,17),(7,24,25),(20,21,29),(9,40,41)$ and their multiples.
+    </p>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 3.2 — Crossing Poles / Ladders (Harmonic Height)</span>
+        <p>Two vertical poles of heights $a$ and $b$ stand on level ground, any distance $d$ apart. Wires join the top
+            of each to the foot of the other and cross at height $h$ above the ground. Then</p>
+        $$\dfrac1h=\dfrac1a+\dfrac1b\quad\Longleftrightarrow\quad h=\dfrac{ab}{a+b},\qquad\text{independent of } d.$$
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 360 240" width="400" role="img"
+            aria-label="Two vertical poles with crossing wires meeting at X at height h">
+            <g stroke="#1b2a49" stroke-width="2" fill="none">
+                <line x1="20" y1="200" x2="340" y2="200" />
+                <line x1="40" y1="200" x2="40" y2="50" />
+                <line x1="320" y1="200" x2="320" y2="100" />
+                <line x1="40" y1="50" x2="320" y2="200" stroke="#c0392b" />
+                <line x1="320" y1="100" x2="40" y2="200" stroke="#2563a8" />
+                <line x1="208" y1="140" x2="208" y2="200" stroke-dasharray="5,4" />
+                <path d="M40,188 L52,188 L52,200 M320,188 L308,188 L308,200" stroke-width="1.4" />
+            </g>
+            <g fill="#1b2a49">
+                <circle cx="208" cy="140" r="3.5" />
+            </g>
+            <g font-family="serif" font-size="16" font-style="italic" fill="#1b2a49" text-anchor="middle">
+                <text x="30" y="46">A</text><text x="332" y="96">B</text><text x="26" y="124">a</text><text x="338"
+                    y="158">b</text>
+                <text x="32" y="218">P</text><text x="328" y="218">Q</text><text x="208" y="218">F</text><text x="220"
+                    y="134">X</text>
+                <text x="198" y="176">h</text><text x="124" y="214">u</text><text x="266" y="214">v</text><text x="180"
+                    y="236">d = u + v</text>
+            </g>
+        </svg>
+        <div class="diagram-caption">Fig. 3.2 — Wires $AQ$ and $BP$ cross at $X$; $XF\perp PQ$, $XF=h$. Pole $AP=a$,
+            pole $BQ=b$.</div>
+    </div>
+
+    <p><strong>Proof.</strong> Let $PF=u$, $FQ=v$, $u+v=d$. $XF\parallel AP$, so $\triangle QXF\sim\triangle QAP$ and
+        $\tfrac ha=\tfrac vd$. Likewise $XF\parallel BQ$, so $\triangle PXF\sim\triangle PBQ$ and $\tfrac hb=\tfrac ud$.
+        Adding, $h\!\left(\tfrac1a+\tfrac1b\right)=\tfrac{u+v}{d}=1$. $\blacksquare$ Also $u:v=a:b$: the foot $F$ lies
+        nearer the <em>shorter</em> pole.</p>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge — Poles Are a Trapezium</span>
+        <p>$APQB$ is a trapezium with parallel sides $a,b$; $X$ is its diagonal intersection. The line through $X$
+            parallel to the bases has total length $\tfrac{2ab}{a+b}$ (Theorem 1.4) and $X$ is its midpoint, so
+            $XF=\tfrac{ab}{a+b}$. Crossing ladders in an alley, intersecting wires between buildings and "two cevians in
+            a trapezium" are one problem in three costumes. Also, $\tfrac1h=\tfrac1a+\tfrac1b$ is the formula for two
+            resistors in parallel — a memory aid.</p>
+    </div>
+
+    <h2 class="section-heading">4 · Angle Bisector Theorems &amp; Bisector Length</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 4.1 — Internal Angle Bisector Theorem</span>
+        <p>If $AD$ bisects $\angle A$ with $D$ on $BC$, then $\dfrac{BD}{DC}=\dfrac{AB}{AC}=\dfrac cb$, so
+            $BD=\dfrac{ac}{b+c}$, $DC=\dfrac{ab}{b+c}$. The converse also holds.</p>
+    </div>
+    <p><strong>Proof.</strong> Through $C$ draw $CE\parallel AD$ meeting $BA$ produced at $E$. Then $\angle AEC=\angle
+        BAD$ (corresponding) and $\angle ACE=\angle DAC$ (alternate). Since $\angle BAD=\angle DAC$, $\angle AEC=\angle
+        ACE$, so $AE=AC$. BPT in $\triangle BEC$ (with $AD\parallel EC$):
+        $\tfrac{BD}{DC}=\tfrac{BA}{AE}=\tfrac{AB}{AC}$. $\blacksquare$ <em>Converse:</em> if
+        $\tfrac{BD}{DC}=\tfrac{AB}{AC}$, choose $E$ on $BA$ produced with $AE=AC$; the converse of BPT gives
+        $AD\parallel EC$, and the same angle chase shows $AD$ bisects $\angle A$.</p>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 4.2 — External Angle Bisector Theorem</span>
+        <p>If $AB\ne AC$ and the bisector of the exterior angle at $A$ meets line $BC$ at $D'$, then
+            $\dfrac{BD'}{CD'}=\dfrac{AB}{AC}$. (If $AB>AC$, $D'$ lies beyond $C$.)</p>
+    </div>
+    <p><strong>Proof.</strong> Let $AB>AC$, extend $BA$ to $P$ beyond $A$. Through $C$ draw $CE\parallel AD'$ meeting
+        $AB$ at $E$. Then $\angle AEC=\angle PAD'$ (corresponding) and $\angle ACE=\angle CAD'$ (alternate); as $\angle
+        PAD'=\angle CAD'$, $AE=AC$. BPT in $\triangle BAD'$: $\tfrac{BE}{EA}=\tfrac{BC}{CD'}$, i.e.
+        $\tfrac{AB-AC}{AC}=\tfrac{BC}{CD'}$, so $CD'=\tfrac{BC\cdot AC}{AB-AC}$ and $BD'=BC+CD'=\tfrac{BC\cdot
+        AB}{AB-AC}$. Divide: $\tfrac{BD'}{CD'}=\tfrac{AB}{AC}$. $\blacksquare$ Since the internal and external bisectors
+        are perpendicular (they bisect a linear pair), $\angle DAD'=90^\circ$.</p>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 4.3 — Length of the Angle Bisector</span>
+        $$l_a^2=AD^2=bc-mn,\quad m=BD,\ n=DC;\qquad l_a=\dfrac{2\sqrt{bc\,s(s-a)}}{b+c}$$
+    </div>
+    <p><strong>Proof.</strong> Extend $AD$ to meet the circumcircle of $\triangle ABC$ again at $E$. $\angle BAD=\angle
+        EAC$ (bisector) and $\angle ABD=\angle AEC$ (same arc $AC$), so $\triangle ABD\sim\triangle AEC$ and
+        $\tfrac{AB}{AE}=\tfrac{AD}{AC}$, i.e. $AB\cdot AC=AD\cdot AE=AD(AD+DE)=AD^2+AD\cdot DE$. Chords $AE$ and $BC$
+        meet at $D$: $\triangle ADB\sim\triangle CDE$ gives $AD\cdot DE=BD\cdot DC=mn$. So $bc=AD^2+mn$. Substituting
+        $m=\tfrac{ac}{b+c}$, $n=\tfrac{ab}{b+c}$:
+        $l_a^2=bc\!\left[1-\tfrac{a^2}{(b+c)^2}\right]=\tfrac{bc(b+c+a)(b+c-a)}{(b+c)^2}=\tfrac{4bc\,s(s-a)}{(b+c)^2}$.
+        $\blacksquare$ (Stewart in Section 5 gives the same result.)</p>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge — Harmonic Division &amp; the Incentre</span>
+        <p>$D$ (internal) and $D'$ (external) divide $BC$ in the <em>same ratio</em> $AB:AC$, with $\angle
+            DAD'=90^\circ$. So $A$ lies on the circle with diameter $DD'$ — the <em>Apollonius circle</em>, the locus of
+            points whose distances from $B$ and $C$ are in the fixed ratio $c:b$. Another big shortcut: the incentre $I$
+            lies on $AD$, and applying Theorem 4.1 to the bisector $BI$ in $\triangle ABD$ gives
+            $\dfrac{AI}{ID}=\dfrac{AB}{BD}=\dfrac{b+c}{a}$.</p>
+    </div>
+
+    <h2 class="section-heading">5 · Stewart's Theorem &amp; Apollonius's Median Theorem</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 5.1 — Stewart's Theorem</span>
+        <p>In $\triangle ABC$ let $D$ lie on $BC$ with $BD=m$, $DC=n$, $a=m+n$, and cevian $AD=d$. Then</p>
+        $$b^2m+c^2n=a\,(d^2+mn)$$
+        <p>Memory line: <em>"man + dad = bmb + cnc"</em> i.e. $mna+d^2a=b^2m+c^2n$. Note the cross pairing: each side
+            squared multiplies the segment next to the <em>other</em> vertex ($b=CA$ with $m=BD$; $c=AB$ with $n=DC$).
+        </p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 360 235" width="400" role="img" aria-label="Triangle ABC with cevian AD, BD = m, DC = n">
+            <g stroke="#1b2a49" stroke-width="2" fill="none" stroke-linejoin="round">
+                <polygon points="120,30 30,190 330,190" fill="#eef4fb" />
+                <line x1="120" y1="30" x2="130" y2="190" stroke="#c0392b" />
+            </g>
+            <g fill="#1b2a49">
+                <circle cx="130" cy="190" r="3" />
+            </g>
+            <g font-family="serif" font-size="16" font-style="italic" fill="#1b2a49" text-anchor="middle">
+                <text x="120" y="22">A</text><text x="16" y="208">B</text><text x="344" y="208">C</text><text x="130"
+                    y="208">D</text>
+                <text x="58" y="108">c</text><text x="242" y="104">b</text><text x="140" y="112">d</text>
+                <text x="80" y="208">m</text><text x="230" y="208">n</text><text x="180" y="228">a = m + n</text>
+            </g>
+        </svg>
+        <div class="diagram-caption">Fig. 5.1 — Stewart configuration: $BD=m$, $DC=n$, $AD=d$, $AB=c$, $AC=b$.</div>
+    </div>
+
+    <p><strong>Proof.</strong> Drop $AH\perp BC$, let $h=AH$ and let $p=DH$ (signed: positive towards $C$). Pythagoras
+        in the three right triangles: $d^2=h^2+p^2$, $c^2=h^2+(m+p)^2=d^2+m^2+2mp$, $b^2=h^2+(n-p)^2=d^2+n^2-2np$.
+        Multiply the second by $n$, the third by $m$ and add: $nc^2+mb^2=(m+n)d^2+mn(m+n)+2mnp-2mnp=a(d^2+mn)$.
+        $\blacksquare$</p>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 5.2 — Apollonius's Median Theorem (special case)</span>
+        <p>Put $m=n=\tfrac a2$ (so $D$ is the midpoint and $d=m_a$): $\;b^2+c^2=2\!\left(m_a^2+\dfrac{a^2}{4}\right)$,
+            hence</p>
+        $$m_a=\tfrac12\sqrt{2b^2+2c^2-a^2},\qquad m_a^2+m_b^2+m_c^2=\tfrac34\,(a^2+b^2+c^2).$$
+    </div>
+    <p><strong>Check by Stewart:</strong> for the angle bisector $m=\tfrac{ac}{b+c}$, $n=\tfrac{ab}{b+c}$:
+        $b^2m+c^2n=\tfrac{abc(b+c)}{b+c}=abc$, so $abc=a(d^2+mn)$ and $d^2=bc-mn$ — Theorem 4.3 recovered.</p>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge — When to Reach for Stewart</span>
+        <p>Stewart is the "length of a cevian" machine: use it when you know all three sides and the ratio $m:n$, or
+            when you know a cevian and two sub-lengths and want a side. Sanity checks before trusting an answer: $D\to
+            B$ ($m=0$, $d=c$) and $D\to C$ ($n=0$, $d=b$) must reproduce $c^2a=ac^2$ and $b^2a=ab^2$. The centroid $G$
+            divides each median $2:1$ (proved by Ceva/mass points below), so $AG=\tfrac23m_a$ — a key link in Example 9.
+        </p>
+    </div>
+
+    <h2 class="section-heading">6 · Ceva's Theorem &amp; Menelaus's Theorem</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 6.1 — Ceva's Theorem</span>
+        <p>Let $D,E,F$ be interior points of $BC,CA,AB$. The cevians $AD,BE,CF$ are concurrent if and only if</p>
+        $$\dfrac{BD}{DC}\cdot\dfrac{CE}{EA}\cdot\dfrac{AF}{FB}=1.$$
+        <p><em>Area form:</em> at the concurrency point $P$, $\dfrac{BD}{DC}=\dfrac{[ABP]}{[ACP]}$,
+            $\dfrac{CE}{EA}=\dfrac{[BCP]}{[BAP]}$, $\dfrac{AF}{FB}=\dfrac{[CAP]}{[CBP]}$.</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 340 235" width="380" role="img"
+            aria-label="Triangle ABC with concurrent cevians AD, BE, CF meeting at P; BD:DC=1:3, CE:EA=2:1, AF:FB=3:2">
+            <g stroke="#1b2a49" stroke-width="2" fill="none" stroke-linejoin="round">
+                <polygon points="160,20 30,200 310,200" fill="#eef4fb" />
+                <line x1="160" y1="20" x2="100" y2="200" stroke="#c0392b" />
+                <line x1="30" y1="200" x2="210" y2="80" stroke="#c0392b" />
+                <line x1="310" y1="200" x2="82" y2="128" stroke="#c0392b" />
+            </g>
+            <g fill="#1b2a49">
+                <circle cx="100" cy="200" r="3" />
+                <circle cx="210" cy="80" r="3" />
+                <circle cx="82" cy="128" r="3" />
+                <circle cx="120" cy="140" r="3.5" />
+            </g>
+            <g font-family="serif" font-size="16" font-style="italic" fill="#1b2a49" text-anchor="middle">
+                <text x="160" y="12">A</text><text x="18" y="216">B</text><text x="322" y="216">C</text><text x="100"
+                    y="218">D</text>
+                <text x="224" y="76">E</text><text x="66" y="124">F</text><text x="134" y="158">P</text>
+            </g>
+            <g font-family="sans-serif" font-size="13" fill="#444" text-anchor="middle">
+                <text x="65" y="216">1</text><text x="205" y="216">3</text><text x="276" y="140">2</text><text x="198"
+                    y="44">1</text><text x="104" y="68">3</text><text x="42" y="168">2</text>
+            </g>
+        </svg>
+        <div class="diagram-caption">Fig. 6.1 — Concurrent cevians: $BD:DC=1:3$, $CE:EA=2:1$, $AF:FB=3:2$. Check:
+            $\tfrac13\cdot2\cdot\tfrac32=1$.</div>
+    </div>
+
+    <p><strong>Proof (⇒).</strong> If $P$ lies on $AD$: $\tfrac{[ABD]}{[ACD]}=\tfrac{BD}{DC}$ and
+        $\tfrac{[PBD]}{[PCD]}=\tfrac{BD}{DC}$ (same heights). When $\tfrac xy=\tfrac zw$, also $\tfrac{x-z}{y-w}=\tfrac
+        xy$; hence $\tfrac{BD}{DC}=\tfrac{[ABD]-[PBD]}{[ACD]-[PCD]}=\tfrac{[ABP]}{[ACP]}$. Similarly
+        $\tfrac{CE}{EA}=\tfrac{[BCP]}{[BAP]}$ and $\tfrac{AF}{FB}=\tfrac{[CAP]}{[CBP]}$. Multiply: every area cancels,
+        product $=1$.</p>
+    <p><strong>Proof (⇐).</strong> Let $AD$ and $BE$ meet at $P$ and let $CP$ meet $AB$ at $F'$. By (⇒),
+        $\tfrac{BD}{DC}\tfrac{CE}{EA}\tfrac{AF'}{F'B}=1$. Comparing with the hypothesis,
+        $\tfrac{AF'}{F'B}=\tfrac{AF}{FB}$, so $F'=F$ (a ratio fixes a unique point on a segment). $\blacksquare$</p>
+
+    <div class="concept-box">
+        <span class="box-label">Ceva in Action — Four Famous Concurrencies</span>
+        <ul>
+            <li><strong>Medians:</strong> all ratios $1$ ⇒ centroid $G$.</li>
+            <li><strong>Internal bisectors:</strong> $\tfrac cb\cdot\tfrac ac\cdot\tfrac ba=1$ ⇒ incentre.</li>
+            <li><strong>Altitudes (acute triangle):</strong> $BD=c\cos B$, $DC=b\cos C$, etc.; product $\tfrac{c\cos
+                B}{b\cos C}\cdot\tfrac{a\cos C}{c\cos A}\cdot\tfrac{b\cos A}{a\cos B}=1$ ⇒ orthocentre.</li>
+            <li><strong>Incircle touch-points:</strong> equal tangent lengths make the product $1$ ⇒ Gergonne point
+                (Example 7).</li>
+        </ul>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 6.2 — Menelaus's Theorem</span>
+        <p>A line (not through a vertex) meets the lines $BC,CA,AB$ at $D,E,F$. Then, with unsigned lengths,</p>
+        $$\dfrac{AF}{FB}\cdot\dfrac{BD}{DC}\cdot\dfrac{CE}{EA}=1.$$
+        <p>The transversal meets either <em>two sides and one extended side</em>, or <em>all three extended sides</em>.
+            Converse: if the product is $1$ and an odd number (1 or 3) of $D,E,F$ lie on extensions, then $D,E,F$ are
+            collinear.</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 420 230" width="440" role="img"
+            aria-label="Triangle ABC with a transversal meeting AB at F, AC at E and BC produced at D">
+            <g stroke="#1b2a49" stroke-width="2" fill="none" stroke-linejoin="round">
+                <polygon points="150,30 50,190 250,190" fill="#eef4fb" />
+                <line x1="250" y1="190" x2="372" y2="190" stroke-dasharray="5,4" />
+                <line x1="60" y1="97.2" x2="372" y2="197" stroke="#c0392b" />
+            </g>
+            <g fill="#1b2a49">
+                <circle cx="100" cy="110" r="3.5" />
+                <circle cx="225" cy="150" r="3.5" />
+                <circle cx="350" cy="190" r="3.5" />
+            </g>
+            <g font-family="serif" font-size="16" font-style="italic" fill="#1b2a49" text-anchor="middle">
+                <text x="150" y="22">A</text><text x="38" y="208">B</text><text x="250" y="208">C</text><text x="358"
+                    y="182">D</text>
+                <text x="238" y="140">E</text><text x="84" y="100">F</text>
+            </g>
+            <g font-family="sans-serif" font-size="13" fill="#444" text-anchor="middle">
+                <text x="112" y="72">1</text><text x="60" y="154">1</text><text x="200" y="86">3</text><text x="252"
+                    y="170">1</text><text x="150" y="208">BC = 2</text><text x="300" y="208">CD = 1</text>
+            </g>
+        </svg>
+        <div class="diagram-caption">Fig. 6.2 — Transversal $FED$: $AF:FB=1:1$, $CE:EA=1:3$, $CD:BC=1:2$ so $BD:DC=3:1$.
+            Check: $1\cdot3\cdot\tfrac13=1$.</div>
+    </div>
+
+    <p><strong>Proof.</strong> Drop perpendiculars from $A,B,C$ to the transversal, of lengths $p,q,r$. Right triangles
+        $B\!\cdot\!D$ and $C\!\cdot\!D$ (feet on the line) share $\angle$ at $D$, so they are similar (AA):
+        $\tfrac{BD}{DC}=\tfrac qr$. In the same way $\tfrac{CE}{EA}=\tfrac rp$ and $\tfrac{AF}{FB}=\tfrac pq$. The
+        product is $\tfrac pq\cdot\tfrac qr\cdot\tfrac rp=1$. $\blacksquare$</p>
+    <p><strong>Zig-zag mnemonic:</strong> walk $A\to F\to B\to D\to C\to E\to A$; write each step as (distance to the
+        point)/(distance onward). The product of the three fractions is $1$.</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Ceva</th>
+                <th>Menelaus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Object</td>
+                <td>Three cevians through one point</td>
+                <td>One line (transversal)</td>
+            </tr>
+            <tr>
+                <td>Points $D,E,F$</td>
+                <td>All on the sides (inside)</td>
+                <td>One or three on extensions</td>
+            </tr>
+            <tr>
+                <td>Conclusion</td>
+                <td>Concurrent ⇔ product $=1$</td>
+                <td>Collinear ⇔ product $=1$ (odd # external)</td>
+            </tr>
+            <tr>
+                <td>Best use</td>
+                <td>Prove concurrency; find one missing ratio</td>
+                <td>Find a ratio on a cevian cut by a line</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-heading">7 · Mass Point Geometry</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Theorem 7.1 — Mass Point Rules</span>
+        <ol>
+            <li>If $D\in BC$ with $BD:DC=m:n$, give $B$ mass $n$ and $C$ mass $m$ (heavier on the <em>shorter</em>
+                side). Then $w_B\cdot BD=w_C\cdot DC$, and $D$ carries mass $w_B+w_C$.</li>
+            <li>With masses $w_A,w_B,w_C$ the cevians through $A,B,C$ meet at one point $P$ (the centre of mass) and
+                $\dfrac{AP}{PD}=\dfrac{w_B+w_C}{w_A}$.</li>
+            <li>Areas: $[PBC]:[PCA]:[PAB]=w_A:w_B:w_C$.</li>
+        </ol>
+    </div>
+    <p><strong>Proof (weighted averages).</strong> Let $W=w_A+w_B+w_C$ and define $P=\tfrac{w_AA+w_BB+w_CC}{W}$ and
+        $D=\tfrac{w_BB+w_CC}{w_B+w_C}$. Then $D-B=\tfrac{w_C}{w_B+w_C}(C-B)$, so $D\in BC$ with
+        $\tfrac{BD}{DC}=\tfrac{w_C}{w_B}$. Also $P=\tfrac{w_AA+(w_B+w_C)D}{W}$, so $P\in AD$ with
+        $\tfrac{AP}{PD}=\tfrac{w_B+w_C}{w_A}$. The same argument works from $B$ and $C$, so all three cevians pass
+        through $P$ (this also reproves Ceva). Areas: $\tfrac{[PBC]}{[ABC]}=\tfrac{PD}{AD}=\tfrac{w_A}{W}$.
+        $\blacksquare$</p>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 340 240" width="380" role="img"
+            aria-label="Mass point balancing: masses A=4, B=9, C=6, D=15, E=10">
+            <g stroke="#1b2a49" stroke-width="2" fill="none" stroke-linejoin="round">
+                <polygon points="150,20 30,200 310,200" fill="#eef4fb" />
+                <line x1="150" y1="20" x2="142" y2="200" stroke="#c0392b" />
+                <line x1="30" y1="200" x2="246" y2="128" stroke="#2563a8" />
+            </g>
+            <g fill="#fff7e0" stroke="#e08e0b" stroke-width="1.6">
+                <circle cx="150" cy="20" r="11" />
+                <circle cx="30" cy="200" r="11" />
+                <circle cx="310" cy="200" r="11" />
+                <circle cx="142" cy="200" r="11" />
+                <circle cx="246" cy="128" r="11" />
+            </g>
+            <g fill="#1b2a49">
+                <circle cx="143.7" cy="162.1" r="3.5" />
+            </g>
+            <g font-family="sans-serif" font-size="13" font-weight="bold" fill="#7a4a00" text-anchor="middle">
+                <text x="150" y="25">4</text><text x="30" y="205">9</text><text x="310" y="205">6</text><text x="142"
+                    y="205">15</text><text x="246" y="133">10</text>
+            </g>
+            <g font-family="serif" font-size="16" font-style="italic" fill="#1b2a49" text-anchor="middle">
+                <text x="170" y="16">A</text><text x="30" y="226">B</text><text x="310" y="226">C</text><text x="142"
+                    y="226">D</text><text x="266" y="124">E</text><text x="132" y="150">P</text>
+            </g>
+            <g font-family="sans-serif" font-size="13" fill="#444" text-anchor="middle">
+                <text x="86" y="220">2</text><text x="226" y="220">3</text><text x="212" y="70">3</text><text x="292"
+                    y="160">2</text>
+            </g>
+        </svg>
+        <div class="diagram-caption">Fig. 7.1 — $BD:DC=2:3$, $AE:EC=3:2$. Masses $A=4,B=9,C=6$ give $D=15$, $E=10$;
+            hence $AP:PD=15:4$ and $BP:PE=10:9$.</div>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Mass-Point Cookbook (30 seconds)</span>
+        <ol>
+            <li>On cevian $AD$: $BD:DC=2:3$ ⇒ $B=3$, $C=2$, $D=5$.</li>
+            <li>On cevian $BE$: $AE:EC=3:2$ needs $w_A\cdot3=w_C\cdot2$. Vertex $C$ already has mass $2$, but $w_A$
+                would be $\tfrac43$ — so <strong>scale the first set by 3</strong>: $B=9$, $C=6$, $D=15$; then $w_A=4$,
+                $E=w_A+w_C=10$.</li>
+            <li>Read off: $AP:PD=w_D:w_A=15:4$; $BP:PE=w_E:w_B=10:9$.</li>
+        </ol>
+        <p><strong>Rules of thumb:</strong> scale so a shared vertex gets one mass; masses give <em>ratios</em> only
+            (use $\tfrac{AP}{AD}$ with a known length to get lengths); a line cutting an extended side is a Menelaus job
+            (or use negative masses).</p>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge — Centroid, Incentre, Gergonne in One Line Each</span>
+        <p>Equal masses $(1,1,1)$ ⇒ $AG:GD=2:1$ (centroid). Masses $(a,b,c)$ ⇒ $AI:ID=(b+c):a$ (incentre). Masses
+            $\left(\tfrac1{s-a},\tfrac1{s-b},\tfrac1{s-c}\right)$ ⇒ Gergonne point. Concurrency of any three cevians is
+            exactly the statement that consistent masses exist, which is Ceva.</p>
+    </div>
+
+    <div class="formula-vault">
+        <span class="box-label">Formula Vault — Chapter 12</span>
+        <ul>
+            <li><strong>BPT:</strong> $DE\parallel BC\Rightarrow\tfrac{AD}{DB}=\tfrac{AE}{EC}$;
+                $\tfrac{AD}{AB}=\tfrac{AE}{AC}=\tfrac{DE}{BC}$. Midpoint: $DE=\tfrac12BC$.</li>
+            <li><strong>Trapezium:</strong> $\tfrac{AO}{OC}=\tfrac{AB}{CD}$; $[AOB]:[COD]=p^2:q^2$; $[AOD]=[BOC]$;
+                $[AOD]^2=[AOB][COD]$; $PQ=\tfrac{2pq}{p+q}$.</li>
+            <li><strong>Similarity:</strong> AA / SAS / SSS (SSA fails). Linear elements $\times k$; area $\times k^2$;
+                $\tfrac{[ADE]}{[ABC]}=\tfrac{AD\cdot AE}{AB\cdot AC}$.</li>
+            <li><strong>Right triangle:</strong> $h^2=xy$, $a^2=cx$, $b^2=cy$, $h=\tfrac{ab}{c}$,
+                $\tfrac1{h^2}=\tfrac1{a^2}+\tfrac1{b^2}$; poles/ladders: $h=\tfrac{ab}{a+b}$ ($u:v=a:b$).</li>
+            <li><strong>Angle bisector:</strong> $\tfrac{BD}{DC}=\tfrac cb$; $BD=\tfrac{ac}{b+c}$; external:
+                $\tfrac{BD'}{CD'}=\tfrac cb$; $l_a^2=bc-mn=\tfrac{4bc\,s(s-a)}{(b+c)^2}$;
+                $\tfrac{AI}{ID}=\tfrac{b+c}{a}$.</li>
+            <li><strong>Stewart:</strong> $b^2m+c^2n=a(d^2+mn)$. <strong>Apollonius:</strong>
+                $m_a^2=\tfrac{2b^2+2c^2-a^2}{4}$; $\sum m^2=\tfrac34\sum a^2$; $AG=\tfrac23m_a$.</li>
+            <li><strong>Ceva:</strong> $\tfrac{BD}{DC}\tfrac{CE}{EA}\tfrac{AF}{FB}=1$ (concurrent).
+                <strong>Menelaus:</strong> same product $=1$ (collinear, odd # external).
+            </li>
+            <li><strong>Mass points:</strong> $\tfrac{AP}{PD}=\tfrac{w_B+w_C}{w_A}$; $[PBC]:[PCA]:[PAB]=w_A:w_B:w_C$.
+            </li>
+            <li><strong>Perpendicular medians</strong> (from $A$ and $B$): $a^2+b^2=5c^2$ (derived in Example 9).</li>
+        </ul>
+    </div>
+
+    <h2 class="section-heading">Worked Examples — Level 1 → Level 3</h2>
+
+    <div class="level-banner l1">LEVEL 1 · WARMUP — one theorem, direct application</div>
+
+    <div class="worked-example tier-1">
+        <div class="ex-header"><span class="badge badge-l1">Level 1</span><span class="badge badge-type">BPT &amp;
+                Converse</span> <strong>Example 1</strong></div>
+        <div class="ex-problem">
+            <p>In $\triangle ABC$, $D\in AB$ and $E\in AC$ with $DE\parallel BC$. Given $AD=6$, $DB=9$, $AE=8$, $BC=25$
+                (all in cm), find (a) $EC$, (b) $DE$. (c) Points $F\in AB$, $G\in AC$ have $AF=3$, $AG=4$. Is
+                $FG\parallel BC$?</p>
+        </div>
+        <div class="ex-solution">
+            <p>(a) BPT: $\tfrac{AD}{DB}=\tfrac{AE}{EC}\Rightarrow\tfrac69=\tfrac8{EC}\Rightarrow EC=12$ cm.</p>
+            <p>(b) $AB=15$. $\triangle ADE\sim\triangle ABC$ (common $\angle A$; $\angle ADE=\angle ABC$,
+                corresponding). So $\tfrac{DE}{BC}=\tfrac{AD}{AB}=\tfrac6{15}=\tfrac25\Rightarrow DE=10$ cm. (Trap:
+                $\tfrac{DE}{BC}\ne\tfrac{AD}{DB}$.)</p>
+            <p>(c) $AC=8+12=20$, so $FB=15-3=12$ and $GC=20-4=16$. $\tfrac{AF}{FB}=\tfrac3{12}=\tfrac14$ and
+                $\tfrac{AG}{GC}=\tfrac4{16}=\tfrac14$. Equal ratios ⇒ by the converse of BPT, $FG\parallel BC$ (and
+                $FG=\tfrac3{15}\cdot25=5$ cm).</p>
+            <p><strong>Answers:</strong> $EC=12$, $DE=10$, yes $FG\parallel BC$.</p>
+        </div>
+    </div>
+
+    <div class="worked-example tier-1">
+        <div class="ex-header"><span class="badge badge-l1">Level 1</span><span class="badge badge-type">Similarity
+                Ratios</span> <strong>Example 2</strong></div>
+        <div class="ex-problem">
+            <p>$\triangle ABC$ has $AB=6$, $BC=8$, $CA=10$. $\triangle PQR\sim\triangle ABC$ (in this order) with
+                $PQ=9$. Find $QR$, $RP$, the perimeter of $\triangle PQR$, $[ABC]:[PQR]$, and the inradius of $\triangle
+                PQR$.</p>
+        </div>
+        <div class="ex-solution">
+            <p>Order of naming gives $AB\leftrightarrow PQ$, so $k=\tfrac{PQ}{AB}=\tfrac96=\tfrac32$ (from $ABC$ to
+                $PQR$).</p>
+            <p>$QR=8\cdot\tfrac32=12$, $RP=10\cdot\tfrac32=15$, perimeter $=9+12+15=36$ (check: $24\cdot\tfrac32=36$).
+            </p>
+            <p>$6^2+8^2=100=10^2$, so $\triangle ABC$ is right-angled at $B$ with area $\tfrac12\cdot6\cdot8=24$. Area
+                scales by $k^2=\tfrac94$, so $[PQR]=54$ (check: $\tfrac12\cdot9\cdot12=54$). Hence
+                $[ABC]:[PQR]=24:54=4:9$.</p>
+            <p>Inradius of $ABC$: $r=\tfrac{[ABC]}{s}=\tfrac{24}{12}=2$; for $PQR$: $r=2\cdot\tfrac32=3$ (check:
+                $\tfrac{54}{18}=3$).</p>
+            <p><strong>Answers:</strong> $QR=12$, $RP=15$, perimeter $36$, areas $4:9$, inradius $3$.</p>
+        </div>
+    </div>
+
+    <div class="worked-example tier-1">
+        <div class="ex-header"><span class="badge badge-l1">Level 1</span><span class="badge badge-type">Altitude
+                Theorem</span> <strong>Example 3</strong></div>
+        <div class="ex-problem">
+            <p>In $\triangle ABC$, $\angle C=90^\circ$ and $CD\perp AB$ with $D\in AB$, $AD=9$, $DB=16$. Find $CD$,
+                $AC$, $BC$ and verify $\tfrac1{CD^2}=\tfrac1{AC^2}+\tfrac1{BC^2}$.</p>
+        </div>
+        <div class="ex-solution">
+            <p>$AB=9+16=25$. $CD^2=AD\cdot DB=144\Rightarrow CD=12$. $AC^2=AB\cdot AD=25\cdot9=225\Rightarrow AC=15$.
+                $BC^2=AB\cdot DB=25\cdot16=400\Rightarrow BC=20$.</p>
+            <p>Check Pythagoras: $15^2+20^2=625=25^2$. Reciprocal relation:
+                $\tfrac1{225}+\tfrac1{400}=\tfrac{16+9}{3600}=\tfrac{25}{3600}=\tfrac1{144}=\tfrac1{12^2}$ ✓.</p>
+            <p><strong>Answers:</strong> $CD=12$, $AC=15$, $BC=20$.</p>
+        </div>
+    </div>
+
+    <div class="level-banner l2">LEVEL 2 · EXAM-REAL — two or three ideas combined</div>
+
+    <div class="worked-example tier-2">
+        <div class="ex-header"><span class="badge badge-l2">Level 2</span><span class="badge badge-type">Trapezium +
+                Crossing Poles</span> <strong>Example 4</strong></div>
+        <div class="ex-problem">
+            <p>In trapezium $ABCD$ (Fig. 1.2), $AB\parallel CD$, $AB=15$, $CD=10$, diagonals meet at $O$. The line
+                through $O$ parallel to $AB$ meets $AD$ at $P$ and $BC$ at $Q$. (a) Find $AO:OC$. (b) Find $PQ$. (c) If
+                $[COD]=32$, find $[AOB]$, $[AOD]$ and $[ABCD]$. (d) Two vertical poles $15$ m and $10$ m tall have wires
+                from the top of each to the foot of the other. Find the height of the crossing point and relate it to
+                (b).</p>
+        </div>
+        <div class="ex-solution">
+            <p>(a) $\triangle OAB\sim\triangle OCD$ (AA, alternate angles) ⇒ $\tfrac{AO}{OC}=\tfrac{AB}{CD}=\tfrac32$.
+            </p>
+            <p>(b) $\tfrac{AO}{AC}=\tfrac35$. In $\triangle ADC$, $PO\parallel DC$ ⇒ $PO=\tfrac35\cdot10=6$. In
+                $\triangle BCD$, $OQ\parallel DC$ and $\tfrac{BO}{BD}=\tfrac35$ ⇒ $OQ=6$. So $PQ=12$ (check:
+                $\tfrac{2\cdot15\cdot10}{25}=12$).</p>
+            <p>(c) $[AOB]=[COD]\cdot\left(\tfrac32\right)^2=32\cdot\tfrac94=72$. $\triangle AOD$ and $\triangle AOB$
+                have apex $A$ and bases $OD,OB$ on $BD$: $[AOD]=72\cdot\tfrac{OD}{OB}=72\cdot\tfrac23=48$, and
+                $[BOC]=[AOD]=48$. Total $[ABCD]=72+32+48+48=200$.</p>
+            <p>(d) $h=\tfrac{15\cdot10}{15+10}=6$ m. In the trapezium picture the poles are the parallel sides, so the
+                vertical segment through the crossing point has length $PQ=12$ and the crossing point is its midpoint:
+                $h=\tfrac{12}{2}=6$ ✓.</p>
+            <p><strong>Answers:</strong> $3:2$; $12$; $72,48,200$; $6$ m.</p>
+        </div>
+    </div>
+
+    <div class="worked-example tier-2">
+        <div class="ex-header"><span class="badge badge-l2">Level 2</span><span class="badge badge-type">Angle
+                Bisectors</span> <strong>Example 5</strong></div>
+        <div class="ex-problem">
+            <p>In $\triangle ABC$, $AB=15$, $AC=12$, $BC=18$. The internal bisector of $\angle A$ meets $BC$ at $D$ and
+                the external bisector meets $BC$ produced at $D'$. Find $BD$, $DC$, $AD$, $CD'$ and $DD'$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Internal.</strong> $\tfrac{BD}{DC}=\tfrac{AB}{AC}=\tfrac{15}{12}=\tfrac54$, so
+                $BD=18\cdot\tfrac59=10$, $DC=8$. Bisector length: $AD^2=AB\cdot AC-BD\cdot DC=180-80=100\Rightarrow
+                AD=10$. (Check by formula: $s=22.5$, $\tfrac{2\sqrt{180\cdot22.5\cdot4.5}}{27}=\tfrac{2\cdot135}{27}=10$
+                ✓.)</p>
+            <p><strong>External.</strong> $AB>AC$, so $D'$ lies beyond $C$. $\tfrac{BD'}{CD'}=\tfrac54$ and
+                $BD'=18+CD'$, so $4(18+CD')=5\,CD'\Rightarrow CD'=72$, $BD'=90$. Then $DD'=DC+CD'=8+72=80$.</p>
+            <p>Bonus check: $\angle DAD'=90^\circ$, so $AD'^2=80^2-10^2=6300$.</p>
+            <p><strong>Answers:</strong> $BD=10$, $DC=8$, $AD=10$, $CD'=72$, $DD'=80$.</p>
+        </div>
+    </div>
+
+    <div class="worked-example tier-2">
+        <div class="ex-header"><span class="badge badge-l2">Level 2</span><span class="badge badge-type">Stewart &amp;
+                Apollonius</span> <strong>Example 6</strong></div>
+        <div class="ex-problem">
+            <p>In $\triangle ABC$, $AB=13$, $BC=14$, $CA=15$. $D$ lies on $BC$ with $BD:DC=5:2$. Find $AD$, and also the
+                median $AM$ to $BC$.</p>
+        </div>
+        <div class="ex-solution">
+            <p>$BD=10$, $DC=4$. Take $a=14$, $b=CA=15$, $c=AB=13$, $m=BD=10$, $n=DC=4$. Stewart:
+                $b^2m+c^2n=225\cdot10+169\cdot4=2926$ and $a(d^2+mn)=14(d^2+40)$. So $d^2+40=209$, $d^2=169$, $AD=13$.
+            </p>
+            <p><em>Cross-check:</em> area by Heron $=\sqrt{21\cdot8\cdot7\cdot6}=84$, so the altitude from $A$ is $12$,
+                foot $H$ with $BH=\sqrt{13^2-12^2}=5$. $D$ is $5$ beyond $H$, so $AD^2=12^2+5^2=169$ ✓. (Here $AD=AB$:
+                $H$ is the midpoint of $BD$.)</p>
+            <p>Median (Apollonius): $AM^2=\tfrac{2\cdot225+2\cdot169-196}{4}=\tfrac{592}{4}=148$, so $AM=2\sqrt{37}$.
+            </p>
+            <p><strong>Answers:</strong> $AD=13$, $AM=2\sqrt{37}$.</p>
+        </div>
+    </div>
+
+    <div class="level-banner l3">LEVEL 3 · RANK-BOOSTER — full derivation, then the 30-second shortcut</div>
+
+    <div class="worked-example tier-3">
+        <div class="ex-header"><span class="badge badge-l3">Level 3</span><span class="badge badge-type">Ceva · Gergonne
+                Point</span> <strong>Example 7</strong></div>
+        <div class="ex-problem">
+            <p>The incircle of $\triangle ABC$ touches $BC,CA,AB$ at $D,E,F$. (a) Prove that $AD,BE,CF$ are concurrent.
+                (b) For $AB=13$, $BC=14$, $CA=15$ and common point $P$, find $AP:PD$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full derivation.</strong> (a) Tangents from a point to a circle are equal: $AE=AF=x$, $BD=BF=y$,
+                $CD=CE=z$. Then $\tfrac{BD}{DC}\cdot\tfrac{CE}{EA}\cdot\tfrac{AF}{FB}=\tfrac yz\cdot\tfrac zx\cdot\tfrac
+                xy=1$ with all three points interior, so by the converse of Ceva the cevians are concurrent.
+                $\blacksquare$</p>
+            <p>(b) $s=21$, so $x=s-a=7$, $y=s-b=6$, $z=s-c=8$ (check: $x+y=13=c$ ✓). Thus $BD=6$, $DC=8$, $CE=8$,
+                $EA=7$. Menelaus in $\triangle ADC$ with transversal $B$–$P$–$E$ (zig-zag $A\to P\to D\to B\to C\to E\to
+                A$):
+                $\tfrac{AP}{PD}\cdot\tfrac{DB}{BC}\cdot\tfrac{CE}{EA}=1\Rightarrow\tfrac{AP}{PD}\cdot\tfrac6{14}\cdot\tfrac87=1\Rightarrow\tfrac{AP}{PD}=\tfrac{14\cdot7}{6\cdot8}=\tfrac{49}{24}$.
+            </p>
+            <div class="shortcut-box">
+                <strong>30-Second Shortcut (mass points).</strong> Masses are the <em>reciprocals</em> of the tangent
+                lengths: $A:B:C=\tfrac17:\tfrac16:\tfrac18$. Multiply by $168$: $A=24$, $B=28$, $C=21$. Then $D=B+C=49$
+                and $AP:PD=w_D:w_A=49:24$. (Check: $BD:DC=w_C:w_B=21:28=6:8$ ✓.)
+            </div>
+            <p><strong>Answer:</strong> concurrent (Gergonne point); $AP:PD=49:24$.</p>
+        </div>
+    </div>
+
+    <div class="worked-example tier-3">
+        <div class="ex-header"><span class="badge badge-l3">Level 3</span><span class="badge badge-type">Menelaus ×3 ·
+                Mass Points · Areas</span> <strong>Example 8</strong></div>
+        <div class="ex-problem">
+            <p>In Fig. 6.1, $BD:DC=1:3$, $CE:EA=2:1$, $AF:FB=3:2$ and $AD,BE,CF$ meet at $P$. Find $AP:PD$, $BP:PE$,
+                $CP:PF$ and $[PBC]:[PCA]:[PAB]$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full derivation (Menelaus).</strong> Let $BD=1,DC=3$ (so $BC=4$), $CE=2,EA=1$ ($CA=3$),
+                $AF=3,FB=2$ ($AB=5$).</p>
+            <ol>
+                <li>$\triangle ADC$, transversal $B$–$P$–$E$:
+                    $\tfrac{AP}{PD}\cdot\tfrac{DB}{BC}\cdot\tfrac{CE}{EA}=1\Rightarrow\tfrac{AP}{PD}\cdot\tfrac14\cdot2=1\Rightarrow
+                    AP:PD=2:1$.</li>
+                <li>$\triangle BEC$, transversal $A$–$P$–$D$ (zig-zag $B\to P\to E\to A\to C\to D\to B$):
+                    $\tfrac{BP}{PE}\cdot\tfrac{EA}{AC}\cdot\tfrac{CD}{DB}=1\Rightarrow\tfrac{BP}{PE}\cdot\tfrac13\cdot3=1\Rightarrow
+                    BP:PE=1:1$.</li>
+                <li>$\triangle AFC$, transversal $B$–$P$–$E$ ($B$ lies on $AF$ produced):
+                    $\tfrac{AB}{BF}\cdot\tfrac{FP}{PC}\cdot\tfrac{CE}{EA}=1\Rightarrow\tfrac52\cdot\tfrac{FP}{PC}\cdot2=1\Rightarrow
+                    FP:PC=1:5$, i.e. $CP:PF=5:1$.</li>
+                <li>Areas (same base $BC$ etc.): $\tfrac{[PBC]}{[ABC]}=\tfrac{PD}{AD}=\tfrac13$,
+                    $\tfrac{[PCA]}{[ABC]}=\tfrac{PE}{BE}=\tfrac12$, $\tfrac{[PAB]}{[ABC]}=\tfrac{PF}{CF}=\tfrac16$.
+                    Ratio $=2:3:1$.</li>
+            </ol>
+            <div class="shortcut-box">
+                <strong>30-Second Shortcut (mass points).</strong> $BD:DC=1:3\Rightarrow B:C=3:1$. $CE:EA=2:1\Rightarrow
+                w_C\cdot2=w_A\cdot1\Rightarrow A=2$ (with $C=1$). Check $AF:FB=3:2$: $w_A\cdot3=w_B\cdot2\Rightarrow
+                B=3$ ✓ — consistent masses <em>are</em> Ceva. With $(A,B,C)=(2,3,1)$: $AP:PD=(3+1):2=2:1$,
+                $BP:PE=(2+1):3=1:1$, $CP:PF=(2+3):1=5:1$, and $[PBC]:[PCA]:[PAB]=w_A:w_B:w_C=2:3:1$.
+            </div>
+            <p><strong>Answers:</strong> $2:1$, $1:1$, $5:1$, $2:3:1$.</p>
+        </div>
+    </div>
+
+    <div class="worked-example tier-3">
+        <div class="ex-header"><span class="badge badge-l3">Level 3</span><span class="badge badge-type">Apollonius ·
+                Perpendicular Medians</span> <strong>Example 9</strong></div>
+        <div class="ex-problem">
+            <p>In $\triangle ABC$ the medians $AD$ (to $BC$) and $BE$ (to $CA$) are perpendicular. If $BC=22$ and
+                $CA=19$, find $AB$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full derivation.</strong> Let $G$ be the centroid; $AG=\tfrac23m_a$, $BG=\tfrac23m_b$ (medians
+                divide $2:1$). Since $AD\perp BE$, $\angle AGB=90^\circ$, so $AG^2+BG^2=AB^2=c^2$, i.e.
+                $\tfrac49(m_a^2+m_b^2)=c^2$. Apollonius: $m_a^2=\tfrac{2b^2+2c^2-a^2}{4}$ and
+                $m_b^2=\tfrac{2a^2+2c^2-b^2}{4}$, so $m_a^2+m_b^2=\tfrac{a^2+b^2+4c^2}{4}$. Therefore
+                $\tfrac{a^2+b^2+4c^2}{9}=c^2\Rightarrow a^2+b^2=5c^2$.</p>
+            <p>With $a=22$, $b=19$: $484+361=845=5c^2\Rightarrow c^2=169\Rightarrow AB=13$.</p>
+            <p><em>Verification:</em> $m_a^2=\tfrac{2\cdot361+2\cdot169-484}{4}=144$, $AG=8$; $m_b^2=\tfrac{945}{4}$,
+                $BG^2=\tfrac49\cdot\tfrac{945}{4}=105$; $AG^2+BG^2=64+105=169=c^2$ ✓. The sides $13,19,22$ also satisfy
+                the triangle inequality ($13+19>22$).</p>
+            <div class="shortcut-box">
+                <strong>30-Second Shortcut.</strong> Medians to sides $a$ and $b$ are perpendicular $\iff a^2+b^2=5c^2$,
+                where $c$ is the third side (the one joining the two vertices the medians start from). Read:
+                $c^2=\tfrac{22^2+19^2}{5}=\tfrac{845}{5}=169$, so $AB=13$.
+            </div>
+            <p><strong>Answer:</strong> $AB=13$.</p>
+        </div>
+    </div>
+
+</article>

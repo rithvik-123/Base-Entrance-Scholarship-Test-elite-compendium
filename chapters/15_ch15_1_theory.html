@@ -1,0 +1,1099 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 15: Heights &amp; Distances (2D Static, Moving Objects &amp; Multi-Observer Bridges)">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 2: Mathematics (Paper 1) &bull; Chapter 15 &bull; Target Study Time: 5 Hours
+        </div>
+        <h1>Heights &amp; Distances (2D Static, Moving Objects &amp; Multi-Observer Bridges)</h1>
+        <p>Translating real-world geometry into rapid trigonometric ratio ladders, classical multi-triangle systems,
+            cloud-lake reflection optics, 2D moving-observer kinematics, inclined slopes, and 3D orthogonal ground-plane
+            projections.</p>
+        <div class="tag-row">
+            <span class="meta-pill">BEST Paper 1 Core</span>
+            <span class="meta-pill">NTSE Stage 2 &bull; IOQM-Lite</span>
+            <span class="meta-pill">2D Kinematics &amp; 3D Plane Bridge</span>
+            <span class="meta-pill">Part 1 of 3: Theory &amp; Worked Examples</span>
+        </div>
+    </header>
+
+    <!-- =========================================================
+       SECTION 15.1: LINE OF SIGHT, ELEVATION/DEPRESSION & RATIO LADDERS
+       ========================================================= -->
+    <h2 class="section-heading">15.1 Line of Sight, Elevation vs. Depression &amp; Rapid Ratio-Ladder Solving</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Fundamental Definitions &amp; The Alternate-Interior Equality Theorem</span>
+        <p>Every Heights &amp; Distances diagram rests on three geometric rays emanating from an observer's eye $O$
+            viewing a target point $P$:</p>
+        <ul>
+            <li><strong>Line of Sight:</strong> The straight-line segment $OP$ joining the observer's eye $O$ to the
+                viewed point $P$.</li>
+            <li><strong>Horizontal Level:</strong> The horizontal ray drawn through the observer's eye $O$, parallel to
+                level ground (and strictly perpendicular to every vertical tower or wall).</li>
+            <li><strong>Angle of Elevation ($\alpha$):</strong> When $P$ lies <em>above</em> the observer's horizontal
+                level, $\alpha$ is the acute angle measured <strong>upward</strong> from the horizontal level to the
+                line of sight $OP$.</li>
+            <li><strong>Angle of Depression ($\beta$):</strong> When $P$ lies <em>below</em> the observer's horizontal
+                level, $\beta$ is the acute angle measured <strong>downward</strong> from the horizontal level to the
+                line of sight $OP$.</li>
+        </ul>
+        <p><strong>Critical Geometric Theorem:</strong> Because the upper horizontal line through $B$ and the lower
+            horizontal line through $A$ are strictly parallel and intersected by the common line of sight $AB$ (a
+            transversal), the <strong>alternate interior angles are always equal</strong>:</p>
+        $$ \text{Angle of Depression of } A \text{ from } B \;=\; \text{Angle of Elevation of } B \text{ from } A $$
+        <p><em>Warning:</em> Both elevation and depression are ALWAYS measured from the <strong>horizontal</strong>,
+            NEVER from a vertical tower wall! If an observer looks down at a $30^\circ$ depression angle, the interior
+            angle against the vertical wall is $90^\circ - 30^\circ = 60^\circ$, not $30^\circ$.</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 580 230" width="100%" role="img"
+            aria-label="Angle of elevation and angle of depression between observer A and tower top B showing parallel horizontal lines">
+            <defs>
+                <marker id="hd-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+                </marker>
+            </defs>
+
+            <!-- Ground line -->
+            <line x1="25" y1="195" x2="315" y2="195" stroke="#334155" stroke-width="2" />
+            <!-- Vertical tower -->
+            <rect x="260" y="55" width="14" height="140" fill="#e2e8f0" stroke="#475569" stroke-width="1.6" />
+            <!-- Right angle marker at foot -->
+            <polyline points="247,195 247,182 260,182" fill="none" stroke="#475569" stroke-width="1.4" />
+
+            <!-- Upper horizontal line through B(260,55) -->
+            <line x1="65" y1="55" x2="295" y2="55" stroke="#2563eb" stroke-width="1.6" stroke-dasharray="6,4" />
+            <text x="72" y="45" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#2563eb">Upper Horizontal (parallel to ground)</text>
+
+            <!-- Lower horizontal highlight -->
+            <text x="128" y="213" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#059669">Lower Horizontal (Ground)</text>
+
+            <!-- Line of sight AB -->
+            <line x1="65" y1="195" x2="260" y2="55" stroke="#dc2626" stroke-width="2.4" />
+            <text x="150" y="114" text-anchor="middle" transform="rotate(-35.7 150,114)"
+                font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#dc2626">Line of Sight
+                (Transversal)</text>
+
+            <!-- Angle of elevation arc at A(65,195): angle is 35.7 deg -->
+            <path d="M 118,195 A 53,53 0 0 0 108,164" fill="none" stroke="#059669" stroke-width="2.2" />
+            <text x="124" y="185" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="bold"
+                fill="#047857">θ</text>
+            <text x="139" y="185" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#047857">(Elevation)</text>
+
+            <!-- Angle of depression arc at B(260,55) -->
+            <path d="M 207,55 A 53,53 0 0 0 217,86" fill="none" stroke="#d97706" stroke-width="2.2" />
+            <text x="193" y="75" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="bold"
+                fill="#b45309">θ</text>
+            <text x="112" y="75" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#b45309">(Depression)</text>
+
+            <!-- Points A and B -->
+            <circle cx="65" cy="195" r="4" fill="#1e293b" />
+            <circle cx="260" cy="55" r="4" fill="#1e293b" />
+            <text x="49" y="200" font-family="system-ui, sans-serif" font-size="13" font-weight="800"
+                fill="#1e293b">A</text>
+            <text x="278" y="51" font-family="system-ui, sans-serif" font-size="13" font-weight="800"
+                fill="#1e293b">B</text>
+            <text x="279" y="198" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#475569">C</text>
+
+            <!-- Right info panel -->
+            <rect x="338" y="28" width="224" height="172" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4" />
+            <text x="450" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12.5"
+                font-weight="800" fill="#1e293b">Z-Angle Equivalence Rule</text>
+            <line x1="354" y1="62" x2="546" y2="62" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="354" y="86" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600"
+                fill="#334155">1. Upper Horizontal ∥ Ground</text>
+            <text x="354" y="109" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600"
+                fill="#334155">2. Line of sight AB is transversal</text>
+            <text x="354" y="132" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#b45309">3. ∠Depression(B→A) = ∠Elev(A→B)</text>
+            <line x1="354" y1="146" x2="546" y2="146" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="450" y="168" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#dc2626">NEVER measure from the vertical!</text>
+            <text x="450" y="186" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                fill="#475569">Angle with wall BC is (90° − θ)</text>
+        </svg>
+        <div class="diagram-caption">Figure 15.1: Parallel horizontal rays make the angle of depression from $B$ to $A$
+            strictly equal to the angle of elevation from $A$ to $B$.</div>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Speed Weapon &bull; Rapid Ratio-Ladder Solving (15-Second Multi-Triangle Method)</span>
+        <p>In over 70% of BEST Paper 1 Heights &amp; Distances problems, the angles belong to $\{30^\circ, 45^\circ,
+            60^\circ\}$. Instead of writing two simultaneous $\tan\theta$ equations and rationalizing denominators
+            repeatedly, assign a single <strong>unit variable $u$</strong> to the shared side (usually the tower height
+            $h$ or common base) using two exact side-ratio ladders:</p>
+        <ul>
+            <li><strong>$30^\circ\text{–}60^\circ\text{–}90^\circ$ Ladder:</strong> Sides opposite $(30^\circ : 60^\circ
+                : 90^\circ) = \mathbf{1 : \sqrt{3} : 2}$.</li>
+            <li><strong>$45^\circ\text{–}45^\circ\text{–}90^\circ$ Ladder:</strong> Sides opposite $(45^\circ : 45^\circ
+                : 90^\circ) = \mathbf{1 : 1 : \sqrt{2}}$.</li>
+        </ul>
+        <p><strong>Golden Synchronization Rule:</strong> When two right triangles share a vertical tower $OT$, pick the
+            height $OT$ so that <em>neither</em> base contains a fraction:</p>
+        <ol>
+            <li><strong>$30^\circ\text{–}60^\circ$ Nested Pair:</strong> Set tower height $OT = \mathbf{\sqrt{3}\,u}$.
+                Then the $60^\circ$ base is $OB = \mathbf{1\,u}$, the $30^\circ$ base is $OA = \mathbf{3\,u}$, and the
+                gap between observers is $AB = 3u - 1u = \mathbf{2\,u}$! (Notice $AB = 2 \cdot OB$ instantly!)</li>
+            <li><strong>$30^\circ\text{–}45^\circ$ Nested Pair:</strong> Set tower height $OT = \mathbf{1\,u}$. Then $OB
+                = \mathbf{1\,u}$, $OA = \mathbf{\sqrt{3}\,u}$, and the gap is $AB = \mathbf{(\sqrt{3} - 1)\,u}$.</li>
+            <li><strong>$45^\circ\text{–}60^\circ$ Nested Pair:</strong> Set tower height $OT = \mathbf{\sqrt{3}\,u}$.
+                Then $OB = \mathbf{1\,u}$, $OA = \mathbf{\sqrt{3}\,u}$, and the gap is $AB = \mathbf{(\sqrt{3} -
+                1)\,u}$.</li>
+        </ol>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 600 240" width="100%" role="img"
+            aria-label="Rapid ratio ladders for 30-60 and 30-45 nested right triangles">
+            <!-- LEFT PANEL: 30-60 Nested Pair -->
+            <text x="150" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12.5"
+                font-weight="800" fill="#1e293b">Ladder A: 30° &amp; 60° Pair (Set h = √3 u)</text>
+            <!-- Triangles -->
+            <polygon points="48,185 268,185 268,58" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8" />
+            <polygon points="195,185 268,185 268,58" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2" />
+            <!-- Right angle -->
+            <polyline points="256,185 256,173 268,173" fill="none" stroke="#1e293b" stroke-width="1.4" />
+            <!-- Angle labels -->
+            <path d="M 88,185 A 40,40 0 0 0 82.6,165" fill="none" stroke="#d97706" stroke-width="1.8" />
+            <text x="93" y="177" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#b45309">30°</text>
+            <path d="M 223,185 A 28,28 0 0 0 209,160.8" fill="none" stroke="#dc2626" stroke-width="1.8" />
+            <text x="218" y="174" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#dc2626">60°</text>
+            <!-- Side unit annotations -->
+            <text x="275" y="126" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#1e40af">√3
+                u</text>
+            <text x="122" y="204" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold"
+                fill="#059669">2u</text>
+            <text x="232" y="204" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold"
+                fill="#dc2626">1u</text>
+            <text x="158" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#334155">Total Base OA = 3u (Gap AB = 2 × OB)</text>
+            <!-- Vertices -->
+            <text x="36" y="191" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1e293b">A</text>
+            <text x="191" y="202" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1e293b">B</text>
+            <text x="273" y="196" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1e293b">O</text>
+            <text x="266" y="49" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1e293b">T</text>
+
+            <!-- Divider -->
+            <line x1="316" y1="18" x2="316" y2="232" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4,4" />
+
+            <!-- RIGHT PANEL: 30-45 Nested Pair -->
+            <text x="458" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12.5"
+                font-weight="800" fill="#1e293b">Ladder B: 30° &amp; 45° Pair (Set h = 1 u)</text>
+            <!-- Triangles: height=110 (y=185 to 75). OB=110 -> B(455,185), O(565,185). OA=190.5 -> A(374.5,185) -->
+            <polygon points="374,185 565,185 565,75" fill="#ecfdf5" stroke="#059669" stroke-width="1.8" />
+            <polygon points="455,185 565,185 565,75" fill="#d1fae5" stroke="#047857" stroke-width="2" />
+            <!-- Right angle -->
+            <polyline points="553,185 553,173 565,173" fill="none" stroke="#1e293b" stroke-width="1.4" />
+            <!-- Angle labels -->
+            <path d="M 412,185 A 38,38 0 0 0 407,166" fill="none" stroke="#d97706" stroke-width="1.8" />
+            <text x="416" y="177" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#b45309">30°</text>
+            <path d="M 487,185 A 32,32 0 0 0 477.6,162.4" fill="none" stroke="#047857" stroke-width="1.8" />
+            <text x="490" y="176" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#047857">45°</text>
+            <!-- Side unit annotations -->
+            <text x="572" y="135" font-family="Georgia, serif" font-size="13" font-weight="bold"
+                fill="#065f46">1u</text>
+            <text x="415" y="204" text-anchor="middle" font-family="Georgia, serif" font-size="12.5" font-weight="bold"
+                fill="#059669">(√3−1)u</text>
+            <text x="510" y="204" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold"
+                fill="#065f46">1u</text>
+            <text x="468" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#334155">Total Base OA = √3 u (BT = √2 u)</text>
+            <!-- Vertices -->
+            <text x="362" y="191" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1e293b">A</text>
+            <text x="451" y="202" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1e293b">B</text>
+            <text x="569" y="196" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1e293b">O</text>
+            <text x="562" y="66" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#1e293b">T</text>
+        </svg>
+        <div class="diagram-caption">Figure 15.2: Synchronized ratio ladders eliminate simultaneous equations—read off
+            every segment in one mental multiplication.</div>
+    </div>
+
+    <!-- =========================================================
+       SECTION 15.2: CLASSICAL STATIC MULTI-TRIANGLE CONFIGURATIONS
+       ========================================================= -->
+    <h2 class="section-heading">15.2 Classical Static Multi-Triangle Configurations</h2>
+
+    <p>Almost every static 2D problem in BEST Paper 1 reduces to one of five canonical structural blueprints. Memorizing
+        the <em>structure</em> (and deriving each equation in two lines) makes every diagram automatic:</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Configuration</th>
+                <th>Geometric Setup</th>
+                <th>Master Formula</th>
+                <th>Key Structural Insight</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1. Two Observers (Same Side)</strong></td>
+                <td>Collinear points $A, B$ on same side of tower ($h$); elevations $\alpha \lt \beta$</td>
+                <td>$d = h(\cot\alpha - \cot\beta)$</td>
+                <td>Farther observer always has the <em>smaller</em> angle ($\alpha \lt \beta \implies \cot\alpha \gt
+                    \cot\beta$).</td>
+            </tr>
+            <tr>
+                <td><strong>2. Two Observers (Opposite Sides)</strong></td>
+                <td>Points $A, B$ on opposite sides of foot $O$; elevations $\alpha, \beta$</td>
+                <td>$d = h(\cot\alpha + \cot\beta)$</td>
+                <td>Base distances <em>add</em>: $AB = AO + OB$.</td>
+            </tr>
+            <tr>
+                <td><strong>3. Flagstaff on a Pedestal / Tower</strong></td>
+                <td>Flagstaff ($f$) atop tower ($h$); from $x$ away, bottom is $\alpha$, top is $\beta$</td>
+                <td>$f = x(\tan\beta - \tan\alpha) = h\left(\dfrac{\tan\beta}{\tan\alpha} - 1\right)$</td>
+                <td>Share the horizontal base $x = h\cot\alpha = (h+f)\cot\beta$.</td>
+            </tr>
+            <tr>
+                <td><strong>4. Building &amp; Cable Tower</strong></td>
+                <td>From building top ($h_1$): depression to tower foot is $\alpha$, elevation to top is $\beta$</td>
+                <td>$H = h_1(1 + \cot\alpha\tan\beta)$</td>
+                <td>Horizontal separation is fixed by the lower triangle: $x = h_1\cot\alpha$.</td>
+            </tr>
+            <tr>
+                <td><strong>5. Broken Vertical Tree</strong></td>
+                <td>Tree breaks at height $h_1$; leaning top ($L$) meets ground at distance $d$, angle $\theta$</td>
+                <td>$H_{\text{orig}} = h_1 + L = d(\tan\theta + \sec\theta)$</td>
+                <td>Original height is <strong>perpendicular + hypotenuse</strong>, NEVER just perpendicular!</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <span class="box-label">High-Frequency Theorem &bull; The Complementary Angle Geometric Mean Theorem</span>
+        <p><strong>Theorem:</strong> From two points $A$ and $B$ on the same straight line through the foot $O$ of a
+            vertical tower of height $h$, at distances $a$ and $b$ from $O$ ($a, b \gt 0$, whether on the same side or
+            opposite sides of $O$), if the angles of elevation $\alpha$ and $\beta$ of the tower's top are
+            <strong>complementary</strong> ($\alpha + \beta = 90^\circ$), then the height of the tower is the exact
+            <strong>geometric mean</strong> of the two distances:
+        </p>
+        $$ \mathbf{h = \sqrt{ab}} $$
+        <p><strong>First-Principles Proof:</strong></p>
+        <p>In right $\triangle TOA$ and right $\triangle TOB$, $\tan\alpha = \dfrac{h}{a}$ and $\tan\beta =
+            \dfrac{h}{b}$. Since $\alpha + \beta = 90^\circ$, we have $\beta = 90^\circ - \alpha$, so $\tan\beta =
+            \tan(90^\circ - \alpha) = \cot\alpha = \dfrac{1}{\tan\alpha}$. Multiplying the two equations eliminates
+            $\alpha$ completely:</p>
+        $$ \tan\alpha \cdot \tan\beta = \tan\alpha \cdot \cot\alpha = 1 \implies \frac{h}{a} \cdot \frac{h}{b} = 1
+        \implies h^2 = ab \implies \mathbf{h = \sqrt{ab}} $$
+        <p><em>Exam Nuance:</em> Notice $h = \sqrt{ab}$ is completely <strong>independent</strong> of whether $A$ and
+            $B$ lie on the same side or opposite sides of $O$, as long as $a$ and $b$ are measured from the <strong>foot
+                $O$</strong> of the tower (NOT the distance $AB$ between the two points!).</p>
+    </div>
+
+    <!-- =========================================================
+       SECTION 15.3: THE CLOUD & LAKE REFLECTION THEOREM
+       ========================================================= -->
+    <h2 class="section-heading">15.3 The Cloud &amp; Lake Reflection Theorem</h2>
+
+    <div class="bridge-box">
+        <span class="box-label">High-Frequency Exam Favorite &bull; Full First-Principles Derivation</span>
+        <p><strong>Setup:</strong> An observer stands at point $A$ at height $h$ directly above the calm, horizontal
+            mirror-like surface of a lake. The observer sights a cloud $C$ at an angle of elevation $\alpha$, and
+            simultaneously sights the cloud's reflection $C'$ in the lake at an angle of depression $\beta$ (necessarily
+            $\beta \gt \alpha$ whenever $h \gt 0$).</p>
+        <p><strong>Laws of Reflection (Plane Mirror Symmetry):</strong> The calm lake surface acts as a flat horizontal
+            plane mirror. Therefore, if the cloud $C$ is at height $H$ above the lake surface ($CN = H$), its virtual
+            image $C'$ appears vertically below $N$ at the <strong>exact same depth $H$ below the lake surface</strong>
+            ($NC' = H$).</p>
+        <p><strong>Step-by-Step Derivation:</strong> Draw the horizontal eye-level line $AD$ meeting the vertical line
+            $CC'$ at $D$. Then $DN = AM = h$, and let $x = AD$ be the horizontal distance to the cloud:</p>
+        <ul>
+            <li>Vertical height of cloud <em>above eye level</em>: &nbsp; $CD = CN - DN = \mathbf{H - h}$.</li>
+            <li>Vertical depth of reflection <em>below eye level</em>: &nbsp; $DC' = DN + NC' = \mathbf{H + h}$.</li>
+        </ul>
+        <p>Apply $\tan$ to the upper right triangle $\triangle ADC$ and the lower right triangle $\triangle ADC'$:</p>
+        $$ \text{(1)} \quad \tan\alpha = \frac{H - h}{x} \implies x = \frac{H - h}{\tan\alpha}, \qquad \text{(2)} \quad
+        \tan\beta = \frac{H + h}{x} \implies x = \frac{H + h}{\tan\beta} $$
+        <p>Equate the two expressions for $x$ and solve for $H$:</p>
+        $$ \frac{H - h}{\tan\alpha} = \frac{H + h}{\tan\beta} \implies H\tan\beta - h\tan\beta = H\tan\alpha +
+        h\tan\alpha \implies H(\tan\beta - \tan\alpha) = h(\tan\beta + \tan\alpha) $$
+        $$ \mathbf{H = h\left(\frac{\tan\beta + \tan\alpha}{\tan\beta - \tan\alpha}\right) = h\frac{\sin(\beta +
+        \alpha)}{\sin(\beta - \alpha)}} $$
+        <p><strong>Companion Formulas (Frequently Asked as Part (b)):</strong></p>
+        <ul>
+            <li>Horizontal distance to cloud: &nbsp; $x = \dfrac{H - h}{\tan\alpha} = \dfrac{2h}{\tan\beta -
+                \tan\alpha}$.</li>
+            <li>Straight-line distance from observer's eye $A$ to cloud $C$: &nbsp; $AC = x\sec\alpha =
+                \dfrac{2h\sec\alpha}{\tan\beta - \tan\alpha} = \dfrac{2h\cos\beta}{\sin(\beta - \alpha)}$.</li>
+        </ul>
+        <p><strong>MIRROR-SYMMETRY TRAP WARNING:</strong> The #1 student error in this theorem is writing $DC' = H$
+            instead of $DC' = H + h$! Always remember: the reflection is at depth $H$ below the <strong>water
+                surface</strong>, NOT below the observer's eye. Since the eye is already $h$ above the water, the
+            vertical drop from eye level to the reflection is $h + H$.</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 560 305" width="100%" role="img"
+            aria-label="Cloud and lake reflection geometry showing height H above lake, depth H below lake, and eye height h">
+            <!-- Water fill below y=165 -->
+            <rect x="20" y="165" width="440" height="128" fill="#e0f2fe" opacity="0.65" />
+            <!-- Lake surface line -->
+            <line x1="20" y1="165" x2="465" y2="165" stroke="#0284c7" stroke-width="2.4" />
+            <text x="150" y="181" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#0369a1">Calm Lake Surface (Plane Mirror)</text>
+
+            <!-- Cliff / Platform AM -->
+            <rect x="65" y="125" width="26" height="40" fill="#cbd5e1" stroke="#475569" stroke-width="1.5" />
+            <text x="48" y="150" font-family="Georgia, serif" font-style="italic" font-size="14" font-weight="bold"
+                fill="#334155">h</text>
+
+            <!-- Eye-level horizontal line AD -->
+            <line x1="91" y1="125" x2="395" y2="125" stroke="#1e293b" stroke-width="1.6" stroke-dasharray="6,4" />
+            <text x="245" y="119" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="13"
+                font-weight="bold" fill="#334155">x (horizontal distance)</text>
+
+            <!-- Vertical line C - D - N - C' -->
+            <line x1="395" y1="45" x2="395" y2="285" stroke="#475569" stroke-width="1.8" stroke-dasharray="5,3" />
+            <!-- Right angles at D and N -->
+            <polyline points="384,125 384,114 395,114" fill="none" stroke="#475569" stroke-width="1.3" />
+            <polyline points="384,165 384,154 395,154" fill="none" stroke="#0284c7" stroke-width="1.3" />
+
+            <!-- Lines of sight AC and AC' -->
+            <line x1="91" y1="125" x2="395" y2="45" stroke="#059669" stroke-width="2.2" />
+            <line x1="91" y1="125" x2="395" y2="285" stroke="#dc2626" stroke-width="2.2" />
+
+            <!-- Cloud icon at C(395,45) -->
+            <ellipse cx="395" cy="40" rx="22" ry="11" fill="#ffffff" stroke="#64748b" stroke-width="1.5" />
+            <circle cx="395" cy="45" r="3.8" fill="#059669" />
+            <text x="366" y="32" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#065f46">C
+                (Cloud)</text>
+
+            <!-- Reflection icon at C'(395,285) -->
+            <ellipse cx="395" cy="285" rx="22" ry="10" fill="#bae6fd" stroke="#0284c7" stroke-width="1.3"
+                stroke-dasharray="3,2" />
+            <circle cx="395" cy="285" r="3.8" fill="#dc2626" />
+            <text x="310" y="294" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#991b1b">C′
+                (Reflection)</text>
+
+            <!-- Angle arcs at A(91,125) -->
+            <path d="M 155,125 A 64,64 0 0 0 152.9,108.7" fill="none" stroke="#059669" stroke-width="2" />
+            <text x="163" y="118" font-family="Georgia, serif" font-style="italic" font-size="14" font-weight="bold"
+                fill="#059669">α</text>
+            <path d="M 145,125 A 54,54 0 0 1 138.8,150.2" fill="none" stroke="#dc2626" stroke-width="2" />
+            <text x="150" y="148" font-family="Georgia, serif" font-style="italic" font-size="14" font-weight="bold"
+                fill="#dc2626">β</text>
+
+            <!-- Vertex points & labels -->
+            <circle cx="91" cy="125" r="4" fill="#1e293b" />
+            <text x="72" y="119" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#1e293b">A
+                (Eye)</text>
+            <text x="76" y="180" font-family="system-ui, sans-serif" font-size="11" font-weight="700"
+                fill="#475569">M</text>
+            <text x="401" y="122" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#334155">D</text>
+            <text x="401" y="161" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#0369a1">N</text>
+
+            <!-- Dimension brackets on right -->
+            <!-- CD = H - h -->
+            <line x1="422" y1="45" x2="422" y2="125" stroke="#059669" stroke-width="1.6" />
+            <line x1="417" y1="45" x2="427" y2="45" stroke="#059669" stroke-width="1.6" />
+            <line x1="417" y1="125" x2="427" y2="125" stroke="#059669" stroke-width="1.6" />
+            <text x="432" y="89" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#059669">H
+                − h</text>
+
+            <!-- DN = h -->
+            <line x1="422" y1="125" x2="422" y2="165" stroke="#475569" stroke-width="1.6" />
+            <line x1="417" y1="165" x2="427" y2="165" stroke="#475569" stroke-width="1.6" />
+            <text x="432" y="149" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#475569">h</text>
+
+            <!-- NC' = H -->
+            <line x1="422" y1="165" x2="422" y2="285" stroke="#0284c7" stroke-width="1.6" />
+            <line x1="417" y1="285" x2="427" y2="285" stroke="#0284c7" stroke-width="1.6" />
+            <text x="432" y="229" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#0284c7">H (depth)</text>
+
+            <!-- Far-right total bracket DC' = H + h -->
+            <line x1="498" y1="125" x2="498" y2="285" stroke="#dc2626" stroke-width="2" />
+            <line x1="492" y1="125" x2="504" y2="125" stroke="#dc2626" stroke-width="2" />
+            <line x1="492" y1="285" x2="504" y2="285" stroke="#dc2626" stroke-width="2" />
+            <text x="509" y="209" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#dc2626">H
+                + h</text>
+        </svg>
+        <div class="diagram-caption">Figure 15.3: Mirror symmetry places $C'$ at depth $H$ below the lake, making the
+            vertical drop from eye level $D$ equal to $H + h$, never $H$.</div>
+    </div>
+
+    <!-- =========================================================
+       SECTION 15.4: MOVING OBJECTS (2D KINEMATICS + TRIGONOMETRY)
+       ========================================================= -->
+    <h2 class="section-heading">15.4 Out-of-Portion Bridge: Moving Objects (2D Kinematics + Trigonometry)</h2>
+
+    <div class="bridge-box">
+        <span class="box-label">Kinematics Bridge 1 &bull; Car/Ship Approaching a Tower at Uniform Speed</span>
+        <p><strong>Setup:</strong> A car or ship travels at a <em>constant speed</em> $v$ directly toward the foot $O$
+            of a vertical tower of height $h$. Over a time interval $t$, its angle of elevation to the top of the tower
+            increases from $\alpha$ to $\beta$ ($\alpha \lt \beta$).</p>
+        <p><strong>General Remaining-Time Formula:</strong> The distance covered in time $t$ is $AB = h(\cot\alpha -
+            \cot\beta)$, while the remaining distance to the foot is $BO = h\cot\beta$. Because speed $v$ is uniform,
+            time is directly proportional to distance (note that height $h$ cancels completely!):</p>
+        $$ \frac{t_{\text{rem}}}{t} = \frac{BO}{AB} = \frac{h\cot\beta}{h(\cot\alpha - \cot\beta)} \implies
+        \mathbf{t_{\text{rem}} = t\left(\frac{\cot\beta}{\cot\alpha - \cot\beta}\right) =
+        t\left(\frac{\tan\alpha}{\tan\beta - \tan\alpha}\right)} $$
+        <p><strong>The Classic $30^\circ \to 60^\circ$ Instant $t/2$ Shortcut:</strong> When $\alpha = 30^\circ$ and
+            $\beta = 60^\circ$, our Ratio Ladder gives $AB = 2u$ and $BO = 1u$. Therefore:</p>
+        $$ \mathbf{t_{\text{rem}} = \frac{t}{2}} \qquad \text{(and total time from } 30^\circ \text{ to foot } =
+        \frac{3t}{2}\text{)} $$
+        <p><em>Also memorize the companion pair:</em> For $30^\circ \to 45^\circ$ (or $45^\circ \to 60^\circ$),
+            $t_{\text{rem}} = \dfrac{t}{\sqrt{3} - 1} = \mathbf{\dfrac{\sqrt{3} + 1}{2}\,t}$.</p>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Kinematics Bridge 2 &bull; Airplane at Constant Altitude &amp; Spherical Balloon
+            Geometry</span>
+        <p><strong>1. Horizontal Aircraft Kinematics:</strong> An aircraft flying at constant altitude $H$ is sighted
+            from a ground station at elevation $\alpha$, and after time $\Delta t$ at elevation $\beta$:</p>
+        <ul>
+            <li><strong>Same side of the station:</strong> Horizontal displacement $\Delta x = H|\cot\alpha - \cot\beta|
+                \implies v = \dfrac{H|\cot\alpha - \cot\beta|}{\Delta t}$.</li>
+            <li><strong>Crosses directly overhead between sightings:</strong> Horizontal displacement $\Delta x =
+                H(\cot\alpha + \cot\beta) \implies v = \dfrac{H(\cot\alpha + \cot\beta)}{\Delta t}$.</li>
+            <li><strong>Unit Conversion Reminder:</strong> $1\text{ m/s} = \dfrac{18}{5}\text{ km/h}$ and $1\text{ km/h}
+                = \dfrac{5}{18}\text{ m/s}$.</li>
+        </ul>
+        <p><strong>2. Spherical Balloon Theorem (Classic NTSE / Resonance Bridge):</strong> A spherical balloon of
+            radius $R$ subtends a total visual angle $\theta$ at an observer's eye $P$, while the angle of elevation of
+            the balloon's center $O$ is $\phi$. Derive the height $h$ of the center $O$ above the eye level:</p>
+        <ol>
+            <li>Draw the two tangent lines $PA$ and $PB$ from the eye $P$ to the sphere's circular cross-section in the
+                vertical viewing plane. Then $\angle APB = \theta$, and by tangent-radius perpendicularity, $OA \perp
+                PA$ and $OB \perp PB$.</li>
+            <li>By RHS congruence ($\triangle OAP \cong \triangle OBP$), the center line $OP$ bisects $\angle APB$, so
+                $\angle APO = \dfrac{\theta}{2}$.</li>
+            <li>In right $\triangle OAP$: $\sin\!\left(\dfrac{\theta}{2}\right) = \dfrac{OA}{OP} = \dfrac{R}{OP}
+                \implies OP = R\csc\!\left(\dfrac{\theta}{2}\right)$.</li>
+            <li>Drop perpendicular $OM$ to the horizontal eye line. Since $\angle OPM = \phi$, in right $\triangle OMP$:
+            </li>
+        </ol>
+        $$ \mathbf{h = OM = OP\sin\phi = R\csc\!\left(\frac{\theta}{2}\right)\sin\phi} $$
+        <p><em>Careful Read Check:</em> $h$ is the height of the <strong>center</strong> $O$. If a problem asks for the
+            height of the <strong>lowest point</strong> of the balloon, subtract $R$ ($h - R$); for the <strong>highest
+                point</strong>, add $R$ ($h + R$).</p>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 600 245" width="100%" role="img"
+            aria-label="Uniformly moving car 30 to 60 degree timeline and spherical balloon subtending angle theta at observer eye">
+            <defs>
+                <marker id="mot-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669" />
+                </marker>
+            </defs>
+
+            <!-- LEFT HALF: MOVING CAR TIMELINE -->
+            <text x="160" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12.5"
+                font-weight="800" fill="#1e293b">Moving Car: 30° → 60° (Instant t/2 Rule)</text>
+            <!-- Road & Tower -->
+            <line x1="25" y1="190" x2="310" y2="190" stroke="#334155" stroke-width="2" />
+            <line x1="292" y1="190" x2="292" y2="70" stroke="#1e293b" stroke-width="3" />
+            <polyline points="280,190 280,178 292,178" fill="none" stroke="#475569" stroke-width="1.3" />
+            <text x="297" y="135" font-family="Georgia, serif" font-style="italic" font-size="13" font-weight="bold"
+                fill="#1e293b">h</text>
+
+            <!-- Lines of sight from A(84,190) and B(223,190) to T(292,70) -->
+            <line x1="84" y1="190" x2="292" y2="70" stroke="#2563eb" stroke-width="1.8" />
+            <line x1="223" y1="190" x2="292" y2="70" stroke="#dc2626" stroke-width="1.8" />
+
+            <!-- Car markers -->
+            <rect x="74" y="182" width="20" height="8" rx="2" fill="#2563eb" />
+            <rect x="213" y="182" width="20" height="8" rx="2" fill="#dc2626" />
+            <!-- Motion arrow -->
+            <line x1="112" y1="176" x2="195" y2="176" stroke="#059669" stroke-width="2" marker-end="url(#mot-arrow)" />
+            <text x="153" y="170" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#059669">Uniform speed v</text>
+
+            <!-- Angle labels -->
+            <text x="122" y="185" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#2563eb">30°</text>
+            <text x="242" y="185" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#dc2626">60°</text>
+
+            <!-- Distance & time brackets -->
+            <text x="154" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#1e40af">2x (time = t)</text>
+            <text x="258" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#dc2626">x (t / 2)</text>
+            <text x="84" y="229" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#475569">A</text>
+            <text x="223" y="229" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#475569">B</text>
+            <text x="292" y="229" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#475569">O</text>
+
+            <!-- Divider -->
+            <line x1="326" y1="18" x2="326" y2="234" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4,4" />
+
+            <!-- RIGHT HALF: SPHERICAL BALLOON -->
+            <text x="466" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12.5"
+                font-weight="800" fill="#1e293b">Spherical Balloon Subtending Angle θ</text>
+            <!-- Ground line -->
+            <line x1="342" y1="205" x2="578" y2="205" stroke="#334155" stroke-width="1.8" />
+            <!-- Balloon circle at O(510,95), R=46 -->
+            <circle cx="510" cy="95" r="46" fill="#fef3c7" fill-opacity="0.7" stroke="#d97706" stroke-width="2.2" />
+            <!-- Center O to M(510,205) -->
+            <line x1="510" y1="95" x2="510" y2="205" stroke="#475569" stroke-width="1.6" stroke-dasharray="5,3" />
+            <polyline points="499,205 499,194 510,194" fill="none" stroke="#475569" stroke-width="1.3" />
+            <!-- Tangents PA and PB from P(370,205) to A(473.2,67.4) and B(528.1,137.3) -->
+            <line x1="370" y1="205" x2="473.2" y2="67.4" stroke="#2563eb" stroke-width="1.8" />
+            <line x1="370" y1="205" x2="528.1" y2="137.3" stroke="#2563eb" stroke-width="1.8" />
+            <!-- Center line PO -->
+            <line x1="370" y1="205" x2="510" y2="95" stroke="#dc2626" stroke-width="2" />
+            <!-- Radius OA -->
+            <line x1="510" y1="95" x2="473.2" y2="67.4" stroke="#b45309" stroke-width="2" />
+            <!-- Right angle marker at A (OA perp PA): unit along AP=(-0.6,0.8), along AO=(0.8,0.6), size=9 -->
+            <polyline points="467.8,74.6 475.0,80.0 480.4,72.8" fill="none" stroke="#b45309" stroke-width="1.4" />
+
+            <!-- Points -->
+            <circle cx="370" cy="205" r="3.5" fill="#1e293b" />
+            <circle cx="510" cy="95" r="3.5" fill="#dc2626" />
+            <circle cx="473.2" cy="67.4" r="3.2" fill="#2563eb" />
+            <circle cx="528.1" cy="137.3" r="3.2" fill="#2563eb" />
+
+            <!-- Labels -->
+            <text x="355" y="212" font-family="system-ui, sans-serif" font-size="12" font-weight="800"
+                fill="#1e293b">P</text>
+            <text x="518" y="94" font-family="system-ui, sans-serif" font-size="12" font-weight="800"
+                fill="#dc2626">O</text>
+            <text x="462" y="61" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#2563eb">A</text>
+            <text x="534" y="148" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#2563eb">B</text>
+            <text x="506" y="220" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#475569">M</text>
+            <text x="494" y="75" font-family="Georgia, serif" font-style="italic" font-size="12.5" font-weight="bold"
+                fill="#b45309">R</text>
+            <text x="516" y="172" font-family="Georgia, serif" font-style="italic" font-size="13" font-weight="bold"
+                fill="#334155">h</text>
+
+            <!-- Angle labels at P -->
+            <text x="415" y="158" font-family="Georgia, serif" font-style="italic" font-size="12" font-weight="bold"
+                fill="#2563eb">θ/2</text>
+            <text x="434" y="198" font-family="Georgia, serif" font-style="italic" font-size="13" font-weight="bold"
+                fill="#dc2626">φ</text>
+            <text x="466" y="236" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#1e40af">OP = R csc(θ/2) ⇒ h = R csc(θ/2) sin φ</text>
+        </svg>
+        <div class="diagram-caption">Figure 15.4: Left: Uniform motion across $30^\circ \to 60^\circ$ always leaves
+            exactly half the elapsed time. Right: Tangent-radius orthogonality locks in $h = R\csc(\theta/2)\sin\phi$.
+        </div>
+    </div>
+
+    <!-- =========================================================
+       SECTION 15.5: NON-STANDARD ANGLES & 3D GROUND-PLANE GEOMETRY
+       ========================================================= -->
+    <h2 class="section-heading">15.5 Olympiad Bridge: Non-Standard Angles, Inclined Hills &amp; 3D Ground-Plane Geometry
+    </h2>
+
+    <div class="bridge-box">
+        <span class="box-label">Olympiad Bridge 1 &bull; $15^\circ / 75^\circ$ Elevations &amp; Towers on Inclined
+            Hills</span>
+        <p><strong>1. Non-Standard $15^\circ$ and $75^\circ$ Elevations:</strong> Whenever an Olympiad problem pairs
+            $15^\circ$ or $75^\circ$ with $30^\circ, 45^\circ,$ or $60^\circ$, deploy the exact compound-angle surds
+            from Chapter 14 directly inside $d = h(\cot\alpha \mp \cot\beta)$:</p>
+        $$ \tan 15^\circ = \cot 75^\circ = 2 - \sqrt{3}, \qquad \tan 75^\circ = \cot 15^\circ = 2 + \sqrt{3} $$
+        <p><em>Instant Useful Differences:</em> $\cot 15^\circ - \cot 45^\circ = \sqrt{3} + 1$, &nbsp; $\cot 15^\circ -
+            \cot 30^\circ = 2$, &nbsp; and &nbsp; $\cot 15^\circ - \cot 75^\circ = 2\sqrt{3}$.</p>
+        <p><strong>2. Vertical Tower Standing on an Inclined Hill (Slope Angle $\gamma$):</strong> Suppose a vertical
+            tower $TB$ of height $h$ stands at the top $B$ of a straight hill inclined at angle $\gamma$ to the
+            horizontal. From a point $P$ at distance $d$ down the slope from $B$, the angle of elevation of $T$
+            (measured from the horizontal!) is $\alpha$ ($\alpha \gt \gamma$).</p>
+        <ul>
+            <li><strong>Projection Method (Always Works):</strong> Drop a vertical from $B$ to the horizontal line
+                through $P$, meeting it at $M$. Then $PM = d\cos\gamma$ and $BM = d\sin\gamma$. Since $TM = h +
+                d\sin\gamma$, right $\triangle TPM$ gives:
+                $$ \tan\alpha = \frac{h + d\sin\gamma}{d\cos\gamma} \implies \mathbf{h = d\cos\gamma\tan\alpha -
+                d\sin\gamma = d\frac{\sin(\alpha - \gamma)}{\cos\alpha}} $$</li>
+            <li><strong>Double-Check via Law of Sines in $\triangle PTB$:</strong> $\angle TPB = \alpha - \gamma$ and
+                $\angle PTB = 90^\circ - \alpha$, so $\dfrac{h}{\sin(\alpha - \gamma)} = \dfrac{d}{\sin(90^\circ -
+                \alpha)} = \dfrac{d}{\cos\alpha}$, recovering the exact same compact formula in one line!</li>
+        </ul>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Olympiad Bridge 2 &bull; 3D Ground-Plane Geometry (Due North / Due East
+            Observers)</span>
+        <p><strong>Core Mental Shift:</strong> When two observers do <em>not</em> lie on the same straight line through
+            the foot $O$ of a vertical tower $OP$ (height $h$), you are working in <strong>three dimensions</strong>:
+            two vertical right triangles ($\triangle POA$ and $\triangle POB$) standing upright on a flat
+            <strong>horizontal ground triangle</strong> ($\triangle AOB$).
+        </p>
+        <p><strong>Orthogonal Bearings Theorem (Due North &amp; Due East):</strong> Let observer $A$ lie strictly
+            <strong>Due North</strong> of $O$ (elevation $\alpha$) and observer $B$ lie strictly <strong>Due
+                East</strong> of $O$ (elevation $\beta$), separated by horizontal ground distance $AB = d$.
+        </p>
+        <ol>
+            <li>From vertical right $\triangle POA$: &nbsp; $OA = h\cot\alpha$.</li>
+            <li>From vertical right $\triangle POB$: &nbsp; $OB = h\cot\beta$.</li>
+            <li>On the horizontal ground plane, North $\perp$ East $\implies \angle AOB = 90^\circ$. By Pythagoras in
+                horizontal right $\triangle AOB$:</li>
+        </ol>
+        $$ d^2 = OA^2 + OB^2 = h^2\cot^2\alpha + h^2\cot^2\beta = h^2(\cot^2\alpha + \cot^2\beta) \implies \mathbf{h =
+        \frac{d}{\sqrt{\cot^2\alpha + \cot^2\beta}}} $$
+        <p><strong>Maximum Elevation Along Straight Road $AB$ (IOQM Favorite):</strong> As a point $C$ moves along line
+            $AB$, elevation $\theta$ satisfies $\tan\theta = \dfrac{h}{OC}$, which is <strong>maximized</strong> when
+            $OC$ is minimized—namely at the foot of the perpendicular $OC \perp AB$. Using the right-triangle altitude
+            identity $\dfrac{1}{OC_{\min}^2} = \dfrac{1}{OA^2} + \dfrac{1}{OB^2}$ and multiplying by $h^2$ yields:</p>
+        $$ \frac{h^2}{OC_{\min}^2} = \frac{h^2}{OA^2} + \frac{h^2}{OB^2} \implies \mathbf{\tan^2\theta_{\max} =
+        \tan^2\alpha + \tan^2\beta} $$
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 560 260" width="100%" role="img"
+            aria-label="3D perspective diagram of vertical tower OP with observer A due North and observer B due East on horizontal ground plane">
+            <!-- Horizontal Ground Plane Parallelogram -->
+            <polygon points="45,140 245,95 430,185 215,240" fill="#ecfdf5" stroke="#10b981" stroke-width="1.4"
+                opacity="0.8" />
+            <text x="112" y="218" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#047857">Horizontal Ground Plane</text>
+
+            <!-- Vertical Tower OP: O(225,172) to P(225,42) -->
+            <line x1="225" y1="172" x2="225" y2="42" stroke="#1e293b" stroke-width="3" />
+            <text x="232" y="108" font-family="Georgia, serif" font-style="italic" font-size="14" font-weight="bold"
+                fill="#1e293b">h</text>
+
+            <!-- Ground legs OA (Due North) and OB (Due East) -->
+            <line x1="225" y1="172" x2="105" y2="145" stroke="#2563eb" stroke-width="2.2" />
+            <line x1="225" y1="172" x2="360" y2="196" stroke="#dc2626" stroke-width="2.2" />
+            <!-- Ground hypotenuse AB -->
+            <line x1="105" y1="145" x2="360" y2="196" stroke="#059669" stroke-width="2.2" stroke-dasharray="6,3" />
+
+            <!-- Lines of sight PA and PB -->
+            <line x1="225" y1="42" x2="105" y2="145" stroke="#2563eb" stroke-width="1.8" />
+            <line x1="225" y1="42" x2="360" y2="196" stroke="#dc2626" stroke-width="1.8" />
+
+            <!-- Perspective right-angle parallelogram at O on ground plane (angle AOB = 90 deg) -->
+            <polyline points="209,168.4 226,171.5 242,174.9" fill="none" stroke="none" />
+            <polyline points="210,168.6 226,162.8 241,165.8" fill="none" stroke="none" />
+            <polyline points="207,168 225,180 244,175" fill="none" stroke="#047857" stroke-width="1.5" />
+            <text x="219" y="194" font-family="system-ui, sans-serif" font-size="10" font-weight="800"
+                fill="#047857">90° (N ⊥ E)</text>
+
+            <!-- Vertical right-angle tick at O -->
+            <polyline points="225,158 238,160.3 238,174.3" fill="none" stroke="#475569" stroke-width="1.2" />
+
+            <!-- Vertices -->
+            <circle cx="225" cy="42" r="4" fill="#1e293b" />
+            <circle cx="225" cy="172" r="3.8" fill="#1e293b" />
+            <circle cx="105" cy="145" r="4" fill="#2563eb" />
+            <circle cx="360" cy="196" r="4" fill="#dc2626" />
+
+            <!-- Labels -->
+            <text x="220" y="33" font-family="system-ui, sans-serif" font-size="13" font-weight="800"
+                fill="#1e293b">P</text>
+            <text x="206" y="183" font-family="system-ui, sans-serif" font-size="12" font-weight="800"
+                fill="#1e293b">O</text>
+            <text x="58" y="142" font-family="system-ui, sans-serif" font-size="11.5" font-weight="800" fill="#2563eb">A
+                (North)</text>
+            <text x="366" y="203" font-family="system-ui, sans-serif" font-size="11.5" font-weight="800"
+                fill="#dc2626">B (East)</text>
+            <text x="148" y="148" font-family="Georgia, serif" font-style="italic" font-size="13" font-weight="bold"
+                fill="#2563eb">α</text>
+            <text x="315" y="185" font-family="Georgia, serif" font-style="italic" font-size="13" font-weight="bold"
+                fill="#dc2626">β</text>
+            <text x="275" y="218" font-family="Georgia, serif" font-style="italic" font-size="12" font-weight="bold"
+                fill="#059669">d = AB</text>
+
+            <!-- Formula box on right -->
+            <rect x="378" y="22" width="170" height="146" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4" />
+            <text x="463" y="44" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="800" fill="#1e293b">3D Ground Projection</text>
+            <line x1="390" y1="53" x2="536" y2="53" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="392" y="74" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#2563eb">OA = h cot α</text>
+            <text x="392" y="95" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#dc2626">OB = h cot β</text>
+            <text x="392" y="116" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#047857">d² = OA² + OB²</text>
+            <line x1="390" y1="128" x2="536" y2="128" stroke="#e2e8f0" stroke-width="1.2" />
+            <text x="463" y="151" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="800" fill="#1e293b">h = d / √(cot²α + cot²β)</text>
+        </svg>
+        <div class="diagram-caption">Figure 15.5: Separating the two vertical right triangles ($\triangle POA, \triangle
+            POB$) from the horizontal ground right triangle ($\triangle AOB$) reduces 3D problems to elementary
+            Pythagoras.</div>
+    </div>
+
+    <!-- =========================================================
+       SECTION 15.6: HIGH-DENSITY FORMULA VAULT
+       ========================================================= -->
+    <h2 class="section-heading">15.6 High-Density Formula Vault</h2>
+
+    <div class="formula-vault">
+        <span class="box-label">Master Formula Vault &bull; Chapter 15 Quick-Retrieval Sheet</span>
+        <ul>
+            <li><strong>Ratio Ladders:</strong> $(30^\circ : 60^\circ : 90^\circ) = 1 : \sqrt{3} : 2$ &nbsp;|&nbsp;
+                $(45^\circ : 45^\circ : 90^\circ) = 1 : 1 : \sqrt{2}$ &nbsp;|&nbsp; $30^\circ\text{–}60^\circ$ base
+                split: $AB : BO = 2 : 1$</li>
+            <li><strong>Two Collinear Observers:</strong> Same side $\implies d = h(\cot\alpha - \cot\beta)$
+                &nbsp;|&nbsp; Opposite sides $\implies d = h(\cot\alpha + \cot\beta)$</li>
+            <li><strong>Complementary Elevations:</strong> $\alpha + \beta = 90^\circ$ at distances $a, b$ from foot
+                $\implies \mathbf{h = \sqrt{ab}}$</li>
+            <li><strong>Broken Tree:</strong> Base $d$, ground angle $\theta \implies H_{\text{orig}} = d(\tan\theta +
+                \sec\theta)$</li>
+            <li><strong>Cloud &amp; Lake Reflection:</strong> Eye height $h$, elevation $\alpha$, reflection depression
+                $\beta \implies H = h\dfrac{\tan\beta + \tan\alpha}{\tan\beta - \tan\alpha} =
+                h\dfrac{\sin(\beta+\alpha)}{\sin(\beta-\alpha)}$ &nbsp;|&nbsp; Eye-to-cloud distance $=
+                \dfrac{2h\sec\alpha}{\tan\beta - \tan\alpha}$</li>
+            <li><strong>Uniformly Approaching Car:</strong> Elevation $\alpha \to \beta$ in time $t \implies
+                t_{\text{rem}} = t\dfrac{\cot\beta}{\cot\alpha - \cot\beta}$ &nbsp;|&nbsp; For $30^\circ \to 60^\circ$:
+                $\mathbf{t_{\text{rem}} = \dfrac{t}{2}}$</li>
+            <li><strong>Spherical Balloon:</strong> Radius $R$, subtended angle $\theta$, center elevation $\phi
+                \implies \mathbf{h_{\text{center}} = R\csc\!\left(\dfrac{\theta}{2}\right)\sin\phi}$</li>
+            <li><strong>Inclined Hill ($\gamma$):</strong> Tower $h$ at summit, point $d$ down slope sees top at $\alpha
+                \implies h = d\cos\gamma\tan\alpha - d\sin\gamma = d\dfrac{\sin(\alpha-\gamma)}{\cos\alpha}$</li>
+            <li><strong>3D Orthogonal Bearings (North &amp; East):</strong> $h = \dfrac{d}{\sqrt{\cot^2\alpha +
+                \cot^2\beta}}$ &nbsp;|&nbsp; Max elevation along $AB$: $\tan^2\theta_{\max} = \tan^2\alpha +
+                \tan^2\beta$</li>
+        </ul>
+    </div>
+
+    <!-- =========================================================
+       SECTION 15.7: GRADED WORKED EXAMPLES (9 COMPLETE EXAMPLES)
+       ========================================================= -->
+    <h2 class="section-heading">15.7 Graded Worked Examples</h2>
+
+    <!-- LEVEL 1 BANNER -->
+    <div class="level-banner l1">Level 1: Warmup &mdash; Ratio Ladders, Broken Trees &amp; Classical Static Systems
+    </div>
+
+    <!-- WORKED EXAMPLE 1 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Worked Example 1 &bull; Broken Tree &amp; Ratio Ladder</span>
+        </div>
+        <div class="ex-problem">
+            A vertical tree standing on level ground breaks due to a storm such that the broken upper part bends without
+            detaching, and its top touches the ground at a distance of $12\sqrt{3}\text{ m}$ from the foot of the tree,
+            making an angle of $30^\circ$ with the horizontal ground. Find: (a) the height at which the tree broke, (b)
+            the original total height of the tree, and (c) the area of the right triangle formed.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Model the Geometry:</strong> Let $O$ be the foot of the tree, $B$ the break point
+                (vertical stump $OB = h_1$), and $A$ the point where the top meets the ground ($OA = 12\sqrt{3}\text{
+                m}$, $\angle OAB = 30^\circ$). The leaning segment $AB = L$ is the hypotenuse of right $\triangle AOB$.
+            </p>
+            <p><strong>Step 2 — Apply the $30^\circ\text{–}60^\circ\text{–}90^\circ$ Ratio Ladder ($1 : \sqrt{3} :
+                    2$):</strong></p>
+            <ul>
+                <li>The side adjacent to $30^\circ$ (opposite $60^\circ$) is $OA$, which corresponds to $\sqrt{3}$
+                    units. Equating $\sqrt{3}\,u = 12\sqrt{3}\text{ m}$ immediately gives $1\,u = 12\text{ m}$.</li>
+                <li><strong>(a) Break height (opposite $30^\circ$, $1\,u$):</strong> $h_1 = OB = \mathbf{12\text{ m}}$.
+                    (Trig check: $12\sqrt{3}\tan 30^\circ = 12\text{ m}$.)</li>
+                <li><strong>(b) Leaning top (hypotenuse, $2\,u$):</strong> $L = AB = 2(12) = 24\text{ m}$. Hence the
+                    original total height of the tree is:
+                    $$ H_{\text{orig}} = h_1 + L = 12 + 24 = \mathbf{36\text{ m}} $$</li>
+            </ul>
+            <p><strong>Step 3 — Compute Triangle Area:</strong></p>
+            $$ \text{Area}(\triangle AOB) = \frac{1}{2} \times OA \times OB = \frac{1}{2} \times 12\sqrt{3} \times 12 =
+            \mathbf{72\sqrt{3}\text{ m}^2} $$
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 2 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Worked Example 2 &bull; Building &amp; Cable Tower</span>
+        </div>
+        <div class="ex-problem">
+            From the top of a $21\text{ m}$ tall residential building, the angle of elevation of the top of a vertical
+            cable tower is $60^\circ$, and the angle of depression of its foot is $45^\circ$. Find (a) the exact height
+            of the cable tower, and (b) the straight-line distance between the top of the building and the top of the
+            tower.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Construct the Horizontal Reference Line:</strong> Let the building be $AB = 21\text{ m}$
+                and the cable tower be $CD = H$. Draw horizontal $AE \perp CD$ with $E$ on $CD$. Then $ABDE$ is a
+                rectangle, so $ED = AB = 21\text{ m}$ and $AE = BD = x$.</p>
+            <p><strong>Step 2 — Use the Lower Triangle (Angle of Depression):</strong> The angle of depression of $D$
+                from $A$ is $\angle EAD = 45^\circ$. In right $\triangle AED$ (a
+                $45^\circ\text{–}45^\circ\text{–}90^\circ$ triangle):</p>
+            $$ \tan 45^\circ = \frac{ED}{AE} \implies 1 = \frac{21}{x} \implies x = AE = 21\text{ m} $$
+            <p><strong>Step 3 — Use the Upper Triangle (Angle of Elevation):</strong> In right $\triangle AEC$, $\angle
+                CAE = 60^\circ$ and base $AE = 21\text{ m}$ (opposite $30^\circ$):</p>
+            $$ CE = AE\tan 60^\circ = 21\sqrt{3}\text{ m} $$
+            <ul>
+                <li><strong>(a) Total Height of Cable Tower:</strong> $CD = CE + ED = 21\sqrt{3} + 21 =
+                    \mathbf{21(\sqrt{3} + 1)\text{ m}}$.</li>
+                <li><strong>(b) Straight-Line Distance Between Tops ($AC$):</strong> In
+                    $30^\circ\text{–}60^\circ\text{–}90^\circ$ $\triangle AEC$, $AE = 21\text{ m}$ is opposite
+                    $30^\circ$, so the hypotenuse is $AC = 2 \times AE = \mathbf{42\text{ m}}$. (Check: $\sqrt{21^2 +
+                    (21\sqrt{3})^2} = 21\sqrt{4} = 42\text{ m}$.)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 3 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Worked Example 3 &bull; Flagstaff &amp; Opposite-Side Observers</span>
+        </div>
+        <div class="ex-problem">
+            A vertical flagstaff $PQ$ of height $16\text{ m}$ stands atop a vertical pedestal $QR$ of height $h$ on
+            level ground. From a point $A$ on the ground, the angles of elevation of the bottom $Q$ and top $P$ of the
+            flagstaff are $30^\circ$ and $60^\circ$, respectively. Find: (a) the height $h$ of the pedestal, and (b) the
+            distance $AB$ between $A$ and another observer $B$ standing on the <em>opposite</em> side of the pedestal
+            who observes the top $P$ at an elevation of $45^\circ$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Solve for $h$ Using Shared Base $AR = x$:</strong></p>
+            <ul>
+                <li>In right $\triangle QRA$: $\tan 30^\circ = \dfrac{h}{x} \implies x = h\sqrt{3}$.</li>
+                <li>In right $\triangle PRA$: $\tan 60^\circ = \dfrac{h + 16}{x} \implies h + 16 = x\sqrt{3}$.</li>
+            </ul>
+            <p>Substitute $x = h\sqrt{3}$ into the second equation:</p>
+            $$ h + 16 = (h\sqrt{3})\sqrt{3} = 3h \implies 2h = 16 \implies \mathbf{h = 8\text{ m}} $$
+            <p>(Ratio-ladder check: set $QR = 1u \implies AR = \sqrt{3}u \implies PR = 3u \implies PQ = 2u = 16 \implies
+                u = 8\text{ m}$!)</p>
+            <p><strong>Step 2 — Find Opposite-Side Distance $AB$:</strong> Total height $PR = 8 + 16 = 24\text{ m}$, and
+                $AR = h\sqrt{3} = 8\sqrt{3}\text{ m}$. For observer $B$ on the opposite side with $\angle PBR =
+                45^\circ$:</p>
+            $$ BR = PR\cot 45^\circ = 24(1) = 24\text{ m} $$
+            <p>Because $A$ and $B$ lie on opposite sides of foot $R$, their horizontal separation is the sum:</p>
+            $$ AB = AR + BR = 8\sqrt{3} + 24 = \mathbf{8(3 + \sqrt{3})\text{ m}} $$
+        </div>
+    </div>
+
+    <!-- LEVEL 2 BANNER -->
+    <div class="level-banner l2">Level 2: Exam-Real &mdash; Complementary Geometric Mean, Cloud Reflection &amp;
+        Aircraft Kinematics</div>
+
+    <!-- WORKED EXAMPLE 4 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Worked Example 4 &bull; Complementary Elevations</span>
+        </div>
+        <div class="ex-problem">
+            Two lampposts stand on the same straight road on the same side of a tall vertical radio mast, at distances
+            $18\text{ m}$ and $50\text{ m}$ from the foot of the mast. The angles of elevation of the top of the mast
+            from the bases of the two lampposts are complementary. Find (a) the exact height of the radio mast, and (b)
+            the exact value of $\sin\alpha$, where $\alpha$ is the smaller angle of elevation.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Assign Angles Consistently:</strong> Let the mast height be $h$. The farther lamppost
+                ($50\text{ m}$) subtends the smaller elevation $\alpha$, while the closer lamppost ($18\text{ m}$)
+                subtends the larger elevation $\beta$, with $\alpha + \beta = 90^\circ \implies \beta = 90^\circ -
+                \alpha$.</p>
+            <p><strong>Step 2 — Apply the Tangent Equations:</strong></p>
+            $$ \tan\alpha = \frac{h}{50}, \qquad \tan\beta = \tan(90^\circ - \alpha) = \cot\alpha = \frac{h}{18} $$
+            <p>Multiply the two identities so $\tan\alpha\cot\alpha = 1$:</p>
+            $$ \frac{h}{50} \cdot \frac{h}{18} = 1 \implies h^2 = 900 \implies \mathbf{h = 30\text{ m}} $$
+            <p><strong>Step 3 — Compute $\sin\alpha$:</strong> In the larger right triangle (opposite $= h = 30\text{
+                m}$, adjacent $= 50\text{ m}$), the hypotenuse is:</p>
+            $$ L = \sqrt{30^2 + 50^2} = \sqrt{900 + 2500} = \sqrt{3400} = 10\sqrt{34}\text{ m} $$
+            $$ \sin\alpha = \frac{30}{10\sqrt{34}} = \frac{3}{\sqrt{34}} = \mathbf{\frac{3\sqrt{34}}{34}} $$
+            <p>(Sanity check: $\tan\alpha = \frac{30}{50} = \frac{3}{5}$ and $\tan\beta = \frac{30}{18} = \frac{5}{3} =
+                \cot\alpha$, confirming $\alpha + \beta = 90^\circ$.)</p>
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 5 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Worked Example 5 &bull; Cloud &amp; Lake Reflection</span>
+        </div>
+        <div class="ex-problem">
+            An observer standing on a cliff $60\text{ m}$ above the calm surface of a lake observes the angle of
+            elevation of a stationary cloud to be $30^\circ$ and the angle of depression of its reflection in the lake
+            to be $60^\circ$. Find (a) the height of the cloud above the lake surface, and (b) the straight-line
+            distance from the observer to the cloud.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Set Up Eye-Level Vertical Displacements:</strong> Let $H$ be the height of the cloud $C$
+                above the lake surface, and $x$ be the horizontal distance from the observer $A$ (at height $h =
+                60\text{ m}$) to the vertical line through $C$:</p>
+            <ul>
+                <li>Height of cloud above eye level: $CD = H - 60$.</li>
+                <li>By mirror symmetry, reflection $C'$ is $H$ below the lake, hence depth below eye level is $DC' = H +
+                    60$.</li>
+            </ul>
+            <p><strong>Step 2 — Write Both Tangent Relations &amp; Solve for $H$:</strong></p>
+            $$ \tan 30^\circ = \frac{H - 60}{x} \implies x = (H - 60)\sqrt{3} $$
+            $$ \tan 60^\circ = \frac{H + 60}{x} \implies H + 60 = x\sqrt{3} = \big((H - 60)\sqrt{3}\big)\sqrt{3} = 3(H -
+            60) $$
+            $$ H + 60 = 3H - 180 \implies 2H = 240 \implies \mathbf{H = 120\text{ m}} $$
+            <p>(Direct theorem check: $H = 60\cdot\dfrac{\tan 60^\circ + \tan 30^\circ}{\tan 60^\circ - \tan 30^\circ} =
+                60\cdot\dfrac{\sqrt{3} + 1/\sqrt{3}}{\sqrt{3} - 1/\sqrt{3}} = 60\cdot\dfrac{4}{2} = 120\text{ m}$.) </p>
+            <p><strong>Step 3 — Compute Distance from Observer to Cloud ($AC$):</strong> In upper right $\triangle ADC$,
+                $\angle CAD = 30^\circ$ and opposite vertical leg $CD = H - 60 = 120 - 60 = 60\text{ m}$:</p>
+            $$ \sin 30^\circ = \frac{CD}{AC} \implies \frac{1}{2} = \frac{60}{AC} \implies \mathbf{AC = 120\text{ m}} $$
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 6 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Worked Example 6 &bull; Horizontal Airplane Kinematics</span>
+        </div>
+        <div class="ex-problem">
+            A jet flies horizontally at a constant altitude of $3000\sqrt{3}\text{ m}$. From a radar station on the
+            ground, its angle of elevation is $60^\circ$. After $15\text{ seconds}$ of flying directly away from the
+            station in the same vertical plane, its angle of elevation drops to $30^\circ$. Find the speed of the jet in
+            $\text{km/h}$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Compute Initial and Final Horizontal Distances:</strong> Let $H = 3000\sqrt{3}\text{ m}$
+                be the fixed altitude, and let $x_1, x_2$ be the horizontal distances from the radar station at $t =
+                0\text{ s}$ and $t = 15\text{ s}$:</p>
+            $$ x_1 = H\cot 60^\circ = 3000\sqrt{3} \cdot \frac{1}{\sqrt{3}} = 3000\text{ m} $$
+            $$ x_2 = H\cot 30^\circ = 3000\sqrt{3} \cdot \sqrt{3} = 9000\text{ m} $$
+            <p><strong>Step 2 — Calculate Horizontal Displacement &amp; Speed:</strong> Since the jet flies away on the
+                same side of the station:</p>
+            $$ \Delta x = x_2 - x_1 = 9000 - 3000 = 6000\text{ m} $$
+            $$ v = \frac{\Delta x}{\Delta t} = \frac{6000\text{ m}}{15\text{ s}} = 400\text{ m/s} $$
+            <p><strong>Step 3 — Convert $\text{m/s}$ to $\text{km/h}$:</strong></p>
+            $$ v = 400 \times \frac{18}{5}\text{ km/h} = 80 \times 18 = \mathbf{1440\text{ km/h}} $$
+        </div>
+    </div>
+
+    <!-- LEVEL 3 BANNER -->
+    <div class="level-banner l3">Level 3: Rank-Booster &mdash; Spherical Balloons, Inclined Hills &amp; 3D Ground-Plane
+        Extrema</div>
+
+    <!-- WORKED EXAMPLE 7 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Worked Example 7 &bull; Spherical Balloon Geometry</span>
+        </div>
+        <div class="ex-problem">
+            A spherical weather balloon of radius $R = 14\text{ m}$ floats above level ground. From an observer's eye
+            $P$ at ground level, the balloon subtends a total visual angle of $60^\circ$, while the angle of elevation
+            of its center $O$ is $45^\circ$. Find: (a) the exact height $h$ of the center of the balloon above the
+            ground, and (b) the height of the <em>lowest point</em> of the balloon above the ground.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <p><strong>Step 1 — Use Tangent-Radius Orthogonality to Find $OP$:</strong> Let $PA$ and $PB$ be the two
+                tangents from eye $P$ to the vertical great circle of the balloon (touching at $A$ and $B$). Then $OA =
+                OB = R = 14\text{ m}$, $\angle OAP = \angle OBP = 90^\circ$, and $\angle APB = 60^\circ$. Since
+                $\triangle OAP \cong \triangle OBP$ (RHS congruence), $OP$ bisects $\angle APB$, giving $\angle APO =
+                \dfrac{60^\circ}{2} = 30^\circ$. In right $\triangle OAP$:</p>
+            $$ \sin 30^\circ = \frac{OA}{OP} \implies \frac{1}{2} = \frac{14}{OP} \implies OP = 28\text{ m} $$
+            <p><strong>Step 2 — Project $OP$ Vertically to Find Center Height $h$:</strong> Drop $OM \perp$ ground.
+                Given $\angle OPM = 45^\circ$, in right $\triangle OMP$:</p>
+            $$ \sin 45^\circ = \frac{OM}{OP} \implies h = 28 \cdot \frac{1}{\sqrt{2}} = \mathbf{14\sqrt{2}\text{ m}} $$
+            <p><strong>Step 3 — Compute Height of the Lowest Point:</strong> The lowest point lies vertically below
+                center $O$ by one full radius $R = 14\text{ m}$:</p>
+            $$ h_{\text{lowest}} = h - R = 14\sqrt{2} - 14 = \mathbf{14(\sqrt{2} - 1)\text{ m}} $$
+            <div class="shortcut-box">
+                <strong>30-Second BEST Exam Shortcut:</strong> Directly plug into $h_{\text{center}} =
+                R\csc(\theta/2)\sin\phi = 14\csc 30^\circ \sin 45^\circ = 14(2)\!\left(\frac{1}{\sqrt{2}}\right) =
+                \mathbf{14\sqrt{2}\text{ m}}$. Always pause 2 seconds to check whether the question asks for the
+                <em>center</em> ($h$), the <em>bottom</em> ($h - R$), or the <em>top</em> ($h + R$)!
+            </div>
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 8 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Worked Example 8 &bull; Inclined Hill &amp; $15^\circ$ Surds</span>
+        </div>
+        <div class="ex-problem">
+            <strong>(a)</strong> A vertical transmission tower of height $h$ stands at the summit $B$ of a straight hill
+            inclined at $30^\circ$ to the horizontal. From a point $P$ located $40\text{ m}$ down the slope from $B$,
+            the angle of elevation of the top $T$ of the tower is $45^\circ$. Find the exact height $h$ of the
+            tower.<br />
+            <strong>(b)</strong> On flat ground, a separate vertical monument of height $15(\sqrt{3} - 1)\text{ m}$ is
+            observed from two collinear points $Q$ and $R$ on the same side at elevations $15^\circ$ and $45^\circ$,
+            respectively. Find the exact distance $QR$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Full Projection Derivation:</strong></p>
+            <p>Drop a vertical from summit $B$ to meet the horizontal line through $P$ at $M$. In right $\triangle PMB$
+                (hypotenuse $PB = 40\text{ m}$, $\angle BPM = 30^\circ$):</p>
+            $$ PM = 40\cos 30^\circ = 20\sqrt{3}\text{ m}, \qquad BM = 40\sin 30^\circ = 20\text{ m} $$
+            <p>Because the tower $TB$ is strictly vertical, $T, B, M$ are collinear with $TM = h + 20$. In right
+                $\triangle TPM$ with $\angle TPM = 45^\circ$:</p>
+            $$ \tan 45^\circ = \frac{TM}{PM} \implies 1 = \frac{h + 20}{20\sqrt{3}} \implies h = 20\sqrt{3} - 20 =
+            \mathbf{20(\sqrt{3} - 1)\text{ m}} $$
+            <p><strong>Part (b) — Exact $15^\circ$ Cotangent Expansion:</strong> Using $QR = H(\cot 15^\circ - \cot
+                45^\circ)$ and $\cot 15^\circ = \tan 75^\circ = 2 + \sqrt{3}$:</p>
+            $$ QR = 15(\sqrt{3} - 1)\big((2 + \sqrt{3}) - 1\big) = 15(\sqrt{3} - 1)(\sqrt{3} + 1) = 15(3 - 1) =
+            \mathbf{30\text{ m}} $$
+            <div class="shortcut-box">
+                <strong>30-Second BEST Exam Shortcut:</strong><br />
+                <strong>For Part (a):</strong> Use the inclined-hill formula $h = d\dfrac{\sin(\alpha -
+                \gamma)}{\cos\alpha} = 40\dfrac{\sin 15^\circ}{\cos 45^\circ} =
+                40\cdot\dfrac{(\sqrt{6}-\sqrt{2})/4}{1/\sqrt{2}} = 10(\sqrt{12} - 2) = \mathbf{20(\sqrt{3} - 1)\text{
+                m}}$.<br />
+                <strong>For Part (b):</strong> Memorize $\cot 15^\circ - \cot 45^\circ = \sqrt{3} + 1$ so conjugate
+                products $(\sqrt{3} - 1)(\sqrt{3} + 1) = 2$ collapse to exact integers in 5 seconds!
+            </div>
+        </div>
+    </div>
+
+    <!-- WORKED EXAMPLE 9 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Worked Example 9 &bull; 3D North–East Ground Plane &amp; Max Elevation</span>
+        </div>
+        <div class="ex-problem">
+            A vertical lighthouse $OP$ of height $h$ stands on a flat coastal plain. Observer $A$ stands strictly
+            <strong>Due North</strong> of $O$ and measures the angle of elevation of the top $P$ to be $30^\circ$.
+            Observer $B$ stands strictly <strong>Due East</strong> of $O$ and measures the angle of elevation of $P$ to
+            be $45^\circ$. If the straight-line horizontal distance $AB$ is $80\text{ m}$, find: (a) the exact height
+            $h$ of the lighthouse, and (b) the exact value of $\tan\theta_{\max}$, where $\theta_{\max}$ is the maximum
+            angle of elevation of $P$ observed by a cyclist riding along the straight road segment $AB$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <p><strong>Part (a) — Solve the Vertical Triangles &amp; Horizontal Ground Triangle:</strong></p>
+            <ul>
+                <li>In vertical right $\triangle POA$: $OA = h\cot 30^\circ = h\sqrt{3}$.</li>
+                <li>In vertical right $\triangle POB$: $OB = h\cot 45^\circ = h$.</li>
+                <li>On the horizontal ground plane, Due North $\perp$ Due East $\implies \angle AOB = 90^\circ$. By
+                    Pythagoras in $\triangle AOB$:
+                    $$ AB^2 = OA^2 + OB^2 \implies 80^2 = (h\sqrt{3})^2 + h^2 = 4h^2 \implies 2h = 80 \implies \mathbf{h
+                    = 40\text{ m}} $$</li>
+            </ul>
+            <p><strong>Part (b) — Maximize Elevation Along Segment $AB$:</strong> At any point $C$ on $AB$, $\tan\theta
+                = \dfrac{h}{OC}$. Since $h = 40\text{ m}$ is fixed, $\theta$ is maximized when the horizontal distance
+                $OC$ is <strong>minimized</strong>, which occurs when $OC \perp AB$ (since both $\angle OAB$ and $\angle
+                OBA$ are acute, foot $C$ lies strictly inside segment $AB$). Using the area of right $\triangle AOB$
+                ($\frac{1}{2}OA\cdot OB = \frac{1}{2}AB\cdot OC_{\min}$) with $OA = 40\sqrt{3}$, $OB = 40$, and $AB =
+                80$:</p>
+            $$ OC_{\min} = \frac{OA \cdot OB}{AB} = \frac{(40\sqrt{3})(40)}{80} = 20\sqrt{3}\text{ m} $$
+            $$ \tan\theta_{\max} = \frac{h}{OC_{\min}} = \frac{40}{20\sqrt{3}} = \mathbf{\frac{2}{\sqrt{3}}} $$
+            <div class="shortcut-box">
+                <strong>30-Second BEST Exam Shortcut:</strong><br />
+                <strong>(a)</strong> $h = \dfrac{d}{\sqrt{\cot^2\alpha + \cot^2\beta}} = \dfrac{80}{\sqrt{3 + 1}} =
+                \dfrac{80}{2} = \mathbf{40\text{ m}}$.<br />
+                <strong>(b)</strong> Use the orthogonal-bearing altitude identity $\tan^2\theta_{\max} = \tan^2\alpha +
+                \tan^2\beta = \tan^2 30^\circ + \tan^2 45^\circ = \dfrac{1}{3} + 1 = \dfrac{4}{3} \implies
+                \tan\theta_{\max} = \mathbf{\dfrac{2}{\sqrt{3}}}$ (completely independent of $d$!).
+            </div>
+        </div>
+    </div>
+
+</article>

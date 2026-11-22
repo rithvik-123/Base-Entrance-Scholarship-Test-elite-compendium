@@ -1,0 +1,625 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 12: Similar Triangles &amp; Olympiad Geometry — Solutions &amp; Error Forensics">
+
+    <section class="chapter-hero">
+        <div class="chapter-meta">Volume 2 · Mathematics (Paper 1) · Chapter 12 · Part 3 of 3 — Solutions &amp; Error
+            Forensics</div>
+        <h1>Similar Triangles &amp; Olympiad Geometry — Full Solutions</h1>
+        <p>Every question from the Practice Arena is solved step by step, with a second-route check wherever one exists.
+            Answers match the Part 2 Answer Key exactly. Seven forensic cards at the end dissect the mistakes that cost
+            the most marks in this chapter.</p>
+        <div class="tag-row">
+            <span class="meta-pill">28 verified solutions</span>
+            <span class="meta-pill">Second-route checks</span>
+            <span class="meta-pill">7 Trap &amp; Error Forensics cards</span>
+        </div>
+    </section>
+
+    <div class="concept-box">
+        <span class="box-label">How to Use This File</span>
+        <p>Mark your attempt first. For each miss, read the solution, then find its pattern in the forensics section and
+            write a one-line "cure" in your error log. A correct answer reached by a wrong method counts as a miss.
+            Notation: $[XYZ]$ = area; $a=BC$, $b=CA$, $c=AB$; lengths in cm unless stated.</p>
+    </div>
+
+    <div class="level-banner l1">LEVEL 1 · WARMUP — Solutions Q1–Q8</div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q1</span><span class="badge badge-l1">Level 1</span><span
+                class="badge badge-type">BPT</span><span class="badge badge-type">Answer: 033</span></div>
+        <ol>
+            <li>$DE\parallel BC$, so by BPT $\dfrac{AD}{DB}=\dfrac{AE}{EC}$, i.e. $\dfrac{8}{12}=\dfrac{10}{EC}$, giving
+                $EC=\dfrac{10\cdot12}{8}=15$.</li>
+            <li>$AB=AD+DB=20$. In $\triangle ADE$ and $\triangle ABC$: $\angle A$ is common and $\angle ADE=\angle ABC$
+                (corresponding angles, $DE\parallel BC$), so $\triangle ADE\sim\triangle ABC$ (AA).</li>
+            <li>Hence $\dfrac{DE}{BC}=\dfrac{AD}{AB}=\dfrac{8}{20}=\dfrac25$, so $DE=45\cdot\dfrac25=18$.</li>
+            <li>$DE+EC=18+15=33$, entered as <strong>033</strong>.</li>
+        </ol>
+        <p><strong>Check:</strong> $AC=10+15=25$ and $\dfrac{AE}{AC}=\dfrac{10}{25}=\dfrac25=\dfrac{AD}{AB}$ ✓.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q2</span><span class="badge badge-l1">Level 1</span><span
+                class="badge badge-type">Converse of BPT</span><span class="badge badge-type">Answer: B</span></div>
+        <ol>
+            <li>By the converse of BPT, $DE\parallel BC$ exactly when $\dfrac{AD}{DB}=\dfrac{AE}{EC}$, both measured
+                from $A$.</li>
+            <li>(A) $\tfrac36=\tfrac12$ but $\tfrac46=\tfrac23$ ✗. (B) $\tfrac46=\tfrac23$ and $\tfrac69=\tfrac23$ ✓.
+                (C) $\tfrac23$ but $\tfrac32$ — the ratios are reciprocals, not equal ✗. (D) $\tfrac5{10}=\tfrac12$ but
+                $\tfrac5{15}=\tfrac13$ ✗.</li>
+            <li>Only option (B) satisfies the condition.</li>
+        </ol>
+        <p><strong>Check:</strong> in (B), $\tfrac{AD}{AB}=\tfrac4{10}=\tfrac25$ and
+            $\tfrac{AE}{AC}=\tfrac6{15}=\tfrac25$ ✓.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q3</span><span class="badge badge-l1">Level 1</span><span
+                class="badge badge-type">Midpoint Theorem</span><span class="badge badge-type">Answer: 144</span></div>
+        <ol>
+            <li>$D,E,F$ are midpoints of $BC,CA,AB$. By the Midpoint Theorem, $DE=\tfrac12AB=12$, $EF=\tfrac12BC=16$,
+                $FD=\tfrac12CA=20$.</li>
+            <li>Perimeter of $\triangle DEF=12+16+20=48$.</li>
+            <li>$12^2+16^2=144+256=400=20^2$, so $\triangle DEF$ is right-angled at $E$ and
+                $[DEF]=\tfrac12\cdot12\cdot16=96$.</li>
+            <li>Required sum $=48+96=144$, entered as <strong>144</strong>.</li>
+        </ol>
+        <p><strong>Check:</strong> $24^2+32^2=1600=40^2$, so $\triangle ABC$ is right-angled with
+            $[ABC]=\tfrac12\cdot24\cdot32=384$, and $\tfrac{96}{384}=\tfrac14=\left(\tfrac12\right)^2$ ✓.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q4</span><span class="badge badge-l1">Level 1</span><span
+                class="badge badge-type">Similarity Criteria</span><span class="badge badge-type">Answer: D</span></div>
+        <ol>
+            <li>(A) Two angles equal ⇒ AA ⇒ similar.</li>
+            <li>(B) All three side ratios equal $\tfrac34$ ⇒ SSS ⇒ similar.</li>
+            <li>(C) $\angle B=\angle Q$ is the angle <em>between</em> sides $AB,BC$ and $PQ,QR$, and those sides are
+                proportional ⇒ SAS ⇒ similar.</li>
+            <li>(D) The given equal angle is at $A$, but the equal sides $AB=PQ$ and $BC=QR$ are <em>not</em> the two
+                sides that enclose it ($BC$ is opposite $\angle A$). This is SSA, which does not guarantee similarity.
+            </li>
+            <li>Explicit counter-example: with $\angle A=30^\circ$, $AB=8$, $BC=5$, the distance from $B$ to the other
+                ray from $A$ is $8\sin30^\circ=4<5<8$, so the circle of radius $5$ about $B$ meets that ray at two
+                    points, giving $AC=4\sqrt3+3$ or $4\sqrt3-3$. Take $\triangle ABC$ with the first and $\triangle
+                    PQR$ with the second. The given data match, but a similarity pairing $AB\leftrightarrow PQ$ has
+                    ratio $1$ (so would be a congruence), while $AC\ne PR$. Contradiction ⇒ not similar.</li>
+        </ol>
+        <p><strong>Answer: (D).</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q5</span><span class="badge badge-l1">Level 1</span><span
+                class="badge badge-type">Area &amp; Linear Ratios</span><span class="badge badge-type">Answer:
+                027</span></div>
+        <ol>
+            <li>Areas of similar triangles are in the ratio of the <em>squares</em> of corresponding sides:
+                $\dfrac{[PQR]}{[ABC]}=\dfrac{108}{48}=\dfrac94=k^2$, so $k=\dfrac{PQ}{AB}=\dfrac32$.</li>
+            <li>$PQ=10\cdot\dfrac32=15$.</li>
+            <li>Corresponding medians scale by the same $k$: $PN=8\cdot\dfrac32=12$.</li>
+            <li>$PQ+PN=15+12=27$, entered as <strong>027</strong>.</li>
+        </ol>
+        <p><strong>Check:</strong> $\sqrt{108/48}=\sqrt{2.25}=1.5$ ✓.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q6</span><span class="badge badge-l1">Level 1</span><span
+                class="badge badge-type">Altitude Theorem</span><span class="badge badge-type">Answer: A</span></div>
+        <ol>
+            <li>$\angle ACD=90^\circ-\angle A=\angle CBD$, and $\angle ADC=\angle CDB=90^\circ$, so $\triangle
+                ACD\sim\triangle CBD$ (AA, with $A\to C$, $C\to B$, $D\to D$).</li>
+            <li>Therefore $\dfrac{AD}{CD}=\dfrac{CD}{DB}$, i.e. $CD^2=AD\cdot DB=4\cdot9=36$.</li>
+            <li>$CD=6$ ⇒ option <strong>(A)</strong>.</li>
+        </ol>
+        <p><strong>Check:</strong> $AB=13$, $AC^2=13\cdot4=52$, $BC^2=13\cdot9=117$, and $52+117=169=13^2$ ✓. Option (B)
+            $6.5$ is the arithmetic mean $\tfrac{4+9}{2}$, option (D) $36$ forgets the square root.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q7</span><span class="badge badge-l1">Level 1</span><span
+                class="badge badge-type">Angle Bisector Theorem</span><span class="badge badge-type">Answer: 135</span>
+        </div>
+        <ol>
+            <li>Internal bisector theorem: $\dfrac{BD}{DC}=\dfrac{AB}{AC}=\dfrac{12}{20}=\dfrac35$.</li>
+            <li>$BD+DC=24$, so $BD=24\cdot\dfrac38=9$ and $DC=24\cdot\dfrac58=15$.</li>
+            <li>$BD\times DC=9\cdot15=135$, entered as <strong>135</strong>.</li>
+        </ol>
+        <p><strong>Check:</strong> $AD^2=AB\cdot AC-BD\cdot DC=240-135=105>0$, so the configuration is consistent.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q8</span><span class="badge badge-l1">Level 1</span><span
+                class="badge badge-type">Converse of Pythagoras</span><span class="badge badge-type">Answer: C</span>
+        </div>
+        <ol>
+            <li>A triangle is right-angled iff the square of its longest side equals the sum of the squares of the other
+                two.</li>
+            <li>(A) $6^2+7^2=85\ne81=9^2$ ✗.</li>
+            <li>(B) $11^2+60^2=3721\ne3844=62^2$ ✗ (note $3721=61^2$).</li>
+            <li>(C) $9^2+40^2=81+1600=1681=41^2$ ✓.</li>
+            <li>(D) $12^2+35^2=1369\ne1296=36^2$ ✗ (note $1369=37^2$).</li>
+        </ol>
+        <p><strong>Answer: (C).</strong> Options (B) and (D) are deliberate near-misses of the triples $(11,60,61)$ and
+            $(12,35,37)$.</p>
+    </div>
+
+    <div class="level-banner l2">LEVEL 2 · EXAM-REAL — Solutions Q9–Q19</div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q9</span><span class="badge badge-l2">Level 2</span><span
+                class="badge badge-type">Trapezium Diagonals</span><span class="badge badge-type">Answer: 250</span>
+        </div>
+        <ol>
+            <li>$AB\parallel CD$ gives $\angle OAB=\angle OCD$ and $\angle OBA=\angle ODC$ (alternate angles), so
+                $\triangle OAB\sim\triangle OCD$ (AA) with ratio
+                $\dfrac{OA}{OC}=\dfrac{OB}{OD}=\dfrac{AB}{CD}=\dfrac32$.</li>
+            <li>Areas scale by the square: $\dfrac{[AOB]}{[COD]}=\dfrac94$, so $[COD]=90\cdot\dfrac49=40$.</li>
+            <li>$\triangle AOD$ and $\triangle AOB$ share apex $A$ with bases $OD,OB$ on line $BD$:
+                $\dfrac{[AOD]}{[AOB]}=\dfrac{OD}{OB}=\dfrac23$, so $[AOD]=60$.</li>
+            <li>$[ABD]=[ABC]$ (same base $AB$, same height between the parallels). Subtracting $[AOB]$ from both gives
+                $[AOD]=[BOC]=60$.</li>
+            <li>$[ABCD]=90+40+60+60=250$, entered as <strong>250</strong>.</li>
+        </ol>
+        <p><strong>Check:</strong> $[AOD]^2=3600=[AOB]\cdot[COD]=90\cdot40$ ✓.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q10</span><span class="badge badge-l2">Level 2</span><span
+                class="badge badge-type">Overlapping Similar Triangles</span><span class="badge badge-type">Answer:
+                B</span></div>
+        <ol>
+            <li>List the equal angles first. In $\triangle ABD$ and $\triangle ACB$: $\angle A$ is common, and $\angle
+                ABD=\angle ACB$ (given).</li>
+            <li>So $A\leftrightarrow A$, $B\leftrightarrow C$, $D\leftrightarrow B$, i.e. $\triangle ABD\sim\triangle
+                ACB$ (AA).</li>
+            <li>Corresponding sides: $\dfrac{AB}{AC}=\dfrac{AD}{AB}$, so $AB^2=AD\cdot AC$.</li>
+            <li>$AC=AD+DC=9$, so $AB^2=4\cdot9=36$ and $AB=6$ ⇒ option <strong>(B)</strong>.</li>
+        </ol>
+        <p><strong>Check:</strong> $\tfrac{AB}{AC}=\tfrac69=\tfrac23$ and $\tfrac{AD}{AB}=\tfrac46=\tfrac23$ ✓. Option
+            (A) $2\sqrt5=\sqrt{AD\cdot DC}$ is the classic mis-pairing (see Forensics #2).</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q11</span><span class="badge badge-l2">Level 2</span><span
+                class="badge badge-type">Stewart's Theorem</span><span class="badge badge-type">Answer: 015</span></div>
+        <ol>
+            <li>$BD:DC=2:1$ and $BC=21$ give $m=BD=14$, $n=DC=7$. Here $a=BC=21$, $b=CA=20$, $c=AB=13$.</li>
+            <li>Stewart: $b^2m+c^2n=a(d^2+mn)$. Left side: $400\cdot14+169\cdot7=5600+1183=6783$.</li>
+            <li>Right side: $21(d^2+14\cdot7)=21(d^2+98)$. So $d^2+98=\dfrac{6783}{21}=323$ and $d^2=225$.</li>
+            <li>$AD=15$, entered as <strong>015</strong>.</li>
+        </ol>
+        <p><strong>Check (coordinates):</strong> $B=(0,0)$, $C=(21,0)$, $A=(5,12)$ gives $AB=13$,
+            $AC=\sqrt{16^2+12^2}=20$ ✓. $D=(14,0)$, so $AD=\sqrt{9^2+12^2}=15$ ✓.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q12</span><span class="badge badge-l2">Level 2</span><span
+                class="badge badge-type">Apollonius &amp; Centroid</span><span class="badge badge-type">Answer: C</span>
+        </div>
+        <ol>
+            <li>Here $a=BC=12$, $b=AC=7$, $c=AB=11$. Apollonius:
+                $AM^2=\dfrac{2b^2+2c^2-a^2}{4}=\dfrac{98+242-144}{4}=\dfrac{196}{4}=49$, so $AM=7$.</li>
+            <li>The centroid divides each median $2:1$ from the vertex: $AG=\dfrac23AM=\dfrac{14}3$ ⇒ option
+                <strong>(C)</strong>.
+            </li>
+        </ol>
+        <p><strong>Check:</strong> $b^2+c^2=170$ and $2\!\left(AM^2+\tfrac{a^2}{4}\right)=2(49+36)=170$ ✓. Option (B) is
+            the whole median $AM$; option (A) is $\tfrac13AM$ ($GM$).</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q13</span><span class="badge badge-l2">Level 2</span><span
+                class="badge badge-type">Ceva's Theorem</span><span class="badge badge-type">Answer: A</span></div>
+        <ol>
+            <li>Ceva (concurrent cevians): $\dfrac{BD}{DC}\cdot\dfrac{CE}{EA}\cdot\dfrac{AF}{FB}=1$.</li>
+            <li>Substitute: $\dfrac23\cdot\dfrac34\cdot\dfrac{AF}{FB}=1$, so $\dfrac{AF}{FB}=2$.</li>
+            <li>$AB=30$ gives $AF=20$.</li>
+            <li>$DC=\dfrac35\cdot35=21$.</li>
+            <li>$AF+DC=41$ ⇒ option <strong>(A)</strong>.</li>
+        </ol>
+        <p><strong>Check:</strong> $\tfrac23\cdot\tfrac34\cdot2=1$ ✓. Option (B) $31$ results from inverting the ratio
+            ($AF/FB=\tfrac12$ gives $AF=10$; $10+21=31$) — see Forensics #5. Option (C) $36$ is what $AF=15$ would give
+            (assuming $F$ is the midpoint).</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q14</span><span class="badge badge-l2">Level 2</span><span
+                class="badge badge-type">Passage 1 · Crossing Poles</span><span class="badge badge-type">Answer:
+                D</span></div>
+        <ol>
+            <li>Let $PF=u$, $FQ=v$, so $u+v=25$, and $XF=h$.</li>
+            <li>$XF\parallel AP$ (both vertical): $\triangle QXF\sim\triangle QAP$ (common $\angle Q$, right angles at
+                $F,P$). So $\dfrac{h}{30}=\dfrac{v}{25}$.</li>
+            <li>$XF\parallel BQ$: $\triangle PXF\sim\triangle PBQ$. So $\dfrac{h}{20}=\dfrac{u}{25}$.</li>
+            <li>Add: $h\left(\dfrac1{30}+\dfrac1{20}\right)=\dfrac{u+v}{25}=1$, so $h\cdot\dfrac{5}{60}=1$ and $h=12$ m
+                ⇒ option <strong>(D)</strong>.</li>
+        </ol>
+        <p><strong>Check:</strong> $v=\tfrac{25\cdot12}{30}=10$, $u=\tfrac{25\cdot12}{20}=15$, and $u+v=25$ ✓. Shortcut:
+            $h=\tfrac{ab}{a+b}=\tfrac{600}{50}=12$.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q15</span><span class="badge badge-l2">Level 2</span><span
+                class="badge badge-type">Passage 1 · Area</span><span class="badge badge-type">Answer: B</span></div>
+        <ol>
+            <li>$\triangle PXQ$ has base $PQ=25$ m on the ground.</li>
+            <li>$XF\perp PQ$, so its height is $XF=12$ m (Q14).</li>
+            <li>Area $=\tfrac12\cdot25\cdot12=150$ m$^2$ ⇒ option <strong>(B)</strong>.</li>
+        </ol>
+        <p><strong>Check:</strong> option (A) $125$ uses $h=10$; (C) $300$ forgets the $\tfrac12$; (D) $187.5$ uses
+            $u=15$ as the height.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q16</span><span class="badge badge-l2">Level 2</span><span
+                class="badge badge-type">External Angle Bisector</span><span class="badge badge-type">Answer: C</span>
+        </div>
+        <ol>
+            <li>$\angle C=90^\circ$, $AC=6$, $BC=8$ give $AB=10$.</li>
+            <li>External bisector theorem: $\dfrac{BD'}{CD'}=\dfrac{AB}{AC}=\dfrac{10}{6}=\dfrac53$.</li>
+            <li>$AB>AC$, so $D'$ lies beyond $C$ and $BD'=BC+CD'=8+CD'$. Then $3(8+CD')=5\,CD'$, so $CD'=12$.</li>
+            <li>$D'$ lies on line $BC$ and $\angle C=90^\circ$, so $AC\perp CD'$. Hence $AD'^2=AC^2+CD'^2=36+144=180$
+                and $AD'=6\sqrt5$ ⇒ option <strong>(C)</strong>.</li>
+        </ol>
+        <p><strong>Check (coordinates):</strong> $C=(0,0)$, $B=(8,0)$, $A=(0,6)$, $D'=(-12,0)$: $D'B=20$, $D'C=12$,
+            ratio $\tfrac53$ ✓. Option (A) is $CD'$ and (B) is $AB$ — both are intermediate lengths.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q17</span><span class="badge badge-l2">Level 2</span><span
+                class="badge badge-type">Mass Points &amp; Area</span><span class="badge badge-type">Answer: 090</span>
+        </div>
+        <ol>
+            <li><strong>Mass points.</strong> $BD:DC=3:2$ ⇒ $w_B=2$, $w_C=3$, $w_D=5$. $E$ is the midpoint of $AC$ ⇒
+                $w_A=w_C=3$, $w_E=6$. Total $W=3+2+3=8$.</li>
+            <li>The area opposite vertex $C$ is $[PAB]=\dfrac{w_C}{W}[ABC]=\dfrac38\cdot240=90$.</li>
+        </ol>
+        <p><strong>Second route (Menelaus).</strong></p>
+        <ol>
+            <li>$\triangle ADC$ with transversal $B$–$P$–$E$ ($B$ lies on $CD$ produced):
+                $\dfrac{AP}{PD}\cdot\dfrac{DB}{BC}\cdot\dfrac{CE}{EA}=1\Rightarrow\dfrac{AP}{PD}\cdot\dfrac35\cdot1=1\Rightarrow\dfrac{AP}{PD}=\dfrac53$,
+                so $\dfrac{AP}{AD}=\dfrac58$.</li>
+            <li>$[ABD]=\dfrac{BD}{BC}[ABC]=\dfrac35\cdot240=144$, and $[APB]=\dfrac{AP}{AD}[ABD]=\dfrac58\cdot144=90$ ✓.
+            </li>
+        </ol>
+        <p><strong>Answer: 090.</strong></p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q18</span><span class="badge badge-l2">Level 2</span><span
+                class="badge badge-type">Mass Points</span><span class="badge badge-type">Answer: D</span></div>
+        <ol>
+            <li>$BD:DC=2:3$ ⇒ $w_B=3$, $w_C=2$, $w_D=5$.</li>
+            <li>$E$ lies on $AD$ with $AE:ED=3:1$, so $w_A\cdot3=w_D\cdot1$, i.e. $w_A=\tfrac53$. Scale all masses by
+                $3$: $w_A=5$, $w_B=9$, $w_C=6$, $w_D=15$, $w_E=w_A+w_D=20$.</li>
+            <li>Line $BE$ meets $AC$ at $F$, so $F$ carries $w_A+w_C=11$ (and $w_B+w_F=9+11=20=w_E$ ✓).</li>
+            <li>$AF:FC=w_C:w_A=6:5$ ⇒ option <strong>(D)</strong>.</li>
+        </ol>
+        <p><strong>Second route (Menelaus).</strong> $\triangle ADC$ with transversal $B$–$E$–$F$ (zig-zag $A\to E\to
+            D\to B\to C\to F\to A$):
+            $\dfrac{AE}{ED}\cdot\dfrac{DB}{BC}\cdot\dfrac{CF}{FA}=1\Rightarrow3\cdot\dfrac25\cdot\dfrac{CF}{FA}=1\Rightarrow\dfrac{CF}{FA}=\dfrac56$,
+            so $AF:FC=6:5$ ✓.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q19</span><span class="badge badge-l2">Level 2</span><span
+                class="badge badge-type">Inscribed Square</span><span class="badge badge-type">Answer: A</span></div>
+        <ol>
+            <li>Let the side be $s$. $PS\parallel QR$, hence $PS\parallel BC$, and $PS=s$.</li>
+            <li>$\triangle APS\sim\triangle ABC$ (A-pattern). The altitude of $\triangle ABC$ from $A$ is $20$; the
+                altitude of $\triangle APS$ from $A$ is $20-s$ (the square's side is the gap between $PS$ and $BC$).
+            </li>
+            <li>Corresponding altitudes have the same ratio as corresponding sides: $\dfrac{s}{30}=\dfrac{20-s}{20}$.
+            </li>
+            <li>Cross-multiply: $20s=600-30s\Rightarrow50s=600\Rightarrow s=12$ ⇒ option <strong>(A)</strong>.</li>
+        </ol>
+        <p><strong>Check:</strong> $\tfrac{12}{30}=0.4$ and $\tfrac{20-12}{20}=0.4$ ✓. General result:
+            $s=\tfrac{bh}{b+h}$ — again a harmonic-type form.</p>
+    </div>
+
+    <div class="level-banner l3">LEVEL 3 · RANK-BOOSTER — Solutions Q20–Q28</div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q20</span><span class="badge badge-l3">Level 3</span><span
+                class="badge badge-type">Perpendicular Medians</span><span class="badge badge-type">Answer: 289</span>
+        </div>
+        <ol>
+            <li>Let $G$ be the centroid, $a=BC$, $b=CA=31$, $c=AB=22$. $BE\perp CF$ at $G$, so $\angle BGC=90^\circ$ and
+                $BG^2+CG^2=BC^2=a^2$.</li>
+            <li>$BG=\tfrac23m_b$ and $CG=\tfrac23m_c$, so $\tfrac49(m_b^2+m_c^2)=a^2$.</li>
+            <li>Apollonius: $m_b^2=\dfrac{2a^2+2c^2-b^2}{4}$ and $m_c^2=\dfrac{2a^2+2b^2-c^2}{4}$. Sum:
+                $m_b^2+m_c^2=\dfrac{4a^2+b^2+c^2}{4}$.</li>
+            <li>Then $\dfrac{4a^2+b^2+c^2}{9}=a^2\Rightarrow b^2+c^2=5a^2$.</li>
+            <li>$b^2+c^2=961+484=1445$, so $a^2=\dfrac{1445}{5}=289$, entered as <strong>289</strong>.</li>
+        </ol>
+        <p><strong>Check:</strong> $a=17$ gives a valid triangle ($17+22>31$).
+            $m_b^2=\tfrac{578+968-961}{4}=\tfrac{585}{4}$, $m_c^2=\tfrac{578+1922-484}{4}=504$;
+            $BG^2=\tfrac49\cdot\tfrac{585}{4}=65$, $CG^2=\tfrac49\cdot504=224$, and $65+224=289=BC^2$ ✓.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q21</span><span class="badge badge-l3">Level 3</span><span
+                class="badge badge-type">Three Cevians &amp; Area</span><span class="badge badge-type">Answer:
+                051</span></div>
+        <p>Let $S=[ABC]$. Name $P=AD\cap BE$, $Q=BE\cap CF$, $R=CF\cap AD$; the shaded triangle is $PQR$.</p>
+        <ol>
+            <li><strong>Locate $P$ on $AD$.</strong> $BD:DC=1:2$ gives $\dfrac{DB}{BC}=\dfrac13$; $CE:EA=1:2$ gives
+                $\dfrac{CE}{EA}=\dfrac12$. Menelaus in $\triangle ADC$ with transversal $B$–$P$–$E$:
+                $\dfrac{AP}{PD}\cdot\dfrac{DB}{BC}\cdot\dfrac{CE}{EA}=1\Rightarrow\dfrac{AP}{PD}\cdot\dfrac13\cdot\dfrac12=1\Rightarrow\dfrac{AP}{PD}=6$,
+                so $\dfrac{AP}{AD}=\dfrac67$.</li>
+            <li><strong>Area of $\triangle ABP$.</strong> $[ABD]=\dfrac{BD}{BC}S=\dfrac S3$ and
+                $\dfrac{[ABP]}{[ABD]}=\dfrac{AP}{AD}=\dfrac67$, so $[ABP]=\dfrac{2S}{7}$.</li>
+            <li><strong>Symmetry.</strong> The data are invariant under the cyclic shift $A\to B\to C\to A$ (which sends
+                $D\to E\to F$ and $P\to Q\to R$). Hence $[BCQ]=[CAR]=\dfrac{2S}{7}$ as well.</li>
+            <li><strong>Tiling.</strong> The three cevians cut $\triangle ABC$ into seven regions: $\triangle PQR$;
+                corner-type triangles $AFR$, $BDP$, $CEQ$; and quadrilaterals $FBPR$, $DCQP$, $EARQ$. Now $\triangle
+                ABP=AFR+FBPR$, $\triangle BCQ=BDP+DCQP$, $\triangle CAR=CEQ+EARQ$. These three triangles therefore cover
+                every region <em>except</em> $PQR$, each exactly once.</li>
+            <li>So $[PQR]=S-3\cdot\dfrac{2S}{7}=\dfrac S7$. With $S=357$: $[PQR]=51$, entered as <strong>051</strong>.
+            </li>
+        </ol>
+        <p><strong>Check (coordinates):</strong> take $A=(0,0)$, $B=(3,0)$, $C=(0,3)$, so $D=(2,1)$, $E=(0,2)$,
+            $F=(1,0)$. Then $P=\left(\tfrac{12}7,\tfrac67\right)$, $Q=\left(\tfrac37,\tfrac{12}7\right)$,
+            $R=\left(\tfrac67,\tfrac37\right)$ and $[PQR]=\tfrac9{14}$, while $[ABC]=\tfrac92$; the ratio is $\tfrac17$
+            ✓ (ratios of areas are unchanged under the affine map to any other triangle).</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q22</span><span class="badge badge-l3">Level 3</span><span
+                class="badge badge-type">Bisector Length</span><span class="badge badge-type">Answer: B</span></div>
+        <ol>
+            <li>Here $a=BC=14$, $b=CA=15$, $c=AB=13$. $\dfrac{BD}{DC}=\dfrac{AB}{AC}=\dfrac{13}{15}$, so
+                $BD=m=\dfrac{14\cdot13}{28}=6.5$ and $DC=n=7.5$.</li>
+            <li>Bisector length: $AD^2=bc-mn=195-6.5\cdot7.5=195-48.75=146.25=\dfrac{585}{4}$.</li>
+            <li>$AD=\dfrac{\sqrt{585}}{2}=\dfrac{3\sqrt{65}}{2}=\tfrac32\sqrt{65}$ ⇒ option <strong>(B)</strong>
+                ($\approx12.09$).</li>
+        </ol>
+        <p><strong>Check (Stewart):</strong> $b^2m+c^2n=225\cdot6.5+169\cdot7.5=1462.5+1267.5=2730$ and
+            $a(d^2+mn)=14(d^2+48.75)$, so $d^2+48.75=195$, $d^2=146.25$ ✓. Option (A) $12$ is the <em>altitude</em> from
+            $A$ (area $84$), close to but not equal to the bisector — see Forensics #7.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q23</span><span class="badge badge-l3">Level 3</span><span
+                class="badge badge-type">Menelaus &amp; Area</span><span class="badge badge-type">Answer: 240</span>
+        </div>
+        <ol>
+            <li>Menelaus for $\triangle ABC$ with transversal $F$–$E$–$D$ (zig-zag $A\to F\to B\to D\to C\to E\to A$):
+                $\dfrac{AF}{FB}\cdot\dfrac{BD}{DC}\cdot\dfrac{CE}{EA}=1$.</li>
+            <li>$\dfrac{AF}{FB}=\dfrac23$ and $\dfrac{CE}{EA}=\dfrac21=2$, so $\dfrac23\cdot\dfrac{BD}{DC}\cdot2=1$ and
+                $\dfrac{BD}{DC}=\dfrac34$.</li>
+            <li><strong>Which side is $D$ on?</strong> $F$ and $E$ lie inside their sides, so zero of them are external;
+                Menelaus requires an odd number (1 or 3) of external points, so $D$ <em>must</em> be external. Since $BD
+                <DC$, $D$ is beyond $B$, giving $DC=DB+BC$.</li>
+            <li>$4BD=3(BD+14)\Rightarrow BD=42$ and $DC=56$.</li>
+            <li>$D$ lies on ray $CB$ and $E$ on ray $CA$, so $\triangle CDE$ and $\triangle CBA$ share $\angle C$. Using
+                common apexes: $\dfrac{[CDE]}{[CBE]}=\dfrac{CD}{CB}=\dfrac{56}{14}=4$ (apex $E$, bases on line $CD$) and
+                $\dfrac{[CBE]}{[CBA]}=\dfrac{CE}{CA}=\dfrac23$ (apex $B$).</li>
+            <li>$[CDE]=4\cdot\dfrac23\cdot90=240$, entered as <strong>240</strong>.</li>
+        </ol>
+        <p><strong>Check (coordinates):</strong> $B=(0,0)$, $C=(14,0)$, $A=(4,24)$.
+            $F=\left(\tfrac{12}5,\tfrac{72}5\right)$, $E=\left(\tfrac{22}3,16\right)$. Line $FE$ has slope
+            $\tfrac{16-14.4}{22/3-2.4}=\tfrac{8}{24.67}\cdot\!\ldots$ — computing exactly, slope
+            $=\tfrac{8/5}{74/15}=\tfrac{12}{37}$, and the line meets $y=0$ at
+            $x=\tfrac{12}5-\tfrac{72}5\cdot\tfrac{37}{12}=\tfrac{12}5-\tfrac{222}5=-42$, so $BD=42$ ✓.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q24</span><span class="badge badge-l3">Level 3</span><span
+                class="badge badge-type">Similar Triangles &amp; Inradii</span><span class="badge badge-type">Answer:
+                C</span></div>
+        <ol>
+            <li>$\triangle ACD$ and $\triangle ABC$: $\angle A$ common and $\angle ADC=\angle ACB=90^\circ$ ⇒ $\triangle
+                ACD\sim\triangle ABC$ with $A\to A$, $C\to B$, $D\to C$. The side pairing $AC\leftrightarrow AB$ gives
+                ratio $k_1=\dfrac{AC}{AB}$.</li>
+            <li>Likewise $\triangle CBD\sim\triangle ABC$ with $B\to B$, $C\to A$, $D\to C$, ratio $k_2=\dfrac{BC}{AB}$.
+            </li>
+            <li>Inradii are corresponding linear elements, so $r_1=k_1r=3$ and $r_2=k_2r=4$, where $r$ is the inradius
+                of $\triangle ABC$.</li>
+            <li>$r_1^2+r_2^2=r^2\cdot\dfrac{AC^2+BC^2}{AB^2}=r^2$ (Pythagoras). So $r^2=9+16=25$ and $r=5$ ⇒ option
+                <strong>(C)</strong>.
+            </li>
+        </ol>
+        <p><strong>Check:</strong> $k_1=\tfrac35$, $k_2=\tfrac45$;
+            $r=\tfrac{AC+BC-AB}{2}=\tfrac{AB(3/5+4/5-1)}{2}=\tfrac{AB}{5}=5\Rightarrow AB=25$, $AC=15$, $BC=20$,
+            $CD=12$. Then $r(\triangle ACD)=\tfrac{9+12-15}{2}=3$ and $r(\triangle CBD)=\tfrac{16+12-20}{2}=4$ ✓.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q25</span><span class="badge badge-l3">Level 3</span><span
+                class="badge badge-type">Mass Points &amp; Area Fraction</span><span class="badge badge-type">Answer:
+                A</span></div>
+        <ol>
+            <li>$BD:DC=1:2$ ⇒ $w_B=2$, $w_C=1$, $w_D=3$. $M$ is the midpoint of $AC$ ⇒ $w_A=w_C=1$, $w_M=2$. Total
+                $W=4$.</li>
+            <li>$P=AD\cap BM$ gives $\dfrac{AP}{PD}=\dfrac{w_D}{w_A}=3$, so $\dfrac{PD}{AD}=\dfrac14$.</li>
+            <li>$[ABD]=\dfrac{BD}{BC}[ABC]=\dfrac13[ABC]$, and $\triangle BPD$, $\triangle BAD$ share apex $B$ with
+                bases $PD,AD$ on one line: $[BPD]=\dfrac{PD}{AD}[ABD]=\dfrac14\cdot\dfrac13[ABC]$.</li>
+            <li>$\dfrac{[BPD]}{[ABC]}=\dfrac1{12}$ ⇒ option <strong>(A)</strong>.</li>
+        </ol>
+        <p><strong>Check (Menelaus):</strong> $\triangle ADC$, transversal $B$–$P$–$M$:
+            $\tfrac{AP}{PD}\cdot\tfrac{DB}{BC}\cdot\tfrac{CM}{MA}=\tfrac{AP}{PD}\cdot\tfrac13\cdot1=1\Rightarrow\tfrac{AP}{PD}=3$
+            ✓. <strong>Check (coordinates):</strong> $B=(0,0)$, $C=(3,0)$, $A=(0,3)$ gives $P=(0.75,0.75)$,
+            $[BPD]=\tfrac12\cdot1\cdot0.75=0.375$ and $[ABC]=4.5$; $\tfrac{0.375}{4.5}=\tfrac1{12}$ ✓.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q26</span><span class="badge badge-l3">Level 3</span><span
+                class="badge badge-type">Area-Bisecting Parallel</span><span class="badge badge-type">Answer: D</span>
+        </div>
+        <ol>
+            <li>The parallel sides ($7$ and $17$) are unequal, so the legs are not parallel; extend them to meet at $O$.
+                The trapezium is the large triangle with base $17$ minus the small triangle with base $7$, both with
+                apex $O$.</li>
+            <li>Triangles with apex $O$ and a base parallel to the others are similar, so their areas are proportional
+                to (base)$^2$. Let $[\text{base }7]=49k$ and $[\text{base }17]=289k$. The trapezium has area $240k$.
+            </li>
+            <li>Let the bisecting line have length $x$. The triangle cut off by it has area $x^2k$. Equal halves require
+                $x^2k-49k=120k$, so $x^2=169$ and $x=13$ ⇒ option <strong>(D)</strong>.</li>
+        </ol>
+        <p><strong>Check:</strong> the upper part is $169k-49k=120k$ and the lower part $289k-169k=120k$ ✓. General
+            rule: $x=\sqrt{\tfrac{p^2+q^2}{2}}$ (root-mean-square). Option (A) $12$ is the arithmetic mean, (B)
+            $\sqrt{119}$ the geometric mean, (C) $\tfrac{119}{12}=\tfrac{2\cdot7\cdot17}{24}$ the harmonic mean — see
+            Forensics #7.</p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q27</span><span class="badge badge-l3">Level 3</span><span
+                class="badge badge-type">Passage 2 · Bisector Theorem</span><span class="badge badge-type">Answer:
+                B</span></div>
+        <ol>
+            <li>$AD$ bisects $\angle A$: $\dfrac{BD}{DC}=\dfrac{AB}{AC}=\dfrac9{15}=\dfrac35$. With $BC=12$:
+                $BD=12\cdot\dfrac38=\dfrac92$.</li>
+            <li>$CE$ bisects $\angle C$: $\dfrac{AE}{EB}=\dfrac{CA}{CB}=\dfrac{15}{12}=\dfrac54$. With $AB=9$:
+                $EB=9\cdot\dfrac49=4$.</li>
+            <li>$\angle B=90^\circ$, so $BD\perp BE$ and $[BDE]=\tfrac12\cdot BD\cdot BE=\tfrac12\cdot\dfrac92\cdot4=9$
+                m$^2$ ⇒ option <strong>(B)</strong>.</li>
+        </ol>
+        <p><strong>Check:</strong> $DC=12-4.5=7.5$ and $AE=9-4=5$. Option (D) $18.75=\tfrac12\cdot7.5\cdot5$ uses the
+            <em>wrong</em> pair of segments ($DC$ and $AE$ instead of $BD$ and $BE$).
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <div class="q-meta"><span class="q-num">Q28</span><span class="badge badge-l3">Level 3</span><span
+                class="badge badge-type">Passage 2 · Incentre</span><span class="badge badge-type">Answer: C</span>
+        </div>
+        <ol>
+            <li>$I$ is the incentre, so its distance to every side equals the inradius $r$. Check:
+                $r=\dfrac{AB+BC-CA}{2}=\dfrac{9+12-15}{2}=3$ (right triangle) ✓.</li>
+            <li>$\triangle IBD$ has base $BD=\dfrac92$ on $BC$, and the height from $I$ to $BC$ is $r=3$.</li>
+            <li>$[IBD]=\tfrac12\cdot\dfrac92\cdot3=\dfrac{27}{4}$ m$^2$ ⇒ option <strong>(C)</strong>.</li>
+        </ol>
+        <p><strong>Second route:</strong> $\dfrac{AI}{ID}=\dfrac{b+c}{a}=\dfrac{15+9}{12}=2$, so
+            $\dfrac{ID}{AD}=\dfrac13$. $[ABD]=\tfrac12\cdot9\cdot\dfrac92=\dfrac{81}4$ and
+            $[IBD]=\dfrac13\cdot\dfrac{81}{4}=\dfrac{27}{4}$ ✓. Option (D) $\tfrac{45}{4}=\tfrac12\cdot7.5\cdot3$ is
+            $[ICD]$, the triangle on the <em>other</em> side of $D$.</p>
+    </div>
+
+    <h2 class="section-heading">Trap &amp; Error Forensics</h2>
+
+    <div class="trap-box">
+        <strong>Forensics #1 — Confusing $AD/DB$ with $AD/AB$ (BPT)</strong>
+        <ul>
+            <li><strong>Where it bites:</strong> Q1, Q2, and every "find $DE$" problem.</li>
+            <li><strong>Autopsy:</strong> In Q1 the faulty step is $\tfrac{DE}{BC}=\tfrac{AD}{DB}=\tfrac8{12}$, giving
+                $DE=30$ and a final $30+15=45$ (entered 045) instead of the correct 033.</li>
+            <li><strong>Why it fails:</strong> BPT compares <em>part to part</em> on two sides
+                ($\tfrac{AD}{DB}=\tfrac{AE}{EC}$). The similar triangles $\triangle ADE\sim\triangle ABC$ compare
+                <em>part to whole</em> ($\tfrac{DE}{BC}=\tfrac{AD}{AB}$).
+            </li>
+            <li><strong>Sanity test (10 seconds):</strong> slide $D$ to the midpoint of $AB$. Then $DE=\tfrac12BC$. The
+                formula $\tfrac{AD}{AB}$ gives $\tfrac12$ ✓; $\tfrac{AD}{DB}$ gives $1$ ✗. Slide $D\to B$: the true
+                ratio tends to $1$, while $\tfrac{AD}{DB}\to\infty$.</li>
+            <li><strong>Cure:</strong> before writing a ratio for a segment parallel to the base, ask "is the
+                denominator the <em>whole</em> side?" If $AB$ is the denominator, you're in similar-triangle mode.</li>
+        </ul>
+    </div>
+
+    <div class="trap-box">
+        <strong>Forensics #2 — Misordering corresponding vertices (Similarity)</strong>
+        <ul>
+            <li><strong>Where it bites:</strong> Q10, Q24, any overlapping-triangle figure.</li>
+            <li><strong>Autopsy (Q10):</strong> a student sees $\triangle ABD$ and $\triangle ABC$ in the picture and
+                writes $\triangle ABD\sim\triangle ABC$. That pairs $B$ with $B$, forcing
+                $\tfrac{AB}{AB}=\tfrac{AD}{AC}$, i.e. $1=\tfrac49$ — an immediate contradiction. Panicking, the student
+                often reaches for the right-triangle relation $AB^2=AD\cdot DC=20$ and picks option (A) $2\sqrt5$.</li>
+            <li><strong>Correct audit:</strong> write the equal angles first: $\angle A=\angle A$, $\angle ABD=\angle
+                ACB$. The vertex with the "given" angle at $B$ matches $C$, so the order is $\triangle ABD\sim\triangle
+                ACB$, and $AB^2=AD\cdot AC=36$.</li>
+            <li><strong>Cure:</strong> never copy letters from the figure. Make a two-row table (angle at vertex 1, 2, 3
+                in each triangle), fill it from the equal angles, <em>then</em> write the similarity statement and read
+                sides off it.</li>
+        </ul>
+    </div>
+
+    <div class="trap-box">
+        <strong>Forensics #3 — Forgetting the squared ratio for areas</strong>
+        <ul>
+            <li><strong>Where it bites:</strong> Q3, Q5, Q9, Q26.</li>
+            <li><strong>Autopsy (Q3):</strong> taking $[DEF]=\tfrac12[ABC]=192$ because the sides are halved gives
+                $48+192=240$ instead of the correct $48+96=144$. <strong>(Q9):</strong> using
+                $\tfrac{[AOB]}{[COD]}=\tfrac32$ (the side ratio) gives $[COD]=60$ and $[AOB]+[COD]+2[AOD]=90+60+120=270$
+                — wrong, since the true $[COD]=40$ and the total is $250$. <strong>(Q5):</strong> using the area ratio
+                $\tfrac{108}{48}$ directly as the side ratio gives $PQ=22.5$, a non-integer.</li>
+            <li><strong>Rule:</strong> lengths scale by $k$, areas by $k^2$. In the reverse direction, <em>take the
+                    square root</em> of an area ratio to get a length ratio.</li>
+            <li><strong>Red-flag test:</strong> NAT answers are integers. A fractional intermediate such as $22.5$ in Q5
+                is a signal that a square root was skipped.</li>
+            <li><strong>Cure:</strong> write "$\text{length}\ \times k$ — $\text{area}\ \times k^2$" in the margin of
+                every similarity problem before you start.</li>
+        </ul>
+    </div>
+
+    <div class="trap-box">
+        <strong>Forensics #4 — Misidentifying the external point in Menelaus</strong>
+        <ul>
+            <li><strong>Where it bites:</strong> Q23 (and Q17, Q18, Q21 when $B$ or $C$ is the "outside" vertex of a
+                sub-triangle).</li>
+            <li><strong>Autopsy (Q23):</strong> Menelaus gives $\tfrac{BD}{DC}=\tfrac34$. A student places $D$
+                <em>between</em> $B$ and $C$ with $BD+DC=14$, so $BD=6$, $DC=8$, and
+                $[CDE]=\tfrac8{14}\cdot\tfrac23\cdot90=\tfrac{240}7$ — not an integer, which cannot be a NAT answer.
+            </li>
+            <li><strong>Why it fails:</strong> the transversal meets lines $AB$ and $AC$ at interior points $F,E$.
+                Menelaus requires an <em>odd</em> number of external intersection points. Zero are external so far,
+                hence $D$ <em>must</em> lie on the extension of $BC$. Since $BD<DC$, the extension is beyond $B$, so
+                    $DC=DB+BC$, which gives $BD=42$, $DC=56$.</li>
+            <li><strong>Secondary trap:</strong> a student may put $D$ beyond $C$, but then $BD>DC$, contradicting
+                $\tfrac{BD}{DC}=\tfrac34<1$.< /li>
+            <li><strong>Cure:</strong> (i) count external points, (ii) decide the side by whether the ratio is $<1$ or
+                    $>1$, (iii) write the "far" segment as near-segment plus side length before solving.</li>
+        </ul>
+    </div>
+
+    <div class="trap-box">
+        <strong>Forensics #5 — Inverting the ratio in Ceva</strong>
+        <ul>
+            <li><strong>Where it bites:</strong> Q13, Q21.</li>
+            <li><strong>Autopsy (Q13):</strong> writing
+                $\tfrac{AF}{FB}=\tfrac{BD}{DC}\cdot\tfrac{CE}{EA}=\tfrac23\cdot\tfrac34=\tfrac12$ gives $AF=10$, so
+                $AF+DC=31$ — option (B). The correct step moves the known ratios to the other side:
+                $\tfrac{AF}{FB}=\left(\tfrac{DC}{BD}\right)\left(\tfrac{EA}{CE}\right)=\tfrac32\cdot\tfrac43=2$.</li>
+            <li><strong>Cure:</strong> always write the full cyclic product
+                $\tfrac{BD}{DC}\cdot\tfrac{CE}{EA}\cdot\tfrac{AF}{FB}=1$ with the unknown in place, <em>then</em>
+                substitute. Never rearrange in your head. Finish with the plug-back test:
+                $\tfrac23\cdot\tfrac34\cdot2=1$.</li>
+        </ul>
+    </div>
+
+    <div class="trap-box">
+        <strong>Forensics #6 — Cross-pairing in Stewart's Theorem</strong>
+        <ul>
+            <li><strong>Where it bites:</strong> Q11, Q22.</li>
+            <li><strong>Autopsy (Q11):</strong> pairing each side with the <em>adjacent</em> segment ($b^2\cdot
+                n+c^2\cdot m$) gives $400\cdot7+169\cdot14=5166=21(d^2+98)$, so $d^2=148$, not a perfect square — a loud
+                warning for a NAT answer expecting an integer $AD$.</li>
+            <li><strong>Correct pairing:</strong> $b^2m+c^2n$, i.e. $b=CA$ multiplies $m=BD$ (the segment at the
+                <em>other</em> vertex). Mnemonic: "man + dad = bmb + cnc".
+            </li>
+            <li><strong>Boundary test:</strong> push $D\to B$ ($m=0$, $d=c$): the correct form gives $c^2a=ac^2$ ✓; the
+                cross-wrong form gives $b^2a\cdot0\ldots$ and fails.</li>
+            <li><strong>Cure:</strong> run the two boundary checks ($D=B$, $D=C$) once whenever you copy the formula
+                from memory.</li>
+        </ul>
+    </div>
+
+    <div class="trap-box">
+        <strong>Forensics #7 — Plausible-number traps: wrong mean, wrong cevian</strong>
+        <ul>
+            <li><strong>Where it bites:</strong> Q22, Q26 (also Q6 and Q16).</li>
+            <li><strong>Q26:</strong> three of the four options are famous means of $7$ and $17$: arithmetic $12$,
+                geometric $\sqrt{119}$, harmonic $\tfrac{119}{12}$. The correct line that <em>bisects the area</em> has
+                length equal to the root-mean-square, $\sqrt{\tfrac{49+289}{2}}=13$, because areas scale with the square
+                of the parallel length. Note the different jobs: harmonic mean = line through the diagonal intersection
+                (Theorem 1.4); arithmetic mean = mid-line; RMS = area bisector.</li>
+            <li><strong>Q22:</strong> the altitude from $A$ in the $13$-$14$-$15$ triangle is exactly $12$, and the
+                bisector is $\approx12.09$. The "nice" number is the wrong cevian. Altitude ⟂ base; bisector splits $BC$
+                in $13:15$; median splits it $1:1$.</li>
+            <li><strong>Q6 / Q16 relatives:</strong> $6.5$ is the arithmetic mean of $4$ and $9$ (altitude is the
+                geometric mean), and $12$ and $10$ in Q16 are intermediate lengths ($CD'$ and $AB$).</li>
+            <li><strong>Cure:</strong> when an option looks suspiciously clean, ask "which <em>other</em> question has
+                this answer?" and re-derive the specific cevian or mean being asked for.</li>
+        </ul>
+    </div>
+
+</article>

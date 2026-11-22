@@ -1,0 +1,1059 @@
+<article data-volume="Volume 2: Mathematics (Paper 1)"
+    data-title="Chapter 13: Circle Theorems, Areas Related to Circles &amp; 3D Mensuration">
+
+    <div class="chapter-hero">
+        <div class="chapter-meta">Volume 2 · Mathematics (Paper 1) · Chapter 13 · Part 1 of 3 — Theory &amp; Worked
+            Examples</div>
+        <h1>Circle Theorems, Areas Related to Circles &amp; 3D Mensuration</h1>
+        <p>Every result in this chapter is derived from first principles before the exam shortcut is taught. The chapter
+            runs from chord and tangent geometry through Ptolemy, Power of a Point, Hippocrates' lunes and the frustum,
+            to cone-slicing ratios. These are the Class 11 Foundation and NTSE Stage 2 tools that BEST Paper 1 draws on.
+        </p>
+        <div class="tag-row">
+            <span class="meta-pill">⏱ 7 Hours</span>
+            <span class="meta-pill">Level 1 → 2 → 3</span>
+            <span class="meta-pill">5 Diagrams</span>
+            <span class="meta-pill">9 Worked Examples</span>
+            <span class="meta-pill">Olympiad Bridge</span>
+        </div>
+    </div>
+
+    <!-- ===================== SECTION 1 ===================== -->
+    <h2 class="section-heading">1. Classical Circle &amp; Tangent Properties</h2>
+
+    <div class="concept-box">
+        <span class="box-label">1.1 Chords and Distance from the Centre</span>
+        <p><b>Theorem.</b> The perpendicular from the centre $O$ to a chord $AB$ bisects the chord.</p>
+        <p><b>Proof.</b> Let $OM \perp AB$. Then $OA = OB = r$ (radii) and $OM$ is common, so the right triangles $OMA$
+            and $OMB$ are congruent (RHS). Hence $AM = MB$. $\blacksquare$</p>
+        <p><b>Consequence.</b> For a chord of length $c$ at distance $d$ from the centre:</p>
+        $$r^2 = d^2 + \left(\tfrac{c}{2}\right)^2 \quad\Longrightarrow\quad d = \sqrt{r^2 - \tfrac{c^2}{4}}$$
+        <p>Equal chords are equidistant from the centre, and a longer chord lies closer to the centre. <b>Parallel-chord
+                trap:</b> two parallel chords at distances $d_1, d_2$ are $d_1 + d_2$ apart if they lie on opposite
+            sides of the centre, and $|d_1 - d_2|$ apart if they lie on the same side. Always check both cases.</p>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">1.2 Central vs Inscribed Angle, Cyclic Quadrilaterals</span>
+        <p><b>Theorem.</b> An arc subtends at the centre twice the angle it subtends at any point on the remaining part
+            of the circle.</p>
+        <p><b>Proof.</b></p>
+        <ul>
+            <li><i>Case 1 (one arm of $\angle ABC$ passes through $O$).</i> In $\triangle OAB$, $OA = OB$, so $\angle
+                OAB = \angle OBA = x$. The angle $\angle AOC$ is exterior to $\triangle OAB$, so $\angle AOC = \angle
+                OAB + \angle OBA = 2x = 2\angle ABC$.</li>
+            <li><i>Case 2 (centre inside $\angle ABC$).</i> Draw the diameter $BD$. Apply Case 1 to $\angle ABD$ and
+                $\angle DBC$, then add.</li>
+            <li><i>Case 3 (centre outside).</i> Draw the diameter $BD$. Apply Case 1 to both angles, then subtract.
+                $\blacksquare$</li>
+        </ul>
+        <p><b>Corollaries.</b></p>
+        <ul>
+            <li>Angles in the same segment are equal.</li>
+            <li>The angle in a semicircle is $90^\circ$ (central angle $180^\circ$). Conversely, if $\angle APB =
+                90^\circ$ then $AB$ is a diameter.</li>
+            <li><b>Cyclic quadrilateral $ABCD$:</b> $\angle A = \tfrac12\,\text{arc } BCD$ and $\angle C =
+                \tfrac12\,\text{arc } BAD$. The two arcs total $360^\circ$, so $\angle A + \angle C = 180^\circ$.</li>
+            <li>The exterior angle of a cyclic quadrilateral equals the interior opposite angle, because $180^\circ -
+                \angle C = \angle A$.</li>
+            <li>The converse also holds. If opposite angles of a convex quadrilateral sum to $180^\circ$, its vertices
+                are concyclic.</li>
+        </ul>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">1.3 Tangent Properties</span>
+        <p><b>(a) Tangent $\perp$ radius.</b> A tangent meets the circle at exactly one point $T$, so every other point
+            $X$ of the line is outside the circle and $OX \gt OT = r$. Thus $OT$ is the shortest segment from $O$ to the
+            line, and the shortest segment is the perpendicular.</p>
+        <p><b>(b) Tangent length.</b> From an external point $P$ at distance $d = OP$, Pythagoras in $\triangle OTP$
+            gives $PT = \sqrt{d^2 - r^2}$.</p>
+        <p><b>(c) Equal tangents.</b> $PT_1 = PT_2$ (RHS: $OT_1 = OT_2$, $OP$ common). Also $OP$ bisects $\angle
+            T_1PT_2$ and $\angle T_1OT_2$, and $\angle T_1PT_2 + \angle T_1OT_2 = 180^\circ$.</p>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">1.4 Pitot's Theorem and the Inradius</span>
+        <p><b>Pitot's Theorem.</b> Let a circle touch the sides $AB, BC, CD, DA$ of a quadrilateral. By (c) above, the
+            tangent lengths from the four vertices are $a, b, c, d$ respectively. Then $AB = a + b$, $BC = b + c$, $CD =
+            c + d$, $DA = d + a$, so</p>
+        $$AB + CD = a + b + c + d = BC + DA.$$
+        <p>The converse holds for convex quadrilaterals. A parallelogram with an incircle is a rhombus, and a rectangle
+            with an incircle is a square.</p>
+        <p><b>Inradius of a right triangle.</b> Let the right angle be at $C$, with $BC = a$, $CA = b$, $AB = c$. The
+            two radii to the legs together with $C$ and the incentre form a square of side $r$, so the tangent length
+            from $C$ is $r$. If the tangent lengths from $A$ and $B$ are $x$ and $y$, then $a = r + y$, $b = r + x$ and
+            $c = x + y$. Adding gives $a + b = 2r + c$, so</p>
+        $$r = \frac{a + b - c}{2}.$$
+        <p><b>Inradius of any triangle.</b> Join the incentre $I$ to the three vertices. The triangle splits into three
+            triangles of height $r$, so $\Delta = \tfrac12 r(a + b + c) = rs$, giving</p>
+        $$r = \frac{\Delta}{s}, \qquad s = \frac{a+b+c}{2}, \qquad \text{tangent length from } A = s - a.$$
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">1.5 Common Tangents of Two Circles</span>
+        <p>Let the radii be $r_1 \ge r_2$ and the centre distance be $d$. A <b>direct</b> tangent leaves both circles on
+            the same side of the line of centres. A <b>transverse</b> tangent crosses between the circles.</p>
+        <p><b>Direct tangent length.</b> Let $PQ$ touch the circles at $P, Q$. Draw $O_2M \perp O_1P$ with $M$ on
+            $O_1P$. Then $O_2QPM$ is a rectangle, so $MP = r_2$, $O_1M = r_1 - r_2$ and $O_2M = PQ$. Pythagoras in
+            $\triangle O_1MO_2$ gives</p>
+        $$PQ_{\text{direct}} = \sqrt{d^2 - (r_1 - r_2)^2}.$$
+        <p><b>Transverse tangent length.</b> Extend $O_1P$ beyond $P$ to $N$ with $PN = r_2$. Then $PNO_2Q$ is a
+            rectangle, so $O_2N = PQ$. Also $O_1N = r_1 + r_2$ and $O_1N \perp O_2N$. Hence</p>
+        $$PQ_{\text{transverse}} = \sqrt{d^2 - (r_1 + r_2)^2}.$$
+        <p>The two transverse tangents meet on the line of centres and divide $O_1O_2$ internally in the ratio $r_1 :
+            r_2$ (similar triangles). The two direct tangents meet on $O_1O_2$ extended, dividing it externally in the
+            ratio $r_1 : r_2$.</p>
+
+        <div class="diagram-box">
+            <svg viewBox="0 0 640 230" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;height:auto"
+                font-family="Georgia,serif" font-size="13" role="img"
+                aria-label="Direct and transverse common tangents of two circles">
+                <text x="30" y="20" font-weight="bold" fill="#1f3a5f">Direct (external) tangents</text>
+                <text x="380" y="20" font-weight="bold" fill="#1f3a5f">Transverse (internal) tangents</text>
+                <g fill="none" stroke="#1f3a5f" stroke-width="1.6">
+                    <circle cx="50" cy="110" r="40" />
+                    <circle cx="210" cy="110" r="24" />
+                    <circle cx="400" cy="110" r="40" />
+                    <circle cx="560" cy="110" r="24" />
+                </g>
+                <g stroke="#c0392b" stroke-width="1.7" fill="none">
+                    <line x1="20" y1="66.8" x2="250" y2="89.9" />
+                    <line x1="20" y1="153.2" x2="250" y2="130.1" />
+                    <line x1="390" y1="62" x2="585" y2="147.1" />
+                    <line x1="390" y1="158" x2="585" y2="72.9" />
+                </g>
+                <g stroke="#555" stroke-width="1.1" stroke-dasharray="4 3" fill="none">
+                    <line x1="50" y1="110" x2="210" y2="110" />
+                    <line x1="50" y1="110" x2="54" y2="70.2" />
+                    <line x1="210" y1="110" x2="212.4" y2="86.1" />
+                    <line x1="210" y1="110" x2="51.6" y2="94.08" />
+                    <line x1="400" y1="110" x2="560" y2="110" />
+                    <line x1="400" y1="110" x2="416" y2="73.34" />
+                    <line x1="560" y1="110" x2="550.4" y2="132" />
+                </g>
+                <g fill="#1f3a5f">
+                    <circle cx="50" cy="110" r="2.5" />
+                    <circle cx="210" cy="110" r="2.5" />
+                    <circle cx="400" cy="110" r="2.5" />
+                    <circle cx="560" cy="110" r="2.5" />
+                    <circle cx="500" cy="110" r="3" fill="#c0392b" />
+                </g>
+                <g fill="#222">
+                    <text x="36" y="128">O₁</text><text x="196" y="128">O₂</text>
+                    <text x="46" y="64">P</text><text x="217" y="82">Q</text>
+                    <text x="124" y="125">d</text>
+                    <text x="386" y="128">O₁</text><text x="546" y="128">O₂</text>
+                    <text x="420" y="68">P</text><text x="552" y="148">Q</text>
+                    <text x="478" y="104">X</text><text x="476" y="125">d</text>
+                </g>
+                <text x="30" y="205" fill="#222">PQ = √(d² − (r₁ − r₂)²)</text>
+                <text x="380" y="205" fill="#222">PQ = √(d² − (r₁ + r₂)²)</text>
+                <text x="380" y="222" fill="#555" font-size="12">X divides O₁O₂ internally in ratio r₁ : r₂</text>
+            </svg>
+            <div class="diagram-caption">Fig 13.1 — Left: the dashed line from O₂ parallel to the tangent leaves a leg
+                of length r₁ − r₂. Right: the transverse tangents cross at X on the line of centres.</div>
+        </div>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Position of circles</th>
+                    <th>Condition</th>
+                    <th>Total tangents</th>
+                    <th>Direct</th>
+                    <th>Transverse</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Separate</td>
+                    <td>$d \gt r_1 + r_2$</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Touch externally</td>
+                    <td>$d = r_1 + r_2$</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1 (at the point of contact)</td>
+                </tr>
+                <tr>
+                    <td>Intersect</td>
+                    <td>$r_1 - r_2 \lt d \lt r_1 + r_2$</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Touch internally</td>
+                    <td>$d = r_1 - r_2$</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>One inside the other</td>
+                    <td>$d \lt r_1 - r_2$</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge — Tangential Quadrilaterals &amp; Triangle Radii</span>
+        <ul>
+            <li><b>Area of a tangential quadrilateral.</b> Join the incentre to the four vertices. The area is $\tfrac12
+                r(AB + BC + CD + DA) = r\,s$, where $s$ is the semi-perimeter.</li>
+            <li><b>Circumradius.</b> For any triangle, $R = \dfrac{abc}{4\Delta}$. For a right triangle, $R =
+                \dfrac{c}{2}$.</li>
+            <li><b>Right-triangle identity.</b> $R + r = \dfrac{c}{2} + \dfrac{a+b-c}{2} = \dfrac{a+b}{2}$.</li>
+            <li><b>Pythagorean triples as tangent lengths.</b> The common-tangent formulas become integers whenever
+                $(r_1 \mp r_2,\ \text{tangent},\ d)$ is a Pythagorean triple. For example, $d = 25$ works with the
+                triples $(7, 24, 25)$ and $(15, 20, 25)$. Then $r_1 = 11$, $r_2 = 4$, direct tangent $= 24$ and
+                transverse tangent $= 20$. Expect this pattern in NAT questions.</li>
+        </ul>
+    </div>
+
+    <!-- ===================== SECTION 2 ===================== -->
+    <h2 class="section-heading">2. Olympiad Circle Bridge — Alternate Segment, Ptolemy, Power of a Point</h2>
+
+    <div class="concept-box">
+        <span class="box-label">2.1 Alternate Segment Theorem (Tangent–Chord Angle)</span>
+        <p><b>Theorem.</b> The angle between a tangent and a chord drawn through the point of contact equals the angle
+            in the alternate segment. In the figure, $\angle QAB = \angle ACB = \theta$.</p>
+        <p><b>Proof</b> (for acute $\theta$). Let $PAQ$ be the tangent at $A$ and $\angle QAB = \theta$. Draw the
+            diameter $AD$.</p>
+        <ol>
+            <li>Tangent $\perp$ radius, so $\angle DAQ = 90^\circ$ and $\angle DAB = 90^\circ - \theta$.</li>
+            <li>$\angle ABD = 90^\circ$ (angle in a semicircle).</li>
+            <li>In $\triangle ABD$: $\angle ADB = 180^\circ - 90^\circ - (90^\circ - \theta) = \theta$.</li>
+            <li>$\angle ACB = \angle ADB$ (same segment), so $\angle ACB = \theta$. $\blacksquare$</li>
+        </ol>
+        <p>For obtuse $\theta$, use the straight angle $PAQ$ together with the cyclic-quadrilateral property. The
+            theorem is the limiting case of the inscribed-angle theorem, where the chord $AC$ rotates into the tangent.
+        </p>
+        <p><b>Trap:</b> the equal angle sits on the opposite side of the chord from the angle you started with. Always
+            name the arc each angle stands on.</p>
+
+        <div class="diagram-box">
+            <svg viewBox="0 0 320 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:320px;height:auto"
+                font-family="Georgia,serif" font-size="14" role="img" aria-label="Alternate segment theorem">
+                <circle cx="150" cy="130" r="90" fill="none" stroke="#1f3a5f" stroke-width="1.6" />
+                <path d="M150,220 A90,90 0 0 0 234.57,99.22" fill="none" stroke="#f2a900" stroke-width="4"
+                    opacity=".8" />
+                <line x1="40" y1="220" x2="270" y2="220" stroke="#c0392b" stroke-width="1.8" />
+                <g stroke="#1f3a5f" stroke-width="1.5" fill="none">
+                    <line x1="150" y1="220" x2="234.57" y2="99.22" />
+                    <line x1="150" y1="220" x2="72.06" y2="85" />
+                    <line x1="72.06" y1="85" x2="234.57" y2="99.22" />
+                </g>
+                <path d="M175,220 A25,25 0 0 0 164.34,199.52" fill="none" stroke="#c0392b" stroke-width="1.6" />
+                <path d="M99.95,87.44 A28,28 0 0 1 86.06,109.25" fill="none" stroke="#c0392b" stroke-width="1.6" />
+                <g fill="#1f3a5f">
+                    <circle cx="150" cy="220" r="3" />
+                    <circle cx="234.57" cy="99.22" r="3" />
+                    <circle cx="72.06" cy="85" r="3" />
+                </g>
+                <g fill="#222">
+                    <text x="144" y="240">A</text><text x="242" y="97">B</text><text x="58" y="82">C</text>
+                    <text x="28" y="238">P</text><text x="274" y="238">Q</text>
+                    <text x="182" y="212" fill="#c0392b">θ</text><text x="104" y="112" fill="#c0392b">θ</text>
+                </g>
+                <text x="165" y="160" fill="#8a6100" font-size="12">arc AB</text>
+            </svg>
+            <div class="diagram-caption">Fig 13.2 — Tangent PAQ at A. ∠QAB = ∠ACB = θ = ½ arc AB, with C on the
+                alternate segment.</div>
+        </div>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">2.2 Ptolemy's Theorem</span>
+        <p><b>Theorem.</b> For a cyclic quadrilateral $ABCD$: $AC \cdot BD = AB \cdot CD + BC \cdot AD$.</p>
+        <p><b>Proof.</b> Since $D$ lies on the arc $AC$ opposite to $B$, ray $BD$ lies inside $\angle ABC$. Choose $E$
+            on $AC$ with $\angle ABE = \angle CBD$.</p>
+        <ol>
+            <li>Adding $\angle EBD$ to both sides gives $\angle ABD = \angle EBC$.</li>
+            <li>$\triangle ABE \sim \triangle DBC$ (AA). We have $\angle ABE = \angle DBC$ by construction, and $\angle
+                BAE = \angle BAC = \angle BDC$ (same arc $BC$). So $\dfrac{AB}{DB} = \dfrac{AE}{DC}$, i.e. $AB \cdot DC
+                = DB \cdot AE$.</li>
+            <li>$\triangle EBC \sim \triangle ABD$ (AA). We have $\angle EBC = \angle ABD$, and $\angle BCE = \angle BCA
+                = \angle BDA$ (same arc $AB$). So $\dfrac{BC}{BD} = \dfrac{EC}{AD}$, i.e. $BC \cdot AD = BD \cdot EC$.
+            </li>
+            <li>Add the two results: $AB \cdot DC + BC \cdot AD = BD(AE + EC) = BD \cdot AC$. $\blacksquare$</li>
+        </ol>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">2.3 Power of a Point</span>
+        <p><b>(i) Intersecting chords</b> ($P$ inside). Chords $AB$ and $CD$ meet at $P$. In $\triangle PAC$ and
+            $\triangle PDB$, $\angle APC = \angle DPB$ (vertically opposite) and $\angle PAC = \angle BAC = \angle BDC =
+            \angle PDB$ (same arc $BC$). So $\triangle PAC \sim \triangle PDB$, giving $\dfrac{PA}{PD} =
+            \dfrac{PC}{PB}$, i.e. $PA \cdot PB = PC \cdot PD$.</p>
+        <p><b>(ii) Secant–secant</b> ($P$ outside). Secants $PAB$ and $PCD$ have $A, C$ nearer to $P$. In $\triangle
+            PDA$ and $\triangle PBC$, the angle at $P$ is common and $\angle PDA = \angle CDA = \angle ABC = \angle PBC$
+            (same arc $AC$). So $\triangle PDA \sim \triangle PBC$, giving $\dfrac{PD}{PB} = \dfrac{PA}{PC}$, i.e. $PA
+            \cdot PB = PC \cdot PD$.</p>
+        <p><b>(iii) Tangent–secant.</b> Let $PT$ be a tangent and $PAB$ a secant. In $\triangle PTA$ and $\triangle
+            PBT$, the angle at $P$ is common and $\angle PTA = \angle TBA$ (alternate segment). So $\dfrac{PT}{PB} =
+            \dfrac{PA}{PT}$, i.e.</p>
+        $$PT^2 = PA \cdot PB.$$
+        <p><b>Unified statement.</b> For any line through $P$ meeting the circle at $X, Y$: $PX \cdot PY = |OP^2 -
+            r^2|$. This is the same for every line through $P$. For a tangent, $PT^2 = OP^2 - r^2$.</p>
+
+        <div class="diagram-box">
+            <svg viewBox="0 0 640 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;height:auto"
+                font-family="Georgia,serif" font-size="13" role="img"
+                aria-label="Power of a point: intersecting chords and tangent-secant">
+                <text x="20" y="18" font-weight="bold" fill="#1f3a5f">(a) Intersecting chords</text>
+                <text x="350" y="18" font-weight="bold" fill="#1f3a5f">(b) Tangent and secant from outside</text>
+                <g fill="none" stroke="#1f3a5f" stroke-width="1.6">
+                    <circle cx="110" cy="120" r="85" />
+                    <circle cx="420" cy="120" r="70" />
+                </g>
+                <g stroke="#c0392b" stroke-width="1.6" fill="none">
+                    <line x1="25.59" y1="110" x2="194.41" y2="110" />
+                    <line x1="84.04" y1="39.06" x2="167.12" y2="182.95" />
+                    <line x1="590" y1="140" x2="455.9" y2="59.9" />
+                    <line x1="590" y1="140" x2="369.3" y2="168.2" />
+                </g>
+                <g fill="#1f3a5f">
+                    <circle cx="125" cy="110" r="3" />
+                    <circle cx="25.59" cy="110" r="2.5" />
+                    <circle cx="194.41" cy="110" r="2.5" />
+                    <circle cx="84.04" cy="39.06" r="2.5" />
+                    <circle cx="167.12" cy="182.95" r="2.5" />
+                    <circle cx="590" cy="140" r="3" />
+                    <circle cx="455.9" cy="59.9" r="2.5" />
+                    <circle cx="481.22" cy="153.91" r="2.5" />
+                    <circle cx="369.3" cy="168.2" r="2.5" />
+                </g>
+                <g fill="#222">
+                    <text x="12" y="106">A</text><text x="198" y="106">B</text><text x="128" y="104">P</text>
+                    <text x="70" y="36">D</text><text x="170" y="198">C</text>
+                    <text x="596" y="146">P</text><text x="456" y="52">T</text>
+                    <text x="486" y="170">A</text><text x="354" y="186">B</text>
+                </g>
+                <text x="40" y="232" fill="#222">PA · PB = PC · PD</text>
+                <text x="380" y="232" fill="#222">PT² = PA · PB = OP² − r²</text>
+            </svg>
+            <div class="diagram-caption">Fig 13.3 — Power of a Point. In (a) P is inside the circle; in (b) P is
+                outside, and the tangent PT is the limiting case of a secant whose two intersection points merge.</div>
+        </div>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge — Ptolemy &amp; Power Extensions</span>
+        <ul>
+            <li><b>Equilateral triangle.</b> If $P$ lies on arc $BC$ (not containing $A$) of the circumcircle of
+                equilateral $\triangle ABC$ with side $s$, Ptolemy on $ABPC$ gives $AP \cdot s = s \cdot PC + s \cdot
+                PB$. So $PA = PB + PC$.</li>
+            <li><b>Rectangle.</b> Ptolemy on a rectangle with sides $a, b$ gives $d \cdot d = a \cdot a + b \cdot b$,
+                which is Pythagoras.</li>
+            <li><b>Ptolemy's inequality.</b> For any quadrilateral, $AC \cdot BD \le AB \cdot CD + BC \cdot AD$, with
+                equality if and only if it is cyclic.</li>
+            <li><b>Sign of power.</b> $p(P) = OP^2 - r^2$ is negative inside, zero on the circle and positive outside.
+                The locus of points with equal power to two circles is a straight line, the <b>radical axis</b>. For
+                intersecting circles it is the common chord extended. It also bisects the common tangents (see Example
+                8).</li>
+            <li><b>Chord–tangent speed trick.</b> A tangent of length $t$ and a secant whose external part is $x$ and
+                whole length is $x + y$ satisfy $t^2 = x(x + y)$. For most NAT problems, solve this quadratic directly.
+            </li>
+        </ul>
+    </div>
+
+    <!-- ===================== SECTION 3 ===================== -->
+    <h2 class="section-heading">3. Areas Related to Circles</h2>
+
+    <div class="concept-box">
+        <span class="box-label">3.1 Arc, Sector and Segment — from First Principles</span>
+        <p>Rotational symmetry means a central angle $\theta$ cuts off the fraction $\dfrac{\theta}{360^\circ}$ of both
+            the circumference $2\pi r$ and the area $\pi r^2$. Hence</p>
+        $$l = \frac{\theta}{360^\circ}\cdot 2\pi r, \qquad A_{\text{sector}} = \frac{\theta}{360^\circ}\,\pi r^2 =
+        \tfrac12\, l\, r.$$
+        <p>The last equality holds because $\tfrac12 l r = \tfrac12 \cdot \dfrac{\theta}{360^\circ}\cdot 2\pi r \cdot
+            r$.</p>
+        <p><b>Minor segment</b> = sector $-$ triangle $OAB$. The triangle has area $\tfrac12 r^2 \sin\theta$ (two sides
+            $r, r$ with included angle $\theta$), so</p>
+        $$A_{\text{minor seg}} = \frac{\theta}{360^\circ}\pi r^2 - \tfrac12 r^2 \sin\theta, \qquad \text{chord } AB =
+        2r\sin\tfrac{\theta}{2}.$$
+        <p><b>Major segment</b> = $\pi r^2 - A_{\text{minor seg}}$. The same formula also works for a reflex $\theta \gt
+            180^\circ$, because then $\sin\theta \lt 0$ and the "minus triangle" becomes "plus triangle".</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>$\theta$</th>
+                    <th>Sector $/\,r^2$</th>
+                    <th>Triangle $\tfrac12\sin\theta\,/\,$ $r^2$</th>
+                    <th>Minor segment $/\,r^2$</th>
+                    <th>Chord $/\,r$</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$60^\circ$ (official)</td>
+                    <td>$\pi/6$</td>
+                    <td>$\sqrt3/4$</td>
+                    <td>$\pi/6 - \sqrt3/4$</td>
+                    <td>$1$</td>
+                </tr>
+                <tr>
+                    <td>$90^\circ$ (official)</td>
+                    <td>$\pi/4$</td>
+                    <td>$1/2$</td>
+                    <td>$\pi/4 - 1/2$</td>
+                    <td>$\sqrt2$</td>
+                </tr>
+                <tr>
+                    <td>$120^\circ$ (official)</td>
+                    <td>$\pi/3$</td>
+                    <td>$\sqrt3/4$</td>
+                    <td>$\pi/3 - \sqrt3/4$</td>
+                    <td>$\sqrt3$</td>
+                </tr>
+                <tr>
+                    <td>$30^\circ$ (Olympiad)</td>
+                    <td>$\pi/12$</td>
+                    <td>$1/4$</td>
+                    <td>$\pi/12 - 1/4$</td>
+                    <td>$(\sqrt6-\sqrt2)/2$</td>
+                </tr>
+                <tr>
+                    <td>$45^\circ$ (Olympiad)</td>
+                    <td>$\pi/8$</td>
+                    <td>$\sqrt2/4$</td>
+                    <td>$\pi/8 - \sqrt2/4$</td>
+                    <td>$\sqrt{2-\sqrt2}$</td>
+                </tr>
+                <tr>
+                    <td>$135^\circ$ (Olympiad)</td>
+                    <td>$3\pi/8$</td>
+                    <td>$\sqrt2/4$</td>
+                    <td>$3\pi/8 - \sqrt2/4$</td>
+                    <td>$\sqrt{2+\sqrt2}$</td>
+                </tr>
+                <tr>
+                    <td>$150^\circ$ (Olympiad)</td>
+                    <td>$5\pi/12$</td>
+                    <td>$1/4$</td>
+                    <td>$5\pi/12 - 1/4$</td>
+                    <td>$(\sqrt6+\sqrt2)/2$</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="diagram-box">
+            <svg viewBox="0 0 640 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;height:auto"
+                font-family="Georgia,serif" font-size="13" role="img"
+                aria-label="Sector and segment, and Hippocrates lunes">
+                <text x="20" y="18" font-weight="bold" fill="#1f3a5f">(a) Sector OAB and minor segment (θ = 90°)</text>
+                <text x="330" y="18" font-weight="bold" fill="#1f3a5f">(b) Hippocrates' lunes</text>
+                <path d="M110,200 L200,200 A90,90 0 0 0 110,110 Z" fill="#cfe3f7" stroke="#1f3a5f" stroke-width="1.6" />
+                <path d="M200,200 L110,110 A90,90 0 0 1 200,200 Z" fill="#f2b705" fill-opacity=".6" stroke="#1f3a5f"
+                    stroke-width="1.6" />
+                <g fill="#1f3a5f">
+                    <circle cx="110" cy="200" r="2.5" />
+                </g>
+                <g fill="#222">
+                    <text x="96" y="216">O</text><text x="204" y="216">A</text><text x="96" y="106">B</text>
+                    <text x="124" y="186" font-size="12">90°</text>
+                    <text x="150" y="168" font-size="12">segment</text>
+                    <text x="124" y="226" font-size="12" fill="#555">r</text>
+                </g>
+                <text x="20" y="242" fill="#222" font-size="12">segment = sector − triangle OAB</text>
+                <path d="M370,200 L470,100 L570,200 Z" fill="#e8e8e8" stroke="#1f3a5f" stroke-width="1.6" />
+                <path d="M370,200 A70.71,70.71 0 0 1 470,100 A100,100 0 0 0 370,200 Z" fill="#f2b705" fill-opacity=".65"
+                    stroke="#1f3a5f" stroke-width="1.4" />
+                <path d="M570,200 A70.71,70.71 0 0 0 470,100 A100,100 0 0 1 570,200 Z" fill="#f2b705" fill-opacity=".65"
+                    stroke="#1f3a5f" stroke-width="1.4" />
+                <path d="M370,200 A100,100 0 0 1 570,200" fill="none" stroke="#1f3a5f" stroke-width="1.2"
+                    stroke-dasharray="5 3" />
+                <line x1="370" y1="200" x2="570" y2="200" stroke="#1f3a5f" stroke-width="1.6" />
+                <g fill="#222">
+                    <text x="358" y="216">A</text><text x="572" y="216">B</text><text x="464" y="92">C</text>
+                    <text x="412" y="150" font-size="12">lune</text><text x="508" y="150" font-size="12">lune</text>
+                    <text x="446" y="182" font-size="12">△ABC</text>
+                </g>
+                <text x="330" y="242" fill="#222" font-size="12">Both lunes together = area of right isosceles
+                    △ABC</text>
+            </svg>
+            <div class="diagram-caption">Fig 13.4 — (a) The minor segment is the shaded cap cut off by chord AB. (b)
+                Semicircles on the legs AC and BC enclose two lunes outside the circumscribed semicircle on AB (dashed).
+            </div>
+        </div>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">3.2 Perimeter Traps and Major vs Minor</span>
+        <ul>
+            <li><b>Perimeter of a sector</b> $= l + 2r$. Do not forget the two radii.</li>
+            <li><b>Perimeter of a segment</b> $= l + \text{chord} = l + 2r\sin\tfrac{\theta}{2}$. Do not forget the
+                chord.</li>
+            <li><b>Major segment</b> $= \pi r^2 - $ minor segment. Always check which side of the chord is shaded.</li>
+            <li><b>Choice of $\pi$.</b> Use $\pi = \tfrac{22}{7}$ only when the data are multiples of $7$ or the
+                question says so. Otherwise keep $\pi$ symbolic.</li>
+        </ul>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">3.3 Shaded Regions: Leaf, Lune, Annulus</span>
+        <p><b>Leaf (lens) between two quarter-circle arcs.</b> Take a square of side $r$ with quarter circles of radius
+            $r$ centred at two opposite corners. The diagonal $BD$ is a chord of both arcs and each arc subtends
+            $90^\circ$ at its centre. The leaf is therefore two congruent $90^\circ$ segments:</p>
+        $$A_{\text{leaf}} = 2\left(\tfrac{\pi r^2}{4} - \tfrac{r^2}{2}\right) = r^2\left(\tfrac{\pi}{2} - 1\right),
+        \qquad \text{perimeter} = 2\cdot\tfrac{2\pi r}{4} = \pi r.$$
+        <p><b>Hippocrates' Lunes.</b> Let $\triangle ABC$ be right-angled at $C$, with semicircles on all three sides.
+            The semicircles on the legs lie outside the triangle. The semicircle on $AB$ is the circumscribed semicircle
+            through $C$.</p>
+        <ol>
+            <li>The big semicircle on $AB$ equals the triangle plus the two circular segments cut off by the chords $AC$
+                and $BC$.</li>
+            <li>Each lune equals its leg-semicircle minus its circular segment.</li>
+            <li>Add the two lunes: (sum of leg-semicircles) $-$ (big semicircle $-$ triangle).</li>
+            <li>Areas of semicircles scale as the square of the diameter, so by Pythagoras (sum of leg-semicircles) $=$
+                (hypotenuse semicircle).</li>
+        </ol>
+        <p>Therefore $\;\text{lune}_1 + \text{lune}_2 = \text{area of } \triangle ABC$. In the isosceles case the two
+            lunes are equal, so each lune $= \tfrac12\,\text{area}(\triangle ABC)$.</p>
+        <p><b>Annulus.</b> Area $= \pi(R^2 - r^2)$.</p>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">3.4 Wheels and Tight Belts</span>
+        <p><b>Wheel.</b> One revolution covers the circumference $2\pi r$, so $\text{revolutions} =
+            \dfrac{\text{distance}}{2\pi r}$. Convert units first (for example $1\ \text{km} = 10^5\ \text{cm}$).</p>
+        <p><b>Tight belt round equal circles.</b> Straight stretches are tangent segments, and the arcs, taken together,
+            make exactly one full turn. So $L = 2\pi r + (\text{sum of straight parts})$.</p>
+        <ul>
+            <li>Two equal circles with centres $d$ apart: $L = 2d + 2\pi r$.</li>
+            <li>Three mutually touching equal circles (centres form an equilateral triangle of side $2r$): $L = 6r +
+                2\pi r$.</li>
+        </ul>
+        <p><b>Open belt over unequal pulleys</b> ($R \gt r$, centre distance $d$, $\sin\varphi = \dfrac{R-r}{d}$): $L =
+            2\sqrt{d^2 - (R-r)^2} + (\pi + 2\varphi)R + (\pi - 2\varphi)r$, with $\varphi$ in radians. The tangent
+            points are at angle $90^\circ - \varphi$ from the line of centres, so the belt wraps $180^\circ + 2\varphi$
+            on the big pulley and $180^\circ - 2\varphi$ on the small one.</p>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge — Curvilinear Regions</span>
+        <ul>
+            <li><b>Three coins.</b> The region between three mutually tangent circles of radius $r$ equals the
+                equilateral triangle on the centres (side $2r$, area $\sqrt3\,r^2$) minus three $60^\circ$ sectors
+                (total $\tfrac12\pi r^2$). So $A = \left(\sqrt3 - \tfrac{\pi}{2}\right)r^2$.</li>
+            <li><b>Annulus and tangent chord.</b> If a chord of length $L$ of the outer circle touches the inner circle,
+                then $R^2 = r^2 + (L/2)^2$. So $A_{\text{annulus}} = \pi\left(R^2 - r^2\right) = \dfrac{\pi L^2}{4}$,
+                whatever the radii.</li>
+            <li><b>Area by symmetry.</b> Before integrating or subtracting, redraw the region as segments. A shaded leaf
+                is two segments, and a "petal" four-leaf rose is four segments.</li>
+            <li><b>Rolling coin.</b> A coin of radius $r$ rolling once around a fixed coin of radius $R$ makes $\dfrac{R
+                + r}{r}$ rotations, not $\dfrac{R}{r}$. The centre travels a circle of radius $R + r$.</li>
+        </ul>
+    </div>
+
+    <!-- ===================== SECTION 4 ===================== -->
+    <h2 class="section-heading">4. 3D Mensuration &amp; Combined Solids</h2>
+
+    <div class="concept-box">
+        <span class="box-label">4.1 Standard Solids</span>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Solid</th>
+                    <th>Curved / lateral surface</th>
+                    <th>Total surface</th>
+                    <th>Volume</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cube (edge $a$)</td>
+                    <td>$4a^2$</td>
+                    <td>$6a^2$</td>
+                    <td>$a^3$</td>
+                </tr>
+                <tr>
+                    <td>Cuboid ($l,b,h$)</td>
+                    <td>$2h(l+b)$</td>
+                    <td>$2(lb+bh+hl)$</td>
+                    <td>$lbh$</td>
+                </tr>
+                <tr>
+                    <td>Cylinder ($r,h$)</td>
+                    <td>$2\pi r h$</td>
+                    <td>$2\pi r(r+h)$</td>
+                    <td>$\pi r^2 h$</td>
+                </tr>
+                <tr>
+                    <td>Hollow cylinder / pipe ($R, r, h$)</td>
+                    <td>$2\pi h(R + r)$ (outer + inner)</td>
+                    <td>$2\pi h(R+r) + 2\pi(R^2 - r^2)$</td>
+                    <td>$\pi h(R^2 - r^2)$</td>
+                </tr>
+                <tr>
+                    <td>Cone ($r,h,l$)</td>
+                    <td>$\pi r l$</td>
+                    <td>$\pi r(l + r)$</td>
+                    <td>$\tfrac13\pi r^2 h$</td>
+                </tr>
+                <tr>
+                    <td>Sphere ($r$)</td>
+                    <td>$4\pi r^2$</td>
+                    <td>$4\pi r^2$</td>
+                    <td>$\tfrac43\pi r^3$</td>
+                </tr>
+                <tr>
+                    <td>Hemisphere ($r$)</td>
+                    <td>$2\pi r^2$</td>
+                    <td>$3\pi r^2$</td>
+                    <td>$\tfrac23\pi r^3$</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>For the cone, $l = \sqrt{r^2 + h^2}$.</p>
+        <p><b>Derivation of the cone's curved surface.</b> Cut the cone along a slant line and unroll it. The result is
+            a sector of radius $l$ whose arc length equals the base circumference $2\pi r$. By $A = \tfrac12
+            l\,(\text{arc})$ from 3.1, the curved area is $\tfrac12 \cdot l \cdot 2\pi r = \pi r l$.</p>
+        <p><b>Derivation of the hemisphere's volume (Cavalieri).</b> Compare a hemisphere of radius $r$ with a cylinder
+            of radius $r$ and height $r$ from which a cone (apex at the centre of the base) has been removed. At height
+            $y$ above the base, the hemisphere's cross-section has radius $\sqrt{r^2 - y^2}$ and area $\pi(r^2 - y^2)$.
+            The cylinder-minus-cone cross-section is a ring of area $\pi r^2 - \pi y^2$. These are equal at every
+            height, so the volumes are equal. Hence</p>
+        $$V_{\text{hemisphere}} = \pi r^3 - \tfrac13\pi r^3 = \tfrac23\pi r^3.$$
+        <p>The area $4\pi r^2$ of a sphere is accepted as standard (Archimedes).</p>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">4.2 Combined Solids: Exposed-Face Accounting</span>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Operation</th>
+                    <th>Surface area change</th>
+                    <th>Volume change</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Join two solids face-to-face</td>
+                    <td>Subtract the joined face from <b>each</b> solid. Add only the exposed parts.</td>
+                    <td>$V_1 + V_2$</td>
+                </tr>
+                <tr>
+                    <td>Hemisphere on a cylinder or cone</td>
+                    <td>CSA (hemisphere) + CSA (solid) + the free base, if any. The shared circle is hidden.</td>
+                    <td>$V_1 + V_2$</td>
+                </tr>
+                <tr>
+                    <td>Scoop a hemisphere from a flat face</td>
+                    <td>$-\pi r^2$ (lost flat circle) $+\,2\pi r^2$ (new curved surface) $= +\pi r^2$ net</td>
+                    <td>$-\tfrac23\pi r^3$</td>
+                </tr>
+                <tr>
+                    <td>Drill a cylindrical hole through a block</td>
+                    <td>$-2\pi r^2$ (two openings) $+\,2\pi r h$ (inner wall)</td>
+                    <td>$-\pi r^2 h$</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>Rule:</b> total surface = sum of exposed faces only. Volume is always additive or subtractive. A recast
+            solid keeps its volume but changes its surface area.</p>
+    </div>
+
+    <!-- ===================== SECTION 5 ===================== -->
+    <h2 class="section-heading">5. Frustum of a Cone &amp; Similarity Scaling</h2>
+
+    <div class="concept-box">
+        <span class="box-label">5.1 Frustum from Similar Cones</span>
+        <p>A plane parallel to the base cuts a cone of base radius $R$ and height $H$ into a small cone at the top
+            (radius $r$, height $x$) and a frustum of height $h = H - x$. The two cones are similar, so $\dfrac{r}{R} =
+            \dfrac{x}{x + h}$, which gives</p>
+        $$x = \frac{hr}{R - r}, \qquad H = \frac{hR}{R - r}.$$
+        <p><b>Slant height.</b> In the cross-section, drop a perpendicular from the top rim to the base. The right
+            triangle has legs $h$ and $R - r$, so $l = \sqrt{h^2 + (R-r)^2}$.</p>
+        <p><b>Curved surface.</b> Let the big and small slant heights be $L$ and $L'$. Similarity gives $L =
+            \dfrac{lR}{R-r}$ and $L' = \dfrac{lr}{R-r}$. Then</p>
+        $$\text{CSA} = \pi R L - \pi r L' = \frac{\pi l(R^2 - r^2)}{R - r} = \pi(R + r)\,l.$$
+        <p><b>Total surface</b> $= \pi(R+r)l + \pi R^2 + \pi r^2$. For an open bucket, include only the base that is
+            actually present.</p>
+        <p><b>Volume.</b></p>
+        $$V = \tfrac13\pi R^2 H - \tfrac13\pi r^2 x = \tfrac13\pi h\,\frac{R^3 - r^3}{R - r} = \tfrac13\pi h\,(R^2 + r^2
+        + Rr).$$
+        <p><b>Sanity checks.</b> If $r = R$, the frustum is a cylinder: $V = \pi R^2 h$, $l = h$ and CSA $= 2\pi R h$.
+            If $r = 0$, it is a cone: $V = \tfrac13\pi R^2 h$.</p>
+
+        <div class="diagram-box">
+            <svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:400px;height:auto"
+                font-family="Georgia,serif" font-size="13" role="img"
+                aria-label="Frustum as a cone minus a similar small cone">
+                <polygon points="80,220 320,220 248,124 152,124" fill="#f2b705" fill-opacity=".45" stroke="#1f3a5f"
+                    stroke-width="1.7" />
+                <g fill="none" stroke="#1f3a5f" stroke-width="1.4" stroke-dasharray="6 4">
+                    <line x1="200" y1="60" x2="80" y2="220" />
+                    <line x1="200" y1="60" x2="320" y2="220" />
+                    <line x1="200" y1="60" x2="152" y2="124" />
+                    <line x1="200" y1="60" x2="248" y2="124" />
+                </g>
+                <line x1="200" y1="60" x2="200" y2="220" stroke="#555" stroke-width="1.1" stroke-dasharray="3 3" />
+                <line x1="152" y1="124" x2="248" y2="124" stroke="#1f3a5f" stroke-width="1.5" />
+                <g stroke="#c0392b" stroke-width="1.5" fill="none">
+                    <line x1="248" y1="124" x2="248" y2="220" stroke-dasharray="4 3" />
+                    <line x1="248" y1="220" x2="320" y2="220" />
+                    <line x1="200" y1="220" x2="320" y2="220" stroke="#555" stroke-width="1" stroke-dasharray="2 3" />
+                </g>
+                <g fill="#1f3a5f">
+                    <circle cx="200" cy="60" r="3" />
+                </g>
+                <g fill="#222">
+                    <text x="194" y="52">V</text>
+                    <text x="176" y="98" font-size="12">x</text>
+                    <text x="176" y="178" font-size="12">h</text>
+                    <text x="254" y="176" font-size="12" fill="#c0392b">h</text>
+                    <text x="274" y="238" font-size="12" fill="#c0392b">R − r</text>
+                    <text x="296" y="164" fill="#c0392b" font-size="12">l</text>
+                    <text x="104" y="136" font-size="12">L</text>
+                    <text x="160" y="84" font-size="12">L′</text>
+                    <text x="224" y="118" font-size="12">r</text>
+                    <text x="244" y="214" font-size="12" fill="#555">R</text>
+                </g>
+                <text x="20" y="254" fill="#222" font-size="12">Frustum = big cone (V, R, H) − small cone (V, r, x): r/R
+                    = x/H = L′/L</text>
+            </svg>
+            <div class="diagram-caption">Fig 13.5 — Cross-section through the axis. The right triangle (h, R − r, l)
+                gives the slant height. The dashed small cone is similar to the whole cone.</div>
+        </div>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">5.2 Slicing into $n$ Equal-Height Layers</span>
+        <p>Cut a cone of height $H$ by planes parallel to the base into $n$ layers of equal height $H/n$. The cone
+            formed by the top $k$ layers is similar to the whole cone with ratio $k/n$, so its volume is $k^3 V_1$,
+            where $V_1$ is the volume of the top cone. Layer $k$ therefore has volume</p>
+        $$k^3 - (k-1)^3 = 3k^2 - 3k + 1 \text{ times } V_1: \qquad 1 : 7 : 19 : 37 : 61 : \dots$$
+        <p>The sum of the first $n$ layers is $n^3 V_1$. Surface areas scale as $k^2$, so the curved surfaces of
+            successive layers are in the ratio $1 : 3 : 5 : 7 : \dots$ (differences of consecutive squares).</p>
+        <p><b>Conservation and flow.</b></p>
+        <ul>
+            <li><b>Melting / recasting:</b> $V_{\text{old}} = V_{\text{new}}$. The number of small solids is $n =
+                V_{\text{big}} / V_{\text{small}}$. Surface area is not conserved.</li>
+            <li><b>Pipe flow:</b> volume per unit time $= \pi r^2 \times \text{speed}$ (cross-section area times speed),
+                so $\text{time} = V_{\text{tank}} \div \text{flow rate}$.</li>
+            <li><b>Units:</b> $1\ \text{L} = 1000\ \text{cm}^3$ and $1\ \text{m}^3 = 10^6\ \text{cm}^3$.</li>
+        </ul>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge — Scaling Laws</span>
+        <ul>
+            <li>When every length is multiplied by $k$, areas scale by $k^2$ and volumes by $k^3$. A cone cut at
+                fraction $f$ of its height from the apex has volume $f^3 V$ and curved area $f^2\,\text{CSA}$.</li>
+            <li>A frustum's volume is the difference of two similar cones. Never apply $\tfrac13\pi r^2 h$ with the
+                frustum's own $h$ and $R$.</li>
+            <li><b>Layer numbers to memorise:</b> volumes $1, 7, 19, 37, 61$; curved areas $1, 3, 5, 7, 9$.</li>
+            <li>A frustum whose radii are in the ratio $R : r = m : n$ has removed top cone of height $x =
+                \dfrac{n}{m-n}\,h$. Use this to get the full cone's height in one step.</li>
+        </ul>
+    </div>
+
+    <!-- ===================== FORMULA VAULT ===================== -->
+    <div class="formula-vault">
+        <span class="box-label">Formula Vault — Chapter 13</span>
+        <p><b>Chords &amp; tangents:</b> $r^2 = d^2 + (c/2)^2$ · $PT = \sqrt{OP^2 - r^2}$ · $\angle_{\text{centre}} =
+            2\angle_{\text{circ}}$ · cyclic: $\angle A + \angle C = 180^\circ$</p>
+        <p><b>Pitot:</b> $AB + CD = BC + AD$ · area (tangential) $= rs$</p>
+        <p><b>Inradius:</b> right $\triangle$: $r = \dfrac{a+b-c}{2}$ · general: $r = \dfrac{\Delta}{s}$ · tangent from
+            $A$ $= s - a$ · $R = \dfrac{abc}{4\Delta}$</p>
+        <p><b>Common tangents:</b> direct $\sqrt{d^2 - (r_1 - r_2)^2}$ · transverse $\sqrt{d^2 - (r_1 + r_2)^2}$</p>
+        <p><b>Alternate segment:</b> $\angle(\text{tangent, chord}) = \angle$ in the alternate segment</p>
+        <p><b>Ptolemy:</b> $AC \cdot BD = AB \cdot CD + BC \cdot AD$</p>
+        <p><b>Power of a point:</b> $PA\cdot PB = PC\cdot PD$ (chords or secants) · $PT^2 = PA \cdot PB$ · power $=
+            |OP^2 - r^2|$</p>
+        <p><b>Arc / sector:</b> $l = \dfrac{\theta}{360^\circ}2\pi r$ · $A = \dfrac{\theta}{360^\circ}\pi r^2 = \tfrac12
+            lr$ · perimeter (sector) $= l + 2r$</p>
+        <p><b>Segment:</b> $A_{\text{minor}} = \dfrac{\theta}{360^\circ}\pi r^2 - \tfrac12 r^2\sin\theta$ · perimeter $=
+            l + 2r\sin\tfrac{\theta}{2}$ · leaf $= r^2(\tfrac{\pi}{2} - 1)$ · lunes (right $\triangle$) $=$ area of
+            $\triangle$</p>
+        <p><b>Wheel / belt:</b> revolutions $= \dfrac{\text{distance}}{2\pi r}$ · two equal circles: $L = 2d + 2\pi r$ ·
+            three touching circles: $L = 6r + 2\pi r$</p>
+        <p><b>Solids:</b> cylinder $2\pi r(r+h)$, $\pi r^2 h$ · pipe $V = \pi h(R^2 - r^2)$ · cone $l = \sqrt{r^2+h^2}$,
+            CSA $\pi r l$, $V = \tfrac13\pi r^2 h$ · sphere $4\pi r^2$, $\tfrac43\pi r^3$ · hemisphere CSA $2\pi r^2$,
+            TSA $3\pi r^2$, $V = \tfrac23\pi r^3$</p>
+        <p><b>Frustum:</b> $l = \sqrt{h^2 + (R-r)^2}$ · CSA $= \pi(R+r)l$ · TSA $= \pi(R+r)l + \pi R^2 + \pi r^2$ · $V =
+            \tfrac13\pi h(R^2 + r^2 + Rr)$</p>
+        <p><b>Slicing:</b> layer volumes $1:7:19:37:61$ ($3k^2 - 3k + 1$) · curved areas $1:3:5:7$ · pipe flow $= \pi
+            r^2 v$</p>
+    </div>
+
+    <!-- ===================== WORKED EXAMPLES ===================== -->
+    <h2 class="section-heading">Worked Examples — Level 1 → Level 3</h2>
+
+    <!-- EX 1 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header"><span class="badge badge-l1">Level 1</span><span class="badge badge-type">Warm-up</span>
+            <b>Example 1 — Chords, Pitot, Inradius, Common Tangents</b>
+        </div>
+        <div class="ex-problem">
+            <p>(a) In a circle of radius $10$ cm, two parallel chords measure $AB = 16$ cm and $CD = 12$ cm. Find the
+                distance between them if they lie (i) on opposite sides of the centre, (ii) on the same side.</p>
+            <p>(b) A circle is inscribed in quadrilateral $ABCD$ with $AB = 9$, $BC = 7$, $CD = 6$. Find $AD$.</p>
+            <p>(c) Find the inradius of a right triangle with sides $6, 8, 10$.</p>
+            <p>(d) Two circles of radii $11$ cm and $4$ cm have centres $25$ cm apart. Find the lengths of a direct and
+                a transverse common tangent.</p>
+        </div>
+        <div class="ex-solution">
+            <p><b>(a)</b> The perpendicular from the centre bisects each chord. For $AB$, the half-length is $8$, so the
+                distance is $\sqrt{10^2 - 8^2} = 6$. For $CD$, the half-length is $6$, so the distance is $\sqrt{10^2 -
+                6^2} = 8$.</p>
+            <p>(i) Opposite sides: $6 + 8 = \mathbf{14}$ cm. (ii) Same side: $8 - 6 = \mathbf{2}$ cm.</p>
+            <p><b>(b)</b> Pitot: $AB + CD = BC + AD$, so $9 + 6 = 7 + AD$ and $AD = \mathbf{8}$.</p>
+            <p><b>(c)</b> $r = \dfrac{6 + 8 - 10}{2} = \mathbf{2}$ cm. Check: $\dfrac{\Delta}{s} = \dfrac{24}{12} = 2$
+                ✓.</p>
+            <p><b>(d)</b> $r_1 - r_2 = 7$ and $r_1 + r_2 = 15$. Direct: $\sqrt{25^2 - 7^2} = \sqrt{576} = \mathbf{24}$
+                cm. Transverse: $\sqrt{25^2 - 15^2} = \sqrt{400} = \mathbf{20}$ cm.</p>
+        </div>
+    </div>
+
+    <!-- EX 2 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header"><span class="badge badge-l1">Level 1</span><span class="badge badge-type">Warm-up</span>
+            <b>Example 2 — Sector, Segment, Perimeters, Wheel</b>
+        </div>
+        <div class="ex-problem">
+            <p>Take $\pi = \tfrac{22}{7}$. A sector of a circle of radius $14$ cm has central angle $90^\circ$. Find (a)
+                the arc length, (b) the sector area, (c) the sector perimeter, (d) the minor-segment area, the segment's
+                perimeter, and the major-segment area. (e) A wheel of diameter $70$ cm travels $2.2$ km. How many
+                revolutions does it make?</p>
+        </div>
+        <div class="ex-solution">
+            <p>(a) $l = \dfrac{90}{360}\cdot 2\cdot\dfrac{22}{7}\cdot 14 = \dfrac14\cdot 88 = \mathbf{22}$ cm.</p>
+            <p>(b) $A = \dfrac14\cdot\dfrac{22}{7}\cdot 196 = \mathbf{154}$ cm². Check: $\tfrac12 l r = \tfrac12\cdot
+                22\cdot 14 = 154$ ✓.</p>
+            <p>(c) Perimeter $= l + 2r = 22 + 28 = \mathbf{50}$ cm.</p>
+            <p>(d) The triangle $OAB$ has area $\tfrac12 r^2\sin 90^\circ = \tfrac12\cdot 196 = 98$. Minor segment $=
+                154 - 98 = \mathbf{56}$ cm². The chord is $14\sqrt2 \approx 19.80$ cm, so the segment's perimeter is $22
+                + 19.80 \approx \mathbf{41.8}$ cm. The whole circle has area $\pi r^2 = 616$, so the major segment is
+                $616 - 56 = \mathbf{560}$ cm².</p>
+            <p>(e) The circumference is $\dfrac{22}{7}\cdot 70 = 220$ cm. The distance is $2.2\ \text{km} = 220\,000$
+                cm. Revolutions $= \dfrac{220\,000}{220} = \mathbf{1000}$.</p>
+        </div>
+    </div>
+
+    <!-- EX 3 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header"><span class="badge badge-l1">Level 1</span><span class="badge badge-type">Warm-up</span>
+            <b>Example 3 — Combined Solid and Exposed Faces</b>
+        </div>
+        <div class="ex-problem">
+            <p>(a) A toy is a cone of base radius $6$ cm and height $8$ cm, with a hemisphere of radius $6$ cm attached
+                to its flat base. Find the total surface area and the volume (leave answers in terms of $\pi$).</p>
+            <p>(b) A hemispherical hollow of radius $7$ cm is scooped out of the top face of a cube of edge $14$ cm.
+                Find the total surface area of the remaining solid ($\pi = \tfrac{22}{7}$).</p>
+        </div>
+        <div class="ex-solution">
+            <p><b>(a)</b> The slant height is $l = \sqrt{6^2 + 8^2} = 10$. The cone's base and the hemisphere's flat
+                face are joined, so both are hidden. The exposed surface is the cone's curved surface plus the
+                hemisphere's curved surface:</p>
+            $$\text{TSA} = \pi(6)(10) + 2\pi(6)^2 = 60\pi + 72\pi = \mathbf{132\pi\ \text{cm}^2}.$$
+            $$V = \tfrac13\pi(36)(8) + \tfrac23\pi(216) = 96\pi + 144\pi = \mathbf{240\pi\ \text{cm}^3}.$$
+            <p><b>(b)</b> Exposed-face accounting: the original surface is $6\cdot 14^2 = 1176$. Remove the flat circle
+                $\pi r^2$, and add the new curved hollow $2\pi r^2$:</p>
+            $$\text{SA} = 1176 - \pi(49) + 2\pi(49) = 1176 + 49\pi = 1176 + 154 = \mathbf{1330\ \text{cm}^2}.$$
+        </div>
+    </div>
+
+    <!-- EX 4 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header"><span class="badge badge-l2">Level 2</span><span
+                class="badge badge-type">Exam-Real</span> <b>Example 4 — Alternate Segment and Cyclic Quadrilateral</b>
+        </div>
+        <div class="ex-problem">
+            <p>Points $A, B, C, D$ lie on a circle in this order. $PAQ$ is the tangent at $A$, with $P$ on the side of
+                $D$ and $Q$ on the side of $B$. Given $\angle PAD = 38^\circ$ and $\angle QAB = 65^\circ$, find $\angle
+                ABD$, $\angle ADB$, $\angle BAD$ and $\angle BCD$.</p>
+        </div>
+        <div class="ex-solution">
+            <ol>
+                <li>The tangent–chord angle $\angle PAD$ equals the angle in the alternate segment on chord $AD$. $B$
+                    lies on the arc outside $\angle PAD$, so $\angle ABD = 38^\circ$.</li>
+                <li>Likewise $\angle QAB = 65^\circ$ equals the angle on chord $AB$ from the far arc, so $\angle ADB =
+                    \angle ACB = 65^\circ$.</li>
+                <li>In $\triangle ABD$: $\angle BAD = 180^\circ - 38^\circ - 65^\circ = 77^\circ$. Cross-check: $\angle
+                    PAD + \angle DAB + \angle BAQ = 38^\circ + 77^\circ + 65^\circ = 180^\circ$ (straight line $PAQ$) ✓.
+                </li>
+                <li>$ABCD$ is cyclic, so $\angle BCD = 180^\circ - \angle BAD = 103^\circ$.</li>
+                <li>Second check: $\angle ACD = \angle ABD = 38^\circ$ (same arc $AD$). Then $\angle BCD = \angle ACB +
+                    \angle ACD = 65^\circ + 38^\circ = 103^\circ$ ✓.</li>
+            </ol>
+            <p><b>Answers:</b> $\angle ABD = 38^\circ$, $\angle ADB = 65^\circ$, $\angle BAD = 77^\circ$, $\angle BCD =
+                103^\circ$.</p>
+        </div>
+    </div>
+
+    <!-- EX 5 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header"><span class="badge badge-l2">Level 2</span><span
+                class="badge badge-type">Exam-Real</span> <b>Example 5 — Leaf and Hippocrates' Lunes</b></div>
+        <div class="ex-problem">
+            <p>Take $\pi = \tfrac{22}{7}$.</p>
+            <p>(a) $ABCD$ is a square of side $14$ cm. Quarter circles of radius $14$ cm are drawn with centres $A$ and
+                $C$, each passing through $B$ and $D$. Find the area and perimeter of the leaf-shaped region common to
+                both.</p>
+            <p>(b) $\triangle ABC$ is right-angled isosceles with hypotenuse $AB = 28$ cm. Semicircles are drawn on $AC$
+                and $BC$ (outside the triangle) and the circumscribed semicircle on $AB$ (on the triangle's side). Find
+                the total area of the two lunes, and the area of each lune.</p>
+        </div>
+        <div class="ex-solution">
+            <p><b>(a)</b> The diagonal $BD$ is a chord of both arcs. Each arc subtends $90^\circ$ at its centre, so the
+                leaf is two $90^\circ$ minor segments:</p>
+            $$\text{each segment} = \tfrac14\cdot\tfrac{22}{7}\cdot 196 - \tfrac12\cdot 196 = 154 - 98 = 56.$$
+            <p>Leaf area $= 2\times 56 = \mathbf{112\ \text{cm}^2}$. The perimeter is two arcs of $90^\circ$:
+                $2\cdot\tfrac14\cdot 2\pi\cdot 14 = 14\pi = \mathbf{44}$ cm.</p>
+            <p><b>(b)</b> The legs satisfy $2a^2 = 28^2$, so $a^2 = 392$ and $a = 14\sqrt2$. The triangle's area is
+                $\tfrac12 a^2 = 196$.</p>
+            <p>Each leg semicircle has radius $7\sqrt2$ and area $\tfrac12\pi\cdot 98 = 49\pi$. Two of them give
+                $98\pi$. The hypotenuse semicircle has radius $14$ and area $\tfrac12\pi\cdot 196 = 98\pi$. So (leg
+                semicircles) $-$ (big semicircle) $= 0$.</p>
+            <p>Lunes $= $ (leg semicircles) $-$ (big semicircle $-$ triangle) $= 0 + 196 = \mathbf{196\ \text{cm}^2}$.
+                By symmetry each lune is $\mathbf{98\ \text{cm}^2}$.</p>
+            <p>Check with one lune directly: leg semicircle $49\pi = 154$, minus the $90^\circ$ segment of the
+                circumcircle (radius $14$) $= 56$, gives $154 - 56 = 98$ ✓.</p>
+        </div>
+    </div>
+
+    <!-- EX 6 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header"><span class="badge badge-l2">Level 2</span><span
+                class="badge badge-type">Exam-Real</span> <b>Example 6 — Frustum Bucket and Pipe Flow</b></div>
+        <div class="ex-problem">
+            <p>A bucket is a frustum of height $24$ cm with top radius $14$ cm and bottom radius $7$ cm. It is open at
+                the top. Take $\pi = \tfrac{22}{7}$.</p>
+            <p>(a) Find its capacity. (b) Find the sheet metal needed to make it. (c) Water flows through a pipe of
+                radius $3.5$ cm at $56$ cm/s. How long does it take to fill the bucket?</p>
+        </div>
+        <div class="ex-solution">
+            <p><b>Setup via similar cones.</b> Let the removed small cone have height $x$. Then $\dfrac{7}{14} =
+                \dfrac{x}{x + 24}$, so $x = 24$ and the full cone has height $48$. The slant heights are $L = \sqrt{14^2
+                + 48^2} = 50$ and $L' = 25$. So $l = 50 - 25 = 25$. (Check: $\sqrt{24^2 + 7^2} = 25$ ✓.)</p>
+            <p><b>(a) Volume.</b></p>
+            $$V = \tfrac13\pi(14)^2(48) - \tfrac13\pi(7)^2(24) = \tfrac13\pi(9408 - 1176) = 2744\pi.$$
+            <p>Check with the formula: $\tfrac13\pi(24)(196 + 49 + 98) = 8\pi\cdot 343 = 2744\pi$ ✓. With $\pi =
+                \tfrac{22}{7}$, $V = 8624\ \text{cm}^3 = \mathbf{8.624}$ litres.</p>
+            <p><b>(b) Metal.</b> $\text{CSA} = \pi(R+r)l = \pi\cdot 21\cdot 25 = 525\pi = 1650$. The closed bottom has
+                area $\pi(7)^2 = 154$. Sheet metal $= 1650 + 154 = \mathbf{1804\ \text{cm}^2}$. The top is open, so
+                there is no top face.</p>
+            <p><b>(c) Flow.</b> Cross-section area $= \tfrac{22}{7}\cdot 3.5^2 = 38.5\ \text{cm}^2$. Flow rate $=
+                38.5\times 56 = 2156\ \text{cm}^3/\text{s}$. Time $= \dfrac{8624}{2156} = \mathbf{4}$ seconds.</p>
+        </div>
+    </div>
+
+    <!-- EX 7 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header"><span class="badge badge-l3">Level 3</span><span
+                class="badge badge-type">Rank-Booster</span> <b>Example 7 — Ptolemy on a Diameter-Based Cyclic
+                Quadrilateral</b></div>
+        <div class="ex-problem">
+            <p>$ABCD$ is a cyclic quadrilateral in which the diagonal $AC$ is a diameter of length $25$. Given $AB =
+                15$, $BC = 20$, $AD = 7$, $CD = 24$, find the other diagonal $BD$ and the area of $ABCD$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><b>Full derivation (coordinates).</b> Since $AC$ is a diameter, $\angle B = \angle D = 90^\circ$. Check:
+                $15^2 + 20^2 = 625 = 25^2$ and $7^2 + 24^2 = 625$ ✓. Place $A(-12.5,\,0)$ and $C(12.5,\,0)$.</p>
+            <ul>
+                <li>For $B$ with $AB = 15$ and $BC = 20$: $(x+12.5)^2 + y^2 = 225$ and $(x-12.5)^2 + y^2 = 400$.
+                    Subtracting gives $50x = -175$, so $x = -3.5$. Then $y^2 = 225 - 81 = 144$ and $y = 12$. So
+                    $B(-3.5,\, 12)$.</li>
+                <li>For $D$ below $AC$ with $AD = 7$ and $CD = 24$: $50x = 49 - 576 = -527$, so $x = -10.54$. Then $y^2
+                    = 49 - 1.96^2 = 45.1584$ and $y = -6.72$. So $D(-10.54,\, -6.72)$.</li>
+                <li>$BD^2 = 7.04^2 + 18.72^2 = 49.5616 + 350.4384 = 400$, so $BD = 20$.</li>
+            </ul>
+            <p><b>Area.</b> $\tfrac12\cdot 15\cdot 20 + \tfrac12\cdot 7\cdot 24 = 150 + 84 = \mathbf{234}$. Check:
+                $\tfrac12\cdot 25\cdot(12 + 6.72) = 234$ ✓.</p>
+            <div class="shortcut-box">
+                <span class="box-label">⚡ 30-Second Shortcut</span>
+                <p>Ptolemy: $AC\cdot BD = AB\cdot CD + BC\cdot AD$, so $25\cdot BD = 15\cdot 24 + 20\cdot 7 = 360 + 140
+                    = 500$, giving <b>$BD = 20$</b>. Area $= \tfrac12\cdot AB\cdot BC + \tfrac12\cdot AD\cdot CD = 150 +
+                    84 = \mathbf{234}$. Look for a right-angle pair on a diameter first, since it hands you Pythagorean
+                    sides for free.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- EX 8 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header"><span class="badge badge-l3">Level 3</span><span
+                class="badge badge-type">Rank-Booster</span> <b>Example 8 — Radical Axis Bisects the Common Tangent</b>
+        </div>
+        <div class="ex-problem">
+            <p>Two circles intersect at $A$ and $B$. The line $AB$, extended beyond $A$, meets a common tangent $PQ$ at
+                $M$ ($P$ and $Q$ are the points of contact), with $MA = 4$ cm and $AB = 5$ cm. Find $PQ$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><b>Full derivation.</b></p>
+            <ol>
+                <li>Since $M, A, B$ are collinear with $A$ between $M$ and $B$, $MB = MA + AB = 9$.</li>
+                <li>For circle 1, $MP$ is a tangent and $MAB$ is a secant, so $MP^2 = MA\cdot MB = 4\cdot 9 = 36$ and
+                    $MP = 6$.</li>
+                <li>For circle 2, the same secant $MAB$ and tangent $MQ$ give $MQ^2 = MA\cdot MB = 36$ and $MQ = 6$.
+                </li>
+                <li>So $MP = MQ = 6$. If $P$ and $Q$ were on the same side of $M$ they would coincide. Then both circles
+                    would be tangent to the line at the same point and pass through $A, B$, so they would be the same
+                    circle, which is impossible. Hence $P$ and $Q$ lie on opposite sides of $M$, and $PQ = MP + MQ = 12$
+                    cm.</li>
+            </ol>
+            <p><b>Answer: $PQ = 12$ cm.</b></p>
+            <div class="shortcut-box">
+                <span class="box-label">⚡ 30-Second Shortcut</span>
+                <p>The common chord extended (the radical axis) bisects the common tangent. So $PQ = 2\sqrt{MA\cdot MB}
+                    = 2\sqrt{4\cdot 9} = \mathbf{12}$ cm. Do not hunt for the radii. They are not needed, and the data
+                    do not fix them.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- EX 9 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header"><span class="badge badge-l3">Level 3</span><span
+                class="badge badge-type">Rank-Booster</span> <b>Example 9 — Slicing a Cone, Recasting into a Rod and
+                Spheres</b></div>
+        <div class="ex-problem">
+            <p>A solid cone has height $27$ cm and base radius $9$ cm. Two planes parallel to the base trisect the
+                height, giving a top cone, a middle frustum and a bottom frustum.</p>
+            <p>(a) Find the ratio of the three volumes and the ratio of their curved surface areas. (b) The bottom
+                frustum is melted and recast into a solid cylinder of radius $3$ cm. Find the cylinder's height. (c) The
+                middle frustum is melted into solid spheres of radius $1.5$ cm. How many spheres are formed?</p>
+        </div>
+        <div class="ex-solution">
+            <p><b>Full derivation.</b> The cuts are $9$ cm and $18$ cm from the apex. The radii at those heights are
+                $9\cdot\tfrac{9}{27} = 3$ and $9\cdot\tfrac{18}{27} = 6$.</p>
+            <ul>
+                <li>Whole cone: $\tfrac13\pi(81)(27) = 729\pi$.</li>
+                <li>Top cone (radius $3$, height $9$): $\tfrac13\pi(9)(9) = 27\pi$.</li>
+                <li>Cone down to the second cut (radius $6$, height $18$): $\tfrac13\pi(36)(18) = 216\pi$. So the middle
+                    frustum is $216\pi - 27\pi = 189\pi$.</li>
+                <li>Bottom frustum: $729\pi - 216\pi = 513\pi$. Check by the frustum formula: $\tfrac13\pi(9)(81 + 36 +
+                    54) = 3\pi\cdot 171 = 513\pi$ ✓.</li>
+            </ul>
+            <p>(a) Volumes: $27\pi : 189\pi : 513\pi = \mathbf{1 : 7 : 19}$. Curved areas scale with the square of the
+                cone size: $1^2 : 2^2 : 3^2 = 1 : 4 : 9$ cumulatively, so the pieces are in the ratio $1 : (4-1) : (9-4)
+                = \mathbf{1 : 3 : 5}$.</p>
+            <p>(b) Volume conservation: $\pi(3)^2 h = 513\pi$, so $h = \dfrac{513}{9} = \mathbf{57}$ cm.</p>
+            <p>(c) One sphere has volume $\tfrac43\pi(1.5)^3 = \tfrac43\pi\cdot\tfrac{27}{8} = 4.5\pi$. Number of
+                spheres $= \dfrac{189\pi}{4.5\pi} = \mathbf{42}$.</p>
+            <div class="shortcut-box">
+                <span class="box-label">⚡ 30-Second Shortcut</span>
+                <p>Cut at equal heights, so the cone volumes are $1^3, 2^3, 3^3 = 1, 8, 27$ units. The layers are $1,\
+                    8-1,\ 27-8 = \mathbf{1 : 7 : 19}$ and the curved areas are $1, 4-1, 9-4 = \mathbf{1 : 3 : 5}$. One
+                    unit $= \dfrac{729\pi}{27} = 27\pi$. The bottom frustum is $19\times 27\pi = 513\pi$ and the middle
+                    one is $7\times 27\pi = 189\pi$. Then divide by the volume of the new solid. This replaces every
+                    frustum formula.</p>
+            </div>
+        </div>
+    </div>
+
+</article>
