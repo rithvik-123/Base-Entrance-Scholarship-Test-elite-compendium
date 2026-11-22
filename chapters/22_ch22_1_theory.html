@@ -1,0 +1,1505 @@
+<article data-volume="Volume 4: Chemistry (Paper 2)"
+    data-title="Chapter 22: Structure of Atom &amp; Chemical Bonding — Part 1: Theory &amp; Worked Examples">
+
+    <!-- ==================== CHAPTER HERO ==================== -->
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 4: Chemistry (Paper 2) &bull; Chapter 22 &bull; Part 1 of 3 (Theory &amp;
+            Worked Examples)</div>
+        <h1>Structure of Atom &amp; Chemical Bonding</h1>
+        <p>Atomic architecture dictates every bond, molecular shape, and chemical reaction in chemistry. While Class
+            9–10 NCERT stops at Bohr–Bury shells and basic ionic/covalent definitions, BEST Paper 2 consistently bridges
+            into Resonance Foundation and NSEJS territory: Bohr scaling laws for one-electron ions, spectral line
+            counting, Aufbau $(n+l)$ quantum rules with $\text{Cr}/\text{Cu}$ anomalies, formal charges, Fajan's
+            polarization rules, and 3D VSEPR polarity analysis.</p>
+        <div class="tag-row">
+            <span class="meta-pill">Target Study Time: 5 Hours</span>
+            <span class="meta-pill">Weightage: Very High (Paper 2 Core)</span>
+            <span class="meta-pill">Level: Class 10 + Resonance / NSEJS Bridge</span>
+            <span class="meta-pill">Key Constants: $a_0 = 0.529\text{ Å}$, $E_1(\text{H}) = -13.6\text{ eV}$</span>
+        </div>
+    </header>
+
+    <!-- ==================== SECTION 1: SUBATOMIC PARTICLES & NUCLEAR SPECIES ==================== -->
+    <h2 class="section-heading">22.1 Subatomic Particles, Discovery Experiments &amp; Nuclear Species</h2>
+
+    <p>Dalton's indivisible atom collapsed in the late 19th and early 20th centuries through gas-discharge tube
+        experiments and nuclear bombardment. Pay special attention to how the <strong>specific charge ($e/m$)</strong>
+        behaves differently for cathode rays versus anode rays—one of the most frequently tested conceptual traps in
+        BEST Paper 2.</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Particle</th>
+                <th>Discoverer &amp; Experiment</th>
+                <th>Charge ($q$)</th>
+                <th>Rest Mass ($m$)</th>
+                <th>Specific Charge ($e/m$) &amp; Critical Exam Nuance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Electron ($e^-$ or $^0_{-1}e$)</strong></td>
+                <td><strong>J.J. Thomson (1897)</strong> — Cathode Ray Tube; <strong>R.A. Millikan (1909)</strong> —
+                    Oil-Drop Experiment ($e$)</td>
+                <td>$-1.602 \times 10^{-19}\text{ C}$<br />(Relative: $-1$)</td>
+                <td>$9.109 \times 10^{-31}\text{ kg}$<br />($0.000548\text{ u} \approx \frac{1}{1836}\text{ u}$)</td>
+                <td>$1.7588 \times 10^{11}\text{ C/kg}$. <strong>Independent</strong> of both the gas inside the tube
+                    and the electrode material (proves electrons are universal constituents of all matter).</td>
+            </tr>
+            <tr>
+                <td><strong>Proton ($p^+$ or $^1_1\text{H}^+$)</strong></td>
+                <td><strong>E. Goldstein (1886)</strong> — Anode / Canal Rays (perforated cathode); named by Rutherford
+                </td>
+                <td>$+1.602 \times 10^{-19}\text{ C}$<br />(Relative: $+1$)</td>
+                <td>$1.6726 \times 10^{-27}\text{ kg}$<br />($1.00727\text{ u} \approx 1\text{ u}$)</td>
+                <td>$9.58 \times 10^{7}\text{ C/kg}$ (for $\text{H}^+$). <strong>DEPENDS on the nature of the
+                        gas</strong> in the tube because anode rays are ionized residual gas cations! Maximum $e/m$
+                    occurs with $\text{H}_2$ gas.</td>
+            </tr>
+            <tr>
+                <td><strong>Neutron ($n$ or $^1_0n$)</strong></td>
+                <td><strong>James Chadwick (1932)</strong> — $\alpha$-bombardment of Beryllium:<br />$^9_4\text{Be} +
+                    ^4_2\text{He} \rightarrow ^{12}_6\text{C} + ^1_0n$</td>
+                <td>$0\text{ C}$<br />(Electrically neutral)</td>
+                <td>$1.6749 \times 10^{-27}\text{ kg}$<br />($1.00866\text{ u} \approx 1\text{ u}$)</td>
+                <td>$e/m = \mathbf{0}$. Slightly <strong>heavier</strong> than a proton ($m_n \gt m_p \gg m_e$). Absent
+                    in ordinary hydrogen (protium, $^1_1\text{H}$).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <span class="box-label">Specific Charge ($e/m$) Hierarchy &amp; Nuclear Notation ($^A_Z X^{q}$)</span>
+        <p><strong>1. Increasing Order of Specific Charge ($|q|/m$):</strong> Comparing a neutron ($0/1 = 0$), an
+            $\alpha$-particle ($^4_2\text{He}^{2+}$, $2/4 = 0.5\text{ units}$), a proton ($1/1 = 1\text{ unit}$), and an
+            electron ($1/(1/1836) = 1836\text{ units}$):</p>
+        $$\left(\frac{e}{m}\right)_{\text{neutron}} \lt \left(\frac{e}{m}\right)_{\alpha\text{-particle}} \lt
+        \left(\frac{e}{m}\right)_{\text{proton}} \lt \left(\frac{e}{m}\right)_{\text{electron}}$$
+        <p><strong>2. Exact Counting Rules for $^A_Z X^{q}$:</strong></p>
+        <ul>
+            <li><strong>Atomic Number ($Z$)</strong> $= \text{Number of protons }(p)$ — uniquely identifies the element.
+            </li>
+            <li><strong>Mass Number ($A$)</strong> $= p + n$ (total nucleons) $\implies \text{Number of neutrons }(n) =
+                A - Z$.</li>
+            <li><strong>Number of electrons ($e^-$):</strong> For a neutral atom, $e^- = Z$. For a cation $X^{c+}$, $e^-
+                = Z - c$. For an anion $X^{a-}$, $e^- = Z + a$.</li>
+        </ul>
+    </div>
+
+    <h3>The Five Essential Nuclear &amp; Electronic Species Classifications</h3>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Species Term</th>
+                <th>Exact Defining Condition</th>
+                <th>High-Yield Examples</th>
+                <th>Quick Recognition Trick</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Isotopes</strong></td>
+                <td>Same $Z$ (protons), different $A$ (neutrons). Identical chemical properties, different
+                    physical/nuclear properties.</td>
+                <td>$^1_1\text{H}$ (protium), $^2_1\text{H}$ (deuterium), $^3_1\text{H}$ (tritium);
+                    $^{35}_{17}\text{Cl}$ &amp; $^{37}_{17}\text{Cl}$</td>
+                <td>Iso<strong>p</strong>es &rarr; same <strong>p</strong>rotons ($Z$).</td>
+            </tr>
+            <tr>
+                <td><strong>Isobars</strong></td>
+                <td>Same mass number $A$ ($p + n$), different $Z$. Different chemical properties.</td>
+                <td>$^{40}_{18}\text{Ar}$, $^{40}_{19}\text{K}$, $^{40}_{20}\text{Ca}$; also $^{14}_6\text{C}$ &amp;
+                    $^{14}_7\text{N}$</td>
+                <td>Same top number ($A$). Produced by $\beta^-$-decay!</td>
+            </tr>
+            <tr>
+                <td><strong>Isotones</strong></td>
+                <td>Same number of neutrons ($n = A - Z$), different $Z$ and $A$.</td>
+                <td>$^{14}_6\text{C}$, $^{15}_7\text{N}$, $^{16}_8\text{O}$ (all have $n = 8$); $^{31}_{15}\text{P}$
+                    &amp; $^{32}_{16}\text{S}$ ($n = 16$)</td>
+                <td>Iso<strong>n</strong>es &rarr; same <strong>n</strong>eutrons ($A - Z$).</td>
+            </tr>
+            <tr>
+                <td><strong>Isoelectronic Species</strong></td>
+                <td>Same total number of electrons (atoms, ions, or molecules).</td>
+                <td>$10e^-$: $\text{N}^{3-}, \text{O}^{2-}, \text{F}^-, \text{Ne}, \text{Na}^+, \text{Mg}^{2+},
+                    \text{Al}^{3+}$<br />$14e^-$: $\text{N}_2, \text{CO}, \text{CN}^-, \text{NO}^+, \text{C}_2^{2-}$
+                </td>
+                <td>Sum $Z$ of all atoms and adjust for ionic charge.</td>
+            </tr>
+            <tr>
+                <td><strong>Isodiaphers</strong></td>
+                <td>Same <strong>isotopic number (neutron excess)</strong>: $n - p = A - 2Z$.</td>
+                <td>$^{238}_{92}\text{U}$ ($n-p = 54$) &amp; $^{234}_{90}\text{Th}$ ($n-p = 54$); $^{19}_9\text{F}$
+                    &amp; $^{23}_{11}\text{Na}$ ($n-p = 1$)</td>
+                <td>Emitting an $\alpha$-particle ($^4_2\text{He}$) ALWAYS yields an isodiapher!</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ==================== SECTION 2: EVOLUTION OF ATOMIC MODELS ==================== -->
+    <h2 class="section-heading">22.2 Evolution of Atomic Models: Thomson to Rutherford</h2>
+
+    <p><strong>J.J. Thomson's Plum Pudding Model (1904):</strong> Visualized the atom as a uniform sphere of positive
+        charge (radius $\sim 10^{-10}\text{ m}$) with negatively charged electrons embedded inside like seeds in a
+        watermelon. While it accounted for overall electrical neutrality, it predicted that heavy, fast-moving
+        $\alpha$-particles should pass through thin metal foil with practically zero large-angle deflection—a prediction
+        spectacularly disproved by Rutherford's students Geiger and Marsden in 1911.</p>
+
+    <!-- SVG DIAGRAM 1: RUTHERFORD ALPHA SCATTERING -->
+    <div class="diagram-box">
+        <svg viewBox="0 0 820 340" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Rutherford Alpha-Particle Gold-Foil Scattering Experiment Trajectories and Distance of Closest Approach">
+            <defs>
+                <marker id="arr-alpha" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5"
+                    orient="auto">
+                    <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#b91c1c" />
+                </marker>
+                <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#1d4ed8" />
+                </marker>
+            </defs>
+
+            <rect x="4" y="4" width="812" height="332" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="410" y="32" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="15.5" font-weight="700" fill="#0f172a">RUTHERFORD'S &alpha;-PARTICLE GOLD-FOIL SCATTERING
+                (MICROSCOPIC VIEW)</text>
+
+            <!-- Left Source Block -->
+            <rect x="26" y="122" width="108" height="104" rx="8" fill="#1e3a5f" stroke="#0f172a" stroke-width="2" />
+            <text x="80" y="160" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="700" fill="#ffffff">&alpha;-Source</text>
+            <text x="80" y="179" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#bae6fd">(⁴₂He²⁺ beam)</text>
+            <text x="80" y="198" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" fill="#e0f2fe">Lead Slit Box</text>
+
+            <!-- Gold Atoms (3 stacked circles representing foil cross section) -->
+            <circle cx="430" cy="86" r="56" fill="#fef3c7" fill-opacity="0.45" stroke="#d97706" stroke-width="1.4"
+                stroke-dasharray="4,3" />
+            <circle cx="430" cy="86" r="10" fill="#d97706" stroke="#92400e" stroke-width="1.8" />
+            <text x="430" y="90" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="800" fill="#ffffff">+</text>
+
+            <circle cx="430" cy="174" r="68" fill="#fef3c7" fill-opacity="0.55" stroke="#d97706" stroke-width="1.6"
+                stroke-dasharray="4,3" />
+            <circle cx="430" cy="174" r="12" fill="#dc2626" stroke="#7f1d1d" stroke-width="2" />
+            <text x="430" y="179" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="800" fill="#ffffff">+Ze</text>
+
+            <circle cx="430" cy="264" r="56" fill="#fef3c7" fill-opacity="0.45" stroke="#d97706" stroke-width="1.4"
+                stroke-dasharray="4,3" />
+            <circle cx="430" cy="264" r="10" fill="#d97706" stroke="#92400e" stroke-width="1.8" />
+            <text x="430" y="268" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="800" fill="#ffffff">+</text>
+
+            <!-- Trajectory 1: Far from nucleus -> Straight undeflected (>99.9%) -->
+            <line x1="142" y1="62" x2="640" y2="62" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arr-blue)" />
+            <line x1="142" y1="290" x2="640" y2="290" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arr-blue)" />
+
+            <!-- Trajectory 2: Passes moderately close -> Small-angle deflection -->
+            <path d="M 142 134 L 380 134 Q 425 134 455 112 L 620 76" fill="none" stroke="#b91c1c" stroke-width="2"
+                marker-end="url(#arr-alpha)" />
+
+            <!-- Trajectory 3: Passes very close -> Large-angle deflection (>90 deg) -->
+            <path d="M 142 154 L 372 154 Q 408 154 398 134 L 312 68" fill="none" stroke="#b91c1c" stroke-width="2"
+                marker-end="url(#arr-alpha)" />
+
+            <!-- Trajectory 4: Head-on collision -> 180 deg rebound at r_0 -->
+            <line x1="142" y1="174" x2="380" y2="174" stroke="#b91c1c" stroke-width="2.4"
+                marker-end="url(#arr-alpha)" />
+            <path d="M 386 174 C 394 174 394 184 382 184 L 222 184" fill="none" stroke="#b91c1c" stroke-width="2.2"
+                stroke-dasharray="5,3" marker-end="url(#arr-alpha)" />
+
+            <!-- Distance of closest approach r_0 bracket -->
+            <line x1="388" y1="198" x2="430" y2="198" stroke="#0f766e" stroke-width="2" />
+            <line x1="388" y1="193" x2="388" y2="203" stroke="#0f766e" stroke-width="2" />
+            <line x1="430" y1="193" x2="430" y2="203" stroke="#0f766e" stroke-width="2" />
+            <text x="409" y="216" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="800" fill="#0f766e">r₀</text>
+
+            <!-- Trajectory 5: Below central nucleus -> Small-angle downward -->
+            <path d="M 142 214 L 380 214 Q 425 214 455 236 L 620 272" fill="none" stroke="#b91c1c" stroke-width="2"
+                marker-end="url(#arr-alpha)" />
+
+            <!-- Right Side Legend / Key Observations Box -->
+            <rect x="652" y="54" width="152" height="252" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="728" y="76" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="800" fill="#0f172a">KEY DEDUCTIONS</text>
+            <line x1="664" y1="84" x2="792" y2="84" stroke="#e2e8f0" stroke-width="1" />
+
+            <text x="664" y="104" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700"
+                fill="#1d4ed8">1. &gt;99.9% Straight:</text>
+            <text x="664" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="10.5"
+                fill="#334155">Atom is mostly</text>
+            <text x="664" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="10.5"
+                fill="#334155">empty space.</text>
+
+            <text x="664" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700"
+                fill="#b91c1c">2. Few Deflected:</text>
+            <text x="664" y="176" font-family="system-ui, -apple-system, sans-serif" font-size="10.5"
+                fill="#334155">Dense (+) charge</text>
+            <text x="664" y="190" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#334155">in
+                tiny core.</text>
+
+            <text x="664" y="216" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700"
+                fill="#991b1b">3. ~1 in 20,000 Back:</text>
+            <text x="664" y="232" font-family="system-ui, -apple-system, sans-serif" font-size="10.5"
+                fill="#334155">Head-on hit at r₀.</text>
+
+            <rect x="660" y="246" width="136" height="50" rx="6" fill="#f0fdf4" stroke="#86efac" />
+            <text x="728" y="263" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" font-weight="700" fill="#166534">Scale Ratio:</text>
+            <text x="728" y="278" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                fill="#15803d">R_nuc &asymp; 10⁻¹⁵ m</text>
+            <text x="728" y="291" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                fill="#15803d">R_atom &asymp; 10⁻¹⁰ m</text>
+
+            <!-- Bottom Callout -->
+            <text x="392" y="324" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="700" fill="#0f766e">Distance of Closest Approach (Head-on): KE_&alpha; =
+                (1/4&pi;&epsilon;₀)(2e)(Ze)/r₀ &rArr; r₀ &prop; Z / KE_&alpha;</text>
+        </svg>
+        <div class="diagram-caption">Figure 22.1: Rutherford's nuclear scattering experiment. Because $R_{\text{atom}} /
+            R_{\text{nucleus}} \approx 10^5$, the volume of the atom is roughly $(10^5)^3 = 10^{15}$ times larger than
+            the nucleus!</div>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Nuclear Radius Scaling, Closest Approach &amp; Maxwell's
+            Collapse</span>
+        <ul>
+            <li><strong>Empirical Nuclear Radius Law:</strong> Nuclear density is virtually constant across all
+                elements, so nuclear volume $\propto A$ (mass number), giving $\boxed{R = R_0 A^{1/3}}$ where $R_0
+                \approx 1.3 \times 10^{-15}\text{ m} = 1.3\text{ fm}$. For example, comparing $^{64}\text{Cu}$ and
+                $^8\text{Be}$, $\frac{R_{\text{Cu}}}{R_{\text{Be}}} = \left(\frac{64}{8}\right)^{1/3} = 2$.</li>
+            <li><strong>Distance of Closest Approach ($r_0$):</strong> In a head-on collision, the $\alpha$-particle
+                ($q_1 = +2e$) stops momentarily at distance $r_0$ from the nucleus ($q_2 = +Ze$) when all initial
+                kinetic energy converts into electrostatic potential energy:
+                $$\text{KE}_{\alpha} = \frac{1}{4\pi\varepsilon_0}\frac{(2e)(Ze)}{r_0} \implies r_0 = \frac{2 k Z
+                e^2}{\text{KE}_{\alpha}}$$
+                <em>Exam Intuition:</em> Doubling the $\alpha$-particle's speed quadruples its $\text{KE}$, cutting
+                $r_0$ to $\frac{1}{4}$! Notice $r_0$ sets an <em>upper bound</em> on the nuclear radius.
+            </li>
+            <li><strong>Fatal Drawback (Maxwell's Electrodynamics):</strong> According to classical electromagnetism,
+                any accelerating charged particle radiates continuous electromagnetic energy. An orbiting electron
+                undergoes continuous centripetal acceleration, so it should lose energy, spiral into the nucleus in
+                $\sim 10^{-8}\text{ s}$ (atom collapse!), and emit a <em>continuous</em> spectrum instead of the sharp
+                <em>line</em> spectrum observed experimentally.
+            </li>
+        </ul>
+    </div>
+
+    <!-- ==================== SECTION 3: BOHR'S ATOMIC MODEL ==================== -->
+    <h2 class="section-heading">22.3 Bohr's Atomic Model &amp; Hydrogen Spectral Series (Foundation Bridge)</h2>
+
+    <p>Niels Bohr (1913) resolved Rutherford's stability paradox by introducing quantum restrictions for
+        <strong>single-electron (hydrogen-like) species</strong> ($\text{H}, \text{He}^+, \text{Li}^{2+},
+        \text{Be}^{3+}$):
+    </p>
+
+    <ol>
+        <li><strong>Stationary Orbits:</strong> Electrons revolve around the nucleus only in certain discrete circular
+            orbits of fixed energy called <em>stationary states</em> ($n = 1, 2, 3, \dots$) without radiating
+            electromagnetic energy.</li>
+        <li><strong>Angular Momentum Quantization:</strong> Allowed orbits are strictly those where the electron's
+            orbital angular momentum $L = mvr$ is an integral multiple of $\frac{h}{2\pi}$:
+            $$\boxed{mvr = \frac{nh}{2\pi} = n\hbar} \qquad (n = 1, 2, 3, \dots)$$
+        </li>
+        <li><strong>Quantum Jumps &amp; Line Spectra:</strong> Energy is absorbed or emitted ONLY when an electron jumps
+            between two stationary orbits: $\Delta E = E_{\text{high}} - E_{\text{low}} = h\nu = \frac{hc}{\lambda}$.
+        </li>
+    </ol>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Derivation of Bohr Scaling Laws (For Any 1-Electron Ion of Atomic
+            Number $Z$)</span>
+        <p>Equating Coulomb attraction to centripetal force gives (i) $\frac{k Z e^2}{r^2} = \frac{m v^2}{r} \implies m
+            v^2 r = k Z e^2$, and quantization gives (ii) $m v r = \frac{nh}{2\pi}$. Dividing (i) by (ii) eliminates $r$
+            immediately to yield velocity $v_n$; substituting $v_n$ back into (ii) yields radius $r_n$:</p>
+        <ul>
+            <li><strong>Orbit Radius:</strong> $\boxed{r_n = 0.529 \frac{n^2}{Z}\text{ Å}} = a_0 \frac{n^2}{Z}$
+                &nbsp;&nbsp;(Proportionality: $r_n \propto \frac{n^2}{Z}$)</li>
+            <li><strong>Electron Speed:</strong> $\boxed{v_n = 2.18 \times 10^6 \frac{Z}{n}\text{ m/s}} \approx
+                \frac{c}{137}\frac{Z}{n}$ &nbsp;&nbsp;(Proportionality: $v_n \propto \frac{Z}{n}$)</li>
+            <li><strong>Orbital Time Period &amp; Frequency:</strong> $T_n = \frac{2\pi r_n}{v_n} \propto
+                \frac{n^3}{Z^2}$, &nbsp; $f_n = \frac{1}{T_n} \propto \frac{Z^2}{n^3}$</li>
+            <li><strong>Total Energy ($TE$), Kinetic Energy ($KE$), and Potential Energy ($PE$):</strong>
+                $$KE_n = \frac{1}{2}mv_n^2 = +\frac{k Z e^2}{2 r_n}, \qquad PE_n = -\frac{k Z e^2}{r_n}, \qquad TE_n =
+                KE_n + PE_n = -\frac{k Z e^2}{2 r_n}$$
+                $$\boxed{E_n = TE_n = -13.6 \frac{Z^2}{n^2}\text{ eV/atom}} \qquad \text{and} \qquad \boxed{TE = -KE =
+                \frac{PE}{2}}$$
+            </li>
+            <li><strong>Ionization &amp; Separation Energy:</strong> Ionization energy (ground state $n=1 \rightarrow
+                \infty$) $= \mathbf{+13.6 Z^2\text{ eV}}$. Separation energy from any excited state $n$ ($n \rightarrow
+                \infty$) $= \mathbf{+13.6 \frac{Z^2}{n^2}\text{ eV}}$.</li>
+        </ul>
+    </div>
+
+    <!-- SVG DIAGRAM 2: BOHR ENERGY-LEVEL LADDER -->
+    <div class="diagram-box">
+        <svg viewBox="0 0 820 380" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Bohr Energy-Level Ladder for Hydrogen showing Lyman UV, Balmer Visible, and Paschen IR Spectral Transitions">
+            <defs>
+                <marker id="arr-uv" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#7c3aed" />
+                </marker>
+                <marker id="arr-vis" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#0f766e" />
+                </marker>
+                <marker id="arr-ir" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#b45309" />
+                </marker>
+            </defs>
+
+            <rect x="4" y="4" width="812" height="372" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="410" y="30" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="15.5" font-weight="700" fill="#0f172a">BOHR ENERGY-LEVEL LADDER FOR HYDROGEN (Z = 1) &amp;
+                EMISSION SERIES</text>
+
+            <!-- Horizontal Energy Levels (y from 56 for inf down to 320 for n=1) -->
+            <!-- n = infinity (0 eV) at y = 56 -->
+            <line x1="115" y1="56" x2="685" y2="56" stroke="#64748b" stroke-width="1.5" stroke-dasharray="6,4" />
+            <text x="104" y="60" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="700" fill="#334155">n = &infin;</text>
+            <text x="696" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700"
+                fill="#334155">0.00 eV (Ionized)</text>
+
+            <!-- n = 5 (-0.54 eV) at y = 84 -->
+            <line x1="115" y1="84" x2="685" y2="84" stroke="#475569" stroke-width="1.5" />
+            <text x="104" y="88" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="700" fill="#334155">n = 5</text>
+            <text x="696" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600"
+                fill="#475569">&minus;0.54 eV</text>
+
+            <!-- n = 4 (-0.85 eV) at y = 114 -->
+            <line x1="115" y1="114" x2="685" y2="114" stroke="#334155" stroke-width="1.8" />
+            <text x="104" y="118" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="700" fill="#334155">n = 4</text>
+            <text x="696" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600"
+                fill="#334155">&minus;0.85 eV</text>
+
+            <!-- n = 3 (-1.51 eV) at y = 158 -->
+            <line x1="115" y1="158" x2="685" y2="158" stroke="#1e293b" stroke-width="2" />
+            <text x="104" y="162" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="12.5"
+                font-weight="700" fill="#1e293b">n = 3</text>
+            <text x="696" y="162" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700"
+                fill="#1e293b">&minus;1.51 eV</text>
+
+            <!-- n = 2 (-3.40 eV) at y = 224 -->
+            <line x1="115" y1="224" x2="685" y2="224" stroke="#0f172a" stroke-width="2.2" />
+            <text x="104" y="228" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="12.5"
+                font-weight="800" fill="#0f172a">n = 2</text>
+            <text x="696" y="228" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700"
+                fill="#0f172a">&minus;3.40 eV</text>
+
+            <!-- n = 1 (-13.60 eV) at y = 326 -->
+            <line x1="115" y1="326" x2="685" y2="326" stroke="#0f172a" stroke-width="2.8" />
+            <text x="104" y="330" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="800" fill="#0f172a">n = 1</text>
+            <text x="696" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="800"
+                fill="#0f172a">&minus;13.60 eV (Ground)</text>
+
+            <!-- LYMAN SERIES (ends at n=1, y=326) -->
+            <line x1="165" y1="224" x2="165" y2="320" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#arr-uv)" />
+            <line x1="200" y1="158" x2="200" y2="320" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#arr-uv)" />
+            <line x1="235" y1="114" x2="235" y2="320" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#arr-uv)" />
+            <line x1="270" y1="56" x2="270" y2="320" stroke="#7c3aed" stroke-width="2" stroke-dasharray="4,2"
+                marker-end="url(#arr-uv)" />
+            <rect x="148" y="334" width="142" height="32" rx="6" fill="#f3e8ff" stroke="#7c3aed" />
+            <text x="219" y="348" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="800" fill="#5b21b6">LYMAN SERIES (n₁ = 1)</text>
+            <text x="219" y="361" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                font-weight="600" fill="#6d28d9">Ultraviolet (UV) Region</text>
+            <text x="165" y="276" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                font-weight="700" fill="#5b21b6">10.2 eV&nbsp;</text>
+
+            <!-- BALMER SERIES (ends at n=2, y=224) -->
+            <line x1="365" y1="158" x2="365" y2="218" stroke="#dc2626" stroke-width="2.4" marker-end="url(#arr-vis)" />
+            <line x1="405" y1="114" x2="405" y2="218" stroke="#0f766e" stroke-width="2.2" marker-end="url(#arr-vis)" />
+            <line x1="445" y1="84" x2="445" y2="218" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arr-vis)" />
+            <line x1="485" y1="56" x2="485" y2="218" stroke="#0f766e" stroke-width="2" stroke-dasharray="4,2"
+                marker-end="url(#arr-vis)" />
+            <text x="365" y="190" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                font-weight="700" fill="#b91c1c">H&alpha; (1.89 eV)&nbsp;</text>
+            <rect x="352" y="236" width="152" height="44" rx="6" fill="#ecfdf5" stroke="#0f766e" />
+            <text x="428" y="252" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="800" fill="#065f46">BALMER SERIES (n₁ = 2)</text>
+            <text x="428" y="266" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                font-weight="600" fill="#047857">Visible Region (H&alpha;, H&beta;, H&gamma;)</text>
+            <text x="428" y="277" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="9.5" fill="#047857">Dashed = Series Limit (&lambda;_min)</text>
+
+            <!-- PASCHEN SERIES (ends at n=3, y=158) -->
+            <line x1="575" y1="114" x2="575" y2="152" stroke="#b45309" stroke-width="2.2" marker-end="url(#arr-ir)" />
+            <line x1="610" y1="84" x2="610" y2="152" stroke="#b45309" stroke-width="2.2" marker-end="url(#arr-ir)" />
+            <line x1="645" y1="56" x2="645" y2="152" stroke="#b45309" stroke-width="2" stroke-dasharray="4,2"
+                marker-end="url(#arr-ir)" />
+            <rect x="556" y="170" width="122" height="36" rx="6" fill="#fffbeb" stroke="#d97706" />
+            <text x="617" y="185" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="800" fill="#92400e">PASCHEN (n₁ = 3)</text>
+            <text x="617" y="199" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                font-weight="600" fill="#b45309">Near Infrared (IR)</text>
+
+            <!-- Formula Callout Bottom Right -->
+            <rect x="530" y="334" width="264" height="32" rx="6" fill="#eff6ff" stroke="#1d4ed8" />
+            <text x="662" y="354" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="700" fill="#1e3a8a">Max Lines (n &rarr; 1, Sample) = n(n &minus; 1) /
+                2</text>
+        </svg>
+        <div class="diagram-caption">Figure 22.2: Quantized energy levels of the H-atom. Notice how energy gaps shrink
+            rapidly as $n$ increases: the jump $2 \rightarrow 1$ ($10.2\text{ eV}$) alone exceeds $75\%$ of the entire
+            ionization energy ($13.6\text{ eV}$)!</div>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Rydberg Formula &amp; Spectral Line Counting Traps</span>
+        <p><strong>1. Rydberg Equation for Wavenumber ($\bar{\nu} = 1/\lambda$):</strong></p>
+        $$\frac{1}{\lambda} = \bar{\nu} = R_H Z^2 \left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right) \qquad (n_2 \gt n_1,
+        \quad R_H \approx 1.097 \times 10^7\text{ m}^{-1})$$
+        <ul>
+            <li><strong>First line (longest $\lambda$, smallest $\Delta E$)</strong> of any series: $n_2 = n_1 + 1$
+                (e.g., Balmer $\text{H}_\alpha$: $3 \rightarrow 2$).</li>
+            <li><strong>Last line / Series Limit (shortest $\lambda$, largest $\Delta E$)</strong>: $n_2 = \infty
+                \rightarrow n_1$.</li>
+        </ul>
+        <p><strong>2. Emission Line Counting — Sample vs. Single Atom Trap!</strong></p>
+        <ul>
+            <li><strong>Large Sample of H-atoms</strong> all excited to level $n$ returning to ground state ($1$): Every
+                pair of levels produces a unique line $\implies \boxed{N_{\text{max}} = \binom{n}{2} =
+                \frac{n(n-1)}{2}}$. From $n_2$ down to $n_1$: $N = \frac{(n_2 - n_1)(n_2 - n_1 + 1)}{2}$.</li>
+            <li><strong>ONE Single H-atom</strong> de-exciting from $n$ to $1$: A single electron can make at most
+                $(n-1)$ consecutive single-step hops ($n \rightarrow n-1 \rightarrow \dots \rightarrow 1$), so
+                $N_{\max,\text{ single atom}} = \mathbf{n - 1}$!</li>
+            <li><strong>Series Breakdown from level $n$:</strong> Lines in Lyman ($n_1=1$) $= n - 1$; Lines in Balmer
+                ($n_1=2$) $= n - 2$; Lines in Paschen ($n_1=3$) $= n - 3$ (for $n \gt n_1$).</li>
+        </ul>
+        <p><strong>3. Limitation of Bohr's Model:</strong> Fails completely for multi-electron atoms ($\text{He},
+            \text{Li}^+, \text{Be}^{2+}$) due to inter-electronic repulsions, cannot explain fine splitting of spectral
+            lines in magnetic (Zeeman effect) or electric (Stark effect) fields, and violates Heisenberg's Uncertainty
+            Principle ($\Delta x \cdot \Delta p \ge \frac{h}{4\pi}$).</p>
+    </div>
+
+    <!-- ==================== SECTION 4: ELECTRONIC CONFIGURATION & QUANTUM NUMBERS ==================== -->
+    <h2 class="section-heading">22.4 Electronic Configuration &amp; Quantum Numbers Bridge</h2>
+
+    <p>Class 10 introduces the <strong>Bohr–Bury Shell Rules</strong>: a shell $n$ holds at most $2n^2$ electrons ($K=2,
+        L=8, M=18, N=32$), yet the outermost shell cannot exceed $8$ electrons (explaining why Potassium $[Z=19]$ is $2,
+        8, 8, 1$ rather than $2, 8, 9$). Quantum mechanics explains <em>why</em> via four <strong>Quantum
+            Numbers</strong> that give every electron a unique 4-part address:</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Quantum Number</th>
+                <th>Symbol</th>
+                <th>Allowed Values</th>
+                <th>Physical Meaning &amp; Capacity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Principal</strong></td>
+                <td>$n$</td>
+                <td>$1, 2, 3, 4, \dots$ ($K, L, M, N$)</td>
+                <td>Determines shell size and main energy. Total orbitals $= n^2$; max electrons $= 2n^2$.</td>
+            </tr>
+            <tr>
+                <td><strong>Azimuthal (Orbital Angular Momentum)</strong></td>
+                <td>$l$</td>
+                <td>$0, 1, 2, \dots, (n-1)$</td>
+                <td>Determines subshell shape: $l=0\ (s\text{, spherical})$, $l=1\ (p\text{, dumbbell})$, $l=2\
+                    (d\text{, cloverleaf})$, $l=3\ (f)$.</td>
+            </tr>
+            <tr>
+                <td><strong>Magnetic</strong></td>
+                <td>$m_l$</td>
+                <td>$-l, \dots, 0, \dots, +l$</td>
+                <td>Determines 3D spatial orientation of orbitals. Orbitals per subshell $= 2l + 1$ ($s:1, p:3, d:5,
+                    f:7$).</td>
+            </tr>
+            <tr>
+                <td><strong>Spin</strong></td>
+                <td>$m_s$</td>
+                <td>$+\frac{1}{2}\ (\uparrow)$ or $-\frac{1}{2}\ (\downarrow)$</td>
+                <td>Intrinsic electron spin angular momentum. Max electrons per subshell $= 2(2l+1)$ ($s:2, p:6, d:10,
+                    f:14$).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <span class="box-label">The Three Golden Filling Rules (Aufbau, Pauli, Hund)</span>
+        <ol>
+            <li><strong>Aufbau Principle &amp; $(n + l)$ Rule:</strong> Orbitals fill in increasing order of energy. For
+                multi-electron atoms, subshell energy increases with $(n + l)$. <strong>Tie-Breaker:</strong> If two
+                subshells have the <em>same</em> $(n + l)$ value, the subshell with the <strong>lower $n$</strong> has
+                lower energy and fills first!
+                <br /><em>Example:</em> $4s$ has $n+l = 4+0 = 4$; $3d$ has $n+l = 3+2 = 5$. Thus $4s$ fills BEFORE $3d$!
+                Between $3p$ ($3+1=4$) and $4s$ ($4+0=4$), $3p$ has lower $n$ so $3p$ fills first.
+            </li>
+            <li><strong>Pauli Exclusion Principle:</strong> No two electrons in the same atom can have the exact same
+                set of all four quantum numbers $(n, l, m_l, m_s)$. Consequently, any single orbital holds a maximum of
+                <strong>$2$ electrons with opposite spins</strong> ($\uparrow\downarrow$).
+            </li>
+            <li><strong>Hund's Rule of Maximum Multiplicity:</strong> Pairing of electrons in degenerate orbitals ($p_x,
+                p_y, p_z$ or the five $d$-orbitals) does NOT begin until each orbital in that subshell is singly
+                occupied with <strong>parallel spins</strong> ($\uparrow\ \uparrow\ \uparrow$).</li>
+        </ol>
+    </div>
+
+    <!-- SVG DIAGRAM 3: AUFBAU (n+l) DIAGONAL FILLING CHART -->
+    <div class="diagram-box">
+        <svg viewBox="0 0 820 340" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Aufbau (n+l) Diagonal Orbital Filling Order Chart and Chromium/Copper Exceptions">
+            <defs>
+                <marker id="arr-auf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#b91c1c" />
+                </marker>
+            </defs>
+
+            <rect x="4" y="4" width="812" height="332" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="410" y="30" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="15.5" font-weight="700" fill="#0f172a">AUFBAU (n + l) DIAGONAL FILLING CHART &amp; KEY
+                ANOMALIES</text>
+
+            <!-- Left Matrix: Shells n=1..6, Columns s(l=0), p(l=1), d(l=2), f(l=3) -->
+            <!-- Headers -->
+            <text x="80" y="58" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="800" fill="#1e3a8a">l = 0 (s: 2e⁻)</text>
+            <text x="176" y="58" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="800" fill="#0f766e">l = 1 (p: 6e⁻)</text>
+            <text x="272" y="58" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="800" fill="#b45309">l = 2 (d: 10e⁻)</text>
+            <text x="368" y="58" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="800" fill="#7c3aed">l = 3 (f: 14e⁻)</text>
+
+            <!-- Diagonal Arrows (drawn behind circles) -->
+            <!-- n+l = 1: 1s -->
+            <line x1="112" y1="68" x2="48" y2="106" stroke="#fca5a5" stroke-width="2.4" marker-end="url(#arr-auf)" />
+            <!-- n+l = 2: 2s -->
+            <line x1="112" y1="112" x2="48" y2="150" stroke="#fca5a5" stroke-width="2.4" marker-end="url(#arr-auf)" />
+            <!-- n+l = 3: 2p -> 3s -->
+            <line x1="208" y1="112" x2="48" y2="196" stroke="#fca5a5" stroke-width="2.4" marker-end="url(#arr-auf)" />
+            <!-- n+l = 4: 3p -> 4s -->
+            <line x1="208" y1="158" x2="48" y2="242" stroke="#fca5a5" stroke-width="2.4" marker-end="url(#arr-auf)" />
+            <!-- n+l = 5: 3d -> 4p -> 5s -->
+            <line x1="306" y1="158" x2="48" y2="288" stroke="#fca5a5" stroke-width="2.4" marker-end="url(#arr-auf)" />
+            <!-- n+l = 6: 4d -> 5p -> 6s -->
+            <line x1="306" y1="204" x2="112" y2="306" stroke="#fca5a5" stroke-width="2.4" marker-end="url(#arr-auf)" />
+            <!-- n+l = 7: 4f -> 5d -> 6p -->
+            <line x1="398" y1="204" x2="188" y2="314" stroke="#fca5a5" stroke-width="2.4" marker-end="url(#arr-auf)" />
+
+            <!-- Row 1: 1s -->
+            <circle cx="80" cy="86" r="17" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8" />
+            <text x="80" y="91" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="800" fill="#1e3a8a">1s</text>
+
+            <!-- Row 2: 2s, 2p -->
+            <circle cx="80" cy="132" r="17" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8" />
+            <text x="80" y="137" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="800" fill="#1e3a8a">2s</text>
+            <circle cx="176" cy="132" r="17" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.8" />
+            <text x="176" y="137" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="800" fill="#065f46">2p</text>
+
+            <!-- Row 3: 3s, 3p, 3d -->
+            <circle cx="80" cy="178" r="17" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8" />
+            <text x="80" y="183" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="800" fill="#1e3a8a">3s</text>
+            <circle cx="176" cy="178" r="17" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.8" />
+            <text x="176" y="183" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="800" fill="#065f46">3p</text>
+            <circle cx="272" cy="178" r="17" fill="#fef3c7" stroke="#b45309" stroke-width="1.8" />
+            <text x="272" y="183" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="800" fill="#92400e">3d</text>
+
+            <!-- Row 4: 4s, 4p, 4d, 4f -->
+            <circle cx="80" cy="224" r="17" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8" />
+            <text x="80" y="229" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="800" fill="#1e3a8a">4s</text>
+            <circle cx="176" cy="224" r="17" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.8" />
+            <text x="176" y="229" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="800" fill="#065f46">4p</text>
+            <circle cx="272" cy="224" r="17" fill="#fef3c7" stroke="#b45309" stroke-width="1.8" />
+            <text x="272" y="229" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="800" fill="#92400e">4d</text>
+            <circle cx="368" cy="224" r="17" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.8" />
+            <text x="368" y="229" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="800" fill="#5b21b6">4f</text>
+
+            <!-- Row 5: 5s, 5p, 5d, 5f -->
+            <circle cx="80" cy="270" r="17" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8" />
+            <text x="80" y="275" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="800" fill="#1e3a8a">5s</text>
+            <circle cx="176" cy="270" r="17" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.8" />
+            <text x="176" y="275" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="800" fill="#065f46">5p</text>
+            <circle cx="272" cy="270" r="17" fill="#fef3c7" stroke="#b45309" stroke-width="1.8" />
+            <text x="272" y="275" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="800" fill="#92400e">5d</text>
+            <circle cx="368" cy="270" r="17" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.8" />
+            <text x="368" y="275" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="800" fill="#5b21b6">5f</text>
+
+            <!-- Row 6: 6s, 6p -->
+            <circle cx="80" cy="312" r="15" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.6" />
+            <text x="80" y="317" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="800" fill="#1e3a8a">6s</text>
+            <circle cx="176" cy="312" r="15" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.6" />
+            <text x="176" y="317" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="800" fill="#065f46">6p</text>
+
+            <!-- Right Panel: Filling Sequence & Cr/Cu Exceptions -->
+            <rect x="434" y="54" width="366" height="106" rx="8" fill="#ffffff" stroke="#1e3a5f" stroke-width="1.8" />
+            <text x="617" y="76" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="12.5" font-weight="800" fill="#1e3a5f">ENERGY ORDER UP TO Z = 30</text>
+            <text x="617" y="100" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="700" fill="#0f172a">1s &lt; 2s &lt; 2p &lt; 3s &lt; 3p &lt; 4s &lt; 3d &lt; 4p</text>
+            <text x="617" y="122" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" fill="#475569">Why 4s fills before 3d? (4+0 = 4) &lt; (3+2 = 5)</text>
+            <text x="617" y="143" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="700" fill="#b91c1c">IONIZATION RULE: Remove 4s e⁻ FIRST, then 3d!</text>
+
+            <rect x="434" y="176" width="366" height="142" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.8" />
+            <text x="617" y="198" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="12.5" font-weight="800" fill="#991b1b">MUST-MEMORIZE EXCEPTIONS (Z = 1 to 30)</text>
+            <text x="452" y="224" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700"
+                fill="#0f172a">Chromium (Z = 24): [Ar] 3d⁵ 4s¹</text>
+            <text x="452" y="241" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#7f1d1d">(NOT
+                3d⁴ 4s² &rarr; Exact half-filled d⁵, 6 unpaired e⁻)</text>
+            <text x="452" y="268" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700"
+                fill="#0f172a">Copper (Z = 29): [Ar] 3d¹⁰ 4s¹</text>
+            <text x="452" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#7f1d1d">(NOT
+                3d⁹ 4s² &rarr; Exact full-filled d¹⁰, 1 unpaired e⁻)</text>
+            <text x="617" y="308" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" font-weight="700" fill="#991b1b">Reason: High Exchange Energy + Spherical
+                Symmetry</text>
+        </svg>
+        <div class="diagram-caption">Figure 22.3: Diagonal Aufbau filling chart up to $6p$. Remember the golden
+            asymmetry: $4s$ fills before $3d$, yet when forming transition-metal cations ($\text{Fe}^{2+},
+            \text{Cr}^{3+}, \text{Cu}^{2+}$), electrons ALWAYS leave the outermost $4s$ orbital first!</div>
+    </div>
+
+    <div class="trap-box">
+        <span class="box-label">High-Yield Configuration Reference ($Z = 19$ to $30$) &amp; Cation Trap</span>
+        <p>Using $[\text{Ar}] = 1s^2 2s^2 2p^6 3s^2 3p^6$ ($18e^-$): $\text{K}(19): [\text{Ar}]4s^1$; $\text{Ca}(20):
+            [\text{Ar}]4s^2$; $\text{Sc}(21): [\text{Ar}]3d^1 4s^2$; $\text{Ti}(22): [\text{Ar}]3d^2 4s^2$;
+            $\text{V}(23): [\text{Ar}]3d^3 4s^2$; <strong>$\text{Cr}(24): [\text{Ar}]3d^5 4s^1$</strong>;
+            $\text{Mn}(25): [\text{Ar}]3d^5 4s^2$; $\text{Fe}(26): [\text{Ar}]3d^6 4s^2$; $\text{Co}(27):
+            [\text{Ar}]3d^7 4s^2$; $\text{Ni}(28): [\text{Ar}]3d^8 4s^2$; <strong>$\text{Cu}(29): [\text{Ar}]3d^{10}
+                4s^1$</strong>; $\text{Zn}(30): [\text{Ar}]3d^{10} 4s^2$.</p>
+        <p><strong>Cation Trap:</strong> Because $4s$ lies physically farther from the nucleus than $3d$, forming
+            $\text{Fe}^{2+}$ removes the two $4s$ electrons FIRST: $\text{Fe}^{2+} = [\text{Ar}]3d^6$ ($4$ unpaired
+            $e^-$), NOT $[\text{Ar}]3d^4 4s^2$! Similarly, $\text{Fe}^{3+} = [\text{Ar}]3d^5$ ($5$ unpaired $e^-$, extra
+            stable half-filled) and $\text{Zn}^{2+} = [\text{Ar}]3d^{10}$ ($0$ unpaired $e^-$, diamagnetic).
+            <em>Olympiad Bonus:</em> Spin-only magnetic moment $\mu = \sqrt{n(n+2)}\text{ BM}$ where $n =$ unpaired
+            electrons.
+        </p>
+    </div>
+
+    <!-- ==================== SECTION 5: CHEMICAL BONDING ==================== -->
+    <h2 class="section-heading">22.5 Chemical Bonding: Octet Rule, Ionic/Covalent/Coordinate, Fajan's Rules &amp; VSEPR
+    </h2>
+
+    <p>Atoms bond to lower their potential energy. According to the <strong>Kossel–Lewis Octet Rule</strong>, main-group
+        atoms tend to gain, lose, or share valence electrons to attain a stable $ns^2 np^6$ noble-gas configuration ($8$
+        valence electrons, or $2$ for duplet species like $\text{H}, \text{He}, \text{Li}^+, \text{Be}^{2+}$).</p>
+
+    <div class="concept-box">
+        <span class="box-label">Three Crucial Exceptions to the Octet Rule (Always Tested in BEST MCQs!)</span>
+        <ul>
+            <li><strong>1. Incomplete Octet (Electron-Deficient / Hypovalent):</strong> Central atom has fewer than $8$
+                valence electrons — e.g., $\text{BeCl}_2$ ($4e^-$ around $\text{Be}$), $\text{BF}_3$ and $\text{AlCl}_3$
+                ($6e^-$ around $\text{B}/\text{Al}$). These act as strong <strong>Lewis acids</strong> (electron-pair
+                acceptors).</li>
+            <li><strong>2. Expanded Octet (Hypervalent):</strong> Period 3 and heavier non-metals use vacant
+                $d$-orbitals to hold more than $8$ electrons — e.g., $\text{PCl}_5$ ($10e^-$), $\text{SF}_6$ ($12e^-$),
+                $\text{IF}_7$ ($14e^-$), $\text{H}_2\text{SO}_4$ ($12e^-$ on S). <em>(Note: Period 2 elements like
+                    $\text{C}, \text{N}, \text{O}, \text{F}$ NEVER exceed $8$ electrons because they lack $2d$
+                    orbitals—hence $\text{NCl}_5$ and $\text{OF}_6$ do not exist!)</em></li>
+            <li><strong>3. Odd-Electron Molecules:</strong> Contain an odd total number of valence electrons and remain
+                paramagnetic — e.g., $\text{NO}$ ($11$ valence $e^-$), $\text{NO}_2$ ($17$ valence $e^-$),
+                $\text{ClO}_2$ ($19$ valence $e^-$).</li>
+        </ul>
+    </div>
+
+    <h3>Comparison of Ionic, Covalent &amp; Coordinate (Dative) Bonds</h3>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Ionic (Electrovalent) Bond</th>
+                <th>Covalent Bond</th>
+                <th>Coordinate (Dative) Bond</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Formation Mechanism</strong></td>
+                <td>Complete electron transfer from low-IE metal to high-EA non-metal ($\Delta\text{EN} \gtrsim 1.9$).
+                </td>
+                <td>Equal mutual sharing of $1, 2,$ or $3$ electron pairs between non-metals.</td>
+                <td>Unequal donation of ONE shared lone pair by a donor (Lewis base) to an acceptor (Lewis acid): $A
+                    \rightarrow B$.</td>
+            </tr>
+            <tr>
+                <td><strong>Directionality &amp; Structure</strong></td>
+                <td><strong>Non-directional</strong> electrostatic attraction forming a giant 3D crystal lattice (no
+                    discrete molecules).</td>
+                <td><strong>Directional</strong> orbital overlap forming discrete molecules (exhibits 3D shapes &amp;
+                    isomerism).</td>
+                <td><strong>Directional</strong>. Once formed, chemically indistinguishable from an ordinary covalent
+                    bond!</td>
+            </tr>
+            <tr>
+                <td><strong>Key Energy / Bond Metrics</strong></td>
+                <td><strong>Lattice Energy</strong> $U \propto \frac{|q_1 q_2|}{r_+ + r_-}$. Higher $U \implies$ higher
+                    MP/BP (e.g., $\text{MgO} \gg \text{NaCl}$).</td>
+                <td>Single $= 1\sigma$; Double $= 1\sigma + 1\pi$; Triple $= 1\sigma + 2\pi$. Bond strength:
+                    $\text{Triple} \gt \text{Double} \gt \text{Single}$.</td>
+                <td>Present in $\text{NH}_4^+$, $\text{H}_3\text{O}^+$, $\text{O}_3$, $\text{CO}$,
+                    $\text{H}_3\text{N}\rightarrow\text{BF}_3$, $\text{SO}_3$.</td>
+            </tr>
+            <tr>
+                <td><strong>Electrical Conductivity</strong></td>
+                <td><strong>Solid: Insulator</strong> (ions rigidly locked). <strong>Molten / Aqueous: Strong
+                        conductor</strong> (mobile ions).</td>
+                <td>Generally poor conductors (except graphite &amp; polar acids like $\text{HCl}$ in water).</td>
+                <td>Compounds with ALL 3 bond types: $\text{NH}_4\text{Cl}$, $\text{CuSO}_4 \cdot 5\text{H}_2\text{O}$,
+                    $\text{K}_4[\text{Fe}(\text{CN})_6]$.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <span class="box-label">Sigma ($\sigma$) vs. Pi ($\pi$) Bonds &amp; Formal Charge Formula</span>
+        <p><strong>1. $\sigma$ vs. $\pi$ Bonds:</strong> A <strong>$\sigma$-bond</strong> forms by head-on (axial)
+            orbital overlap ($s\text{–}s, s\text{–}p, p\text{–}p$), is stronger, exists independently, and permits free
+            rotation. A <strong>$\pi$-bond</strong> forms by sideways (lateral) $p\text{–}p$ overlap, is weaker, forms
+            ONLY alongside a $\sigma$-bond, and locks rotation. <em>Quick Count:</em> Every single bond $= 1\sigma$;
+            double bond $= 1\sigma + 1\pi$; triple bond $= 1\sigma + 2\pi$.</p>
+        <p><strong>2. Formal Charge ($\text{FC}$):</strong> Bookkeeping charge assigned to an atom in a Lewis structure
+            assuming equal sharing of bonding electrons:</p>
+        $$\boxed{\text{FC} = V - L - \frac{B}{2} = (\text{Valence } e^-\text{ in free atom}) - (\text{Unshared lone-pair
+        } e^-) - (\text{Number of covalent bonds})}$$
+        <p><strong>Sanity Check:</strong> The algebraic sum of formal charges over all atoms MUST equal the net charge
+            of the molecule ($0$) or polyatomic ion. Preferred resonance/Lewis structures minimize $|\text{FC}|$ and
+            place any negative formal charge on the most electronegative atom.</p>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Fajan's Rules (Covalent Character in Ionic Bonds)</span>
+        <p>No ionic bond is $100\%$ ionic. When a cation approaches an anion, it attracts and distorts
+            (<strong>polarizes</strong>) the anion's electron cloud toward itself, pulling electron density into the
+            internuclear region—inducing <strong>partial covalent character</strong>. By Fajan's Rules, covalent
+            character increases when:</p>
+        <ol>
+            <li><strong>Smaller Cation Size:</strong> Higher surface charge density $\implies$ stronger polarizing power
+                ($\text{LiCl} \gt \text{NaCl} \gt \text{KCl} \gt \text{RbCl}$).</li>
+            <li><strong>Higher Charge on Cation or Anion:</strong> Polarizing power $\propto q/r$ ($\text{AlCl}_3 \gt
+                \text{MgCl}_2 \gt \text{NaCl}$; $\text{SnCl}_4$ is a volatile covalent liquid while $\text{SnCl}_2$ is
+                an ionic solid!).</li>
+            <li><strong>Larger Anion Size:</strong> Outer valence electrons are loosely held and easily distorted
+                ($\text{LiI} \gt \text{LiBr} \gt \text{LiCl} \gt \text{LiF}$).</li>
+            <li><strong>Pseudo-Noble-Gas Configuration ($18e^-$ outer shell):</strong> Cations with $ns^2 np^6 nd^{10}$
+                shells (like $\text{Cu}^+, \text{Ag}^+, \text{Zn}^{2+}, \text{Cd}^{2+}$) have poorly shielding
+                $d$-electrons and polarize anions far more strongly than $8e^-$ noble-gas cations of similar radius
+                ($\text{Na}^+, \text{Ca}^{2+}$). Thus $\text{CuCl}$ (MP $426^\circ\text{C}$, insoluble in water) is far
+                more covalent than $\text{NaCl}$ (MP $801^\circ\text{C}$).</li>
+        </ol>
+        <p><strong>Observable Consequences:</strong> Increasing covalent character generally <strong>lowers melting
+                point</strong>, reduces solubility in polar water, and increases solubility in non-polar organic
+            solvents (e.g., $\text{LiCl}$ dissolves in acetone/ethanol whereas $\text{NaCl}$ does not).</p>
+    </div>
+
+    <h3>VSEPR Theory, 3D Molecular Shapes &amp; Dipole Moment (Polarity)</h3>
+    <p>Under <strong>VSEPR (Valence Shell Electron Pair Repulsion) Theory</strong>, electron pairs around a central atom
+        arrange themselves in 3D space to minimize electrostatic repulsion, governed by the hierarchy:</p>
+    $$\boxed{\text{lone pair–lone pair (lp–lp)} \gt \text{lone pair–bond pair (lp–bp)} \gt \text{bond pair–bond pair
+    (bp–bp)}}$$
+    <p>To predict the shape of any main-group molecule or ion in 10 seconds, calculate its <strong>Steric Number
+            ($\text{SN} = \text{bp} + \text{lp}$)</strong>:</p>
+    $$\text{SN} = \frac{1}{2}\left[V + M - C + A\right]$$
+    <p>where $V =$ valence electrons of central atom, $M =$ number of monovalent atoms attached ($\text{H, F, Cl, Br,
+        I}$ — do NOT count divalent $\text{O}$ or $\text{S}$ in $M$!), $C =$ positive charge on cation, and $A =$
+        negative charge on anion. Then $\text{lp} = \text{SN} - (\text{total atoms bonded to central atom})$.</p>
+
+    <!-- SVG DIAGRAM 4: BONDING & VSEPR GEOMETRY CARDS -->
+    <div class="diagram-box">
+        <svg viewBox="0 0 820 390" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Bonding Types in NH4Cl and VSEPR 3D Molecular Geometry and Polarity Reference Cards">
+            <defs>
+                <marker id="arr-dip" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5"
+                    orient="auto">
+                    <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#dc2626" />
+                </marker>
+                <marker id="arr-coord" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#7c3aed" />
+                </marker>
+            </defs>
+
+            <rect x="4" y="4" width="812" height="382" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="410" y="30" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="15.5" font-weight="700" fill="#0f172a">BONDING TYPES (NH₄Cl) &amp; VSEPR 3D SHAPES +
+                MOLECULAR POLARITY</text>
+
+            <!-- TOP STRIP: ALL 3 BONDS IN NH4Cl -->
+            <rect x="20" y="44" width="780" height="86" rx="8" fill="#ffffff" stroke="#1e3a5f" stroke-width="1.6" />
+            <text x="40" y="66" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800"
+                fill="#1e3a5f">ALL 3 BOND TYPES IN ONE COMPOUND: NH₄Cl</text>
+            <!-- NH4+ drawing -->
+            <text x="150" y="100" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15"
+                font-weight="800" fill="#0f172a">N</text>
+            <!-- Left, Bottom, Right Covalent H -->
+            <line x1="138" y1="95" x2="108" y2="95" stroke="#0f766e" stroke-width="2.2" />
+            <text x="96" y="100" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="700" fill="#0f766e">H</text>
+            <line x1="162" y1="95" x2="192" y2="95" stroke="#0f766e" stroke-width="2.2" />
+            <text x="204" y="100" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13"
+                font-weight="700" fill="#0f766e">H</text>
+            <line x1="150" y1="104" x2="150" y2="117" stroke="#0f766e" stroke-width="2.2" />
+            <text x="150" y="127" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="700" fill="#0f766e">H</text>
+            <!-- Top Coordinate bond N -> H -->
+            <line x1="150" y1="84" x2="150" y2="68" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#arr-coord)" />
+            <text x="150" y="62" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="12.5" font-weight="800" fill="#7c3aed">H</text>
+            <!-- Brackets around NH4+ -->
+            <path d="M 84 56 L 76 56 L 76 124 L 84 124" fill="none" stroke="#1e3a5f" stroke-width="1.8" />
+            <path d="M 216 56 L 224 56 L 224 124 L 216 124" fill="none" stroke="#1e3a5f" stroke-width="1.8" />
+            <text x="234" y="68" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800"
+                fill="#b91c1c">+</text>
+
+            <!-- Ionic attraction to Cl- -->
+            <line x1="248" y1="92" x2="306" y2="92" stroke="#b91c1c" stroke-width="2" stroke-dasharray="4,3" />
+            <text x="277" y="84" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                font-weight="700" fill="#b91c1c">Ionic</text>
+            <circle cx="332" cy="92" r="20" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.8" />
+            <text x="332" y="97" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14"
+                font-weight="800" fill="#991b1b">Cl⁻</text>
+
+            <!-- Right Side Labels for NH4Cl -->
+            <text x="390" y="72" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700"
+                fill="#b91c1c">&bull; Ionic Bond: Electrostatic attraction between NH₄⁺ and Cl⁻</text>
+            <text x="390" y="94" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700"
+                fill="#0f766e">&bull; Covalent Bonds (3): Mutual N&ndash;H sharing inside NH₄⁺</text>
+            <text x="390" y="116" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700"
+                fill="#7c3aed">&bull; Coordinate Bond (1): Lone pair donated N &rarr; H⁺ (all 4 bonds become
+                identical!)</text>
+
+            <!-- BOTTOM 5 VSEPR CARDS (Width 148 each, gap 10, start x=20) -->
+            <!-- CARD 1: LINEAR CO2 -->
+            <rect x="20" y="146" width="148" height="224" rx="8" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6" />
+            <text x="94" y="168" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="800" fill="#1e3a8a">LINEAR (SN=2)</text>
+            <text x="94" y="184" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#475569">2 bp, 0 lp &bull; 180°</text>
+            <!-- O=C=O -->
+            <circle cx="94" cy="242" r="14" fill="#334155" />
+            <text x="94" y="247" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="800" fill="#ffffff">C</text>
+            <circle cx="42" cy="242" r="12" fill="#ef4444" />
+            <text x="42" y="246" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="800" fill="#ffffff">O</text>
+            <circle cx="146" cy="242" r="12" fill="#ef4444" />
+            <text x="146" y="246" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="800" fill="#ffffff">O</text>
+            <line x1="55" y1="239" x2="79" y2="239" stroke="#0f172a" stroke-width="2" />
+            <line x1="55" y1="245" x2="79" y2="245" stroke="#0f172a" stroke-width="2" />
+            <line x1="109" y1="239" x2="133" y2="239" stroke="#0f172a" stroke-width="2" />
+            <line x1="109" y1="245" x2="133" y2="245" stroke="#0f172a" stroke-width="2" />
+            <!-- Opposing dipoles -->
+            <line x1="82" y1="218" x2="50" y2="218" stroke="#dc2626" stroke-width="1.8" marker-end="url(#arr-dip)" />
+            <line x1="106" y1="218" x2="138" y2="218" stroke="#dc2626" stroke-width="1.8" marker-end="url(#arr-dip)" />
+            <text x="94" y="290" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="700" fill="#0f172a">CO₂, BeCl₂, C₂H₂</text>
+            <rect x="32" y="306" width="124" height="48" rx="6" fill="#ecfdf5" stroke="#059669" />
+            <text x="94" y="325" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="800" fill="#065f46">&mu; = 0 (Non-Polar)</text>
+            <text x="94" y="343" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                fill="#047857">Bond dipoles cancel!</text>
+
+            <!-- CARD 2: TRIGONAL PLANAR BF3 -->
+            <rect x="178" y="146" width="148" height="224" rx="8" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6" />
+            <text x="252" y="168" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="800" fill="#1e3a8a">TRIG. PLANAR (SN=3)</text>
+            <text x="252" y="184" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#475569">3 bp, 0 lp &bull; 120°</text>
+            <line x1="252" y1="244" x2="252" y2="206" stroke="#0f172a" stroke-width="2.2" />
+            <line x1="252" y1="244" x2="216" y2="266" stroke="#0f172a" stroke-width="2.2" />
+            <line x1="252" y1="244" x2="288" y2="266" stroke="#0f172a" stroke-width="2.2" />
+            <circle cx="252" cy="244" r="13" fill="#d97706" />
+            <text x="252" y="248" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="800" fill="#ffffff">B</text>
+            <circle cx="252" cy="204" r="11" fill="#16a34a" />
+            <text x="252" y="208" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" font-weight="800" fill="#ffffff">F</text>
+            <circle cx="216" cy="266" r="11" fill="#16a34a" />
+            <text x="216" y="270" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" font-weight="800" fill="#ffffff">F</text>
+            <circle cx="288" cy="266" r="11" fill="#16a34a" />
+            <text x="288" y="270" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" font-weight="800" fill="#ffffff">F</text>
+            <text x="252" y="294" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="700" fill="#0f172a">BF₃, SO₃, CO₃²⁻</text>
+            <rect x="190" y="306" width="124" height="48" rx="6" fill="#ecfdf5" stroke="#059669" />
+            <text x="252" y="325" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="800" fill="#065f46">&mu; = 0 (Non-Polar)</text>
+            <text x="252" y="343" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                fill="#047857">Symmetric 120° triad</text>
+
+            <!-- CARD 3: TETRAHEDRAL CH4 / CCl4 -->
+            <rect x="336" y="146" width="148" height="224" rx="8" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6" />
+            <text x="410" y="168" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="800" fill="#1e3a8a">TETRAHEDRAL (SN=4)</text>
+            <text x="410" y="184" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#475569">4 bp, 0 lp &bull; 109.5°</text>
+            <line x1="410" y1="242" x2="410" y2="204" stroke="#0f172a" stroke-width="2.2" />
+            <line x1="410" y1="242" x2="374" y2="262" stroke="#0f172a" stroke-width="2.2" />
+            <line x1="410" y1="242" x2="444" y2="254" stroke="#0f172a" stroke-width="2" stroke-dasharray="3,2" />
+            <polygon points="410,242 426,272 434,266" fill="#0f172a" />
+            <circle cx="410" cy="242" r="13" fill="#334155" />
+            <text x="410" y="246" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="800" fill="#ffffff">C</text>
+            <circle cx="410" cy="204" r="10" fill="#0284c7" />
+            <text x="410" y="208" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="9.5" font-weight="800" fill="#ffffff">Cl</text>
+            <circle cx="372" cy="264" r="10" fill="#0284c7" />
+            <text x="372" y="268" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="9.5" font-weight="800" fill="#ffffff">Cl</text>
+            <circle cx="448" cy="254" r="9.5" fill="#0284c7" />
+            <text x="448" y="258" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9"
+                font-weight="800" fill="#ffffff">Cl</text>
+            <circle cx="430" cy="272" r="10.5" fill="#0284c7" />
+            <text x="430" y="276" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="9.5" font-weight="800" fill="#ffffff">Cl</text>
+            <text x="410" y="294" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="700" fill="#0f172a">CH₄, CCl₄, NH₄⁺</text>
+            <rect x="348" y="306" width="124" height="48" rx="6" fill="#ecfdf5" stroke="#059669" />
+            <text x="410" y="325" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="800" fill="#065f46">&mu; = 0 (Non-Polar)</text>
+            <text x="410" y="343" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                fill="#047857">3D vectors sum to 0</text>
+
+            <!-- CARD 4: TRIGONAL PYRAMIDAL NH3 -->
+            <rect x="494" y="146" width="148" height="224" rx="8" fill="#ffffff" stroke="#b91c1c" stroke-width="1.6" />
+            <text x="568" y="168" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="800" fill="#991b1b">PYRAMIDAL (SN=4)</text>
+            <text x="568" y="184" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#475569">3 bp, 1 lp &bull; 107°</text>
+            <!-- Lone pair lobe on top -->
+            <ellipse cx="568" cy="210" rx="12" ry="18" fill="#fef3c7" stroke="#d97706" stroke-width="1.4" />
+            <circle cx="564" cy="205" r="2.2" fill="#92400e" />
+            <circle cx="572" cy="205" r="2.2" fill="#92400e" />
+            <!-- Bonds -->
+            <line x1="568" y1="242" x2="534" y2="266" stroke="#0f172a" stroke-width="2.2" />
+            <line x1="568" y1="242" x2="568" y2="274" stroke="#0f172a" stroke-width="2.4" />
+            <line x1="568" y1="242" x2="602" y2="266" stroke="#0f172a" stroke-width="2" stroke-dasharray="3,2" />
+            <circle cx="568" cy="242" r="13" fill="#2563eb" />
+            <text x="568" y="246" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="800" fill="#ffffff">N</text>
+            <circle cx="534" cy="266" r="9.5" fill="#64748b" />
+            <text x="534" y="270" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="9.5" font-weight="800" fill="#ffffff">H</text>
+            <circle cx="568" cy="274" r="9.5" fill="#64748b" />
+            <text x="568" y="278" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="9.5" font-weight="800" fill="#ffffff">H</text>
+            <circle cx="602" cy="266" r="9.5" fill="#64748b" />
+            <text x="602" y="270" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="9.5" font-weight="800" fill="#ffffff">H</text>
+            <text x="568" y="296" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="700" fill="#0f172a">NH₃, H₃O⁺, PCl₃</text>
+            <rect x="506" y="306" width="124" height="48" rx="6" fill="#fef2f2" stroke="#dc2626" />
+            <text x="568" y="325" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="800" fill="#991b1b">&mu; &ne; 0 (Polar)</text>
+            <text x="568" y="343" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                fill="#b91c1c">1 lp shrinks 109.5&rarr;107°</text>
+
+            <!-- CARD 5: BENT / V-SHAPED H2O -->
+            <rect x="652" y="146" width="148" height="224" rx="8" fill="#ffffff" stroke="#b91c1c" stroke-width="1.6" />
+            <text x="726" y="168" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="800" fill="#991b1b">BENT / V (SN=4)</text>
+            <text x="726" y="184" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#475569">2 bp, 2 lp &bull; 104.5°</text>
+            <!-- Two lone pair lobes -->
+            <ellipse cx="708" cy="214" rx="10" ry="15" transform="rotate(-30 708 214)" fill="#fef3c7" stroke="#d97706"
+                stroke-width="1.4" />
+            <ellipse cx="744" cy="214" rx="10" ry="15" transform="rotate(30 744 214)" fill="#fef3c7" stroke="#d97706"
+                stroke-width="1.4" />
+            <circle cx="706" cy="209" r="2" fill="#92400e" />
+            <circle cx="711" cy="212" r="2" fill="#92400e" />
+            <circle cx="746" cy="209" r="2" fill="#92400e" />
+            <circle cx="741" cy="212" r="2" fill="#92400e" />
+            <!-- Bonds -->
+            <line x1="726" y1="242" x2="694" y2="270" stroke="#0f172a" stroke-width="2.4" />
+            <line x1="726" y1="242" x2="758" y2="270" stroke="#0f172a" stroke-width="2.4" />
+            <circle cx="726" cy="242" r="13" fill="#dc2626" />
+            <text x="726" y="246" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="800" fill="#ffffff">O</text>
+            <circle cx="694" cy="270" r="9.5" fill="#64748b" />
+            <text x="694" y="274" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="9.5" font-weight="800" fill="#ffffff">H</text>
+            <circle cx="758" cy="270" r="9.5" fill="#64748b" />
+            <text x="758" y="274" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="9.5" font-weight="800" fill="#ffffff">H</text>
+            <text x="726" y="296" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="700" fill="#0f172a">H₂O, H₂S, OF₂</text>
+            <rect x="664" y="306" width="124" height="48" rx="6" fill="#fef2f2" stroke="#dc2626" />
+            <text x="726" y="325" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="800" fill="#991b1b">&mu; &ne; 0 (Polar)</text>
+            <text x="726" y="343" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                fill="#b91c1c">2 lp shrink &rarr; 104.5°</text>
+        </svg>
+        <div class="diagram-caption">Figure 22.4: Top: $\text{NH}_4\text{Cl}$ uniquely displays ionic, covalent, and
+            coordinate bonds simultaneously. Bottom: VSEPR 3D shapes showing why symmetric zero-lone-pair molecules
+            ($\text{CO}_2, \text{BF}_3, \text{CCl}_4$) are non-polar ($\mu = 0$) despite having strongly polar
+            individual bonds.</div>
+    </div>
+
+    <!-- ==================== FORMULA VAULT ==================== -->
+    <div class="formula-vault">
+        <span class="box-label">Chapter 22 Formula Vault — High-Density Revision Sheet</span>
+        <ul>
+            <li><strong>Nuclear Counting ($^A_Z X^q$):</strong> $p = Z$, $n = A - Z$, $e^- = Z - q$ &nbsp;|&nbsp;
+                Isodiaphers share same $n - p = A - 2Z$</li>
+            <li><strong>Rutherford Nuclear Scaling:</strong> $R = R_0 A^{1/3}\ (R_0 \approx 1.3\text{ fm})$
+                &nbsp;|&nbsp; Closest Approach: $r_0 = \frac{2kZe^2}{\text{KE}_\alpha} \propto \frac{Z}{\text{KE}}$</li>
+            <li><strong>Bohr Quantization &amp; Radius:</strong> $mvr = \frac{nh}{2\pi}$ &nbsp;|&nbsp; $r_n = 0.529
+                \frac{n^2}{Z}\text{ Å}$</li>
+            <li><strong>Bohr Velocity &amp; Time Period:</strong> $v_n = 2.18 \times 10^6 \frac{Z}{n}\text{ m/s}$
+                &nbsp;|&nbsp; $T_n \propto \frac{n^3}{Z^2}$, $f_n \propto \frac{Z^2}{n^3}$</li>
+            <li><strong>Bohr Energy &amp; Virial Laws:</strong> $E_n = -13.6 \frac{Z^2}{n^2}\text{ eV}$ &nbsp;|&nbsp;
+                $TE = -KE = \frac{PE}{2}$ &nbsp;|&nbsp; $\text{IE} = +13.6 Z^2\text{ eV}$</li>
+            <li><strong>Hydrogen Spectrum (Rydberg):</strong> $\frac{1}{\lambda} = R_H Z^2 \left(\frac{1}{n_1^2} -
+                \frac{1}{n_2^2}\right)$ &nbsp;|&nbsp; Sample Max Lines ($n \rightarrow 1$): $\frac{n(n-1)}{2}$
+                &nbsp;|&nbsp; Single Atom Max Lines: $n - 1$</li>
+            <li><strong>Quantum Capacities:</strong> Orbitals in shell $= n^2$; Max $e^-$ in shell $= 2n^2$; Orbitals in
+                subshell $= 2l + 1$; Max $e^-$ in subshell $= 2(2l+1)$</li>
+            <li><strong>Exceptions ($Z \le 30$):</strong> $\text{Cr}(24) = [\text{Ar}]3d^5 4s^1$ ($6$ unpaired);
+                $\text{Cu}(29) = [\text{Ar}]3d^{10} 4s^1$ ($1$ unpaired) &nbsp;|&nbsp; Spin-only $\mu =
+                \sqrt{n(n+2)}\text{ BM}$</li>
+            <li><strong>Formal Charge &amp; Steric Number:</strong> $\text{FC} = V - L - \frac{B}{2}$ &nbsp;|&nbsp;
+                $\text{SN} = \frac{1}{2}[V + M - C + A] = \text{bp} + \text{lp}$</li>
+            <li><strong>Lattice Energy &amp; Fajan's Rules:</strong> $U \propto \frac{|q_1 q_2|}{r_+ + r_-}$
+                &nbsp;|&nbsp; Covalent character $\uparrow$ with small/high-charge/$18e^-$ cation + large anion</li>
+        </ul>
+    </div>
+
+    <!-- ==================== WORKED EXAMPLES ==================== -->
+    <h2 class="section-heading">22.6 Graded Worked Examples (Level 1 &rarr; Level 2 &rarr; Level 3)</h2>
+
+    <!-- LEVEL 1 BANNER -->
+    <div class="level-banner l1">
+        <span class="badge badge-l1">Level 1: Warmup</span>
+        <span>Foundational Mastery — Nuclear Species, Bohr Scaling Basics &amp; Electronic Configurations</span>
+    </div>
+
+    <!-- WE 1 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Nuclear &amp; Electronic Species</span>
+            <strong>Worked Example 1: Classifying Isobars, Isotones, Isoelectronic Species &amp; Isodiaphers</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Consider the following set of seven atomic/ionic species: $^{31}_{15}\text{P}^{3-}$,
+                $^{32}_{16}\text{S}^{2-}$, $^{40}_{18}\text{Ar}$, $^{39}_{19}\text{K}^+$, $^{40}_{20}\text{Ca}^{2+}$,
+                $^{238}_{92}\text{U}$, and $^{234}_{90}\text{Th}$.</p>
+            <p>(a) Tabulate protons ($p$), neutrons ($n$), and electrons ($e^-$) for the first five species. (b)
+                Identify from the full list: an isoelectronic series, a pair of isobars, two distinct pairs of isotones,
+                and a pair of isodiaphers.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Subatomic Particle Breakdown:</strong></p>
+            <ul>
+                <li>$^{31}_{15}\text{P}^{3-}$: $p = 15$, $n = 31 - 15 = 16$, $e^- = 15 + 3 = 18$.</li>
+                <li>$^{32}_{16}\text{S}^{2-}$: $p = 16$, $n = 32 - 16 = 16$, $e^- = 16 + 2 = 18$.</li>
+                <li>$^{40}_{18}\text{Ar}$: $p = 18$, $n = 40 - 18 = 22$, $e^- = 18$.</li>
+                <li>$^{39}_{19}\text{K}^+$: $p = 19$, $n = 39 - 19 = 20$, $e^- = 19 - 1 = 18$.</li>
+                <li>$^{40}_{20}\text{Ca}^{2+}$: $p = 20$, $n = 40 - 20 = 20$, $e^- = 20 - 2 = 18$.</li>
+            </ul>
+            <p><strong>Part (b) — Exact Classifications:</strong></p>
+            <ul>
+                <li><strong>Isoelectronic Series ($18e^-$ each):</strong> $\mathbf{\text{P}^{3-},\ \text{S}^{2-},\
+                    \text{Ar},\ \text{K}^+,\ \text{Ca}^{2+}}$.</li>
+                <li><strong>Isobars (same $A = 40$, different $Z$):</strong> $\mathbf{^{40}_{18}\text{Ar}\text{ and
+                    }^{40}_{20}\text{Ca}^{2+}}$.</li>
+                <li><strong>Isotones (same $n = A - Z$):</strong> Pair 1 ($n = 16$):
+                    $\mathbf{^{31}_{15}\text{P}^{3-}\text{ and }^{32}_{16}\text{S}^{2-}}$; Pair 2 ($n = 20$):
+                    $\mathbf{^{39}_{19}\text{K}^+\text{ and }^{40}_{20}\text{Ca}^{2+}}$.</li>
+                <li><strong>Isodiaphers (same $n - p = A - 2Z$):</strong> For $^{238}_{92}\text{U}$, $A - 2Z = 238 - 184
+                    = 54$; for $^{234}_{90}\text{Th}$, $A - 2Z = 234 - 180 = 54$. Thus
+                    $\mathbf{^{238}_{92}\text{U}\text{ and }^{234}_{90}\text{Th}}$ are isodiaphers (linked by one
+                    $\alpha$-decay!).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WE 2 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Bohr Scaling Laws</span>
+            <strong>Worked Example 2: Orbit Radius, Energy &amp; Ionization Energy of $\text{He}^+$</strong>
+        </div>
+        <div class="ex-problem">
+            <p>For the single-electron helium ion $\text{He}^+$ ($Z = 2$), calculate: (a) the radius of the 2nd Bohr
+                orbit (in $\text{Å}$), (b) the total energy of the electron in the 2nd orbit (in $\text{eV}$), and (c)
+                the ionization energy of $\text{He}^+$ from its ground state ($n = 1$).</p>
+        </div>
+        <div class="ex-solution">
+            <p>Because $\text{He}^+$ has exactly $1$ electron ($Z = 2$), Bohr's scaling equations apply rigorously:</p>
+            <p><strong>Part (a) — Radius of 2nd Orbit ($n = 2, Z = 2$):</strong></p>
+            $$r_2(\text{He}^+) = 0.529 \times \frac{n^2}{Z} = 0.529 \times \frac{2^2}{2} = 0.529 \times 2 =
+            \mathbf{1.058\text{ Å}}$$
+            <p><strong>Part (b) — Total Energy in 2nd Orbit ($n = 2, Z = 2$):</strong></p>
+            $$E_2(\text{He}^+) = -13.6 \times \frac{Z^2}{n^2} = -13.6 \times \frac{2^2}{2^2} = \mathbf{-13.6\text{
+            eV}}$$
+            <p><em>(Notice the exact degeneracy: the 2nd orbit of $\text{He}^+$ has the exact same energy as the 1st
+                    orbit of Hydrogen!)</em></p>
+            <p><strong>Part (c) — Ground-State Ionization Energy ($n = 1 \rightarrow \infty$):</strong></p>
+            $$E_1(\text{He}^+) = -13.6 \times \frac{2^2}{1^2} = -54.4\text{ eV}$$
+            $$\text{IE}(\text{He}^+) = E_\infty - E_1 = 0 - (-54.4) = \mathbf{+54.4\text{ eV}}$$
+        </div>
+    </div>
+
+    <!-- WE 3 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Electronic Configuration &amp; Cations</span>
+            <strong>Worked Example 3: Ground-State Exceptions ($\text{Cr}, \text{Cu}$) &amp; Transition-Metal Cations
+                ($\text{Fe}^{3+}, \text{Cu}^{2+}$)</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Write the exact condensed noble-gas electronic configurations and find the number of unpaired electrons
+                for: (a) $\text{Cr}\ (Z=24)$, (b) $\text{Cu}\ (Z=29)$, (c) $\text{Fe}^{3+}\ (Z=26)$, and (d)
+                $\text{Cu}^{2+}\ (Z=29)$.</p>
+        </div>
+        <div class="ex-solution">
+            <ul>
+                <li><strong>(a) $\text{Cr}\ (Z=24)$:</strong> Naive Aufbau predicts $[\text{Ar}]\,3d^4 4s^2$, but
+                    promoting one $4s$ electron achieves an exactly half-filled $3d^5$ subshell (high exchange energy +
+                    spherical symmetry):
+                    $$\text{Cr} = \mathbf{[\text{Ar}]\,3d^5 4s^1}$$
+                    By Hund's rule, all five $3d$ electrons are unpaired ($\uparrow\ \uparrow\ \uparrow\ \uparrow\
+                    \uparrow$) plus one $4s$ electron ($\uparrow$) $\implies$ <strong>$6$ unpaired electrons</strong>.
+                </li>
+                <li><strong>(b) $\text{Cu}\ (Z=29)$:</strong> Promoting one $4s$ electron achieves an exactly filled
+                    $3d^{10}$ subshell:
+                    $$\text{Cu} = \mathbf{[\text{Ar}]\,3d^{10} 4s^1}$$
+                    All $3d$ electrons are paired ($0$ unpaired), leaving only the single $4s^1$ electron $\implies$
+                    <strong>$1$ unpaired electron</strong>.
+                </li>
+                <li><strong>(c) $\text{Fe}^{3+}\ (Z=26)$:</strong> Neutral $\text{Fe} = [\text{Ar}]\,3d^6 4s^2$. Remove
+                    $3$ electrons starting from the <em>outermost</em> $4s$ shell first (two from $4s$, then one from
+                    $3d$):
+                    $$\text{Fe}^{3+} = \mathbf{[\text{Ar}]\,3d^5}$$
+                    All five $3d$ orbitals are singly occupied $\implies$ <strong>$5$ unpaired electrons</strong>.
+                </li>
+                <li><strong>(d) $\text{Cu}^{2+}\ (Z=29)$:</strong> From $\text{Cu} = [\text{Ar}]\,3d^{10} 4s^1$, remove
+                    the $4s^1$ electron first, then one $3d$ electron:
+                    $$\text{Cu}^{2+} = \mathbf{[\text{Ar}]\,3d^9}$$
+                    Four $3d$ orbitals are paired ($8e^-$) and one $3d$ orbital has a single electron $\implies$
+                    <strong>$1$ unpaired electron</strong>.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- LEVEL 2 BANNER -->
+    <div class="level-banner l2">
+        <span class="badge badge-l2">Level 2: Exam-Real</span>
+        <span>BEST Paper 2 Standard — Virial Energies &amp; Spectral Lines, $\sigma/\pi$ + Formal Charge, and Fajan's
+            Polarization</span>
+    </div>
+
+    <!-- WE 4 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Bohr Virial Law &amp; Line Counting</span>
+            <strong>Worked Example 4: Excited State of $\text{Li}^{2+}$ — Energy Breakdown &amp; Emission Lines</strong>
+        </div>
+        <div class="ex-problem">
+            <p>In a large sample of $\text{Li}^{2+}$ ions ($Z = 3$), all electrons are excited to a stationary orbit
+                where their total energy is $-13.6\text{ eV}$. (a) Find the principal quantum number $n$ of this orbit.
+                (b) Determine the kinetic energy ($KE$) and electrostatic potential energy ($PE$) of each electron in
+                this state. (c) When this sample returns to the ground state ($n = 1$), what is the maximum number of
+                distinct emission spectral lines observed, and how many end at $n_1 = 2$?</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Identify Orbit $n$:</strong></p>
+            $$E_n(\text{Li}^{2+}) = -13.6 \frac{Z^2}{n^2} = -13.6 \frac{3^2}{n^2} = -13.6\text{ eV}$$
+            $$\frac{9}{n^2} = 1 \implies n^2 = 9 \implies \mathbf{n = 3}$$
+            <p><strong>Part (b) — Kinetic &amp; Potential Energies (Virial Relations):</strong> Using $TE = -KE =
+                \frac{PE}{2}$:</p>
+            $$KE = -TE = -(-13.6) = \mathbf{+13.6\text{ eV}}$$
+            $$PE = 2 \times TE = 2(-13.6) = \mathbf{-27.2\text{ eV}}$$
+            <p><em>(Check: $KE + PE = +13.6 + (-27.2) = -13.6\text{ eV} = TE$ &check;)</em></p>
+            <p><strong>Part (c) — Maximum Emission Lines (Sample of Ions):</strong></p>
+            $$N_{\max} = \frac{n(n - 1)}{2} = \frac{3(3 - 1)}{2} = \mathbf{3\text{ lines}} \qquad (3 \rightarrow 2,\ 3
+            \rightarrow 1,\ 2 \rightarrow 1)$$
+            <p>Lines terminating at $n_1 = 2$ $= n - 2 = 3 - 2 = \mathbf{1\text{ line}}$ (namely $3 \rightarrow 2$).</p>
+        </div>
+    </div>
+
+    <!-- WE 5 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">$\sigma/\pi$ Bonds &amp; Formal Charge</span>
+            <strong>Worked Example 5: Counting $\sigma/\pi$ Bonds in Benzene &amp; Tetracyanoethylene + Ozone Formal
+                Charges</strong>
+        </div>
+        <div class="ex-problem">
+            <p><strong>(a)</strong> Count the exact number of $\sigma$ and $\pi$ bonds in (i) benzene
+                ($\text{C}_6\text{H}_6$) and (ii) tetracyanoethylene, $(\text{NC})_2\text{C}=\text{C}(\text{CN})_2$.</p>
+            <p><strong>(b)</strong> Using the Lewis structure $\text{O}_a = \text{O}_b \rightarrow \text{O}_c$ for ozone
+                ($\text{O}_3$), calculate the formal charge on each of the three oxygen atoms.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a)(i) — Benzene ($\text{C}_6\text{H}_6$):</strong></p>
+            <ul>
+                <li>Six $\text{C–H}$ single bonds $= 6\sigma$.</li>
+                <li>Ring backbone has three $\text{C–C}$ single bonds ($3\sigma$) and three alternating $\text{C=C}$
+                    double bonds ($3\sigma + 3\pi$).</li>
+                <li><strong>Total in Benzene:</strong> $(6 + 3 + 3)\sigma = \mathbf{12\sigma}$ and $\mathbf{3\pi}$
+                    bonds.</li>
+            </ul>
+            <p><strong>Part (a)(ii) — Tetracyanoethylene,
+                    $(\text{N}\equiv\text{C})_2\text{C}=\text{C}(\text{C}\equiv\text{N})_2$:</strong></p>
+            <ul>
+                <li>Central $\text{C=C}$ double bond: $1\sigma + 1\pi$.</li>
+                <li>Four $\text{C–C}$ single bonds connecting the central carbons to the four $-\text{CN}$ groups:
+                    $4\sigma$.</li>
+                <li>Four $-\text{C}\equiv\text{N}$ triple bonds (each is $1\sigma + 2\pi$): $4\sigma + 8\pi$.</li>
+                <li><strong>Total in $\text{C}_2(\text{CN})_4$:</strong> $(1 + 4 + 4)\sigma = \mathbf{9\sigma}$ and $(1
+                    + 8)\pi = \mathbf{9\pi}$ bonds!</li>
+            </ul>
+            <p><strong>Part (b) — Formal Charges in Ozone ($\text{O}_3$):</strong> Oxygen has $V = 6$ valence electrons;
+                apply $\text{FC} = V - L - \frac{B}{2}$:</p>
+            <ul>
+                <li><strong>Terminal $\text{O}_a$ (double-bonded, $2$ lone pairs $= 4e^-$):</strong>
+                    $\text{FC}(\text{O}_a) = 6 - 4 - \frac{4}{2} = \mathbf{0}$.</li>
+                <li><strong>Central $\text{O}_b$ ($3$ bonds $= 6$ bonding $e^-$, $1$ lone pair $= 2e^-$):</strong>
+                    $\text{FC}(\text{O}_b) = 6 - 2 - \frac{6}{2} = \mathbf{+1}$.</li>
+                <li><strong>Terminal $\text{O}_c$ (single/coordinate bond $= 2$ bonding $e^-$, $3$ lone pairs $=
+                        6e^-$):</strong> $\text{FC}(\text{O}_c) = 6 - 6 - \frac{2}{2} = \mathbf{-1}$.</li>
+            </ul>
+            <p><em>Check:</em> $0 + (+1) + (-1) = 0$ (matches neutral $\text{O}_3$ &check;).</p>
+        </div>
+    </div>
+
+    <!-- WE 6 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Fajan's Rules &amp; Lattice Properties</span>
+            <strong>Worked Example 6: Predicting Covalent Character &amp; Melting-Point Trends via Fajan's
+                Rules</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Apply Fajan's Rules to arrange each of the following sets in <strong>increasing order of covalent
+                    character</strong>, and justify which halide in pair (c) has the lower melting point:</p>
+            <p>(a) $\text{NaCl},\ \text{MgCl}_2,\ \text{AlCl}_3$ &nbsp;&nbsp;|&nbsp;&nbsp; (b) $\text{LiF},\
+                \text{LiCl},\ \text{LiBr},\ \text{LiI}$ &nbsp;&nbsp;|&nbsp;&nbsp; (c) $\text{NaCl}$ vs. $\text{CuCl}$
+                (given ionic radii $r(\text{Na}^+) \approx 0.95\text{ Å}$ and $r(\text{Cu}^+) \approx 0.96\text{ Å}$).
+            </p>
+        </div>
+        <div class="ex-solution">
+            <ul>
+                <li><strong>(a) Increasing Cation Charge &amp; Shrinking Radius:</strong> All three share the same
+                    $\text{Cl}^-$ anion. Across Period 3, cation charge increases ($+1 \rightarrow +2 \rightarrow +3$)
+                    while ionic radius shrinks ($r_{\text{Na}^+} \gt r_{\text{Mg}^{2+}} \gt r_{\text{Al}^{3+}}$). Hence
+                    polarizing power increases sharply:
+                    $$\mathbf{\text{NaCl} \lt \text{MgCl}_2 \lt \text{AlCl}_3}$$
+                </li>
+                <li><strong>(b) Increasing Anion Size (Polarizability):</strong> All four share the tiny $\text{Li}^+$
+                    cation. Down Group 17, anion size grows ($\text{F}^- \lt \text{Cl}^- \lt \text{Br}^- \lt
+                    \text{I}^-$), making the outer electron cloud progressively easier to distort:
+                    $$\mathbf{\text{LiF} \lt \text{LiCl} \lt \text{LiBr} \lt \text{LiI}}$$
+                </li>
+                <li><strong>(c) Pseudo-Noble-Gas Rule ($\text{NaCl}$ vs. $\text{CuCl}$):</strong> Both $\text{Na}^+$ and
+                    $\text{Cu}^+$ have $+1$ charge and nearly identical radii ($\sim 0.95\text{ Å}$). However,
+                    $\text{Na}^+$ has a stable $8e^-$ noble-gas shell ($2s^2 2p^6$), whereas $\text{Cu}^+$ has an
+                    $18e^-$ pseudo-noble-gas shell ($3s^2 3p^6 3d^{10}$). Because $3d$ electrons shield nuclear charge
+                    very poorly, $\text{Cu}^+$ exerts a much stronger polarizing pull on $\text{Cl}^-$. Therefore,
+                    <strong>$\text{CuCl}$ is far more covalent than $\text{NaCl}$</strong> and exhibits a much
+                    <strong>lower melting point</strong> ($\text{CuCl} \approx 426^\circ\text{C}$ vs. $\text{NaCl}
+                    \approx 801^\circ\text{C}$).
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- LEVEL 3 BANNER -->
+    <div class="level-banner l3">
+        <span class="badge badge-l3">Level 3: Rank-Booster</span>
+        <span>Resonance / NSEJS Olympiad Tier — Full First-Principles Derivation + 30-Second Exam Shortcuts</span>
+    </div>
+
+    <!-- WE 7 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Multi-Ion Spectral Ratio</span>
+            <strong>Worked Example 7: Wavelength Ratio Between Hydrogen Balmer &amp; $\text{He}^+$ Lyman Limit</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Calculate the exact ratio $\frac{\lambda_1}{\lambda_2}$, where $\lambda_1$ is the wavelength of the
+                <strong>first line of the Balmer series</strong> of the hydrogen atom ($\text{H}, Z=1$) and $\lambda_2$
+                is the wavelength of the <strong>series limit (shortest wavelength) of the Lyman series</strong> of
+                $\text{He}^+$ ($Z=2$).
+            </p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Method 1 — Full Rydberg Equation Derivation:</strong></p>
+            <ol>
+                <li><strong>First line of Balmer series of $\text{H}$:</strong> Balmer series ends at $n_1 = 2$; its
+                    first (lowest-energy, longest-$\lambda$) line originates from $n_2 = 3$ with $Z = 1$:
+                    $$\frac{1}{\lambda_1} = R_H (1)^2 \left(\frac{1}{2^2} - \frac{1}{3^2}\right) = R_H \left(\frac{1}{4}
+                    - \frac{1}{9}\right) = \frac{5 R_H}{36} \implies \lambda_1 = \frac{36}{5 R_H}$$
+                </li>
+                <li><strong>Series limit of Lyman series of $\text{He}^+$:</strong> Lyman series ends at $n_1 = 1$; its
+                    series limit (highest-energy, shortest-$\lambda$) line originates from $n_2 = \infty$ with $Z = 2$:
+                    $$\frac{1}{\lambda_2} = R_H (2)^2 \left(\frac{1}{1^2} - \frac{1}{\infty^2}\right) = 4 R_H (1 - 0) =
+                    4 R_H \implies \lambda_2 = \frac{1}{4 R_H}$$
+                </li>
+                <li><strong>Take the Exact Ratio:</strong>
+                    $$\frac{\lambda_1}{\lambda_2} = \frac{36 / (5 R_H)}{1 / (4 R_H)} = \frac{36 \times 4}{5} =
+                    \frac{144}{5} = \mathbf{28.8}$$
+                </li>
+            </ol>
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Olympiad Shortcut: Inverse Energy Proportionality ($\lambda \propto
+                    1/\Delta E$)</span>
+                <p>Never touch $R_H$ or $hc$ in ratio questions! Since $\lambda = \frac{hc}{\Delta E}$ and $\Delta E
+                    \propto Z^2 \left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)$:</p>
+                $$\frac{\lambda_1}{\lambda_2} = \frac{\Delta E_2}{\Delta E_1} = \frac{2^2 \left(1 - 0\right)}{1^2
+                \left(\frac{1}{4} - \frac{1}{9}\right)} = \frac{4}{5/36} = \frac{144}{5} = \mathbf{28.8}$$
+            </div>
+        </div>
+    </div>
+
+    <!-- WE 8 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Quantum Numbers Counting</span>
+            <strong>Worked Example 8: Exact Quantum-Number Electron Inventory in Ground-State Chromium ($Z =
+                24$)</strong>
+        </div>
+        <div class="ex-problem">
+            <p>In a neutral ground-state chromium atom ($\text{Cr}, Z = 24$), determine the exact number of electrons
+                satisfying each condition: (a) $l = 1$, (b) $m_l = 0$, (c) $n + l = 4$, and (d) the <em>maximum</em>
+                number of electrons simultaneously having $l = 2$ and $m_s = +\frac{1}{2}$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Method 1 — Full Subshell-by-Subshell Quantum Audit:</strong><br />
+                First write the <strong>true anomalous</strong> ground-state configuration of $\text{Cr}\ (Z=24)$:</p>
+            $$\text{Cr}\ (Z=24): \quad 1s^2\ 2s^2\ 2p^6\ 3s^2\ 3p^6\ 3d^5\ 4s^1$$
+            <ul>
+                <li><strong>(a) Electrons with $l = 1$ ($p$-subshells):</strong> Only $2p^6$ and $3p^6$ have $l = 1$.
+                    Total $= 6 + 6 = \mathbf{12\text{ electrons}}$.</li>
+                <li><strong>(b) Electrons with $m_l = 0$:</strong> Every $s$-subshell has $1$ orbital ($m_l = 0$); every
+                    $p$-subshell has $1$ orbital ($m_l = 0$) out of $\{-1, 0, +1\}$; every $d$-subshell has $1$ orbital
+                    ($m_l = 0$) out of $\{-2, -1, 0, +1, +2\}$.
+                    <ul>
+                        <li>Filled subshells ($1s^2, 2s^2, 2p^6, 3s^2, 3p^6$): $5$ subshells $\times 2e^-$ each $=
+                            10e^-$.</li>
+                        <li>Half-filled $3d^5$: By Hund's rule, each of the $5$ $d$-orbitals holds exactly $1$ electron,
+                            so the $m_l = 0$ orbital holds $1e^-$.</li>
+                        <li>Half-filled $4s^1$: Holds $1e^-$ with $m_l = 0$.</li>
+                    </ul>
+                    Total electrons with $m_l = 0$ $= 10 + 1 + 1 = \mathbf{12\text{ electrons}}$.
+                </li>
+                <li><strong>(c) Electrons with $n + l = 4$:</strong> Check $(n+l)$ for every occupied subshell: $1s(1),
+                    2s(2), 2p(3), 3s(3), \mathbf{3p(3+1=4)}, 3d(5), \mathbf{4s(4+0=4)}$.<br />
+                    Only $3p^6$ and $4s^1$ qualify! Total $= 6 + 1 = \mathbf{7\text{ electrons}}$. <em>(Trap: Using the
+                        naive $3d^4 4s^2$ configuration wrongly gives $6 + 2 = 8$!)</em></li>
+                <li><strong>(d) Maximum electrons with $l = 2$ AND $m_s = +\frac{1}{2}$:</strong> $l = 2$ corresponds
+                    exclusively to $3d^5$. By Hund's rule, all $5$ unpaired electrons in $3d^5$ have parallel
+                    spins—either all five are $+\frac{1}{2}$ or all five are $-\frac{1}{2}$. Thus the maximum count is
+                    $\mathbf{5\text{ electrons}}$.</li>
+            </ul>
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Olympiad Shortcut: The "$m_l = 0$ Subshell Rule"</span>
+                <p>Every completely filled subshell contributes <strong>$2$</strong> electrons with $m_l = 0$, and every
+                    exact half-filled subshell ($s^1, p^3, d^5, f^7$) contributes <strong>$1$</strong> electron with
+                    $m_l = 0$! In $\text{Cr}$: $5$ filled subshells ($1s, 2s, 2p, 3s, 3p$) + $2$ half-filled subshells
+                    ($3d^5, 4s^1$) $\implies 5(2) + 2(1) = \mathbf{12}$ in 5 seconds!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WE 9 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">VSEPR Angles &amp; Dipole Vectors</span>
+            <strong>Worked Example 9: Bond-Angle Ordering &amp; The $\text{NH}_3$ vs. $\text{NF}_3$ Dipole
+                Paradox</strong>
+        </div>
+        <div class="ex-problem">
+            <p><strong>(a)</strong> Use VSEPR Steric Numbers to determine the molecular shape and arrange $\text{CH}_4$,
+                $\text{NH}_4^+$, $\text{NH}_3$, and $\text{H}_2\text{O}$ in decreasing order of $\text{H–X–H}$ bond
+                angle.</p>
+            <p><strong>(b)</strong> Fluorine ($\text{EN} = 4.0$) is far more electronegative than hydrogen ($\text{EN} =
+                2.1$), yet $\text{NH}_3$ ($\mu = 1.47\text{ D}$) has a dipole moment more than $6\times$ larger than
+                $\text{NF}_3$ ($\mu = 0.23\text{ D}$). Explain this vectorially, and predict whether $\text{SF}_6$ and
+                $\text{SO}_2$ are polar or non-polar.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Steric Number &amp; Bond-Angle Compression:</strong></p>
+            <ul>
+                <li>$\text{CH}_4$: $\text{SN} = \frac{1}{2}(4 + 4) = 4$ ($4\text{ bp}, 0\text{ lp}$) &rarr; Regular
+                    Tetrahedral, $\mathbf{109.5^\circ}$.</li>
+                <li>$\text{NH}_4^+$: $\text{SN} = \frac{1}{2}(5 + 4 - 1) = 4$ ($4\text{ bp}, 0\text{ lp}$) &rarr;
+                    Regular Tetrahedral, $\mathbf{109.5^\circ}$.</li>
+                <li>$\text{NH}_3$: $\text{SN} = \frac{1}{2}(5 + 3) = 4$ ($3\text{ bp}, 1\text{ lp}$) &rarr; Trigonal
+                    Pyramidal; $1$ lone pair exerts extra $\text{lp–bp}$ repulsion, compressing angle to
+                    $\mathbf{107^\circ}$.</li>
+                <li>$\text{H}_2\text{O}$: $\text{SN} = \frac{1}{2}(6 + 2) = 4$ ($2\text{ bp}, 2\text{ lp}$) &rarr; Bent
+                    / V-shaped; $2$ lone pairs exert $\text{lp–lp} \gt \text{lp–bp}$ repulsion, compressing angle
+                    further to $\mathbf{104.5^\circ}$.</li>
+            </ul>
+            <p><strong>Decreasing Bond-Angle Order:</strong> $\mathbf{\text{CH}_4 = \text{NH}_4^+\ (109.5^\circ) \gt
+                \text{NH}_3\ (107^\circ) \gt \text{H}_2\text{O}\ (104.5^\circ)}$.</p>
+            <p><strong>Part (b) — Vector Resolution of $\text{NH}_3$ vs. $\text{NF}_3$ &amp; Polarity of $\text{SF}_6,
+                    \text{SO}_2$:</strong></p>
+            <ul>
+                <li>Both $\text{NH}_3$ and $\text{NF}_3$ are trigonal pyramidal with one lone pair on $\text{N}$
+                    pointing <em>upward</em> (giving an upward orbital dipole vector).</li>
+                <li>In <strong>$\text{NH}_3$</strong>, $\text{EN}(\text{N}) = 3.0 \gt \text{EN}(\text{H}) = 2.1$, so all
+                    three $\text{N–H}$ bond dipoles point <strong>upward toward $\text{N}$</strong>—reinforcing the
+                    upward lone-pair dipole (constructive addition $\implies \mu = 1.47\text{ D}$).</li>
+                <li>In <strong>$\text{NF}_3$</strong>, $\text{EN}(\text{F}) = 4.0 \gt \text{EN}(\text{N}) = 3.0$, so all
+                    three $\text{N–F}$ bond dipoles point <strong>downward toward $\text{F}$</strong>—opposing the
+                    upward lone-pair dipole (destructive cancellation $\implies \mu = 0.23\text{ D}$).</li>
+                <li><strong>$\text{SF}_6$:</strong> $\text{SN} = \frac{1}{2}(6 + 6) = 6$ ($6\text{ bp}, 0\text{ lp}$)
+                    &rarr; Symmetric Octahedral $\implies \mathbf{\mu = 0\text{ (Non-Polar)}}$.</li>
+                <li><strong>$\text{SO}_2$:</strong> $\text{SN} = \frac{1}{2}(6 + 0) = 3$ ($2\text{ bp}, 1\text{ lp}$;
+                    remember divalent $\text{O}$ contributes $0$ to $M$!) &rarr; Bent ($\sim 119^\circ$) $\implies
+                    \mathbf{\mu \neq 0\text{ (Polar)}}$.</li>
+            </ul>
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Olympiad Shortcut: The "Zero-Lone-Pair Symmetry Test"</span>
+                <p>Whenever a central atom has <strong>ZERO lone pairs ($\text{lp} = 0$)</strong> AND <strong>all
+                        attached atoms are identical</strong> (e.g., $\text{CO}_2, \text{BF}_3, \text{CH}_4,
+                    \text{CCl}_4, \text{PCl}_5, \text{SF}_6$), the 3D geometry is perfectly symmetric and $\mathbf{\mu =
+                    0}$ (Non-Polar) instantaneously—no vector math required! Conversely, $1$ lone pair ($\text{SO}_2,
+                    \text{NH}_3, \text{NF}_3$) ALWAYS breaks symmetry and gives $\mu \neq 0$ (Polar).</p>
+            </div>
+        </div>
+    </div>
+
+</article>

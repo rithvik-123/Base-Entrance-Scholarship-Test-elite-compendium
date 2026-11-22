@@ -1,0 +1,1441 @@
+<article data-volume="Volume 4: Chemistry (Paper 2)"
+    data-title="Chapter 21: Mole Concept, Stoichiometry, Eudiometry &amp; Concentration Terms — Part 1: Theory &amp; Worked Examples">
+
+    <!-- ==================== CHAPTER HERO ==================== -->
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 4: Chemistry (Paper 2) &bull; Chapter 21 &bull; Part 1 of 3 (Theory &amp;
+            Worked Examples)</div>
+        <h1>Mole Concept, Stoichiometry, Eudiometry &amp; Concentration Terms</h1>
+        <p>Quantitative chemistry is the mathematical backbone of Paper 2. While NCERT Class 10 introduces basic
+            chemical equations, the actual BEST exam routinely escalates into Resonance Foundation and NSEJS territory:
+            isotopic abundance, hydrated-salt atom counting, limiting-reagent purity/yield chains, POAC shortcuts,
+            eudiometric gas contractions, and molarity–molality–normality interconversions.</p>
+        <div class="tag-row">
+            <span class="meta-pill">Target Study Time: 7 Hours</span>
+            <span class="meta-pill">Weightage: Very High (Paper 2 Core)</span>
+            <span class="meta-pill">Level: Class 10 + Resonance / NSEJS Bridge</span>
+            <span class="meta-pill">Reference Constants: $N_A = 6.022 \times 10^{23}$, $V_{\text{STP}} = 22.4\text{
+                L/mol}$</span>
+        </div>
+    </header>
+
+    <div class="concept-box">
+        <span class="box-label">Standard Reference Data (Memorize for Speed &amp; Zero-Error Calculations)</span>
+        <p>Unless a problem explicitly states otherwise, use the following standard atomic masses (in $\text{u}$ or
+            $\text{g/mol}$) and gas constants throughout this chapter:</p>
+        <p>$\text{H} = 1$, $\text{He} = 4$, $\text{C} = 12$, $\text{N} = 14$, $\text{O} = 16$, $\text{Na} = 23$,
+            $\text{Mg} = 24$, $\text{Al} = 27$, $\text{P} = 31$, $\text{S} = 32$, $\text{Cl} = 35.5$, $\text{K} = 39$,
+            $\text{Ca} = 40$, $\text{Fe} = 56$, $\text{Cu} = 63.5$, $\text{Br} = 80$, $\text{Ag} = 108$, $\text{Ba} =
+            137$.</p>
+        <p><strong>STP Convention (Indian Competitive Exams / BEST):</strong> Standard Temperature $= 0^\circ\text{C} =
+            273.15\text{ K}$, Standard Pressure $= 1\text{ atm}$, Molar Volume of any ideal gas at STP $= 22.4\text{
+            L/mol} = 22{,}400\text{ mL/mol}$. <em>(Note: Modern IUPAC defines STP at $1\text{ bar}$ giving $22.7\text{
+                L/mol}$, but BEST/NSEJS/JEE-Foundation default to $22.4\text{ L/mol}$ unless $1\text{ bar}$ is
+                specified.)</em></p>
+    </div>
+
+    <!-- ==================== SECTION 1: LAWS OF CHEMICAL COMBINATION ==================== -->
+    <h2 class="section-heading">21.1 Laws of Chemical Combination &amp; Vapour Density</h2>
+
+    <p>Before the mole existed, quantitative chemistry rested on five empirical laws governing how matter combines by
+        mass and by gaseous volume. BEST Paper 2 tests both the exact statements and the subtle <strong>boundary
+            conditions / exceptions</strong> to each law.</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Law &amp; Scientist</th>
+                <th>Exact Quantitative Statement</th>
+                <th>Illustrative Verification</th>
+                <th>Olympiad Nuance / Exceptions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Law of Conservation of Mass</strong><br />(Lavoisier, 1789)</td>
+                <td>In a closed system undergoing a chemical or physical change, total mass of reactants equals total
+                    mass of products: $\sum m_{\text{reactants}} = \sum m_{\text{products}}$.</td>
+                <td>$\text{AgNO}_3(aq) + \text{NaCl}(aq) \rightarrow \text{AgCl}(s) + \text{NaNO}_3(aq)$ in a sealed
+                    Landolt tube shows zero mass change.</td>
+                <td>Strictly holds for chemical reactions where energy change $\Delta E$ corresponds to negligible
+                    $\Delta m = \Delta E/c^2$. Violated in <strong>nuclear reactions</strong> (mass defect converts to
+                    energy).</td>
+            </tr>
+            <tr>
+                <td><strong>Law of Definite (Constant) Proportions</strong><br />(Proust, 1799)</td>
+                <td>A pure chemical compound always contains the same elements combined in the exact same fixed ratio by
+                    mass, irrespective of its source or method of preparation.</td>
+                <td>Pure $\text{H}_2\text{O}$ (rain, ocean, or synthesized from $\text{H}_2 + \text{O}_2$) always
+                    contains $\text{H}:\text{O} = 2:16 = 1:8$ by mass.</td>
+                <td>Fails for (1) <strong>Isotopic variations</strong> (e.g., $\text{D}_2\text{O}$ has
+                    $\text{D}:\text{O} = 4:16 = 1:4$) and (2) <strong>Non-stoichiometric (Berthollide)
+                        compounds</strong> like w&uuml;stite ($\text{Fe}_{0.95}\text{O}$).</td>
+            </tr>
+            <tr>
+                <td><strong>Law of Multiple Proportions</strong><br />(Dalton, 1803)</td>
+                <td>When two elements A and B form more than one compound, the masses of B that combine with a <em>fixed
+                        mass</em> of A bear a simple whole-number ratio.</td>
+                <td>In $\text{N}_2\text{O}, \text{NO}, \text{N}_2\text{O}_3, \text{NO}_2, \text{N}_2\text{O}_5$, masses
+                    of $\text{O}$ combining with $28\text{ g}$ of $\text{N}$ are $16, 32, 48, 64, 80\text{ g}$ &rarr;
+                    ratio $1:2:3:4:5$.</td>
+                <td>Applies strictly to the <em>same two elements</em> with identical isotopic composition. Does not
+                    apply to non-stoichiometric solids.</td>
+            </tr>
+            <tr>
+                <td><strong>Law of Reciprocal Proportions</strong><br />(Richter, 1792)</td>
+                <td>The ratio of masses of two elements A and B which separately combine with a fixed mass of a third
+                    element C is either the same as, or a simple whole-number multiple of, the mass ratio in which A and
+                    B combine directly with each other.</td>
+                <td>With $12\text{ g C}$: $\text{CH}_4$ uses $4\text{ g H}$; $\text{CO}_2$ uses $32\text{ g O}$. Ratio
+                    $\text{H}:\text{O} = 4:32 = 1:8$. Directly in $\text{H}_2\text{O}$, $\text{H}:\text{O} = 2:16 = 1:8$
+                    (identical!).</td>
+                <td>Historical foundation for the <strong>Law of Chemical Equivalence</strong>: elements always combine
+                    in the ratio of their equivalent weights.</td>
+            </tr>
+            <tr>
+                <td><strong>Gay-Lussac's Law of Gaseous Volumes</strong><br />(Gay-Lussac, 1808)</td>
+                <td>At constant temperature and pressure, gases react and are produced in volumes that bear simple
+                    whole-number ratios to one another.</td>
+                <td>$1\text{ vol } \text{N}_2(g) + 3\text{ vol } \text{H}_2(g) \rightarrow 2\text{ vol }
+                    \text{NH}_3(g)$. Ratio $= 1:3:2$.</td>
+                <td>Applies <strong>ONLY to gases</strong>, never to solids or liquids. Volume is NOT conserved ($1 + 3
+                    = 4\text{ vol} \rightarrow 2\text{ vol}$).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <span class="box-label">Avogadro's Law &amp; First-Principles Derivation of Vapour Density ($M = 2 \times
+            \text{VD}$)</span>
+        <p><strong>Avogadro's Law (1811):</strong> Equal volumes of all ideal gases measured at the same temperature $T$
+            and pressure $P$ contain an equal number of <em>molecules</em> ($V \propto n$ at constant $T, P$). This
+            directly links Gay-Lussac's volume ratio to the stoichiometric mole ratio.</p>
+        <p><strong>Vapour Density ($\text{VD}$)</strong> of a gas is defined as the ratio of the mass of a certain
+            volume $V$ of the gas to the mass of an equal volume $V$ of hydrogen gas ($\text{H}_2$) measured under
+            identical $T$ and $P$:</p>
+        $$\text{VD} = \frac{\text{Mass of volume } V \text{ of gas}}{\text{Mass of volume } V \text{ of }
+        \text{H}_2\text{ at same } T, P}$$
+        <p>By Avogadro's Law, equal volumes at identical $T, P$ contain equal numbers of molecules (say $N$ molecules).
+            Therefore:</p>
+        $$\text{VD} = \frac{\text{Mass of } N \text{ molecules of gas}}{\text{Mass of } N \text{ molecules of }
+        \text{H}_2} = \frac{\text{Mass of } 1 \text{ molecule of gas}}{\text{Mass of } 1 \text{ molecule of }
+        \text{H}_2} = \frac{M_{\text{gas}}}{2} \implies \boxed{M_{\text{gas}} = 2 \times \text{VD}}$$
+        <p><strong>Relative Density (General Form):</strong> If density of gas A is given relative to gas B (instead of
+            $\text{H}_2$), then $d_{A/B} = \frac{M_A}{M_B}$. For a non-reacting gaseous mixture, the <strong>Average
+                Molar Mass</strong> is $M_{\text{avg}} = \frac{\sum n_i M_i}{\sum n_i} = \sum \chi_i M_i$, and
+            $\text{VD}_{\text{mix}} = \frac{M_{\text{avg}}}{2}$.</p>
+    </div>
+
+    <!-- ==================== SECTION 2: ATOMIC MASS & THE MOLE CONCEPT ==================== -->
+    <h2 class="section-heading">21.2 Atomic Mass, Isotopic Abundance &amp; The Master Mole Concept</h2>
+
+    <p>A single carbon-12 atom weighs $1.9926 \times 10^{-23}\text{ g}$—too tiny for any laboratory balance. Chemists
+        bridge the microscopic (atoms/molecules) and macroscopic (grams/litres) worlds using two tightly linked
+        definitions:</p>
+
+    <ul>
+        <li><strong>Unified Atomic Mass Unit ($1\text{ u}$ or $1\text{ amu}$):</strong> Exactly $\frac{1}{12}\text{th}$
+            the mass of one neutral $^{12}\text{C}$ atom. Numerically, $1\text{ u} = 1.6605 \times 10^{-24}\text{ g} =
+            \frac{1}{N_A}\text{ g}$.</li>
+        <li><strong>Average Atomic Mass (Isotopic Abundance):</strong> Most elements occur naturally as mixtures of
+            isotopes. If an element has isotopes with masses $A_1, A_2, \dots, A_k$ and fractional (or percentage)
+            abundances $f_1, f_2, \dots, f_k$, then:
+            $$A_{\text{avg}} = \frac{\sum (\%\text{ abundance}_i \times A_i)}{100} = \sum f_i A_i$$
+            <em>Example:</em> Chlorine consists of $75\%$ $^{35}\text{Cl}$ and $25\%$ $^{37}\text{Cl}$, giving
+            $A_{\text{avg}} = \frac{75(35) + 25(37)}{100} = 35.5\text{ u}$. Note that <strong>no single chlorine atom
+                weighs $35.5\text{ u}$</strong>—it is a weighted statistical average!
+        </li>
+        <li><strong>The Mole ($1\text{ mol}$):</strong> The SI unit of amount of substance containing exactly $N_A =
+            6.022 \times 10^{23}$ elementary entities (atoms, molecules, ions, electrons, or formula units).</li>
+    </ul>
+
+    <div class="trap-box">
+        <span class="box-label">Critical Terminology Trap: Atomic Mass vs. Gram-Atomic Mass (GAM)</span>
+        <p>Examiners deliberately exploit sloppy phrasing in MCQ statements:</p>
+        <ul>
+            <li><strong>Mass of $1$ atom of Oxygen</strong> $= 16\text{ u} = 16 \times 1.66 \times 10^{-24}\text{ g} =
+                2.66 \times 10^{-23}\text{ g}$.</li>
+            <li><strong>Gram-Atomic Mass (GAM) of Oxygen</strong> $= \text{mass of } 1\text{ mole of O atoms} = 16\text{
+                g}$.</li>
+            <li><strong>"$1\text{ gram-atom}$ of Oxygen"</strong> means <strong>$1\text{ mole}$ of O atoms</strong> ($=
+                16\text{ g}$), <em>NOT</em> $1\text{ g}$ of oxygen!</li>
+            <li><strong>"$1\text{ gram-molecule}$ of Oxygen ($\text{O}_2$)"</strong> means <strong>$1\text{ mole}$ of
+                    $\text{O}_2$ molecules</strong> ($= 32\text{ g} = 2\text{ gram-atoms}$ of O).</li>
+            <li><strong>Hydrated Salts Trap:</strong> $1\text{ mol}$ of washing soda ($\text{Na}_2\text{CO}_3 \cdot
+                10\text{H}_2\text{O}$, $M = 286\text{ g/mol}$) contains $2\text{ mol Na}$, $1\text{ mol C}$,
+                <strong>$13\text{ mol O}$</strong> ($3$ from carbonate $+ 10$ from water of crystallization!), $20\text{
+                mol H}$, and <strong>$36\text{ mol}$ total atoms</strong>. Forgetting the water's oxygen atoms is the #1
+                error on BEST hydrated-salt questions.
+            </li>
+        </ul>
+    </div>
+
+    <!-- SVG DIAGRAM 1: MASTER MOLE-CONVERSION WHEEL -->
+    <div class="diagram-box">
+        <svg viewBox="0 0 820 430" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Master Mole-Conversion Wheel connecting Moles to Mass, Particles, STP Gas Volume, and Solution Molarity">
+            <defs>
+                <marker id="arr-navy-1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#1e3a5f" />
+                </marker>
+                <marker id="arr-teal-1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#0f766e" />
+                </marker>
+            </defs>
+
+            <!-- Background Card -->
+            <rect x="4" y="4" width="812" height="422" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+
+            <!-- Title -->
+            <text x="410" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16"
+                font-weight="700" fill="#0f172a">MASTER MOLE-CONVERSION WHEEL (ALWAYS ROUTE THROUGH MOLES)</text>
+
+            <!-- Central Hub: MOLES -->
+            <circle cx="410" cy="222" r="64" fill="#1e3a5f" stroke="#0f172a" stroke-width="2.5" />
+            <text x="410" y="214" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18"
+                font-weight="800" fill="#ffffff">MOLES (n)</text>
+            <text x="410" y="236" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="600" fill="#bae6fd">Central Currency</text>
+            <text x="410" y="252" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" fill="#e0f2fe">of Stoichiometry</text>
+
+            <!-- TOP-LEFT NODE: MASS -->
+            <rect x="28" y="64" width="210" height="86" rx="10" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2" />
+            <text x="133" y="90" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14"
+                font-weight="700" fill="#1e3a8a">MASS (w, in grams)</text>
+            <text x="133" y="112" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                fill="#334155">Solids, Liquids &amp; Gases</text>
+            <text x="133" y="134" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="600" fill="#1d4ed8">n = w / M (Molar Mass)</text>
+
+            <!-- TOP-RIGHT NODE: PARTICLES -->
+            <rect x="582" y="64" width="210" height="86" rx="10" fill="#f0fdf4" stroke="#15803d" stroke-width="2" />
+            <text x="687" y="90" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14"
+                font-weight="700" fill="#14532d">PARTICLES (N)</text>
+            <text x="687" y="112" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                fill="#334155">Atoms, Molecules, Ions</text>
+            <text x="687" y="134" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="600" fill="#15803d">N_A = 6.022 × 10²³ mol⁻¹</text>
+
+            <!-- BOTTOM-LEFT NODE: STP GAS VOLUME -->
+            <rect x="28" y="302" width="210" height="86" rx="10" fill="#fffbeb" stroke="#b45309" stroke-width="2" />
+            <text x="133" y="328" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14"
+                font-weight="700" fill="#78350f">STP GAS VOLUME (V)</text>
+            <text x="133" y="350" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                fill="#334155">Ideal Gases ONLY (0°C, 1 atm)</text>
+            <text x="133" y="372" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="600" fill="#b45309">V_m = 22.4 L/mol</text>
+
+            <!-- BOTTOM-RIGHT NODE: SOLUTION MOLARITY -->
+            <rect x="582" y="302" width="210" height="86" rx="10" fill="#fdf2f8" stroke="#be185d" stroke-width="2" />
+            <text x="687" y="328" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14"
+                font-weight="700" fill="#831843">SOLUTION (M, V_L)</text>
+            <text x="687" y="350" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                fill="#334155">Aqueous / Liquid Solutions</text>
+            <text x="687" y="372" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="600" fill="#be185d">n = M × V(in Litres)</text>
+
+            <!-- Arrows: MASS <-> MOLES -->
+            <path d="M 244 128 Q 315 134 358 176" fill="none" stroke="#1e3a5f" stroke-width="2.2"
+                marker-end="url(#arr-navy-1)" />
+            <path d="M 346 196 Q 280 184 242 146" fill="none" stroke="#0f766e" stroke-width="2.2"
+                marker-end="url(#arr-teal-1)" />
+            <rect x="278" y="106" width="66" height="22" rx="4" fill="#ffffff" stroke="#cbd5e1" />
+            <text x="311" y="121" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#1e3a5f">&divide; M</text>
+            <rect x="246" y="176" width="66" height="22" rx="4" fill="#ffffff" stroke="#cbd5e1" />
+            <text x="279" y="191" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#0f766e">&times; M</text>
+
+            <!-- Arrows: PARTICLES <-> MOLES -->
+            <path d="M 576 128 Q 505 134 462 176" fill="none" stroke="#1e3a5f" stroke-width="2.2"
+                marker-end="url(#arr-navy-1)" />
+            <path d="M 474 196 Q 540 184 578 146" fill="none" stroke="#0f766e" stroke-width="2.2"
+                marker-end="url(#arr-teal-1)" />
+            <rect x="476" y="106" width="70" height="22" rx="4" fill="#ffffff" stroke="#cbd5e1" />
+            <text x="511" y="121" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#1e3a5f">&divide; N_A</text>
+            <rect x="506" y="176" width="70" height="22" rx="4" fill="#ffffff" stroke="#cbd5e1" />
+            <text x="541" y="191" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#0f766e">&times; N_A</text>
+
+            <!-- Arrows: STP VOLUME <-> MOLES -->
+            <path d="M 244 322 Q 312 316 358 268" fill="none" stroke="#1e3a5f" stroke-width="2.2"
+                marker-end="url(#arr-navy-1)" />
+            <path d="M 346 250 Q 280 264 242 304" fill="none" stroke="#0f766e" stroke-width="2.2"
+                marker-end="url(#arr-teal-1)" />
+            <rect x="242" y="252" width="78" height="22" rx="4" fill="#ffffff" stroke="#cbd5e1" />
+            <text x="281" y="267" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#0f766e">&times; 22.4 L</text>
+            <rect x="280" y="314" width="78" height="22" rx="4" fill="#ffffff" stroke="#cbd5e1" />
+            <text x="319" y="329" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#1e3a5f">&divide; 22.4 L</text>
+
+            <!-- Arrows: SOLUTION MOLARITY <-> MOLES -->
+            <path d="M 576 322 Q 508 316 462 268" fill="none" stroke="#1e3a5f" stroke-width="2.2"
+                marker-end="url(#arr-navy-1)" />
+            <path d="M 474 250 Q 540 264 578 304" fill="none" stroke="#0f766e" stroke-width="2.2"
+                marker-end="url(#arr-teal-1)" />
+            <rect x="502" y="252" width="78" height="22" rx="4" fill="#ffffff" stroke="#cbd5e1" />
+            <text x="541" y="267" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#0f766e">&divide; V_L (= M)</text>
+            <rect x="462" y="314" width="78" height="22" rx="4" fill="#ffffff" stroke="#cbd5e1" />
+            <text x="501" y="329" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#1e3a5f">M &times; V_L</text>
+
+            <!-- Sub-atom callout at top right -->
+            <rect x="305" y="46" width="210" height="26" rx="13" fill="#fef3c7" stroke="#d97706" stroke-width="1.2" />
+            <text x="410" y="63" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#92400e">Atoms = Moles &times; N_A &times; Atomicity</text>
+
+            <!-- Footer Warning -->
+            <text x="410" y="410" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="600" fill="#b91c1c">TRAP ALERT: Never apply 22.4 L/mol to liquids (e.g.,
+                H₂O at 0°C is ice/liquid, NOT a gas!) or solids.</text>
+        </svg>
+        <div class="diagram-caption">Figure 21.1: The Master Mole-Conversion Wheel. Dark navy arrows convert
+            macroscopic/microscopic data into moles; teal arrows convert moles back into target physical quantities.
+        </div>
+    </div>
+
+    <!-- ==================== SECTION 3: EMPIRICAL & MOLECULAR FORMULA ==================== -->
+    <h2 class="section-heading">21.3 Percentage Composition, Empirical Formula &amp; Minimum Molecular Mass</h2>
+
+    <p>The mass percentage of any element $X$ in a compound is strictly determined by its stoichiometry:</p>
+    $$\% \text{ of } X = \frac{(\text{Number of atoms of } X \text{ per formula unit}) \times (\text{Atomic mass of }
+    X)}{\text{Molar mass of compound}} \times 100$$
+
+    <div class="concept-box">
+        <span class="box-label">Algorithm for Empirical &amp; Molecular Formula Deduction</span>
+        <ol>
+            <li><strong>Assume $100\text{ g}$ sample:</strong> Percentage values directly become masses in grams
+                ($w_i$).</li>
+            <li><strong>Compute relative moles:</strong> Divide each element's mass by its atomic mass: $n_i = w_i /
+                A_i$.</li>
+            <li><strong>Find simplest molar ratio:</strong> Divide every $n_i$ by the <em>smallest</em> $n_{\min}$ in
+                the set.</li>
+            <li><strong>Clear fractions carefully:</strong> Never blindly round $1.5$ or $1.33$! Multiply ALL ratios by
+                an integer $k$:
+                <ul>
+                    <li>Decimal ends in $.50 \implies \times 2$</li>
+                    <li>Decimal ends in $.33$ or $.67 \implies \times 3$</li>
+                    <li>Decimal ends in $.25$ or $.75 \implies \times 4$</li>
+                    <li>Decimal ends in $.20, .40, .60, .80 \implies \times 5$</li>
+                </ul>
+            </li>
+            <li><strong>Scale to Molecular Formula:</strong> Calculate integer multiplier $n = \frac{\text{Molecular
+                Mass}}{\text{Empirical Formula Mass}}$, where Molecular Mass may be given directly or via $M = 2 \times
+                \text{VD}$. Then $\text{Molecular Formula} = (\text{Empirical Formula})_n$.</li>
+        </ol>
+    </div>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Minimum Molecular Mass of Biomolecules</span>
+        <p>In NSEJS and BEST Paper 2, you are often told a giant biomolecule (haemoglobin, insulin, chlorophyll,
+            peroxidase) contains a tiny mass percentage $p\%$ of a trace element $X$ (atomic mass $A_X$) and asked for
+            its <strong>minimum molecular mass</strong>.</p>
+        <p><strong>Derivation:</strong> A valid molecule cannot contain a fraction of an atom; it must contain at least
+            $k \ge 1$ atom of element $X$. Thus:</p>
+        $$p = \frac{k \cdot A_X}{M} \times 100 \implies M = \frac{k \cdot A_X \times 100}{p}$$
+        <p>Setting $k = 1$ gives the <strong>minimum possible molecular mass</strong>: $\boxed{M_{\min} = \frac{A_X
+            \times 100}{\% \text{ of } X}}$. Note that the <em>actual</em> molecular mass is an integer multiple $k
+            \cdot M_{\min}$ (for instance, haemoglobin has $0.335\%\text{ Fe} \implies M_{\min} \approx 16{,}700\text{
+            u}$, while actual haemoglobin has $k = 4\text{ Fe}$ atoms giving $M \approx 66{,}800\text{ u}$).</p>
+    </div>
+
+    <!-- ==================== SECTION 4: STOICHIOMETRY, LIMITING REAGENT & POAC ==================== -->
+    <h2 class="section-heading">21.4 Stoichiometry, Limiting Reagent, Purity/Yield &amp; POAC</h2>
+
+    <p>Consider a general balanced chemical equation:</p>
+    $$a\text{A} + b\text{B} \rightarrow c\text{C} + d\text{D}$$
+    <p>The fundamental law of stoichiometric equivalence states that the <strong>moles reacted or formed divided by
+            their respective stoichiometric coefficients are all equal</strong>:</p>
+    $$\frac{n_{\text{A, reacted}}}{a} = \frac{n_{\text{B, reacted}}}{b} = \frac{n_{\text{C, formed}}}{c} =
+    \frac{n_{\text{D, formed}}}{d} = \xi \quad (\text{extent of reaction})$$
+
+    <div class="concept-box">
+        <span class="box-label">Exact Limiting Reagent (LR) Test — Never Eyeball by Mass or Raw Moles!</span>
+        <p>When quantities of <em>two or more</em> reactants are given simultaneously, one reactant runs out first and
+            halts the reaction. This reactant is the <strong>Limiting Reagent (LR)</strong>; all product yields MUST be
+            calculated strictly from the LR.</p>
+        <ol>
+            <li>Convert every given reactant quantity into <strong>moles</strong> ($n_{\text{A}}, n_{\text{B}}$).</li>
+            <li>Compute the <strong>Stoichiometric Ratio</strong> for each reactant: $R_i = \frac{n_{i,\text{
+                available}}}{\nu_i}$ (where $\nu_i$ is its balanced coefficient).</li>
+            <li>The reactant with the <strong>smallest value of $R_i$</strong> is the Limiting Reagent! That minimum
+                value $R_{\min}$ equals the extent of reaction $\xi$.</li>
+            <li><strong>Instant Quantities:</strong>
+                <ul>
+                    <li>Moles of any product $P$ formed $= \nu_P \times R_{\min}$.</li>
+                    <li>Moles of any excess reactant $E$ consumed $= \nu_E \times R_{\min}$.</li>
+                    <li>Moles of excess reactant $E$ left unreacted $= n_{E,\text{ available}} - \nu_E R_{\min}$.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <!-- SVG DIAGRAM 2: LIMITING REAGENT VISUAL STOICHIOMETRY BAR -->
+    <div class="diagram-box">
+        <svg viewBox="0 0 820 330" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Limiting Reagent Visual Stoichiometry Bar for N2 + 3H2 -> 2NH3">
+            <rect x="4" y="4" width="812" height="322" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="410" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="15.5" font-weight="700" fill="#0f172a">LIMITING REAGENT VISUALIZER: N₂(g) + 3H₂(g) &rarr;
+                2NH₃(g)</text>
+            <text x="410" y="55" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                fill="#475569">Given: 2.0 mol N₂ (56 g) + 4.5 mol H₂ (9 g) &nbsp;|&nbsp; Ratios: R(N₂) = 2.0/1 = 2.0
+                &nbsp;vs.&nbsp; R(H₂) = 4.5/3 = 1.5 (MIN &rarr; LR!)</text>
+
+            <!-- Left Axis Labels -->
+            <text x="26" y="106" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700"
+                fill="#1e3a8a">N₂ (coeff = 1)</text>
+            <text x="26" y="123" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">Excess
+                Reagent</text>
+
+            <text x="26" y="182" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700"
+                fill="#b91c1c">H₂ (coeff = 3)</text>
+            <text x="26" y="199" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600"
+                fill="#dc2626">LIMITING REAGENT</text>
+
+            <text x="26" y="258" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700"
+                fill="#0f766e">NH₃ (coeff = 2)</text>
+            <text x="26" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#64748b">Product Formed</text>
+
+            <!-- Scale Guide: 1.0 unit of R = 240px starting at x=165. So R=1.5 is x=165+360=525. R=2.0 is x=165+480=645 -->
+            <!-- Vertical Cutoff Line at R_min = 1.5 -->
+            <line x1="525" y1="74" x2="525" y2="294" stroke="#b91c1c" stroke-width="2.2" stroke-dasharray="6,4" />
+            <rect x="448" y="66" width="154" height="22" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="1" />
+            <text x="525" y="81" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#991b1b">Reaction Stops at R = 1.5</text>
+
+            <!-- N2 Bar: Consumed (1.5 mol) + Leftover (0.5 mol) -->
+            <rect x="165" y="92" width="360" height="36" rx="4" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5" />
+            <text x="345" y="115" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="12.5" font-weight="700" fill="#ffffff">Consumed: 1.5 &times; 1 = 1.5 mol N₂ (42 g)</text>
+
+            <rect x="525" y="92" width="120" height="36" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"
+                stroke-dasharray="4,2" />
+            <text x="585" y="108" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#1e40af">Leftover</text>
+            <text x="585" y="122" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="600" fill="#1e40af">0.5 mol (14 g)</text>
+
+            <!-- H2 Bar: Consumed (4.5 mol = 1.5 * 3), 0 leftover -->
+            <rect x="165" y="168" width="360" height="36" rx="4" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5" />
+            <text x="345" y="191" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="12.5" font-weight="700" fill="#ffffff">100% Consumed: 1.5 &times; 3 = 4.5 mol H₂ (9 g)</text>
+
+            <rect x="538" y="173" width="142" height="26" rx="4" fill="#fef2f2" stroke="#fca5a5" />
+            <text x="609" y="190" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="700" fill="#991b1b">0.0 mol remaining!</text>
+
+            <!-- NH3 Bar: Formed (3.0 mol = 1.5 * 2) -->
+            <rect x="165" y="244" width="360" height="36" rx="4" fill="#14b8a6" stroke="#0f766e" stroke-width="1.5" />
+            <text x="345" y="267" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="12.5" font-weight="700" fill="#ffffff">Formed: 1.5 &times; 2 = 3.0 mol NH₃ (51 g = 67.2 L
+                STP)</text>
+
+            <!-- Conservation Check Callout -->
+            <rect x="542" y="242" width="250" height="40" rx="6" fill="#ecfdf5" stroke="#059669" stroke-width="1.2" />
+            <text x="667" y="259" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#065f46">Mass Conservation Check:</text>
+            <text x="667" y="274" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#047857">42 g N₂ + 9 g H₂ = 51 g NH₃ &#x2713;</text>
+
+            <!-- Bottom R-axis -->
+            <line x1="165" y1="298" x2="670" y2="298" stroke="#64748b" stroke-width="1.5" />
+            <text x="165" y="314" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#475569">R = 0</text>
+            <text x="285" y="314" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#475569">R = 0.5</text>
+            <text x="405" y="314" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#475569">R = 1.0</text>
+            <text x="525" y="314" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#b91c1c">R = 1.5 (LR)</text>
+            <text x="645" y="314" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#1e3a8a">R = 2.0</text>
+        </svg>
+        <div class="diagram-caption">Figure 21.2: Normalizing each reactant by its stoichiometric coefficient ($R =
+            n/\nu$) visually reveals why $\text{H}_2$ runs out first even though it starts with more moles ($4.5 > 2.0$)
+            than $\text{N}_2$.</div>
+    </div>
+
+    <h3>Percentage Purity, Percentage Yield &amp; Sequential/Parallel Reactions</h3>
+    <ul>
+        <li><strong>Percentage Purity (applies to impure reactants BEFORE stoichiometry):</strong> Only the pure
+            fraction reacts.
+            $$\%\text{ Purity} = \frac{\text{Mass of pure substance}}{\text{Total mass of impure sample}} \times 100$$
+        </li>
+        <li><strong>Percentage Yield (applies to products AFTER stoichiometry):</strong> Side reactions or incomplete
+            conversion reduce real output.
+            $$\%\text{ Yield} = \frac{\text{Actual yield obtained}}{\text{Theoretical yield from LR}} \times 100$$
+        </li>
+        <li><strong>Sequential (Consecutive) Reactions:</strong> If $\text{A} \xrightarrow{y_1\%} \text{B}
+            \xrightarrow{y_2\%} \text{C} \xrightarrow{y_3\%} \text{D}$, the intermediate product of Step 1 becomes the
+            reactant of Step 2. Overall fractional yield multiplies sequentially: $Y_{\text{overall}} =
+            \left(\frac{y_1}{100}\right)\left(\frac{y_2}{100}\right)\left(\frac{y_3}{100}\right)$.</li>
+        <li><strong>Parallel (Competing) Reactions:</strong> A single reactant splits along two pathways simultaneously
+            (e.g., $\text{C} + \text{O}_2 \rightarrow \text{CO}_2$ and $2\text{C} + \text{O}_2 \rightarrow 2\text{CO}$).
+            Solve by letting $x\text{ mol}$ react via Path 1 and $(n_{\text{total}} - x)\text{ mol}$ react via Path 2—or
+            directly via POAC!</li>
+    </ul>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Principle of Atom Conservation (POAC)</span>
+        <p><strong>Core Theorem:</strong> In any chemical reaction (or sequence of reactions), atoms of each element are
+            conserved. Therefore, <em>moles of atoms of any element $X$ entering from reactants MUST equal moles of
+                atoms of $X$ leaving in products</em>—<strong>without ever needing to balance the chemical
+                equation!</strong></p>
+        <p><strong>First-Principles Derivation:</strong> Consider thermal decomposition $\text{KClO}_3(s) \rightarrow
+            \text{KCl}(s) + \text{O}_2(g)$ (deliberately left UNBALANCED). Every oxygen atom in $\text{KClO}_3$ ends up
+            exclusively in $\text{O}_2$. Since $1\text{ mol}$ of $\text{KClO}_3$ contains $3\text{ mol}$ of O atoms and
+            $1\text{ mol}$ of $\text{O}_2$ contains $2\text{ mol}$ of O atoms:</p>
+        $$\text{Moles of O atoms in } \text{KClO}_3 = \text{Moles of O atoms in } \text{O}_2 \implies \boxed{3 \times
+        n(\text{KClO}_3) = 2 \times n(\text{O}_2)}$$
+        <p>Notice that this gives $n(\text{O}_2) = \frac{3}{2} n(\text{KClO}_3)$ in 5 seconds, identical to the balanced
+            equation $2\text{KClO}_3 \rightarrow 2\text{KCl} + 3\text{O}_2$! Even better, for a 4-step industrial chain
+            $\text{FeS}_2 \rightarrow \text{SO}_2 \rightarrow \text{SO}_3 \rightarrow \text{H}_2\text{S}_2\text{O}_7
+            \rightarrow \text{H}_2\text{SO}_4$, if all sulfur transfers to $\text{H}_2\text{SO}_4$ at $100\%$ yield,
+            POAC on S gives $2 \times n(\text{FeS}_2) = 1 \times n(\text{H}_2\text{SO}_4)$ instantaneously.</p>
+        <p><strong>Golden Condition for POAC:</strong> Always verify that the conserved atom has <strong>only one source
+                on the left and one destination on the right</strong> (or explicitly sum ALL species containing that
+            atom on each side, e.g., $n_{\text{C}}(\text{CH}_4) = n_{\text{C}}(\text{CO}_2) + n_{\text{C}}(\text{CO})$
+            in incomplete combustion).</p>
+    </div>
+
+    <!-- ==================== SECTION 5: EUDIOMETRY ==================== -->
+    <h2 class="section-heading">21.5 Out-of-Portion Bridge: Eudiometry (Gas-Volume Stoichiometry)</h2>
+
+    <p><strong>Eudiometry</strong> is the experimental analysis of gaseous mixtures by sparking them (usually with
+        excess $\text{O}_2$) inside a graduated glass tube (eudiometer) over mercury, cooling back to the initial room
+        temperature and pressure, and sequentially absorbing specific product gases.</p>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: The Four Rules of Eudiometry</span>
+        <ol>
+            <li><strong>Volume $\equiv$ Moles (for gases):</strong> Because all measurements occur at identical $T$ and
+                $P$, Avogadro's Law allows you to apply stoichiometric coefficients directly to gas volumes ($\text{mL}$
+                or $\text{L}$).</li>
+            <li><strong>Water Condenses to Zero Volume:</strong> At room temperature (below $100^\circ\text{C}$),
+                $\text{H}_2\text{O}$ formed during combustion condenses into liquid water whose volume is negligible
+                ($\sim \frac{1}{1200}$ of gas volume) and is treated as <strong>$0\text{ mL}$</strong>. <em>(Trap: If
+                    the problem states gases are measured above $100^\circ\text{C}$, e.g. $120^\circ\text{C}$, water
+                    remains steam $\text{H}_2\text{O}(g)$ and MUST be counted in total volume!)</em></li>
+            <li><strong>General Hydrocarbon Combustion Equation:</strong>
+                $$\text{C}_x\text{H}_y(g) + \left(x + \frac{y}{4}\right)\text{O}_2(g) \longrightarrow x\text{CO}_2(g) +
+                \frac{y}{2}\text{H}_2\text{O}(l)$$
+                <em>(For an oxygenated organic vapour $\text{C}_x\text{H}_y\text{O}_z(g)$, the $\text{O}_2$ coefficient
+                    becomes $x + \frac{y}{4} - \frac{z}{2}$.)</em>
+            </li>
+            <li><strong>Two-Stage Contraction Formulas (for $V\text{ mL}$ of $\text{C}_x\text{H}_y$ exploded with excess
+                    $\text{O}_2$):</strong>
+                <ul>
+                    <li><strong>First Contraction ($\Delta V_1$, on cooling to room temperature):</strong>
+                        $$\Delta V_1 = V_{\text{initial}} - V_{\text{after cooling}} = \left[V + \left(x +
+                        \frac{y}{4}\right)V\right] - xV = \boxed{V\left(1 + \frac{y}{4}\right)}$$
+                        <em>Notice how $x$ cancels out completely! $\Delta V_1$ immediately gives $y$ (hydrogen
+                            atoms).</em>
+                    </li>
+                    <li><strong>Second Contraction ($\Delta V_2$, on shaking with aqueous $\text{KOH}$):</strong>
+                        $$\Delta V_2 = V(\text{CO}_2\text{ absorbed}) = \boxed{xV}$$
+                        <em>$\Delta V_2$ immediately gives $x$ (carbon atoms).</em>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <!-- SVG DIAGRAM 3: EUDIOMETRY GAS-CONTRACTION SCHEMATIC -->
+    <div class="diagram-box">
+        <svg viewBox="0 0 820 340" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Eudiometry Gas-Contraction Schematic showing Initial Mixture, Spark and Cool, KOH Absorption, and Alkaline Pyrogallol">
+            <defs>
+                <marker id="arr-eudio-3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5"
+                    orient="auto">
+                    <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#334155" />
+                </marker>
+            </defs>
+
+            <rect x="4" y="4" width="812" height="332" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="410" y="32" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="15.5" font-weight="700" fill="#0f172a">EUDIOMETRY GAS-CONTRACTION SCHEMATIC (CONSTANT T,
+                P)</text>
+
+            <!-- TUBE 1: Initial Mixture -->
+            <text x="108" y="62" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="12.5" font-weight="700" fill="#1e3a5f">1. Initial Mixture</text>
+            <rect x="58" y="74" width="100" height="190" rx="14" fill="#ffffff" stroke="#1e3a5f" stroke-width="2.2" />
+            <!-- Gas fill: C_xH_y + Excess O2 -->
+            <rect x="61" y="77" width="94" height="50" rx="10" fill="#fde68a" />
+            <text x="108" y="106" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="700" fill="#92400e">CₓHᵧ (V)</text>
+            <rect x="61" y="127" width="94" height="110" fill="#dbeafe" />
+            <text x="108" y="176" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="700" fill="#1e40af">Excess O₂</text>
+            <text x="108" y="193" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" fill="#1d4ed8">(V_O₂ taken)</text>
+            <!-- Mercury Seal -->
+            <rect x="61" y="237" width="94" height="24" rx="4" fill="#94a3b8" />
+            <text x="108" y="253" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" font-weight="700" fill="#ffffff">Hg Seal</text>
+            <text x="108" y="284" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="600" fill="#334155">V₁ = V + V(O₂)</text>
+
+            <!-- Arrow 1 -> 2 -->
+            <line x1="168" y1="165" x2="236" y2="165" stroke="#334155" stroke-width="2.2"
+                marker-end="url(#arr-eudio-3)" />
+            <text x="202" y="142" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#b91c1c">Electric Spark</text>
+            <text x="202" y="157" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" font-weight="600" fill="#475569">&amp; Cool to 25°C</text>
+            <text x="202" y="185" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" font-weight="700" fill="#0f766e">H₂O(g)&rarr;H₂O(l)</text>
+
+            <!-- TUBE 2: After Cooling -->
+            <text x="304" y="62" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="12.5" font-weight="700" fill="#1e3a5f">2. After Cooling</text>
+            <rect x="254" y="74" width="100" height="190" rx="14" fill="#ffffff" stroke="#1e3a5f" stroke-width="2.2" />
+            <!-- Contraction Space 1 -->
+            <rect x="257" y="77" width="94" height="54" rx="10" fill="#fee2e2" stroke="#fca5a5"
+                stroke-dasharray="3,2" />
+            <text x="304" y="99" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#991b1b">&Delta;V₁ Contraction</text>
+            <text x="304" y="116" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" font-weight="700" fill="#b91c1c">= V(1 + y/4)</text>
+            <!-- CO2 + Excess O2 -->
+            <rect x="257" y="131" width="94" height="62" fill="#d1fae5" />
+            <text x="304" y="166" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="700" fill="#065f46">CO₂ (xV)</text>
+            <rect x="257" y="193" width="94" height="44" fill="#dbeafe" />
+            <text x="304" y="219" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#1e40af">Unused O₂</text>
+            <!-- Tiny liquid H2O layer + Hg -->
+            <rect x="257" y="237" width="94" height="6" fill="#0284c7" />
+            <rect x="257" y="243" width="94" height="18" rx="3" fill="#94a3b8" />
+            <text x="304" y="284" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="600" fill="#334155">V₂ = V(CO₂) + V(O₂,left)</text>
+            <text x="304" y="300" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                fill="#0284c7">(H₂O(l) vol &asymp; 0)</text>
+
+            <!-- Arrow 2 -> 3 -->
+            <line x1="364" y1="165" x2="444" y2="165" stroke="#334155" stroke-width="2.2"
+                marker-end="url(#arr-eudio-3)" />
+            <text x="404" y="142" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#047857">Shake with</text>
+            <text x="404" y="157" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#047857">aq. KOH</text>
+            <text x="404" y="185" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" fill="#475569">Absorbs CO₂</text>
+
+            <!-- TUBE 3: After KOH -->
+            <text x="512" y="62" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="12.5" font-weight="700" fill="#1e3a5f">3. After KOH</text>
+            <rect x="462" y="74" width="100" height="190" rx="14" fill="#ffffff" stroke="#1e3a5f" stroke-width="2.2" />
+            <!-- Contraction Space 2 -->
+            <rect x="465" y="77" width="94" height="116" rx="10" fill="#ecfdf5" stroke="#6ee7b7"
+                stroke-dasharray="3,2" />
+            <text x="512" y="128" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#065f46">&Delta;V₂ Absorbed</text>
+            <text x="512" y="145" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#047857">= V(CO₂) = xV</text>
+            <!-- Unused O2 -->
+            <rect x="465" y="193" width="94" height="48" fill="#dbeafe" />
+            <text x="512" y="221" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="700" fill="#1e40af">Unused O₂</text>
+            <rect x="465" y="241" width="94" height="20" rx="3" fill="#94a3b8" />
+            <text x="512" y="284" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="600" fill="#334155">V₃ = V(O₂, left)</text>
+
+            <!-- Arrow 3 -> 4 -->
+            <line x1="572" y1="165" x2="650" y2="165" stroke="#334155" stroke-width="2.2"
+                marker-end="url(#arr-eudio-3)" />
+            <text x="611" y="142" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#6d28d9">Alkaline</text>
+            <text x="611" y="157" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#6d28d9">Pyrogallol</text>
+            <text x="611" y="185" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" fill="#475569">Absorbs O₂</text>
+
+            <!-- TUBE 4: After Pyrogallol -->
+            <text x="716" y="62" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="12.5" font-weight="700" fill="#1e3a5f">4. Residual Gas</text>
+            <rect x="666" y="74" width="100" height="190" rx="14" fill="#ffffff" stroke="#1e3a5f" stroke-width="2.2" />
+            <rect x="669" y="77" width="94" height="164" rx="10" fill="#f3e8ff" stroke="#c4b5fd"
+                stroke-dasharray="3,2" />
+            <text x="716" y="146" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="700" fill="#5b21b6">O₂ Absorbed</text>
+            <text x="716" y="165" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" fill="#6d28d9">V₄ = 0 (or N₂</text>
+            <text x="716" y="180" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" fill="#6d28d9">if air used)</text>
+            <rect x="669" y="241" width="94" height="20" rx="3" fill="#94a3b8" />
+            <text x="716" y="284" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="600" fill="#334155">Confirms unused O₂</text>
+
+            <!-- Bottom Takeaway Bar -->
+            <rect x="44" y="308" width="732" height="22" rx="4" fill="#eff6ff" />
+            <text x="410" y="323" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="700" fill="#1e3a8a">Cross-Check Identity: V(O₂ consumed) = V(O₂ taken)
+                &minus; V₃ = V(x + y/4)</text>
+        </svg>
+        <div class="diagram-caption">Figure 21.3: Sequential volume analysis in a eudiometer tube. Cooling removes steam
+            ($\Delta V_1$), $\text{KOH}$ removes $\text{CO}_2$ ($\Delta V_2$), and alkaline pyrogallol confirms
+            unreacted $\text{O}_2$.</div>
+    </div>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Selective Absorbent Reagent</th>
+                <th>Gases Selectively Absorbed</th>
+                <th>Chemical Mechanism / Exam Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Aqueous $\text{KOH}$ or $\text{NaOH}$</strong></td>
+                <td>$\text{CO}_2, \text{SO}_2, \text{Cl}_2, \text{HCl}, \text{NO}_2$</td>
+                <td>Acidic oxides/gases react to form soluble salts ($2\text{KOH} + \text{CO}_2 \rightarrow
+                    \text{K}_2\text{CO}_3 + \text{H}_2\text{O}$). Does <strong>NOT</strong> absorb $\text{CO}$ or
+                    $\text{O}_2$.</td>
+            </tr>
+            <tr>
+                <td><strong>Alkaline Pyrogallol</strong></td>
+                <td>$\text{O}_2$</td>
+                <td>Pyrogallol in $\text{KOH}$ rapidly oxidizes and turns dark brown, quantifying leftover excess
+                    $\text{O}_2$.</td>
+            </tr>
+            <tr>
+                <td><strong>Turpentine Oil</strong></td>
+                <td>$\text{O}_3$ (Ozone)</td>
+                <td>Classic Resonance favorite for ozonized oxygen ($\text{O}_2 + \text{O}_3$) mixtures.</td>
+            </tr>
+            <tr>
+                <td><strong>Ammoniacal $\text{Cu}_2\text{Cl}_2$</strong></td>
+                <td>$\text{CO}$ (and $\text{O}_2$)</td>
+                <td>Forms complex $[\text{Cu}(\text{CO})\text{Cl}]$; always absorb $\text{CO}_2$ with $\text{KOH}$ and
+                    $\text{O}_2$ with pyrogallol <em>before</em> absorbing $\text{CO}$.</td>
+            </tr>
+            <tr>
+                <td><strong>Anhydrous $\text{CaCl}_2$ / Conc. $\text{H}_2\text{SO}_4$</strong></td>
+                <td>$\text{H}_2\text{O}$ vapour (moisture)</td>
+                <td>Drying agents; conc. $\text{H}_2\text{SO}_4$ also absorbs basic $\text{NH}_3$.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ==================== SECTION 6: CONCENTRATION TERMS & EQUIVALENT CONCEPT ==================== -->
+    <h2 class="section-heading">21.6 Out-of-Portion Bridge: Concentration Terms, Molarity/Molality &amp; Equivalent
+        Concept</h2>
+
+    <p>A solution consists of a <strong>solute</strong> (minor component, mass $w_B$, molar mass $M_B$, moles $n_B$)
+        dissolved in a <strong>solvent</strong> (major component, mass $w_A$, molar mass $M_A$, moles $n_A$), giving
+        total solution mass $W_{\text{sol}} = w_A + w_B$, density $d$ (in $\text{g/mL}$), and volume $V_{\text{sol}} =
+        \frac{W_{\text{sol}}}{d}$ (in $\text{mL}$).</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Concentration Term</th>
+                <th>Exact Formula</th>
+                <th>Units</th>
+                <th>Temp. Dependent?</th>
+                <th>Exam Trap / Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Mass Percent ($\%w/w$)</strong></td>
+                <td>$\frac{w_B}{w_A + w_B} \times 100$</td>
+                <td>Unitless ($\%$)</td>
+                <td><strong>No</strong></td>
+                <td>Denominator is <em>solution</em> mass ($w_A + w_B$), NOT solvent mass $w_A$.</td>
+            </tr>
+            <tr>
+                <td><strong>Mass by Volume ($\%w/v$)</strong></td>
+                <td>$\frac{w_B\text{ (g)}}{V_{\text{sol}}\text{ (mL)}} \times 100$</td>
+                <td>$\text{g per } 100\text{ mL}$</td>
+                <td><strong>Yes</strong></td>
+                <td>Related to $\%w/w$ via density: $(\%w/v) = (\%w/w) \times d$.</td>
+            </tr>
+            <tr>
+                <td><strong>Volume Percent ($\%v/v$)</strong></td>
+                <td>$\frac{V_B}{V_{\text{sol}}} \times 100$</td>
+                <td>Unitless ($\%$)</td>
+                <td><strong>Yes</strong></td>
+                <td>Used for liquid–liquid solutions (e.g., ethanol in water).</td>
+            </tr>
+            <tr>
+                <td><strong>Parts Per Million ($\text{ppm}$)</strong></td>
+                <td>$\frac{w_B}{W_{\text{sol}}} \times 10^6$</td>
+                <td>$\text{mg/kg}$ or $\text{mg/L}$ (dilute aq.)</td>
+                <td>No ($w/w$ basis)</td>
+                <td>Used for water hardness ($\text{CaCO}_3$ equiv.) &amp; atmospheric pollutants.</td>
+            </tr>
+            <tr>
+                <td><strong>Mole Fraction ($\chi_B$)</strong></td>
+                <td>$\frac{n_B}{n_A + n_B}$</td>
+                <td>Unitless</td>
+                <td><strong>No</strong></td>
+                <td>Always obeys $\chi_A + \chi_B = 1$ (for binary solution).</td>
+            </tr>
+            <tr>
+                <td><strong>Molarity ($M$)</strong></td>
+                <td>$\frac{n_B}{V_{\text{sol}}\text{ (in L)}} = \frac{w_B \times 1000}{M_B \times V_{\text{sol}}\text{
+                    (mL)}}$</td>
+                <td>$\text{mol L}^{-1}$ ($\text{M}$)</td>
+                <td><strong>Yes</strong> (decreases on heating)</td>
+                <td>Volume expands with $T$, so $M$ changes with temperature!</td>
+            </tr>
+            <tr>
+                <td><strong>Molality ($m$)</strong></td>
+                <td>$\frac{n_B}{w_A\text{ (in kg)}} = \frac{w_B \times 1000}{M_B \times w_A\text{ (g)}}$</td>
+                <td>$\text{mol kg}^{-1}$ ($\text{m}$)</td>
+                <td><strong>No</strong> (mass-only!)</td>
+                <td><strong>Temperature-independent!</strong> Denominator is <em>solvent</em> mass, NOT solution mass.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Normality ($N$)</strong></td>
+                <td>$\frac{\text{Gram-equivalents of solute}}{V_{\text{sol}}\text{ (in L)}} = M \times n\text{-factor}$
+                </td>
+                <td>$\text{eq L}^{-1}$ ($\text{N}$)</td>
+                <td><strong>Yes</strong></td>
+                <td>Always reaction-specific because $n$-factor depends on the reaction.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Derivations of the Two Most-Tested Interconversion Shortcuts</span>
+        <p><strong>1. Density–Molarity Shortcut:</strong> Consider $100\text{ g}$ of a solution labeled $x\%\text{ w/w}$
+            with density $d\text{ (g/mL)}$.</p>
+        <ul>
+            <li>Mass of solute $= x\text{ g} \implies n_B = \frac{x}{M_B}$.</li>
+            <li>Volume of $100\text{ g}$ solution $= \frac{100}{d}\text{ mL} = \frac{100}{1000 d}\text{ L} = \frac{1}{10
+                d}\text{ L}$.</li>
+            <li>Therefore: $M = \frac{n_B}{V_{\text{L}}} = \frac{x / M_B}{1 / (10 d)} \implies \boxed{M = \frac{10
+                \times (\%w/w) \times d}{M_B}}$.</li>
+        </ul>
+        <p><strong>2. Molarity ($M$) $\leftrightarrow$ Molality ($m$) Exact Formula:</strong> Consider exactly $1\text{
+            L}$ ($1000\text{ mL}$) of a solution of Molarity $M$ and density $d\text{ (g/mL)}$.</p>
+        <ul>
+            <li>Moles of solute in $1\text{ L} = M\text{ mol} \implies$ Mass of solute $= M \cdot M_B\text{ g}$.</li>
+            <li>Total mass of $1000\text{ mL}$ solution $= 1000 d\text{ g}$.</li>
+            <li>Mass of <em>solvent</em> $= (1000 d - M \cdot M_B)\text{ g} = \frac{1000 d - M \cdot M_B}{1000}\text{
+                kg}$.</li>
+            <li>Therefore: $\boxed{m = \frac{1000 M}{1000 d - M \cdot M_B}}$.</li>
+        </ul>
+        <p><strong>3. Dilution &amp; Mixing Laws (Conservation of Solute Moles):</strong> Adding pure solvent never
+            changes solute moles, so $M_1 V_1 = M_2 V_2$. When mixing two non-reacting solutions of the <em>same
+                solute</em>, total moles add: $M_1 V_1 + M_2 V_2 = M_f (V_1 + V_2)$ (assuming additive volumes, or
+            $V_{\text{final}}$ if diluted to a mark).</p>
+    </div>
+
+    <!-- SVG DIAGRAM 4: CONCENTRATION INTERCONVERSION MAP -->
+    <div class="diagram-box">
+        <svg viewBox="0 0 820 350" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Concentration Terms Interconversion Map linking %w/w, Molarity, Molality, Mole Fraction, and Normality">
+            <defs>
+                <marker id="arr-conc-4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#0f172a" />
+                </marker>
+            </defs>
+
+            <rect x="4" y="4" width="812" height="342" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+            <text x="410" y="32" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="15.5" font-weight="700" fill="#0f172a">CONCENTRATION INTERCONVERSION MAP (TEMP-INDEPENDENT
+                vs. TEMP-DEPENDENT)</text>
+
+            <!-- Divider Zone: Left = Temp Independent, Right = Temp Dependent -->
+            <rect x="20" y="48" width="378" height="284" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"
+                stroke-dasharray="5,3" />
+            <text x="209" y="68" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="700" fill="#166534">TEMPERATURE-INDEPENDENT (MASS / MOLE ONLY)</text>
+
+            <rect x="422" y="48" width="378" height="284" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"
+                stroke-dasharray="5,3" />
+            <text x="611" y="68" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12"
+                font-weight="700" fill="#92400e">TEMPERATURE-DEPENDENT (CONTAINS VOLUME V)</text>
+
+            <!-- Left Boxes: %w/w, Molality m, Mole Fraction X -->
+            <rect x="44" y="88" width="144" height="62" rx="8" fill="#ffffff" stroke="#15803d" stroke-width="2" />
+            <text x="116" y="114" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14"
+                font-weight="700" fill="#14532d">% w/w</text>
+            <text x="116" y="135" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#334155">g solute / 100 g sol</text>
+
+            <rect x="228" y="198" width="146" height="62" rx="8" fill="#ffffff" stroke="#15803d" stroke-width="2" />
+            <text x="301" y="224" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14"
+                font-weight="700" fill="#14532d">Molality (m)</text>
+            <text x="301" y="245" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#334155">mol solute / kg solvent</text>
+
+            <rect x="44" y="248" width="144" height="62" rx="8" fill="#ffffff" stroke="#15803d" stroke-width="2" />
+            <text x="116" y="274" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14"
+                font-weight="700" fill="#14532d">Mole Fraction (&chi;)</text>
+            <text x="116" y="295" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#334155">n_B / (n_A + n_B)</text>
+
+            <!-- Right Boxes: Molarity M, %w/v, Normality N -->
+            <rect x="454" y="88" width="152" height="62" rx="8" fill="#ffffff" stroke="#b45309" stroke-width="2" />
+            <text x="530" y="114" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14"
+                font-weight="700" fill="#78350f">Molarity (M)</text>
+            <text x="530" y="135" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#334155">mol solute / L sol</text>
+
+            <rect x="638" y="88" width="142" height="62" rx="8" fill="#ffffff" stroke="#b45309" stroke-width="2" />
+            <text x="709" y="114" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14"
+                font-weight="700" fill="#78350f">% w/v</text>
+            <text x="709" y="135" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#334155">g solute / 100 mL sol</text>
+
+            <rect x="454" y="242" width="152" height="62" rx="8" fill="#ffffff" stroke="#b91c1c" stroke-width="2" />
+            <text x="530" y="268" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14"
+                font-weight="700" fill="#991b1b">Normality (N)</text>
+            <text x="530" y="289" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                fill="#334155">eq solute / L sol</text>
+
+            <!-- Density Bridge 1: %w/w <-> M -->
+            <line x1="194" y1="118" x2="448" y2="118" stroke="#0f172a" stroke-width="2.2"
+                marker-start="url(#arr-conc-4)" marker-end="url(#arr-conc-4)" />
+            <rect x="234" y="96" width="174" height="24" rx="5" fill="#1e3a5f" />
+            <text x="321" y="112" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#ffffff">M = 10 &times; (%w/w) &times; d / M_B</text>
+            <text x="321" y="136" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" font-weight="700" fill="#b91c1c">NEEDS DENSITY (d)</text>
+
+            <!-- Density Bridge 2: m <-> M -->
+            <path d="M 378 214 L 478 154" fill="none" stroke="#0f172a" stroke-width="2.2"
+                marker-start="url(#arr-conc-4)" marker-end="url(#arr-conc-4)" />
+            <rect x="336" y="160" width="194" height="24" rx="5" fill="#1e3a5f" />
+            <text x="433" y="176" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" font-weight="700" fill="#ffffff">m = 1000M / (1000d &minus; M&middot;M_B)</text>
+
+            <!-- No Density Needed: m <-> X -->
+            <path d="M 192 268 L 228 248" fill="none" stroke="#15803d" stroke-width="2" marker-start="url(#arr-conc-4)"
+                marker-end="url(#arr-conc-4)" />
+            <rect x="190" y="274" width="196" height="44" rx="5" fill="#ffffff" stroke="#86efac" />
+            <text x="288" y="292" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" font-weight="700" fill="#166534">m = 1000&chi;_B / ((1&minus;&chi;_B)M_A)</text>
+            <text x="288" y="308" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                fill="#15803d">(No density required!)</text>
+
+            <!-- %w/w <-> m -->
+            <path d="M 116 154 L 116 202 L 222 218" fill="none" stroke="#15803d" stroke-width="1.8"
+                marker-end="url(#arr-conc-4)" />
+            <text x="150" y="192" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                font-weight="600" fill="#166534">Assume 100 g sol</text>
+
+            <!-- M <-> %w/v -->
+            <line x1="610" y1="118" x2="634" y2="118" stroke="#b45309" stroke-width="2" marker-start="url(#arr-conc-4)"
+                marker-end="url(#arr-conc-4)" />
+            <rect x="626" y="164" width="160" height="36" rx="5" fill="#ffffff" stroke="#fcd34d" />
+            <text x="706" y="179" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="10.5" font-weight="700" fill="#92400e">M = 10 &times; (%w/v) / M_B</text>
+            <text x="706" y="194" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10"
+                fill="#b45309">(%w/v) = (%w/w) &times; d</text>
+
+            <!-- M <-> N -->
+            <line x1="530" y1="154" x2="530" y2="236" stroke="#b91c1c" stroke-width="2.2"
+                marker-start="url(#arr-conc-4)" marker-end="url(#arr-conc-4)" />
+            <rect x="540" y="182" width="110" height="24" rx="5" fill="#fee2e2" stroke="#dc2626" />
+            <text x="595" y="198" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11"
+                font-weight="700" fill="#991b1b">N = M &times; n-factor</text>
+
+            <!-- Law of Equivalence Box -->
+            <rect x="628" y="242" width="156" height="62" rx="8" fill="#fef2f2" stroke="#b91c1c" stroke-width="1.5" />
+            <text x="706" y="264" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="11.5" font-weight="700" fill="#991b1b">Law of Equivalence</text>
+            <text x="706" y="284" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="12.5" font-weight="800" fill="#b91c1c">N₁V₁ = N₂V₂</text>
+            <text x="706" y="298" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+                font-size="9.5" fill="#7f1d1d">(Exact at neutralization!)</text>
+        </svg>
+        <div class="diagram-caption">Figure 21.4: Complete Concentration Interconversion Map. Notice that crossing the
+            vertical boundary between mass-based (left) and volume-based (right) units ALWAYS requires solution density
+            $d$.</div>
+    </div>
+
+    <h3>Equivalent Weight ($E$), $n$-Factor &amp; The Law of Chemical Equivalence</h3>
+    <p>The <strong>Equivalent Weight ($E$)</strong> of a substance is its molar mass divided by its valence factor
+        ($n$-factor):</p>
+    $$E = \frac{M}{n\text{-factor}}, \qquad \text{Gram-Equivalents (eq)} = \frac{w}{E} = n \times (n\text{-factor}),
+    \qquad \text{Milliequivalents (meq)} = N \times V_{\text{mL}}$$
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Species Category</th>
+                <th>Definition of $n$-Factor</th>
+                <th>Standard Examples &amp; Equivalent Weights</th>
+                <th>High-Yield Olympiad Traps</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Acids</strong></td>
+                <td><strong>Basicity</strong>: number of replaceable $\text{H}^+$ ions furnished per molecule in the
+                    given reaction.</td>
+                <td>$\text{HCl}$ ($n=1, E=36.5$); $\text{H}_2\text{SO}_4$ ($n=2, E=49$); $\text{H}_2\text{C}_2\text{O}_4
+                    \cdot 2\text{H}_2\text{O}$ ($n=2, E=63$).</td>
+                <td><strong>Oxyacids of Phosphorus!</strong> Only $\text{O-H}$ hydrogens are acidic:
+                    $\text{H}_3\text{PO}_4$ ($n=3$), <strong>$\text{H}_3\text{PO}_3$ ($n=2$, NOT 3!)</strong>,
+                    <strong>$\text{H}_3\text{PO}_2$ ($n=1$, NOT 3!)</strong>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Bases</strong></td>
+                <td><strong>Acidity</strong>: number of replaceable $\text{OH}^-$ ions furnished per formula unit.</td>
+                <td>$\text{NaOH}$ ($n=1, E=40$); $\text{Ca}(\text{OH})_2$ ($n=2, E=37$); $\text{Al}(\text{OH})_3$ ($n=3,
+                    E=26$).</td>
+                <td>In partial neutralization (e.g., $\text{H}_2\text{SO}_4 + \text{NaOH} \rightarrow \text{NaHSO}_4 +
+                    \text{H}_2\text{O}$), $n$-factor of $\text{H}_2\text{SO}_4$ is $1$, not $2$!</td>
+            </tr>
+            <tr>
+                <td><strong>Salts (Non-Redox)</strong></td>
+                <td>Total magnitude of positive (or negative) charge on cations (or anions) per formula unit.</td>
+                <td>$\text{NaCl}$ ($n=1$); $\text{Na}_2\text{CO}_3$ ($n=2, E=53$); $\text{CaCO}_3$ ($n=2, E=50$);
+                    $\text{Al}_2(\text{SO}_4)_3$ ($n=6$).</td>
+                <td>For $\text{NaHCO}_3 + \text{HCl} \rightarrow \text{NaCl} + \text{H}_2\text{O} + \text{CO}_2$,
+                    $\text{NaHCO}_3$ accepts $1\text{ H}^+$, so $n = 1$.</td>
+            </tr>
+            <tr>
+                <td><strong>Redox Agents</strong> (Preview)</td>
+                <td>Total electrons lost or gained per molecule/formula unit.</td>
+                <td>$\text{KMnO}_4$ in acidic medium ($\text{Mn}^{+7} \rightarrow \text{Mn}^{2+}$): $n=5, E=M/5 = 31.6$.
+                </td>
+                <td>In neutral/faintly alkaline medium ($\text{MnO}_2$), $n=3$; in strongly alkaline medium
+                    ($\text{MnO}_4^{2-}$), $n=1$.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Law of Chemical Equivalence &amp; Back-Titration</span>
+        <p><strong>Law of Chemical Equivalence:</strong> Regardless of stoichiometric coefficients in a balanced
+            equation, <em>1 equivalent of any reactant always reacts with exactly 1 equivalent of another reactant to
+                form exactly 1 equivalent of each product</em>:</p>
+        $$\text{eq}(\text{A}) = \text{eq}(\text{B}) \implies \boxed{N_1 V_1 = N_2 V_2} \quad \text{or} \quad
+        \frac{w_A}{E_A} = \frac{w_B}{E_B}$$
+        <p><strong>Back-Titration Shortcut:</strong> When an insoluble/impure base (like $\text{CaCO}_3$ or
+            $\text{Na}_2\text{CO}_3$) is dissolved in a known <em>excess</em> of acid ($N_a V_a$) and the unreacted
+            leftover acid is neutralized by a standard base ($N_b V_b$):</p>
+        $$\text{meq of sample} = \text{meq of total acid added} - \text{meq of base used in back-titration} = N_a V_a -
+        N_b V_b$$
+        <p>Then mass of pure sample $= \frac{(N_a V_a - N_b V_b)}{1000} \times E_{\text{sample}}$. No balanced equations
+            required!</p>
+    </div>
+
+    <!-- ==================== FORMULA VAULT ==================== -->
+    <div class="formula-vault">
+        <span class="box-label">Chapter 21 Formula Vault — High-Density Revision Sheet</span>
+        <ul>
+            <li><strong>Mole Conversions:</strong> $n = \frac{w}{M} = \frac{N}{N_A} = \frac{V_{\text{STP}}\text{
+                (L)}}{22.4} = M \times V_{\text{L}}$ &nbsp;|&nbsp; $\text{Total Atoms} = n \times N_A \times
+                \text{Atomicity}$</li>
+            <li><strong>Isotopic Average Atomic Mass:</strong> $A_{\text{avg}} = \frac{\sum (\%_i A_i)}{100} = \sum f_i
+                A_i$</li>
+            <li><strong>Vapour Density &amp; Mixture Molar Mass:</strong> $M = 2 \times \text{VD}$ &nbsp;|&nbsp;
+                $M_{\text{avg}} = \frac{\sum n_i M_i}{\sum n_i} = \sum \chi_i M_i$</li>
+            <li><strong>Minimum Molecular Mass:</strong> $M_{\min} = \frac{A_{\text{trace}} \times 100}{\%\text{ by
+                mass}}$ &nbsp;|&nbsp; $\text{Molecular Formula} = (\text{Empirical Formula})_n, \quad n =
+                \frac{M}{\text{EFM}}$</li>
+            <li><strong>Limiting Reagent &amp; Yield:</strong> $\text{LR} = \arg\min\left(\frac{n_i}{\nu_i}\right)$
+                &nbsp;|&nbsp; $\%\text{ Purity} = \frac{w_{\text{pure}}}{w_{\text{sample}}}\times 100$ &nbsp;|&nbsp;
+                $\%\text{ Yield} = \frac{\text{Actual}}{\text{Theoretical}}\times 100$</li>
+            <li><strong>POAC (Atom $X$ conserved from $\text{A}_p\text{B}_q \rightarrow \text{A}_r\text{C}_s$):</strong>
+                $p \cdot n(\text{A}_p\text{B}_q) = r \cdot n(\text{A}_r\text{C}_s)$</li>
+            <li><strong>Eudiometry ($\text{C}_x\text{H}_y + \text{excess } \text{O}_2$):</strong> $V(\text{O}_2\text{
+                used}) = V\left(x + \frac{y}{4}\right)$ &nbsp;|&nbsp; $\Delta V_1\text{ (cooling)} = V\left(1 +
+                \frac{y}{4}\right)$ &nbsp;|&nbsp; $\Delta V_2\text{ (KOH)} = xV$</li>
+            <li><strong>Molarity &amp; Density Shortcut:</strong> $M = \frac{n_B}{V_{\text{L}}} = \frac{10 \times
+                (\%w/w) \times d}{M_B} = \frac{10 \times (\%w/v)}{M_B}$</li>
+            <li><strong>Molality &amp; Interconversions:</strong> $m = \frac{n_B}{w_A\text{ (kg)}} = \frac{1000 M}{1000
+                d - M \cdot M_B} = \frac{1000 \chi_B}{(1 - \chi_B) M_A}$</li>
+            <li><strong>Dilution &amp; Mixing:</strong> $M_1 V_1 = M_2 V_2$ &nbsp;|&nbsp; $M_1 V_1 + M_2 V_2 = M_f(V_1 +
+                V_2)$</li>
+            <li><strong>Equivalent Concept &amp; Normality:</strong> $E = \frac{M}{n\text{-factor}}$ &nbsp;|&nbsp; $N =
+                M \times n\text{-factor}$ &nbsp;|&nbsp; $N_1 V_1 = N_2 V_2$ &nbsp;|&nbsp; $\text{meq}_{\text{sample}} =
+                N_a V_a - N_b V_b$</li>
+        </ul>
+    </div>
+
+    <!-- ==================== WORKED EXAMPLES ==================== -->
+    <h2 class="section-heading">21.7 Graded Worked Examples (Level 1 &rarr; Level 2 &rarr; Level 3)</h2>
+
+    <!-- LEVEL 1 BANNER -->
+    <div class="level-banner l1">
+        <span class="badge badge-l1">Level 1: Warmup</span>
+        <span>Foundational Mastery — Hydrated Salts, Isotopic Abundance, Minimum Molar Mass &amp; Empirical
+            Formula</span>
+    </div>
+
+    <!-- WE 1 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Hydrated Salt Atom Counting</span>
+            <strong>Worked Example 1: Washing Soda Crystals ($\text{Na}_2\text{CO}_3 \cdot
+                10\text{H}_2\text{O}$)</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Calculate (a) the number of oxygen atoms, (b) the total number of atoms present in $57.2\text{ g}$ of
+                washing soda crystals ($\text{Na}_2\text{CO}_3 \cdot 10\text{H}_2\text{O}$), and (c) the mass of
+                anhydrous $\text{Na}_2\text{CO}_3$ left behind when this sample is strongly heated to constant mass.
+                <em>(Use $\text{Na}=23, \text{C}=12, \text{O}=16, \text{H}=1, N_A = 6.022 \times 10^{23}$.)</em>
+            </p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Molar Mass of Hydrated Salt:</strong></p>
+            $$M(\text{Na}_2\text{CO}_3) = 2(23) + 12 + 3(16) = 46 + 12 + 48 = 106\text{ g/mol}$$
+            $$M(10\text{H}_2\text{O}) = 10 \times [2(1) + 16] = 180\text{ g/mol}$$
+            $$M(\text{Na}_2\text{CO}_3 \cdot 10\text{H}_2\text{O}) = 106 + 180 = 286\text{ g/mol}$$
+            <p><strong>Step 2 — Moles of Formula Units:</strong></p>
+            $$n = \frac{w}{M} = \frac{57.2\text{ g}}{286\text{ g/mol}} = 0.2\text{ mol}$$
+            <p><strong>Part (a) — Oxygen Atoms (Watch the Water of Crystallization!):</strong><br />
+                Each formula unit of $\text{Na}_2\text{CO}_3 \cdot 10\text{H}_2\text{O}$ contains $3$ oxygen atoms from
+                $\text{CO}_3^{2-}$ PLUS $10$ oxygen atoms from $10\text{H}_2\text{O}$, giving $3 + 10 = 13$ oxygen atoms
+                per unit.</p>
+            $$n(\text{O atoms}) = 0.2 \times 13 = 2.6\text{ mol}$$
+            $$N(\text{O atoms}) = 2.6 \times 6.022 \times 10^{23} = 15.6572 \times 10^{23} \approx \mathbf{1.566 \times
+            10^{24}\text{ O atoms}}$$
+            <p><strong>Part (b) — Total Atoms:</strong><br />
+                Atomicity per formula unit $= 2(\text{Na}) + 1(\text{C}) + 3(\text{O}) + 10 \times (2\text{ H} + 1\text{
+                O}) = 6 + 30 = 36\text{ atoms}$.</p>
+            $$N(\text{total atoms}) = 0.2 \times 36 \times N_A = 7.2 \times 6.022 \times 10^{23} = 43.3584 \times
+            10^{23} \approx \mathbf{4.336 \times 10^{24}\text{ atoms}}$$
+            <p><strong>Part (c) — Mass of Anhydrous $\text{Na}_2\text{CO}_3$:</strong><br />
+                Heating drives off all $10\text{H}_2\text{O}$ molecules while conserving the $0.2\text{ mol}$ of
+                $\text{Na}_2\text{CO}_3$:</p>
+            $$w(\text{Na}_2\text{CO}_3) = 0.2\text{ mol} \times 106\text{ g/mol} = \mathbf{21.2\text{ g}}$$
+        </div>
+    </div>
+
+    <!-- WE 2 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Isotopic Abundance &amp; Trace Element</span>
+            <strong>Worked Example 2: Average Atomic Mass of Boron &amp; Minimum Molar Mass of Insulin</strong>
+        </div>
+        <div class="ex-problem">
+            <p><strong>(a)</strong> Naturally occurring boron consists of two isotopes, $^{10}\text{B}$ (mass
+                $10.0\text{ u}$) and $^{11}\text{B}$ (mass $11.0\text{ u}$). If the average atomic mass of boron is
+                $10.8\text{ u}$, calculate the percentage abundance of each isotope.</p>
+            <p><strong>(b)</strong> A sample of insulin contains $3.2\%$ sulfur by mass. Calculate the minimum possible
+                molecular mass of insulin (in $\text{g/mol}$). <em>(Atomic mass of $\text{S} = 32\text{ u}$.)</em></p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — Isotopic Abundance:</strong><br />
+                Let the fractional abundance of $^{10}\text{B}$ be $x$. Since there are only two isotopes, the
+                fractional abundance of $^{11}\text{B}$ is $(1 - x)$.</p>
+            $$A_{\text{avg}} = 10.0(x) + 11.0(1 - x) = 10.8$$
+            $$11.0 - x = 10.8 \implies x = 0.20$$
+            <p>Therefore, natural boron contains <strong>$20\%$ $^{10}\text{B}$</strong> and <strong>$80\%$
+                    $^{11}\text{B}$</strong>.</p>
+            <p><strong>Part (b) — Minimum Molecular Mass:</strong><br />
+                For the molecular mass to be minimum, each molecule of insulin must contain the smallest whole number of
+                sulfur atoms, i.e., $k = 1\text{ atom}$ of S (mass $= 32\text{ g/mol}$).</p>
+            $$\% \text{ of S} = \frac{1 \times 32}{M_{\min}} \times 100 = 3.2$$
+            $$M_{\min} = \frac{32 \times 100}{3.2} = \mathbf{1000\text{ g/mol}}$$
+        </div>
+    </div>
+
+    <!-- WE 3 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Empirical Formula + Vapour Density</span>
+            <strong>Worked Example 3: Deducing Molecular Formula from Composition &amp; VD</strong>
+        </div>
+        <div class="ex-problem">
+            <p>An organic compound contains $40.0\%$ carbon, $6.67\%$ hydrogen, and the remainder oxygen by mass. Its
+                vapour density is $30$. Determine its empirical formula and molecular formula.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Find Mass Percentage of Oxygen:</strong></p>
+            $$\%\text{ O} = 100 - (40.0 + 6.67) = 53.33\%$$
+            <p><strong>Step 2 — Relative Moles &amp; Simplest Ratio (Assuming $100\text{ g}$ sample):</strong></p>
+            <ul>
+                <li>$\text{C}: \frac{40.0}{12} = 3.333\text{ mol} \implies \text{Ratio} = \frac{3.333}{3.333} = 1$</li>
+                <li>$\text{H}: \frac{6.67}{1} = 6.67\text{ mol} \implies \text{Ratio} = \frac{6.67}{3.333} = 2$</li>
+                <li>$\text{O}: \frac{53.33}{16} = 3.333\text{ mol} \implies \text{Ratio} = \frac{3.333}{3.333} = 1$</li>
+            </ul>
+            <p>Hence, the <strong>Empirical Formula $= \text{CH}_2\text{O}$</strong>, and Empirical Formula Mass
+                $(\text{EFM}) = 12 + 2(1) + 16 = 30\text{ g/mol}$.</p>
+            <p><strong>Step 3 — Molecular Formula via Vapour Density:</strong></p>
+            $$M = 2 \times \text{VD} = 2 \times 30 = 60\text{ g/mol}$$
+            $$n = \frac{M}{\text{EFM}} = \frac{60}{30} = 2 \implies \text{Molecular Formula} = (\text{CH}_2\text{O})_2 =
+            \mathbf{\text{C}_2\text{H}_4\text{O}_2}$$
+        </div>
+    </div>
+
+    <!-- LEVEL 2 BANNER -->
+    <div class="level-banner l2">
+        <span class="badge badge-l2">Level 2: Exam-Real</span>
+        <span>BEST Paper 2 Standard — Limiting Reagent &amp; Yield, Impure Limestone, and Concentration
+            Interconversion</span>
+    </div>
+
+    <!-- WE 4 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Limiting Reagent + % Yield</span>
+            <strong>Worked Example 4: Haber Process Limiting Reagent, Excess Leftover &amp; Real Yield</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Ammonia is synthesized according to $\text{N}_2(g) + 3\text{H}_2(g) \rightarrow 2\text{NH}_3(g)$. If
+                $56\text{ g}$ of $\text{N}_2$ is reacted with $9\text{ g}$ of $\text{H}_2$: (a) identify the limiting
+                reagent and find the mass of excess reagent left unreacted, (b) calculate the theoretical volume of
+                $\text{NH}_3$ produced at STP, and (c) find the actual mass of $\text{NH}_3$ obtained if the percentage
+                yield of the process is $80\%$.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Convert Reactants to Moles:</strong></p>
+            $$n(\text{N}_2) = \frac{56}{28} = 2.0\text{ mol}, \qquad n(\text{H}_2) = \frac{9}{2} = 4.5\text{ mol}$$
+            <p><strong>Part (a) — Limiting Reagent Test ($R = n / \nu$):</strong></p>
+            $$R(\text{N}_2) = \frac{2.0}{1} = 2.0, \qquad R(\text{H}_2) = \frac{4.5}{3} = 1.5$$
+            <p>Since $1.5 < 2.0$, <strong>$\text{H}_2$ is the Limiting Reagent</strong> (even though it has more initial
+                    moles than $\text{N}_2$!) and extent of reaction $\xi = 1.5\text{ mol}$.</p>
+            $$n(\text{N}_2\text{ consumed}) = 1 \times 1.5 = 1.5\text{ mol} \implies n(\text{N}_2\text{ leftover}) = 2.0
+            - 1.5 = 0.5\text{ mol}$$
+            $$\text{Mass of excess }\text{N}_2\text{ left} = 0.5 \times 28 = \mathbf{14\text{ g}}$$
+            <p><strong>Part (b) — Theoretical STP Volume of $\text{NH}_3$:</strong></p>
+            $$n(\text{NH}_3\text{ theoretical}) = 2 \times 1.5 = 3.0\text{ mol}$$
+            $$V_{\text{STP}}(\text{NH}_3) = 3.0 \times 22.4 = \mathbf{67.2\text{ L}}$$
+            <p><strong>Part (c) — Actual Mass at $80\%$ Yield:</strong></p>
+            $$n(\text{NH}_3\text{ actual}) = 3.0 \times \frac{80}{100} = 2.4\text{ mol}$$
+            $$w(\text{NH}_3\text{ actual}) = 2.4 \times 17 = \mathbf{40.8\text{ g}}$$
+        </div>
+    </div>
+
+    <!-- WE 5 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Percentage Purity &amp; Gas Evolution</span>
+            <strong>Worked Example 5: Purity Analysis of Impure Marble ($\text{CaCO}_3$)</strong>
+        </div>
+        <div class="ex-problem">
+            <p>$25\text{ g}$ of an impure sample of marble ($\text{CaCO}_3$, containing inert impurities that do not
+                react with acids) is treated with excess dilute $\text{HCl}$. The $\text{CO}_2$ gas liberated occupies
+                $4.48\text{ L}$ at STP. Calculate (a) the percentage purity of the marble sample, and (b) the mass of
+                $\text{CaCl}_2$ formed in solution. <em>($\text{Ca}=40, \text{C}=12, \text{O}=16, \text{Cl}=35.5$.)</em>
+            </p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 — Balanced Chemical Equation:</strong></p>
+            $$\text{CaCO}_3(s) + 2\text{HCl}(aq) \longrightarrow \text{CaCl}_2(aq) + \text{H}_2\text{O}(l) +
+            \text{CO}_2(g)$$
+            <p><strong>Step 2 — Moles of $\text{CO}_2$ Evolved:</strong></p>
+            $$n(\text{CO}_2) = \frac{V_{\text{STP}}}{22.4} = \frac{4.48}{22.4} = 0.2\text{ mol}$$
+            <p><strong>Part (a) — Percentage Purity of $\text{CaCO}_3$:</strong><br />
+                From $1:1$ stoichiometry, $n(\text{pure CaCO}_3) = n(\text{CO}_2) = 0.2\text{ mol}$. Since
+                $M(\text{CaCO}_3) = 40 + 12 + 48 = 100\text{ g/mol}$:</p>
+            $$w(\text{pure CaCO}_3) = 0.2 \times 100 = 20\text{ g}$$
+            $$\%\text{ Purity} = \frac{20}{25} \times 100 = \mathbf{80\%}$$
+            <p><strong>Part (b) — Mass of $\text{CaCl}_2$ Formed:</strong><br />
+                From $1:1$ stoichiometry, $n(\text{CaCl}_2) = 0.2\text{ mol}$, with $M(\text{CaCl}_2) = 40 + 2(35.5) =
+                111\text{ g/mol}$:</p>
+            $$w(\text{CaCl}_2) = 0.2 \times 111 = \mathbf{22.2\text{ g}}$$
+        </div>
+    </div>
+
+    <!-- WE 6 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Molarity, Molality, Mixing &amp; Normality</span>
+            <strong>Worked Example 6: Commercial $\text{H}_2\text{SO}_4$ Interconversion &amp; Solution Mixing</strong>
+        </div>
+        <div class="ex-problem">
+            <p>A laboratory bottle of sulfuric acid ($\text{H}_2\text{SO}_4$, $M = 98\text{ g/mol}$) is labeled
+                "$49\%\text{ w/w}$" with a density of $1.4\text{ g/mL}$.</p>
+            <p><strong>(a)</strong> Calculate its Molarity ($M$) and Molality ($m$).</p>
+            <p><strong>(b)</strong> If $100\text{ mL}$ of this acid is mixed with $200\text{ mL}$ of $2.0\text{ M}$
+                $\text{H}_2\text{SO}_4$ and diluted with water to a total final volume of $500\text{ mL}$, find the
+                final Molarity and Normality of the resulting solution.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Part (a) — First-Principles Conversion (Basis: $100\text{ g}$ solution):</strong></p>
+            <ul>
+                <li>Mass of $\text{H}_2\text{SO}_4$ solute $= 49\text{ g} \implies n_B = \frac{49}{98} = 0.5\text{
+                    mol}$.</li>
+                <li>Mass of water solvent $= 100 - 49 = 51\text{ g} = 0.051\text{ kg}$.</li>
+                <li>Volume of $100\text{ g}$ solution $= \frac{100\text{ g}}{1.4\text{ g/mL}} = \frac{100}{1.4}\text{
+                    mL} = \frac{1}{14}\text{ L}$.</li>
+            </ul>
+            $$M = \frac{n_B}{V_{\text{L}}} = \frac{0.5}{1/14} = \mathbf{7.0\text{ M}} \qquad \left(\text{Shortcut check:
+            } M = \frac{10 \times 49 \times 1.4}{98} = 7.0\text{ M}\right)$$
+            $$m = \frac{n_B}{w_A\text{ (kg)}} = \frac{0.5}{0.051} = \frac{500}{51} \approx \mathbf{9.80\text{ m}}$$
+            <p><strong>Part (b) — Mixing + Dilution to $500\text{ mL}$:</strong><br />
+                Conserve total moles of $\text{H}_2\text{SO}_4$ (using millimoles $= M \times V_{\text{mL}}$ for speed):
+            </p>
+            $$\text{Total mmol} = M_1 V_1 + M_2 V_2 = (7.0 \times 100) + (2.0 \times 200) = 700 + 400 = 1100\text{
+            mmol}$$
+            $$M_f = \frac{\text{Total mmol}}{V_{\text{final}}\text{ (mL)}} = \frac{1100}{500} = \mathbf{2.2\text{ M}}$$
+            <p>Since $\text{H}_2\text{SO}_4$ is a dibasic acid ($n$-factor $= 2$ for complete neutralization):</p>
+            $$N_f = M_f \times n\text{-factor} = 2.2 \times 2 = \mathbf{4.4\text{ N}}$$
+        </div>
+    </div>
+
+    <!-- LEVEL 3 BANNER -->
+    <div class="level-banner l3">
+        <span class="badge badge-l3">Level 3: Rank-Booster</span>
+        <span>Resonance / NSEJS Olympiad Tier — Full First-Principles Derivation + 30-Second Exam Shortcuts</span>
+    </div>
+
+    <!-- WE 7 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Sequential Reactions + POAC</span>
+            <strong>Worked Example 7: Multi-Step Contact Process with Compounding Purity &amp; Yields</strong>
+        </div>
+        <div class="ex-problem">
+            <p>Iron pyrites ($\text{FeS}_2$, $M = 120\text{ g/mol}$) is converted into sulfuric acid
+                ($\text{H}_2\text{SO}_4$, $M = 98\text{ g/mol}$) via the three-step Contact Process:</p>
+            <p>(1) $4\text{FeS}_2 + 11\text{O}_2 \rightarrow 2\text{Fe}_2\text{O}_3 + 8\text{SO}_2$ ($100\%$
+                yield)<br />
+                (2) $2\text{SO}_2 + \text{O}_2 \rightarrow 2\text{SO}_3$ ($80\%$ yield)<br />
+                (3) $\text{SO}_3 + \text{H}_2\text{O} \rightarrow \text{H}_2\text{SO}_4$ ($75\%$ yield)</p>
+            <p>If $300\text{ g}$ of an ore sample containing $80\%$ pure $\text{FeS}_2$ is processed, calculate the
+                final mass of $\text{H}_2\text{SO}_4$ produced.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Method 1 — Full Step-by-Step Stoichiometric Derivation:</strong></p>
+            <ol>
+                <li><strong>Pure $\text{FeS}_2$ available:</strong>
+                    $$w(\text{pure FeS}_2) = 300 \times 0.80 = 240\text{ g} \implies n(\text{FeS}_2) = \frac{240}{120} =
+                    2.0\text{ mol}$$
+                </li>
+                <li><strong>Step 1 ($4\text{ FeS}_2 : 8\text{ SO}_2 \equiv 1:2$, at $100\%$ yield):</strong>
+                    $$n(\text{SO}_2) = 2 \times 2.0 \times 1.00 = 4.0\text{ mol}$$
+                </li>
+                <li><strong>Step 2 ($2\text{ SO}_2 : 2\text{ SO}_3 \equiv 1:1$, at $80\%$ yield):</strong>
+                    $$n(\text{SO}_3) = 4.0 \times 0.80 = 3.2\text{ mol}$$
+                </li>
+                <li><strong>Step 3 ($1\text{ SO}_3 : 1\text{ H}_2\text{SO}_4 \equiv 1:1$, at $75\%$ yield):</strong>
+                    $$n(\text{H}_2\text{SO}_4) = 3.2 \times 0.75 = 2.4\text{ mol}$$
+                </li>
+                <li><strong>Final Mass of $\text{H}_2\text{SO}_4$:</strong>
+                    $$w(\text{H}_2\text{SO}_4) = 2.4 \times 98 = \mathbf{235.2\text{ g}}$$
+                </li>
+            </ol>
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Olympiad Shortcut: POAC on Sulfur (Zero Balancing!)</span>
+                <p>Ignore all intermediate equations and coefficients completely. Track sulfur atoms from $\text{FeS}_2$
+                    (2 S atoms) to $\text{H}_2\text{SO}_4$ (1 S atom), multiplying by the net sequential yield factor
+                    $Y_{\text{net}} = 1.00 \times 0.80 \times 0.75 = 0.60$:</p>
+                $$1 \times n(\text{H}_2\text{SO}_4) = \left[2 \times n(\text{FeS}_2)\right] \times Y_{\text{net}} = (2
+                \times 2.0) \times 0.60 = 2.4\text{ mol}$$
+                $$w(\text{H}_2\text{SO}_4) = 2.4 \times 98 = \mathbf{235.2\text{ g}}$$
+            </div>
+        </div>
+    </div>
+
+    <!-- WE 8 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Eudiometry Contraction Analysis</span>
+            <strong>Worked Example 8: Identifying an Unknown Hydrocarbon by Two-Stage Eudiometry</strong>
+        </div>
+        <div class="ex-problem">
+            <p>$20\text{ mL}$ of a gaseous hydrocarbon $\text{C}_x\text{H}_y$ is exploded with $120\text{ mL}$ of excess
+                $\text{O}_2$ in a eudiometer. On cooling to room temperature ($25^\circ\text{C}$), the volume of the
+                residual gases is $90\text{ mL}$. When shaken with aqueous $\text{KOH}$, the volume shrinks further to
+                $30\text{ mL}$, and this final $30\text{ mL}$ is completely absorbed by alkaline pyrogallol. Deduce the
+                molecular formula of the hydrocarbon (all volumes at identical $T, P$).</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Method 1 — Full First-Principles Volume Accounting:</strong></p>
+            $$\text{C}_x\text{H}_y(g) + \left(x + \frac{y}{4}\right)\text{O}_2(g) \longrightarrow x\text{CO}_2(g) +
+            \frac{y}{2}\text{H}_2\text{O}(l)$$
+            <ol>
+                <li><strong>Volume of $\text{CO}_2$ formed (absorbed by $\text{KOH}$):</strong>
+                    $$V(\text{CO}_2) = 90 - 30 = 60\text{ mL}$$
+                    Since $20\text{ mL}$ of $\text{C}_x\text{H}_y$ produces $20x\text{ mL}$ of $\text{CO}_2$:
+                    $$20x = 60 \implies \mathbf{x = 3}$$
+                </li>
+                <li><strong>Volume of $\text{O}_2$ actually consumed:</strong><br />
+                    Alkaline pyrogallol absorbs the final $30\text{ mL}$, confirming that $V(\text{O}_2\text{ unused}) =
+                    30\text{ mL}$. Therefore:
+                    $$V(\text{O}_2\text{ consumed}) = V(\text{O}_2\text{ taken}) - V(\text{O}_2\text{ unused}) = 120 -
+                    30 = 90\text{ mL}$$
+                </li>
+                <li><strong>Solve for $y$:</strong><br />
+                    From the combustion stoichiometry, $V(\text{O}_2\text{ consumed}) = 20\left(x + \frac{y}{4}\right)$:
+                    $$20\left(3 + \frac{y}{4}\right) = 90 \implies 3 + \frac{y}{4} = 4.5 \implies \frac{y}{4} = 1.5
+                    \implies \mathbf{y = 6}$$
+                </li>
+            </ol>
+            <p>Hence, the molecular formula of the hydrocarbon is <strong>$\text{C}_3\text{H}_6$</strong> (propene /
+                cyclopropane).</p>
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Olympiad Shortcut: Direct Contraction Formulas</span>
+                <p>Read $\Delta V_1$ and $\Delta V_2$ straight from the prompt without tracking $\text{O}_2$:</p>
+                <ul>
+                    <li>$\Delta V_1 = V_{\text{init}} - V_{\text{cooled}} = (20 + 120) - 90 = 50\text{ mL} = 20\left(1 +
+                        \frac{y}{4}\right) \implies 1 + \frac{y}{4} = 2.5 \implies \mathbf{y = 6}$.</li>
+                    <li>$\Delta V_2 = 90 - 30 = 60\text{ mL} = 20x \implies \mathbf{x = 3}$.</li>
+                </ul>
+                <p>Formula $= \mathbf{\text{C}_3\text{H}_6}$ in two mental lines!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WE 9 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Back-Titration &amp; Equivalence</span>
+            <strong>Worked Example 9: Purity of Impure Soda Ash ($\text{Na}_2\text{CO}_3$) via Acid–Base
+                Back-Titration</strong>
+        </div>
+        <div class="ex-problem">
+            <p>$2.65\text{ g}$ of an impure sample of anhydrous sodium carbonate ($\text{Na}_2\text{CO}_3$, $M =
+                106\text{ g/mol}$; impurities are neutral and inert) is dissolved in $50\text{ mL}$ of $0.5\text{ M}$
+                $\text{H}_2\text{SO}_4$ (excess acid). After complete reaction and boiling off $\text{CO}_2$, the
+                remaining excess acid requires $20\text{ mL}$ of $0.5\text{ M}$ $\text{NaOH}$ for exact neutralization.
+                Calculate the percentage purity of the $\text{Na}_2\text{CO}_3$ sample.</p>
+        </div>
+        <div class="ex-solution">
+            <p><strong>Method 1 — Full Mole Stoichiometry (Two Balanced Equations):</strong></p>
+            <p>(1) $\text{Na}_2\text{CO}_3 + \text{H}_2\text{SO}_4 \rightarrow \text{Na}_2\text{SO}_4 +
+                \text{H}_2\text{O} + \text{CO}_2$<br />
+                (2) $\text{H}_2\text{SO}_4 + 2\text{NaOH} \rightarrow \text{Na}_2\text{SO}_4 + 2\text{H}_2\text{O}$</p>
+            <ol>
+                <li>Total moles of $\text{H}_2\text{SO}_4$ initially taken $= 0.5\text{ M} \times 0.050\text{ L} =
+                    0.025\text{ mol}$.</li>
+                <li>Moles of $\text{NaOH}$ used in back-titration $= 0.5\text{ M} \times 0.020\text{ L} = 0.010\text{
+                    mol}$.</li>
+                <li>From Eq. (2), $1\text{ mol } \text{H}_2\text{SO}_4$ reacts with $2\text{ mol } \text{NaOH}$, so
+                    excess $\text{H}_2\text{SO}_4 = \frac{0.010}{2} = 0.005\text{ mol}$.</li>
+                <li>Moles of $\text{H}_2\text{SO}_4$ consumed by $\text{Na}_2\text{CO}_3 = 0.025 - 0.005 = 0.020\text{
+                    mol}$.</li>
+                <li>From Eq. (1) ($1:1$ ratio), $n(\text{pure Na}_2\text{CO}_3) = 0.020\text{ mol} \implies w = 0.020
+                    \times 106 = 2.12\text{ g}$.</li>
+                <li>Percentage purity $= \frac{2.12}{2.65} \times 100 = \mathbf{80\%}$.</li>
+            </ol>
+            <div class="shortcut-box">
+                <span class="box-label">30-Second Olympiad Shortcut: Law of Chemical Equivalence (Zero
+                    Equations!)</span>
+                <p>Convert Molarities directly to Normalities: $N(\text{H}_2\text{SO}_4) = 0.5 \times 2 = 1.0\text{ N}$;
+                    $N(\text{NaOH}) = 0.5 \times 1 = 0.5\text{ N}$; Equivalent weight of $\text{Na}_2\text{CO}_3 =
+                    \frac{106}{2} = 53\text{ g/eq}$.</p>
+                $$\text{meq}(\text{Na}_2\text{CO}_3) = \text{meq}(\text{H}_2\text{SO}_4\text{ total}) -
+                \text{meq}(\text{NaOH}) = (1.0 \times 50) - (0.5 \times 20) = 50 - 10 = 40\text{ meq} = 0.04\text{ eq}$$
+                $$w(\text{pure Na}_2\text{CO}_3) = 0.04\text{ eq} \times 53\text{ g/eq} = 2.12\text{ g} \implies
+                \%\text{ Purity} = \frac{2.12}{2.65} \times 100 = \mathbf{80\%}$$
+            </div>
+        </div>
+    </div>
+
+</article>
