@@ -1,0 +1,896 @@
+<article data-volume="Volume 6: Exam Strategy &amp; 10 Full-Length Mock Tests"
+    data-title="Mock Test 02 — Complete Verified Solutions &amp; Time-Saving Tricks">
+    <div class="chapter-hero">
+        <h1>Mock Test 02 — Complete Verified Solutions &amp; Time-Saving Tricks</h1>
+        <p><strong>Zero-Skip Step-by-Step Forensics (Q1–Q60):</strong> Complete algebraic derivations, Euler/Wilson
+            modular reductions, constraint-equation pulley mechanics, electrochemical stoichiometry, and pedigree
+            elimination proofs for Mock Test 02 (Hard Resonance Calibration). Log every missed item under
+            <code>CG</code>, <code>TM</code>, <code>CS</code>, or <code>TO</code> before advancing to Mock Test 03.
+        </p>
+    </div>
+
+    <!-- ==================== PAPER 1 SOLUTIONS ==================== -->
+    <h2 class="section-heading">PAPER 1 — PART A SOLUTIONS (Q1–Q24 | 96 Marks)</h2>
+
+    <div class="bridge-box">
+        <h3>Section I: Quantitative Aptitude NAT Solutions (Q1–Q10)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q1. Answer: <code>015</code></strong></p>
+        <p><strong>Step 1 (Apply Euler's Totient Theorem):</strong> For modulus $25 = 5^2$, Euler's totient is:</p>
+        $$\phi(25) = 25\left(1 - \frac{1}{5}\right) = 20$$
+        <p>Since $\gcd(13, 25) = 1$ and $\gcd(7, 25) = 1$, Euler's theorem gives $13^{20} \equiv 1 \pmod{25}$ and
+            $7^{20} \equiv 1 \pmod{25}$.</p>
+        <p><strong>Step 2 (Reduce the Exponent Modulo $20$):</strong> $163 = 20(8) + 3$, hence:</p>
+        $$13^{163} + 7^{163} \equiv 13^3 + 7^3 \pmod{25}$$
+        <p><strong>Step 3 (Evaluate Both Cubes Modulo $25$):</strong></p>
+        <ul>
+            <li>$13^2 = 169 = 7(25) - 6 \equiv -6 \pmod{25} \implies 13^3 \equiv (-6)(13) = -78 \equiv 22 \pmod{25}$.
+            </li>
+            <li>$7^2 = 49 \equiv -1 \pmod{25} \implies 7^3 \equiv (-1)(7) = -7 \equiv 18 \pmod{25}$.</li>
+        </ul>
+        $$13^3 + 7^3 \equiv 22 + 18 = 40 \equiv 15 \pmod{25}$$
+        <p>Bubble <code>015</code>.</p>
+        <p><strong>30-Second Speed Trick (Sum-of-Cubes Factoring):</strong> $13^3 + 7^3 = (13 + 7)(13^2 - 13\cdot 7 +
+            7^2) = 20(169 - 91 + 49) = 20(127) \equiv 20(2) = 40 \equiv 15 \pmod{25}$!</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q2. Answer: <code>613</code></strong></p>
+        <p><strong>Step 1 (Distinct Meeting Points $m$):</strong> Reduce the speed ratio to lowest terms: $v_A : v_K = 8
+            : 5$ (already coprime since $\gcd(8, 5) = 1$). Because they run in <strong>opposite directions</strong>, the
+            number of distinct meeting points on the circular track is:</p>
+        $$m = 8 + 5 = 13$$
+        <p><strong>Step 2 (First Meeting at the Starting Point $T$):</strong> Find each runner's full-lap time:</p>
+        $$t_A = \frac{600}{8} = 75\text{ s}, \qquad t_K = \frac{600}{5} = 120\text{ s}$$
+        $$T = \text{LCM}(75, 120) = \text{LCM}(3 \times 5^2,\ 2^3 \times 3 \times 5) = 2^3 \times 3 \times 5^2 =
+        600\text{ s}$$
+        <p><strong>Step 3 (Target Sum):</strong> $T + m = 600 + 13 = 613 \implies$ bubble <code>613</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q3. Answer: <code>108</code></strong></p>
+        <p><strong>Step 1 (Set Up Escalator Equations):</strong> Let the escalator move upward at $e\text{ steps/s}$,
+            and let $N$ be the total number of visible steps on the stationary escalator.</p>
+        <ul>
+            <li>Walking <strong>up</strong> (same direction as escalator): net speed $= (2 + e)\text{ steps/s} \implies
+                N = 30(2 + e)$.</li>
+            <li>Walking <strong>down</strong> (against escalator): net speed $= (4 - e)\text{ steps/s} \implies N = 45(4
+                - e)$.</li>
+        </ul>
+        <p><strong>Step 2 (Equate &amp; Solve for $e$):</strong></p>
+        $$30(2 + e) = 45(4 - e) \implies 2(2 + e) = 3(4 - e) \implies 4 + 2e = 12 - 3e \implies 5e = 8 \implies e =
+        1.6\text{ steps/s}$$
+        <p><strong>Step 3 (Find $N$):</strong> $N = 30(2 + 1.6) = 30 \times 3.6 = 108\text{ steps}$.</p>
+        <p><em>Verification:</em> $45(4 - 1.6) = 45 \times 2.4 = 108$. Bubble <code>108</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q4. Answer: <code>120</code></strong></p>
+        <p><strong>Step 1 (Inventory the Letters of <code>SUCCESS</code>):</strong> $7$ letters total: $3\text{ S's}$,
+            $2\text{ C's}$, $1\text{ U}$, and $1\text{ E}$.</p>
+        <p><strong>Step 2 (Gap Method for Non-Adjacent S's):</strong> First arrange the $4$ non-S letters
+            (<code>U, C, C, E</code>), accounting for the $2$ identical C's:</p>
+        $$\text{Ways to arrange non-S letters} = \frac{4!}{2!} = \frac{24}{2} = 12$$
+        <p>These $4$ letters create exactly $5$ separated gaps: <code>_ X _ X _ X _ X _</code>. Choose any $3$ of these
+            $5$ gaps to place the $3$ identical S's (no extra permutation factor since all S's are identical):</p>
+        $$\text{Ways to place the 3 S's} = \binom{5}{3} = \frac{5 \times 4}{2} = 10$$
+        <p><strong>Step 3 (Multiply):</strong> Total valid arrangements $= 12 \times 10 = 120 \implies$ bubble
+            <code>120</code>.
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q5. Answer: <code>020</code></strong></p>
+        <p><strong>Step 1 (Pigeonhole Worst-Case Construction):</strong> To maximize the number of balls drawn
+            <em>without</em> reaching $6$ of any single colour, draw up to $5$ balls of each colour—<strong>capped by
+                the available count</strong> of each colour:
+        </p>
+        <ul>
+            <li>Red ($15$ available): draw $5$</li>
+            <li>Blue ($12$ available): draw $5$</li>
+            <li>Green ($8$ available): draw $5$</li>
+            <li>Yellow (only $4$ available!): draw all $4$</li>
+        </ul>
+        <p><strong>Step 2 (Force the Pigeonhole Guarantee):</strong> Worst-case maximum without a $6$-of-a-kind $= 5 + 5
+            + 5 + 4 = 19$ balls. The very next ball ($20^{\text{th}}$) MUST be red, blue, or green, instantly completing
+            a set of $6$:</p>
+        $$\text{Minimum draws} = 19 + 1 = 20$$
+        <p>Bubble <code>020</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q6. Answer: <code>014</code></strong></p>
+        <p><strong>Step 1 (Compute $14! \pmod{17}$ via Wilson's Theorem):</strong> Since $p = 17$ is prime, Wilson's
+            Theorem states $(p - 1)! \equiv -1 \pmod{p}$, i.e. $16! \equiv -1 \pmod{17}$:</p>
+        $$16 \times 15 \times 14! \equiv -1 \pmod{17}$$
+        <p>Replace $16 \equiv -1$ and $15 \equiv -2 \pmod{17}$:</p>
+        $$(-1)(-2) \cdot 14! \equiv -1 \pmod{17} \implies 2 \cdot 14! \equiv 16 \pmod{17} \implies 14! \equiv 8
+        \pmod{17}$$
+        <p><strong>Step 2 (Compute $5^{35} \pmod{17}$ via Fermat's Little Theorem):</strong> Since $\gcd(5, 17) = 1$,
+            $5^{16} \equiv 1 \pmod{17}$. Write $35 = 2(16) + 3$:</p>
+        $$5^{35} = (5^{16})^2 \cdot 5^3 \equiv 1^2 \cdot 125 = 7(17) + 6 \equiv 6 \pmod{17}$$
+        <p><strong>Step 3 (Sum Modulo $17$):</strong> $14! + 5^{35} \equiv 8 + 6 = 14 \pmod{17} \implies$ bubble
+            <code>014</code>.
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q7. Answer: <code>300</code></strong></p>
+        <p><strong>Step 1 (Pairwise Meeting Intervals in Same Direction):</strong> All three cyclists meet
+            simultaneously anywhere on the track whenever $P$ meets $Q$ AND $Q$ meets $R$ at the same instant:</p>
+        $$T_{PQ} = \frac{L}{|v_P - v_Q|} = \frac{600}{19 - 13} = \frac{600}{6} = 100\text{ s}$$
+        $$T_{QR} = \frac{L}{|v_Q - v_R|} = \frac{600}{13 - 9} = \frac{600}{4} = 150\text{ s}$$
+        <p><strong>Step 2 (Take the LCM):</strong></p>
+        $$T_{\text{all}} = \text{LCM}(100, 150) = 300\text{ s}$$
+        <p><em>Verification at $t = 300\text{ s}$:</em> $P$ rides $5700\text{ m}$ ($9.5$ laps), $Q$ rides $3900\text{
+            m}$ ($6.5$ laps), $R$ rides $2700\text{ m}$ ($4.5$ laps)—all three coincide at the exact halfway mark!
+            Bubble <code>300</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q8. Answer: <code>267</code></strong></p>
+        <p><strong>Step 1 (Number of Distinct Straight Lines $L$):</strong> Every pair of points defines a line, except
+            the $\binom{5}{2}$ pairs on the collinear line all collapse into $1$ single line (do not forget the $+1$!):
+        </p>
+        $$L = \binom{12}{2} - \binom{5}{2} + 1 = \frac{12 \times 11}{2} - \frac{5 \times 4}{2} + 1 = 66 - 10 + 1 = 57$$
+        <p><strong>Step 2 (Number of Distinct Triangles $T$):</strong> Every triplet of points forms a triangle except
+            triplets taken entirely from the $5$ collinear points:</p>
+        $$T = \binom{12}{3} - \binom{5}{3} = \frac{12 \times 11 \times 10}{6} - \frac{5 \times 4}{2} = 220 - 10 = 210$$
+        <p><strong>Step 3 (Target Sum):</strong> $T + L = 210 + 57 = 267 \implies$ bubble <code>267</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q9. Answer: <code>129</code></strong></p>
+        <p><strong>Step 1 (Prime Factorization of $43200$):</strong></p>
+        $$43200 = 432 \times 100 = (16 \times 27) \times (4 \times 25) = (2^4 \times 3^3) \times (2^2 \times 5^2) = 2^6
+        \times 3^3 \times 5^2$$
+        <p><strong>Step 2 (Total Positive Divisors $p$):</strong></p>
+        $$p = (6 + 1)(3 + 1)(2 + 1) = 7 \times 4 \times 3 = 84$$
+        <p><strong>Step 3 (Divisors That Are Multiples of $12 = 2^2 \times 3^1$):</strong> Factor out $12$ to count all
+            divisors of the quotient $N / 12 = 2^4 \times 3^2 \times 5^2$:</p>
+        $$q = (4 + 1)(2 + 1)(2 + 1) = 5 \times 3 \times 3 = 45$$
+        <p><strong>Step 4 (Sum):</strong> $p + q = 84 + 45 = 129 \implies$ bubble <code>129</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q10. Answer: <code>094</code></strong></p>
+        <p><strong>Step 1 (Partition $\{1, 2, \dots, 200\}$ by Remainders Modulo $11$):</strong> Since $200 = 11 \times
+            18 + 2$, the counts in each residue class $R_r = \{x \in [1, 200] : x \equiv r \pmod{11}\}$ are:</p>
+        <ul>
+            <li>$R_1$ and $R_2$ each contain <strong>$19$</strong> integers ($1, 12, \dots, 199$ and $2, 13, \dots,
+                200$).</li>
+            <li>$R_3, R_4, R_5, R_6, R_7, R_8, R_9, R_{10}, R_0$ each contain <strong>$18$</strong> integers.</li>
+        </ul>
+        <p><strong>Step 2 (Maximize the "Safe" Subset with Zero Pair Sums $\equiv 0 \pmod{11}$):</strong></p>
+        <ul>
+            <li>From $R_0$: take at most <strong>$1$</strong> integer (any two multiples of $11$ sum to a multiple of
+                $11$).</li>
+            <li>Complementary pair $(R_1, R_{10})$: pick the entire larger bucket $R_1 \implies \mathbf{19}$ integers.
+            </li>
+            <li>Complementary pair $(R_2, R_9)$: pick the entire larger bucket $R_2 \implies \mathbf{19}$ integers.</li>
+            <li>Remaining $3$ complementary pairs $(R_3, R_8)$, $(R_4, R_7)$, $(R_5, R_6)$: pick one full bucket from
+                each $\implies 3 \times 18 = \mathbf{54}$ integers.</li>
+        </ul>
+        <p>Maximum avoidable set $= 1 + 19 + 19 + 54 = 93$ integers.</p>
+        <p><strong>Step 3 (Pigeonhole Guarantee):</strong> Choosing $93 + 1 = 94$ integers strictly forces at least one
+            pair whose sum is divisible by $11$. Bubble <code>094</code>.</p>
+    </div>
+
+    <div class="bridge-box">
+        <h3>Section II: Logical Reasoning MCQ Solutions (Q11–Q12)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q11. Answer: (C)</strong></p>
+        <p><strong>Step 1 (Universal Property of Primes $> 3$):</strong> Every prime $p > 3$ is neither divisible by $2$
+            nor by $3$, so $p = 6k \pm 1$ for some integer $k \ge 1$. Squaring yields:</p>
+        $$p^2 - 1 = (p - 1)(p + 1) = (6k \pm 1)^2 - 1 = 12k(3k \pm 1)$$
+        <p>Whether $k$ is even or odd, one of $k$ or $(3k \pm 1)$ is always even, so $24 \mid (p^2 - 1)$, meaning $p^2
+            \equiv 1 \pmod{24}$ for <em>every</em> prime $p > 3$.</p>
+        <p><strong>Step 2 (Subtract):</strong> $p^2 - q^2 \equiv 1 - 1 = 0 \pmod{24}$ always! Hence Quantity A $= 0 =$
+            Quantity B $\implies$ <strong>(C)</strong>.</p>
+        <p><strong>15-Second Speed Check:</strong> Plug $q = 5, p = 7$: $49 - 25 = 24 \equiv 0$; plug $q = 5, p = 11$:
+            $121 - 25 = 96 = 4(24) \equiv 0$. Instant confirmation!</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q12. Answer: (B)</strong></p>
+        <p><strong>Step 1 (Recognize $n^3 - n$ Structure):</strong> Rewrite each term as a product of $3$ consecutive
+            integers $(n-1)n(n+1) = n^3 - n$:</p>
+        <ul>
+            <li>$1 \times 2 \times 3 = 6$ ($2^3 - 2$)</li>
+            <li>$2 \times 3 \times 4 = 24$ ($3^3 - 3$)</li>
+            <li>$3 \times 4 \times 5 = 60$ ($4^3 - 4$)</li>
+            <li>$4 \times 5 \times 6 = 120$ ($5^3 - 5$)</li>
+            <li>$5 \times 6 \times 7 = 210$ ($6^3 - 6$)</li>
+        </ul>
+        <p><strong>Step 2 (Next Term):</strong> $6 \times 7 \times 8 = 336$ ($7^3 - 7 = 343 - 7 = 336$) $\implies$
+            <strong>(B)</strong>.
+        </p>
+    </div>
+
+    <div class="bridge-box">
+        <h3>Section III: Mathematics NAT Solutions (Q13–Q16)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q13. Answer: <code>050</code></strong></p>
+        <p><strong>Step 1 (Vieta's Cubic Relations):</strong> For $P(x) = x^3 - 7x^2 + 11x - 4$:</p>
+        $$e_1 = \alpha + \beta + \gamma = 7, \qquad e_2 = \alpha\beta + \beta\gamma + \gamma\alpha = 11, \qquad e_3 =
+        \alpha\beta\gamma = 4$$
+        <p><strong>Step 2 (Evaluate Both Pieces):</strong></p>
+        <ul>
+            <li>$(\alpha + 1)(\beta + 1)(\gamma + 1) = 1 + e_1 + e_2 + e_3 = 1 + 7 + 11 + 4 = 23$. <em>(Shortcut: Since
+                    $P(x) = (x-\alpha)(x-\beta)(x-\gamma)$, set $x = -1$: $-P(-1) = -[(-1) - 7 - 11 - 4] = 23$!)</em>
+            </li>
+            <li>$\alpha^2 + \beta^2 + \gamma^2 = e_1^2 - 2e_2 = 7^2 - 2(11) = 49 - 22 = 27$.</li>
+        </ul>
+        <p><strong>Step 3 (Sum):</strong> $23 + 27 = 50 \implies$ bubble <code>050</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q14. Answer: <code>270</code></strong></p>
+        <p><strong>Step 1 (Exploit Right-Triangle Geometry):</strong> $\triangle ABC$ has right angle at $A(0, 0)$ with
+            legs $c = AB = 18$, $b = AC = 24$, and hypotenuse $a = BC = \sqrt{18^2 + 24^2} = 30$ (a $6\times$ scaled
+            $3\text{-}4\text{-}5$ triple!).</p>
+        <p><strong>Step 2 (Locate $H$, $O$, and $I$ Instantly):</strong></p>
+        <ul>
+            <li><strong>Orthocentre $H$:</strong> In any right triangle, $H$ is the right-angle vertex $\implies H =
+                A(0, 0)$.</li>
+            <li><strong>Circumcentre $O$:</strong> Midpoint of hypotenuse $BC$ $\implies O = \left(\frac{18+0}{2},
+                \frac{0+24}{2}\right) = (9, 12)$, with circumradius $R = \frac{30}{2} = 15$.</li>
+            <li><strong>Incentre $I$:</strong> Inradius $r = \frac{b + c - a}{2} = \frac{24 + 18 - 30}{2} = 6$. Because
+                the incircle is tangent to the positive $x$- and $y$-axes, $I = (r, r) = (6, 6)$.</li>
+        </ul>
+        <p><strong>Step 3 (Compute $OH^2 + OI^2$):</strong></p>
+        $$OH^2 = (9 - 0)^2 + (12 - 0)^2 = 81 + 144 = 225 \quad (= R^2)$$
+        $$OI^2 = (9 - 6)^2 + (12 - 6)^2 = 9 + 36 = 45 \quad \bigl(\text{Euler's check: } R(R - 2r) = 15(15 - 12) =
+        45!\bigr)$$
+        $$OH^2 + OI^2 = 225 + 45 = 270$$
+        <p>Bubble <code>270</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q15. Answer: <code>313</code></strong></p>
+        <p><strong>Step 1 (Tangent-Secant / Power-of-a-Point Theorem):</strong> Note that the full secant segment is $PB
+            = PA + AB = 8 + 10 = 18\text{ cm}$:</p>
+        $$PT^2 = PA \cdot PB = 8 \times 18 = 144\text{ cm}^2$$
+        <p><strong>Step 2 (Pythagoras in Right $\triangle OTP$):</strong> Because radius $OT \perp PT$ at the point of
+            tangency ($\angle OTP = 90^\circ$) with $OT = 13\text{ cm}$:</p>
+        $$OP^2 = OT^2 + PT^2 = 13^2 + 144 = 169 + 144 = 313\text{ cm}^2$$
+        <p>Bubble <code>313</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q16. Answer: <code>095</code></strong></p>
+        <p><strong>Step 1 (Find $\angle BAD$ &amp; Opposite Cyclic Angle $\angle BCD$):</strong> Because $XAY$ is a
+            straight tangent line at $A$:</p>
+        $$\angle BAD = 180^\circ - \angle BAX - \angle DAY = 180^\circ - 58^\circ - 48^\circ = 74^\circ$$
+        <p>Since $ABCD$ is a cyclic quadrilateral, opposite angles sum to $180^\circ$:</p>
+        $$\angle BCD = 180^\circ - \angle BAD = 180^\circ - 74^\circ = 106^\circ$$
+        <p><strong>Step 2 (Use Isosceles $\triangle BCD$):</strong> Given $CB = CD$, base angles are equal:</p>
+        $$\angle CDB = \angle CBD = \frac{180^\circ - 106^\circ}{2} = \frac{74^\circ}{2} = 37^\circ$$
+        <p><strong>Step 3 (Apply Alternate Segment Theorem):</strong> The angle between tangent $AX$ and chord $AB$
+            equals the inscribed angle subtended by chord $AB$ in the alternate segment:</p>
+        $$\angle ADB = \angle BAX = 58^\circ$$
+        <p><strong>Step 4 (Add Adjacent Angles at $D$):</strong></p>
+        $$\angle ADC = \angle ADB + \angle CDB = 58^\circ + 37^\circ = 95^\circ$$
+        <p>Bubble <code>095</code>.</p>
+    </div>
+
+    <div class="bridge-box">
+        <h3>Section IV: Mathematics MCQ Solutions (Q17–Q24)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q17. Answer: (A)</strong></p>
+        <p>When dividing by the quadratic divisor $(x - 2)(x + 4)$, the remainder is at most linear: $R(x) = ax + b$. By
+            the Remainder Theorem, $P(2) = R(2) = 7$ and $P(-4) = R(-4) = -5$:</p>
+        $$2a + b = 7 \quad \text{and} \quad -4a + b = -5$$
+        <p>Subtracting gives $6a = 12 \implies a = 2$, and $b = 7 - 2(2) = 3 \implies R(x) = 2x + 3 \implies$
+            <strong>(A)</strong>.
+        </p>
+        <p><strong>10-Second MCQ Shortcut:</strong> Just plug $x = 2$ and $x = -4$ into options (A)–(D)! Only (A) $2x +
+            3$ gives $2(2)+3 = 7$ and $2(-4)+3 = -5$.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q18. Answer: (C)</strong></p>
+        <p>Combine the fractions over a common denominator:</p>
+        $$\frac{1}{\alpha} + \frac{1}{\beta} + \frac{1}{\gamma} = \frac{\alpha\beta + \beta\gamma +
+        \gamma\alpha}{\alpha\beta\gamma}$$
+        <p>From $2x^3 - 5x^2 + 8x - 4 = 0$, Vieta's formulas give $\sum \alpha\beta = \frac{8}{2} = 4$ and
+            $\alpha\beta\gamma = -\left(\frac{-4}{2}\right) = 2$:</p>
+        $$\frac{1}{\alpha} + \frac{1}{\beta} + \frac{1}{\gamma} = \frac{4}{2} = 2$$
+        <p>Matches <strong>(C)</strong>. <em>(Shortcut: For any $ax^3 + bx^2 + cx + d = 0$, $\sum \frac{1}{\alpha} =
+                -\frac{c}{d} = -\frac{8}{-4} = 2$ directly!)</em></p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q19. Answer: (D)</strong></p>
+        <p><strong>Step 1 (Centroid Coordinates):</strong></p>
+        $$G = \left(\frac{2 + k + (-4)}{3},\ \frac{-3 + 5 + 7}{3}\right) = \left(\frac{k - 2}{3},\ 3\right)$$
+        <p><strong>Step 2 (Substitute $G$ into $2x - 3y + 5 = 0$):</strong></p>
+        $$2\left(\frac{k - 2}{3}\right) - 3(3) + 5 = 0 \implies \frac{2(k - 2)}{3} = 4 \implies k - 2 = 6 \implies k =
+        8$$
+        <p>Matches <strong>(D)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q20. Answer: (A)</strong></p>
+        <p>Line $OP$ bisects $\angle APB = 60^\circ$, so in right-angled $\triangle OAP$ ($\angle OAP = 90^\circ$),
+            $\angle APO = 30^\circ$ and $OA = 6\text{ cm}$:</p>
+        $$\sin 30^\circ = \frac{OA}{OP} \implies \frac{1}{2} = \frac{6}{OP} \implies OP = 12\text{ cm}$$
+        $$PA = OA \cot 30^\circ = 6\sqrt{3}\text{ cm}$$
+        <p>Since tangents from an external point are equal ($PA = PB$) and their included angle is $\angle APB =
+            60^\circ$, $\triangle PAB$ is <strong>equilateral</strong>, so $AB = PA = 6\sqrt{3}\text{ cm}$ $\implies$
+            <strong>(A)</strong>.
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q21. Answer: (B)</strong></p>
+        <p>Let the circumcentre be $O(x, y)$. Since $OP = OQ$ for $P(0,0)$ and $Q(6,0)$, $O$ lies on the perpendicular
+            bisector of $PQ$, giving $x = 3$ immediately. Now equate $OP^2 = OR^2$ for $R(2, 4)$:</p>
+        $$(3 - 0)^2 + (y - 0)^2 = (3 - 2)^2 + (y - 4)^2$$
+        $$9 + y^2 = 1 + y^2 - 8y + 16 \implies 8y = 8 \implies y = 1$$
+        <p>Thus $O = (3, 1) \implies$ <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q22. Answer: (B)</strong></p>
+        <p>Use the Direct Common Tangent formula with $d = 10\text{ cm}$, $r_1 = 10\text{ cm}$, $r_2 = 4\text{ cm}$:</p>
+        $$L_{\text{DCT}} = \sqrt{d^2 - (r_1 - r_2)^2} = \sqrt{10^2 - (10 - 4)^2} = \sqrt{100 - 36} = \sqrt{64} = 8\text{
+        cm}$$
+        <p>Matches <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q23. Answer: (A)</strong></p>
+        <p><strong>Step 1 (Find Orthocentre $H$):</strong> Side $AB$ lies on the $x$-axis ($y = 0$), so the altitude
+            from $C(0, 6)$ to $AB$ is the vertical line $x = 0$. The slope of side $BC$ (through $(6,0)$ and $(0,6)$) is
+            $m_{BC} = \frac{6 - 0}{0 - 6} = -1$, so the altitude from $A(-2, 0)$ perpendicular to $BC$ has slope $+1$:
+        </p>
+        $$y - 0 = 1(x - (-2)) \implies y = x + 2$$
+        <p>Intersecting with $x = 0$ gives $H = (0, 2)$.</p>
+        <p><strong>Step 2 (Find Circumcentre $O$ via Euler Line $HG : GO = 2 : 1$):</strong> Centroid $G =
+            \left(\frac{-2 + 6 + 0}{3}, \frac{0 + 0 + 6}{3}\right) = \left(\frac{4}{3}, 2\right)$. Since $G = \frac{2O +
+            H}{3}$:</p>
+        $$O = \frac{3G - H}{2} = \frac{(4, 6) - (0, 2)}{2} = \frac{(4, 4)}{2} = (2, 2)$$
+        <p><em>Check:</em> $OA^2 = 16+4=20$, $OB^2 = 16+4=20$, $OC^2 = 4+16=20$. Exact match! Choice
+            <strong>(A)</strong>.
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q24. Answer: (D)</strong></p>
+        <p>Using $O(2, 2)$ from Q23 and vertex $C(0, 6)$, the squared circumradius is:</p>
+        $$R^2 = OC^2 = (2 - 0)^2 + (2 - 6)^2 = 4 + 16 = 20$$
+        $$\text{Area of circumcircle} = \pi R^2 = 20\pi\text{ sq. units}$$
+        <p>Matches <strong>(D)</strong>.</p>
+    </div>
+
+    <div class="trap-box">
+        <h3>Mock 02 Post-Mortem Forensics #1 — QA &amp; Geometry Precision Traps (Q5, Q10, Q15)</h3>
+        <ul>
+            <li><strong>The Uncapped Pigeonhole Trap (Q5):</strong> Blindly computing $4 \text{ colours} \times 5 + 1 =
+                21$ forgets that only <strong>$4$</strong> yellow balls exist in the bag! Always cap each colour's
+                worst-case draw at $\min(k - 1,\ \text{available count})$.</li>
+            <li><strong>The Uneven Residue-Bucket Trap (Q10):</strong> In $\{1, \dots, 200\}$, $200$ is NOT a multiple
+                of $11$ ($200 = 11 \times 18 + 2$). Taking $5 \times 18 + 1 + 1 = 92$ misses the two extra integers
+                ($199 \in R_1$ and $200 \in R_2$), which allow $19$ picks each instead of $18$!</li>
+            <li><strong>The Chord-vs-Secant Trap (Q15):</strong> In $PT^2 = PA \cdot PB$, students routinely plug $PA
+                \cdot AB = 8 \times 10 = 80$ instead of the full secant length $PB = PA + AB = 18$. Both segments in
+                Power-of-a-Point MUST start from the external point $P$!</li>
+        </ul>
+    </div>
+
+    <!-- ==================== PAPER 2 SOLUTIONS ==================== -->
+    <h2 class="section-heading">PAPER 2 — PART B SOLUTIONS (Q25–Q60 | 144 Marks)</h2>
+
+    <div class="bridge-box">
+        <h3>Section I: Physics NAT Solutions (Q25–Q28)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q25. Answer: <code>030</code></strong></p>
+        <p><strong>Step 1 (Static-Friction Gatekeeper Check):</strong> Driving gravity pull on $m_2$ is $m_2 g = 4
+            \times 10 = 40\text{ N}$. Maximum static friction on $m_1$ is:</p>
+        $$f_{s,\max} = \mu_s m_1 g = 0.4 \times 6 \times 10 = 24\text{ N}$$
+        <p>Since $40\text{ N} > 24\text{ N}$, the blocks <strong>accelerate</strong> and kinetic friction takes over:
+            $f_k = \mu_k m_1 g = 0.25 \times 60 = 15\text{ N}$.</p>
+        <p><strong>Step 2 (Find Acceleration $a$ &amp; Tension $T$):</strong></p>
+        $$a = \frac{m_2 g - f_k}{m_1 + m_2} = \frac{40 - 15}{6 + 4} = \frac{25}{10} = 2.5\text{ m/s}^2$$
+        <p>From FBD of hanging block $m_2$: $m_2 g - T = m_2 a \implies T = 4(10 - 2.5) = 30\text{ N}$.</p>
+        <p><em>Check on $m_1$:</em> $T - f_k = 30 - 15 = 15 = 6(2.5)$. Exact match! Bubble <code>030</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q26. Answer: <code>090</code></strong></p>
+        <p><strong>Step 1 (Lensmaker's Formula):</strong> For an equiconvex glass lens in air, $n = 1.5$, $R_1 =
+            +20\text{ cm}$, and $R_2 = -20\text{ cm}$:</p>
+        $$\frac{1}{f} = (n - 1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right) = (1.5 - 1)\left(\frac{1}{20} -
+        \frac{1}{-20}\right) = 0.5 \times \frac{2}{20} = \frac{1}{20} \implies f = +20\text{ cm}$$
+        <p><strong>Step 2 (Thin Lens Formula):</strong> With $u = -30\text{ cm}$:</p>
+        $$\frac{1}{v} - \frac{1}{u} = \frac{1}{f} \implies \frac{1}{v} = \frac{1}{20} + \frac{1}{-30} = \frac{3 - 2}{60}
+        = +\frac{1}{60} \implies v = +60\text{ cm}$$
+        <p><strong>Step 3 (Object-to-Image Separation):</strong> The object is $30\text{ cm}$ on the left of the lens,
+            and the real image forms $60\text{ cm}$ on the <strong>opposite</strong> (right) side:</p>
+        $$\text{Separation} = |u| + |v| = 30 + 60 = 90\text{ cm}$$
+        <p>Bubble <code>090</code>. <em>(Contrast with Q26 of Mock 01: for a concave mirror, real image and object are
+                on the SAME side so separation $= |v - u|$; for a convex lens, they are on OPPOSITE sides so separation
+                $= |u| + |v|$!)</em></p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q27. Answer: <code>036</code></strong></p>
+        <p><strong>Step 1 (String Constraint Relation):</strong> Two vertical string segments hold up the movable pulley
+            carrying block $A$, while one segment holds block $B$. When block $A$ descends by $\Delta y$, $2\Delta y$ of
+            string is released, pulling block $B$ upward by $2\Delta y$. Differentiating twice gives:</p>
+        $$a_B = 2a_A \quad (\text{let } a_A = a\text{ downward, } a_B = 2a\text{ upward})$$
+        <p><em>Direction check:</em> $m_A g = 120\text{ N} > 2 m_B g = 40\text{ N}$, so block $A$ indeed moves downward.
+        </p>
+        <p><strong>Step 2 (Newton's Second Law FBDs):</strong></p>
+        <ul>
+            <li>Block $A$ ($12\text{ kg}$, upward force $2T$): $120 - 2T = 12a \quad \text{---(1)}$</li>
+            <li>Block $B$ ($2\text{ kg}$, upward force $T$): $T - 20 = 2(2a) = 4a \quad \text{---(2)}$</li>
+        </ul>
+        <p><strong>Step 3 (Eliminate $a$):</strong> Multiply (2) by $3$: $3T - 60 = 12a$. Equate with (1):</p>
+        $$120 - 2T = 3T - 60 \implies 5T = 180 \implies T = 36\text{ N}$$
+        <p>Bubble <code>036</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q28. Answer: <code>024</code></strong></p>
+        <p><strong>Step 1 (Critical Angle Geometry):</strong> Light escapes into air only for angles of incidence $i \le
+            C$, where:</p>
+        $$\sin C = \frac{n_{\text{air}}}{n_{\text{liquid}}} = \frac{1}{5/3} = \frac{3}{5}$$
+        <p>From the $3\text{-}4\text{-}5$ right triangle, $\cos C = \frac{4}{5}$ and $\tan C = \frac{3}{4}$.</p>
+        <p><strong>Step 2 (Radius &amp; Diameter of Circle of Illuminance):</strong></p>
+        $$R = h \tan C = 16 \times \frac{3}{4} = 12\text{ cm} \implies \text{Diameter} = 2R = 24\text{ cm}$$
+        <p>Bubble <code>024</code>. <em>(Target Audit: Always check whether radius $12$ or <strong>diameter</strong>
+                $24$ is asked!)</em></p>
+    </div>
+
+    <div class="bridge-box">
+        <h3>Section II: Physics MCQ Solutions (Q29–Q36)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q29. Answer: (C)</strong></p>
+        <p>Compute the limiting (maximum) static friction first: $f_{s,\max} = \mu_s N = 0.5 \times (5 \times 10) =
+            25\text{ N}$. Because the applied horizontal force ($18\text{ N}$) is <strong>less than</strong> $25\text{
+            N}$, the block never moves, and self-adjusting static friction exactly balances the pull: $f = 18\text{ N}
+            \implies$ <strong>(C)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q30. Answer: (D)</strong></p>
+        <p>Moving <strong>upward</strong> while <strong>decelerating</strong> (slowing down) means the acceleration
+            vector $\vec{a}$ points <strong>downward</strong> ($a = 2\text{ m/s}^2$ downward). From the student's FBD
+            ($mg - N = ma$):</p>
+        $$N = m(g - a) = 60(10 - 2) = 60 \times 8 = 480\text{ N}$$
+        <p>Matches <strong>(D)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q31. Answer: (A)</strong></p>
+        <p>Convert both focal lengths to <strong>metres</strong> before applying $P = \frac{1}{f(\text{m})}$:</p>
+        $$P_1 = \frac{1}{+0.25\text{ m}} = +4\text{ D}, \qquad P_2 = \frac{1}{-0.50\text{ m}} = -2\text{ D}$$
+        $$P_{\text{net}} = P_1 + P_2 = +4 + (-2) = +2\text{ D} \quad (\text{positive} \implies \text{converging})$$
+        <p>Matches <strong>(A)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q32. Answer: (B)</strong></p>
+        <p>Total Internal Reflection requires light to travel from an <strong>optically denser medium to a rarer
+                medium</strong> ($n_1 > n_2$) AND strike the boundary at an angle of incidence <strong>strictly greater
+                than the critical angle</strong> $C = \sin^{-1}(n_2 / n_1)$ $\implies$ <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q33. Answer: (C)</strong></p>
+        <p><strong>Step 1 (Find Maximum Common Acceleration from Upper Block):</strong> Because the external force $F$
+            acts on the lower $8\text{ kg}$ slab, the upper $2\text{ kg}$ block is accelerated forward
+            <em>exclusively</em> by static friction between the two blocks:
+        </p>
+        $$f_{\max} = \mu_s m_1 g = 0.3 \times 2 \times 10 = 6\text{ N} \implies a_{\max} = \frac{f_{\max}}{m_1} = \mu_s
+        g = 3\text{ m/s}^2$$
+        <p><strong>Step 2 (Find Maximum Force on Combined System):</strong> With zero friction on the floor, both blocks
+            accelerate together at $a_{\max} = 3\text{ m/s}^2$:</p>
+        $$F_{\max} = (m_1 + m_2) a_{\max} = (2 + 8) \times 3 = 30\text{ N}$$
+        <p>Matches <strong>(C)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q34. Answer: (D)</strong></p>
+        <p>By the Lensmaker's equation in a surrounding medium of refractive index $n_{\text{liquid}}$:</p>
+        $$\frac{1}{f_{\text{liquid}}} = \left(\frac{n_{\text{lens}}}{n_{\text{liquid}}} - 1\right)\left(\frac{1}{R_1} -
+        \frac{1}{R_2}\right)$$
+        <p>Since $n_{\text{lens}} = 1.50 < n_{\text{liquid}}=1.65$, the factor $\left(\frac{1.50}{1.65} - 1\right)$
+                becomes <strong>negative</strong>, reversing the sign of $f$. Therefore, the convex glass lens acts as a
+                <strong>diverging lens</strong> $\implies$ <strong>(D)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q35. Answer: (B)</strong></p>
+        <p>Apply Bessel's displacement formula directly with $D = 100\text{ cm}$ and $d = 60\text{ cm}$:</p>
+        $$f = \frac{D^2 - d^2}{4D} = \frac{100^2 - 60^2}{4(100)} = \frac{10000 - 3600}{400} = \frac{6400}{400} =
+        16\text{ cm}$$
+        <p>Matches <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q36. Answer: (A)</strong></p>
+        <p>In Bessel's method, the two conjugate lens positions have object/image distances $u_1 = \frac{D - d}{2} =
+            20\text{ cm}$, $v_1 = \frac{D + d}{2} = 80\text{ cm}$, and vice versa ($u_2 = 80\text{ cm}, v_2 = 20\text{
+            cm}$).</p>
+        <ul>
+            <li>Magnification at position 1: $|m_1| = \frac{v_1}{u_1} = \frac{80}{20} = 4 \implies \text{Object height }
+                O = \frac{I_1}{4} = \frac{8}{4} = 2\text{ cm}$.</li>
+            <li>Magnification at position 2: $|m_2| = \frac{v_2}{u_2} = \frac{20}{80} = \frac{1}{4} \implies I_2 =
+                \frac{1}{4} \times 2\text{ cm} = 0.5\text{ cm}$.</li>
+        </ul>
+        <p><em>30-Second Formula Check:</em> $\frac{I_1}{I_2} = \left(\frac{D + d}{D - d}\right)^2 =
+            \left(\frac{160}{40}\right)^2 = 16 \implies I_2 = \frac{8}{16} = 0.5\text{ cm}$! Matches
+            <strong>(A)</strong>.
+        </p>
+    </div>
+
+    <div class="trap-box">
+        <h3>Mock 02 Post-Mortem Forensics #2 — NLM &amp; Optics Deadly Traps (Q27, Q29, Q30)</h3>
+        <ul>
+            <li><strong>Equal-Acceleration Pulley Trap (Q27):</strong> Whenever a string loops around a <strong>movable
+                    pulley</strong>, the accelerations of the two blocks are NOT equal! Count the string segments on
+                each mass ($2T$ on $A$, $1T$ on $B$) and enforce virtual work: $\sum \vec{T} \cdot \vec{a} = 0 \implies
+                2a_A = a_B$.</li>
+            <li><strong>Blind $\mu_s N$ Friction Trap (Q29):</strong> Never write $f = \mu_s N = 25\text{ N}$
+                automatically! Static friction is strictly $\le \mu_s N$—it only supplies what is needed to prevent
+                slipping ($18\text{ N}$).</li>
+            <li><strong>Velocity vs. Acceleration Direction Trap (Q30):</strong> Seeing "moving upward" tricks students
+                into writing $N = m(g + a) = 720\text{ N}$. Always look at the <em>acceleration</em> vector: moving up +
+                decelerating means $\vec{a}$ points <strong>downward</strong>, making you feel lighter ($480\text{ N}$)!
+            </li>
+        </ul>
+    </div>
+
+    <div class="bridge-box">
+        <h3>Section III: Chemistry NAT Solutions (Q37–Q40)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q37. Answer: <code>140</code></strong></p>
+        <p><strong>Step 1 (Compute Millimoles of $\text{H}^+$ and $\text{OH}^-$):</strong> Because
+            $\text{H}_2\text{SO}_4$ is <strong>dibasic</strong> ($n$-factor $= 2$):</p>
+        $$n(\text{H}^+) = 2 \times 0.05\text{ M} \times 100\text{ mL} = 10\text{ mmol}$$
+        $$n(\text{OH}^-) = 1 \times 0.02\text{ M} \times 100\text{ mL} = 2\text{ mmol}$$
+        <p><strong>Step 2 (Find Residual $[\text{H}^+]$ in Total Volume $200\text{ mL}$):</strong></p>
+        $$\text{Excess } n(\text{H}^+) = 10 - 2 = 8\text{ mmol} \implies [\text{H}^+] = \frac{8\text{ mmol}}{200\text{
+        mL}} = 0.04\text{ M} = 4 \times 10^{-2}\text{ M}$$
+        <p><strong>Step 3 (Logarithmic $\text{pH}$):</strong></p>
+        $$\text{pH} = -\log_{10}(4 \times 10^{-2}) = 2 - \log_{10}(2^2) = 2 - 2(0.30) = 1.40$$
+        $$100x = 100(1.40) = 140$$
+        <p>Bubble <code>140</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q38. Answer: <code>057</code></strong></p>
+        <p><strong>Step 1 (Count Structural Isomers of Hexane $\text{C}_6\text{H}_{14}$, $p = 5$):</strong></p>
+        <ol>
+            <li>$n$-Hexane</li>
+            <li>2-Methylpentane</li>
+            <li>3-Methylpentane</li>
+            <li>2,2-Dimethylbutane</li>
+            <li>2,3-Dimethylbutane</li>
+        </ol>
+        <p><strong>Step 2 (Count Structural Isomers of $\text{C}_4\text{H}_{10}\text{O}$, $q = 7$):</strong></p>
+        <ul>
+            <li><strong>4 Alcohols:</strong> Butan-1-ol, Butan-2-ol, 2-Methylpropan-1-ol, 2-Methylpropan-2-ol.</li>
+            <li><strong>3 Ethers:</strong> Ethoxyethane (diethyl ether), 1-Methoxypropane, 2-Methoxypropane.</li>
+        </ul>
+        <p><strong>Step 3 (Target Value):</strong> $10p + q = 10(5) + 7 = 57 \implies$ bubble <code>057</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q39. Answer: <code>054</code></strong></p>
+        <p><strong>Step 1 (Convert Charge to Faradays):</strong> Time $t = 100\text{ min} = 100 \times 60 = 6000\text{
+            s}$:</p>
+        $$Q = I \cdot t = 96.5 \times 6000 = 579000\text{ C}$$
+        $$n(e^-) = \frac{Q}{F} = \frac{96.5 \times 6000}{96500} = 6.0\text{ Faradays}$$
+        <p><strong>Step 2 (Apply Faraday's Law to $\text{Al}^{3+} + 3e^- \longrightarrow \text{Al}$):</strong> $3\text{
+            F}$ deposit $1\text{ mol Al}$ ($27\text{ g}$), so $6\text{ F}$ deposit:</p>
+        $$n(\text{Al}) = \frac{6.0}{3} = 2.0\text{ mol} \implies \text{Mass of Al} = 2.0 \times 27 = 54\text{ g}$$
+        <p>Bubble <code>054</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q40. Answer: <code>064</code></strong></p>
+        <p><strong>Step 1 (Count $\sigma$ and $\pi$ Bonds in Styrene $\text{C}_8\text{H}_8$):</strong></p>
+        <ul>
+            <li><strong>$\text{C–C}$ $\sigma$ bonds:</strong> $6$ inside the benzene ring $+ 1$ joining the ring to
+                $-\text{CH}=\text{CH}_2$ $+ 1$ inside the vinyl group $= 8$.</li>
+            <li><strong>$\text{C–H}$ $\sigma$ bonds:</strong> $5$ on the benzene ring $+ 3$ on the vinyl group
+                ($-\text{CH}=\text{CH}_2$) $= 8$.</li>
+            <li><strong>Total $\sigma$ bonds:</strong> $\sigma = 8 + 8 = 16$. <em>(30-Second Topology Rule: For any
+                    molecule with $N$ total atoms and $R$ rings, $\sigma = N - 1 + R = (8+8) - 1 + 1 = 16$!)</em></li>
+            <li><strong>Total $\pi$ bonds:</strong> $3$ inside the benzene ring $+ 1$ in the vinyl double bond $= 4$.
+            </li>
+        </ul>
+        <p><strong>Step 2 (Product):</strong> $\sigma \times \pi = 16 \times 4 = 64 \implies$ bubble <code>064</code>.
+        </p>
+    </div>
+
+    <div class="bridge-box">
+        <h3>Section IV: Chemistry MCQ Solutions (Q41–Q48)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q41. Answer: (D)</strong></p>
+        <p>An aqueous acid can <strong>never</strong> have a basic $\text{pH} > 7$! At extreme dilution ($10^{-8}\text{
+            M HCl}$), water's own auto-ionization ($\approx 10^{-7}\text{ M H}^+$) cannot be ignored:</p>
+        $$[\text{H}^+]_{\text{total}} \approx 10^{-7} + 10^{-8} = 1.1 \times 10^{-7}\text{ M} \implies \text{pH} =
+        -\log(1.1 \times 10^{-7}) \approx 6.96$$
+        <p>Hence $\text{pH}$ lies strictly between $6.0$ and $7.0 \implies$ <strong>(D)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q42. Answer: (B)</strong></p>
+        <p>In concentrated aqueous $\text{NaCl}$ (brine) with inert platinum electrodes:</p>
+        <ul>
+            <li><strong>Cathode (Reduction):</strong> Water has a much higher reduction potential than $\text{Na}^+$, so
+                $\text{H}_2\text{O}$ is preferentially reduced to liberate <strong>$\text{H}_2(g)$</strong> (plus
+                $\text{OH}^-$).</li>
+            <li><strong>Anode (Oxidation):</strong> Due to high $[\text{Cl}^-]$ and the kinetic overpotential of
+                $\text{O}_2$ evolution, $\text{Cl}^-$ is preferentially oxidised to liberate
+                <strong>$\text{Cl}_2(g)$</strong>.
+            </li>
+        </ul>
+        <p>Matches <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q43. Answer: (A)</strong></p>
+        <p>With inert platinum electrodes in $\text{CuSO}_4(aq)$:</p>
+        <ul>
+            <li><strong>Cathode:</strong> $\text{Cu}^{2+} + 2e^- \longrightarrow \text{Cu}(s)$. Depletion of blue
+                $\text{Cu}^{2+}$ ions causes the <strong>blue colour to fade</strong>.</li>
+            <li><strong>Anode:</strong> $2\text{H}_2\text{O} \longrightarrow \text{O}_2(g) + 4\text{H}^+ + 4e^-$.
+                Accumulation of $\text{H}^+$ (forming $\text{H}_2\text{SO}_4$ with spectator $\text{SO}_4^{2-}$) makes
+                the solution acidic, so <strong>$\text{pH}$ decreases</strong>.</li>
+        </ul>
+        <p>Matches <strong>(A)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q44. Answer: (C)</strong></p>
+        <p>Propanal (an <strong>aldehyde</strong>, $-\text{CHO}$) and Propanone (a <strong>ketone</strong>,
+            $-\text{CO}-$) share the exact molecular formula $\text{C}_3\text{H}_6\text{O}$ while possessing different
+            functional groups $\implies$ <strong>functional group isomerism</strong> (<strong>C</strong>). <em>(Note: A
+                and D are position isomers; B is chain isomerism.)</em></p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q45. Answer: (D)</strong></p>
+        <p>Geometrical (cis-trans) isomerism requires restricted rotation ($\text{C}=\text{C}$) AND <strong>two
+                different groups attached to each</strong> doubly bonded carbon. Propene, but-1-ene, and 2-methylpropene
+            all have a terminal $=\text{CH}_2$ carbon (two identical H atoms $\implies$ no cis-trans). Only
+            <strong>But-2-ene</strong> ($\text{CH}_3\text{CH}=\text{CHCH}_3$) has $(\text{H}, \text{CH}_3)$ on both
+            carbons $\implies$ <strong>(D)</strong>.
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q46. Answer: (D)</strong></p>
+        <p>Classify each salt by its parent acid and base:</p>
+        <ul>
+            <li>$\text{NH}_4\text{Cl}$: Strong acid ($\text{HCl}$) + Weak base ($\text{NH}_4\text{OH}$) $\implies$
+                <strong>acidic</strong> ($\text{pH} < 7$).</li>
+            <li>$\text{NaCl}$: Strong acid ($\text{HCl}$) + Strong base ($\text{NaOH}$) $\implies$
+                <strong>neutral</strong> ($\text{pH} = 7$).
+            </li>
+            <li>$\text{CH}_3\text{COONa}$: Weak acid ($\text{CH}_3\text{COOH}$) + Strong base ($\text{NaOH}$) $\implies$
+                <strong>basic</strong> ($\text{pH} > 7$).
+            </li>
+        </ul>
+        <p>Increasing order of $\text{pH}$: $\text{NH}_4\text{Cl} < \text{NaCl} < \text{CH}_3\text{COONa} \implies$
+                <strong>(D)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q47. Answer: (C)</strong></p>
+        <p><strong>Step 1 (Determine Charge $Q$ in Faradays from Cell 2):</strong> $\text{Ag}^+ + e^- \longrightarrow
+            \text{Ag}$:</p>
+        $$n(\text{Ag}) = \frac{21.6\text{ g}}{108\text{ g/mol}} = 0.20\text{ mol} \implies Q = 0.20\text{ F}$$
+        <p><strong>Step 2 (Apply Identical $0.20\text{ F}$ to Cell 1 — Acidified Water):</strong></p>
+        <ul>
+            <li>Cathode ($2\text{H}^+ + 2e^- \to \text{H}_2$): $n(\text{H}_2) = \frac{0.20}{2} = 0.10\text{ mol}$.</li>
+            <li>Anode ($2\text{H}_2\text{O} \to \text{O}_2 + 4\text{H}^+ + 4e^-$): $n(\text{O}_2) = \frac{0.20}{4} =
+                0.05\text{ mol}$.</li>
+        </ul>
+        <p><strong>Step 3 (Total STP Volume):</strong></p>
+        $$V_{\text{total}} = (0.10 + 0.05)\text{ mol} \times 22.4\text{ L/mol} = 0.15 \times 22.4 = 3.36\text{ L}$$
+        <p>Matches <strong>(C)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q48. Answer: (A)</strong></p>
+        <p>At the inert platinum anode of Cell 2 (aqueous $\text{AgNO}_3$), water is oxidised instead of
+            $\text{NO}_3^-$:</p>
+        $$2\text{H}_2\text{O} \longrightarrow \text{O}_2(g) + 4\text{H}^+ + 4e^-$$
+        <p>Notice that every $4\text{ F}$ of charge produces $4\text{ mol H}^+$ (exact $1:1$ ratio!). Thus $0.20\text{
+            F}$ generates exactly $0.20\text{ mol H}^+$ inside $2.0\text{ L}$ of solution:</p>
+        $$[\text{H}^+] = \frac{0.20\text{ mol}}{2.0\text{ L}} = 0.10\text{ M} = 10^{-1}\text{ M} \implies \text{pH} =
+        -\log_{10}(10^{-1}) = 1$$
+        <p>Matches <strong>(A)</strong>.</p>
+    </div>
+
+    <div class="trap-box">
+        <h3>Mock 02 Post-Mortem Forensics #3 — Electrochemistry &amp; pH Traps (Q37, Q41, Q47–48)</h3>
+        <ul>
+            <li><strong>Forgetting the Dibasic Factor of $\text{H}_2\text{SO}_4$ (Q37):</strong> Writing $0.05 \times
+                100 = 5\text{ mmol H}^+$ instead of $2 \times 0.05 \times 100 = 10\text{ mmol}$ destroys the entire
+                calculation. Always multiply molarity by $n$-factor ($2$ for $\text{H}_2\text{SO}_4$, $\text{Ba(OH)}_2$)
+                before subtracting!</li>
+            <li><strong>The "$-\log(10^{-8}) = 8$" Blind Formula Trap (Q41):</strong> Never apply $\text{pH} = -\log C$
+                blindly when strong-acid concentration drops below $10^{-6}\text{ M}$—an acid diluted in water can
+                approach $\text{pH } 7$ from below ($6.96$), never cross into alkaline territory!</li>
+            <li><strong>Electrolysis Acid-Generation Rule (Q43 &amp; Q48):</strong> Whenever inert Pt anodes oxidize
+                water ($2\text{H}_2\text{O} \to \text{O}_2 + 4\text{H}^+ + 4e^-$) while metal ions ($\text{Ag}^+,
+                \text{Cu}^{2+}$) plate out at the cathode, $1\text{ Faraday}$ ALWAYS produces exactly $1\text{ mol H}^+$
+                in solution!</li>
+        </ul>
+    </div>
+
+    <div class="bridge-box">
+        <h3>Section V: Biology MCQ Solutions (Q49–Q60)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q49. Answer: (B)</strong></p>
+        <p><strong>Step 1 (Dominant vs. Recessive):</strong> Two unaffected parents (I-1 and I-2) produce an affected
+            child (II-1). A dominant trait cannot appear out of two unaffected parents $\implies$ strictly
+            <strong>recessive</strong> (kills A).
+        </p>
+        <p><strong>Step 2 (Autosomal vs. X-linked):</strong> Because the affected child II-1 is a
+            <strong>daughter</strong> ($X^a X^a$ if X-linked), she would HAVE to inherit $X^a$ from her father I-1,
+            making I-1 affected. Since I-1 is unaffected, X-linked recessive is strictly impossible $\implies$
+            <strong>autosomal recessive</strong> (kills C).
+        </p>
+        <p><strong>Step 3 (Genotype of Unaffected Male II-2):</strong> II-2 marries affected female II-4 ($aa$) and they
+            produce an affected daughter III-2 ($aa$). III-2 must inherit one $a$ from II-2, forcing unaffected II-2 to
+            be heterozygous <strong>$Aa$</strong> $\implies$ <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q50. Answer: (B)</strong></p>
+        <p>At a chemical synapse, arrival of an electrical impulse at the presynaptic <strong>axon terminal</strong>
+            triggers release of chemical <strong>neurotransmitters</strong> across the synaptic cleft; these bind to
+            receptors on the postsynaptic <strong>dendrite</strong> to ignite a fresh electrical impulse, enforcing
+            strictly <strong>unidirectional</strong> signal flow $\implies$ <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q51. Answer: (C)</strong></p>
+        <ul>
+            <li><strong>P (Auxin) $\to$ 3:</strong> Migrates to the shaded side of shoots, stimulating faster cell
+                elongation so the shoot bends toward light (phototropism).</li>
+            <li><strong>Q (Gibberellin) $\to$ 4:</strong> Promotes stem elongation (bolting) and breaks seed dormancy.
+            </li>
+            <li><strong>R (Cytokinin) $\to$ 1:</strong> Concentrated in rapidly dividing regions (fruits/seeds);
+                promotes cell division and delays ageing (senescence).</li>
+            <li><strong>S (Abscisic acid / ABA) $\to$ 2:</strong> Growth inhibitor and stress hormone triggering
+                stomatal closure and wilting of leaves.</li>
+        </ul>
+        <p>Match: P–3, Q–4, R–1, S–2 $\implies$ <strong>(C)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q52. Answer: (D)</strong></p>
+        <p>The <strong>cerebellum</strong> (hindbrain) coordinates body posture, equilibrium/balance, and fine precision
+            of voluntary actions (walking straight, picking up a pencil, riding a bicycle). <em>(Contrast: Medulla
+                controls involuntary breathing/heartbeat; Cerebrum governs memory and speech.)</em> Matches
+            <strong>(D)</strong>.
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q53. Answer: (C)</strong></p>
+        <ul>
+            <li><strong>Statement I is TRUE:</strong> That is the exact 5-step spinal reflex arc pathway.</li>
+            <li><strong>Statement II is FALSE:</strong> Although the fast protective motor command executes directly at
+                the spinal cord to save milliseconds, ascending sensory tracts simultaneously relay the signal upward to
+                the cerebral cortex so the person consciously perceives heat/pain right afterward.</li>
+        </ul>
+        <p>Matches <strong>(C)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q54. Answer: (A)</strong></p>
+        <p>Evaluate each match carefully:</p>
+        <ul>
+            <li><strong>(A) CORRECT:</strong> Thyroid gland secretes thyroxine (requires dietary iodine); deficiency
+                enlarges the gland into simple goitre.</li>
+            <li>(B) Wrong: Diabetes mellitus is caused by deficiency of <em>insulin</em>, not glucagon.</li>
+            <li>(C) Wrong: Growth hormone is secreted by the <em>pituitary gland</em>, not adrenal gland.</li>
+            <li>(D) Wrong: Adrenaline is secreted by the <em>adrenal gland</em>, not pituitary gland.</li>
+        </ul>
+        <p>Matches <strong>(A)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q55. Answer: (B)</strong></p>
+        <p>The rapid drooping of *Mimosa pudica* leaflets is a <strong>thigmonastic</strong> (non-directional,
+            growth-independent) response caused by sudden loss of water/turgor pressure in specialized basal swelling
+            cells (pulvini). In contrast, shoot bending toward sunlight is a <strong>phototropic</strong> (directional,
+            growth-dependent) response mediated by unequal auxin distribution $\implies$ <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q56. Answer: (C)</strong></p>
+        <p><strong>30-Second Forked-Line Probability Method (NEVER draw a 16-box Punnett square!):</strong> Split $RrYy
+            \times Rryy$ into two independent monohybrid crosses:</p>
+        <ul>
+            <li>$Rr \times Rr \implies P(\text{Round, } R\_) = \frac{3}{4}$</li>
+            <li>$Yy \times yy \implies P(\text{Green, } yy) = \frac{1}{2}$</li>
+        </ul>
+        $$P(\text{Round and Green}) = \frac{3}{4} \times \frac{1}{2} = \frac{3}{8}$$
+        <p>Matches <strong>(C)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q57. Answer: (D)</strong></p>
+        <p>A <strong>test cross</strong> always crosses an organism of dominant phenotype ($T\_$) with a
+            <strong>homozygous recessive</strong> tester ($tt$). If the unknown parent is $TT$, $100\%$ of progeny are
+            tall ($Tt$); if it is heterozygous $Tt$, the cross $Tt \times tt$ produces $50\%$ tall ($Tt$) and $50\%$
+            dwarf ($tt$)—an exact <strong>$1:1$ phenotypic ratio</strong> $\implies$ <strong>(D)</strong>.
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q58. Answer: (B)</strong></p>
+        <p>Because their first child has blood group <strong>O</strong> (genotype $ii$), the child received one $i$
+            allele from each parent. Therefore, the father (Group A) MUST be $I^A i$ and the mother (Group B) MUST be
+            $I^B i$. Crossing $I^A i \times I^B i$ produces four equally likely genotypes:</p>
+        $$I^A I^B\ (\text{AB}), \quad I^A i\ (\text{A}), \quad I^B i\ (\text{B}), \quad ii\ (\text{O})$$
+        <p>Hence the probability of blood group AB is $\frac{1}{4} = 25\%$ $\implies$ <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q59. Answer: (A)</strong></p>
+        <p>Each pregnancy is an independent genetic event: the mother's ovum always carries an $X$ chromosome, while the
+            father's sperm carries either $X$ ($50\%$) or $Y$ ($50\%$). Regardless of previous children, the probability
+            of a son ($XY$) remains strictly <strong>$50\%$</strong>, determined by the <strong>father's sperm</strong>
+            $\implies$ <strong>(A)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q60. Answer: (A)</strong></p>
+        <ul>
+            <li><strong>Statement I is TRUE:</strong> ABO blood groups are governed by three alleles ($I^A, I^B, i$ —
+                multiple allelism), and in $I^A I^B$ individuals both A and B antigens express fully and simultaneously
+                (codominance).</li>
+            <li><strong>Statement II is TRUE:</strong> A classic dihybrid $F_2$ ($RrYy \times RrYy$) produces $2^2 = 4$
+                phenotypes ($9:3:3:1$) and $3^2 = 9$ distinct genotypes.</li>
+        </ul>
+        <p>Both statements are true $\implies$ <strong>(A)</strong>.</p>
+    </div>
+
+    <div class="trap-box">
+        <h3>Mock 02 Post-Mortem Forensics #4 — Genetics &amp; Coordination Traps (Q49, Q53, Q56)</h3>
+        <ul>
+            <li><strong>The 5-Second X-Linked Recessive Killer Rule (Q49):</strong> In ANY pedigree, spot an
+                <strong>affected daughter with an unaffected father</strong> (or affected mother with an unaffected
+                son)—that single pair instantly eliminates X-linked recessive inheritance!
+            </li>
+            <li><strong>"Spinal Reflex = Brain Never Knows" Myth (Q53):</strong> Spinal processing only makes the
+                <em>initial motor jerk</em> faster; pain/temperature signals still ascend to the brain right afterward
+                so you feel the burn and learn to avoid hot surfaces.
+            </li>
+            <li><strong>Dihybrid Time-Sink Trap (Q56):</strong> Drawing a full 16-square grid for $RrYy \times Rryy$
+                wastes 90 seconds and invites copying errors. Split every multi-trait cross into independent single-gene
+                fractions ($\frac{3}{4} \times \frac{1}{2} = \frac{3}{8}$) and solve in 10 seconds!</li>
+        </ul>
+    </div>
+</article>

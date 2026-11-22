@@ -1,0 +1,940 @@
+<article data-volume="Volume 6: Exam Strategy &amp; 10 Full-Length Mock Tests"
+    data-title="Mock Test 01 — Complete Verified Solutions &amp; Time-Saving Tricks">
+    <div class="chapter-hero">
+        <h1>Mock Test 01 — Complete Verified Solutions &amp; Time-Saving Tricks</h1>
+        <p><strong>Zero-Skip Step-by-Step Forensics (Q1–Q60):</strong> Every algebra step, unit audit, 30-second
+            Olympiad shortcut, and post-mortem trap breakdown for Mock Test 01. Classify every missed question using
+            your 4-code Error Log (<code>CG</code> Concept Gap, <code>TM</code> Trap Misread, <code>CS</code>
+            Calculation/ORS Slip, <code>TO</code> Time-Out) before advancing to Mock Test 02.</p>
+    </div>
+
+    <!-- ==================== PAPER 1 SOLUTIONS ==================== -->
+    <h2 class="section-heading">PAPER 1 — PART A SOLUTIONS (Q1–Q24 | 96 Marks)</h2>
+
+    <div class="bridge-box">
+        <h3>Section I: Quantitative Aptitude NAT Solutions (Q1–Q10)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q1. Answer: <code>072</code></strong></p>
+        <p><strong>Step 1 (Divisibility by $36$):</strong> Since $\gcd(4, 9) = 1$, the 6-digit number $47A25B$ must be
+            simultaneously divisible by $4$ and by $9$.</p>
+        <p><strong>Step 2 (Apply Rule of $4$ first):</strong> The last two digits $5B$ must be divisible by $4$. With $B
+            > 0$, the only valid digits are $B = 2$ ($52 = 4 \times 13$) and $B = 6$ ($56 = 4 \times 14$).</p>
+        <p><strong>Step 3 (Apply Rule of $9$):</strong> Sum of digits $= 4 + 7 + A + 2 + 5 + B = 18 + A + B$. Because
+            $18$ is already a multiple of $9$, we require $A + B \equiv 0 \pmod{9}$, so $A + B \in \{9, 18\}$
+            (impossible for $A+B=0$ since $B>0$).</p>
+        <ul>
+            <li>If $B = 2 \implies A = 7$ (valid digit) $\implies 10A + B = 10(7) + 2 = 72$.</li>
+            <li>If $B = 6 \implies A = 3$ (valid digit) $\implies 10A + B = 10(3) + 6 = 36$.</li>
+        </ul>
+        <p><strong>Maximum Value:</strong> $72 \implies$ bubble <code>072</code>.</p>
+        <p><strong>30-Second Speed Trick:</strong> Maximize the tens digit $A$ first! Since $10A + B$ is dominated by
+            $A$, immediately test the smallest allowed $B$ ($B = 2$), which forces the largest possible $A = 9 - 2 = 7$,
+            locking in $72$ in 12 seconds.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q2. Answer: <code>034</code></strong></p>
+        <p><strong>Step 1 (Find $u$ via Unit-Digit Cyclicity):</strong></p>
+        <ul>
+            <li>For $37^{2026}$, only the base unit digit $7$ matters. Powers of $7$ cycle with period $4$: $7^1 \to 7,\
+                7^2 \to 9,\ 7^3 \to 3,\ 7^4 \to 1$. Since $2026 = 4(506) + 2$, the unit digit of $37^{2026}$ matches
+                $7^2$, which is $9$.</li>
+            <li>For $43^{2027}$, powers of $3$ cycle with period $4$: $3^1 \to 3,\ 3^2 \to 9,\ 3^3 \to 7,\ 3^4 \to 1$.
+                Since $2027 = 4(506) + 3$, the unit digit of $43^{2027}$ matches $3^3$, which is $7$.</li>
+            <li>Product unit digit: $u \equiv 9 \times 7 = 63 \equiv 3 \pmod{10} \implies u = 3$.</li>
+        </ul>
+        <p><strong>Step 2 (Find $v$ via Modular Reduction):</strong> Observe that $2^3 = 8 \equiv 1 \pmod{7}$. Write the
+            exponent $50 = 3(16) + 2$:</p>
+        $$2^{50} = (2^3)^{16} \times 2^2 \equiv 1^{16} \times 4 = 4 \pmod{7} \implies v = 4$$
+        <p><strong>Step 3 (Final Target):</strong> $10u + v = 10(3) + 4 = 34 \implies$ bubble <code>034</code>.</p>
+        <p><strong>30-Second Speed Trick:</strong> For any exponent modulo $4$, only divide its <em>last two digits</em>
+            by $4$ ($26 \equiv 2$, $27 \equiv 3$). Never waste time dividing $2026$ completely!</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q3. Answer: <code>048</code></strong></p>
+        <p><strong>Step 1 (Successive Replacement Formula):</strong> When a fraction $f_i = \frac{x_i}{V}$ of a
+            homogeneous mixture of total volume $V$ is removed and replaced with water, the remaining quantity of pure
+            milk scales by $\left(1 - \frac{x_i}{V}\right)$:</p>
+        $$\text{Final Milk} = V \left(1 - \frac{x_1}{V}\right)\left(1 - \frac{x_2}{V}\right)$$
+        <p><strong>Step 2 (Substitute Values):</strong> With $V = 80\text{ L}$, $x_1 = 20\text{ L}$, $x_2 = 16\text{
+            L}$:</p>
+        $$\text{Final Milk} = 80 \times \left(1 - \frac{20}{80}\right) \times \left(1 - \frac{16}{80}\right) = 80 \times
+        \frac{3}{4} \times \frac{4}{5} = 80 \times \frac{3}{5} = 48\text{ L}$$
+        <p>Bubble <code>048</code>.</p>
+        <p><strong>30-Second Speed Trick:</strong> Notice the instant telescoping cancellation $\frac{3}{\cancel{4}}
+            \times \frac{\cancel{4}}{5} = \frac{3}{5}$. Never compute intermediate mixture ratios unless asked!</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q4. Answer: <code>012</code></strong></p>
+        <p><strong>Step 1 (Set Up Downstream &amp; Upstream Equations):</strong> Let downstream speed $= D$ and upstream
+            speed $= U$ (in $\text{km/h}$):</p>
+        $$\frac{45}{D} + \frac{27}{U} = 6 \quad \text{---(1)}$$
+        $$\frac{30}{D} + \frac{36}{U} = 6 \quad \text{---(2)}$$
+        <p><strong>Step 2 (Eliminate $\frac{1}{D}$):</strong> Multiply (1) by $2$ and (2) by $3$:</p>
+        $$\frac{90}{D} + \frac{54}{U} = 12 \quad \text{and} \quad \frac{90}{D} + \frac{108}{U} = 18$$
+        <p>Subtracting the first from the second:</p>
+        $$\frac{54}{U} = 6 \implies U = 9\text{ km/h}$$
+        <p><strong>Step 3 (Find $D$ and Still-Water Speed):</strong> Substitute $U = 9$ into (1):</p>
+        $$\frac{45}{D} + \frac{27}{9} = 6 \implies \frac{45}{D} + 3 = 6 \implies \frac{45}{D} = 3 \implies D = 15\text{
+        km/h}$$
+        $$\text{Boat speed in still water} = \frac{D + U}{2} = \frac{15 + 9}{2} = 12\text{ km/h}$$
+        <p>Bubble <code>012</code>.</p>
+        <p><strong>30-Second Speed Trick (Factor Inspection):</strong> Since total time is an integer ($6\text{ h}$),
+            test the $\gcd$ of downstream distances $\gcd(45, 30) = 15$ as $D$ and $\gcd(27, 36) = 9$ as $U$. Check
+            immediately: $45/15 + 27/9 = 3 + 3 = 6$ and $30/15 + 36/9 = 2 + 4 = 6$. Done in 10 seconds!</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q5. Answer: <code>024</code></strong></p>
+        <p><strong>Step 1 (Copper from Alloy $P$):</strong> Ratio $\text{Cu}:\text{Zn} = 5:3$ (total $8$ parts). In
+            $16\text{ kg}$ of alloy $P$:</p>
+        $$\text{Copper}_P = \frac{5}{5+3} \times 16 = \frac{5}{8} \times 16 = 10\text{ kg}$$
+        <p><strong>Step 2 (Copper from Alloy $Q$):</strong> Ratio $\text{Cu}:\text{Zn} = 7:5$ (total $12$ parts). In
+            $24\text{ kg}$ of alloy $Q$:</p>
+        $$\text{Copper}_Q = \frac{7}{7+5} \times 24 = \frac{7}{12} \times 24 = 14\text{ kg}$$
+        <p><strong>Step 3 (Total Copper):</strong> $10 + 14 = 24\text{ kg} \implies$ bubble <code>024</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q6. Answer: <code>020</code></strong></p>
+        <p><strong>Step 1 (LCM Total-Work Method):</strong> Let cistern capacity $= \text{LCM}(12, 18, 36) = 36\text{
+            units}$.</p>
+        <ul>
+            <li>Tap $A$ rate $= +\frac{36}{12} = +3\text{ units/h}$</li>
+            <li>Tap $B$ rate $= +\frac{36}{18} = +2\text{ units/h}$</li>
+            <li>Drain $C$ rate $= -\frac{36}{36} = -1\text{ unit/h}$</li>
+        </ul>
+        <p><strong>Step 2 (First $4\text{ hours}$ with $A, B, C$ open):</strong></p>
+        $$\text{Net rate} = 3 + 2 - 1 = 4\text{ units/h} \implies \text{Filled in } 4\text{ h} = 4 \times 4 = 16\text{
+        units}$$
+        <p><strong>Step 3 (Remaining Work with $B$ and $C$ only):</strong></p>
+        $$\text{Remaining} = 36 - 16 = 20\text{ units}, \qquad \text{Net rate }(B+C) = 2 - 1 = 1\text{ unit/h}$$
+        $$\text{Additional time required} = \frac{20}{1} = 20\text{ hours}$$
+        <p>Bubble <code>020</code>. <em>(Target Audit: The question asks for <strong>additional</strong> hours, not
+                total $4 + 20 = 24$ hours!)</em></p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q7. Answer: <code>040</code></strong></p>
+        <p><strong>Step 1 (Base-1000 Cost Analysis):</strong> Let the true Cost Price (CP) of $1000\text{ g}$ be ₹$1000$
+            (so ₹$1$ per gram).</p>
+        <p><strong>Step 2 (Compute Selling Price Charged):</strong></p>
+        <ul>
+            <li>Marked Price (MP) $= 1000 \times 1.40 = \text{₹}1400$.</li>
+            <li>After $15\%$ discount, Selling Price (SP) collected $= 1400 \times (1 - 0.15) = 1400 \times 0.85 =
+                \text{₹}1190$.</li>
+        </ul>
+        <p><strong>Step 3 (Actual Cost of Goods Delivered):</strong> Because the trader delivers only $850\text{ g}$,
+            his actual CP $= \text{₹}850$.</p>
+        $$\text{Net Profit}\% = \frac{\text{SP} - \text{Actual CP}}{\text{Actual CP}} \times 100 = \frac{1190 -
+        850}{850} \times 100 = \frac{340}{850} \times 100 = \frac{2}{5} \times 100 = 40\%$$
+        <p>Bubble <code>040</code>.</p>
+        <p><strong>30-Second Speed Trick (Multiplying Factors):</strong> Combine all three effects multiplicatively:
+            $\frac{\text{SP}}{\text{CP}} = 1.40 \times \cancel{0.85} \times \frac{1000}{\cancel{850}} = 1.40 \implies
+            +40\%$ profit! Notice how the $15\%$ discount ($\times 0.85$) and the $15\%$ short-weight ($\div 0.85$)
+            cancel out completely!</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q8. Answer: <code>035</code></strong></p>
+        <p><strong>Step 1 (Prime Factorize Only Factors of $2$ and $5$):</strong> Trailing zeros equal
+            $\min(\text{exponent of } 2,\ \text{exponent of } 5)$ in $N = 15^{12} \times 24^{10} \times 35^{15} \times
+            40^{8}$:</p>
+        <ul>
+            <li>$15^{12} = (3 \times 5)^{12} \longrightarrow 5^{12}$</li>
+            <li>$24^{10} = (2^3 \times 3)^{10} \longrightarrow 2^{30}$</li>
+            <li>$35^{15} = (5 \times 7)^{15} \longrightarrow 5^{15}$</li>
+            <li>$40^{8} = (2^3 \times 5)^{8} \longrightarrow 2^{24} \times 5^{8}$</li>
+        </ul>
+        <p><strong>Step 2 (Sum Exponents):</strong></p>
+        $$\text{Total power of } 2 = 30 + 24 = 54, \qquad \text{Total power of } 5 = 12 + 15 + 8 = 35$$
+        $$\text{Trailing zeros} = \min(54, 35) = 35$$
+        <p>Bubble <code>035</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q9. Answer: <code>010</code></strong></p>
+        <p><strong>Step 1 (Harmonic Mean Round-Trip Identity):</strong> Let swimmer's still-water speed $= x\text{
+            km/h}$ and river speed $= y = 2\text{ km/h}$. Because upstream and downstream distances are equal ($24\text{
+            km}$ each), the average speed is the harmonic mean of $(x+y)$ and $(x-y)$:</p>
+        $$v_{\text{avg}} = \frac{2(x+y)(x-y)}{(x+y)+(x-y)} = \frac{x^2 - y^2}{x}$$
+        <p><strong>Step 2 (Solve for $x$):</strong></p>
+        $$\frac{x^2 - 4}{x} = 9.6 \implies x^2 - 9.6x - 4 = 0 \implies 5x^2 - 48x - 20 = 0$$
+        $$(5x + 2)(x - 10) = 0 \implies x = 10\text{ km/h} \quad (\text{since } x > 0)$$
+        <p>Bubble <code>010</code>.</p>
+        <p><strong>30-Second Speed Trick:</strong> Notice $v_{\text{avg}} = x - \frac{4}{x} = 9.6$. Since $9.6$ is just
+            under $10$, immediately test $x = 10$: $10 - \frac{4}{10} = 10 - 0.4 = 9.6$. Exact match in 5 seconds—no
+            quadratic needed!</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q10. Answer: <code>963</code></strong></p>
+        <p><strong>Step 1 (Solve the Simultaneous Congruences):</strong> We need $N \equiv 4 \pmod{7}$ and $N \equiv 6
+            \pmod{11}$. Write $N = 11k + 6$ and substitute into the mod-$7$ condition:</p>
+        $$11k + 6 \equiv 4 \pmod{7} \implies 4k \equiv -2 \equiv 5 \equiv 12 \pmod{7} \implies k \equiv 3 \pmod{7}$$
+        <p><strong>Step 2 (General Solution):</strong> Taking $k = 3$ gives the smallest positive solution $N_0 = 11(3)
+            + 6 = 39$. Since $\text{LCM}(7, 11) = 77$, every valid integer has the form:</p>
+        $$N = 77m + 39$$
+        <p><strong>Step 3 (Find Largest 3-Digit $N$):</strong></p>
+        $$77m + 39 \le 999 \implies 77m \le 960 \implies m \le \frac{960}{77} \approx 12.46 \implies m_{\max} = 12$$
+        $$N_{\max} = 77(12) + 39 = 924 + 39 = 963$$
+        <p><strong>Verification:</strong> $963 = 7(137) + 4$ and $963 = 11(87) + 6$. Both remainders match! Bubble
+            <code>963</code>.
+        </p>
+    </div>
+
+    <div class="bridge-box">
+        <h3>Section II: Logical Reasoning MCQ Solutions (Q11–Q12)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q11. Answer: (D)</strong></p>
+        <p><strong>Step 1 (Solve Both Equations Carefully):</strong></p>
+        <ul>
+            <li>$x^2 = 36 \implies x = +6 \text{ or } x = -6$ (even power yields <strong>two</strong> roots!).</li>
+            <li>$y^3 = -216 \implies y = -6$ (odd power yields a unique real root).</li>
+        </ul>
+        <p><strong>Step 2 (Test Both Cases for Quantity A $= x + y$):</strong></p>
+        <ul>
+            <li>If $x = +6$: Quantity A $= 6 + (-6) = 0 =$ Quantity B.</li>
+            <li>If $x = -6$: Quantity A $= -6 + (-6) = -12 < 0$ (Quantity B is greater).</li>
+        </ul>
+        <p>Because two different relationships ($=$ and $<$) are possible, the relationship cannot be determined
+                $\implies$ <strong>(D)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q12. Answer: (B)</strong></p>
+        <p><strong>Step 1 (Decode the Progressive Shift):</strong> Compare alphabetical positions of <code>PRISM</code>
+            $\to$ <code>QTLWR</code>:</p>
+        <ul>
+            <li>$\text{P}(16) \xrightarrow{+1} \text{Q}(17)$, &nbsp; $\text{R}(18) \xrightarrow{+2} \text{T}(20)$,
+                &nbsp; $\text{I}(9) \xrightarrow{+3} \text{L}(12)$, &nbsp; $\text{S}(19) \xrightarrow{+4} \text{W}(23)$,
+                &nbsp; $\text{M}(13) \xrightarrow{+5} \text{R}(18)$.</li>
+            <li>Cross-check on <code>LIGHT</code> $\to$ <code>MKJLY</code>: $\text{L}+1=\text{M}$,
+                $\text{I}+2=\text{K}$, $\text{G}+3=\text{J}$, $\text{H}+4=\text{L}$, $\text{T}+5=\text{Y}$. Confirmed!
+            </li>
+        </ul>
+        <p><strong>Step 2 (Apply $+1, +2, +3, +4, +5$ to <code>OPTIC</code>):</strong></p>
+        $$\text{O}+1=\text{P}, \quad \text{P}+2=\text{R}, \quad \text{T}+3=\text{W}, \quad \text{I}+4=\text{M}, \quad
+        \text{C}+5=\text{H} \implies \texttt{PRWMH}$$
+        <p>Matches <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="bridge-box">
+        <h3>Section III: Mathematics NAT Solutions (Q13–Q16)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q13. Answer: <code>147</code></strong></p>
+        <p><strong>Step 1 (Similarity Ratio):</strong> Because $DE \parallel BC$, $\triangle ADE \sim \triangle ABC$ (by
+            AA similarity). The total side $AB = AD + DB = 6 + 9 = 15\text{ cm}$.</p>
+        $$\frac{AD}{AB} = \frac{6}{15} = \frac{2}{5}$$
+        <p><strong>Step 2 (Area-Ratio Theorem):</strong> For similar triangles, the ratio of areas equals the square of
+            the ratio of corresponding sides:</p>
+        $$\frac{\text{Area}(\triangle ADE)}{\text{Area}(\triangle ABC)} = \left(\frac{2}{5}\right)^2 = \frac{4}{25}$$
+        $$\text{Area}(\triangle ABC) = 28 \times \frac{25}{4} = 7 \times 25 = 175\text{ cm}^2$$
+        <p><strong>Step 3 (Trapezium Area):</strong></p>
+        $$\text{Area}(DBCE) = \text{Area}(\triangle ABC) - \text{Area}(\triangle ADE) = 175 - 28 = 147\text{ cm}^2$$
+        <p>Bubble <code>147</code>.</p>
+        <p><strong>30-Second Speed Trick:</strong> Directly take the trapezium share as $\frac{25 - 4}{4} =
+            \frac{21}{4}$ of $\text{Area}(\triangle ADE)$: $\frac{21}{4} \times 28 = 21 \times 7 = 147$.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q14. Answer: <code>248</code></strong></p>
+        <p><strong>Step 1 (Vieta's Formulas):</strong> For $x^2 - 8x + 11 = 0$, we have $\alpha + \beta = 8$ and
+            $\alpha\beta = 11$.</p>
+        <p><strong>Step 2 (Algebraic Cube Identity):</strong></p>
+        $$\alpha^3 + \beta^3 = (\alpha + \beta)^3 - 3\alpha\beta(\alpha + \beta)$$
+        $$\alpha^3 + \beta^3 = 8^3 - 3(11)(8) = 512 - 264 = 248$$
+        <p>Bubble <code>248</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q15. Answer: <code>122</code></strong></p>
+        <p><strong>Step 1 (Standard Method via $a_n = S_n - S_{n-1}$):</strong></p>
+        $$S_{20} = 3(20)^2 + 5(20) = 1200 + 100 = 1300$$
+        $$S_{19} = 3(19)^2 + 5(19) = 3(361) + 95 = 1083 + 95 = 1178$$
+        $$a_{20} = S_{20} - S_{19} = 1300 - 1178 = 122$$
+        <p>Bubble <code>122</code>.</p>
+        <p><strong>30-Second Speed Trick (Derivative-Style AP Rule):</strong> Whenever $S_n = An^2 + Bn$, the
+            $n^{\text{th}}$ term is instantly $a_n = 2An + (B - A)$. Here $A=3, B=5 \implies a_n = 6n + 2 \implies
+            a_{20} = 6(20) + 2 = 122$ in 5 seconds!</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q16. Answer: <code>060</code></strong></p>
+        <p><strong>Step 1 (Right-Triangle Altitude Theorems):</strong> In right $\triangle PQR$ with altitude $QS \perp
+            PR$, we know $PR = PS + SR = 9 + 16 = 25\text{ cm}$. By similarity ($\triangle PSQ \sim \triangle PQR$ and
+            $\triangle QSR \sim \triangle PQR$):</p>
+        $$PQ = \sqrt{PS \cdot PR} = \sqrt{9 \times 25} = 3 \times 5 = 15\text{ cm}$$
+        $$QR = \sqrt{SR \cdot PR} = \sqrt{16 \times 25} = 4 \times 5 = 20\text{ cm}$$
+        <p><em>(Check via altitude: $QS = \sqrt{9 \times 16} = 12$, confirming $9\text{-}12\text{-}15$ and
+                $12\text{-}16\text{-}20$ Pythagorean triples!)</em></p>
+        <p><strong>Step 2 (Perimeter):</strong> $PQ + QR + PR = 15 + 20 + 25 = 60\text{ cm} \implies$ bubble
+            <code>060</code>.
+        </p>
+    </div>
+
+    <div class="bridge-box">
+        <h3>Section IV: Mathematics MCQ Solutions (Q17–Q24)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q17. Answer: (B)</strong></p>
+        <p><strong>Step 1 (Leading Coefficient Condition):</strong> For $kx^2 - 6x + 3 = 0$ to possess <em>two</em>
+            roots, it MUST remain a quadratic equation—if $k = 0$, it collapses to $-6x + 3 = 0$, which has only
+            <em>one</em> root ($x = 1/2$). Hence $k \neq 0$.
+        </p>
+        <p><strong>Step 2 (Strict Discriminant Condition):</strong> For two <em>distinct real</em> roots:</p>
+        $$D = b^2 - 4ac > 0 \implies (-6)^2 - 4(k)(3) > 0 \implies 36 - 12k > 0 \implies k < 3$$ <p>Combining both
+            conditions yields $k < 3$ and $k \neq 0 \implies$ <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q18. Answer: (B)</strong></p>
+        <p><strong>Step 1 (Match Sum Ratio to Term Ratio):</strong> Let the two APs have parameters $(a_1, d_1)$ and
+            $(a_2, d_2)$:</p>
+        $$\frac{S_n}{S'_n} = \frac{\frac{n}{2}[2a_1 + (n-1)d_1]}{\frac{n}{2}[2a_2 + (n-1)d_2]} = \frac{a_1 +
+        \left(\frac{n-1}{2}\right)d_1}{a_2 + \left(\frac{n-1}{2}\right)d_2} = \frac{4n + 3}{5n + 1}$$
+        <p><strong>Step 2 (Convert to $10^{\text{th}}$ Term Ratio):</strong> To get $\frac{a_1 + 9d_1}{a_2 + 9d_2}$, set
+            $\frac{n - 1}{2} = 9 \implies n = 19$:</p>
+        $$\frac{T_{10}}{T'_{10}} = \frac{4(19) + 3}{5(19) + 1} = \frac{76 + 3}{95 + 1} = \frac{79}{96}$$
+        <p>Matches <strong>(B)</strong>.</p>
+        <p><strong>30-Second Speed Trick:</strong> To jump from ratio of $S_n$ to ratio of $k^{\text{th}}$ terms, always
+            replace $n$ with $(2k - 1)$ directly! Here $2(10) - 1 = 19$.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q19. Answer: (A)</strong></p>
+        <p><strong>Step 1 (Internal Angle Bisector Theorem):</strong> Since $AD$ bisects $\angle A$ internally:</p>
+        $$\frac{BD}{CD} = \frac{AB}{AC} = \frac{12}{18} = \frac{2}{3}$$
+        <p><strong>Step 2 (Divide $BC = 15\text{ cm}$ in ratio $2:3$):</strong></p>
+        $$CD = \frac{3}{2 + 3} \times 15 = \frac{3}{5} \times 15 = 9\text{ cm}$$
+        <p>Matches <strong>(A)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q20. Answer: (A)</strong></p>
+        <p><strong>Step 1 (Sum &amp; Product of Original Roots):</strong> From $x^2 - 5x + 3 = 0$, we have $p + q = 5$
+            and $pq = 3$.</p>
+        <p><strong>Step 2 (New Roots $\alpha = 2p+1$, $\beta = 2q+1$):</strong></p>
+        $$\text{Sum} = (2p+1) + (2q+1) = 2(p+q) + 2 = 2(5) + 2 = 12$$
+        $$\text{Product} = (2p+1)(2q+1) = 4pq + 2(p+q) + 1 = 4(3) + 2(5) + 1 = 12 + 10 + 1 = 23$$
+        <p><strong>Step 3 (Form Equation):</strong> $x^2 - (\text{Sum})x + (\text{Product}) = 0 \implies x^2 - 12x + 23
+            = 0 \implies$ <strong>(A)</strong>.</p>
+        <p><strong>30-Second Speed Trick (Transformation Shortcut):</strong> Set $y = 2x + 1 \implies x = \frac{y-1}{2}$
+            and substitute directly into $x^2 - 5x + 3 = 0$: $(y-1)^2 - 10(y-1) + 12 = 0 \implies y^2 - 12y + 23 = 0$.
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q21. Answer: (C)</strong></p>
+        <p><strong>Step 1 (Establish Similarity):</strong> Since $AB \parallel DC$, alternate interior angles give
+            $\angle OAB = \angle OCD$ and $\angle OBA = \angle ODC$, so $\triangle AOB \sim \triangle COD$ (AA
+            similarity).</p>
+        <p><strong>Step 2 (Apply Area Ratio):</strong> Given $AB = 2\,DC \implies \frac{DC}{AB} = \frac{1}{2}$:</p>
+        $$\frac{\text{Area}(\triangle COD)}{\text{Area}(\triangle AOB)} = \left(\frac{DC}{AB}\right)^2 =
+        \left(\frac{1}{2}\right)^2 = \frac{1}{4}$$
+        $$\text{Area}(\triangle COD) = \frac{1}{4} \times 84 = 21\text{ cm}^2$$
+        <p>Matches <strong>(C)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q22. Answer: (D)</strong></p>
+        <p><strong>Step 1 (Find the Last Positive Term):</strong> Here $a = 64$, $d = -5$. The sum $S_n$ peaks precisely
+            when we add all positive terms and stop right before the first negative term:</p>
+        $$a_n = 64 + (n - 1)(-5) > 0 \implies 69 - 5n > 0 \implies n < 13.8 \implies n=13$$ <p>Check: $a_{13} = 64 -
+            12(5) = 4 > 0$, while $a_{14} = -1 < 0$.</p>
+                <p><strong>Step 2 (Compute $S_{13}$):</strong></p>
+                $$S_{13} = \frac{13}{2}(a_1 + a_{13}) = \frac{13}{2}(64 + 4) = 13 \times 34 = 442$$
+                <p>Matches <strong>(D)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q23. Answer: (C)</strong></p>
+        <p><strong>Step 1 (Extract $a$ and $d$ from the Passage):</strong></p>
+        $$a_4 = a + 3d = 26, \qquad a_{11} = a + 10d = 54$$
+        $$\text{Subtracting: } 7d = 28 \implies d = 4 \implies a = 26 - 3(4) = 14$$
+        <p><strong>Step 2 (Total Seats Across $25$ Rows):</strong></p>
+        $$S_{25} = \frac{25}{2}\bigl[2a + (25-1)d\bigr] = \frac{25}{2}\bigl[2(14) + 24(4)\bigr] = \frac{25}{2}(28 + 96)
+        = \frac{25}{2}(124) = 25 \times 62 = 1550$$
+        <p>Matches <strong>(C)</strong>.</p>
+        <p><strong>30-Second Speed Trick:</strong> For an odd number of rows ($25$), $S_{25} = 25 \times (\text{middle
+            term } a_{13})$. Since $a_{11} = 54$ and $d = 4$, $a_{13} = 54 + 8 = 62 \implies 25 \times 62 = 1550$ in 8
+            seconds!</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q24. Answer: (B)</strong></p>
+        <p><strong>Step 1 (Solve the VIP Quadratic):</strong> Using $a = 14$ and $d = 4$ from Q23, $a + d = 18$, so:</p>
+        $$k^2 - 18k + 56 = 0 \implies (k - 14)(k - 4) = 0 \implies k \in \{4, 14\}$$
+        <p><strong>Step 2 (Find $m$ and the Target Row):</strong></p>
+        $$m = |14 - 4| = 10 \implies 5m = 50\text{ seats}$$
+        <p>Set $a_n = 50$: $14 + 4(n - 1) = 50 \implies 4(n - 1) = 36 \implies n - 1 = 9 \implies n =
+            10^{\text{th}}\text{ row}$.</p>
+        <p>Matches <strong>(B)</strong>. <em>(Speed Check: We already knew $a_{11} = 54$ and $d = 4$, so $50 = 54 - 4$
+                is immediately the $10^{\text{th}}$ row!)</em></p>
+    </div>
+
+    <div class="trap-box">
+        <h3>Mock 01 Post-Mortem Forensics #1 — Paper 1 Algebra &amp; QA Traps (Q6, Q11, Q17)</h3>
+        <ul>
+            <li><strong>The "Additional vs. Total" Trap (Q6):</strong> Nearly $30\%$ of test-takers correctly compute
+                $20\text{ hours}$ and then mistakenly add the initial $4\text{ hours}$ to bubble <code>024</code>.
+                Always re-read the exact verb in the final sentence (<em>"additional hours"</em>).</li>
+            <li><strong>The Hidden Negative Root Trap (Q11):</strong> Seeing $x^2 = 36$ and writing $x = 6$
+                automatically (forgetting $x = -6$) tricks students into picking <strong>(C)</strong> instead of
+                <strong>(D)</strong>. Rule: <em>Every even power $x^{2k} = c > 0$ has TWO signs!</em>
+            </li>
+            <li><strong>The Degenerate Quadratic Trap (Q17):</strong> Solving only $D > 0 \implies k < 3$ lands straight
+                    in Trap Option <strong>(A)</strong>. Whenever a parameter sits on $x^2$, explicitly check $k \neq 0$
+                    before bubbling.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== PAPER 2 SOLUTIONS ==================== -->
+    <h2 class="section-heading">PAPER 2 — PART B SOLUTIONS (Q25–Q60 | 144 Marks)</h2>
+
+    <div class="bridge-box">
+        <h3>Section I: Physics NAT Solutions (Q25–Q28)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q25. Answer: <code>200</code></strong></p>
+        <p><strong>Step 1 (Physical Meaning of $v$-$t$ Area):</strong> Since velocity remains non-negative throughout
+            $[0, 14]\text{ s}$, the total distance equals the total area enclosed between the $v$-$t$ curve and the time
+            axis.</p>
+        <p><strong>Step 2 (Trapezium Area Formula):</strong> The graph forms a trapezium with bottom base $b_1 =
+            14\text{ s}$, top parallel side $b_2 = 10 - 4 = 6\text{ s}$, and height $h = 20\text{ m/s}$:</p>
+        $$\text{Distance} = \frac{1}{2}(b_1 + b_2)h = \frac{1}{2}(14 + 6)(20) = 10 \times 20 = 200\text{ m}$$
+        <p>Bubble <code>200</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q26. Answer: <code>030</code></strong></p>
+        <p><strong>Step 1 (Cartesian Sign Convention):</strong> For a concave mirror, $u = -30\text{ cm}$ and $f =
+            -20\text{ cm}$.</p>
+        <p><strong>Step 2 (Mirror Formula):</strong></p>
+        $$\frac{1}{v} + \frac{1}{u} = \frac{1}{f} \implies \frac{1}{v} = \frac{1}{-20} - \frac{1}{-30} = -\frac{1}{20} +
+        \frac{1}{30} = \frac{-3 + 2}{60} = -\frac{1}{60}$$
+        $$v = -60\text{ cm}$$
+        <p><strong>Step 3 (Distance Between Object &amp; Image):</strong> Both object ($-30\text{ cm}$) and real image
+            ($-60\text{ cm}$) lie on the same side in front of the mirror:</p>
+        $$\Delta x = |v - u| = |-60 - (-30)| = 30\text{ cm}$$
+        <p>Bubble <code>030</code>. <em>(Trap Alert: Do NOT bubble <code>060</code>—that is the image distance from the
+                pole, not from the object!)</em></p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q27. Answer: <code>100</code></strong></p>
+        <p><strong>Step 1 (Check Whether the Stone Reverses Direction!):</strong> Time to reach maximum height ($v =
+            0$):</p>
+        $$t_{\text{top}} = \frac{u}{g} = \frac{40}{10} = 4\text{ s}$$
+        <p>Because $t = 6\text{ s} > 4\text{ s}$, the stone rises for $4\text{ s}$ and then falls downward for $6 - 4 =
+            2\text{ s}$. Therefore, <strong>Distance $\neq$ Displacement</strong>!</p>
+        <p><strong>Step 2 (Sum Upward &amp; Downward Paths):</strong></p>
+        <ul>
+            <li>Upward distance ($0 \to 4\text{ s}$): $H_{\text{up}} = \frac{u^2}{2g} = \frac{40^2}{2(10)} =
+                \frac{1600}{20} = 80\text{ m}$.</li>
+            <li>Downward distance ($4 \to 6\text{ s}$, starting from rest at top): $h_{\text{down}} =
+                \frac{1}{2}gt_{\text{fall}}^2 = \frac{1}{2}(10)(2)^2 = 20\text{ m}$.</li>
+        </ul>
+        $$\text{Total Distance} = 80 + 20 = 100\text{ m}$$
+        <p>Bubble <code>100</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q28. Answer: <code>072</code></strong></p>
+        <p><strong>Step 1 (Sign Convention for Convex Mirror):</strong> Radius of curvature $R = +48\text{ cm} \implies
+            f = \frac{R}{2} = +24\text{ cm}$. A convex mirror always forms a virtual, erect image, so $m =
+            +\frac{1}{4}$.</p>
+        <p><strong>Step 2 (Magnification-Focal Length Formula):</strong></p>
+        $$m = \frac{f}{f - u} \implies \frac{1}{4} = \frac{24}{24 - u}$$
+        $$24 - u = 96 \implies u = -72\text{ cm}$$
+        <p>Object distance $= 72\text{ cm} \implies$ bubble <code>072</code>.</p>
+        <p><strong>30-Second Speed Trick:</strong> For a convex mirror forming an image $\frac{1}{n}$ the size of the
+            object, memorize the instant shortcut $|u| = (n - 1)f$. Here $n = 4, f = 24 \implies |u| = 3 \times 24 =
+            72\text{ cm}$ in 4 seconds!</p>
+    </div>
+
+    <div class="bridge-box">
+        <h3>Section II: Physics MCQ Solutions (Q29–Q36)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q29. Answer: (B)</strong></p>
+        <p>On a $v$-$t$ graph, the vertical coordinate gives velocity $v$ and the slope gives acceleration $a =
+            \frac{dv}{dt}$. Where the straight line crosses the time axis at $t = 5\text{ s}$:</p>
+        <ul>
+            <li>Velocity $v = 0$ (crossing the horizontal axis).</li>
+            <li>Acceleration $a$ equals the constant negative slope, so $a \neq 0$ (kills A and C).</li>
+            <li>Velocity switches from positive ($t < 5$) to negative ($t> 5$), meaning the particle momentarily stops
+                    and reverses direction (just like a ball at the peak of vertical throw). Option (D) is false because
+                    the particle has only reached its farthest turning point, not returned to start.</li>
+        </ul>
+        <p>Correct choice: <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q30. Answer: (A)</strong></p>
+        <p>A concave mirror ($f = -15\text{ cm}$) can form an image twice the object's height in <strong>two
+                ways</strong>: real inverted ($m = -2$) or virtual erect ($m = +2$). Use $m = \frac{f}{f - u} \implies u
+            = f\left(1 - \frac{1}{m}\right)$:</p>
+        <ul>
+            <li><strong>Case 1 (Virtual erect, $m = +2$):</strong> $u = -15\left(1 - \frac{1}{2}\right) = -7.5\text{
+                cm}$.</li>
+            <li><strong>Case 2 (Real inverted, $m = -2$):</strong> $u = -15\left(1 - \frac{1}{-2}\right) =
+                -15\left(\frac{3}{2}\right) = -22.5\text{ cm}$.</li>
+        </ul>
+        <p>Thus the two possible object distances are $7.5\text{ cm}$ and $22.5\text{ cm} \implies$
+            <strong>(A)</strong>.
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q31. Answer: (D)</strong></p>
+        <p><strong>Key Principle:</strong> Change in velocity $\Delta v = v(10) - v(0)$ equals the <strong>signed
+                area</strong> under the $a$-$t$ graph. Given $v(0) = 0$:</p>
+        $$v(10) = (+4\text{ m/s}^2)(5\text{ s}) + (-2\text{ m/s}^2)(5\text{ s}) = +20 - 10 = 10\text{ m/s}$$
+        <p>Matches <strong>(D)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q32. Answer: (C)</strong></p>
+        <p>Every single point on the illuminated arrow emits light rays in all directions that strike the
+            <em>entire</em> mirror surface. Covering the lower half blocks half the incoming light rays, reducing the
+            brightness (intensity) of the image by roughly $50\%$, while rays from both the top and bottom of the arrow
+            still reflect off the uncovered upper half and converge at the exact same image plane to form the
+            <strong>complete image</strong> $\implies$ <strong>(C)</strong>.
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q33. Answer: (B)</strong></p>
+        <p>For uniform acceleration starting from rest ($u = 0$):</p>
+        <ul>
+            <li>Distance in the $n^{\text{th}}$ second alone: $s_n = \frac{a}{2}(2n - 1) \implies s_4 = \frac{a}{2}(2
+                \cdot 4 - 1) = \frac{7a}{2}$.</li>
+            <li>Total distance in first $n$ seconds: $S_n = \frac{1}{2}an^2 \implies S_4 = \frac{1}{2}a(16) =
+                \frac{16a}{2}$.</li>
+        </ul>
+        $$\frac{s_4}{S_4} = \frac{7}{16}$$
+        <p>Matches <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q34. Answer: (A)</strong></p>
+        <p>Reflection obeys $\angle i = \angle r$ regardless of the surrounding medium's refractive index. Consequently,
+            a spherical mirror's focal length $f = \frac{R}{2}$ is purely a geometric property of its radius of
+            curvature $R$ and remains completely <strong>unchanged</strong> in water $\implies$ <strong>(A)</strong>.
+            <em>(Contrast: A glass <strong>lens</strong> changes focal length in water because refraction depends on
+                $n_{\text{lens}}/n_{\text{medium}}$!)</em>
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q35. Answer: (A)</strong></p>
+        <p><strong>Step 1 (Initial Image Position at $t = 0$):</strong> Given $f = -20\text{ cm}$ and $u_1 = -60\text{
+            cm}$:</p>
+        $$\frac{1}{v_1} = \frac{1}{-20} - \frac{1}{-60} = \frac{-3 + 1}{60} = -\frac{2}{60} \implies v_1 = -30\text{
+        cm}$$
+        <p><strong>Step 2 (Final Image Position at $t = 6\text{ s}$):</strong> The LED travels $5\text{ cm/s} \times
+            6\text{ s} = 30\text{ cm}$ toward the mirror, reaching $u_2 = -(60 - 30) = -30\text{ cm}$. By optical
+            reversibility (since $u_1 = -60 \leftrightarrow v_1 = -30$), we immediately get $v_2 = -60\text{ cm}$!</p>
+        <p><strong>Step 3 (Average Image Speed &amp; Direction):</strong> The image shifted from $30\text{ cm}$ in front
+            of the mirror to $60\text{ cm}$ in front of the mirror—a displacement of $30\text{ cm}$ <strong>away from
+                the mirror</strong> in $6\text{ s}$:</p>
+        $$v_{\text{avg, img}} = \frac{30\text{ cm}}{6\text{ s}} = 5\text{ cm/s, away from the mirror}$$
+        <p>Matches <strong>(A)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q36. Answer: (C)</strong></p>
+        <p>An object and its real image coincide at the exact same point on the principal axis of a concave mirror
+            <strong>only at the centre of curvature $C$</strong>, where $|u| = |v| = 2|f| = 2(20) = 40\text{ cm}$.
+        </p>
+        <p>Distance the LED must travel from $60\text{ cm}$ to $40\text{ cm}$ is $20\text{ cm}$ at constant speed
+            $5\text{ cm/s}$:</p>
+        $$t = \frac{20\text{ cm}}{5\text{ cm/s}} = 4\text{ s}$$
+        <p>Matches <strong>(C)</strong>.</p>
+    </div>
+
+    <div class="trap-box">
+        <h3>Mock 01 Post-Mortem Forensics #2 — Physics Distance &amp; Optics Traps (Q26, Q27, Q34)</h3>
+        <ul>
+            <li><strong>Distance vs. Displacement Turning-Point Trap (Q27):</strong> Blindly plugging $t = 6\text{ s}$
+                into $s = ut - \frac{1}{2}gt^2 = 40(6) - 5(36) = 60\text{ m}$ computes <em>displacement</em>, NOT
+                <em>total distance</em>! Whenever upward throw time $t > u/g$, split the motion at the peak
+                ($t_{\text{top}} = u/g$) and add $|H_{\text{up}}| + |h_{\text{down}}|$.
+            </li>
+            <li><strong>Pole vs. Object Reference Trap (Q26):</strong> Always audit what distance is requested: from the
+                <em>pole</em> ($|v| = 60\text{ cm}$), from the <em>focus</em> ($40\text{ cm}$), or from the
+                <em>object</em> ($|v - u| = 30\text{ cm}$).
+            </li>
+            <li><strong>Mirror-vs-Lens Immersion Confusion (Q34):</strong> Students memorize "$f$ becomes $4f$ in water"
+                for a glass lens ($n = 1.5$) and blindly apply it to a concave mirror! Mirrors reflect—medium refractive
+                index has zero effect on $f = R/2$.</li>
+        </ul>
+    </div>
+
+    <div class="bridge-box">
+        <h3>Section III: Chemistry NAT Solutions (Q37–Q40)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q37. Answer: <code>034</code></strong></p>
+        <p><strong>Step 1 (Convert Given Masses to Moles):</strong> Molar masses: $\text{N}_2 = 28\text{ g/mol}$,
+            $\text{H}_2 = 2\text{ g/mol}$, $\text{NH}_3 = 17\text{ g/mol}$.</p>
+        $$n(\text{N}_2) = \frac{28}{28} = 1.0\text{ mol}, \qquad n(\text{H}_2) = \frac{10}{2} = 5.0\text{ mol}$$
+        <p><strong>Step 2 (Identify Limiting Reagent):</strong> From $\text{N}_2 + 3\text{H}_2 \longrightarrow
+            2\text{NH}_3$, divide moles by stoichiometric coefficients:</p>
+        $$\frac{n(\text{N}_2)}{1} = 1.0 \quad < \quad \frac{n(\text{H}_2)}{3}=1.67 \implies \text{N}_2\text{ is the
+            limiting reagent.}$$ <p><strong>Step 3 (Mass of $\text{NH}_3$ Formed):</strong> $1.0\text{ mol }\text{N}_2$
+            produces $2.0\text{ mol }\text{NH}_3$:</p>
+            $$\text{Mass}(\text{NH}_3) = 2.0 \times 17 = 34\text{ g}$$
+            <p>Bubble <code>034</code>. <em>(Check: $28\text{ g N}_2 + 6\text{ g H}_2 = 34\text{ g NH}_3$, leaving
+                    $4\text{ g H}_2$ unreacted.)</em></p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q38. Answer: <code>088</code></strong></p>
+        <p><strong>Step 1 (Extract Pure $\text{CaCO}_3$):</strong> Only pure $\text{CaCO}_3$ decomposes on heating:</p>
+        $$\text{Mass of pure }\text{CaCO}_3 = 80\% \times 250\text{ g} = 200\text{ g}$$
+        <p><strong>Step 2 (Stoichiometric Mole Conversion):</strong> Molar mass of $\text{CaCO}_3 = 40 + 12 + 3(16) =
+            100\text{ g/mol}$.</p>
+        $$n(\text{CaCO}_3) = \frac{200}{100} = 2.0\text{ mol}$$
+        <p>From $\text{CaCO}_3 \xrightarrow{\Delta} \text{CaO} + \text{CO}_2$, $2.0\text{ mol }\text{CaCO}_3$ liberates
+            $2.0\text{ mol }\text{CO}_2$ (molar mass $44\text{ g/mol}$):</p>
+        $$\text{Mass}(\text{CO}_2) = 2.0 \times 44 = 88\text{ g}$$
+        <p>Bubble <code>088</code>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q39. Answer: <code>020</code></strong></p>
+        <p><strong>Step 1 (Oxidation-Number Electron Balance):</strong></p>
+        <ul>
+            <li>Oxidation: $\text{Cu}^0 \longrightarrow \text{Cu}^{2+}$ (loss of $2e^-$ per $\text{Cu}$).</li>
+            <li>Reduction: $\text{N}^{+5}\text{ (in HNO}_3\text{)} \longrightarrow \text{N}^{+2}\text{ (in NO)}$ (gain
+                of $3e^-$ per $\text{NO}$).</li>
+        </ul>
+        <p>To equalize electrons ($6e^-$ transferred), set $3\text{ Cu}$ and $2\text{ NO}$:</p>
+        $$3\,\text{Cu} + b\,\text{HNO}_3 \longrightarrow 3\,\text{Cu(NO}_3)_2 + 2\,\text{NO} + e\,\text{H}_2\text{O}$$
+        <p><strong>Step 2 (Balance Remaining $\text{N}$, $\text{H}$, and $\text{O}$):</strong></p>
+        <ul>
+            <li>Total $\text{N}$ on RHS $= 3(2) + 2(1) = 8 \implies b = 8$.</li>
+            <li>Total $\text{H}$ on LHS $= 8 \implies e = 4$ (gives $4\text{ H}_2\text{O}$).</li>
+            <li>Oxygen check: LHS $= 8(3) = 24$; RHS $= 3(6) + 2(1) + 4(1) = 18 + 2 + 4 = 24$. Balanced!</li>
+        </ul>
+        <p><strong>Step 3 (Sum of Coefficients):</strong> $a + b + c + d + e = 3 + 8 + 3 + 2 + 4 = 20 \implies$ bubble
+            <code>020</code>.
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q40. Answer: <code>045</code></strong></p>
+        <p><strong>Step 1 (Moles of Oxygen Atoms from $\text{CO}_2$):</strong> Molar mass of $\text{CO}_2 = 44\text{
+            g/mol}$.</p>
+        $$n(\text{CO}_2) = \frac{33}{44} = 0.75\text{ mol} \implies n(\text{O atoms}) = 0.75 \times 2 = 1.5\text{ mol}$$
+        <p><strong>Step 2 (Moles of Oxygen Atoms from $\text{O}_3$):</strong> Molar mass of $\text{O}_3 = 3 \times 16 =
+            48\text{ g/mol}$.</p>
+        $$n(\text{O}_3) = \frac{48}{48} = 1.0\text{ mol} \implies n(\text{O atoms}) = 1.0 \times 3 = 3.0\text{ mol}$$
+        <p><strong>Step 3 (Total Oxygen Atoms &amp; Target Value):</strong></p>
+        $$\text{Total O atoms} = (1.5 + 3.0)N_A = 4.5\,N_A \implies x = 4.5 \implies 10x = 45$$
+        <p>Bubble <code>045</code>.</p>
+    </div>
+
+    <div class="bridge-box">
+        <h3>Section IV: Chemistry MCQ Solutions (Q41–Q48)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q41. Answer: (A)</strong></p>
+        <p>Assign oxidation states across $\text{MnO}_2 + 4\text{HCl} \longrightarrow \text{MnCl}_2 +
+            2\text{H}_2\text{O} + \text{Cl}_2$:</p>
+        <ul>
+            <li>$\text{Mn}$ drops from $+4$ (in $\text{MnO}_2$) to $+2$ (in $\text{MnCl}_2$) $\implies \text{MnO}_2$ is
+                the <strong>substance reduced</strong> (oxidising agent).</li>
+            <li>$\text{Cl}$ rises from $-1$ (in $\text{HCl}$) to $0$ (in $\text{Cl}_2$) $\implies \text{HCl}$ is
+                oxidised, hence $\text{HCl}$ is the <strong>reducing agent</strong>.</li>
+        </ul>
+        <p><em>Remember:</em> Oxidising and reducing agents are ALWAYS chosen from the <strong>reactants</strong> side!
+            Matches <strong>(A)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q42. Answer: (C)</strong></p>
+        <p>Number of molecules $= n \times N_A$, so maximum molecules means maximum moles ($n = \text{mass}/M$):</p>
+        <ul>
+            <li>(A) $16\text{ g O}_2$: $n = \frac{16}{32} = 0.5\text{ mol}$</li>
+            <li>(B) $14\text{ g N}_2$: $n = \frac{14}{28} = 0.5\text{ mol}$</li>
+            <li>(C) $4\text{ g H}_2$: $n = \frac{4}{2} = \mathbf{2.0\text{ mol}}$ (Maximum!)</li>
+            <li>(D) $44\text{ g CO}_2$: $n = \frac{44}{44} = 1.0\text{ mol}$</li>
+        </ul>
+        <p>Matches <strong>(C)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q43. Answer: (B)</strong></p>
+        <p>Evaluate oxidation-number changes in each choice:</p>
+        <ul>
+            <li>(A) Non-redox thermal decomposition (no oxidation state changes).</li>
+            <li>(B) In $2\text{H}_2\text{O}_2 \longrightarrow 2\text{H}_2\text{O} + \text{O}_2$, oxygen in hydrogen
+                peroxide has oxidation state $-1$. It is simultaneously <strong>reduced</strong> to $-2$ (in
+                $\text{H}_2\text{O}$) and <strong>oxidised</strong> to $0$ (in $\text{O}_2$) $\implies$ classic
+                <strong>disproportionation</strong>!
+            </li>
+            <li>(C) Simple displacement redox ($\text{Zn}$ oxidised, $\text{Cu}^{2+}$ reduced—two different elements).
+            </li>
+            <li>(D) Non-redox double displacement / precipitation.</li>
+        </ul>
+        <p>Matches <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q44. Answer: (D)</strong></p>
+        <p><strong>Step 1 (Empirical Formula from $100\text{ g}$ sample):</strong></p>
+        <ul>
+            <li>$\text{C}: \frac{40}{12} = 3.33\text{ mol}$</li>
+            <li>$\text{H}: \frac{6.67}{1} = 6.67\text{ mol}$</li>
+            <li>$\text{O}: \frac{53.33}{16} = 3.33\text{ mol}$</li>
+        </ul>
+        <p>Dividing by $3.33$ gives simplest ratio $\text{C}:\text{H}:\text{O} = 1:2:1 \implies$ Empirical Formula $=
+            \text{CH}_2\text{O}$ (empirical mass $= 12 + 2 + 16 = 30\text{ g/mol}$).</p>
+        <p><strong>Step 2 (Scale to Molecular Formula):</strong> $n = \frac{180}{30} = 6 \implies
+            (\text{CH}_2\text{O})_6 = \text{C}_6\text{H}_{12}\text{O}_6 \implies$ <strong>(D)</strong>.</p>
+        <p><strong>30-Second Speed Trick:</strong> Skip empirical calculation completely—check which option has molar
+            mass $180\text{ g/mol}$! Only (D) $\text{C}_6\text{H}_{12}\text{O}_6$ equals $180$ ($30, 60, 90, 180$).
+            Solved in 4 seconds!</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q45. Answer: (D)</strong></p>
+        <ul>
+            <li>In $\text{K}_2\text{Cr}_2\text{O}_7$: $2(+1) + 2x + 7(-2) = 0 \implies 2x - 12 = 0 \implies x = +6$.
+            </li>
+            <li>In $\text{KMnO}_4$: $(+1) + y + 4(-2) = 0 \implies y - 7 = 0 \implies y = +7$.</li>
+        </ul>
+        <p>Hence $+6$ and $+7$, respectively $\implies$ <strong>(D)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q46. Answer: (A)</strong></p>
+        <p><strong>Step 1 (Moles Initially Present):</strong> $n(\text{Mg}) = \frac{12}{24} = 0.5\text{ mol}$ and
+            $n(\text{O}_2) = \frac{16}{32} = 0.5\text{ mol}$.</p>
+        <p><strong>Step 2 (Apply $2\text{Mg} + \text{O}_2 \longrightarrow 2\text{MgO}$):</strong> $2\text{ mol Mg}$
+            require $1\text{ mol O}_2$, so $0.5\text{ mol Mg}$ require only $0.25\text{ mol O}_2$ ($0.25 \times 32 =
+            8\text{ g O}_2$).</p>
+        <p><strong>Step 3 (Excess Remaining):</strong> $\text{Mg}$ is completely consumed; excess $\text{O}_2$ remaining
+            $= 16 - 8 = 8\text{ g} \implies$ <strong>(A)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q47. Answer: (B)</strong></p>
+        <p><strong>Step 1 (Moles of Reactants):</strong> Molar mass of $\text{Fe}_2\text{O}_3 = 2(56) + 3(16) =
+            160\text{ g/mol}$; molar mass of $\text{Al} = 27\text{ g/mol}$.</p>
+        $$n(\text{Fe}_2\text{O}_3) = \frac{320}{160} = 2.0\text{ mol}, \qquad n(\text{Al}) = \frac{81}{27} = 3.0\text{
+        mol}$$
+        <p><strong>Step 2 (Limiting Reagent Check):</strong> From $\text{Fe}_2\text{O}_3 + 2\text{Al} \longrightarrow
+            2\text{Fe} + \text{Al}_2\text{O}_3$:</p>
+        $$\frac{2.0}{1} = 2.0 \quad > \quad \frac{3.0}{2} = 1.5 \implies \text{Al is the limiting reagent!}$$
+        <p><strong>Step 3 (Mass of Molten Iron):</strong> Since $2\text{ mol Al}$ produce $2\text{ mol Fe}$ ($1:1$
+            ratio), $3.0\text{ mol Al}$ produce $3.0\text{ mol Fe}$:</p>
+        $$\text{Mass}(\text{Fe}) = 3.0 \times 56 = 168\text{ g}$$
+        <p>Matches <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q48. Answer: (C)</strong></p>
+        <p>During the thermite reaction, the reducing agent $\text{Al}$ is oxidised from $0$ to $+3$ (in
+            $\text{Al}_2\text{O}_3$), losing exactly $3\text{ electrons}$ per $\text{Al}$ atom:</p>
+        $$\text{Al} \longrightarrow \text{Al}^{3+} + 3e^-$$
+        <p>Because all $3.0\text{ mol}$ of limiting reagent $\text{Al}$ react completely (from Q47), the total moles of
+            electrons transferred are:</p>
+        $$n(e^-) = 3.0\text{ mol Al} \times 3 = 9\text{ mol}$$
+        <p><em>(Cross-check via oxidising agent: $1.5\text{ mol Fe}_2\text{O}_3$ reacts, i.e. $3.0\text{ mol Fe}^{3+}
+                \to 3.0\text{ mol Fe}^0$, gaining $3.0 \times 3 = 9\text{ mol } e^-$.)</em> Matches
+            <strong>(C)</strong>.
+        </p>
+    </div>
+
+    <div class="trap-box">
+        <h3>Mock 01 Post-Mortem Forensics #3 — Chemistry Stoichiometry &amp; Redox Traps (Q39, Q47–48)</h3>
+        <ul>
+            <li><strong>Non-Redox Acid Molecule Trap (Q39):</strong> In $\text{Cu} + \text{HNO}_3$, students often
+                balance only the $2\text{ HNO}_3$ molecules reduced to $2\text{ NO}$ and forget the additional $6\text{
+                HNO}_3$ molecules acting purely as an acid to supply the $6\text{ NO}_3^-$ ions in $3\text{ Cu(NO}_3)_2$
+                (total $b = 8$, not $2$!).</li>
+            <li><strong>Per-Equation vs. Per-Batch Electron Count (Q48):</strong> In the balanced equation as written,
+                $2\text{ Al}$ transfer $6\text{ mol } e^-$, luring hasty students to pick <strong>(B) $6\text{
+                    mol}$</strong>. Always scale by the <em>actual moles of limiting reagent reacted</em> ($3\text{ mol
+                Al} \implies 9\text{ mol } e^-$)!</li>
+        </ul>
+    </div>
+
+    <div class="bridge-box">
+        <h3>Section V: Biology MCQ Solutions (Q49–Q60)</h3>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q49. Answer: (B)</strong></p>
+        <p>Map all four heart chambers and vessels in standard anatomical orientation (viewer's left = patient's right
+            side):</p>
+        <ul>
+            <li><strong>1</strong> = Right Atrium, <strong>2</strong> = Right Ventricle, <strong>3</strong> = Left
+                Atrium, <strong>4</strong> = Left Ventricle.</li>
+            <li><strong>P</strong> (2 $\to$ Lungs) = Pulmonary Artery (deoxygenated); <strong>Q</strong> (Lungs $\to$ 3)
+                = <strong>Pulmonary Vein</strong> (oxygenated); <strong>R</strong> (4 $\to$ Body) = Aorta (oxygenated);
+                <strong>S</strong> (Body $\to$ 1) = Vena Cava (deoxygenated).
+            </li>
+        </ul>
+        <p>Hence Vessel <strong>Q — Pulmonary Vein</strong> carries oxygenated blood directly from the lungs into
+            chamber 3 $\implies$ <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q50. Answer: (C)</strong></p>
+        <p>Under oxygen deficit in human skeletal muscle cells, 3-carbon pyruvate ($\text{C}_3\text{H}_4\text{O}_3$)
+            undergoes lactic acid fermentation in the cytoplasm to form 3-carbon lactic acid
+            ($\text{C}_3\text{H}_6\text{O}_3$) + small ATP energy. Because all $3$ carbons remain intact in lactic acid,
+            <strong>NO $\text{CO}_2$ is released</strong> (unlike yeast alcoholic fermentation, which releases
+            $\text{CO}_2$ while forming 2-carbon ethanol) $\implies$ <strong>(C)</strong>.
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q51. Answer: (A)</strong></p>
+        <ul>
+            <li><strong>P (Pepsin) $\to$ 3:</strong> Secreted in stomach gastric juice; requires $\text{HCl}$ acidic
+                medium ($\text{pH} \approx 1.8$) to digest proteins into peptones.</li>
+            <li><strong>Q (Bile juice) $\to$ 4:</strong> Secreted by liver (stored in gall bladder); contains <em>zero
+                    digestive enzymes</em>—bile salts emulsify large fat globules and alkalize chyme.</li>
+            <li><strong>R (Trypsin) $\to$ 1:</strong> Secreted by pancreas into duodenum; digests proteins in alkaline
+                medium.</li>
+            <li><strong>S (Salivary amylase / ptyalin) $\to$ 2:</strong> Acts in buccal cavity to hydrolyse starch into
+                maltose.</li>
+        </ul>
+        <p>Combination: P–3, Q–4, R–1, S–2 $\implies$ <strong>(A)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q52. Answer: (D)</strong></p>
+        <p>During the light-dependent reaction inside thylakoid membranes, light energy drives the <strong>photolysis
+                (splitting) of water</strong> ($2\text{H}_2\text{O} \to 4\text{H}^+ + 4e^- + \text{O}_2$). Classic
+            ${}^{18}\text{O}$ isotope-tracing experiments proved that $100\%$ of evolved $\text{O}_2$ comes from
+            $\text{H}_2\text{O}$, not from $\text{CO}_2$ $\implies$ <strong>(D)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q53. Answer: (C)</strong></p>
+        <ul>
+            <li><strong>Statement I is TRUE:</strong> Small solutes (glucose, amino acids, salts, urea, water) pass
+                freely into Bowman's capsule during glomerular ultrafiltration; nearly $100\%$ of glucose and amino
+                acids are then actively reabsorbed in the PCT so healthy urine contains no glucose.</li>
+            <li><strong>Statement II is FALSE:</strong> Blood corpuscles (RBCs, WBCs, platelets) and large plasma
+                proteins (like albumin) are too large to pass through the glomerular filtration slits; their presence in
+                urine indicates kidney damage.</li>
+        </ul>
+        <p>Matches <strong>(C)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q54. Answer: (B)</strong></p>
+        <p>Phloem translocation moves sucrose and amino acids <strong>bidirectionally</strong> (source to sink—upward to
+            buds/fruits and downward to roots) via living sieve-tube elements using active loading powered by
+            <strong>$\text{ATP}$</strong>. In contrast, xylem conducts water and minerals strictly
+            <strong>unidirectionally upward</strong> through dead tracheids/vessels, driven passively by root pressure
+            and predominantly <strong>transpirational pull</strong> $\implies$ <strong>(B)</strong>.
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q55. Answer: (C)</strong></p>
+        <p>In pure distilled water (a strongly hypotonic external medium), water enters both cells by
+            <strong>endosmosis</strong>:
+        </p>
+        <ul>
+            <li>The <strong>onion plant cell</strong> swells until its rigid cellulose cell wall exerts an equal and
+                opposite wall pressure, making it <strong>turgid without bursting</strong>.</li>
+            <li>The <strong>human RBC</strong> lacks a cell wall, so unchecked endosmosis causes it to swell and undergo
+                osmotic lysis (<strong>burst</strong>).</li>
+        </ul>
+        <p>Matches <strong>(C)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q56. Answer: (D)</strong></p>
+        <p><strong>Mitochondria</strong> and <strong>Plastids (chloroplasts)</strong> are the two double-membrane
+            semi-autonomous organelles in eukaryotes: both possess their own naked circular DNA and prokaryotic-type
+            $70\text{S}$ ribosomes, enabling them to synthesize a subset of their own proteins independently $\implies$
+            <strong>(D)</strong>.
+        </p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q57. Answer: (B)</strong></p>
+        <p>During <strong>Metaphase</strong>, spindle fibres attach to kinetochores and align maximally condensed
+            chromosomes cleanly along the cell's equatorial (metaphase) plate, making karyotyping and morphological
+            study easiest $\implies$ <strong>(B)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q58. Answer: (A)</strong></p>
+        <p>In synchronized mitotic doubling, $n$ consecutive generations produce $2^n$ daughter cells from $1$ parent
+            cell:</p>
+        $$2^n = 128 = 2^7 \implies n = 7\text{ generations}$$
+        <p>Matches <strong>(A)</strong>. <em>(Critical Distinction: $n = 7$ is the number of
+                <strong>generations</strong>; $N - 1 = 127$ would be the total count of individual cell-division events
+                across all branches!)</em></p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q59. Answer: (C)</strong></p>
+        <p>Track chromosome number and nuclear DNA content step-by-step from $G_1$ through complete meiosis:</p>
+        <ul>
+            <li><strong>$G_1$ phase:</strong> $2n = 24$ chromosomes, $2C$ DNA.</li>
+            <li><strong>After $S$ phase (DNA replication):</strong> $2n = 24$ chromosomes (each now has 2 sister
+                chromatids), $4C$ DNA.</li>
+            <li><strong>After Meiosis I (reductional division):</strong> $2$ cells, each with $n = 12$ chromosomes, $2C$
+                DNA.</li>
+            <li><strong>After Meiosis II (equational division):</strong> $4$ haploid gametes, each with <strong>$n = 12$
+                    chromosomes and $1C$ DNA</strong>.</li>
+        </ul>
+        <p>Matches <strong>(C)</strong>.</p>
+    </div>
+
+    <div class="solution-card">
+        <p><strong>Q60. Answer: (A)</strong></p>
+        <ul>
+            <li><strong>Statement I is TRUE:</strong> Crossing over between non-sister chromatids of homologous
+                chromosomes occurs in Pachytene of Prophase I, driving genetic recombination.</li>
+            <li><strong>Statement II is TRUE:</strong> Mitotic Anaphase (and Anaphase II of meiosis) splits centromeres
+                to pull sister chromatids apart; Meiosis I Anaphase I separates whole homologous chromosomes while
+                centromeres remain intact.</li>
+        </ul>
+        <p>Both statements are true $\implies$ <strong>(A)</strong>.</p>
+    </div>
+
+    <div class="trap-box">
+        <h3>Mock 01 Post-Mortem Forensics #4 — Biology Precision Traps (Q50, Q58, Q59)</h3>
+        <ul>
+            <li><strong>Lactic Acid + $\text{CO}_2$ Myth (Q50):</strong> Never pick Option (B)! Only <em>yeast</em>
+                anaerobic fermentation produces $\text{CO}_2$ ($3\text{C} \to 2\text{C} + 1\text{C}$). Human muscle
+                fermentation preserves all $3$ carbons in lactic acid ($3\text{C} \to 3\text{C}$), releasing
+                <strong>zero $\text{CO}_2$</strong>.
+            </li>
+            <li><strong>Mitotic Generations vs. Total Divisions Trap (Q58):</strong> Ask yourself whether the prompt
+                says <em>"consecutive generations"</em> ($2^n = N \implies n = 7$) or <em>"total individual mitotic
+                    divisions"</em> ($N - 1 = 127$). Both numbers are planted in the options!</li>
+            <li><strong>$S$-Phase Chromosome-Number Myth (Q59):</strong> DNA replication during $S$ phase doubles DNA
+                content ($2C \to 4C$) while keeping chromosome count <strong>unchanged</strong> ($2n = 24$ stays $24$
+                because sister chromatids share one centromere). Forgetting this causes students to halve $4C$ only once
+                and pick (B).</li>
+        </ul>
+    </div>
+</article>
