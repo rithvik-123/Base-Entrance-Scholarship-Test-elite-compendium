@@ -1,0 +1,1473 @@
+<article data-volume="Volume 4: Chemistry (Paper 2)"
+    data-title="Chapter 23: Chemical Reactions, Oxidation States &amp; Redox Balancing">
+
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 4: Chemistry (Paper 2) &bull; Chapter 23 &bull; Target Study Time: 5 Hours
+        </div>
+        <h1>Chemical Reactions, Oxidation States &amp; Redox Balancing</h1>
+        <p>From conservation laws, precipitate diagnostics, and energy profiles to oxidation-state structural paradoxes,
+            ion-electron balancing in acidic/basic media, and $n$-factor equivalence shortcuts.</p>
+        <div class="tag-row">
+            <span class="meta-pill">NCERT Exemplar Core</span>
+            <span class="meta-pill">NSEJS / NTSE Stage 2</span>
+            <span class="meta-pill">Resonance Redox Bridge</span>
+            <span class="meta-pill">9 Graded Worked Examples</span>
+        </div>
+    </header>
+
+    <!-- ==================== SECTION 1 ==================== -->
+    <h2 class="section-heading">1. Chemical Equations, Conservation Laws &amp; Qualitative Diagnostics</h2>
+
+    <div class="concept-box">
+        <span class="box-label">First-Principles Foundation: What a Balanced Equation Guarantees</span>
+        <p>A chemical reaction rearranges atoms by breaking existing chemical bonds and forming new ones; no atoms are
+            created or destroyed (<strong>Law of Conservation of Mass</strong>, Lavoisier). In ionic systems, total
+            electric charge is simultaneously conserved (<strong>Law of Conservation of Charge</strong>). Therefore, a
+            correctly balanced chemical equation encodes four exact quantitative ratios:</p>
+        <ol>
+            <li><strong>Stoichiometric Mole Ratio:</strong> Coefficients give the exact ratio of moles (and
+                molecules/formula units) consumed and formed.</li>
+            <li><strong>Mass Ratio:</strong> Total mass of reactants equals total mass of products ($\sum
+                m_{\text{reactants}} = \sum m_{\text{products}}$).</li>
+            <li><strong>Gaseous Volume Ratio (Avogadro / Gay-Lussac Law):</strong> For gaseous species measured at
+                identical temperature $T$ and pressure $P$, the volume ratio equals the stoichiometric mole ratio ($V
+                \propto n$).</li>
+            <li><strong>Net Ionic Charge Balance:</strong> In any ionic equation, $\sum q_{\text{LHS}} = \sum
+                q_{\text{RHS}}$.</li>
+        </ol>
+    </div>
+
+    <h3>The Algebraic Coefficient Method (Zero-Guesswork Balancing)</h3>
+    <p>Hit-and-trial balancing wastes precious exam minutes on multi-product equations. For any skeletal equation,
+        assign literal coefficients $a, b, c, d, \dots$, enforce atom conservation for every element, set one convenient
+        variable to $1$, solve the linear system, and clear denominators to obtain the smallest coprime integers.</p>
+
+    <div class="concept-box">
+        <span class="box-label">Protocol Demonstration: Red-Hot Iron with Steam</span>
+        <p>Consider $a\,\text{Fe}(s) + b\,\text{H}_2\text{O}(g) \longrightarrow c\,\text{Fe}_3\text{O}_4(s) +
+            d\,\text{H}_2(g)$.</p>
+        <ul>
+            <li><strong>Iron ($\text{Fe}$) balance:</strong> $a = 3c$</li>
+            <li><strong>Oxygen ($\text{O}$) balance:</strong> $b = 4c$</li>
+            <li><strong>Hydrogen ($\text{H}$) balance:</strong> $2b = 2d \implies d = b = 4c$</li>
+        </ul>
+        <p>Set $c = 1 \implies a = 3,\; b = 4,\; d = 4$. The unique minimal integer equation is:</p>
+        $$3\text{Fe}(s) + 4\text{H}_2\text{O}(g) \longrightarrow \text{Fe}_3\text{O}_4(s) + 4\text{H}_2(g)$$
+        <p><em>Verification:</em> Left has $3\text{ Fe},\, 8\text{ H},\, 4\text{ O}$; Right has $3\text{ Fe},\, 8\text{
+            H},\, 4\text{ O}$. Notice that iron reacts only with <strong>steam</strong> ($\text{H}_2\text{O}(g)$), not
+            cold or hot liquid water, yielding magnetic iron oxide ($\text{Fe}_3\text{O}_4$), not
+            $\text{Fe}_2\text{O}_3$.</p>
+    </div>
+
+    <h3>Classic Qualitative Identification Tests (High-Yield BEST Paper 2 Diagnostics)</h3>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Target Species</th>
+                <th>Reagent / Test Procedure</th>
+                <th>Diagnostic Observation</th>
+                <th>Underlying Balanced Reaction</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Water Vapor ($\text{H}_2\text{O}$)</strong></td>
+                <td>Pass over white anhydrous $\text{CuSO}_4$ (or blue dry $\text{CoCl}_2$ paper)</td>
+                <td>Anhydrous white powder turns <strong>bright blue</strong> ($\text{CoCl}_2$: blue $\to$ pink)</td>
+                <td>$\text{CuSO}_4(s) + 5\text{H}_2\text{O}(l) \longrightarrow \text{CuSO}_4\cdot
+                    5\text{H}_2\text{O}(s)$</td>
+            </tr>
+            <tr>
+                <td><strong>Carbon Dioxide ($\text{CO}_2$)</strong></td>
+                <td>Bubble through freshly prepared limewater, $\text{Ca(OH)}_2(aq)$</td>
+                <td>Turns <strong>milky/turbid</strong>; on passing <strong>excess $\text{CO}_2$</strong>, milkiness
+                    disappears to a clear solution</td>
+                <td>$\text{Ca(OH)}_2 + \text{CO}_2 \longrightarrow \text{CaCO}_3(s)\downarrow +
+                    \text{H}_2\text{O}$<br>$\text{CaCO}_3 + \text{H}_2\text{O} + \text{CO}_2 \longrightarrow
+                    \text{Ca(HCO}_3)_2(aq)$</td>
+            </tr>
+            <tr>
+                <td><strong>Hydrogen ($\text{H}_2$)</strong></td>
+                <td>Bring a burning splinter near the mouth of the test tube</td>
+                <td>Burns with a pale blue flame and a sharp <strong>"pop" sound</strong></td>
+                <td>$2\text{H}_2(g) + \text{O}_2(g) \longrightarrow 2\text{H}_2\text{O}(l)$</td>
+            </tr>
+            <tr>
+                <td><strong>Oxygen ($\text{O}_2$)</strong></td>
+                <td>Insert a glowing (smoldering) wooden splinter</td>
+                <td><strong>Relights</strong> the glowing splinter brightly</td>
+                <td>Supports rapid combustion of cellulose</td>
+            </tr>
+            <tr>
+                <td><strong>Nitrogen Dioxide ($\text{NO}_2$)</strong></td>
+                <td>Visual check + moist blue litmus paper</td>
+                <td><strong>Reddish-brown pungent fumes</strong>; turns moist blue litmus red (acidic oxide)</td>
+                <td>$2\text{NO}_2 + \text{H}_2\text{O} \longrightarrow \text{HNO}_2 + \text{HNO}_3$</td>
+            </tr>
+            <tr>
+                <td><strong>Sulfur Dioxide ($\text{SO}_2$)</strong></td>
+                <td>Odor + acidified potassium dichromate ($\text{K}_2\text{Cr}_2\text{O}_7$) paper</td>
+                <td>Choking smell of <strong>burning sulfur</strong>; turns orange dichromate paper
+                    <strong>green</strong> ($\text{Cr}^{3+}$)
+                </td>
+                <td>$\text{Cr}_2\text{O}_7^{2-} + 3\text{SO}_2 + 2\text{H}^+ \longrightarrow 2\text{Cr}^{3+} +
+                    3\text{SO}_4^{2-} + \text{H}_2\text{O}$</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="trap-box">
+        <span class="box-label">Exam Trap Alert: Limewater Is NOT Unique to $\text{CO}_2$</span>
+        <p>Sulfur dioxide ($\text{SO}_2$) also turns limewater milky via insoluble calcium sulfite ($\text{CaSO}_3$) and
+            clears on excess gas via soluble $\text{Ca(HSO}_3)_2$. To distinguish $\text{CO}_2$ from $\text{SO}_2$, test
+            with acidified $\text{K}_2\text{Cr}_2\text{O}_7$ or $\text{KMnO}_4$: $\text{SO}_2$ decolorizes purple
+            $\text{KMnO}_4$ and turns orange $\text{K}_2\text{Cr}_2\text{O}_7$ green, whereas $\text{CO}_2$ ($\text{C}$
+            is already at max $+4$) causes <strong>no color change</strong>.</p>
+    </div>
+
+    <!-- ==================== SECTION 2 ==================== -->
+    <h2 class="section-heading">2. Systematic Classification of Chemical Reactions &amp; Energetics</h2>
+
+    <h3>2.1 Combination &amp; Decomposition Reactions</h3>
+    <ul>
+        <li><strong>Combination ($A + B \longrightarrow AB$):</strong> Two or more reactants merge into a single
+            product. Most combinations are exothermic (bond formation dominates). Examples: slaking of quicklime,
+            $\text{CaO}(s) + \text{H}_2\text{O}(l) \longrightarrow \text{Ca(OH)}_2(aq) + \text{Heat}$ (non-redox);
+            burning of magnesium ribbon, $2\text{Mg}(s) + \text{O}_2(g) \longrightarrow 2\text{MgO}(s)$ (redox). Note
+            that whitewashing walls relies on atmospheric $\text{CO}_2$ reacting slowly with slaked lime over 2&ndash;3
+            days to form shiny $\text{CaCO}_3(s)$.</li>
+        <li><strong>Decomposition ($AB \longrightarrow A + B$):</strong> A single compound breaks into two or more
+            simpler substances. Because bonds must be broken, decomposition reactions are <strong>endothermic</strong>
+            and require an external energy driver:
+            <ul>
+                <li><strong>Thermal Decomposition (Thermolysis):</strong>
+                    <ul>
+                        <li><em>Ferrous sulfate heptahydrate:</em> Pale green $\text{FeSO}_4\cdot
+                            7\text{H}_2\text{O}(s)$ first loses water of crystallization to become white anhydrous
+                            $\text{FeSO}_4(s)$, then decomposes on strong heating:
+                            $$2\text{FeSO}_4(s) \xrightarrow{\Delta} \text{Fe}_2\text{O}_3(s)\text{ (reddish-brown)} +
+                            \text{SO}_2(g) + \text{SO}_3(g)$$
+                            Notice $\text{Fe}$ goes $+2 \to +3$ while half the $\text{S}$ goes $+6 \to +4$; hence it is
+                            a <strong>redox thermal decomposition</strong>.</li>
+                        <li><em>Lead(II) nitrate:</em> White crystals decrepitate (crackle), giving yellow-when-cold
+                            (reddish-brown-when-hot) litharge $\text{PbO}$, brown $\text{NO}_2$ fumes, and $\text{O}_2$:
+                            $$2\text{Pb(NO}_3)_2(s) \xrightarrow{\Delta} 2\text{PbO}(s) + 4\text{NO}_2(g) +
+                            \text{O}_2(g)$$</li>
+                        <li><em>Limestone (Calcium carbonate):</em> $\text{CaCO}_3(s) \xrightarrow{\Delta} \text{CaO}(s)
+                            + \text{CO}_2(g)$ (strictly <strong>non-redox</strong>; oxidation states remain
+                            $\text{Ca}=+2,\; \text{C}=+4,\; \text{O}=-2$).</li>
+                    </ul>
+                </li>
+                <li><strong>Electrolytic Decomposition (Electrolysis):</strong> Acidulated water splits under DC
+                    current:
+                    $$2\text{H}_2\text{O}(l) \xrightarrow{\text{Electricity}} 2\text{H}_2(g)\text{ (cathode)} +
+                    \text{O}_2(g)\text{ (anode)}$$
+                    At the same $T, P$, the volume ratio is $V_{\text{H}_2} : V_{\text{O}_2} = 2 : 1$, while the mass
+                    ratio is $m_{\text{H}_2} : m_{\text{O}_2} = (2 \times 2) : (1 \times 32) = 1 : 8$.</li>
+                <li><strong>Photolytic Decomposition (Photolysis):</strong> Silver halides decompose in sunlight (basis
+                    of black-and-white photography):
+                    $$2\text{AgCl}(s)\text{ (white)} \xrightarrow{h\nu} 2\text{Ag}(s)\text{ (grey)} + \text{Cl}_2(g),
+                    \qquad 2\text{AgBr}(s)\text{ (pale yellow)} \xrightarrow{h\nu} 2\text{Ag}(s)\text{ (grey)} +
+                    \text{Br}_2(g)$$</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>2.2 Single Displacement &amp; Reactivity Hierarchies</h3>
+    <p>A more reactive element displaces a less reactive element from its aqueous salt or acid. <strong>Every
+            single-displacement reaction is necessarily a redox reaction.</strong></p>
+    <ul>
+        <li><strong>Metal Reactivity Series (Decreasing Ease of Oxidation / Electron Loss):</strong>
+            $$\text{K} \gt \text{Na} \gt \text{Ca} \gt \text{Mg} \gt \text{Al} \gt \text{Zn} \gt \text{Fe} \gt \text{Pb}
+            \gt [\text{H}] \gt \text{Cu} \gt \text{Hg} \gt \text{Ag} \gt \text{Au} \gt \text{Pt}$$
+            Example: $\text{Fe}(s) + \text{CuSO}_4(aq)\text{ (blue)} \longrightarrow \text{FeSO}_4(aq)\text{ (pale
+            green)} + \text{Cu}(s)\text{ (reddish-brown deposit)}$. Conversely, $\text{Cu}(s) + \text{FeSO}_4(aq)
+            \longrightarrow \text{No Reaction}$.</li>
+        <li><strong>Halogen Reactivity Series (Decreasing Oxidizing Power / Electron Gain):</strong>
+            $$\text{F}_2 \gt \text{Cl}_2 \gt \text{Br}_2 \gt \text{I}_2$$
+            Example: $\text{Cl}_2(aq) + 2\text{KBr}(aq) \longrightarrow 2\text{KCl}(aq) + \text{Br}_2(aq)$ (solution
+            turns orange-brown), and $\text{Cl}_2(aq) + 2\text{KI}(aq) \longrightarrow 2\text{KCl}(aq) + \text{I}_2(aq)$
+            (brown solution; turns starch blue-black).</li>
+    </ul>
+
+    <h3>2.3 Double Displacement &amp; Precipitate Color Reference</h3>
+    <p>In double displacement ($AB + CD \longrightarrow AD + CB$), ions exchange partners without any change in
+        oxidation state (<strong>non-redox</strong>). The reaction is driven forward by formation of an insoluble
+        precipitate, a weak electrolyte (like $\text{H}_2\text{O}$ in acid-base neutralization), or a gas.</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Precipitate Formula</th>
+                <th>Exact Color &amp; Appearance</th>
+                <th>Classic Formation Reaction</th>
+                <th>Diagnostic Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$\text{PbI}_2$</td>
+                <td><strong>Bright canary yellow</strong></td>
+                <td>$\text{Pb(NO}_3)_2 + 2\text{KI} \longrightarrow \text{PbI}_2\downarrow + 2\text{KNO}_3$</td>
+                <td>Dissolves in hot water; recrystallizes as golden spangles on cooling</td>
+            </tr>
+            <tr>
+                <td>$\text{BaSO}_4$</td>
+                <td><strong>Heavy white</strong></td>
+                <td>$\text{Na}_2\text{SO}_4 + \text{BaCl}_2 \longrightarrow \text{BaSO}_4\downarrow + 2\text{NaCl}$</td>
+                <td>Insoluble in dilute $\text{HCl}$ and $\text{HNO}_3$ (distinguishes $\text{SO}_4^{2-}$ from
+                    $\text{CO}_3^{2-}/\text{SO}_3^{2-}$)</td>
+            </tr>
+            <tr>
+                <td>$\text{AgCl}$</td>
+                <td><strong>Curdy white</strong></td>
+                <td>$\text{AgNO}_3 + \text{NaCl} \longrightarrow \text{AgCl}\downarrow + \text{NaNO}_3$</td>
+                <td>Soluble in aqueous $\text{NH}_4\text{OH}$; turns grey in sunlight</td>
+            </tr>
+            <tr>
+                <td>$\text{AgI}$</td>
+                <td><strong>Bright yellow</strong></td>
+                <td>$\text{AgNO}_3 + \text{KI} \longrightarrow \text{AgI}\downarrow + \text{KNO}_3$</td>
+                <td>Insoluble in aqueous $\text{NH}_4\text{OH}$ (unlike $\text{AgCl}$)</td>
+            </tr>
+            <tr>
+                <td>$\text{CuS},\; \text{PbS}$</td>
+                <td><strong>Black</strong></td>
+                <td>$\text{CuSO}_4 + \text{H}_2\text{S} \longrightarrow \text{CuS}\downarrow + \text{H}_2\text{SO}_4$
+                </td>
+                <td>$\text{PbS}$ also turns lead acetate paper shiny black in $\text{H}_2\text{S}$ gas</td>
+            </tr>
+            <tr>
+                <td>$\text{Fe(OH)}_3$</td>
+                <td><strong>Reddish-brown gelatinous</strong></td>
+                <td>$\text{FeCl}_3 + 3\text{NaOH} \longrightarrow \text{Fe(OH)}_3\downarrow + 3\text{NaCl}$</td>
+                <td>Contrast with dirty-green $\text{Fe(OH)}_2$ and pale-blue $\text{Cu(OH)}_2$</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2.4 Endothermic vs. Exothermic Reactions &amp; Reaction-Coordinate Profiles</h3>
+    <p>The enthalpy change of a reaction is defined as $\Delta H = H_{\text{products}} - H_{\text{reactants}} = \sum
+        E_{\text{bonds broken}} - \sum E_{\text{bonds formed}}$.</p>
+    <ul>
+        <li><strong>Exothermic Reactions ($\Delta H \lt 0$):</strong> More energy is released forming product bonds than
+            absorbed breaking reactant bonds; net heat flows to the surroundings (temperature rises). Key examples:
+            combustion of fuels, <strong>cellular respiration</strong> ($\text{C}_6\text{H}_{12}\text{O}_6 + 6\text{O}_2
+            \longrightarrow 6\text{CO}_2 + 6\text{H}_2\text{O} + \text{Energy}$), slaking of quicklime ($\text{CaO} +
+            \text{H}_2\text{O}$), composting of vegetable matter, acid-base neutralization, and dilution of conc.
+            $\text{H}_2\text{SO}_4$.</li>
+        <li><strong>Endothermic Reactions ($\Delta H \gt 0$):</strong> Net energy is absorbed from the surroundings
+            (temperature drops). Key examples: <strong>photosynthesis</strong>, all thermal/electrolytic/photolytic
+            decompositions, dissolution of $\text{NH}_4\text{Cl}$ in water, and the classic cold-pack reaction between
+            barium hydroxide octahydrate and ammonium chloride:
+            $$\text{Ba(OH)}_2\cdot 8\text{H}_2\text{O}(s) + 2\text{NH}_4\text{Cl}(s) \longrightarrow \text{BaCl}_2(aq) +
+            2\text{NH}_3(g) + 10\text{H}_2\text{O}(l), \qquad \Delta H \gt 0$$
+            This reaction absorbs so much thermal energy that the beaker temperature plunges below $0^\circ\text{C}$.
+        </li>
+    </ul>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 760 310" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Exothermic versus Endothermic reaction-coordinate energy profiles">
+            <defs>
+                <marker id="arrowDark" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b" />
+                </marker>
+                <marker id="arrowRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+                </marker>
+                <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb" />
+                </marker>
+                <marker id="arrowAmber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#d97706" />
+                </marker>
+            </defs>
+
+            <!-- Background panels -->
+            <rect x="8" y="8" width="364" height="294" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2" />
+            <rect x="388" y="8" width="364" height="294" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2" />
+
+            <!-- Panel Titles -->
+            <text x="190" y="32" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14"
+                font-weight="700" fill="#9a3412">A. Exothermic Reaction (&#916;H &lt; 0)</text>
+            <text x="570" y="32" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14"
+                font-weight="700" fill="#1e40af">B. Endothermic Reaction (&#916;H &gt; 0)</text>
+
+            <!-- LEFT PANEL: EXOTHERMIC -->
+            <!-- Axes -->
+            <line x1="55" y1="262" x2="55" y2="52" stroke="#1e293b" stroke-width="1.8" marker-end="url(#arrowDark)" />
+            <line x1="55" y1="262" x2="352" y2="262" stroke="#1e293b" stroke-width="1.8" marker-end="url(#arrowDark)" />
+            <text x="24" y="158" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="600" fill="#334155" transform="rotate(-90 24 158)">Potential Energy (H)</text>
+            <text x="204" y="285" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="600" fill="#334155">Reaction Coordinate &#8594;</text>
+
+            <!-- Dashed energy reference lines -->
+            <line x1="125" y1="138" x2="325" y2="138" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4,4" />
+            <line x1="175" y1="68" x2="225" y2="68" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3" />
+            <line x1="255" y1="224" x2="325" y2="224" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4,4" />
+
+            <!-- Reaction Curve (Exothermic) -->
+            <path d="M 68 138 L 125 138 C 155 138, 168 68, 196 68 C 224 68, 236 224, 266 224 L 336 224" fill="none"
+                stroke="#dc2626" stroke-width="3" stroke-linecap="round" />
+
+            <!-- Reactants / Products / TS Labels -->
+            <text x="96" y="130" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#1e293b">Reactants</text>
+            <text x="302" y="242" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#1e293b">Products</text>
+            <circle cx="196" cy="68" r="3.8" fill="#9a3412" />
+            <text x="196" y="56" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="600" fill="#7c2d12">Transition State</text>
+
+            <!-- Ea arrow -->
+            <line x1="196" y1="136" x2="196" y2="73" stroke="#d97706" stroke-width="2" marker-end="url(#arrowAmber)" />
+            <text x="204" y="110" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#b45309">E&#8336;</text>
+
+            <!-- Delta H arrow -->
+            <line x1="296" y1="140" x2="296" y2="220" stroke="#dc2626" stroke-width="2.2" marker-end="url(#arrowRed)" />
+            <text x="304" y="176" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#dc2626">&#916;H &lt; 0</text>
+            <text x="304" y="191" font-family="system-ui, sans-serif" font-size="10" fill="#991b1b">(Heat out)</text>
+
+            <!-- RIGHT PANEL: ENDOTHERMIC -->
+            <!-- Axes -->
+            <line x1="435" y1="262" x2="435" y2="52" stroke="#1e293b" stroke-width="1.8" marker-end="url(#arrowDark)" />
+            <line x1="435" y1="262" x2="732" y2="262" stroke="#1e293b" stroke-width="1.8"
+                marker-end="url(#arrowDark)" />
+            <text x="404" y="158" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="600" fill="#334155" transform="rotate(-90 404 158)">Potential Energy (H)</text>
+            <text x="584" y="285" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="600" fill="#334155">Reaction Coordinate &#8594;</text>
+
+            <!-- Dashed energy reference lines -->
+            <line x1="505" y1="224" x2="706" y2="224" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4,4" />
+            <line x1="556" y1="68" x2="606" y2="68" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3" />
+            <line x1="636" y1="138" x2="706" y2="138" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4,4" />
+
+            <!-- Reaction Curve (Endothermic) -->
+            <path d="M 448 224 L 505 224 C 535 224, 548 68, 576 68 C 604 68, 616 138, 646 138 L 716 138" fill="none"
+                stroke="#2563eb" stroke-width="3" stroke-linecap="round" />
+
+            <!-- Reactants / Products / TS Labels -->
+            <text x="476" y="242" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#1e293b">Reactants</text>
+            <text x="682" y="130" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#1e293b">Products</text>
+            <circle cx="576" cy="68" r="3.8" fill="#1e3a8a" />
+            <text x="576" y="56" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="600" fill="#1e3a8a">Transition State</text>
+
+            <!-- Ea arrow -->
+            <line x1="576" y1="222" x2="576" y2="73" stroke="#d97706" stroke-width="2" marker-end="url(#arrowAmber)" />
+            <text x="584" y="152" font-family="system-ui, sans-serif" font-size="12" font-weight="700"
+                fill="#b45309">E&#8336;</text>
+
+            <!-- Delta H arrow -->
+            <line x1="676" y1="222" x2="676" y2="142" stroke="#2563eb" stroke-width="2.2"
+                marker-end="url(#arrowBlue)" />
+            <text x="684" y="178" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#2563eb">&#916;H &gt; 0</text>
+            <text x="684" y="193" font-family="system-ui, sans-serif" font-size="10" fill="#1e40af">(Heat in)</text>
+        </svg>
+        <div class="diagram-caption">Figure 23.1: Reaction-coordinate potential energy profiles comparing Exothermic
+            ($\Delta H \lt 0$, $H_P \lt H_R$) and Endothermic ($\Delta H \gt 0$, $H_P \gt H_R$) reactions. Note that
+            both require an activation energy barrier $E_a \gt 0$, and for an endothermic process $E_a$ is strictly
+            greater than $\Delta H$.</div>
+    </div>
+
+    <!-- ==================== SECTION 3 ==================== -->
+    <h2 class="section-heading">3. Electronic Redox, Oxidation Number Rules &amp; Structural Paradoxes</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Classical vs. Modern Electronic Concept of Redox</span>
+        <ul>
+            <li><strong>Classical Definition:</strong> Oxidation = addition of $\text{O}$ (or electronegative element)
+                or removal of $\text{H}$ (or electropositive element). Reduction = reverse.</li>
+            <li><strong>Electronic Definition (OIL RIG):</strong> <strong>O</strong>xidation <strong>I</strong>s
+                <strong>L</strong>oss of electrons (oxidation number <em>increases</em>); <strong>R</strong>eduction
+                <strong>I</strong>s <strong>G</strong>ain of electrons (oxidation number <em>decreases</em>).
+            </li>
+            <li><strong>Agents:</strong> The <strong>Oxidizing Agent (Oxidant)</strong> oxidizes the other species by
+                <em>accepting electrons</em> and thus gets <strong>reduced</strong> itself. The <strong>Reducing Agent
+                    (Reductant)</strong> reduces the other species by <em>donating electrons</em> and thus gets
+                <strong>oxidized</strong> itself.
+            </li>
+        </ul>
+    </div>
+
+    <h3>Hierarchical Rules for Assigning Oxidation States (OS)</h3>
+    <p>Oxidation state represents the hypothetical charge an atom would carry if all its heteronuclear bonds were
+        $100\%$ ionic (shared electrons assigned entirely to the more electronegative atom; homonuclear bonds split
+        $50:50$, contributing $0$). Apply these rules in strict priority order:</p>
+    <ol>
+        <li><strong>Free / Elemental State:</strong> OS $= 0$ for every atom in an uncombined element ($\text{Fe},\,
+            \text{O}_2,\, \text{O}_3,\, \text{P}_4,\, \text{S}_8$).</li>
+        <li><strong>Monoatomic Ions:</strong> OS equals the ionic charge ($\text{Fe}^{3+} = +3,\; \text{S}^{2-} = -2,\;
+            \text{N}^{3-} = -3$).</li>
+        <li><strong>Fluorine ($\text{F}$):</strong> Always <strong>$-1$</strong> in every compound (highest
+            electronegativity, $4.0$).</li>
+        <li><strong>Alkali &amp; Alkaline Earth Metals:</strong> Group 1 ($\text{Li, Na, K}$) $= +1$; Group 2
+            ($\text{Mg, Ca, Ba}$) $= +2$; $\text{Al} = +3$ in compounds.</li>
+        <li><strong>Hydrogen ($\text{H}$):</strong> $+1$ with non-metals ($\text{H}_2\text{O},\, \text{NH}_3,\,
+            \text{HCl}$), but <strong>$-1$</strong> in binary/complex <strong>metal hydrides</strong> ($\text{NaH},\,
+            \text{CaH}_2,\, \text{LiAlH}_4,\, \text{NaBH}_4$).</li>
+        <li><strong>Oxygen ($\text{O}$):</strong> Normally <strong>$-2$</strong>, with five critical exceptions every
+            Olympiad student must memorize:
+            <ul>
+                <li><em>Peroxides</em> ($\text{H}_2\text{O}_2,\, \text{Na}_2\text{O}_2,\, \text{BaO}_2$): $\text{O} =
+                    \mathbf{-1}$ (contains an $\text{-O-O-}$ bond).</li>
+                <li><em>Superoxides</em> ($\text{KO}_2,\, \text{RbO}_2,\, \text{CsO}_2$): $\text{O} =
+                    \mathbf{-\frac{1}{2}}$ (contains $\text{O}_2^-$ ion).</li>
+                <li><em>Ozonides</em> ($\text{KO}_3$): $\text{O} = \mathbf{-\frac{1}{3}}$ (contains $\text{O}_3^-$ ion).
+                </li>
+                <li><em>Oxygen difluoride</em> ($\text{OF}_2$): $\text{O} = \mathbf{+2}$ (since $\text{F} = -1$).</li>
+                <li><em>Dioxygen difluoride</em> ($\text{O}_2\text{F}_2$): $\text{O} = \mathbf{+1}$.</li>
+            </ul>
+        </li>
+        <li><strong>Charge Conservation Rule:</strong> $\sum (\text{OS of all atoms}) = 0$ for a neutral molecule, and
+            $=$ net ionic charge for a polyatomic ion.</li>
+    </ol>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Structural Paradoxes &amp; Average Oxidation States</span>
+        <p><strong>Golden Paradox Rule:</strong> An element's true oxidation state can <strong>NEVER</strong> exceed its
+            maximum group valence (e.g., $\text{S} \le +6$, $\text{Cr} \le +6$, $\text{N} \le +5$, $\text{Mn} \le +7$,
+            $\text{Cl} \le +7$). Whenever the algebraic formula gives a value above this ceiling, the molecule contains
+            <strong>peroxide ($\text{-O-O-}$) linkages</strong> where each peroxo oxygen is $-1$, not $-2$.
+        </p>
+        <ul>
+            <li><strong>Chromium(VI) Peroxide ($\text{CrO}_5$):</strong> Naive formula gives $x + 5(-2) = 0 \implies x =
+                +10$ (impossible, since $\text{Cr}$ has only 6 valence electrons: $3d^5 4s^1$). Its actual <em>butterfly
+                    structure</em> has one $\text{Cr=O}$ oxo bond ($-2$) and <strong>two peroxo rings</strong> (four
+                $\text{O}$ atoms at $-1$):
+                $$x + 1(-2) + 4(-1) = 0 \implies x = +6$$</li>
+            <li><strong>Caro's Acid ($\text{H}_2\text{SO}_5$, Peroxymonosulfuric acid):</strong> Naive formula gives
+                $+8$ (impossible, $\text{S}_{\max} = +6$). Structure $\text{HO-SO}_2\text{-O-O-H}$ has one peroxo
+                linkage (two $\text{O}$ at $-1$) and three normal $\text{O}$ ($-2$):
+                $$2(+1) + x + 3(-2) + 2(-1) = 0 \implies x = +6$$
+                <em>Bonus analog:</em> Marshall's acid ($\text{H}_2\text{S}_2\text{O}_8$, peroxydisulfuric acid) has one
+                central $\text{-O-O-}$ bridge ($\text{HO}_3\text{S-O-O-SO}_3\text{H}$), giving $\text{S} = +6$, not
+                $+7$.
+            </li>
+            <li><strong>Magnetite ($\text{Fe}_3\text{O}_4$):</strong> Algebraic average gives $3x + 4(-2) = 0 \implies
+                x_{\text{avg}} = +\frac{8}{3}$. Physically, $\text{Fe}_3\text{O}_4$ is a mixed stoichiometric oxide
+                $\text{FeO}\cdot \text{Fe}_2\text{O}_3$, containing <strong>one $\text{Fe}^{2+}$</strong> and
+                <strong>two $\text{Fe}^{3+}$</strong> ions per formula unit: $\frac{(+2) + 2(+3)}{3} = +\frac{8}{3}$.
+            </li>
+            <li><strong>Bleaching Powder ($\text{CaOCl}_2$):</strong> Algebraic average gives $\text{Cl}_{\text{avg}} =
+                0$. Structurally, it is $\text{Ca}^{2+}(\text{OCl}^-)(\text{Cl}^-)$ (calcium hypochlorite chloride): the
+                hypochlorite chlorine is <strong>$+1$</strong> and the chloride ion is <strong>$-1$</strong>.</li>
+            <li><strong>Sodium Tetrathionate ($\text{Na}_2\text{S}_4\text{O}_6$):</strong> Algebraic average gives $4x =
+                +10 \implies x_{\text{avg}} = +2.5$. In its linear chain $\text{O}_3\text{S-S-S-SO}_3^{2-}$, the two
+                central $\text{S}$ atoms bond exclusively to sulfur (homonuclear bonds $\implies \text{OS} =
+                \mathbf{0}$), while each terminal $\text{S}$ bonds to three $\text{O}$ atoms ($-2$ contribution each via
+                two $\text{S=O}$ and one $\text{S-O}^-$) $\implies \text{OS} = \mathbf{+5}$. Individual states:
+                <strong>$+5,\; 0,\; 0,\; +5$</strong>.
+            </li>
+        </ul>
+    </div>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 780 285" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Chemical structures of CrO5, H2SO5, and S4O6 2- showing peroxide linkages and individual oxidation states">
+            <!-- Three Framed Subpanels -->
+            <rect x="8" y="8" width="234" height="269" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <rect x="252" y="8" width="248" height="269" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <rect x="510" y="8" width="262" height="269" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+
+            <!-- Panel Titles -->
+            <text x="125" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13"
+                font-weight="700" fill="#0f172a">CrO&#8325; (Butterfly Peroxide)</text>
+            <text x="376" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13"
+                font-weight="700" fill="#0f172a">H&#8322;SO&#8325; (Caro's Acid)</text>
+            <text x="641" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13"
+                font-weight="700" fill="#0f172a">S&#8324;O&#8326;&#178;&#8315; (Tetrathionate Ion)</text>
+
+            <!-- ===== PANEL 1: CrO5 ===== -->
+            <!-- Double bond Cr=O (top) -->
+            <line x1="121" y1="136" x2="121" y2="82" stroke="#334155" stroke-width="2.2" />
+            <line x1="129" y1="136" x2="129" y2="82" stroke="#334155" stroke-width="2.2" />
+            <!-- Left wing bonds Cr-O and O-O -->
+            <line x1="112" y1="146" x2="66" y2="120" stroke="#334155" stroke-width="2.2" />
+            <line x1="112" y1="160" x2="66" y2="192" stroke="#334155" stroke-width="2.2" />
+            <line x1="58" y1="130" x2="58" y2="182" stroke="#dc2626" stroke-width="3.2" />
+            <!-- Right wing bonds Cr-O and O-O -->
+            <line x1="138" y1="146" x2="184" y2="120" stroke="#334155" stroke-width="2.2" />
+            <line x1="138" y1="160" x2="184" y2="192" stroke="#334155" stroke-width="2.2" />
+            <line x1="192" y1="130" x2="192" y2="182" stroke="#dc2626" stroke-width="3.2" />
+
+            <!-- Peroxo highlight ellipses -->
+            <rect x="44" y="102" width="28" height="106" rx="14" fill="none" stroke="#ef4444" stroke-width="1.2"
+                stroke-dasharray="4,3" />
+            <rect x="178" y="102" width="28" height="106" rx="14" fill="none" stroke="#ef4444" stroke-width="1.2"
+                stroke-dasharray="4,3" />
+
+            <!-- Atoms CrO5 -->
+            <circle cx="125" cy="152" r="18" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8" />
+            <text x="125" y="156" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13"
+                font-weight="700" fill="#1e3a8a">Cr</text>
+            <text x="125" y="182" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#2563eb">(+6)</text>
+
+            <circle cx="125" cy="70" r="13" fill="#ffffff" stroke="#334155" stroke-width="1.5" />
+            <text x="125" y="74" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#0f172a">O</text>
+            <text x="150" y="74" font-family="system-ui, sans-serif" font-size="10" font-weight="700"
+                fill="#475569">(&#8722;2)</text>
+
+            <circle cx="58" cy="118" r="12" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5" />
+            <text x="58" y="122" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#991b1b">O</text>
+            <text x="31" y="122" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5"
+                font-weight="700" fill="#dc2626">&#8722;1</text>
+
+            <circle cx="58" cy="194" r="12" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5" />
+            <text x="58" y="198" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#991b1b">O</text>
+            <text x="31" y="198" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5"
+                font-weight="700" fill="#dc2626">&#8722;1</text>
+
+            <circle cx="192" cy="118" r="12" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5" />
+            <text x="192" y="122" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#991b1b">O</text>
+            <text x="219" y="122" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5"
+                font-weight="700" fill="#dc2626">&#8722;1</text>
+
+            <circle cx="192" cy="194" r="12" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5" />
+            <text x="192" y="198" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#991b1b">O</text>
+            <text x="219" y="198" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5"
+                font-weight="700" fill="#dc2626">&#8722;1</text>
+
+            <text x="125" y="236" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="600" fill="#dc2626">2 Peroxo (&#8722;O&#8722;O&#8722;) Rings</text>
+            <text x="125" y="256" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#0f172a">True Cr = +6 (not +10)</text>
+
+            <!-- ===== PANEL 2: H2SO5 ===== -->
+            <!-- Bonds S -->
+            <line x1="346" y1="128" x2="346" y2="82" stroke="#334155" stroke-width="2.2" />
+            <line x1="354" y1="128" x2="354" y2="82" stroke="#334155" stroke-width="2.2" />
+            <line x1="346" y1="160" x2="346" y2="202" stroke="#334155" stroke-width="2.2" />
+            <line x1="354" y1="160" x2="354" y2="202" stroke="#334155" stroke-width="2.2" />
+            <!-- Left -O-H -->
+            <line x1="335" y1="144" x2="306" y2="144" stroke="#334155" stroke-width="2.2" />
+            <line x1="286" y1="144" x2="274" y2="144" stroke="#334155" stroke-width="2.2" />
+            <!-- Right -O-O-H -->
+            <line x1="365" y1="144" x2="394" y2="144" stroke="#334155" stroke-width="2.2" />
+            <line x1="414" y1="144" x2="438" y2="144" stroke="#dc2626" stroke-width="3.2" />
+            <line x1="458" y1="144" x2="472" y2="144" stroke="#334155" stroke-width="2.2" />
+
+            <!-- Peroxo box -->
+            <rect x="387" y="126" width="76" height="36" rx="14" fill="none" stroke="#ef4444" stroke-width="1.2"
+                stroke-dasharray="4,3" />
+
+            <!-- Atoms H2SO5 -->
+            <circle cx="350" cy="144" r="16" fill="#fef3c7" stroke="#d97706" stroke-width="1.8" />
+            <text x="350" y="148" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13"
+                font-weight="700" fill="#92400e">S</text>
+            <text x="372" y="122" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700"
+                fill="#b45309">(+6)</text>
+
+            <circle cx="350" cy="70" r="12" fill="#ffffff" stroke="#334155" stroke-width="1.5" />
+            <text x="350" y="74" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#0f172a">O</text>
+            <text x="374" y="74" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700"
+                fill="#475569">(&#8722;2)</text>
+
+            <circle cx="350" cy="212" r="12" fill="#ffffff" stroke="#334155" stroke-width="1.5" />
+            <text x="350" y="216" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#0f172a">O</text>
+            <text x="374" y="216" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700"
+                fill="#475569">(&#8722;2)</text>
+
+            <circle cx="298" cy="144" r="11" fill="#ffffff" stroke="#334155" stroke-width="1.5" />
+            <text x="298" y="148" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#0f172a">O</text>
+            <text x="298" y="170" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5"
+                font-weight="700" fill="#475569">(&#8722;2)</text>
+            <text x="267" y="148" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#0f172a">H</text>
+
+            <circle cx="404" cy="144" r="11" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5" />
+            <text x="404" y="148" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#991b1b">O</text>
+            <text x="404" y="175" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5"
+                font-weight="700" fill="#dc2626">&#8722;1</text>
+
+            <circle cx="448" cy="144" r="11" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5" />
+            <text x="448" y="148" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#991b1b">O</text>
+            <text x="448" y="175" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5"
+                font-weight="700" fill="#dc2626">&#8722;1</text>
+
+            <text x="482" y="148" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#0f172a">H</text>
+
+            <text x="376" y="242" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="600" fill="#dc2626">1 Peroxo (&#8722;O&#8722;O&#8722;) Bond</text>
+            <text x="376" y="260" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#0f172a">True S = +6 (not +8)</text>
+
+            <!-- ===== PANEL 3: S4O6 2- ===== -->
+            <!-- S-S-S-S Backbone -->
+            <line x1="576" y1="144" x2="612" y2="144" stroke="#2563eb" stroke-width="3" />
+            <line x1="636" y1="144" x2="652" y2="144" stroke="#2563eb" stroke-width="3" />
+            <line x1="676" y1="144" x2="706" y2="144" stroke="#2563eb" stroke-width="3" />
+
+            <!-- Left terminal S bonds -->
+            <line x1="561" y1="130" x2="561" y2="90" stroke="#334155" stroke-width="2" />
+            <line x1="567" y1="130" x2="567" y2="90" stroke="#334155" stroke-width="2" />
+            <line x1="561" y1="158" x2="561" y2="196" stroke="#334155" stroke-width="2" />
+            <line x1="567" y1="158" x2="567" y2="196" stroke="#334155" stroke-width="2" />
+            <line x1="550" y1="144" x2="536" y2="144" stroke="#334155" stroke-width="2" />
+
+            <!-- Right terminal S bonds -->
+            <line x1="715" y1="130" x2="715" y2="90" stroke="#334155" stroke-width="2" />
+            <line x1="721" y1="130" x2="721" y2="90" stroke="#334155" stroke-width="2" />
+            <line x1="715" y1="158" x2="715" y2="196" stroke="#334155" stroke-width="2" />
+            <line x1="721" y1="158" x2="721" y2="196" stroke="#334155" stroke-width="2" />
+            <line x1="732" y1="144" x2="746" y2="144" stroke="#334155" stroke-width="2" />
+
+            <!-- Sulfur Atoms -->
+            <circle cx="564" cy="144" r="14" fill="#fef3c7" stroke="#d97706" stroke-width="1.8" />
+            <text x="564" y="148" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#92400e">S</text>
+            <text x="589" y="126" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                font-weight="700" fill="#b45309">+5</text>
+
+            <circle cx="622" cy="144" r="13" fill="#e0e7ff" stroke="#2563eb" stroke-width="1.8" />
+            <text x="622" y="148" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#1e3a8a">S</text>
+            <text x="622" y="122" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#2563eb">0</text>
+
+            <circle cx="662" cy="144" r="13" fill="#e0e7ff" stroke="#2563eb" stroke-width="1.8" />
+            <text x="662" y="148" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#1e3a8a">S</text>
+            <text x="662" y="122" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#2563eb">0</text>
+
+            <circle cx="718" cy="144" r="14" fill="#fef3c7" stroke="#d97706" stroke-width="1.8" />
+            <text x="718" y="148" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#92400e">S</text>
+            <text x="694" y="126" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10"
+                font-weight="700" fill="#b45309">+5</text>
+
+            <!-- Oxygen Atoms S4O6 2- -->
+            <text x="564" y="83" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#0f172a">O</text>
+            <text x="564" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#0f172a">O</text>
+            <text x="526" y="148" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#0f172a">&#8315;O</text>
+
+            <text x="718" y="83" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#0f172a">O</text>
+            <text x="718" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#0f172a">O</text>
+            <text x="756" y="148" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#0f172a">O&#8315;</text>
+
+            <text x="641" y="242" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="600" fill="#2563eb">Homonuclear S&#8722;S Bonds = 0</text>
+            <text x="641" y="260" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11"
+                font-weight="700" fill="#0f172a">States: +5, 0, 0, +5 (Avg = +2.5)</text>
+        </svg>
+        <div class="diagram-caption">Figure 23.2: Resolving oxidation-state paradoxes via actual molecular connectivity.
+            Peroxide ($\text{-O-O-}$) linkages assign $-1$ to oxygen in $\text{CrO}_5$ and $\text{H}_2\text{SO}_5$,
+            while homonuclear $\text{S-S}$ bonds assign $0$ to the interior sulfurs in $\text{S}_4\text{O}_6^{2-}$.
+        </div>
+    </div>
+
+    <!-- ==================== SECTION 4 ==================== -->
+    <h2 class="section-heading">4. Types of Redox Reactions &amp; Oxidant / Reductant Behavior</h2>
+
+    <h3>4.1 Five Structural Classes of Redox Reactions</h3>
+    <ol>
+        <li><strong>Combination Redox:</strong> At least one reactant must be in elemental state ($\text{C} + \text{O}_2
+            \longrightarrow \text{CO}_2$; $3\text{Mg} + \text{N}_2 \longrightarrow \text{Mg}_3\text{N}_2$).</li>
+        <li><strong>Decomposition Redox:</strong> Either an elemental product forms ($2\text{KClO}_3
+            \xrightarrow{\Delta} 2\text{KCl} + 3\text{O}_2$) or an intramolecular electron transfer occurs
+            ($2\text{FeSO}_4 \xrightarrow{\Delta} \text{Fe}_2\text{O}_3 + \text{SO}_2 + \text{SO}_3$;
+            $\text{NH}_4\text{NO}_3 \xrightarrow{\Delta} \text{N}_2\text{O} + 2\text{H}_2\text{O}$).</li>
+        <li><strong>Displacement Redox:</strong> Metal or non-metal displacement ($\text{Zn} + 2\text{HCl}
+            \longrightarrow \text{ZnCl}_2 + \text{H}_2$).</li>
+        <li><strong>Disproportionation (Auto-Redox):</strong> A <em>single element</em> in an <strong>intermediate
+                oxidation state</strong> is simultaneously oxidized to a higher state and reduced to a lower state:
+            $$\overset{0}{\text{Cl}}_2 + 2\text{OH}^-\text{ (cold, dil.)} \longrightarrow \overset{-1}{\text{Cl}}^- +
+            \overset{+1}{\text{ClO}}^- + \text{H}_2\text{O}$$
+            $$3\overset{0}{\text{Cl}}_2 + 6\text{OH}^-\text{ (hot, conc.)} \longrightarrow 5\overset{-1}{\text{Cl}}^- +
+            \overset{+5}{\text{ClO}}_3^- + 3\text{H}_2\text{O}$$
+            $$\overset{0}{\text{P}}_4 + 3\text{OH}^- + 3\text{H}_2\text{O} \longrightarrow \overset{-3}{\text{PH}}_3 +
+            3\text{H}_2\overset{+1}{\text{P}}\text{O}_2^- \qquad \text{and} \qquad 2\text{H}_2\overset{-1}{\text{O}}_2
+            \longrightarrow 2\text{H}_2\overset{-2}{\text{O}} + \overset{0}{\text{O}}_2$$
+            <em>Olympiad Rule:</em> Fluorine ($\text{F}_2$) <strong>cannot</strong> disproportionate because it never
+            exhibits a positive oxidation state.
+        </li>
+        <li><strong>Comproportionation (Symproportionation):</strong> The exact reverse of disproportionation&mdash;two
+            species containing the same element in a high and a low oxidation state react to yield a common intermediate
+            state:
+            $$\overset{+5}{\text{IO}}_3^- + 5\overset{-1}{\text{I}}^- + 6\text{H}^+ \longrightarrow
+            3\overset{0}{\text{I}}_2 + 3\text{H}_2\text{O}, \qquad 2\text{H}_2\overset{-2}{\text{S}} +
+            \overset{+4}{\text{S}}\text{O}_2 \longrightarrow 3\overset{0}{\text{S}} + 2\text{H}_2\text{O}$$</li>
+    </ol>
+
+    <h3>4.2 Predicting Oxidizing Agent vs. Reducing Agent Capability</h3>
+    <p>For any species containing a redox-active element $E$ with minimum possible state $\text{OS}_{\min}$ and maximum
+        possible state $\text{OS}_{\max}$, its chemical role is fixed by its position on the oxidation-number ladder:
+    </p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Oxidation State of Central Atom</th>
+                <th>Allowed Electron Flow</th>
+                <th>Chemical Role</th>
+                <th>High-Yield Benchmark Examples</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Maximum State ($\text{OS} = \text{OS}_{\max}$)</strong></td>
+                <td>Can ONLY gain $e^-$ (OS drops)</td>
+                <td><strong>Oxidizing Agent ONLY</strong></td>
+                <td>$\text{KMnO}_4$ ($\text{Mn}^{7+}$), $\text{K}_2\text{Cr}_2\text{O}_7$ ($\text{Cr}^{6+}$),
+                    $\text{HNO}_3$ ($\text{N}^{5+}$), conc. $\text{H}_2\text{SO}_4$ ($\text{S}^{6+}$), $\text{HClO}_4$
+                    ($\text{Cl}^{7+}$)</td>
+            </tr>
+            <tr>
+                <td><strong>Minimum State ($\text{OS} = \text{OS}_{\min}$)</strong></td>
+                <td>Can ONLY lose $e^-$ (OS rises)</td>
+                <td><strong>Reducing Agent ONLY</strong></td>
+                <td>$\text{H}_2\text{S}$ ($\text{S}^{2-}$), $\text{NH}_3$ ($\text{N}^{3-}$), $\text{HI}$ ($\text{I}^-$),
+                    $\text{PH}_3$ ($\text{P}^{3-}$), $\text{CH}_4$ ($\text{C}^{4-}$), alkali metals ($\text{Na},\,
+                    \text{K}$)</td>
+            </tr>
+            <tr>
+                <td><strong>Intermediate State ($\text{OS}_{\min} \lt \text{OS} \lt \text{OS}_{\max}$)</strong></td>
+                <td>Can both lose and gain $e^-$</td>
+                <td><strong>BOTH Oxidizing &amp; Reducing Agent</strong></td>
+                <td>$\text{SO}_2$ ($\text{S}^{+4}$), $\text{H}_2\text{O}_2$ ($\text{O}^{-1}$), $\text{HNO}_2$
+                    ($\text{N}^{+3}$), $\text{FeSO}_4$ ($\text{Fe}^{2+}$), $\text{Cl}_2$ ($\text{Cl}^{0}$),
+                    $\text{MnO}_2$ ($\text{Mn}^{4+}$)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="diagram-box">
+        <svg viewBox="0 0 760 360" width="100%" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Oxidation-number ladder mapping electron transfer and oxidizing versus reducing agent capability">
+            <defs>
+                <marker id="ladRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+                </marker>
+                <marker id="ladBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb" />
+                </marker>
+            </defs>
+
+            <rect x="6" y="6" width="748" height="348" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+            <text x="380" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14"
+                font-weight="700" fill="#0f172a">The Oxidation-Number Ladder: Electron Flow &amp; Agent
+                Classification</text>
+
+            <!-- Left Upward Arrow: OXIDATION -->
+            <line x1="78" y1="322" x2="78" y2="56" stroke="#dc2626" stroke-width="4" marker-end="url(#ladRed)" />
+            <text x="36" y="190" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#dc2626" transform="rotate(-90 36 190)">OXIDATION (OIL: Loss of e&#8315;, OS
+                Rises)</text>
+            <text x="58" y="190" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="600" fill="#991b1b" transform="rotate(-90 58 190)">Acts as Reducing Agent (RA)</text>
+
+            <!-- Right Downward Arrow: REDUCTION -->
+            <line x1="682" y1="56" x2="682" y2="322" stroke="#2563eb" stroke-width="4" marker-end="url(#ladBlue)" />
+            <text x="726" y="190" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#2563eb" transform="rotate(90 726 190)">REDUCTION (RIG: Gain of e&#8315;, OS
+                Drops)</text>
+            <text x="702" y="190" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="600" fill="#1e40af" transform="rotate(90 702 190)">Acts as Oxidizing Agent (OA)</text>
+
+            <!-- Central Ladder Rails -->
+            <line x1="158" y1="48" x2="158" y2="332" stroke="#475569" stroke-width="3" />
+            <line x1="216" y1="48" x2="216" y2="332" stroke="#475569" stroke-width="3" />
+
+            <!-- Zone Highlights on right of ladder -->
+            <rect x="236" y="46" width="420" height="74" rx="6" fill="#fee2e2" stroke="#fca5a5" stroke-width="1" />
+            <rect x="236" y="128" width="420" height="122" rx="6" fill="#fef9c3" stroke="#fde047" stroke-width="1" />
+            <rect x="236" y="258" width="420" height="74" rx="6" fill="#dbeafe" stroke="#93c5fd" stroke-width="1" />
+
+            <!-- Rung +7 -->
+            <line x1="158" y1="62" x2="216" y2="62" stroke="#475569" stroke-width="2.5" />
+            <text x="187" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#991b1b">+7</text>
+            <text x="248" y="66" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#7f1d1d">KMnO&#8324; (Mn), HClO&#8324; (Cl)</text>
+            <text x="646" y="66" text-anchor="end" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#dc2626">MAX OS &#8594; OA ONLY</text>
+
+            <!-- Rung +6 / +5 -->
+            <line x1="158" y1="98" x2="216" y2="98" stroke="#475569" stroke-width="2.5" />
+            <text x="187" y="102" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#991b1b">+6/+5</text>
+            <text x="248" y="102" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#7f1d1d">K&#8322;Cr&#8322;O&#8327; (Cr&#8314;&#8310;), H&#8322;SO&#8324; (S&#8314;&#8310;),
+                HNO&#8323; (N&#8314;&#8309;)</text>
+            <text x="646" y="102" text-anchor="end" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#dc2626">MAX OS &#8594; OA ONLY</text>
+
+            <!-- Rung +4 / +3 -->
+            <line x1="158" y1="148" x2="216" y2="148" stroke="#475569" stroke-width="2.5" />
+            <text x="187" y="152" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#854d0e">+4/+3</text>
+            <text x="248" y="152" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600"
+                fill="#713f12">SO&#8322; (S&#8314;&#8308;), MnO&#8322; (Mn&#8314;&#8308;), HNO&#8322;
+                (N&#8314;&#179;)</text>
+            <text x="646" y="152" text-anchor="end" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#a16207">INTERMEDIATE &#8594; BOTH</text>
+
+            <!-- Rung 0 -->
+            <line x1="158" y1="190" x2="216" y2="190" stroke="#0f172a" stroke-width="3.2" />
+            <text x="187" y="194" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12.5"
+                font-weight="800" fill="#0f172a">0</text>
+            <text x="248" y="194" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#0f172a">Elemental Baseline: Cl&#8322;, P&#8324;, S&#8328;, Fe, Zn</text>
+            <text x="646" y="194" text-anchor="end" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#a16207">DISPROPORTIONATION HUB</text>
+
+            <!-- Rung -1 -->
+            <line x1="158" y1="230" x2="216" y2="230" stroke="#475569" stroke-width="2.5" />
+            <text x="187" y="234" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#854d0e">&#8722;1</text>
+            <text x="248" y="234" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600"
+                fill="#713f12">H&#8322;O&#8322; (O&#8315;&#185;: between 0 and &#8722;2)</text>
+            <text x="646" y="234" text-anchor="end" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#a16207">OA &amp; RA (Disproportionates)</text>
+
+            <!-- Rung -2 / -1 halides -->
+            <line x1="158" y1="278" x2="216" y2="278" stroke="#475569" stroke-width="2.5" />
+            <text x="187" y="282" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5"
+                font-weight="700" fill="#1e40af">&#8722;1/&#8722;2</text>
+            <text x="248" y="282" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#1e3a8a">HI (I&#8315;), H&#8322;S (S&#178;&#8315;), Fe&#178;&#8314; (low metal state)</text>
+            <text x="646" y="282" text-anchor="end" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#2563eb">MIN OS &#8594; RA ONLY</text>
+
+            <!-- Rung -3 -->
+            <line x1="158" y1="314" x2="216" y2="314" stroke="#475569" stroke-width="2.5" />
+            <text x="187" y="318" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12"
+                font-weight="700" fill="#1e40af">&#8722;3</text>
+            <text x="248" y="318" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700"
+                fill="#1e3a8a">NH&#8323; (N&#179;&#8315;), PH&#8323; (P&#179;&#8315;), CH&#8324; (C&#8308;&#8315; at
+                &#8722;4)</text>
+            <text x="646" y="318" text-anchor="end" font-family="system-ui, sans-serif" font-size="10.5"
+                font-weight="700" fill="#2563eb">MIN OS &#8594; RA ONLY</text>
+        </svg>
+        <div class="diagram-caption">Figure 23.3: The Oxidation-Number Ladder. A species at the ceiling of its element's
+            oxidation range can only step down (OA only); one at the floor can only climb up (RA only); intermediate
+            rungs can move either way and are candidates for disproportionation.</div>
+    </div>
+
+    <!-- ==================== SECTION 5 ==================== -->
+    <h2 class="section-heading">5. Out-of-Portion Bridge: Systematic Redox Balancing &amp; $n$-Factor Theory</h2>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge: Two Bulletproof Balancing Algorithms</span>
+        <p><strong>Method 1: Oxidation Number Change Method</strong></p>
+        <ol>
+            <li>Assign oxidation numbers to every atom and identify the oxidized and reduced elements.</li>
+            <li>Compute total increase in OS per formula unit of RA ($\Delta_{\text{ox}}$) and total decrease in OS per
+                formula unit of OA ($\Delta_{\text{red}}$).</li>
+            <li>Cross-multiply the OA and RA by minimal integers so that $\text{Total OS Increase} = \text{Total OS
+                Decrease}$.</li>
+            <li>Balance all atoms other than $\text{H}$ and $\text{O}$ by inspection.</li>
+            <li>Balance $\text{O}$ by adding $\text{H}_2\text{O}$, then balance $\text{H}$ using $\text{H}^+$ (in acidic
+                medium) or adjust with $\text{OH}^-/\text{H}_2\text{O}$ (in basic medium). Verify net charge on both
+                sides.</li>
+        </ol>
+        <p><strong>Method 2: Ion-Electron (Half-Reaction) Method (Gold Standard for Acidic &amp; Basic Media)</strong>
+        </p>
+        <ol>
+            <li>Split the net ionic skeleton into separate <strong>Oxidation</strong> and <strong>Reduction</strong>
+                half-reactions.</li>
+            <li>In each half-reaction, balance all atoms <em>other than $\text{O}$ and $\text{H}$</em> first.</li>
+            <li>Balance $\text{O}$ atoms by adding $\text{H}_2\text{O}$ molecules to the oxygen-deficient side.</li>
+            <li>Balance $\text{H}$ atoms by adding $\text{H}^+$ ions to the hydrogen-deficient side.</li>
+            <li>Balance electric charge by adding electrons ($e^-$) to the more positive side.</li>
+            <li><strong>Basic Medium Conversion Rule (Zero-Error Protocol):</strong> If the medium is basic, neutralize
+                every $\text{H}^+$ by adding an equal number of $\text{OH}^-$ ions to <strong>BOTH</strong> sides of the
+                half-reaction, replace $\text{H}^+ + \text{OH}^-$ with $\text{H}_2\text{O}$, and cancel excess
+                $\text{H}_2\text{O}$.</li>
+            <li>Multiply the two half-reactions by smallest integers so electrons lost $=$ electrons gained, add them
+                together, and cancel common terms.</li>
+        </ol>
+    </div>
+
+    <h3>First-Principles Derivation of Redox $n$-Factor &amp; Law of Equivalence</h3>
+    <p>In any balanced redox reaction, electrons are neither created nor destroyed. Define the <strong>redox $n$-factor
+            ($n_f$)</strong> of a species as the exact number of moles of electrons lost or gained by <strong>1
+            mole</strong> of that species:</p>
+    $$n_f = (\text{Number of redox-active atoms per formula unit}) \times |\text{OS}_{\text{final}} -
+    \text{OS}_{\text{initial}}|$$
+    <p>If $n_{\text{OA}}$ moles of oxidizing agent react completely with $n_{\text{RA}}$ moles of reducing agent,
+        conservation of electrons dictates:</p>
+    $$\text{Moles of } e^- \text{ gained} = \text{Moles of } e^- \text{ lost} \implies n_{\text{OA}} \cdot
+    (n_f)_{\text{OA}} = n_{\text{RA}} \cdot (n_f)_{\text{RA}}$$
+    <p>This identity is the <strong>Law of Chemical Equivalence</strong> ($\text{Equivalents of OA} = \text{Equivalents
+        of RA}$), and the redox <strong>Equivalent Weight</strong> is $E = \dfrac{\text{Molar Mass } M}{n_f}$. It allows
+        you to compute exact stoichiometric mole ratios in 15 seconds <em>without balancing the full equation</em>.</p>
+
+    <div class="bridge-box">
+        <span class="box-label">First-Principles Proof: Disproportionation $n$-Factor Formula</span>
+        <p>Suppose $1\text{ mole}$ of a species $A$ disproportionates: a fraction $x\text{ moles}$ undergoes oxidation
+            (losing $n_1$ electrons per mole oxidized) and the remaining $y\text{ moles}$ undergoes reduction (gaining
+            $n_2$ electrons per mole reduced), so $x + y = 1$.</p>
+        <p>By conservation of electrons within the disproportionation:</p>
+        $$x \cdot n_1 = y \cdot n_2 \implies y = x \frac{n_1}{n_2}$$
+        <p>Substituting $y$ into $x + y = 1$:</p>
+        $$x\left(1 + \frac{n_1}{n_2}\right) = 1 \implies x = \frac{n_2}{n_1 + n_2}$$
+        <p>The total number of moles of electrons transferred per mole of $A$ is therefore $n_f = x \cdot n_1 =
+            \dfrac{n_1 n_2}{n_1 + n_2}$, which takes the memorable harmonic form:</p>
+        $$\frac{1}{n_f} = \frac{1}{n_1} + \frac{1}{n_2}$$
+        <p><em>Sanity Check on $2\text{H}_2\text{O}_2 \longrightarrow 2\text{H}_2\text{O} + \text{O}_2$:</em> Per mole
+            of $\text{H}_2\text{O}_2$ (2 O atoms at $-1$), oxidation to $\text{O}_2(0)$ gives $n_1 = 2 \times 1 = 2$,
+            and reduction to $2\text{H}_2\text{O}(-2)$ gives $n_2 = 2 \times 1 = 2$. Thus $n_f = \frac{2 \times 2}{2 +
+            2} = 1$. Directly: $2\text{ mol H}_2\text{O}_2$ transfers $2\text{ mol }e^- \implies 1\text{ mol }e^-$ per
+            mole of $\text{H}_2\text{O}_2$. Exact match!</p>
+    </div>
+
+    <h3>Classic Titration Oxidants &amp; Reductants: Exact $n$-Factor Table</h3>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Reagent &amp; Medium</th>
+                <th>Half-Reaction Transformation</th>
+                <th>Oxidation State Change</th>
+                <th>Exact $n_f$</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$\text{KMnO}_4$ (<strong>Acidic</strong>, $\text{pH} \lt 7$)</td>
+                <td>$\text{MnO}_4^- \longrightarrow \text{Mn}^{2+}$ (colorless)</td>
+                <td>$+7 \longrightarrow +2$</td>
+                <td><strong>$5$</strong></td>
+            </tr>
+            <tr>
+                <td>$\text{KMnO}_4$ (<strong>Neutral / Faintly Basic</strong>)</td>
+                <td>$\text{MnO}_4^- \longrightarrow \text{MnO}_2(s)$ (brown ppt.)</td>
+                <td>$+7 \longrightarrow +4$</td>
+                <td><strong>$3$</strong></td>
+            </tr>
+            <tr>
+                <td>$\text{KMnO}_4$ (<strong>Strongly Alkaline</strong>)</td>
+                <td>$\text{MnO}_4^- \longrightarrow \text{MnO}_4^{2-}$ (green)</td>
+                <td>$+7 \longrightarrow +6$</td>
+                <td><strong>$1$</strong></td>
+            </tr>
+            <tr>
+                <td>$\text{K}_2\text{Cr}_2\text{O}_7$ (<strong>Acidic</strong>)</td>
+                <td>$\text{Cr}_2\text{O}_7^{2-} \longrightarrow 2\text{Cr}^{3+}$ (green)</td>
+                <td>$2 \times (+6 \longrightarrow +3)$</td>
+                <td><strong>$6$</strong></td>
+            </tr>
+            <tr>
+                <td>Oxalate ion ($\text{C}_2\text{O}_4^{2-}$ / $\text{H}_2\text{C}_2\text{O}_4$)</td>
+                <td>$\text{C}_2\text{O}_4^{2-} \longrightarrow 2\text{CO}_2$</td>
+                <td>$2 \times (+3 \longrightarrow +4)$</td>
+                <td><strong>$2$</strong></td>
+            </tr>
+            <tr>
+                <td>Ferrous ion ($\text{FeSO}_4$)</td>
+                <td>$\text{Fe}^{2+} \longrightarrow \text{Fe}^{3+}$</td>
+                <td>$+2 \longrightarrow +3$</td>
+                <td><strong>$1$</strong></td>
+            </tr>
+            <tr>
+                <td>Ferrous oxalate ($\text{FeC}_2\text{O}_4$)</td>
+                <td>$\text{FeC}_2\text{O}_4 \longrightarrow \text{Fe}^{3+} + 2\text{CO}_2$</td>
+                <td>$\text{Fe}: (+2\to +3) + 2\text{C}: (+3\to +4)$</td>
+                <td><strong>$1 + 2 = 3$</strong></td>
+            </tr>
+            <tr>
+                <td>Thiosulfate ($\text{Na}_2\text{S}_2\text{O}_3$ + $\text{I}_2$)</td>
+                <td>$2\text{S}_2\text{O}_3^{2-} \longrightarrow \text{S}_4\text{O}_6^{2-}$</td>
+                <td>$2 \times (+2 \longrightarrow +2.5)$</td>
+                <td><strong>$1$</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ==================== SECTION 6 ==================== -->
+    <h2 class="section-heading">6. Everyday Oxidation Effects: Corrosion &amp; Rancidity</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Corrosion: Slow Electrochemical Surface Oxidation of Metals</span>
+        <p>When reactive metals are exposed to atmospheric moisture, oxygen, acidic gases ($\text{CO}_2,\,
+            \text{SO}_2$), or hydrogen sulfide ($\text{H}_2\text{S}$), surface atoms undergo redox degradation:</p>
+        <ul>
+            <li><strong>Rusting of Iron:</strong> Requires <strong>both</strong> $\text{O}_2$ and $\text{H}_2\text{O}$
+                (accelerated by dissolved electrolytes like $\text{NaCl}$ or acidic $\text{CO}_2$). Anodic iron
+                oxidation ($\text{Fe} \to \text{Fe}^{2+} + 2e^-$) followed by aerial oxidation produces flaky
+                reddish-brown hydrated ferric oxide:
+                $$4\text{Fe}(s) + 3\text{O}_2(g) + 2x\text{H}_2\text{O}(l) \longrightarrow 2\text{Fe}_2\text{O}_3\cdot
+                x\text{H}_2\text{O}(s)$$
+                <em>Prevention:</em> Painting, greasing, alloying (stainless steel: $\text{Fe + Cr + Ni}$), and
+                <strong>galvanization</strong> (zinc coating acts as a sacrificial anode&mdash;even when scratched,
+                $\text{Zn}$ oxidizes preferentially over $\text{Fe}$ because $\text{Zn}$ sits above $\text{Fe}$ in the
+                reactivity series).
+            </li>
+            <li><strong>Green Patina on Copper:</strong> Moist air containing $\text{CO}_2$ forms a protective green
+                layer of basic copper(II) carbonate:
+                $$2\text{Cu}(s) + \text{H}_2\text{O}(l) + \text{CO}_2(g) + \text{O}_2(g) \longrightarrow
+                \text{Cu(OH)}_2\cdot\text{CuCO}_3(s)\text{ (green)}$$</li>
+            <li><strong>Black Tarnish on Silver:</strong> Trace atmospheric $\text{H}_2\text{S}$ (assisted by
+                $\text{O}_2$) converts bright silver into black silver sulfide:
+                $$4\text{Ag}(s) + 2\text{H}_2\text{S}(g) + \text{O}_2(g) \longrightarrow 2\text{Ag}_2\text{S}(s)\text{
+                (black)} + 2\text{H}_2\text{O}(l)$$</li>
+        </ul>
+    </div>
+
+    <div class="concept-box">
+        <span class="box-label">Rancidity: Aerial Oxidation of Fats &amp; Oils</span>
+        <p>Unsaturated fatty acids in oils and lipid-rich foods react slowly with atmospheric $\text{O}_2$ via
+            free-radical oxidation, producing volatile short-chain aldehydes, ketones, and carboxylic acids that cause
+            foul odor and taste (rancidity).</p>
+        <ul>
+            <li><strong>Chemical Antioxidants (Reducing Agents):</strong> <strong>BHA</strong> (Butylated
+                Hydroxyanisole) and <strong>BHT</strong> (Butylated Hydroxytoluene) intercept oxidizing radicals before
+                they attack lipids.</li>
+            <li><strong>Inert Gas Flushing:</strong> Chip and snack packets are flushed with chemically inert
+                <strong>nitrogen gas ($\text{N}_2$)</strong> to displace $\text{O}_2$.
+            </li>
+            <li><strong>Physical Barriers:</strong> Airtight containers, opaque/amber packaging (blocks UV photolysis),
+                and refrigeration (lowers kinetic energy below $E_a$).</li>
+        </ul>
+    </div>
+
+    <!-- ==================== FORMULA VAULT ==================== -->
+    <div class="formula-vault">
+        <span class="box-label">Chapter 23 Master Formula &amp; Shortcut Vault</span>
+        <ul>
+            <li><strong>Enthalpy Change:</strong> $\Delta H = H_{\text{products}} - H_{\text{reactants}} = \sum
+                E_{\text{broken}} - \sum E_{\text{formed}}$ (Exo: $\Delta H \lt 0$; Endo: $\Delta H \gt 0$).</li>
+            <li><strong>Oxidation State Conservation:</strong> $\sum n_i (\text{OS})_i = q_{\text{net}}$ (Check against
+                group ceiling $\text{OS}_{\max}$ for peroxide traps!).</li>
+            <li><strong>Redox $n$-Factor:</strong> $n_f = (\text{atoms changing OS per formula unit}) \times
+                |\Delta\text{OS}|$; $\quad$ Equivalent Weight $E = \dfrac{M}{n_f}$.</li>
+            <li><strong>Law of Equivalence:</strong> $n_{\text{OA}} \cdot (n_f)_{\text{OA}} = n_{\text{RA}} \cdot
+                (n_f)_{\text{RA}}$ $\quad\Longleftrightarrow\quad$ $\text{moles of }e^-\text{ gained} = \text{moles of
+                }e^-\text{ lost}$.</li>
+            <li><strong>Disproportionation $n$-Factor:</strong> $\dfrac{1}{n_f} = \dfrac{1}{n_1} + \dfrac{1}{n_2}
+                \implies n_f = \dfrac{n_1 n_2}{n_1 + n_2}$.</li>
+            <li><strong>Key $\text{KMnO}_4$ Ratios:</strong> Acidic $n_f = 5$, Neutral $n_f = 3$, Strongly Alkaline $n_f
+                = 1$; $\text{K}_2\text{Cr}_2\text{O}_7$ (acid) $n_f = 6$; $\text{FeC}_2\text{O}_4$ $n_f = 3$;
+                $\text{Fe}_2(\text{C}_2\text{O}_4)_3$ $n_f = 6$.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== WORKED EXAMPLES ==================== -->
+    <h2 class="section-heading">7. Graded Worked Examples (Level 1 &rarr; Level 2 &rarr; Level 3)</h2>
+
+    <!-- LEVEL 1 BANNER -->
+    <div class="level-banner l1">LEVEL 1: WARMUP &amp; CORE PRECISION (NCERT Exemplar / Sample Paper Baseline)</div>
+
+    <!-- WE 1 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Algebraic Balancing &amp; Stoichiometry</span>
+            <strong>Worked Example 1: Iron-Steam Reaction &amp; Hydrogen Mass Yield</strong>
+        </div>
+        <div class="ex-problem">
+            Balance the reaction of red-hot iron with steam using the algebraic coefficient method:
+            $$a\,\text{Fe}(s) + b\,\text{H}_2\text{O}(g) \longrightarrow c\,\text{Fe}_3\text{O}_4(s) +
+            d\,\text{H}_2(g)$$
+            Compute the minimal positive integer sum $a + b + c + d$, and calculate the mass of $\text{H}_2$ gas
+            liberated when $84\text{ g}$ of iron reacts completely with excess steam. (Atomic masses: $\text{Fe} =
+            56\text{ u},\; \text{H} = 1\text{ u},\; \text{O} = 16\text{ u}$.)
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 (Atom Conservation Equations):</strong></p>
+            <ul>
+                <li>$\text{Fe}$ balance: $a = 3c$</li>
+                <li>$\text{O}$ balance: $b = 4c$</li>
+                <li>$\text{H}$ balance: $2b = 2d \implies d = b = 4c$</li>
+            </ul>
+            <p><strong>Step 2 (Minimal Integer Solution):</strong> Set $c = 1 \implies a = 3,\; b = 4,\; d = 4$. Thus:
+            </p>
+            $$3\text{Fe}(s) + 4\text{H}_2\text{O}(g) \longrightarrow \text{Fe}_3\text{O}_4(s) + 4\text{H}_2(g)$$
+            <p>Sum of coefficients: $a + b + c + d = 3 + 4 + 1 + 4 = \mathbf{12}$.</p>
+            <p><strong>Step 3 (Stoichiometric Mass Calculation):</strong></p>
+            $$n(\text{Fe}) = \frac{84\text{ g}}{56\text{ g mol}^{-1}} = 1.5\text{ mol}$$
+            <p>From the balanced equation, $3\text{ mol Fe}$ yields $4\text{ mol H}_2$. Therefore:</p>
+            $$n(\text{H}_2) = 1.5 \times \frac{4}{3} = 2.0\text{ mol} \implies m(\text{H}_2) = 2.0\text{ mol} \times
+            2\text{ g mol}^{-1} = \mathbf{4\text{ g}}$$
+        </div>
+    </div>
+
+    <!-- WE 2 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Qualitative Identification &amp; Classification</span>
+            <strong>Worked Example 2: Thermal Decomposition &amp; Precipitation Chain</strong>
+        </div>
+        <div class="ex-problem">
+            A white crystalline salt $X$ crackles upon strong heating in a dry test tube, leaving a solid residue $Y$
+            (reddish-brown when hot, yellow when cold) while evolving reddish-brown pungent fumes $Z$ and a colorless
+            gas $W$ that relights a glowing splinter. Adding aqueous potassium iodide ($\text{KI}$) to an aqueous
+            solution of $X$ instantly yields a bright yellow precipitate $P$. Identify $X, Y, Z, W, P$, write both
+            balanced chemical equations, and classify each reaction.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 (Diagnostic Deduction):</strong></p>
+            <ul>
+                <li>Reddish-brown fumes $Z$ evolved on heating a nitrate salt + gas $W$ relighting a glowing splinter
+                    identify $Z = \mathbf{\text{NO}_2}$ and $W = \mathbf{\text{O}_2}$.</li>
+                <li>A residue $Y$ that is reddish-brown when hot and yellow when cold is litharge,
+                    $\mathbf{\text{PbO}}$; hence the parent salt is lead(II) nitrate, $X = \mathbf{\text{Pb(NO}_3)_2}$.
+                </li>
+                <li>Mixing $\text{Pb(NO}_3)_2(aq)$ with $\text{KI}(aq)$ produces canary-yellow lead(II) iodide
+                    precipitate, $P = \mathbf{\text{PbI}_2}$.</li>
+            </ul>
+            <p><strong>Step 2 (Balanced Equations &amp; Classification):</strong></p>
+            $$2\text{Pb(NO}_3)_2(s) \xrightarrow{\Delta} 2\text{PbO}(s) + 4\text{NO}_2(g) + \text{O}_2(g)$$
+            <p><em>Check:</em> $2\text{ Pb},\, 4\text{ N},\, 12\text{ O}$ on both sides.
+                <strong>Classification:</strong> Endothermic Thermal Decomposition (also Intramolecular Redox, since
+                $\text{N}^{+5} \to \text{N}^{+4}$ and $\text{O}^{-2} \to \text{O}^0$).
+            </p>
+            $$\text{Pb(NO}_3)_2(aq) + 2\text{KI}(aq) \longrightarrow \text{PbI}_2(s)\downarrow + 2\text{KNO}_3(aq)$$
+            <p><em>Check:</em> $1\text{ Pb},\, 2\text{ NO}_3^-,\, 2\text{ K},\, 2\text{ I}$ on both sides.
+                <strong>Classification:</strong> Double Displacement &amp; Precipitation (strictly
+                <strong>non-redox</strong>).
+            </p>
+        </div>
+    </div>
+
+    <!-- WE 3 -->
+    <div class="worked-example tier-1">
+        <div class="ex-header">
+            <span class="badge badge-l1">Level 1</span>
+            <span class="badge badge-type">Electronic Redox Analysis</span>
+            <strong>Worked Example 3: Dual Role of $\text{HCl}$ in the $\text{MnO}_2$ Reaction</strong>
+        </div>
+        <div class="ex-problem">
+            Analyze the redox reaction $\text{MnO}_2(s) + 4\text{HCl}(aq) \longrightarrow \text{MnCl}_2(aq) +
+            2\text{H}_2\text{O}(l) + \text{Cl}_2(g)$. Assign oxidation states to $\text{Mn}$ and $\text{Cl}$ on both
+            sides, identify the oxidizing and reducing agents, and determine what percentage of the $\text{HCl}$
+            actually acts as a reducing agent.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 (Oxidation State Assignment):</strong></p>
+            <ul>
+                <li>In $\text{MnO}_2$: $x + 2(-2) = 0 \implies \text{Mn} = +4$. In $\text{MnCl}_2$: $x + 2(-1) = 0
+                    \implies \text{Mn} = +2$.</li>
+                <li>In $\text{HCl}$: $\text{Cl} = -1$. On the product side, two $\text{Cl}$ atoms remain at $-1$ in
+                    $\text{MnCl}_2$, while two $\text{Cl}$ atoms rise to $0$ in $\text{Cl}_2$.</li>
+            </ul>
+            <p><strong>Step 2 (Redox Identification):</strong></p>
+            <ul>
+                <li>$\text{Mn}^{4+} \to \text{Mn}^{2+}$ (gains $2e^-$, OS drops by $2$) $\implies \text{MnO}_2$ is
+                    <strong>reduced</strong> and acts as the <strong>Oxidizing Agent</strong>.
+                </li>
+                <li>$2\text{Cl}^- \to \text{Cl}_2 + 2e^-$ (loses $2e^-$, OS rises by $1$ per $\text{Cl}$) $\implies
+                    \text{HCl}$ is <strong>oxidized</strong> and acts as the <strong>Reducing Agent</strong>.</li>
+            </ul>
+            <p><strong>Step 3 (Dual Role Fraction):</strong> Out of $4\text{ mol HCl}$ consumed, only $2\text{ mol}$ are
+                oxidized to $1\text{ mol Cl}_2$; the other $2\text{ mol}$ simply supply $\text{Cl}^-$ counter-ions to
+                form the salt $\text{MnCl}_2$ (acidic role). Thus exactly $\dfrac{2}{4} \times 100\% = \mathbf{50\%}$ of
+                $\text{HCl}$ acts as a reducing agent.</p>
+        </div>
+    </div>
+
+    <!-- LEVEL 2 BANNER -->
+    <div class="level-banner l2">LEVEL 2: EXAM-REAL APPLICATION (BEST Core + NSEJS / NTSE Stage 2)</div>
+
+    <!-- WE 4 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Structural Paradoxes</span>
+            <strong>Worked Example 4: Resolving Peroxide &amp; Mixed Oxidation States</strong>
+        </div>
+        <div class="ex-problem">
+            Determine the true oxidation state(s) of the underlined atom in each compound, explicitly stating why the
+            naive algebraic rule fails where applicable: (i) $\underline{\text{Cr}}\text{O}_5$, (ii)
+            $\text{H}_2\underline{\text{S}}\text{O}_5$, (iii) $\text{Na}_2\underline{\text{S}}_4\text{O}_6$ (both
+            average and individual values), and (iv) $\text{CaO}\underline{\text{Cl}}_2$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>(i) $\text{CrO}_5$:</strong> Naive rule gives $x + 5(-2) = 0 \implies x = +10$, which violates
+                $\text{Cr}_{\max} = +6$ (Group 6 valence). By the butterfly structure (Figure 23.2), $\text{Cr}$ bonds
+                to $1$ oxo oxygen ($-2$) and $4$ peroxo oxygens ($-1$ each):
+                $$x + 1(-2) + 4(-1) = 0 \implies \mathbf{x = +6}$$
+            </p>
+            <p><strong>(ii) $\text{H}_2\text{SO}_5$ (Caro's acid):</strong> Naive rule gives $2(+1) + x + 5(-2) = 0
+                \implies x = +8 \gt \text{S}_{\max} (+6)$. Its structure $\text{HO-SO}_2\text{-O-O-H}$ contains $1$
+                peroxo linkage ($2\text{ O}$ at $-1$) and $3$ normal oxygens ($-2$):
+                $$2(+1) + x + 3(-2) + 2(-1) = 0 \implies \mathbf{x = +6}$$
+            </p>
+            <p><strong>(iii) $\text{Na}_2\text{S}_4\text{O}_6$:</strong> Algebraic average: $2(+1) + 4x + 6(-2) = 0
+                \implies x_{\text{avg}} = +\frac{10}{4} = \mathbf{+2.5}$. In the connectivity
+                $\text{O}_3\text{S}^{(1)}\text{-S}^{(2)}\text{-S}^{(3)}\text{-S}^{(4)}\text{O}_3^{2-}$, homonuclear
+                $\text{S-S}$ bonds contribute $0$:
+            <ul>
+                <li>Central sulfurs $\text{S}^{(2)},\, \text{S}^{(3)}$ bond only to sulfur $\implies \mathbf{0,\; 0}$.
+                </li>
+                <li>Terminal sulfurs $\text{S}^{(1)},\, \text{S}^{(4)}$ each carry two $\text{S=O}$ bonds ($+4$) and one
+                    $\text{S-O}^-$ bond ($+1$) $\implies \mathbf{+5,\; +5}$.</li>
+            </ul>
+            Individual oxidation states are <strong>$+5,\; 0,\; 0,\; +5$</strong> (sum $= +10$, average $= +2.5$).
+            </p>
+            <p><strong>(iv) $\text{CaOCl}_2$:</strong> Bleaching powder is the mixed salt
+                $\text{Ca}^{2+}(\text{OCl}^-)(\text{Cl}^-)$. In $\text{OCl}^-$, $x + (-2) = -1 \implies \mathbf{x =
+                +1}$; in $\text{Cl}^-$, $\mathbf{x = -1}$. (Algebraic average $= 0$, hiding two distinct states
+                separated by $2$ units.)</p>
+        </div>
+    </div>
+
+    <!-- WE 5 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Ion-Electron Method (Acidic)</span>
+            <strong>Worked Example 5: Balancing Acidified Dichromate with Ferrous Ions</strong>
+        </div>
+        <div class="ex-problem">
+            Balance the following ionic redox equation in acidic medium via the Ion-Electron (Half-Reaction) method and
+            find the stoichiometric mole ratio $\text{Cr}_2\text{O}_7^{2-} : \text{Fe}^{2+} : \text{H}^+$:
+            $$\text{Cr}_2\text{O}_7^{2-}(aq) + \text{Fe}^{2+}(aq) + \text{H}^+(aq) \longrightarrow \text{Cr}^{3+}(aq) +
+            \text{Fe}^{3+}(aq) + \text{H}_2\text{O}(l)$$
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 (Split into Half-Reactions):</strong></p>
+            <ul>
+                <li>Reduction half: $\text{Cr}_2\text{O}_7^{2-} \longrightarrow \text{Cr}^{3+}$</li>
+                <li>Oxidation half: $\text{Fe}^{2+} \longrightarrow \text{Fe}^{3+}$</li>
+            </ul>
+            <p><strong>Step 2 (Balance the Reduction Half-Reaction):</strong></p>
+            <ol>
+                <li>Balance $\text{Cr}$ atoms: $\text{Cr}_2\text{O}_7^{2-} \longrightarrow 2\text{Cr}^{3+}$</li>
+                <li>Balance $7\text{ O}$ with $7\text{H}_2\text{O}$: $\text{Cr}_2\text{O}_7^{2-} \longrightarrow
+                    2\text{Cr}^{3+} + 7\text{H}_2\text{O}$</li>
+                <li>Balance $14\text{ H}$ with $14\text{H}^+$: $\text{Cr}_2\text{O}_7^{2-} + 14\text{H}^+
+                    \longrightarrow 2\text{Cr}^{3+} + 7\text{H}_2\text{O}$</li>
+                <li>Balance charge (LHS $= -2 + 14 = +12$; RHS $= +6$): add $6e^-$ to LHS:
+                    $$\text{Cr}_2\text{O}_7^{2-} + 14\text{H}^+ + 6e^- \longrightarrow 2\text{Cr}^{3+} +
+                    7\text{H}_2\text{O}$$</li>
+            </ol>
+            <p><strong>Step 3 (Balance the Oxidation Half-Reaction):</strong></p>
+            $$\text{Fe}^{2+} \longrightarrow \text{Fe}^{3+} + e^-$$
+            <p><strong>Step 4 (Equalize Electrons &amp; Sum):</strong> Multiply the oxidation half by $6$ and add to
+                cancel $6e^-$:</p>
+            $$\text{Cr}_2\text{O}_7^{2-}(aq) + 6\text{Fe}^{2+}(aq) + 14\text{H}^+(aq) \longrightarrow
+            2\text{Cr}^{3+}(aq) + 6\text{Fe}^{3+}(aq) + 7\text{H}_2\text{O}(l)$$
+            <p><strong>Step 5 (Atom &amp; Charge Verification):</strong> $\text{Cr}: 2=2$;\; $\text{O}: 7=7$;\;
+                $\text{Fe}: 6=6$;\; $\text{H}: 14=14$. Net charge LHS $= -2 + 12 + 14 = +24$; RHS $= +6 + 18 = +24$.
+                Required mole ratio $= \mathbf{1 : 6 : 14}$.</p>
+        </div>
+    </div>
+
+    <!-- WE 6 -->
+    <div class="worked-example tier-2">
+        <div class="ex-header">
+            <span class="badge badge-l2">Level 2</span>
+            <span class="badge badge-type">Ion-Electron Method (Basic)</span>
+            <strong>Worked Example 6: Disproportionation of White Phosphorus in Alkali</strong>
+        </div>
+        <div class="ex-problem">
+            White phosphorus disproportionates in warm aqueous $\text{NaOH}$ according to the skeletal equation:
+            $$\text{P}_4(s) + \text{OH}^-(aq) + \text{H}_2\text{O}(l) \longrightarrow \text{PH}_3(g) +
+            \text{H}_2\text{PO}_2^-(aq)$$
+            Balance this equation rigorously in basic medium using the Ion-Electron method and determine the ratio of
+            phosphorus atoms oxidized to phosphorus atoms reduced.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Step 1 (Reduction Half: $\text{P}^0 \to \text{P}^{-3}$ in $\text{PH}_3$):</strong></p>
+            <ul>
+                <li>Balance $\text{P}$: $\text{P}_4 \longrightarrow 4\text{PH}_3$</li>
+                <li>Balance $\text{H}$ (acidic first) and charge: $\text{P}_4 + 12\text{H}^+ + 12e^- \longrightarrow
+                    4\text{PH}_3$</li>
+                <li>Convert to basic medium (add $12\text{OH}^-$ to both sides; $12\text{H}^+ + 12\text{OH}^- =
+                    12\text{H}_2\text{O}$):
+                    $$\text{P}_4 + 12\text{H}_2\text{O} + 12e^- \longrightarrow 4\text{PH}_3 + 12\text{OH}^- \qquad
+                    \text{(Eq. 1)}$$</li>
+            </ul>
+            <p><strong>Step 2 (Oxidation Half: $\text{P}^0 \to \text{P}^{+1}$ in $\text{H}_2\text{PO}_2^-$):</strong>
+            </p>
+            <ul>
+                <li>Balance $\text{P}$ and $\text{O}$: $\text{P}_4 + 8\text{H}_2\text{O} \longrightarrow
+                    4\text{H}_2\text{PO}_2^-$</li>
+                <li>Balance $\text{H}$ (LHS has $16\text{ H}$, RHS has $8\text{ H}$) and charge (RHS $= -4 + 8 = +4$):
+                    $$\text{P}_4 + 8\text{H}_2\text{O} \longrightarrow 4\text{H}_2\text{PO}_2^- + 8\text{H}^+ + 4e^-$$
+                </li>
+                <li>Convert to basic medium (add $8\text{OH}^-$ to both sides and cancel $8\text{H}_2\text{O}$):
+                    $$\text{P}_4 + 8\text{OH}^- \longrightarrow 4\text{H}_2\text{PO}_2^- + 4e^- \qquad \text{(Eq. 2)}$$
+                </li>
+            </ul>
+            <p><strong>Step 3 (Equalize Electrons, Add &amp; Simplify):</strong> Multiply Eq. 2 by $3$ ($12e^-$) and add
+                to Eq. 1:</p>
+            $$4\text{P}_4 + 12\text{H}_2\text{O} + 24\text{OH}^- \longrightarrow 4\text{PH}_3 +
+            12\text{H}_2\text{PO}_2^- + 12\text{OH}^-$$
+            <p>Cancel $12\text{OH}^-$ from both sides and divide through by $4$:</p>
+            $$\text{P}_4(s) + 3\text{OH}^-(aq) + 3\text{H}_2\text{O}(l) \longrightarrow \text{PH}_3(g) +
+            3\text{H}_2\text{PO}_2^-(aq)$$
+            <p><strong>Verification:</strong> $\text{P}: 4 = 1+3$;\; $\text{O}: 3+3 = 6$;\; $\text{H}: 3+6 = 9$;\;
+                Charge: $-3 = -3$. Out of every $4\text{ P}$ atoms, $3$ are oxidized ($\text{H}_2\text{PO}_2^-$) and $1$
+                is reduced ($\text{PH}_3$), giving an oxidized-to-reduced ratio of $\mathbf{3 : 1}$.</p>
+        </div>
+    </div>
+
+    <!-- LEVEL 3 BANNER -->
+    <div class="level-banner l3">LEVEL 3: RANK-BOOSTER &amp; OLYMPIAD BRIDGE (Full First-Principles Proof + 30-Second
+        Exam Shortcut)</div>
+
+    <!-- WE 7 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Dual-Element Oxidation</span>
+            <strong>Worked Example 7: Complete Oxidation of Ferrous Oxalate by Acidified $\text{KMnO}_4$</strong>
+        </div>
+        <div class="ex-problem">
+            Calculate the exact number of moles of acidified $\text{KMnO}_4$ needed to completely oxidize $5\text{
+            moles}$ of ferrous oxalate ($\text{FeC}_2\text{O}_4$) into $\text{Fe}^{3+}$ and $\text{CO}_2$, and establish
+            the complete balanced ionic equation.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation (Ion-Electron Method):</strong></p>
+            <p>In $\text{FeC}_2\text{O}_4$, <strong>both</strong> the cation ($\text{Fe}^{2+}$) and the anion
+                ($\text{C}_2\text{O}_4^{2-}$) are oxidized simultaneously:</p>
+            <ul>
+                <li>$\text{Fe}^{2+} \longrightarrow \text{Fe}^{3+} + 1e^-$</li>
+                <li>$\text{C}_2\text{O}_4^{2-} \longrightarrow 2\text{CO}_2 + 2e^-$ (two carbons each move from $+3$ to
+                    $+4$)</li>
+            </ul>
+            <p>Combining both gives the complete oxidation half-reaction for $1\text{ formula unit}$ of
+                $\text{FeC}_2\text{O}_4$:</p>
+            $$\text{FeC}_2\text{O}_4 \longrightarrow \text{Fe}^{3+} + 2\text{CO}_2 + 3e^-$$
+            <p>In acidic medium, permanganate reduces as:</p>
+            $$\text{MnO}_4^- + 8\text{H}^+ + 5e^- \longrightarrow \text{Mn}^{2+} + 4\text{H}_2\text{O}$$
+            <p>Cross-multiply (oxidation $\times 5$, reduction $\times 3$) so $15e^-$ cancel:</p>
+            $$3\text{MnO}_4^- + 5\text{FeC}_2\text{O}_4 + 24\text{H}^+ \longrightarrow 3\text{Mn}^{2+} + 5\text{Fe}^{3+}
+            + 10\text{CO}_2 + 12\text{H}_2\text{O}$$
+            <p><em>Audit:</em> $\text{Mn}: 3=3$;\; $\text{Fe}: 5=5$;\; $\text{C}: 10=10$;\; $\text{O}: 12+20 = 32 =
+                20+12$;\; $\text{H}: 24=24$;\; Charge: $-3+24 = +21 = +6+15$. Thus $5\text{ mol FeC}_2\text{O}_4$
+                consumes exactly $\mathbf{3\text{ moles}}$ of $\text{KMnO}_4$.</p>
+            <div class="shortcut-box">
+                <strong>30-Second $n$-Factor Shortcut:</strong> For $\text{FeC}_2\text{O}_4$, add the electron losses of
+                both oxidizing sites: $n_f(\text{FeC}_2\text{O}_4) = 1\text{ (from Fe)} + 2\text{ (from
+                C}_2\text{O}_4^{2-}) = 3$. For acidified $\text{KMnO}_4$, $n_f = |7 - 2| = 5$. By the Law of
+                Equivalence:
+                $$n(\text{KMnO}_4) \times 5 = 5 \times 3 \implies n(\text{KMnO}_4) = \mathbf{3\text{ moles}}$$
+            </div>
+        </div>
+    </div>
+
+    <!-- WE 8 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Disproportionation $n$-Factor</span>
+            <strong>Worked Example 8: Hot Alkaline Disproportionation of $\text{Cl}_2$ &amp; Equivalent Weight</strong>
+        </div>
+        <div class="ex-problem">
+            Chlorine gas reacts with hot concentrated $\text{KOH}$ via $\text{Cl}_2(g) + \text{OH}^-(aq) \longrightarrow
+            \text{Cl}^-(aq) + \text{ClO}_3^-(aq) + \text{H}_2\text{O}(l)$. (a) Balance the equation from first
+            principles. (b) Determine the exact redox $n$-factor of $\text{Cl}_2$ and its equivalent weight (given
+            $M(\text{Cl}_2) = 71\text{ g mol}^{-1}$). (c) Find the total moles of electrons transferred when $6\text{
+            moles}$ of $\text{Cl}_2$ react completely.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation:</strong></p>
+            <ol>
+                <li><em>Reduction half:</em> $\text{Cl}_2 + 2e^- \longrightarrow 2\text{Cl}^-$.</li>
+                <li><em>Oxidation half (acidic $\to$ basic):</em> $\text{Cl}_2 + 6\text{H}_2\text{O} \longrightarrow
+                    2\text{ClO}_3^- + 12\text{H}^+ + 10e^-$. Adding $12\text{OH}^-$ to both sides and cancelling
+                    $6\text{H}_2\text{O}$ gives:
+                    $$\text{Cl}_2 + 12\text{OH}^- \longrightarrow 2\text{ClO}_3^- + 6\text{H}_2\text{O} + 10e^-$$</li>
+                <li><em>Equalize &amp; combine:</em> Multiply reduction half by $5$ ($10e^-$) and add:
+                    $$6\text{Cl}_2 + 12\text{OH}^- \longrightarrow 10\text{Cl}^- + 2\text{ClO}_3^- +
+                    6\text{H}_2\text{O}$$
+                    Divide by $2$:
+                    $$3\text{Cl}_2(g) + 6\text{OH}^-(aq) \longrightarrow 5\text{Cl}^-(aq) + \text{ClO}_3^-(aq) +
+                    3\text{H}_2\text{O}(l)$$</li>
+                <li><em>Exact $n$-factor from balanced stoichiometry:</em> In the minimal equation, $3\text{ mol Cl}_2$
+                    transfers exactly $5\text{ mol }e^-$ ($1\text{ Cl}$ atom moves $0 \to +5$ losing $5e^-$, while
+                    $5\text{ Cl}$ atoms move $0 \to -1$ gaining $5e^-$). Therefore:
+                    $$n_f(\text{Cl}_2) = \frac{5\text{ mol }e^-}{3\text{ mol Cl}_2} = \mathbf{\frac{5}{3}}$$</li>
+                <li><em>Equivalent weight &amp; electron transfer:</em>
+                    $$E(\text{Cl}_2) = \frac{M}{n_f} = \frac{71}{5/3} = \frac{213}{5} = \mathbf{42.60\text{ g
+                    eq}^{-1}}$$
+                    For $6\text{ mol Cl}_2$, total electrons transferred $= 6 \times \dfrac{5}{3} = \mathbf{10\text{
+                    moles of }e^-}$.</li>
+            </ol>
+            <div class="shortcut-box">
+                <strong>30-Second Disproportionation Shortcut:</strong> Treat $1\text{ mol Cl}_2$ ($2\text{ Cl}$ atoms)
+                independently in each branch: oxidation to $2\text{ClO}_3^-$ gives $n_1 = 2 \times |5 - 0| = 10$;
+                reduction to $2\text{Cl}^-$ gives $n_2 = 2 \times |0 - (-1)| = 2$. Plug into the harmonic rule:
+                $$\frac{1}{n_f} = \frac{1}{10} + \frac{1}{2} = \frac{6}{10} = \frac{3}{5} \implies n_f =
+                \mathbf{\frac{5}{3}}$$
+                Immediately, electrons for $6\text{ mol} = 6 \times \frac{5}{3} = \mathbf{10\text{ mol}}$.
+            </div>
+        </div>
+    </div>
+
+    <!-- WE 9 -->
+    <div class="worked-example tier-3">
+        <div class="ex-header">
+            <span class="badge badge-l3">Level 3</span>
+            <span class="badge badge-type">Mixture Equivalence &amp; Trap Immunity</span>
+            <strong>Worked Example 9: Redox Titration of a $\text{FeSO}_4 + \text{Fe}_2(\text{C}_2\text{O}_4)_3$
+                Mixture</strong>
+        </div>
+        <div class="ex-problem">
+            An acidic aqueous mixture contains $6\text{ moles}$ of ferrous sulfate ($\text{FeSO}_4$) and $4\text{
+            moles}$ of ferric oxalate ($\text{Fe}_2(\text{C}_2\text{O}_4)_3$). Calculate the exact number of moles of
+            (a) $\text{KMnO}_4$, and (b) $\text{K}_2\text{Cr}_2\text{O}_7$, required separately in acidic medium to
+            oxidize this entire mixture completely to $\text{Fe}^{3+}$ and $\text{CO}_2$.
+        </div>
+        <div class="ex-solution">
+            <p><strong>Full First-Principles Derivation (Watch the Ferric Ion Trap!):</strong></p>
+            <p>Dissect the oxidation states of every ion in the mixture:</p>
+            <ul>
+                <li>From $6\text{ mol FeSO}_4$: we obtain $6\text{ mol Fe}^{2+}$, which oxidizes via $\text{Fe}^{2+}
+                    \longrightarrow \text{Fe}^{3+} + 1e^-$, releasing $6 \times 1 = 6\text{ mol }e^-$.</li>
+                <li>From $4\text{ mol Fe}_2(\text{C}_2\text{O}_4)_3$: iron is <strong>already in the $+3$ state
+                        ($\text{Fe}^{3+}$)</strong> and undergoes <em>zero</em> oxidation! Only the $4 \times 3 =
+                    12\text{ mol}$ of oxalate ions ($\text{C}_2\text{O}_4^{2-}$) oxidize via $\text{C}_2\text{O}_4^{2-}
+                    \longrightarrow 2\text{CO}_2 + 2e^-$, releasing $12 \times 2 = 24\text{ mol }e^-$.</li>
+            </ul>
+            <p><strong>Total electrons released by the mixture:</strong> $6 + 24 = \mathbf{30\text{ mol }e^-}$.</p>
+            <p>Using the separate balanced acidic equations:</p>
+            <ul>
+                <li><strong>(a) For $\text{KMnO}_4$:</strong> $\text{MnO}_4^- + 8\text{H}^+ + 5e^- \longrightarrow
+                    \text{Mn}^{2+} + 4\text{H}_2\text{O}$ absorbs $5\text{ mol }e^-$ per mole of $\text{KMnO}_4$:
+                    $$n(\text{KMnO}_4) = \frac{30\text{ mol }e^-}{5\text{ mol }e^-/\text{mol}} = \mathbf{6\text{
+                    moles}}$$</li>
+                <li><strong>(b) For $\text{K}_2\text{Cr}_2\text{O}_7$:</strong> $\text{Cr}_2\text{O}_7^{2-} +
+                    14\text{H}^+ + 6e^- \longrightarrow 2\text{Cr}^{3+} + 7\text{H}_2\text{O}$ absorbs $6\text{ mol
+                    }e^-$ per mole of $\text{K}_2\text{Cr}_2\text{O}_7$:
+                    $$n(\text{K}_2\text{Cr}_2\text{O}_7) = \frac{30\text{ mol }e^-}{6\text{ mol }e^-/\text{mol}} =
+                    \mathbf{5\text{ moles}}$$</li>
+            </ul>
+            <div class="shortcut-box">
+                <strong>30-Second Equivalence Shortcut:</strong> Sum reducing equivalents directly: $n_f(\text{FeSO}_4)
+                = 1$ and $n_f(\text{Fe}_2(\text{C}_2\text{O}_4)_3) = 0\text{ (Fe}^{3+}\text{ inert)} + 3 \times 2 = 6$.
+                Total equivalents $= 6(1) + 4(6) = 30$. Divide by $n_f(\text{KMnO}_4) = 5 \implies \mathbf{6\text{
+                mol}}$; divide by $n_f(\text{K}_2\text{Cr}_2\text{O}_7) = 6 \implies \mathbf{5\text{ mol}}$.
+            </div>
+        </div>
+    </div>
+
+</article>
