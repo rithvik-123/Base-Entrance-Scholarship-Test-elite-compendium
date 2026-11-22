@@ -1,0 +1,1361 @@
+<article data-volume="Volume 3: Physics (Paper 2)"
+    data-title="Chapter 19: Work, Energy, Power &amp; Vertical Circular Motion">
+
+    <!-- ==================== CHAPTER HERO ==================== -->
+    <header class="chapter-hero">
+        <div class="chapter-meta">Volume 3: Physics (Paper 2) &bull; Chapter 19 &bull; Part 1: Concept Compendium &amp;
+            Worked Examples</div>
+        <h1>Work, Energy, Power &amp; Vertical Circular Motion</h1>
+        <p>Master the scalar architecture of mechanics—from frame-dependent work, signed $F\text{-}x$ areas, and exact
+            kinetic-momentum coupling to center-of-mass chain lifting, constant-power calculus, and the complete
+            Olympiad analysis of vertical circular motion (strings vs. rigid rods).</p>
+        <div class="tag-row">
+            <span class="meta-pill">Target Study Time: 7 Hours</span>
+            <span class="meta-pill">Level: Class 10 Core &rarr; NSEJS / Class 11 Foundation</span>
+            <span class="meta-pill">9 Graded Worked Examples</span>
+            <span class="meta-pill">4 Precision Vector Diagrams</span>
+        </div>
+    </header>
+
+    <!-- ==================== SECTION 1 ==================== -->
+    <h2 class="section-heading">19.1 Work Done by Constant &amp; Variable Forces</h2>
+
+    <div class="concept-box">
+        <span class="box-label">Core Principle &bull; Mechanical Definition of Work</span>
+        <p>In physics, <strong>work</strong> is a scalar mechanism of energy transfer produced when a force acts through
+            a displacement of its point of application. For a <strong>constant force</strong> $\vec{F}$ acting on a
+            particle that undergoes a displacement $\vec{s}$:</p>
+        $$W = \vec{F} \cdot \vec{s} = F s \cos\theta$$
+        <p>where $\theta$ ($0^\circ \le \theta \le 180^\circ$) is the angle between the force vector $\vec{F}$ and the
+            displacement vector $\vec{s}$. Equivalently, $W = (F\cos\theta)\,s = F\,(s\cos\theta)$—the product of the
+            displacement and the force component parallel to it.</p>
+        <ul>
+            <li><strong>SI Unit:</strong> Joule ($\text{J}$), where $1\text{ J} = 1\text{ N}\cdot\text{m} = 1\text{
+                kg}\cdot\text{m}^2/\text{s}^2$.</li>
+            <li><strong>CGS Unit:</strong> Erg, where $1\text{ erg} = 1\text{ dyne}\cdot\text{cm} = 1\text{
+                g}\cdot\text{cm}^2/\text{s}^2$.</li>
+            <li><strong>Exact Conversion:</strong> $1\text{ J} = (10^5\text{ dyne})(10^2\text{ cm}) = 10^7\text{ erg}$.
+            </li>
+            <li><strong>Dimensional Formula:</strong> $[W] = [M^1 L^2 T^{-2}]$.</li>
+        </ul>
+    </div>
+
+    <h3>Sign Convention &amp; Physical Meaning</h3>
+    <ul>
+        <li><strong>Positive Work ($0^\circ \le \theta < 90^\circ \implies \cos\theta> 0$):</strong> The force has a
+            component along the direction of motion and supplies kinetic energy to the body (e.g., gravity acting on a
+            freely falling stone).</li>
+        <li><strong>Zero Work ($\theta = 90^\circ$, or $F = 0$, or $s = 0$):</strong> No energy is transferred by that
+            force (e.g., centripetal force in uniform circular motion, or gravity acting on a suitcase carried
+            horizontally on a flat platform).</li>
+        <li><strong>Negative Work ($90^\circ < \theta \le 180^\circ \implies \cos\theta < 0$):</strong> The force
+                    opposes the displacement and extracts kinetic energy from the body (e.g., kinetic friction slowing a
+                    sliding crate, or gravity acting on a ball thrown vertically upward).</li>
+    </ul>
+
+    <div class="bridge-box">
+        <span class="box-label">Resonance / Olympiad Bridge &bull; Frame-Dependence of Work</span>
+        <p>A textbook trap in NSEJS and BEST Paper 2 is assuming work is an absolute physical invariant. It is
+            <strong>not</strong>. Consider an inertial frame $S'$ moving at constant velocity $\vec{v}_0$ relative to
+            ground frame $S$. Between time $0$ and $t$, the force $\vec{F}$ is identical in both frames ($\vec{F}' =
+            \vec{F}$), but the displacement transforms as:
+        </p>
+        $$\vec{s}' = \vec{s} - \vec{v}_0 t \implies W' = \vec{F} \cdot \vec{s}' = W - (\vec{F}\cdot\vec{v}_0)t$$
+        <p><strong>Crucial Consequence:</strong> Work done by a force depends on the <strong>observer's reference
+                frame</strong>! Example: A passenger holds a briefcase stationary inside an accelerating train. In the
+            train frame, displacement is zero, so the passenger's hand does <em>zero</em> work. In the ground frame, the
+            briefcase moves forward while the hand pulls it forward, so the hand does <em>positive</em> work.</p>
+    </div>
+
+    <h3>Work Done by a Variable Force &amp; Signed Area Under the $F\text{-}x$ Graph</h3>
+    <p>When force varies with position, divide the path into infinitesimal displacements $d\vec{r}$ over which $\vec{F}$
+        is effectively constant. The infinitesimal work is $dW = \vec{F}\cdot d\vec{r} = F_x\,dx + F_y\,dy + F_z\,dz$.
+        For one-dimensional motion along the $x$-axis from $x_1$ to $x_2$:</p>
+    $$W = \int_{x_1}^{x_2} F(x)\,dx = \text{Signed Area enclosed between the } F(x)\text{ curve and the }
+    x\text{-axis}$$
+    <p><strong>Direction Sign Rule:</strong> When the particle moves in the $+x$ direction ($dx > 0$), area
+        <em>above</em> the $x$-axis is positive work and area <em>below</em> the $x$-axis is negative work. If the
+        particle reverses and moves in the $-x$ direction ($dx < 0$), both signs invert because $\int_{x_2}^{x_1}
+            F(x)\,dx=-\int_{x_1}^{x_2} F(x)\,dx$.</p>
+
+            <div class="diagram-box">
+                <svg viewBox="0 0 620 280" width="100%" role="img"
+                    aria-label="Force versus position graph showing positive and negative signed work areas">
+                    <defs>
+                        <marker id="arr-axis" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7"
+                            orient="auto-start-reverse">
+                            <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b" />
+                        </marker>
+                    </defs>
+                    <!-- Background grid -->
+                    <g stroke="#e2e8f0" stroke-width="1">
+                        <line x1="80" y1="45" x2="560" y2="45" />
+                        <line x1="80" y1="105" x2="560" y2="105" />
+                        <line x1="80" y1="225" x2="560" y2="225" />
+                        <line x1="200" y1="35" x2="200" y2="245" />
+                        <line x1="320" y1="35" x2="320" y2="245" />
+                        <line x1="380" y1="35" x2="380" y2="245" />
+                        <line x1="500" y1="35" x2="500" y2="245" />
+                    </g>
+                    <!-- Shaded Positive Area A1: (0,0)-(4,20)-(8,20)-(10,0) -> x: 80, 200, 320, 380; y: 165, 45, 45, 165 -->
+                    <polygon points="80,165 200,45 320,45 380,165" fill="#10b981" fill-opacity="0.22" stroke="none" />
+                    <!-- Shaded Negative Area A2: (10,0)-(14,-20)-(14,0) -> x: 380, 500, 500; y: 165, 225, 165 -->
+                    <polygon points="380,165 500,225 500,165" fill="#ef4444" fill-opacity="0.22" stroke="none" />
+                    <!-- Axes -->
+                    <line x1="55" y1="165" x2="575" y2="165" stroke="#1e293b" stroke-width="2"
+                        marker-end="url(#arr-axis)" />
+                    <line x1="80" y1="250" x2="80" y2="25" stroke="#1e293b" stroke-width="2"
+                        marker-end="url(#arr-axis)" />
+                    <!-- Axis Labels -->
+                    <text x="580" y="170" font-size="13" font-weight="700" fill="#1e293b">x (m)</text>
+                    <text x="56" y="20" font-size="13" font-weight="700" fill="#1e293b">F (N)</text>
+                    <!-- Ticks & Numbers -->
+                    <g font-size="12" fill="#334155" text-anchor="middle">
+                        <text x="68" y="182">0</text>
+                        <text x="200" y="182">4</text>
+                        <text x="320" y="182">8</text>
+                        <text x="380" y="182">10</text>
+                        <text x="500" y="182">14</text>
+                    </g>
+                    <g font-size="12" fill="#334155" text-anchor="end">
+                        <text x="72" y="49">+20</text>
+                        <text x="72" y="109">+10</text>
+                        <text x="72" y="229">-20</text>
+                    </g>
+                    <!-- Force Curve -->
+                    <polyline points="80,165 200,45 320,45 380,165 500,225" fill="none" stroke="#1d4ed8"
+                        stroke-width="3" stroke-linejoin="round" />
+                    <!-- Drop dashed vertical at x=14 -->
+                    <line x1="500" y1="165" x2="500" y2="225" stroke="#dc2626" stroke-width="1.5"
+                        stroke-dasharray="4,3" />
+                    <!-- Data points -->
+                    <g fill="#1d4ed8">
+                        <circle cx="80" cy="165" r="4" />
+                        <circle cx="200" cy="45" r="4" />
+                        <circle cx="320" cy="45" r="4" />
+                        <circle cx="380" cy="165" r="4" />
+                        <circle cx="500" cy="225" r="4" />
+                    </g>
+                    <!-- Area Annotations -->
+                    <text x="250" y="112" font-size="13" font-weight="700" fill="#047857" text-anchor="middle">Positive
+                        Work (+A₁)</text>
+                    <text x="250" y="130" font-size="12" fill="#065f46" text-anchor="middle">Trapezoid = +140 J</text>
+                    <text x="462" y="188" font-size="12" font-weight="700" fill="#b91c1c" text-anchor="middle">-A₂ = -40
+                        J</text>
+                    <text x="462" y="248" font-size="12" font-weight="600" fill="#1e293b" text-anchor="middle">Net Work
+                        = A₁ - A₂ = +100 J</text>
+                </svg>
+                <div class="diagram-caption">Figure 19.1: Signed-area interpretation of variable-force work $W = \int
+                    F(x)\,dx$. Areas above the $x$-axis add kinetic energy; areas below extract it.</div>
+            </div>
+
+            <h3>Force-Specific Work Traps: Gravity, Normal Reaction &amp; Friction</h3>
+            <p>Olympiad examiners routinely test whether students rely on false heuristics like "normal force always
+                does zero work" or "friction always does negative work." Both statements are <strong>false</strong>.</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Force Type</th>
+                        <th>General Work Expression</th>
+                        <th>Common Myth (TRAP)</th>
+                        <th>Exact Physical Reality</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Gravity ($m\vec{g}$)</strong></td>
+                        <td>$W_g = -mg(y_f - y_i) = -mg\Delta h$</td>
+                        <td>"Depends on incline angle $\theta$ or track shape."</td>
+                        <td><strong>Strictly path-independent.</strong> Whether a block drops vertically, slides down a
+                            curved bowl, or descends a rough staircase through height $h$, $W_g = +mgh$.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Normal Reaction ($\vec{N}$)</strong></td>
+                        <td>$W_N = \int \vec{N}\cdot d\vec{r}$</td>
+                        <td>"Always zero because $\vec{N}$ is perpendicular to the surface."</td>
+                        <td>Zero <em>only</em> on a stationary surface. On a <strong>moving elevator floor</strong>
+                            ascending distance $h$, $W_N = +Nh > 0$. On a <strong>movable wedge</strong>, $W_N < 0$ on
+                                the sliding block and $W_N> 0$ on the wedge (their sum for the rigid pair is $0$).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Static Friction ($\vec{f}_s$)</strong></td>
+                        <td>$W_{f_s} = \vec{f}_s \cdot \vec{s}$</td>
+                        <td>"Friction always opposes motion and does negative work."</td>
+                        <td>Can be <strong>positive, negative, or zero</strong>! For a block resting on an accelerating
+                            truck bed, $\vec{f}_s$ accelerates the block forward in the ground frame, doing
+                            <strong>positive work</strong> ($W_{f_s} > 0$). Across a non-slipping contact pair, total
+                            $W_{f_s,\text{pair}} = 0$.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kinetic Friction ($\vec{f}_k$)</strong></td>
+                        <td>$W_{f_k} = \vec{f}_k \cdot \vec{s}$</td>
+                        <td>"Always negative on every individual block."</td>
+                        <td>For a <em>single</em> block sliding on a moving belt faster than the block, $\vec{f}_k$
+                            accelerates the block forward ($W_{f_k} > 0$ on that block). However, for the
+                            <strong>combined two-body pair</strong>, $W_{f_k,\text{total}} = -f_k s_{\text{rel}} < 0$ is
+                                <strong>always negative</strong> (frame-invariant thermal dissipation).
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- ==================== SECTION 2 ==================== -->
+            <h2 class="section-heading">19.2 Kinetic Energy, Momentum Coupling &amp; Stopping Scaling</h2>
+
+            <div class="concept-box">
+                <span class="box-label">Core Principle &bull; Kinetic Energy &amp; Linear Momentum Coupling</span>
+                <p>The translational kinetic energy of a particle of mass $m$ moving at speed $v$ is a non-negative,
+                    frame-dependent scalar:</p>
+                $$K = \frac{1}{2}mv^2$$
+                <p>Multiplying numerator and denominator by $m$ and substituting linear momentum magnitude $p = mv$
+                    yields the fundamental coupling identities:</p>
+                $$K = \frac{p^2}{2m} \qquad \Longleftrightarrow \qquad p = \sqrt{2mK}$$
+                <ul>
+                    <li><strong>Equal Momentum ($p_1 = p_2$):</strong> $K \propto \dfrac{1}{m}$. The <em>lighter</em>
+                        body carries greater kinetic energy (e.g., when a gun fires a bullet, $p_{\text{bullet}} =
+                        p_{\text{gun}}$, so $K_{\text{bullet}} \gg K_{\text{gun}}$).</li>
+                    <li><strong>Equal Kinetic Energy ($K_1 = K_2$):</strong> $p \propto \sqrt{m}$. The <em>heavier</em>
+                        body carries greater linear momentum.</li>
+                </ul>
+            </div>
+
+            <div class="bridge-box">
+                <span class="box-label">Resonance / Olympiad Bridge &bull; The Exact Percentage-Change Trap</span>
+                <p>Students frequently apply the small-error calculus approximation $\frac{\Delta K}{K} \approx
+                    2\frac{\Delta p}{p}$ to <strong>large</strong> percentage changes. This is a lethal error in BEST
+                    Paper 2!</p>
+                <p><strong>Exact Derivation (Momentum changes by $x\%$, where $x$ carries its sign):</strong></p>
+                $$p_f = p_i\left(1 + \frac{x}{100}\right) \implies \frac{K_f}{K_i} = \left(\frac{p_f}{p_i}\right)^2 =
+                \left(1 + \frac{x}{100}\right)^2 = 1 + \frac{2x}{100} + \frac{x^2}{10000}$$
+                $$\%\Delta K = \left(\frac{K_f - K_i}{K_i}\right)\times 100\% = \left(2x + \frac{x^2}{100}\right)\%$$
+                <ul>
+                    <li>If $p$ increases by $+20\%$: $\%\Delta K = 2(20) + \frac{400}{100} = \mathbf{+44\%}$
+                        (<strong>NOT</strong> $40\%$!).</li>
+                    <li>If $p$ decreases by $20\%$ ($x = -20$): $\%\Delta K = 2(-20) + \frac{400}{100} = \mathbf{-36\%}$
+                        (a $36\%$ decrease, <strong>NOT</strong> $40\%$!).</li>
+                    <li>If $p$ increases by $+1\%$: $\%\Delta K = 2(1) + 0.01 = 2.01\% \approx 2\%$ (differential
+                        approximation works <em>only</em> for $|x| \lesssim 2\%$).</li>
+                </ul>
+                <p><strong>Reverse Exact Formula (Kinetic Energy changes by $y\%$):</strong></p>
+                $$\%\Delta p = \left(\sqrt{1 + \frac{y}{100}} - 1\right)\times 100\%$$
+                <p>For instance, if $K$ increases by $+300\%$, then $K_f = 4K_i \implies p_f = 2p_i \implies p$
+                    increases by $\mathbf{+100\%}$.</p>
+            </div>
+
+            <h3>Bullet-Penetrating-Planks &amp; Stopping-Distance Scaling</h3>
+            <p>Consider a vehicle braking or a bullet piercing uniform wood under a constant average resistive force
+                $F_r$. All initial kinetic energy is dissipated by negative work $-F_r s$:</p>
+            $$-F_r s = 0 - \frac{1}{2}mv_0^2 \implies s = \frac{mv_0^2}{2F_r} \propto v_0^2$$
+            <p>Doubling a car's speed <strong>quadruples</strong> its braking distance ($4s$); tripling it increases
+                stopping distance ninefold ($9s$).</p>
+
+            <div class="bridge-box">
+                <span class="box-label">Resonance / Olympiad Bridge &bull; Exact Plank-Counting Formula</span>
+                <p>Suppose a bullet loses $\dfrac{1}{n}$-th of its speed while passing through a single wooden plank of
+                    thickness $d$ (offering constant resistive force $F_r$). How many identical planks $N$ are required
+                    to bring the bullet to rest?</p>
+                <p><strong>First-Principles Derivation:</strong> After 1 plank, speed is $v_1 = v_0\left(1 -
+                    \frac{1}{n}\right)$. The kinetic energy lost inside 1 plank is:</p>
+                $$\Delta K_1 = \frac{1}{2}mv_0^2 - \frac{1}{2}mv_0^2\left(1 - \frac{1}{n}\right)^2 = K_0\left[1 -
+                \left(1 - \frac{2}{n} + \frac{1}{n^2}\right)\right] = K_0\left(\frac{2n - 1}{n^2}\right)$$
+                <p>Since each plank of thickness $d$ extracts the <em>same</em> energy $\Delta K_1 = F_r d$ (regardless
+                    of speed, because $F_r$ is constant!), the exact number of planks needed to absorb the entire $K_0$
+                    is:</p>
+                $$N = \frac{K_0}{\Delta K_1} = \frac{n^2}{2n - 1}$$
+                <p><strong>Integer Ceiling Rule:</strong> Because $N$ is almost never an integer (e.g., if $n = 10$, $N
+                    = \frac{100}{19} \approx 5.26$), the bullet penetrates $5$ full planks and stops inside the
+                    $6\text{th}$ plank. Thus, the minimum number of <em>whole planks</em> required to stop it is $\lceil
+                    N \rceil = \mathbf{6}$ (not $5$, and certainly not $10$!). <em>Contrast:</em> If a bullet loses
+                    $\frac{1}{n}$-th of its <strong>kinetic energy</strong> per plank, then $N = n$ exactly.</p>
+            </div>
+
+            <!-- ==================== SECTION 3 ==================== -->
+            <h2 class="section-heading">19.3 Potential Energy, Conservative Forces &amp; Equilibrium Stability</h2>
+
+            <div class="concept-box">
+                <span class="box-label">Core Principle &bull; Conservative Forces &amp; Potential Energy</span>
+                <p>A force $\vec{F}_c$ is <strong>conservative</strong> if the work it performs moving a particle
+                    between any two points $A$ and $B$ depends <em>solely</em> on the initial and final positions and is
+                    completely independent of the path taken. Equivalently, work done around any closed loop is
+                    identically zero:</p>
+                $$\oint \vec{F}_c \cdot d\vec{r} = 0$$
+                <p><strong>Potential Energy ($U$)</strong> is stored energy of configuration, defined
+                    <strong>exclusively for conservative forces</strong> via the negative of the internal conservative
+                    work:
+                </p>
+                $$\Delta U = U_f - U_i = -W_{\text{cons}} = -\int_{\vec{r}_i}^{\vec{r}_f} \vec{F}_c \cdot d\vec{r}$$
+                <p>Notice that only <em>changes</em> in potential energy ($\Delta U$) have physical meaning; the
+                    zero-reference datum ($U = 0$) can be chosen anywhere convenient.</p>
+            </div>
+
+            <h3>1. Gravitational Potential Energy ($U_g$)</h3>
+            <p>Near Earth's surface (uniform gravitational field $g$), choosing a horizontal reference plane $y = 0$
+                where $U_g(0) = 0$, lifting a point mass $m$ to height $h$ gives $W_g = -mgh$, so:</p>
+            $$U_g(h) = mgh$$
+            <p>For an <strong>extended rigid or flexible body</strong> (rod, chain, water column), gravitational
+                potential energy is calculated by concentrating its entire mass $M$ at its <strong>Center of Mass
+                    (CM)</strong>: $U_g = M g y_{\text{CM}}$.</p>
+
+            <div class="bridge-box">
+                <span class="box-label">Resonance / Olympiad Bridge &bull; Pulling a Hanging Chain onto a Table</span>
+                <p>A uniform chain of mass $M$ and length $L$ rests on a smooth horizontal table with $\dfrac{1}{n}$-th
+                    of its length hanging vertically over the edge. Find the minimum work done by an external agent to
+                    pull the hanging portion completely onto the table slowly ($\Delta K = 0$).</p>
+                <p><strong>Method 1 (Center-of-Mass Energy Accounting):</strong> Set the tabletop as the $U = 0$ datum.
+                    The hanging segment has mass $m_h = \frac{M}{n}$ and length $l_h = \frac{L}{n}$. Because the chain
+                    is uniform, the CM of the hanging portion lies at its midpoint—a depth $y_{\text{CM}} =
+                    \frac{l_h}{2} = \frac{L}{2n}$ below the tabletop.</p>
+                $$U_i = -m_h g y_{\text{CM}} = -\left(\frac{M}{n}\right)g\left(\frac{L}{2n}\right) = -\frac{MgL}{2n^2},
+                \qquad U_f = 0$$
+                $$W_{\text{ext}} = \Delta U = U_f - U_i = \frac{MgL}{2n^2}$$
+                <p><strong>Method 2 (Exact Calculus Verification):</strong> When a length $y$ remains hanging, the
+                    downward weight pulling the chain is $F(y) = \left(\frac{M}{L}y\right)g$. Pulling an element $dy$
+                    onto the table requires $dW = F(y)\,dy$. Integrating from $y = 0$ to $y = L/n$:</p>
+                $$W_{\text{ext}} = \int_0^{L/n} \frac{Mg}{L}y\,dy = \frac{Mg}{L}\left[\frac{y^2}{2}\right]_0^{L/n} =
+                \frac{MgL}{2n^2}$$
+                <p><strong>Generalization:</strong> To pull the chain slowly from hanging length $L/n_1$ to a shorter
+                    hanging length $L/n_2$ ($n_2 > n_1$):</p>
+                $$W_{\text{ext}} = \frac{MgL}{2}\left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)$$
+            </div>
+
+            <div class="diagram-box">
+                <svg viewBox="0 0 620 265" width="100%" role="img"
+                    aria-label="Uniform chain on a smooth table with 1/n-th length hanging over the edge and its center of mass marked">
+                    <defs>
+                        <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7"
+                            orient="auto-start-reverse">
+                            <path d="M 0 1 L 10 5 L 0 9 z" fill="#1d4ed8" />
+                        </marker>
+                        <marker id="arr-slate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                            orient="auto-start-reverse">
+                            <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+                        </marker>
+                    </defs>
+                    <!-- Tabletop -->
+                    <rect x="65" y="95" width="285" height="18" rx="3" fill="#cbd5e1" stroke="#334155"
+                        stroke-width="2" />
+                    <!-- Table legs -->
+                    <rect x="85" y="113" width="14" height="125" fill="#94a3b8" stroke="#334155" stroke-width="1.5" />
+                    <rect x="315" y="113" width="14" height="125" fill="#94a3b8" stroke="#334155" stroke-width="1.5" />
+                    <text x="195" y="140" font-size="12" font-weight="600" fill="#475569" text-anchor="middle">Smooth
+                        Horizontal Table</text>
+
+                    <!-- Datum line U = 0 -->
+                    <line x1="55" y1="90" x2="575" y2="90" stroke="#059669" stroke-width="1.5" stroke-dasharray="6,4" />
+                    <text x="515" y="82" font-size="12" font-weight="700" fill="#059669" text-anchor="middle">Reference
+                        Datum (U = 0)</text>
+
+                    <!-- Chain on table + smooth curve + hanging segment -->
+                    <path d="M 115 90 L 348 90 Q 358 90 358 100 L 358 226" fill="none" stroke="#b45309" stroke-width="7"
+                        stroke-linecap="round" />
+                    <path d="M 115 90 L 348 90 Q 358 90 358 100 L 358 226" fill="none" stroke="#fef3c7" stroke-width="2"
+                        stroke-dasharray="5,5" />
+
+                    <!-- External Force arrow -->
+                    <line x1="112" y1="82" x2="52" y2="82" stroke="#1d4ed8" stroke-width="2.5"
+                        marker-end="url(#arr-blue)" />
+                    <text x="82" y="72" font-size="13" font-weight="700" fill="#1d4ed8"
+                        text-anchor="middle">F_ext</text>
+
+                    <!-- Dimension for tabletop portion -->
+                    <line x1="115" y1="55" x2="352" y2="55" stroke="#475569" stroke-width="1.5"
+                        marker-start="url(#arr-slate)" marker-end="url(#arr-slate)" />
+                    <text x="234" y="45" font-size="12" font-weight="600" fill="#1e293b" text-anchor="middle">Length on
+                        table = L(1 - 1/n)</text>
+
+                    <!-- CM marker on hanging portion (midpoint of y=90 to y=226 is y=158) -->
+                    <circle cx="358" cy="158" r="5.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5" />
+                    <line x1="364" y1="158" x2="405" y2="158" stroke="#dc2626" stroke-width="1.2"
+                        stroke-dasharray="3,2" />
+                    <text x="410" y="162" font-size="12" font-weight="700" fill="#dc2626">CM of hanging part</text>
+
+                    <!-- Depth bracket y_CM = L/(2n) -->
+                    <line x1="392" y1="94" x2="392" y2="154" stroke="#dc2626" stroke-width="1.5"
+                        marker-start="url(#arr-slate)" marker-end="url(#arr-slate)" />
+                    <text x="448" y="128" font-size="12" font-weight="600" fill="#991b1b">y_CM = L / (2n)</text>
+
+                    <!-- Total hanging length bracket L/n -->
+                    <line x1="540" y1="94" x2="540" y2="224" stroke="#475569" stroke-width="1.5"
+                        marker-start="url(#arr-slate)" marker-end="url(#arr-slate)" />
+                    <line x1="365" y1="226" x2="548" y2="226" stroke="#94a3b8" stroke-width="1"
+                        stroke-dasharray="3,3" />
+                    <text x="550" y="160" font-size="12" font-weight="700" fill="#1e293b">L / n</text>
+                    <text x="462" y="210" font-size="12" font-weight="600" fill="#334155" text-anchor="middle">Hanging
+                        mass m_h = M / n</text>
+                    <text x="462" y="246" font-size="13" font-weight="700" fill="#1d4ed8" text-anchor="middle">W_ext =
+                        MgL / (2n²)</text>
+                </svg>
+                <div class="diagram-caption">Figure 19.2: Center-of-mass geometry for lifting the hanging $1/n$-th
+                    portion of a uniform chain onto a frictionless table.</div>
+            </div>
+
+            <h3>2. Elastic Potential Energy of an Ideal Spring ($U_s$)</h3>
+            <p>An ideal massless spring of stiffness (force constant) $k$ obeys Hooke's Law: $F_s = -kx$, where $x$ is
+                the displacement (extension or compression) measured strictly from the spring's <strong>natural
+                    (unstrained) length</strong>. The work done <em>by the spring force</em> when the free end moves
+                from $x_1$ to $x_2$ is:</p>
+            $$W_s = \int_{x_1}^{x_2} (-kx)\,dx = -\left[\frac{1}{2}kx^2\right]_{x_1}^{x_2} = \frac{1}{2}k(x_1^2 -
+            x_2^2)$$
+            <p>Taking $U_s(0) = 0$ at natural length, the elastic potential energy stored at deformation $x$ is $U_s(x)
+                = \dfrac{1}{2}kx^2$ (always $\ge 0$, identical for both stretching $+x$ and compression $-x$).
+                Consequently, the work required by an <strong>external agent</strong> to deform the spring slowly from
+                $x_1$ to $x_2$ is:</p>
+            $$W_{\text{ext}} = \Delta U_s = \frac{1}{2}k(x_2^2 - x_1^2) = \frac{1}{2}k(x_2 - x_1)(x_2 + x_1)$$
+
+            <div class="concept-box">
+                <span class="box-label">Critical Exam Trap &bull; Incremental Spring Stretching</span>
+                <p>If a spring is already stretched by $x_1$ and you stretch it by an additional $\Delta x$ (so $x_2 =
+                    x_1 + \Delta x$), the extra work is <strong>NOT</strong> $\frac{1}{2}k(\Delta x)^2$! Because the
+                    spring already pulls back with force $kx_1$ at the start of the second stretch, the true additional
+                    work is:</p>
+                $$W_{\text{ext}} = \frac{1}{2}k\left[(x_1 + \Delta x)^2 - x_1^2\right] = \frac{1}{2}k(\Delta x)^2 + k
+                x_1 \Delta x > \frac{1}{2}k(\Delta x)^2$$
+                <p>For example, stretching from $0 \to d$ takes $W_1 = \frac{1}{2}kd^2$, whereas stretching further from
+                    $d \to 2d$ takes $W_2 = \frac{1}{2}k(4d^2 - d^2) = \frac{3}{2}kd^2 = \mathbf{3W_1}$!</p>
+            </div>
+
+            <h3>3. Conservative Force from Potential Energy &amp; Equilibrium Stability</h3>
+            <p>In one dimension, inverting $\Delta U = -\int F_x\,dx$ yields the local differential relation between
+                conservative force and potential energy:</p>
+            $$F_x = -\frac{dU}{dx}$$
+            <p>Geometrically, the conservative force equals the <strong>negative slope</strong> of the $U(x)$ graph—it
+                always pushes a particle "downhill" toward lower potential energy. Equilibrium occurs where net force
+                vanishes: $F_x = 0 \iff \dfrac{dU}{dx} = 0$.</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Equilibrium Type</th>
+                        <th>Derivative Conditions</th>
+                        <th>$U(x)$ Graph Shape</th>
+                        <th>Response to Small Displacement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Stable Equilibrium</strong></td>
+                        <td>$\dfrac{dU}{dx} = 0$ and $\dfrac{d^2U}{dx^2} > 0$</td>
+                        <td>Local minimum (valley / bowl)</td>
+                        <td>Restoring force pulls particle <em>back</em> toward equilibrium (oscillations occur).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Unstable Equilibrium</strong></td>
+                        <td>$\dfrac{dU}{dx} = 0$ and $\dfrac{d^2U}{dx^2} < 0$</td>
+                        <td>Local maximum (hilltop / inverted bowl)</td>
+                        <td>Force pushes particle <em>away</em> from equilibrium; it never returns.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Neutral Equilibrium</strong></td>
+                        <td>$\dfrac{dU}{dx} = 0$ and $\dfrac{d^2U}{dx^2} = 0$ (locally)</td>
+                        <td>Flat horizontal plateau ($U = \text{const}$)</td>
+                        <td>Force remains zero at nearby points; particle stays wherever placed.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- ==================== SECTION 4 ==================== -->
+            <h2 class="section-heading">19.4 Work–Energy Theorem &amp; Conservation of Mechanical Energy</h2>
+
+            <div class="concept-box">
+                <span class="box-label">Universal Weapon &bull; The Work–Energy Theorem (WET)</span>
+                <p><strong>First-Principles Derivation from Newton's Second Law:</strong> Along a trajectory with net
+                    tangential force $F_{\text{net}}$:</p>
+                $$F_{\text{net}} = m\frac{dv}{dt} = m\frac{dv}{dx}\frac{dx}{dt} = mv\frac{dv}{dx} \implies
+                F_{\text{net}}\,dx = mv\,dv$$
+                <p>Integrating from initial state $(x_i, v_i)$ to final state $(x_f, v_f)$:</p>
+                $$W_{\text{all forces}} = \int_{x_i}^{x_f} F_{\text{net}}\,dx = \frac{1}{2}mv_f^2 - \frac{1}{2}mv_i^2 =
+                \Delta K$$
+                <p>Decomposing all forces acting on the particle into conservative, non-conservative, external, and (if
+                    using a non-inertial frame) pseudo forces:</p>
+                $$W_{\text{cons}} + W_{\text{non-cons}} + W_{\text{ext}} + W_{\text{pseudo}} = \Delta K$$
+            </div>
+
+            <p><strong>Why WET Is Superior to Kinematics:</strong> The Work–Energy Theorem holds for <em>curved paths,
+                    variable forces, friction, air drag, springs, and non-inertial frames</em> (as long as
+                $W_{\text{pseudo}}$ is included). You never need intermediate accelerations or time intervals.</p>
+
+            <h3>Conservation of Mechanical Energy (COME)</h3>
+            <p>Substituting $W_{\text{cons}} = -\Delta U = -(U_f - U_i)$ into the Work–Energy Theorem (in an inertial
+                frame) gives the general mechanical-energy accounting equation:</p>
+            $$W_{\text{non-cons}} + W_{\text{ext}} = \Delta K + \Delta U = \Delta E_{\text{mech}}$$
+            <p>Whenever $W_{\text{non-cons}} + W_{\text{ext}} = 0$ (for example, no friction and no external push, or
+                normal reaction doing zero work on a fixed smooth track), total mechanical energy $E = K + U$ is
+                strictly conserved:</p>
+            $$K_i + U_i = K_f + U_f$$
+
+            <h3>Rough-Track &amp; Spring-Collision Accounting</h3>
+            <p>When a block of mass $m$ enters a horizontal rough patch ($\mu_k$) at speed $v_0$ and compresses a
+                horizontal spring of stiffness $k$ up to maximum compression $x_{\max}$ (where instantaneous velocity
+                $v_f = 0$), both spring force and kinetic friction oppose motion throughout compression:</p>
+            $$W_s + W_{f_k} = \Delta K \implies -\frac{1}{2}kx_{\max}^2 - \mu_k mg x_{\max} = 0 - \frac{1}{2}mv_0^2$$
+            $$\frac{1}{2}kx_{\max}^2 + \mu_k mg x_{\max} - \frac{1}{2}mv_0^2 = 0$$
+            <p><strong>Rebound Condition:</strong> At $x_{\max}$, the block stops momentarily. It rebounds back <em>only
+                    if</em> the spring's restoring force exceeds maximum static friction: $kx_{\max} > \mu_s mg$.
+                Otherwise, it remains permanently stuck in the compressed position!</p>
+
+            <div class="diagram-box">
+                <svg viewBox="0 0 640 245" width="100%" role="img"
+                    aria-label="Block compressing a horizontal spring on a rough floor showing initial contact and maximum compression">
+                    <defs>
+                        <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7"
+                            orient="auto-start-reverse">
+                            <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+                        </marker>
+                        <marker id="arr-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7"
+                            orient="auto-start-reverse">
+                            <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669" />
+                        </marker>
+                        <marker id="arr-blk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                            orient="auto-start-reverse">
+                            <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b" />
+                        </marker>
+                    </defs>
+                    <!-- Floor & Wall -->
+                    <line x1="40" y1="185" x2="585" y2="185" stroke="#1e293b" stroke-width="2.5" />
+                    <rect x="585" y="75" width="16" height="112" fill="#94a3b8" stroke="#1e293b" stroke-width="2" />
+                    <!-- Rough floor hatching -->
+                    <g stroke="#64748b" stroke-width="1.2">
+                        <line x1="60" y1="185" x2="50" y2="196" />
+                        <line x1="90" y1="185" x2="80" y2="196" />
+                        <line x1="120" y1="185" x2="110" y2="196" />
+                        <line x1="150" y1="185" x2="140" y2="196" />
+                        <line x1="180" y1="185" x2="170" y2="196" />
+                        <line x1="210" y1="185" x2="200" y2="196" />
+                        <line x1="240" y1="185" x2="230" y2="196" />
+                        <line x1="270" y1="185" x2="260" y2="196" />
+                        <line x1="300" y1="185" x2="290" y2="196" />
+                        <line x1="330" y1="185" x2="320" y2="196" />
+                        <line x1="360" y1="185" x2="350" y2="196" />
+                        <line x1="390" y1="185" x2="380" y2="196" />
+                        <line x1="420" y1="185" x2="410" y2="196" />
+                        <line x1="450" y1="185" x2="440" y2="196" />
+                        <line x1="480" y1="185" x2="470" y2="196" />
+                        <line x1="510" y1="185" x2="500" y2="196" />
+                        <line x1="540" y1="185" x2="530" y2="196" />
+                        <line x1="570" y1="185" x2="560" y2="196" />
+                    </g>
+
+                    <!-- Vertical reference lines for x = 0 and x = x_max -->
+                    <line x1="250" y1="45" x2="250" y2="185" stroke="#1d4ed8" stroke-width="1.5"
+                        stroke-dasharray="5,4" />
+                    <text x="250" y="36" font-size="12" font-weight="700" fill="#1d4ed8" text-anchor="middle">Natural
+                        Length (x = 0)</text>
+
+                    <line x1="410" y1="45" x2="410" y2="185" stroke="#dc2626" stroke-width="1.5"
+                        stroke-dasharray="5,4" />
+                    <text x="410" y="36" font-size="12" font-weight="700" fill="#dc2626" text-anchor="middle">Max
+                        Compression (x = x_max)</text>
+
+                    <!-- Ghost block at contact (x=0) -->
+                    <rect x="175" y="125" width="75" height="60" rx="4" fill="#dbeafe" fill-opacity="0.45"
+                        stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,3" />
+                    <text x="212" y="160" font-size="13" font-weight="700" fill="#1d4ed8" text-anchor="middle">m</text>
+                    <line x1="110" y1="155" x2="168" y2="155" stroke="#059669" stroke-width="2.5"
+                        marker-end="url(#arr-green)" />
+                    <text x="136" y="144" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">v₀</text>
+
+                    <!-- Solid block at max compression -->
+                    <rect x="335" y="125" width="75" height="60" rx="4" fill="#fef3c7" stroke="#b45309"
+                        stroke-width="2.2" />
+                    <text x="372" y="152" font-size="13" font-weight="700" fill="#92400e" text-anchor="middle">m</text>
+                    <text x="372" y="170" font-size="11" font-weight="700" fill="#dc2626" text-anchor="middle">v =
+                        0</text>
+
+                    <!-- Compressed Spring from x=410 to x=585 -->
+                    <polyline
+                        points="410,155 424,155 432,137 446,173 460,137 474,173 488,137 502,173 516,137 530,173 544,137 558,173 568,155 585,155"
+                        fill="none" stroke="#334155" stroke-width="2.5" stroke-linejoin="round" />
+                    <text x="498" y="124" font-size="12" font-weight="700" fill="#334155" text-anchor="middle">Spring
+                        (k)</text>
+
+                    <!-- Opposing forces during compression -->
+                    <line x1="335" y1="142" x2="270" y2="142" stroke="#1d4ed8" stroke-width="2.2"
+                        marker-end="url(#arr-blue)" />
+                    <text x="298" y="133" font-size="11" font-weight="700" fill="#1d4ed8" text-anchor="middle">F_s =
+                        kx</text>
+                    <line x1="350" y1="185" x2="282" y2="185" stroke="#dc2626" stroke-width="2.5"
+                        marker-end="url(#arr-red)" />
+                    <text x="315" y="213" font-size="11" font-weight="700" fill="#dc2626" text-anchor="middle">f_k = μ_k
+                        mg</text>
+
+                    <!-- Compression dimension arrow -->
+                    <line x1="254" y1="78" x2="406" y2="78" stroke="#1e293b" stroke-width="1.8"
+                        marker-start="url(#arr-blk)" marker-end="url(#arr-blk)" />
+                    <text x="330" y="70" font-size="13" font-weight="700" fill="#1e293b"
+                        text-anchor="middle">x_max</text>
+
+                    <!-- Equation footer -->
+                    <text x="320" y="234" font-size="12" font-weight="700" fill="#0f172a" text-anchor="middle">Energy
+                        Balance: ½mv₀² = ½kx_max² + μ_k mg x_max</text>
+                </svg>
+                <div class="diagram-caption">Figure 19.3: Energy accounting for a sliding block compressing a spring on
+                    a rough surface. Note that both $F_s$ and $f_k$ do negative work during compression.</div>
+            </div>
+
+            <!-- ==================== SECTION 5 ==================== -->
+            <h2 class="section-heading">19.5 Power, Efficiency, Fluid Pumps &amp; Constant-Power Motion</h2>
+
+            <div class="concept-box">
+                <span class="box-label">Core Principle &bull; Average &amp; Instantaneous Power</span>
+                <p><strong>Power</strong> is the rate at which work is done or energy is transferred:</p>
+                $$P_{\text{avg}} = \frac{\Delta W}{\Delta t}, \qquad P_{\text{inst}} = \frac{dW}{dt} =
+                \frac{\vec{F}\cdot d\vec{r}}{dt} = \vec{F}\cdot\vec{v} = Fv\cos\theta$$
+                <ul>
+                    <li><strong>SI Unit:</strong> Watt ($\text{W}$), where $1\text{ W} = 1\text{ J/s}$. Dimensional
+                        formula: $[P] = [M^1 L^2 T^{-3}]$.</li>
+                    <li><strong>Horsepower (Mechanical):</strong> $1\text{ HP} = 746\text{ W}$.</li>
+                    <li><strong>Commercial Unit of ENERGY (NOT Power!):</strong> Kilowatt-hour ($\text{kWh}$, or 1
+                        electrical "unit"):
+                        $$1\text{ kWh} = (1000\text{ J/s})(3600\text{ s}) = 3.6 \times 10^6\text{ J}$$
+                    </li>
+                    <li><strong>Efficiency ($\eta$):</strong> Ratio of useful output power to total input power drawn:
+                        $$\eta = \frac{P_{\text{out}}}{P_{\text{in}}} = \frac{E_{\text{useful}}}{E_{\text{input}}} \quad
+                        (\text{or } \times 100\%)$$
+                    </li>
+                </ul>
+            </div>
+
+            <h3>Motor / Water Pump Lifting and Ejecting Fluid</h3>
+            <p>Suppose a pump draws water from depth $h$ at mass flow rate $\dfrac{dm}{dt}$ (in $\text{kg/s}$) and
+                discharges it from a pipe at exit velocity $v$. Each mass element $dm$ gains gravitational PE $(dm)gh$
+                and kinetic energy $\frac{1}{2}(dm)v^2$. Dividing by $dt$ yields the useful output power:</p>
+            $$P_{\text{out}} = \frac{dm}{dt}\left(gh + \frac{1}{2}v^2\right)$$
+            <p>For a pipe of cross-sectional area $A$ discharging fluid of density $\rho$ at speed $v$, the mass flow
+                rate is $\dfrac{dm}{dt} = \rho A v$. For a <strong>horizontal nozzle</strong> ($h = 0$):</p>
+            $$P_{\text{jet}} = \frac{1}{2}(\rho A v)v^2 = \frac{1}{2}\rho A v^3 \implies P_{\text{jet}} \propto v^3$$
+            <p><strong>Exam Trap:</strong> To double the discharge speed (and thus double the volume flow rate $Av$)
+                through the <em>same</em> horizontal pipe, the pump must deliver $2^3 = \mathbf{8\text{ times}}$ the
+                power—not $2$ or $4$ times!</p>
+
+            <div class="bridge-box">
+                <span class="box-label">Resonance / Olympiad Bridge &bull; Constant-Power Motion Scaling ($v \propto
+                    t^{1/2},\ x \propto t^{3/2}$)</span>
+                <p>A vehicle or particle of mass $m$ starts from rest ($v = 0, x = 0$ at $t = 0$) along a straight line
+                    under a machine delivering <strong>constant power $P$</strong>. Unlike constant-force motion ($a =
+                    \text{const}$), here acceleration decreases as speed grows!</p>
+                <p><strong>Step 1 — Velocity vs. Time:</strong></p>
+                $$P = Fv = m\frac{dv}{dt}\cdot v \implies v\,dv = \frac{P}{m}\,dt$$
+                <p>Integrating from $(0,0)$ to $(t,v)$:</p>
+                $$\int_0^v v\,dv = \int_0^t \frac{P}{m}\,dt \implies \frac{v^2}{2} = \frac{P}{m}t \implies v(t) =
+                \sqrt{\frac{2P}{m}}\,t^{1/2} \quad \left(v \propto t^{1/2}\right)$$
+                <p><strong>Step 2 — Displacement vs. Time:</strong></p>
+                $$x(t) = \int_0^t v(t)\,dt = \sqrt{\frac{2P}{m}}\int_0^t t^{1/2}\,dt =
+                \sqrt{\frac{2P}{m}}\cdot\frac{2}{3}t^{3/2} = \sqrt{\frac{8P}{9m}}\,t^{3/2} \quad \left(x \propto
+                t^{3/2}\right)$$
+                <p><strong>Step 3 — Force &amp; Velocity-Position Scaling:</strong></p>
+                $$F(t) = \frac{P}{v(t)} = \sqrt{\frac{mP}{2}}\,t^{-1/2} \propto t^{-1/2}, \qquad v(x) =
+                \left(\frac{3Px}{m}\right)^{1/3} \propto x^{1/3}$$
+                <p><em>Check $v(x)$ independently:</em> $P = m v \frac{dv}{dx} \cdot v = mv^2\frac{dv}{dx} \implies
+                    \int_0^v v^2\,dv = \int_0^x \frac{P}{m}\,dx \implies \frac{v^3}{3} = \frac{Px}{m} \implies v =
+                    \left(\frac{3Px}{m}\right)^{1/3}$. Exact match!</p>
+            </div>
+
+            <!-- ==================== SECTION 6 ==================== -->
+            <h2 class="section-heading">19.6 Olympiad Bridge: Vertical Circular Motion (String vs. Rigid Rod)</h2>
+
+            <p>In horizontal uniform circular motion, speed is constant. In <strong>vertical circular motion</strong>
+                under gravity, speed decreases as the bob rises and increases as it falls—making it a classic coupled
+                test of <strong>Newton's Second Law (radial dynamics)</strong> and <strong>Conservation of Mechanical
+                    Energy</strong>.</p>
+
+            <div class="bridge-box">
+                <span class="box-label">First-Principles Derivation &bull; Particle on a Light Inextensible
+                    String</span>
+                <p>A bob of mass $m$ tied to a light string of length $R$ is launched horizontally from its lowest point
+                    $A$ with speed $v_A = v_0$. Let $P$ be an arbitrary position where the string makes angle $\theta$
+                    with the downward vertical.</p>
+                <p><strong>1. Energy Conservation ($A \to P$):</strong> Taking $U = 0$ at $A$, the height of $P$ is $h =
+                    R(1 - \cos\theta)$:</p>
+                $$\frac{1}{2}mv_0^2 = \frac{1}{2}mv^2 + mgR(1 - \cos\theta) \implies v^2(\theta) = v_0^2 - 2gR(1 -
+                \cos\theta)$$
+                <p><strong>2. Radial Equation of Motion (toward center $O$):</strong> Resolving $mg$ into radial outward
+                    ($mg\cos\theta$) and tangential ($mg\sin\theta$) components:</p>
+                $$T - mg\cos\theta = \frac{mv^2}{R}$$
+                <p>Substituting $v^2(\theta)$ into the radial equation yields the master tension formula at any angle
+                    $\theta$:</p>
+                $$T(\theta) = \frac{m}{R}\left[v_0^2 - 2gR(1 - \cos\theta)\right] + mg\cos\theta = \frac{mv_0^2}{R} -
+                2mg + 3mg\cos\theta$$
+            </div>
+
+            <div class="diagram-box">
+                <svg viewBox="0 0 640 385" width="100%" role="img"
+                    aria-label="Vertical circular motion showing critical points A, B, C, general angle theta, tension and weight vectors, and string versus rigid rod comparison">
+                    <defs>
+                        <marker id="vcm-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5"
+                            orient="auto-start-reverse">
+                            <path d="M 0 1 L 10 5 L 0 9 z" fill="#1d4ed8" />
+                        </marker>
+                        <marker id="vcm-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5"
+                            orient="auto-start-reverse">
+                            <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+                        </marker>
+                        <marker id="vcm-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5"
+                            markerHeight="6.5" orient="auto-start-reverse">
+                            <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669" />
+                        </marker>
+                    </defs>
+
+                    <!-- Main Circle: Center O(225, 190), Radius R = 130 -->
+                    <circle cx="225" cy="190" r="130" fill="#f8fafc" stroke="#64748b" stroke-width="2"
+                        stroke-dasharray="6,4" />
+                    <!-- Vertical & Horizontal Reference Diameters -->
+                    <line x1="225" y1="60" x2="225" y2="320" stroke="#cbd5e1" stroke-width="1.5"
+                        stroke-dasharray="4,3" />
+                    <line x1="95" y1="190" x2="355" y2="190" stroke="#cbd5e1" stroke-width="1.5"
+                        stroke-dasharray="4,3" />
+                    <!-- Center O -->
+                    <circle cx="225" cy="190" r="4" fill="#0f172a" />
+                    <text x="234" y="182" font-size="13" font-weight="700" fill="#0f172a">O</text>
+
+                    <!-- String from O(225,190) to P at theta=45 deg left of vertical: P = (225-91.9, 190+91.9) = (133, 282) -->
+                    <line x1="225" y1="190" x2="133" y2="282" stroke="#1e293b" stroke-width="2.2" />
+                    <!-- Angle arc theta at O -->
+                    <path d="M 225 232 A 42 42 0 0 1 195 220" fill="none" stroke="#7c3aed" stroke-width="2" />
+                    <text x="206" y="246" font-size="13" font-weight="700" fill="#7c3aed">θ</text>
+                    <text x="166" y="232" font-size="12" font-weight="700" fill="#334155">R</text>
+
+                    <!-- General Point P(133, 282) -->
+                    <circle cx="133" cy="282" r="7" fill="#f59e0b" stroke="#92400e" stroke-width="1.8" />
+                    <text x="115" y="276" font-size="13" font-weight="700" fill="#92400e">P</text>
+                    <!-- Vectors at P: Tension T toward O, mg down, mg cos(theta) radially out, mg sin(theta) tangentially down-right -->
+                    <line x1="138" y1="277" x2="180" y2="235" stroke="#1d4ed8" stroke-width="2.5"
+                        marker-end="url(#vcm-blue)" />
+                    <text x="162" y="264" font-size="12" font-weight="700" fill="#1d4ed8">T</text>
+                    <!-- mg straight down -->
+                    <line x1="133" y1="289" x2="133" y2="352" stroke="#dc2626" stroke-width="2.3"
+                        marker-end="url(#vcm-red)" />
+                    <text x="142" y="348" font-size="12" font-weight="700" fill="#dc2626">mg</text>
+                    <!-- mg cos(theta) radially out (down-left 45 deg) -->
+                    <line x1="128" y1="287" x2="90" y2="325" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="3,2"
+                        marker-end="url(#vcm-red)" />
+                    <text x="64" y="338" font-size="11" font-weight="700" fill="#b91c1c" text-anchor="middle">mg
+                        cosθ</text>
+                    <!-- mg sin(theta) tangentially down-right 45 deg -->
+                    <line x1="138" y1="287" x2="176" y2="325" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="3,2"
+                        marker-end="url(#vcm-red)" />
+                    <text x="190" y="340" font-size="11" font-weight="700" fill="#b91c1c" text-anchor="middle">mg
+                        sinθ</text>
+
+                    <!-- Critical Point A (Bottom: 225, 320) -->
+                    <circle cx="225" cy="320" r="7" fill="#1d4ed8" />
+                    <text x="242" y="325" font-size="13" font-weight="700" fill="#1e293b">A (θ = 0°)</text>
+                    <line x1="225" y1="312" x2="225" y2="262" stroke="#1d4ed8" stroke-width="2.4"
+                        marker-end="url(#vcm-blue)" />
+                    <text x="234" y="280" font-size="12" font-weight="700" fill="#1d4ed8">T_A</text>
+                    <line x1="225" y1="327" x2="225" y2="365" stroke="#dc2626" stroke-width="2.2"
+                        marker-end="url(#vcm-red)" />
+                    <text x="235" y="362" font-size="12" font-weight="700" fill="#dc2626">mg</text>
+                    <line x1="232" y1="320" x2="288" y2="320" stroke="#059669" stroke-width="2.3"
+                        marker-end="url(#vcm-green)" />
+                    <text x="308" y="324" font-size="12" font-weight="700" fill="#059669">v_A</text>
+
+                    <!-- Critical Point B (Mid-height: 355, 190) -->
+                    <circle cx="355" cy="190" r="7" fill="#1d4ed8" />
+                    <text x="366" y="185" font-size="13" font-weight="700" fill="#1e293b">B (θ = 90°)</text>
+                    <line x1="347" y1="190" x2="297" y2="190" stroke="#1d4ed8" stroke-width="2.4"
+                        marker-end="url(#vcm-blue)" />
+                    <text x="315" y="180" font-size="12" font-weight="700" fill="#1d4ed8">T_B</text>
+                    <line x1="355" y1="197" x2="355" y2="237" stroke="#dc2626" stroke-width="2.2"
+                        marker-end="url(#vcm-red)" />
+                    <text x="364" y="232" font-size="12" font-weight="700" fill="#dc2626">mg</text>
+                    <line x1="355" y1="182" x2="355" y2="132" stroke="#059669" stroke-width="2.3"
+                        marker-end="url(#vcm-green)" />
+                    <text x="365" y="144" font-size="12" font-weight="700" fill="#059669">v_B</text>
+
+                    <!-- Critical Point C (Top: 225, 60) -->
+                    <circle cx="225" cy="60" r="7" fill="#1d4ed8" />
+                    <text x="225" y="42" font-size="13" font-weight="700" fill="#1e293b" text-anchor="middle">C (θ =
+                        180°)</text>
+                    <line x1="225" y1="67" x2="225" y2="108" stroke="#dc2626" stroke-width="2.2"
+                        marker-end="url(#vcm-red)" />
+                    <text x="234" y="100" font-size="12" font-weight="700" fill="#dc2626">mg + T_C</text>
+                    <line x1="217" y1="60" x2="165" y2="60" stroke="#059669" stroke-width="2.3"
+                        marker-end="url(#vcm-green)" />
+                    <text x="150" y="64" font-size="12" font-weight="700" fill="#059669">v_C</text>
+
+                    <!-- Summary Panel on Right -->
+                    <rect x="438" y="42" width="188" height="295" rx="8" fill="#f1f5f9" stroke="#cbd5e1"
+                        stroke-width="1.5" />
+                    <text x="532" y="68" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">CRITICAL
+                        THRESHOLDS</text>
+                    <line x1="452" y1="78" x2="612" y2="78" stroke="#cbd5e1" stroke-width="1" />
+
+                    <text x="452" y="102" font-size="12" font-weight="700" fill="#1d4ed8">Light String (T ≥ 0):</text>
+                    <text x="456" y="124" font-size="12" fill="#1e293b">• v_A(min) = √(5gR)</text>
+                    <text x="456" y="144" font-size="12" fill="#1e293b">• v_B(min) = √(3gR)</text>
+                    <text x="456" y="164" font-size="12" fill="#1e293b">• v_C(min) = √(gR)</text>
+                    <text x="456" y="186" font-size="12" font-weight="600" fill="#047857">T_A=6mg, T_B=3mg, T_C=0</text>
+
+                    <line x1="452" y1="202" x2="612" y2="202" stroke="#cbd5e1" stroke-width="1" />
+                    <text x="452" y="224" font-size="12" font-weight="700" fill="#7c3aed">Universal Invariant:</text>
+                    <text x="456" y="244" font-size="12" font-weight="700" fill="#1e293b">T_A - T_C = 6mg</text>
+                    <text x="456" y="261" font-size="11" fill="#475569">(for ANY complete loop!)</text>
+
+                    <line x1="452" y1="276" x2="612" y2="276" stroke="#cbd5e1" stroke-width="1" />
+                    <text x="452" y="298" font-size="12" font-weight="700" fill="#b91c1c">Rigid Rod / Tube:</text>
+                    <text x="456" y="318" font-size="12" fill="#1e293b">• v_A(min) = √(4gR)</text>
+                    <text x="456" y="334" font-size="12" fill="#1e293b">• v_C(min) → 0</text>
+                </svg>
+                <div class="diagram-caption">Figure 19.4: Vertical circular motion dynamics showing critical points $A,
+                    B, C$, general angle $\theta$ force resolution, and critical thresholds for strings vs. rigid rods.
+                </div>
+            </div>
+
+            <h3>Critical Loop Conditions &amp; The Universal $6mg$ Tension Invariant</h3>
+            <ol>
+                <li><strong>Minimum Speed to Loop the Loop (String):</strong> A string can only pull ($T \ge 0$). Since
+                    $\cos\theta$ is smallest at the top point $C$ ($\theta = 180^\circ, \cos\theta = -1$), tension is
+                    minimum at $C$. Setting $T_C \ge 0$:
+                    $$T_C = \frac{mv_C^2}{R} - mg \ge 0 \implies v_{C,\min} = \sqrt{gR}$$
+                    By COME from $A$ to $C$ ($\Delta h = 2R$):
+                    $$v_A^2 = v_C^2 + 4gR \ge 5gR \implies v_{A,\min} = \sqrt{5gR}$$
+                    And at mid-height $B$ ($\Delta h = R$):
+                    $$v_B^2 = v_A^2 - 2gR \ge 3gR \implies v_{B,\min} = \sqrt{3gR}$$
+                    At this critical launch ($v_A = \sqrt{5gR}$), the exact tensions are $T_C = 0$, $T_B = 3mg$, and
+                    $T_A = 6mg$.
+                </li>
+                <li><strong>Universal Tension Difference ($T_{\text{bottom}} - T_{\text{top}} = 6mg$):</strong> For
+                    <em>any</em> launch speed $v_A \ge \sqrt{5gR}$ (even $v_A = 10\sqrt{gR}$!):
+                    $$T_A = \frac{mv_A^2}{R} + mg, \qquad T_C = \frac{mv_C^2}{R} - mg = \frac{m(v_A^2 - 4gR)}{R} - mg =
+                    \frac{mv_A^2}{R} - 5mg$$
+                    Subtracting eliminates $v_A$ completely:
+                    $$T_A - T_C = 6mg \qquad \text{(and } T_A - T_B = 3mg,\ T_B - T_C = 3mg\text{)}$$
+                </li>
+                <li><strong>Three Complete Motion Regimes (String):</strong>
+                    <ul>
+                        <li><strong>Oscillation ($0 < v_0 \le \sqrt{2gR}$):</strong> Velocity vanishes ($v = 0$) at or
+                                    below mid-height $B$ while $T = mg\cos\theta \ge 0$. Maximum height reached is
+                                    $h_{\max} = \dfrac{v_0^2}{2g} \le R$.</li>
+                        <li><strong>String Slackening &amp; Free-Flight Parabola ($\sqrt{2gR} < v_0 <
+                                    \sqrt{5gR}$):</strong> The bob crosses $B$ ($v_B > 0$), enters the upper hemisphere
+                                    ($\cos\theta < 0$), and the string goes slack ($T=0$) while $v> 0$. Setting
+                                        $T(\theta_s) = 0$:
+                                        $$\frac{mv_0^2}{R} - 2mg + 3mg\cos\theta_s = 0 \implies \cos\theta_s = \frac{2gR
+                                        - v_0^2}{3gR}$$
+                                        Hence the exact <strong>slackening height</strong> measured vertically above
+                                        lowest point $A$ is:
+                                        $$h_s = R(1 - \cos\theta_s) = R\left(1 - \frac{2gR - v_0^2}{3gR}\right) =
+                                        \frac{v_0^2 + gR}{3g}$$
+                                        Beyond this instant, the bob leaves the circular arc and follows a free
+                                        parabolic projectile trajectory.</li>
+                        <li><strong>Complete Vertical Circle ($v_0 \ge \sqrt{5gR}$):</strong> String remains taut
+                            throughout the entire loop.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>Critical Contrast: Light String vs. Massless Rigid Rod (or Smooth Closed Tube)</h3>
+            <p>Unlike a string, a <strong>massless rigid rod</strong> (or a bead threaded on a smooth circular wire, or
+                a ball inside a smooth double-walled circular tube) can sustain <strong>compression</strong>—it can push
+                outward on the bob at the top ($T$ or $N$ can be negative). Therefore, the bob does not need $v_C =
+                \sqrt{gR}$; it only needs to reach the top with $v_C \to 0^+$!</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Light String / Inner Track Loop</th>
+                        <th>Massless Rigid Rod / Bead on Wire / Closed Tube</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Constraint Condition</strong></td>
+                        <td>One-sided: $T \ge 0$ (or $N \ge 0$)</td>
+                        <td>Two-sided: Rod can pull ($T > 0$) or push ($T < 0$)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Minimum Speed at Top ($C$)</strong></td>
+                        <td>$v_{C,\min} = \sqrt{gR}$ ($T_C = 0$)</td>
+                        <td>$v_{C,\min} = 0$ (limit $0^+$; rod pushes upward with $mg$)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Minimum Speed at Mid ($B$)</strong></td>
+                        <td>$v_{B,\min} = \sqrt{3gR}$</td>
+                        <td>$v_{B,\min} = \sqrt{2gR}$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Minimum Launch Speed at Bottom ($A$)</strong></td>
+                        <td>$v_{A,\min} = \sqrt{5gR}$</td>
+                        <td>$v_{A,\min} = \sqrt{4gR} = 2\sqrt{gR}$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Oscillation Range</strong></td>
+                        <td>$0 < v_0 \le \sqrt{2gR}$</td>
+                        <td>$0 < v_0 < \sqrt{4gR}$ (never leaves circular path!)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Slackening / Departure Zone</strong></td>
+                        <td>$\sqrt{2gR} < v_0 < \sqrt{5gR}$</td>
+                        <td><strong>None</strong> (constrained to circle for all $v_0$)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- ==================== FORMULA VAULT ==================== -->
+            <div class="formula-vault">
+                <span class="box-label">High-Density Formula Vault &bull; Chapter 19 Rapid Recall</span>
+                <ul>
+                    <li><strong>Constant &amp; Variable Work:</strong> $W = \vec{F}\cdot\vec{s} = Fs\cos\theta$; $W =
+                        \int_{x_1}^{x_2} F(x)\,dx = \text{signed area under } F\text{-}x\text{ graph}$; $1\text{ J} =
+                        10^7\text{ erg}$.</li>
+                    <li><strong>KE–Momentum Coupling:</strong> $K = \frac{1}{2}mv^2 = \frac{p^2}{2m}$; $p = \sqrt{2mK}$;
+                        Exact $\% \Delta K$ for $x\%$ change in $p$: $\left(2x + \frac{x^2}{100}\right)\%$.</li>
+                    <li><strong>Stopping &amp; Plank Scaling:</strong> $s = \frac{mv_0^2}{2F_r} \propto v_0^2$; Bullet
+                        losing $\frac{1}{n}$-th of speed per plank needs $N = \left\lceil\frac{n^2}{2n-1}\right\rceil$
+                        whole planks.</li>
+                    <li><strong>Chain &amp; Spring PE:</strong> Hanging $1/n$-th chain lift work $W = \frac{MgL}{2n^2}$;
+                        Spring stretch $x_1 \to x_2$: $W_{\text{ext}} = \frac{1}{2}k(x_2^2 - x_1^2)$; Conservative force
+                        $F_x = -\frac{dU}{dx}$.</li>
+                    <li><strong>Work–Energy Theorem:</strong> $W_{\text{cons}} + W_{\text{nc}} + W_{\text{ext}} +
+                        W_{\text{pseudo}} = \Delta K$; $W_{\text{nc}} + W_{\text{ext}} = \Delta(K + U)$.</li>
+                    <li><strong>Power &amp; Scaling:</strong> $P = \vec{F}\cdot\vec{v}$; $1\text{ HP} = 746\text{ W}$;
+                        $1\text{ kWh} = 3.6 \times 10^6\text{ J}$; Pump $P_{\text{out}} = \frac{dm}{dt}\left(gh +
+                        \frac{1}{2}v^2\right)$; Constant power from rest: $v = \sqrt{\frac{2P}{m}}\,t^{1/2}$, $x =
+                        \sqrt{\frac{8P}{9m}}\,t^{3/2}$, $F \propto t^{-1/2}$.</li>
+                    <li><strong>Vertical Circle (String):</strong> $T(\theta) = \frac{mv_0^2}{R} - 2mg + 3mg\cos\theta$;
+                        Loop minimums: $v_A = \sqrt{5gR}$, $v_B = \sqrt{3gR}$, $v_C = \sqrt{gR}$; $T_A - T_C = 6mg$;
+                        Slackening height $h_s = \frac{v_0^2 + gR}{3g}$.</li>
+                    <li><strong>Vertical Circle (Rigid Rod):</strong> Loop minimums: $v_A = \sqrt{4gR}$, $v_B =
+                        \sqrt{2gR}$, $v_C = 0$.</li>
+                </ul>
+            </div>
+
+            <!-- ==================== WORKED EXAMPLES ==================== -->
+            <h2 class="section-heading">19.7 Graded Worked Examples (Level 1 &rarr; Level 3)</h2>
+
+            <!-- LEVEL 1 BANNER -->
+            <div class="level-banner l1">Level 1: Warmup &amp; Core Foundation (Examples 1 &ndash; 3)</div>
+
+            <!-- WE 1 -->
+            <div class="worked-example tier-1">
+                <div class="ex-header">
+                    <span class="badge badge-l1">Level 1</span>
+                    <span class="badge badge-type">Variable Force &amp; F&ndash;x Graph</span>
+                    <strong>Worked Example 1: Signed Area &amp; Final Speed</strong>
+                </div>
+                <div class="ex-problem">
+                    A particle of mass $m = 2\text{ kg}$ starts from rest at $x = 0$ and moves along the $+x$-axis under
+                    a variable force $F(x)$ whose profile is identical to Figure 19.1:
+                    <ul>
+                        <li>From $x = 0$ to $x = 4\text{ m}$, $F$ increases linearly from $0$ to $+20\text{ N}$.</li>
+                        <li>From $x = 4\text{ m}$ to $x = 8\text{ m}$, $F$ stays constant at $+20\text{ N}$.</li>
+                        <li>From $x = 8\text{ m}$ to $x = 10\text{ m}$, $F$ decreases linearly from $+20\text{ N}$ to
+                            $0$.</li>
+                        <li>From $x = 10\text{ m}$ to $x = 14\text{ m}$, $F$ decreases linearly from $0$ to $-20\text{
+                            N}$.</li>
+                    </ul>
+                    Calculate (a) the net work done on the particle from $x = 0$ to $x = 14\text{ m}$, and (b) its speed
+                    at $x = 14\text{ m}$.
+                </div>
+                <div class="ex-solution">
+                    <p><strong>Step 1 — Decompose the Signed Area Under $F(x)$:</strong> Because the particle moves in
+                        the $+x$ direction throughout, area above the $x$-axis contributes positive work and area below
+                        contributes negative work.</p>
+                    <ul>
+                        <li>Interval $[0, 4\text{ m}]$ (triangle): $W_1 = +\frac{1}{2}(4\text{ m})(20\text{ N}) =
+                            +40\text{ J}$.</li>
+                        <li>Interval $[4\text{ m}, 8\text{ m}]$ (rectangle): $W_2 = +(4\text{ m})(20\text{ N}) =
+                            +80\text{ J}$.</li>
+                        <li>Interval $[8\text{ m}, 10\text{ m}]$ (triangle): $W_3 = +\frac{1}{2}(2\text{ m})(20\text{
+                            N}) = +20\text{ J}$.</li>
+                        <li><em>Verification via Trapezoid Formula on $[0, 10\text{ m}]$:</em> $A_{\text{pos}} =
+                            \frac{1}{2}(\text{base}_1 + \text{base}_2)(\text{height}) = \frac{1}{2}(10 + 4)(20) =
+                            +140\text{ J}$.</li>
+                        <li>Interval $[10\text{ m}, 14\text{ m}]$ (triangle below axis): $W_4 = -\frac{1}{2}(4\text{
+                            m})(20\text{ N}) = -40\text{ J}$.</li>
+                    </ul>
+                    <p><strong>(a) Net Work Done:</strong></p>
+                    $$W_{\text{net}} = W_1 + W_2 + W_3 + W_4 = 40 + 80 + 20 - 40 = \mathbf{+100\text{ J}}$$
+                    <p><strong>(b) Speed at $x = 14\text{ m}$ via Work–Energy Theorem:</strong> Since $v_i = 0$ at $x =
+                        0$:</p>
+                    $$W_{\text{net}} = \frac{1}{2}mv_f^2 - 0 \implies 100 = \frac{1}{2}(2)v_f^2 \implies v_f^2 = 100
+                    \implies v_f = \mathbf{10\text{ m/s}}$$
+                </div>
+            </div>
+
+            <!-- WE 2 -->
+            <div class="worked-example tier-1">
+                <div class="ex-header">
+                    <span class="badge badge-l1">Level 1</span>
+                    <span class="badge badge-type">KE&ndash;Momentum Coupling</span>
+                    <strong>Worked Example 2: Exact Percentage-Change Calculations</strong>
+                </div>
+                <div class="ex-problem">
+                    (a) If the linear momentum of a moving body is increased by $20\%$, calculate the exact percentage
+                    increase in its kinetic energy.<br>
+                    (b) Conversely, if the kinetic energy of another body decreases by $19\%$, find the exact percentage
+                    decrease in its linear momentum.
+                </div>
+                <div class="ex-solution">
+                    <p><strong>(a) Momentum increases by $+20\%$:</strong> Let initial momentum be $p_i$ and initial
+                        kinetic energy be $K_i = \dfrac{p_i^2}{2m}$. Then:</p>
+                    $$p_f = p_i + 0.20\,p_i = 1.20\,p_i$$
+                    $$K_f = \frac{p_f^2}{2m} = \frac{(1.20\,p_i)^2}{2m} = 1.44\left(\frac{p_i^2}{2m}\right) =
+                    1.44\,K_i$$
+                    $$\%\text{ Increase in } K = \frac{K_f - K_i}{K_i}\times 100\% = (1.44 - 1)\times 100\% =
+                    \mathbf{44\%}$$
+                    <p><em>Trap Check:</em> Using the infinitesimal rule $2 \times 20\% = 40\%$ misses the quadratic
+                        $+4\%$ term.</p>
+                    <p><strong>(b) Kinetic energy decreases by $19\%$:</strong> Using $p = \sqrt{2mK}$:</p>
+                    $$K_f = (1 - 0.19)K_i = 0.81\,K_i \implies p_f = \sqrt{2m(0.81\,K_i)} = \sqrt{0.81}\,\sqrt{2mK_i} =
+                    0.90\,p_i$$
+                    $$\%\text{ Decrease in } p = \frac{p_i - p_f}{p_i}\times 100\% = (1 - 0.90)\times 100\% =
+                    \mathbf{10\%}$$
+                </div>
+            </div>
+
+            <!-- WE 3 -->
+            <div class="worked-example tier-1">
+                <div class="ex-header">
+                    <span class="badge badge-l1">Level 1</span>
+                    <span class="badge badge-type">Power, Efficiency &amp; Units</span>
+                    <strong>Worked Example 3: Water Pump Power &amp; Commercial Energy</strong>
+                </div>
+                <div class="ex-problem">
+                    An electric water pump of efficiency $\eta = 80\%$ lifts $300\text{ kg}$ of water per minute from a
+                    well $11\text{ m}$ deep and ejects it horizontally through a nozzle at $10\text{ m/s}$ (take $g =
+                    10\text{ m/s}^2$). Calculate: (a) the useful output power, (b) the electrical input power in watts
+                    and horsepower, and (c) the electrical energy consumed in $\text{kWh}$ and joules during $4\text{
+                    hours}$ of continuous operation.
+                </div>
+                <div class="ex-solution">
+                    <p><strong>Step 1 — Convert Mass Flow Rate to SI Units:</strong></p>
+                    $$\frac{dm}{dt} = \frac{300\text{ kg}}{60\text{ s}} = 5\text{ kg/s}$$
+                    <p><strong>(a) Useful Output Power:</strong> Each kilogram of water gains gravitational potential
+                        energy $gh$ and kinetic energy $\frac{1}{2}v^2$:</p>
+                    $$P_{\text{out}} = \frac{dm}{dt}\left(gh + \frac{1}{2}v^2\right) = 5\left(10 \times 11 +
+                    \frac{1}{2}\times 10^2\right) = 5(110 + 50) = 5 \times 160 = \mathbf{800\text{ W}}$$
+                    <p><strong>(b) Electrical Input Power:</strong> Using $\eta = \dfrac{P_{\text{out}}}{P_{\text{in}}}
+                        = 0.80$:</p>
+                    $$P_{\text{in}} = \frac{P_{\text{out}}}{\eta} = \frac{800\text{ W}}{0.80} = \mathbf{1000\text{ W}} =
+                    1.0\text{ kW}$$
+                    <p>In mechanical horsepower ($1\text{ HP} = 746\text{ W}$):</p>
+                    $$P_{\text{in}} = \frac{1000}{746}\text{ HP} \approx \mathbf{1.34\text{ HP}}$$
+                    <p><strong>(c) Electrical Energy Consumed in $4\text{ hours}$:</strong> Always use <em>input</em>
+                        electrical power to compute electricity consumption:</p>
+                    $$E = P_{\text{in}} \times t = 1.0\text{ kW} \times 4\text{ h} = \mathbf{4\text{ kWh}}$$
+                    $$E = 4 \times (3.6 \times 10^6\text{ J}) = \mathbf{1.44 \times 10^7\text{ J}}$$
+                </div>
+            </div>
+
+            <!-- LEVEL 2 BANNER -->
+            <div class="level-banner l2">Level 2: Exam-Real Application (Examples 4 &ndash; 6)</div>
+
+            <!-- WE 4 -->
+            <div class="worked-example tier-2">
+                <div class="ex-header">
+                    <span class="badge badge-l2">Level 2</span>
+                    <span class="badge badge-type">Elastic &amp; Chain Potential Energy</span>
+                    <strong>Worked Example 4: Incremental Spring Stretch &amp; Hanging Chain Work</strong>
+                </div>
+                <div class="ex-problem">
+                    Solve two classic potential-energy accounting scenarios ($g = 10\text{ m/s}^2$):<br>
+                    (a) A light ideal spring of stiffness $k = 400\text{ N/m}$ is already stretched by $5\text{ cm}$
+                    from its natural length. Find the additional work required by an external agent to stretch it slowly
+                    by a <em>further</em> $10\text{ cm}$.<br>
+                    (b) A uniform chain of mass $M = 6\text{ kg}$ and length $L = 4\text{ m}$ lies on a smooth
+                    horizontal table with $25\%$ of its length hanging vertically over the edge. Find the minimum work
+                    required to pull the hanging portion completely onto the table.
+                </div>
+                <div class="ex-solution">
+                    <p><strong>(a) Incremental Spring Stretch:</strong> Convert all extensions to metres from the
+                        <em>natural length</em>:
+                    </p>
+                    $$x_1 = 5\text{ cm} = 0.05\text{ m}, \qquad x_2 = 5\text{ cm} + 10\text{ cm} = 15\text{ cm} =
+                    0.15\text{ m}$$
+                    <p>Since the stretching is slow ($\Delta K = 0$), external work equals the exact increase in stored
+                        elastic potential energy:</p>
+                    $$W_{\text{ext}} = \frac{1}{2}k(x_2^2 - x_1^2) = \frac{1}{2}(400)\left[(0.15)^2 - (0.05)^2\right] =
+                    200(0.0225 - 0.0025) = 200(0.0200) = \mathbf{4.0\text{ J}}$$
+                    <p><em>Trap Check:</em> Plugging $\Delta x = 0.10\text{ m}$ into $\frac{1}{2}k(\Delta x)^2$ wrongly
+                        gives $2.0\text{ J}$—half the true value.</p>
+
+                    <p><strong>(b) Pulling the Hanging Chain:</strong> Hanging fraction is $25\% = \dfrac{1}{4}$, so $n
+                        = 4$.</p>
+                    <ul>
+                        <li>Mass of hanging segment: $m_h = \dfrac{M}{4} = \dfrac{6}{4} = 1.5\text{ kg}$.</li>
+                        <li>Length of hanging segment: $l_h = \dfrac{L}{4} = \dfrac{4}{4} = 1.0\text{ m}$.</li>
+                        <li>Depth of CM of hanging segment below tabletop ($U = 0$ datum): $y_{\text{CM}} =
+                            \dfrac{l_h}{2} = 0.5\text{ m}$.</li>
+                    </ul>
+                    <p>Minimum work ($\Delta K = 0$) lifts this mass $m_h$ through vertical height $y_{\text{CM}}$:</p>
+                    $$W_{\text{ext}} = U_f - U_i = 0 - (-m_h g y_{\text{CM}}) = (1.5)(10)(0.5) = \mathbf{7.5\text{ J}}$$
+                    <p><em>Cross-check via closed-form formula:</em> $W_{\text{ext}} = \dfrac{MgL}{2n^2} = \dfrac{6
+                        \times 10 \times 4}{2 \times 4^2} = \dfrac{240}{32} = 7.5\text{ J}$. Exact match.</p>
+                </div>
+            </div>
+
+            <!-- WE 5 -->
+            <div class="worked-example tier-2">
+                <div class="ex-header">
+                    <span class="badge badge-l2">Level 2</span>
+                    <span class="badge badge-type">Work&ndash;Energy Theorem &amp; Friction</span>
+                    <strong>Worked Example 5: Rough Incline &amp; Spring Compression Accounting</strong>
+                </div>
+                <div class="ex-problem">
+                    A block of mass $m = 3\text{ kg}$ is released from rest on a rough incline of angle $\theta =
+                    30^\circ$ ($\mu_k = \frac{1}{3\sqrt{3}}$). It slides a distance $d = 4\text{ m}$ down the incline,
+                    curves smoothly onto a horizontal floor, and compresses an ideal horizontal spring of force constant
+                    $k = 80\text{ N/m}$ (take $g = 10\text{ m/s}^2$).<br>
+                    (a) If the horizontal floor is frictionless, find the maximum compression $x_{\max}$ of the
+                    spring.<br>
+                    (b) If instead the horizontal floor has kinetic friction $\mu_h = 0.6$ starting right at the
+                    uncompressed end of the spring, find the new maximum compression $x'_{\max}$.
+                </div>
+                <div class="ex-solution">
+                    <p><strong>Step 1 — Energy Accounting Along the Rough Incline:</strong></p>
+                    <ul>
+                        <li>Vertical height descended: $h = d\sin 30^\circ = 4 \times 0.5 = 2.0\text{ m}$.</li>
+                        <li>Work done by gravity: $W_g = +mgh = (3)(10)(2.0) = +60\text{ J}$.</li>
+                        <li>Normal reaction on incline: $N = mg\cos 30^\circ = (3)(10)\left(\dfrac{\sqrt{3}}{2}\right) =
+                            15\sqrt{3}\text{ N}$.</li>
+                        <li>Kinetic friction on incline: $f_k = \mu_k N = \left(\dfrac{1}{3\sqrt{3}}\right)(15\sqrt{3})
+                            = 5\text{ N}$.</li>
+                        <li>Work done by incline friction: $W_{f,\text{inc}} = -f_k d = -(5)(4) = -20\text{ J}$.</li>
+                    </ul>
+                    <p>Thus, the kinetic energy with which the block reaches the uncompressed spring is $K_0 = W_g +
+                        W_{f,\text{inc}} = 60 - 20 = 40\text{ J}$.</p>
+
+                    <p><strong>(a) Frictionless Horizontal Floor:</strong> Apply WET from release ($v_i = 0$) to maximum
+                        compression ($v_f = 0$):</p>
+                    $$W_g + W_{f,\text{inc}} + W_s = \Delta K = 0 \implies 60 - 20 - \frac{1}{2}k x_{\max}^2 = 0$$
+                    $$\frac{1}{2}(80)x_{\max}^2 = 40 \implies 40x_{\max}^2 = 40 \implies x_{\max} = \mathbf{1.0\text{
+                    m}}$$
+
+                    <p><strong>(b) Rough Horizontal Floor ($\mu_h = 0.6$):</strong> Friction force on the horizontal
+                        floor is $f_h = \mu_h mg = (0.6)(3)(10) = 18\text{ N}$, doing negative work $W_{f,h} = -18
+                        x'_{\max}$ during compression. Applying WET from release to $v_f = 0$:</p>
+                    $$40 - \frac{1}{2}(80)(x'_{\max})^2 - 18 x'_{\max} = 0$$
+                    $$40(x'_{\max})^2 + 18 x'_{\max} - 40 = 0 \implies 20(x'_{\max})^2 + 9 x'_{\max} - 20 = 0$$
+                    <p>Factorizing the quadratic ($20 \times (-20) = -400 = (+25)(-16)$, and $25 - 16 = +9$):</p>
+                    $$(5x'_{\max} - 4)(4x'_{\max} + 5) = 0$$
+                    <p>Since compression $x'_{\max} > 0$, we reject $-\frac{5}{4}$ and obtain:</p>
+                    $$x'_{\max} = \frac{4}{5}\text{ m} = \mathbf{0.8\text{ m}}\ (80\text{ cm})$$
+                </div>
+            </div>
+
+            <!-- WE 6 -->
+            <div class="worked-example tier-2">
+                <div class="ex-header">
+                    <span class="badge badge-l2">Level 2</span>
+                    <span class="badge badge-type">Constant-Power Calculus</span>
+                    <strong>Worked Example 6: Car Accelerating at Constant Power</strong>
+                </div>
+                <div class="ex-problem">
+                    A sports car of mass $m = 1000\text{ kg}$ starts from rest ($v = 0, x = 0$ at $t = 0$) on a flat
+                    straight track while its engine delivers a constant useful power $P = 18\text{ kW}$ (neglecting drag
+                    and rolling resistance). Derive from first principles: (a) its speed at $t = 4\text{ s}$, (b) the
+                    distance covered in the first $4\text{ s}$, and (c) the forward traction force at $t = 4\text{ s}$.
+                </div>
+                <div class="ex-solution">
+                    <p><strong>Given:</strong> $m = 1000\text{ kg}$, $P = 18000\text{ W}$, so $\dfrac{P}{m} = 18\text{
+                        m}^2/\text{s}^3$ and $\dfrac{2P}{m} = 36\text{ m}^2/\text{s}^3$.</p>
+                    <p><strong>(a) Speed at $t = 4\text{ s}$:</strong> From $P = Fv = mv\dfrac{dv}{dt}$:</p>
+                    $$\int_0^v v\,dv = \int_0^t \frac{P}{m}\,dt \implies \frac{v^2}{2} = \frac{P}{m}t \implies v(t) =
+                    \sqrt{\frac{2P}{m}}\,t^{1/2} = \sqrt{36}\,t^{1/2} = 6\sqrt{t}\text{ m/s}$$
+                    <p>At $t = 4\text{ s}$:</p>
+                    $$v(4) = 6\sqrt{4} = \mathbf{12\text{ m/s}}$$
+                    <p><strong>(b) Distance Covered in First $4\text{ s}$:</strong> Since $v = \dfrac{dx}{dt} =
+                        6t^{1/2}$:</p>
+                    $$x(t) = \int_0^t 6t^{1/2}\,dt = 6\left[\frac{t^{3/2}}{3/2}\right]_0^t = 4t^{3/2}\text{ m}$$
+                    <p>At $t = 4\text{ s}$ (noting $4^{3/2} = (\sqrt{4})^3 = 8$):</p>
+                    $$x(4) = 4(8) = \mathbf{32\text{ m}}$$
+                    <p><em>Warning:</em> Do <strong>not</strong> use $x = \frac{1}{2}v_f t = 24\text{ m}$—that formula
+                        is valid only for constant acceleration, whereas here $a(t) = 3t^{-1/2}$ is non-uniform!</p>
+                    <p><strong>(c) Driving Force at $t = 4\text{ s}$:</strong> From instantaneous power $P = Fv$:</p>
+                    $$F(4) = \frac{P}{v(4)} = \frac{18000\text{ W}}{12\text{ m/s}} = \mathbf{1500\text{ N}}$$
+                    <p><em>Energy Consistency Check:</em> Total work delivered $W = Pt = 18000 \times 4 = 72000\text{
+                        J}$, which matches $K = \frac{1}{2}(1000)(12)^2 = 72000\text{ J}$ identically.</p>
+                </div>
+            </div>
+
+            <!-- LEVEL 3 BANNER -->
+            <div class="level-banner l3">Level 3: Rank-Booster &amp; Olympiad Mastery (Examples 7 &ndash; 9)</div>
+
+            <!-- WE 7 -->
+            <div class="worked-example tier-3">
+                <div class="ex-header">
+                    <span class="badge badge-l3">Level 3</span>
+                    <span class="badge badge-type">Vertical Circular Motion &amp; Projectile</span>
+                    <strong>Worked Example 7: String Slackening Height &amp; Post-Slack Apex</strong>
+                </div>
+                <div class="ex-problem">
+                    A small bob of mass $m = 0.5\text{ kg}$ is suspended from a fixed pivot by a light inextensible
+                    string of length $R = 1.8\text{ m}$. At its lowest point $A$, it is projected horizontally with
+                    speed $v_0 = \sqrt{3.5\,gR}$ (take $g = 10\text{ m/s}^2$).<br>
+                    (a) Determine its motion regime.<br>
+                    (b) Calculate the exact angle $\theta_s$ from the downward vertical, the vertical height $h_s$ above
+                    $A$, and the speed $v_s$ at the instant the string goes slack.<br>
+                    (c) Find the maximum vertical height $H_{\max}$ above $A$ reached by the bob during its subsequent
+                    free flight.
+                </div>
+                <div class="ex-solution">
+                    <p><strong>(a) Regime Diagnosis:</strong> Comparing $v_0 = \sqrt{3.5\,gR}$ against the critical
+                        string thresholds $\sqrt{2gR}$ and $\sqrt{5gR}$:</p>
+                    $$\sqrt{2gR} < \sqrt{3.5\,gR} < \sqrt{5gR}$$ <p>Therefore, the bob crosses mid-height $B$, enters
+                        the upper hemisphere, and the <strong>string goes slack before reaching the top $C$</strong>,
+                        launching the bob into a parabolic free-flight trajectory.
+    </p>
+
+    <p><strong>(b) Slackening Position &amp; Speed (Full Derivation):</strong> At angle $\theta$ from the downward
+        vertical, COME gives $v^2 = v_0^2 - 2gR(1 - \cos\theta)$ and the radial equation is $T - mg\cos\theta =
+        \dfrac{mv^2}{R}$. Setting $T = 0$ at $\theta = \theta_s$:</p>
+    $$-mg\cos\theta_s = \frac{m}{R}\left[3.5\,gR - 2gR(1 - \cos\theta_s)\right]$$
+    <p>Dividing both sides by $mg$:</p>
+    $$-\cos\theta_s = 3.5 - 2 + 2\cos\theta_s \implies -3\cos\theta_s = 1.5 \implies \cos\theta_s = -\frac{1}{2}$$
+    <p>Hence $\theta_s = \mathbf{120^\circ}$ from the downward vertical (i.e., $30^\circ$ above the horizontal
+        diameter). The slackening height above $A$ is:</p>
+    $$h_s = R(1 - \cos 120^\circ) = R\left(1 - \left(-\frac{1}{2}\right)\right) = 1.5\,R = 1.5(1.8) = \mathbf{2.7\text{
+    m}}$$
+    <p>At $T = 0$, the radial equation immediately yields $v_s^2 = -gR\cos\theta_s$:</p>
+    $$v_s^2 = -gR\left(-\frac{1}{2}\right) = 0.5\,gR = 0.5(10)(1.8) = 9\text{ m}^2/\text{s}^2 \implies v_s =
+    \mathbf{3.0\text{ m/s}}$$
+
+    <p><strong>(c) Maximum Height Above $A$ in Subsequent Parabolic Flight:</strong> At $\theta_s = 120^\circ$, the
+        radius vector points $30^\circ$ above the horizontal. The velocity vector $\vec{v}_s$ is tangent to the circle
+        (perpendicular to the radius), so it makes angle $\alpha = 90^\circ - 30^\circ = 60^\circ$ above the horizontal.
+        Its vertical launch component is:</p>
+    $$v_{sy} = v_s\sin 60^\circ = 3\left(\frac{\sqrt{3}}{2}\right) = \frac{3\sqrt{3}}{2}\text{ m/s}$$
+    <p>The additional vertical rise in free flight until $v_y = 0$ is:</p>
+    $$\Delta h_{\text{proj}} = \frac{v_{sy}^2}{2g} = \frac{27/4}{2(10)} = \frac{27}{80}\text{ m} = 0.3375\text{ m} \quad
+    \left(\text{symbolically } \frac{3}{16}R\right)$$
+    <p>Total maximum height above lowest point $A$:</p>
+    $$H_{\max} = h_s + \Delta h_{\text{proj}} = 2.7 + 0.3375 = \mathbf{3.0375\text{ m}} \quad \left(\text{or }
+    \frac{27}{16}R < 2R\right)$$ <div class="shortcut-box">
+        <strong>30-Second Exam Trick (Dimensionless Parameter $k = v_0^2 / gR$):</strong><br>
+        Whenever $v_0 = \sqrt{k\,gR}$ with $2 < k < 5$, immediately evaluate the three one-line invariants:
+            $$\cos\theta_s=\frac{2 - k}{3}, \qquad h_s=\left(\frac{k + 1}{3}\right)R, \qquad v_s=\sqrt{\left(\frac{k -
+            2}{3}\right)gR}$$ Here $k=3.5 \implies \cos\theta_s=-0.5$ ($\theta_s=120^\circ$), $h_s=1.5R=2.7\text{ m}$,
+            $v_s=\sqrt{0.5 \times 18}=3\text{ m/s}$. Total execution time: under 15 seconds! </div>
+            </div>
+            </div>
+
+            <!-- WE 8 -->
+            <div class="worked-example tier-3">
+                <div class="ex-header">
+                    <span class="badge badge-l3">Level 3</span>
+                    <span class="badge badge-type">Vertical Spring Drop &amp; Equilibrium Trap</span>
+                    <strong>Worked Example 8: Maximum Speed vs. Maximum Compression</strong>
+                </div>
+                <div class="ex-problem">
+                    A block of mass $m = 2\text{ kg}$ is dropped from rest from a height $h = 0.4\text{ m}$ directly
+                    above the upper end of a vertical massless spring of stiffness $k = 200\text{ N/m}$ fixed to a rigid
+                    floor ($g = 10\text{ m/s}^2$). Calculate: (a) the spring compression $x_0$ at which the block
+                    attains its maximum speed, (b) the maximum speed $v_{\max}$ of the block, and (c) the maximum
+                    compression $x_{\max}$ of the spring.
+                </div>
+                <div class="ex-solution">
+                    <p><strong>Critical Concept Check:</strong> The block does <strong>not</strong> achieve maximum
+                        speed the moment it touches the spring! Right after contact, gravity $mg$ still exceeds the
+                        upward spring force $kx$, so the block <em>continues accelerating downward</em> until the net
+                        force becomes zero.</p>
+
+                    <p><strong>(a) Compression for Maximum Speed ($a = 0$):</strong></p>
+                    $$mg - kx_0 = 0 \implies x_0 = \frac{mg}{k} = \frac{(2)(10)}{200} = \mathbf{0.1\text{ m}}\ (10\text{
+                    cm})$$
+
+                    <p><strong>(b) Maximum Speed $v_{\max}$ via COME:</strong> Choose $U_g = 0$ at the equilibrium
+                        compression level $x_0$. Between release (height $h + x_0$ above datum, $v = 0$, $x = 0$) and
+                        position $x_0$:</p>
+                    $$mg(h + x_0) = \frac{1}{2}mv_{\max}^2 + \frac{1}{2}kx_0^2$$
+                    $$(2)(10)(0.4 + 0.1) = \frac{1}{2}(2)v_{\max}^2 + \frac{1}{2}(200)(0.1)^2$$
+                    $$10 = v_{\max}^2 + 1 \implies v_{\max}^2 = 9 \implies v_{\max} = \mathbf{3.0\text{ m/s}}$$
+                    <p><em>Notice:</em> At initial spring touch ($x = 0$), the block's speed is only $\sqrt{2gh} =
+                        \sqrt{8} \approx 2.83\text{ m/s} < 3.0\text{ m/s}$.</p>
+
+                            <p><strong>(c) Maximum Compression $x_{\max}$ via COME:</strong> At lowest turnaround point
+                                ($v_f = 0$), total vertical drop is $h + x_{\max}$:</p>
+                            $$mg(h + x_{\max}) = \frac{1}{2}kx_{\max}^2$$
+                            $$20(0.4 + x_{\max}) = 100\,x_{\max}^2 \implies 100\,x_{\max}^2 - 20\,x_{\max} - 8 = 0
+                            \implies 25\,x_{\max}^2 - 5\,x_{\max} - 2 = 0$$
+                            <p>Factorizing $(25 \times (-2) = -50 = (-10)(+5))$:</p>
+                            $$(5x_{\max} - 2)(5x_{\max} + 1) = 0$$
+                            <p>Since compression $x_{\max} > 0$, we discard $-\frac{1}{5}$ and obtain:</p>
+                            $$x_{\max} = \frac{2}{5}\text{ m} = \mathbf{0.4\text{ m}}\ (40\text{ cm})$$
+
+                            <div class="shortcut-box">
+                                <strong>30-Second Exam Trick (SHM-Equilibrium Bridge):</strong><br>
+                                Once attached/in contact, the block executes SHM about $x_0 = \frac{mg}{k}$ with $\omega
+                                = \sqrt{\frac{k}{m}}$ and amplitude $A = \sqrt{x_0^2 + 2x_0 h}$!
+                                <ul>
+                                    <li>Here $x_0 = 0.1\text{ m}$, $\omega = \sqrt{200/2} = 10\text{ rad/s}$, and $A =
+                                        \sqrt{0.01 + 2(0.1)(0.4)} = \sqrt{0.09} = 0.3\text{ m}$.</li>
+                                    <li>Instant answers: $x_{\max} = x_0 + A = 0.1 + 0.3 = \mathbf{0.4\text{ m}}$, and
+                                        $v_{\max} = \omega A = 10(0.3) = \mathbf{3.0\text{ m/s}}$!</li>
+                                </ul>
+                            </div>
+                </div>
+            </div>
+
+            <!-- WE 9 -->
+            <div class="worked-example tier-3">
+                <div class="ex-header">
+                    <span class="badge badge-l3">Level 3</span>
+                    <span class="badge badge-type">Potential Energy Curve &amp; Stability</span>
+                    <strong>Worked Example 9: Molecular Potential $U(x)$, Stability &amp; Turning Points</strong>
+                </div>
+                <div class="ex-problem">
+                    A particle of mass $m = 2\text{ kg}$ moves along the positive $x$-axis ($x > 0$) in a conservative
+                    force field with potential energy function:
+                    $$U(x) = \frac{16}{x^2} - \frac{8}{x} \quad (\text{where } U \text{ is in joules and } x \text{ is
+                    in metres})$$
+                    Find: (a) the force $F(x)$ and the equilibrium position $x_0$, (b) whether $x_0$ is stable or
+                    unstable, (c) the minimum speed needed at $x_0$ for the particle to escape to $x \to \infty$, and
+                    (d) the turning points of motion if the particle has total mechanical energy $E =
+                    -\dfrac{3}{4}\text{ J}$.
+                </div>
+                <div class="ex-solution">
+                    <p><strong>(a) Conservative Force &amp; Equilibrium Position:</strong> Using $F(x) =
+                        -\dfrac{dU}{dx}$ with $U(x) = 16x^{-2} - 8x^{-1}$:</p>
+                    $$F(x) = -\left(-32x^{-3} + 8x^{-2}\right) = \frac{32}{x^3} - \frac{8}{x^2}$$
+                    <p>At equilibrium, $F(x_0) = 0$:</p>
+                    $$\frac{32}{x_0^3} = \frac{8}{x_0^2} \implies x_0 = \mathbf{4\text{ m}}$$
+
+                    <p><strong>(b) Stability Classification:</strong> Compute the second derivative $\dfrac{d^2U}{dx^2}
+                        = -\dfrac{dF}{dx}$:</p>
+                    $$\frac{d^2U}{dx^2} = \frac{96}{x^4} - \frac{16}{x^3}$$
+                    <p>Evaluating at $x_0 = 4\text{ m}$:</p>
+                    $$\left.\frac{d^2U}{dx^2}\right|_{x=4} = \frac{96}{256} - \frac{16}{64} = \frac{3}{8} - \frac{2}{8}
+                    = +\frac{1}{8}\text{ J/m}^2 > 0$$
+                    <p>Because $\dfrac{d^2U}{dx^2} > 0$, $U(x)$ has a local minimum at $x_0 = 4\text{ m}$, confirming
+                        <strong>stable equilibrium</strong>.
+                    </p>
+
+                    <p><strong>(c) Escape Speed from $x_0$:</strong> Evaluate $U(x_0)$ and $U(\infty)$:</p>
+                    $$U_{\min} = U(4) = \frac{16}{4^2} - \frac{8}{4} = 1 - 2 = -1\text{ J}, \qquad U(\infty) = 0$$
+                    <p>To barely reach $x \to \infty$ with $v_\infty = 0$, total mechanical energy must be $E = 0$. By
+                        COME:</p>
+                    $$\frac{1}{2}mv_{\text{esc}}^2 + U(4) = 0 \implies \frac{1}{2}(2)v_{\text{esc}}^2 - 1 = 0 \implies
+                    v_{\text{esc}} = \mathbf{1.0\text{ m/s}}$$
+
+                    <p><strong>(d) Turning Points for $E = -\dfrac{3}{4}\text{ J}$:</strong> At turning points, kinetic
+                        energy vanishes ($K = 0$), so $U(x) = E$:</p>
+                    $$\frac{16}{x^2} - \frac{8}{x} = -\frac{3}{4}$$
+                    <p>Multiplying through by $4x^2$ ($x > 0$):</p>
+                    $$64 - 32x = -3x^2 \implies 3x^2 - 32x + 64 = 0 \implies (3x - 8)(x - 8) = 0$$
+                    <p>The particle oscillates strictly between the turning points $x_{\min} =
+                        \mathbf{\dfrac{8}{3}\text{ m}}$ and $x_{\max} = \mathbf{8\text{ m}}$.</p>
+
+                    <div class="shortcut-box">
+                        <strong>30-Second Exam Trick (Zero-Calculus Complete-the-Square Identity):</strong><br>
+                        For any inverse-power potential $U(x) = \dfrac{A}{x^2} - \dfrac{B}{x}$ ($A, B > 0$), complete
+                        the square in $u = \frac{1}{x}$:
+                        $$U(x) = A\left(\frac{1}{x} - \frac{B}{2A}\right)^2 - \frac{B^2}{4A}$$
+                        Because the squared term is $\ge 0$, you read off <em>all three results</em> instantaneously
+                        without differentiating:
+                        <ol>
+                            <li>Minimum occurs at $\frac{1}{x_0} = \frac{B}{2A} \implies x_0 = \mathbf{\dfrac{2A}{B}} =
+                                \frac{32}{8} = 4\text{ m}$ (automatically <strong>stable</strong>!).</li>
+                            <li>Minimum potential energy $U_{\min} = \mathbf{-\dfrac{B^2}{4A}} = -\frac{64}{64} =
+                                -1\text{ J}$.</li>
+                            <li>Binding / Escape energy $= \mathbf{+\dfrac{B^2}{4A}} = 1\text{ J} \implies
+                                v_{\text{esc}} = \sqrt{\frac{2(1)}{2}} = 1\text{ m/s}$.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+</article>
